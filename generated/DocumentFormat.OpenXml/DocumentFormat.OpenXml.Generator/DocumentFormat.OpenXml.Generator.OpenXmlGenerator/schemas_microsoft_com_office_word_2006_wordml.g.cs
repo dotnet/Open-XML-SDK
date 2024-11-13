@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:tcg.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.AllocatedCommands" /> <c>&lt;wne:acds></c></description></item>
@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.MismatchedKeyMapCustomization" /> <c>&lt;wne:keymapsBad></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Toolbars" /> <c>&lt;wne:toolbars></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TemplateCommandGroup : OpenXmlPartRootElement
     {
         /// <summary>
@@ -121,12 +121,12 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:mcds.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Mcd" /> <c>&lt;wne:mcd></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Mcds : OpenXmlCompositeElement
     {
         /// <summary>
@@ -180,13 +180,13 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:vbaSuppData.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.DocEvents" /> <c>&lt;wne:docEvents></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Mcds" /> <c>&lt;wne:mcds></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class VbaSuppData : OpenXmlPartRootElement
     {
         /// <summary>
@@ -237,9 +237,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>DocEvents.</para>
         /// <para>Represents the following element tag in the schema: wne:docEvents.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Word.DocEvents? DocEvents
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Word.DocEvents>();
@@ -250,9 +250,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>Mcds.</para>
         /// <para>Represents the following element tag in the schema: wne:mcds.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Word.Mcds? Mcds
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Word.Mcds>();
@@ -299,12 +299,12 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:recipients.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.SingleDataSourceRecord" /> <c>&lt;wne:recipientData></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MailMergeRecipients : OpenXmlPartRootElement
     {
         /// <summary>
@@ -371,9 +371,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>fciName</para>
         /// <para>Represents the following attribute in the schema: wne:fciName</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public StringValue? CommandName
         {
             get => GetAttribute<StringValue>();
@@ -384,9 +384,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>fciIndex</para>
         /// <para>Represents the following attribute in the schema: wne:fciIndex</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? CommandIndex
         {
             get => GetAttribute<HexBinaryValue>();
@@ -397,9 +397,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>swArg</para>
         /// <para>Represents the following attribute in the schema: wne:swArg</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? Argument
         {
             get => GetAttribute<HexBinaryValue>();
@@ -492,9 +492,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>macroName</para>
         /// <para>Represents the following attribute in the schema: wne:macroName</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public StringValue? MacroName
         {
             get => GetAttribute<StringValue>();
@@ -575,9 +575,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>acdName</para>
         /// <para>Represents the following attribute in the schema: wne:acdName</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public StringValue? AcceleratorName
         {
             get => GetAttribute<StringValue>();
@@ -610,9 +610,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: wne:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? Val
         {
             get => GetAttribute<HexBinaryValue>();
@@ -640,7 +640,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:keymap.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.AllocatedCommandKeyboardCustomization" /> <c>&lt;wne:acd></c></description></item>
@@ -649,7 +649,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.MacroKeyboardCustomization" /> <c>&lt;wne:macro></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.WllMacroKeyboardCustomization" /> <c>&lt;wne:wll></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class KeyMapEntry : OpenXmlCompositeElement
     {
         /// <summary>
@@ -687,9 +687,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>chmPrimary</para>
         /// <para>Represents the following attribute in the schema: wne:chmPrimary</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? CharacterMapPrimary
         {
             get => GetAttribute<HexBinaryValue>();
@@ -700,9 +700,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>chmSecondary</para>
         /// <para>Represents the following attribute in the schema: wne:chmSecondary</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? CharacterMapSecondary
         {
             get => GetAttribute<HexBinaryValue>();
@@ -713,9 +713,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>kcmPrimary</para>
         /// <para>Represents the following attribute in the schema: wne:kcmPrimary</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? KeyCodePrimary
         {
             get => GetAttribute<HexBinaryValue>();
@@ -726,9 +726,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>kcmSecondary</para>
         /// <para>Represents the following attribute in the schema: wne:kcmSecondary</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? KeyCodeSecondary
         {
             get => GetAttribute<HexBinaryValue>();
@@ -739,9 +739,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>mask</para>
         /// <para>Represents the following attribute in the schema: wne:mask</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public OnOffValue? Mask
         {
             get => GetAttribute<OnOffValue>();
@@ -789,9 +789,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>FixedCommandKeyboardCustomization.</para>
         /// <para>Represents the following element tag in the schema: wne:fci.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Word.FixedCommandKeyboardCustomization? FixedCommandKeyboardCustomization
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Word.FixedCommandKeyboardCustomization>();
@@ -802,9 +802,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>MacroKeyboardCustomization.</para>
         /// <para>Represents the following element tag in the schema: wne:macro.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Word.MacroKeyboardCustomization? MacroKeyboardCustomization
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Word.MacroKeyboardCustomization>();
@@ -815,9 +815,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>AllocatedCommandKeyboardCustomization.</para>
         /// <para>Represents the following element tag in the schema: wne:acd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Word.AllocatedCommandKeyboardCustomization? AllocatedCommandKeyboardCustomization
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Word.AllocatedCommandKeyboardCustomization>();
@@ -828,9 +828,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>WllMacroKeyboardCustomization.</para>
         /// <para>Represents the following element tag in the schema: wne:wll.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Word.WllMacroKeyboardCustomization? WllMacroKeyboardCustomization
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Word.WllMacroKeyboardCustomization>();
@@ -841,9 +841,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>CharacterInsertion.</para>
         /// <para>Represents the following element tag in the schema: wne:wch.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Word.CharacterInsertion? CharacterInsertion
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Word.CharacterInsertion>();
@@ -872,9 +872,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>argValue</para>
         /// <para>Represents the following attribute in the schema: wne:argValue</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public StringValue? ArgumentValue
         {
             get => GetAttribute<StringValue>();
@@ -885,9 +885,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>fciBasedOn</para>
         /// <para>Represents the following attribute in the schema: wne:fciBasedOn</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public StringValue? CommandBasedOn
         {
             get => GetAttribute<StringValue>();
@@ -898,9 +898,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>fciIndexBasedOn</para>
         /// <para>Represents the following attribute in the schema: wne:fciIndexBasedOn</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? CommandIndexBasedOn
         {
             get => GetAttribute<HexBinaryValue>();
@@ -911,9 +911,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>acdName</para>
         /// <para>Represents the following attribute in the schema: wne:acdName</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public StringValue? AcceleratorName
         {
             get => GetAttribute<StringValue>();
@@ -956,9 +956,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>macroName</para>
         /// <para>Represents the following attribute in the schema: wne:macroName</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public StringValue? MacroName
         {
             get => GetAttribute<StringValue>();
@@ -969,9 +969,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: wne:name</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -982,9 +982,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>menuHelp</para>
         /// <para>Represents the following attribute in the schema: wne:menuHelp</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public StringValue? MenuHelp
         {
             get => GetAttribute<StringValue>();
@@ -995,9 +995,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>bEncrypt</para>
         /// <para>Represents the following attribute in the schema: wne:bEncrypt</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? BEncrypt
         {
             get => GetAttribute<HexBinaryValue>();
@@ -1008,9 +1008,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>cmg</para>
         /// <para>Represents the following attribute in the schema: wne:cmg</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? Cmg
         {
             get => GetAttribute<HexBinaryValue>();
@@ -1528,7 +1528,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:docEvents.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocNewXsdString" /> <c>&lt;wne:eventDocNew></c></description></item>
@@ -1545,7 +1545,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocContentControlUpdateXsdString" /> <c>&lt;wne:eventDocContentControlContentUpdate></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocBuildingBlockAfterInsertXsdString" /> <c>&lt;wne:eventDocBuildingBlockAfterInsert></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DocEvents : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1618,9 +1618,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>EventDocNewXsdString.</para>
         /// <para>Represents the following element tag in the schema: wne:eventDocNew.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Word.EventDocNewXsdString? EventDocNewXsdString
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocNewXsdString>();
@@ -1631,9 +1631,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>EventDocOpenXsdString.</para>
         /// <para>Represents the following element tag in the schema: wne:eventDocOpen.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Word.EventDocOpenXsdString? EventDocOpenXsdString
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocOpenXsdString>();
@@ -1644,9 +1644,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>EventDocCloseXsdString.</para>
         /// <para>Represents the following element tag in the schema: wne:eventDocClose.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Word.EventDocCloseXsdString? EventDocCloseXsdString
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocCloseXsdString>();
@@ -1657,9 +1657,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>EventDocSyncXsdString.</para>
         /// <para>Represents the following element tag in the schema: wne:eventDocSync.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Word.EventDocSyncXsdString? EventDocSyncXsdString
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocSyncXsdString>();
@@ -1670,9 +1670,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>EventDocXmlAfterInsertXsdString.</para>
         /// <para>Represents the following element tag in the schema: wne:eventDocXmlAfterInsert.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Word.EventDocXmlAfterInsertXsdString? EventDocXmlAfterInsertXsdString
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocXmlAfterInsertXsdString>();
@@ -1683,9 +1683,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>EventDocXmlBeforeDeleteXsdString.</para>
         /// <para>Represents the following element tag in the schema: wne:eventDocXmlBeforeDelete.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Word.EventDocXmlBeforeDeleteXsdString? EventDocXmlBeforeDeleteXsdString
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocXmlBeforeDeleteXsdString>();
@@ -1696,9 +1696,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>EventDocContentControlAfterInsertXsdString.</para>
         /// <para>Represents the following element tag in the schema: wne:eventDocContentControlAfterInsert.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Word.EventDocContentControlAfterInsertXsdString? EventDocContentControlAfterInsertXsdString
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocContentControlAfterInsertXsdString>();
@@ -1709,9 +1709,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>EventDocContentControlBeforeDeleteXsdString.</para>
         /// <para>Represents the following element tag in the schema: wne:eventDocContentControlBeforeDelete.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Word.EventDocContentControlBeforeDeleteXsdString? EventDocContentControlBeforeDeleteXsdString
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocContentControlBeforeDeleteXsdString>();
@@ -1722,9 +1722,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>EventDocContentControlOnExistXsdString.</para>
         /// <para>Represents the following element tag in the schema: wne:eventDocContentControlOnExit.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Word.EventDocContentControlOnExistXsdString? EventDocContentControlOnExistXsdString
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocContentControlOnExistXsdString>();
@@ -1735,9 +1735,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>EventDocContentControlOnEnterXsdString.</para>
         /// <para>Represents the following element tag in the schema: wne:eventDocContentControlOnEnter.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Word.EventDocContentControlOnEnterXsdString? EventDocContentControlOnEnterXsdString
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocContentControlOnEnterXsdString>();
@@ -1748,9 +1748,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>EventDocStoreUpdateXsdString.</para>
         /// <para>Represents the following element tag in the schema: wne:eventDocStoreUpdate.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Word.EventDocStoreUpdateXsdString? EventDocStoreUpdateXsdString
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocStoreUpdateXsdString>();
@@ -1761,9 +1761,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>EventDocContentControlUpdateXsdString.</para>
         /// <para>Represents the following element tag in the schema: wne:eventDocContentControlContentUpdate.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Word.EventDocContentControlUpdateXsdString? EventDocContentControlUpdateXsdString
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocContentControlUpdateXsdString>();
@@ -1774,9 +1774,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>EventDocBuildingBlockAfterInsertXsdString.</para>
         /// <para>Represents the following element tag in the schema: wne:eventDocBuildingBlockAfterInsert.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Word.EventDocBuildingBlockAfterInsertXsdString? EventDocBuildingBlockAfterInsertXsdString
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocBuildingBlockAfterInsertXsdString>();
@@ -1792,12 +1792,12 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:acdManifest.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifestEntry" /> <c>&lt;wne:acdEntry></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AllocatedCommandManifest : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1864,9 +1864,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -1893,12 +1893,12 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:keymaps.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.KeyMapEntry" /> <c>&lt;wne:keymap></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class KeyMapCustomizations : KeymapsType
     {
         /// <summary>
@@ -1951,12 +1951,12 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:keymapsBad.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.KeyMapEntry" /> <c>&lt;wne:keymap></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MismatchedKeyMapCustomization : KeymapsType
     {
         /// <summary>
@@ -2009,12 +2009,12 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.KeyMapEntry" /> <c>&lt;wne:keymap></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class KeymapsType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2060,13 +2060,13 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:toolbars.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifest" /> <c>&lt;wne:acdManifest></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.ToolbarData" /> <c>&lt;wne:toolbarData></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Toolbars : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2122,12 +2122,12 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:acds.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.AllocatedCommand" /> <c>&lt;wne:acd></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AllocatedCommands : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2194,9 +2194,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: wne:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public OnOffValue? Val
         {
             get => GetAttribute<OnOffValue>();
@@ -2233,9 +2233,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: wne:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public IntegerValue? Val
         {
             get => GetAttribute<IntegerValue>();
@@ -2262,13 +2262,13 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:recipientData.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.RecordHashCode" /> <c>&lt;wne:hash></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.RecordIncluded" /> <c>&lt;wne:active></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SingleDataSourceRecord : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2319,9 +2319,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>RecordIncluded.</para>
         /// <para>Represents the following element tag in the schema: wne:active.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Word.RecordIncluded? RecordIncluded
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Word.RecordIncluded>();
@@ -2332,9 +2332,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <para>RecordHashCode.</para>
         /// <para>Represents the following element tag in the schema: wne:hash.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Word.RecordHashCode? RecordHashCode
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Word.RecordHashCode>();

@@ -100,13 +100,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:calcChain.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CalculationCell" /> <c>&lt;x:c></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CalculationChain : OpenXmlPartRootElement
     {
         /// <summary>
@@ -193,14 +193,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:comments.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Authors" /> <c>&lt;x:authors></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CommentList" /> <c>&lt;x:commentList></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Comments : OpenXmlPartRootElement
     {
         /// <summary>
@@ -253,9 +253,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Authors.</para>
         /// <para>Represents the following element tag in the schema: x:authors.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Authors? Authors
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Authors>();
@@ -266,9 +266,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>List of Comments.</para>
         /// <para>Represents the following element tag in the schema: x:commentList.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CommentList? CommentList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CommentList>();
@@ -279,9 +279,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -328,13 +328,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:MapInfo.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Map" /> <c>&lt;x:Map></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Schema" /> <c>&lt;x:Schema></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MapInfo : OpenXmlPartRootElement
     {
         /// <summary>
@@ -436,12 +436,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:connections.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Connection" /> <c>&lt;x:connection></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Connections : OpenXmlPartRootElement
     {
         /// <summary>
@@ -526,7 +526,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pivotCacheDefinition.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CacheFields" /> <c>&lt;x:cacheFields></c></description></item>
@@ -541,7 +541,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TupleCache" /> <c>&lt;x:tupleCache></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotCacheDefinition : OpenXmlPartRootElement
     {
         /// <summary>
@@ -579,9 +579,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -824,9 +824,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>CacheSource.</para>
         /// <para>Represents the following element tag in the schema: x:cacheSource.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CacheSource? CacheSource
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CacheSource>();
@@ -837,9 +837,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>CacheFields.</para>
         /// <para>Represents the following element tag in the schema: x:cacheFields.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CacheFields? CacheFields
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CacheFields>();
@@ -850,9 +850,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>CacheHierarchies.</para>
         /// <para>Represents the following element tag in the schema: x:cacheHierarchies.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CacheHierarchies? CacheHierarchies
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CacheHierarchies>();
@@ -863,9 +863,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Kpis.</para>
         /// <para>Represents the following element tag in the schema: x:kpis.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Kpis? Kpis
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Kpis>();
@@ -876,9 +876,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>TupleCache.</para>
         /// <para>Represents the following element tag in the schema: x:tupleCache.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.TupleCache? TupleCache
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TupleCache>();
@@ -889,9 +889,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>CalculatedItems.</para>
         /// <para>Represents the following element tag in the schema: x:calculatedItems.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CalculatedItems? CalculatedItems
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CalculatedItems>();
@@ -902,9 +902,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>CalculatedMembers.</para>
         /// <para>Represents the following element tag in the schema: x:calculatedMembers.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CalculatedMembers? CalculatedMembers
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CalculatedMembers>();
@@ -915,9 +915,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Dimensions.</para>
         /// <para>Represents the following element tag in the schema: x:dimensions.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Dimensions? Dimensions
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Dimensions>();
@@ -928,9 +928,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>MeasureGroups.</para>
         /// <para>Represents the following element tag in the schema: x:measureGroups.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.MeasureGroups? MeasureGroups
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MeasureGroups>();
@@ -941,9 +941,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Maps.</para>
         /// <para>Represents the following element tag in the schema: x:maps.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Maps? Maps
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Maps>();
@@ -954,9 +954,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>PivotCacheDefinitionExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtensionList? PivotCacheDefinitionExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtensionList>();
@@ -1003,13 +1003,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pivotCacheRecords.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotCacheRecord" /> <c>&lt;x:r></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotCacheRecords : OpenXmlPartRootElement
     {
         /// <summary>
@@ -1108,7 +1108,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pivotTableDefinition.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ChartFormats" /> <c>&lt;x:chartFormats></c></description></item>
@@ -1129,7 +1129,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage" /> <c>&lt;x:rowHierarchiesUsage></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RowItems" /> <c>&lt;x:rowItems></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotTableDefinition : OpenXmlPartRootElement
     {
         /// <summary>
@@ -1981,9 +1981,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Location.</para>
         /// <para>Represents the following element tag in the schema: x:location.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Location? Location
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Location>();
@@ -1994,9 +1994,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>PivotFields.</para>
         /// <para>Represents the following element tag in the schema: x:pivotFields.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotFields? PivotFields
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFields>();
@@ -2007,9 +2007,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>RowFields.</para>
         /// <para>Represents the following element tag in the schema: x:rowFields.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.RowFields? RowFields
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowFields>();
@@ -2020,9 +2020,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>RowItems.</para>
         /// <para>Represents the following element tag in the schema: x:rowItems.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.RowItems? RowItems
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowItems>();
@@ -2033,9 +2033,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>ColumnFields.</para>
         /// <para>Represents the following element tag in the schema: x:colFields.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ColumnFields? ColumnFields
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnFields>();
@@ -2046,9 +2046,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>ColumnItems.</para>
         /// <para>Represents the following element tag in the schema: x:colItems.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ColumnItems? ColumnItems
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnItems>();
@@ -2059,9 +2059,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>PageFields.</para>
         /// <para>Represents the following element tag in the schema: x:pageFields.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PageFields? PageFields
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageFields>();
@@ -2072,9 +2072,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>DataFields.</para>
         /// <para>Represents the following element tag in the schema: x:dataFields.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DataFields? DataFields
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DataFields>();
@@ -2085,9 +2085,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Formats.</para>
         /// <para>Represents the following element tag in the schema: x:formats.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Formats? Formats
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formats>();
@@ -2098,9 +2098,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>ConditionalFormats.</para>
         /// <para>Represents the following element tag in the schema: x:conditionalFormats.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats? ConditionalFormats
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats>();
@@ -2111,9 +2111,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>ChartFormats.</para>
         /// <para>Represents the following element tag in the schema: x:chartFormats.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ChartFormats? ChartFormats
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartFormats>();
@@ -2124,9 +2124,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>PivotHierarchies.</para>
         /// <para>Represents the following element tag in the schema: x:pivotHierarchies.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies? PivotHierarchies
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies>();
@@ -2137,9 +2137,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>PivotTableStyle.</para>
         /// <para>Represents the following element tag in the schema: x:pivotTableStyleInfo.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle? PivotTableStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle>();
@@ -2150,9 +2150,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>PivotFilters.</para>
         /// <para>Represents the following element tag in the schema: x:filters.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotFilters? PivotFilters
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFilters>();
@@ -2163,9 +2163,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>RowHierarchiesUsage.</para>
         /// <para>Represents the following element tag in the schema: x:rowHierarchiesUsage.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage? RowHierarchiesUsage
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage>();
@@ -2176,9 +2176,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>ColumnHierarchiesUsage.</para>
         /// <para>Represents the following element tag in the schema: x:colHierarchiesUsage.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage? ColumnHierarchiesUsage
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage>();
@@ -2189,9 +2189,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>PivotTableDefinitionExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList? PivotTableDefinitionExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList>();
@@ -2238,13 +2238,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:queryTable.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.QueryTableExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.QueryTableRefresh" /> <c>&lt;x:queryTableRefresh></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class QueryTable : OpenXmlPartRootElement
     {
         /// <summary>
@@ -2548,9 +2548,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>QueryTableRefresh.</para>
         /// <para>Represents the following element tag in the schema: x:queryTableRefresh.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.QueryTableRefresh? QueryTableRefresh
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.QueryTableRefresh>();
@@ -2561,9 +2561,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>QueryTableExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.QueryTableExtensionList? QueryTableExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.QueryTableExtensionList>();
@@ -2610,13 +2610,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SharedStringItem" /> <c>&lt;x:si></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SharedStringTable : OpenXmlPartRootElement
     {
         /// <summary>
@@ -2728,12 +2728,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:headers.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Header" /> <c>&lt;x:header></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Headers : OpenXmlPartRootElement
     {
         /// <summary>
@@ -2962,7 +2962,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:revisions.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RevisionAutoFormat" /> <c>&lt;x:raf></c></description></item>
@@ -2978,7 +2978,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RevisionRowColumn" /> <c>&lt;x:rrc></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RevisionSheetName" /> <c>&lt;x:rsnm></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Revisions : OpenXmlPartRootElement
     {
         /// <summary>
@@ -3085,12 +3085,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:users.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.UserInfo" /> <c>&lt;x:userInfo></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Users : OpenXmlPartRootElement
     {
         /// <summary>
@@ -3188,7 +3188,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:worksheet.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.AutoFilter" /> <c>&lt;x:autoFilter></c></description></item>
@@ -3230,7 +3230,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WebPublishItems" /> <c>&lt;x:webPublishItems></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WorksheetExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Worksheet : OpenXmlPartRootElement
     {
         /// <summary>
@@ -3353,9 +3353,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>SheetProperties.</para>
         /// <para>Represents the following element tag in the schema: x:sheetPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetProperties? SheetProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>();
@@ -3366,9 +3366,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>SheetDimension.</para>
         /// <para>Represents the following element tag in the schema: x:dimension.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetDimension? SheetDimension
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetDimension>();
@@ -3379,9 +3379,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>SheetViews.</para>
         /// <para>Represents the following element tag in the schema: x:sheetViews.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetViews? SheetViews
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetViews>();
@@ -3392,9 +3392,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>SheetFormatProperties.</para>
         /// <para>Represents the following element tag in the schema: x:sheetFormatPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties? SheetFormatProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>();
@@ -3441,7 +3441,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:chartsheet.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ChartSheetProperties" /> <c>&lt;x:sheetPr></c></description></item>
@@ -3459,7 +3459,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Picture" /> <c>&lt;x:picture></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WebPublishItems" /> <c>&lt;x:webPublishItems></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Chartsheet : OpenXmlPartRootElement
     {
         /// <summary>
@@ -3534,9 +3534,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Chart Sheet Properties.</para>
         /// <para>Represents the following element tag in the schema: x:sheetPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ChartSheetProperties? ChartSheetProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartSheetProperties>();
@@ -3547,9 +3547,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Chart Sheet Views.</para>
         /// <para>Represents the following element tag in the schema: x:sheetViews.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ChartSheetViews? ChartSheetViews
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartSheetViews>();
@@ -3560,9 +3560,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Chart Sheet Protection.</para>
         /// <para>Represents the following element tag in the schema: x:sheetProtection.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ChartSheetProtection? ChartSheetProtection
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartSheetProtection>();
@@ -3573,9 +3573,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Custom Chart Sheet Views.</para>
         /// <para>Represents the following element tag in the schema: x:customSheetViews.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CustomChartsheetViews? CustomChartsheetViews
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CustomChartsheetViews>();
@@ -3586,9 +3586,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>PageMargins.</para>
         /// <para>Represents the following element tag in the schema: x:pageMargins.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PageMargins? PageMargins
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageMargins>();
@@ -3599,9 +3599,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>ChartSheetPageSetup.</para>
         /// <para>Represents the following element tag in the schema: x:pageSetup.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup? ChartSheetPageSetup
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup>();
@@ -3612,9 +3612,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>HeaderFooter.</para>
         /// <para>Represents the following element tag in the schema: x:headerFooter.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.HeaderFooter? HeaderFooter
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>();
@@ -3625,9 +3625,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Drawing.</para>
         /// <para>Represents the following element tag in the schema: x:drawing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Drawing? Drawing
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Drawing>();
@@ -3638,9 +3638,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>LegacyDrawing.</para>
         /// <para>Represents the following element tag in the schema: x:legacyDrawing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing? LegacyDrawing
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing>();
@@ -3651,9 +3651,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Legacy Drawing Reference in  Header Footer.</para>
         /// <para>Represents the following element tag in the schema: x:legacyDrawingHF.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter? LegacyDrawingHeaderFooter
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter>();
@@ -3664,9 +3664,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>DrawingHeaderFooter.</para>
         /// <para>Represents the following element tag in the schema: x:drawingHF.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter? DrawingHeaderFooter
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter>();
@@ -3677,9 +3677,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Picture.</para>
         /// <para>Represents the following element tag in the schema: x:picture.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Picture? Picture
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Picture>();
@@ -3690,9 +3690,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>WebPublishItems.</para>
         /// <para>Represents the following element tag in the schema: x:webPublishItems.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.WebPublishItems? WebPublishItems
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.WebPublishItems>();
@@ -3703,9 +3703,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -3752,7 +3752,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:dialogsheet.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Controls" /> <c>&lt;x:controls></c></description></item>
@@ -3772,7 +3772,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetProtection" /> <c>&lt;x:sheetProtection></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetViews" /> <c>&lt;x:sheetViews></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DialogSheet : OpenXmlPartRootElement
     {
         /// <summary>
@@ -3851,9 +3851,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Sheet Properties.</para>
         /// <para>Represents the following element tag in the schema: x:sheetPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetProperties? SheetProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>();
@@ -3864,9 +3864,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Dialog Sheet Views.</para>
         /// <para>Represents the following element tag in the schema: x:sheetViews.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetViews? SheetViews
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetViews>();
@@ -3877,9 +3877,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Dialog Sheet Format Properties.</para>
         /// <para>Represents the following element tag in the schema: x:sheetFormatPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties? SheetFormatProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>();
@@ -3890,9 +3890,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Sheet Protection.</para>
         /// <para>Represents the following element tag in the schema: x:sheetProtection.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetProtection? SheetProtection
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetProtection>();
@@ -3903,9 +3903,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Custom Sheet Views.</para>
         /// <para>Represents the following element tag in the schema: x:customSheetViews.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews? CustomSheetViews
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews>();
@@ -3916,9 +3916,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Print Options.</para>
         /// <para>Represents the following element tag in the schema: x:printOptions.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PrintOptions? PrintOptions
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PrintOptions>();
@@ -3929,9 +3929,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Page Margins.</para>
         /// <para>Represents the following element tag in the schema: x:pageMargins.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PageMargins? PageMargins
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageMargins>();
@@ -3942,9 +3942,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Page Setup Settings.</para>
         /// <para>Represents the following element tag in the schema: x:pageSetup.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PageSetup? PageSetup
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageSetup>();
@@ -3955,9 +3955,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Header and Footer Settings.</para>
         /// <para>Represents the following element tag in the schema: x:headerFooter.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.HeaderFooter? HeaderFooter
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>();
@@ -3968,9 +3968,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Drawing.</para>
         /// <para>Represents the following element tag in the schema: x:drawing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Drawing? Drawing
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Drawing>();
@@ -3981,9 +3981,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Legacy Drawing.</para>
         /// <para>Represents the following element tag in the schema: x:legacyDrawing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing? LegacyDrawing
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing>();
@@ -3994,9 +3994,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Legacy Drawing Header Footer.</para>
         /// <para>Represents the following element tag in the schema: x:legacyDrawingHF.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter? LegacyDrawingHeaderFooter
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter>();
@@ -4007,9 +4007,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>DrawingHeaderFooter.</para>
         /// <para>Represents the following element tag in the schema: x:drawingHF.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter? DrawingHeaderFooter
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter>();
@@ -4020,9 +4020,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>OleObjects.</para>
         /// <para>Represents the following element tag in the schema: x:oleObjects.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.OleObjects? OleObjects
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OleObjects>();
@@ -4033,9 +4033,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Controls.</para>
         /// <para>Represents the following element tag in the schema: x:controls.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Controls? Controls
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Controls>();
@@ -4046,9 +4046,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Future Feature Data Storage Area.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -4095,7 +4095,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:metadata.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
@@ -4106,7 +4106,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MetadataStrings" /> <c>&lt;x:metadataStrings></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MetadataTypes" /> <c>&lt;x:metadataTypes></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Metadata : OpenXmlPartRootElement
     {
         /// <summary>
@@ -4167,9 +4167,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Metadata Types Collection.</para>
         /// <para>Represents the following element tag in the schema: x:metadataTypes.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.MetadataTypes? MetadataTypes
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MetadataTypes>();
@@ -4180,9 +4180,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Metadata String Store.</para>
         /// <para>Represents the following element tag in the schema: x:metadataStrings.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.MetadataStrings? MetadataStrings
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MetadataStrings>();
@@ -4193,9 +4193,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>MDX Metadata Information.</para>
         /// <para>Represents the following element tag in the schema: x:mdxMetadata.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.MdxMetadata? MdxMetadata
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MdxMetadata>();
@@ -4242,12 +4242,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:singleXmlCells.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SingleXmlCell" /> <c>&lt;x:singleXmlCell></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SingleXmlCells : OpenXmlPartRootElement
     {
         /// <summary>
@@ -4332,7 +4332,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:styleSheet.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Borders" /> <c>&lt;x:borders></c></description></item>
@@ -4347,7 +4347,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.StylesheetExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableStyles" /> <c>&lt;x:tableStyles></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Stylesheet : OpenXmlPartRootElement
     {
         /// <summary>
@@ -4416,9 +4416,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>NumberingFormats.</para>
         /// <para>Represents the following element tag in the schema: x:numFmts.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.NumberingFormats? NumberingFormats
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NumberingFormats>();
@@ -4429,9 +4429,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Fonts.</para>
         /// <para>Represents the following element tag in the schema: x:fonts.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Fonts? Fonts
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Fonts>();
@@ -4442,9 +4442,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Fills.</para>
         /// <para>Represents the following element tag in the schema: x:fills.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Fills? Fills
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Fills>();
@@ -4455,9 +4455,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Borders.</para>
         /// <para>Represents the following element tag in the schema: x:borders.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Borders? Borders
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Borders>();
@@ -4468,9 +4468,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>CellStyleFormats.</para>
         /// <para>Represents the following element tag in the schema: x:cellStyleXfs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CellStyleFormats? CellStyleFormats
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CellStyleFormats>();
@@ -4481,9 +4481,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>CellFormats.</para>
         /// <para>Represents the following element tag in the schema: x:cellXfs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CellFormats? CellFormats
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CellFormats>();
@@ -4494,9 +4494,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>CellStyles.</para>
         /// <para>Represents the following element tag in the schema: x:cellStyles.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CellStyles? CellStyles
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CellStyles>();
@@ -4507,9 +4507,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>DifferentialFormats.</para>
         /// <para>Represents the following element tag in the schema: x:dxfs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DifferentialFormats? DifferentialFormats
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DifferentialFormats>();
@@ -4520,9 +4520,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>TableStyles.</para>
         /// <para>Represents the following element tag in the schema: x:tableStyles.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.TableStyles? TableStyles
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TableStyles>();
@@ -4533,9 +4533,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Colors.</para>
         /// <para>Represents the following element tag in the schema: x:colors.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Colors? Colors
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Colors>();
@@ -4546,9 +4546,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>StylesheetExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.StylesheetExtensionList? StylesheetExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.StylesheetExtensionList>();
@@ -4595,7 +4595,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:externalLink.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DdeLink" /> <c>&lt;x:ddeLink></c></description></item>
@@ -4603,7 +4603,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExternalBook" /> <c>&lt;x:externalBook></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OleLink" /> <c>&lt;x:oleLink></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExternalLink : OpenXmlPartRootElement
     {
         /// <summary>
@@ -4697,7 +4697,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:table.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.AutoFilter" /> <c>&lt;x:autoFilter></c></description></item>
@@ -4706,7 +4706,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableStyleInfo" /> <c>&lt;x:tableStyleInfo></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Table : OpenXmlPartRootElement
     {
         /// <summary>
@@ -5030,9 +5030,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Table AutoFilter.</para>
         /// <para>Represents the following element tag in the schema: x:autoFilter.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.AutoFilter? AutoFilter
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.AutoFilter>();
@@ -5043,9 +5043,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Sort State.</para>
         /// <para>Represents the following element tag in the schema: x:sortState.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SortState? SortState
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SortState>();
@@ -5056,9 +5056,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Table Columns.</para>
         /// <para>Represents the following element tag in the schema: x:tableColumns.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.TableColumns? TableColumns
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TableColumns>();
@@ -5069,9 +5069,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Table Style.</para>
         /// <para>Represents the following element tag in the schema: x:tableStyleInfo.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.TableStyleInfo? TableStyleInfo
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TableStyleInfo>();
@@ -5082,9 +5082,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Future Feature Data Storage Area.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.TableExtensionList? TableExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TableExtensionList>();
@@ -5131,13 +5131,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:volTypes.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.VolatileType" /> <c>&lt;x:volType></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class VolatileTypes : OpenXmlPartRootElement
     {
         /// <summary>
@@ -5224,7 +5224,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:workbook.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.BookViews" /> <c>&lt;x:bookViews></c></description></item>
@@ -5246,7 +5246,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WorkbookProtection" /> <c>&lt;x:workbookProtection></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath" /> <c>&lt;x15ac:absPath></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Workbook : OpenXmlPartRootElement
     {
         /// <summary>
@@ -5341,9 +5341,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>FileVersion.</para>
         /// <para>Represents the following element tag in the schema: x:fileVersion.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.FileVersion? FileVersion
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FileVersion>();
@@ -5354,9 +5354,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>FileSharing.</para>
         /// <para>Represents the following element tag in the schema: x:fileSharing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.FileSharing? FileSharing
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FileSharing>();
@@ -5367,9 +5367,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>WorkbookProperties.</para>
         /// <para>Represents the following element tag in the schema: x:workbookPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.WorkbookProperties? WorkbookProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.WorkbookProperties>();
@@ -5380,9 +5380,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>AbsolutePath, this property is only available in Office 2013 and later..</para>
         /// <para>Represents the following element tag in the schema: x15ac:absPath.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15ac = http://schemas.microsoft.com/office/spreadsheetml/2010/11/ac
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath? AbsolutePath
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath>();
@@ -5393,9 +5393,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>WorkbookProtection.</para>
         /// <para>Represents the following element tag in the schema: x:workbookProtection.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.WorkbookProtection? WorkbookProtection
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.WorkbookProtection>();
@@ -5406,9 +5406,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>BookViews.</para>
         /// <para>Represents the following element tag in the schema: x:bookViews.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.BookViews? BookViews
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.BookViews>();
@@ -5419,9 +5419,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Sheets.</para>
         /// <para>Represents the following element tag in the schema: x:sheets.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Sheets? Sheets
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Sheets>();
@@ -5432,9 +5432,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>FunctionGroups.</para>
         /// <para>Represents the following element tag in the schema: x:functionGroups.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.FunctionGroups? FunctionGroups
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FunctionGroups>();
@@ -5445,9 +5445,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>ExternalReferences.</para>
         /// <para>Represents the following element tag in the schema: x:externalReferences.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExternalReferences? ExternalReferences
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExternalReferences>();
@@ -5458,9 +5458,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>DefinedNames.</para>
         /// <para>Represents the following element tag in the schema: x:definedNames.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DefinedNames? DefinedNames
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DefinedNames>();
@@ -5471,9 +5471,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>CalculationProperties.</para>
         /// <para>Represents the following element tag in the schema: x:calcPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CalculationProperties? CalculationProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CalculationProperties>();
@@ -5484,9 +5484,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>OleSize.</para>
         /// <para>Represents the following element tag in the schema: x:oleSize.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.OleSize? OleSize
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OleSize>();
@@ -5497,9 +5497,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>CustomWorkbookViews.</para>
         /// <para>Represents the following element tag in the schema: x:customWorkbookViews.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookViews? CustomWorkbookViews
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookViews>();
@@ -5510,9 +5510,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>PivotCaches.</para>
         /// <para>Represents the following element tag in the schema: x:pivotCaches.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotCaches? PivotCaches
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotCaches>();
@@ -5523,9 +5523,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>WebPublishing.</para>
         /// <para>Represents the following element tag in the schema: x:webPublishing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.WebPublishing? WebPublishing
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.WebPublishing>();
@@ -5572,7 +5572,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:filterColumn.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ColorFilter" /> <c>&lt;x:colorFilter></c></description></item>
@@ -5585,7 +5585,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.CustomFilters" /> <c>&lt;x14:customFilters></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.IconFilter" /> <c>&lt;x14:iconFilter></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FilterColumn : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5687,9 +5687,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Filter Criteria.</para>
         /// <para>Represents the following element tag in the schema: x:filters.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Filters? Filters
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Filters>();
@@ -5700,9 +5700,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Top 10.</para>
         /// <para>Represents the following element tag in the schema: x:top10.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Top10? Top10
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Top10>();
@@ -5713,9 +5713,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>CustomFilters14, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: x14:customFilters.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.CustomFilters? CustomFilters14
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.CustomFilters>();
@@ -5726,9 +5726,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Custom Filters.</para>
         /// <para>Represents the following element tag in the schema: x:customFilters.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CustomFilters? CustomFilters
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CustomFilters>();
@@ -5739,9 +5739,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Dynamic Filter.</para>
         /// <para>Represents the following element tag in the schema: x:dynamicFilter.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DynamicFilter? DynamicFilter
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DynamicFilter>();
@@ -5752,9 +5752,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Color Filter Criteria.</para>
         /// <para>Represents the following element tag in the schema: x:colorFilter.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ColorFilter? ColorFilter
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColorFilter>();
@@ -5765,9 +5765,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>IconFilter14, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: x14:iconFilter.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.IconFilter? IconFilter14
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.IconFilter>();
@@ -5778,9 +5778,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Icon Filter.</para>
         /// <para>Represents the following element tag in the schema: x:iconFilter.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.IconFilter? IconFilter
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.IconFilter>();
@@ -5791,9 +5791,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -5809,14 +5809,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sortState.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortCondition" /> <c>&lt;x:sortCondition></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SortCondition" /> <c>&lt;x14:sortCondition></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SortState : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5925,12 +5925,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6140,12 +6140,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:authors.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Author" /> <c>&lt;x:author></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Authors : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6199,12 +6199,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:commentList.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Comment" /> <c>&lt;x:comment></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommentList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6258,13 +6258,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:comment.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CommentProperties" /> <c>&lt;x:commentPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CommentText" /> <c>&lt;x:text></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Comment : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6374,9 +6374,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Comment Text.</para>
         /// <para>Represents the following element tag in the schema: x:text.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CommentText? CommentText
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CommentText>();
@@ -6387,9 +6387,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>CommentProperties, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: x:commentPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CommentProperties? CommentProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CommentProperties>();
@@ -6990,9 +6990,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Content Contains Significant Whitespace</para>
         /// <para>Represents the following attribute in the schema: xml:space</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>? Space
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>();
@@ -7105,12 +7105,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:Map.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataBinding" /> <c>&lt;x:DataBinding></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Map : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7290,9 +7290,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>XML Mapping.</para>
         /// <para>Represents the following element tag in the schema: x:DataBinding.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DataBinding? DataBinding
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DataBinding>();
@@ -7428,7 +7428,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:connection.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ConnectionExtensionList" /> <c>&lt;x:extLst></c></description></item>
@@ -7438,7 +7438,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TextProperties" /> <c>&lt;x:textPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WebQueryProperties" /> <c>&lt;x:webPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Connection : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7733,9 +7733,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>DatabaseProperties.</para>
         /// <para>Represents the following element tag in the schema: x:dbPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DatabaseProperties? DatabaseProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DatabaseProperties>();
@@ -7746,9 +7746,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>OlapProperties.</para>
         /// <para>Represents the following element tag in the schema: x:olapPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.OlapProperties? OlapProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OlapProperties>();
@@ -7759,9 +7759,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>WebQueryProperties.</para>
         /// <para>Represents the following element tag in the schema: x:webPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.WebQueryProperties? WebQueryProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.WebQueryProperties>();
@@ -7772,9 +7772,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>TextProperties.</para>
         /// <para>Represents the following element tag in the schema: x:textPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.TextProperties? TextProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TextProperties>();
@@ -7785,9 +7785,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Parameters.</para>
         /// <para>Represents the following element tag in the schema: x:parameters.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Parameters? Parameters
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Parameters>();
@@ -7798,9 +7798,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>ConnectionExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ConnectionExtensionList? ConnectionExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ConnectionExtensionList>();
@@ -7816,14 +7816,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:tables.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FieldItem" /> <c>&lt;x:x></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MissingTable" /> <c>&lt;x:m></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CharacterValue" /> <c>&lt;x:s></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Tables : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8187,7 +8187,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:cacheField.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CacheFieldExtensionList" /> <c>&lt;x:extLst></c></description></item>
@@ -8195,7 +8195,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SharedItems" /> <c>&lt;x:sharedItems></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberPropertiesMap" /> <c>&lt;x:mpMap></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CacheField : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8398,9 +8398,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>SharedItems.</para>
         /// <para>Represents the following element tag in the schema: x:sharedItems.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SharedItems? SharedItems
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SharedItems>();
@@ -8411,9 +8411,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>FieldGroup.</para>
         /// <para>Represents the following element tag in the schema: x:fieldGroup.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.FieldGroup? FieldGroup
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FieldGroup>();
@@ -8429,12 +8429,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pages.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Page" /> <c>&lt;x:page></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Pages : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8500,12 +8500,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rangeSets.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RangeSet" /> <c>&lt;x:rangeSet></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RangeSets : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8571,12 +8571,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:page.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PageItem" /> <c>&lt;x:pageItem></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Page : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8764,9 +8764,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Relationship Id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -8799,13 +8799,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:m.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Tuples" /> <c>&lt;x:tpls></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex" /> <c>&lt;x:x></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MissingItem : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8991,13 +8991,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:n.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Tuples" /> <c>&lt;x:tpls></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex" /> <c>&lt;x:x></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NumberItem : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9200,12 +9200,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:b.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex" /> <c>&lt;x:x></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BooleanItem : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9319,13 +9319,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:e.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Tuples" /> <c>&lt;x:tpls></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex" /> <c>&lt;x:x></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ErrorItem : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9520,9 +9520,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Tuples.</para>
         /// <para>Represents the following element tag in the schema: x:tpls.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Tuples? Tuples
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Tuples>();
@@ -9538,13 +9538,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:s.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Tuples" /> <c>&lt;x:tpls></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex" /> <c>&lt;x:x></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StringItem : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9744,12 +9744,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:d.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex" /> <c>&lt;x:x></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DateTimeItem : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9863,12 +9863,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:tpls.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Tuple" /> <c>&lt;x:tpl></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Tuples : TuplesType
     {
         /// <summary>
@@ -9921,12 +9921,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sortByTuple.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Tuple" /> <c>&lt;x:tpl></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SortByTuple : TuplesType
     {
         /// <summary>
@@ -9979,12 +9979,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Tuple" /> <c>&lt;x:tpl></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class TuplesType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10123,7 +10123,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:r.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.BooleanItem" /> <c>&lt;x:b></c></description></item>
@@ -10134,7 +10134,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberItem" /> <c>&lt;x:n></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.StringItem" /> <c>&lt;x:s></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotCacheRecord : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10395,13 +10395,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:groupLevel.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Groups" /> <c>&lt;x:groups></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GroupLevel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10504,9 +10504,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>OLAP Level Groups.</para>
         /// <para>Represents the following element tag in the schema: x:groups.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Groups? Groups
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Groups>();
@@ -10517,9 +10517,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Future Feature Data Storage Area.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -10535,12 +10535,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:groups.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Group" /> <c>&lt;x:group></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Groups : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10606,12 +10606,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:group.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.GroupMembers" /> <c>&lt;x:groupMembers></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Group : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10729,9 +10729,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>OLAP Group Members.</para>
         /// <para>Represents the following element tag in the schema: x:groupMembers.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.GroupMembers? GroupMembers
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.GroupMembers>();
@@ -10747,12 +10747,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:groupMembers.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.GroupMember" /> <c>&lt;x:groupMember></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GroupMembers : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10870,7 +10870,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:entries.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ErrorItem" /> <c>&lt;x:e></c></description></item>
@@ -10878,7 +10878,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberItem" /> <c>&lt;x:n></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.StringItem" /> <c>&lt;x:s></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Entries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10950,12 +10950,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sets.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TupleSet" /> <c>&lt;x:set></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Sets : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11021,12 +11021,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:queryCache.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Query" /> <c>&lt;x:query></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class QueryCache : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11092,12 +11092,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:serverFormats.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ServerFormat" /> <c>&lt;x:serverFormat></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ServerFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11277,13 +11277,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:set.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Tuples" /> <c>&lt;x:tpls></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortByTuple" /> <c>&lt;x:sortByTuple></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TupleSet : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11403,12 +11403,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:query.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Tuples" /> <c>&lt;x:tpls></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Query : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11473,9 +11473,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Tuples.</para>
         /// <para>Represents the following element tag in the schema: x:tpls.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Tuples? Tuples
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Tuples>();
@@ -11491,13 +11491,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:calculatedItem.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotArea" /> <c>&lt;x:pivotArea></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CalculatedItem : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11571,9 +11571,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Calculated Item Location.</para>
         /// <para>Represents the following element tag in the schema: x:pivotArea.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotArea? PivotArea
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
@@ -11584,9 +11584,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Future Feature Data Storage Area.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -11602,13 +11602,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pivotArea.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences" /> <c>&lt;x:references></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotArea : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11793,9 +11793,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>References.</para>
         /// <para>Represents the following element tag in the schema: x:references.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences? PivotAreaReferences
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences>();
@@ -11806,9 +11806,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Future Feature Data Storage Area.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -11824,12 +11824,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:calculatedMember.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CalculatedMember : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11971,9 +11971,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>CalculatedMemberExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtensionList? CalculatedMemberExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtensionList>();
@@ -11989,14 +11989,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pivotField.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.AutoSortScope" /> <c>&lt;x:autoSortScope></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Items" /> <c>&lt;x:items></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotField : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12579,9 +12579,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Field Items.</para>
         /// <para>Represents the following element tag in the schema: x:items.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Items? Items
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Items>();
@@ -12592,9 +12592,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>AutoSort Scope.</para>
         /// <para>Represents the following element tag in the schema: x:autoSortScope.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.AutoSortScope? AutoSortScope
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.AutoSortScope>();
@@ -12605,9 +12605,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Future Feature Data Storage Area.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtensionList? PivotFieldExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtensionList>();
@@ -12772,12 +12772,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:dataField.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataFieldExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataField : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12908,9 +12908,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>DataFieldExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DataFieldExtensionList? DataFieldExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DataFieldExtensionList>();
@@ -12926,12 +12926,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:i.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex" /> <c>&lt;x:x></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RowItem : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13060,13 +13060,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:format.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotArea" /> <c>&lt;x:pivotArea></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Format : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13141,9 +13141,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Pivot Table Location.</para>
         /// <para>Represents the following element tag in the schema: x:pivotArea.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotArea? PivotArea
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
@@ -13154,9 +13154,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Future Feature Data Storage Area.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -13172,13 +13172,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:conditionalFormat.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotAreas" /> <c>&lt;x:pivotAreas></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ConditionalFormat : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13267,9 +13267,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Pivot Areas.</para>
         /// <para>Represents the following element tag in the schema: x:pivotAreas.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotAreas? PivotAreas
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotAreas>();
@@ -13280,9 +13280,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -13298,12 +13298,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pivotAreas.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotArea" /> <c>&lt;x:pivotArea></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotAreas : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13369,12 +13369,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:chartFormat.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotArea" /> <c>&lt;x:pivotArea></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ChartFormat : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13463,9 +13463,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Pivot Table Location Rule.</para>
         /// <para>Represents the following element tag in the schema: x:pivotArea.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotArea? PivotArea
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
@@ -13481,14 +13481,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pivotHierarchy.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberProperties" /> <c>&lt;x:mps></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Members" /> <c>&lt;x:members></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotHierarchyExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotHierarchy : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13664,9 +13664,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>OLAP Member Properties.</para>
         /// <para>Represents the following element tag in the schema: x:mps.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.MemberProperties? MemberProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MemberProperties>();
@@ -14122,13 +14122,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:filter.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.AutoFilter" /> <c>&lt;x:autoFilter></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotFilter : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14314,9 +14314,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>AutoFilter.</para>
         /// <para>Represents the following element tag in the schema: x:autoFilter.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.AutoFilter? AutoFilter
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.AutoFilter>();
@@ -14327,9 +14327,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>PivotFilterExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtensionList? PivotFilterExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtensionList>();
@@ -14345,14 +14345,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:cacheHierarchy.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FieldsUsage" /> <c>&lt;x:fieldsUsage></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.GroupLevels" /> <c>&lt;x:groupLevels></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CacheHierarchy : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14660,9 +14660,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>FieldsUsage.</para>
         /// <para>Represents the following element tag in the schema: x:fieldsUsage.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.FieldsUsage? FieldsUsage
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FieldsUsage>();
@@ -14673,9 +14673,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>GroupLevels.</para>
         /// <para>Represents the following element tag in the schema: x:groupLevels.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.GroupLevels? GroupLevels
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.GroupLevels>();
@@ -14686,9 +14686,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>CacheHierarchyExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtensionList? CacheHierarchyExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtensionList>();
@@ -14818,12 +14818,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:discretePr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FieldItem" /> <c>&lt;x:x></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DiscreteProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14889,7 +14889,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:groupItems.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.BooleanItem" /> <c>&lt;x:b></c></description></item>
@@ -14899,7 +14899,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberItem" /> <c>&lt;x:n></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.StringItem" /> <c>&lt;x:s></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GroupItems : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14975,12 +14975,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pageField.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PageField : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15090,9 +15090,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Future Feature Data Storage Area.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -15108,12 +15108,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:references.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotAreaReference" /> <c>&lt;x:reference></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotAreaReferences : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15179,13 +15179,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:reference.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FieldItem" /> <c>&lt;x:x></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotAreaReference : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15429,12 +15429,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:queryTableFields.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.QueryTableField" /> <c>&lt;x:queryTableField></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class QueryTableFields : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15500,12 +15500,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:queryTableDeletedFields.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DeletedField" /> <c>&lt;x:deletedField></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class QueryTableDeletedFields : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15611,12 +15611,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:queryTableField.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class QueryTableField : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15752,9 +15752,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Future Feature Data Storage Area.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -15770,7 +15770,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:si.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties" /> <c>&lt;x:phoneticPr></c></description></item>
@@ -15778,7 +15778,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Run" /> <c>&lt;x:r></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Text" /> <c>&lt;x:t></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SharedStringItem : RstType
     {
         /// <summary>
@@ -15834,7 +15834,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:is.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties" /> <c>&lt;x:phoneticPr></c></description></item>
@@ -15842,7 +15842,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Run" /> <c>&lt;x:r></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Text" /> <c>&lt;x:t></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class InlineString : RstType
     {
         /// <summary>
@@ -15898,7 +15898,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:text.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties" /> <c>&lt;x:phoneticPr></c></description></item>
@@ -15906,7 +15906,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Run" /> <c>&lt;x:r></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Text" /> <c>&lt;x:t></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommentText : RstType
     {
         /// <summary>
@@ -15962,7 +15962,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties" /> <c>&lt;x:phoneticPr></c></description></item>
@@ -15970,7 +15970,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Run" /> <c>&lt;x:r></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Text" /> <c>&lt;x:t></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class RstType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16017,9 +16017,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Text.</para>
         /// <para>Represents the following element tag in the schema: x:t.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Text? Text
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Text>();
@@ -16695,7 +16695,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Bold" /> <c>&lt;x:b></c></description></item>
@@ -16714,7 +16714,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Underline" /> <c>&lt;x:u></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment" /> <c>&lt;x:vertAlign></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RunProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16796,13 +16796,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:r.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RunProperties" /> <c>&lt;x:rPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Text" /> <c>&lt;x:t></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Run : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16853,9 +16853,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Run Properties.</para>
         /// <para>Represents the following element tag in the schema: x:rPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.RunProperties? RunProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RunProperties>();
@@ -16866,9 +16866,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Text.</para>
         /// <para>Represents the following element tag in the schema: x:t.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Text? Text
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Text>();
@@ -16884,12 +16884,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rPh.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Text" /> <c>&lt;x:t></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PhoneticRun : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16968,9 +16968,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Text.</para>
         /// <para>Represents the following element tag in the schema: x:t.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Text? Text
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Text>();
@@ -17048,14 +17048,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:header.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ReviewedList" /> <c>&lt;x:reviewedList></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetIdMap" /> <c>&lt;x:sheetIdMap></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Header : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17133,9 +17133,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Relationship ID</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -17208,9 +17208,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Sheet Id Map.</para>
         /// <para>Represents the following element tag in the schema: x:sheetIdMap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetIdMap? SheetIdMap
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetIdMap>();
@@ -17221,9 +17221,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Reviewed List.</para>
         /// <para>Represents the following element tag in the schema: x:reviewedList.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ReviewedList? ReviewedList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ReviewedList>();
@@ -17234,9 +17234,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -17252,14 +17252,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rrc.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RevisionCellChange" /> <c>&lt;x:rcc></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RevisionFormat" /> <c>&lt;x:rfmt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Undo" /> <c>&lt;x:undo></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RevisionRowColumn : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17419,14 +17419,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rm.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RevisionCellChange" /> <c>&lt;x:rcc></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RevisionFormat" /> <c>&lt;x:rfmt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Undo" /> <c>&lt;x:undo></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RevisionMove : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17630,12 +17630,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rsnm.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RevisionSheetName : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17764,9 +17764,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -17887,7 +17887,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rcc.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OldCell" /> <c>&lt;x:oc></c></description></item>
@@ -17896,7 +17896,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NewCell" /> <c>&lt;x:nc></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RevisionCellChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18115,9 +18115,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Old Cell Data.</para>
         /// <para>Represents the following element tag in the schema: x:oc.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.OldCell? OldCell
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OldCell>();
@@ -18128,9 +18128,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>New Cell Data.</para>
         /// <para>Represents the following element tag in the schema: x:nc.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.NewCell? NewCell
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NewCell>();
@@ -18141,9 +18141,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Old Formatting Information.</para>
         /// <para>Represents the following element tag in the schema: x:odxf.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.OldDifferentialFormat? OldDifferentialFormat
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OldDifferentialFormat>();
@@ -18154,9 +18154,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>New Formatting Information.</para>
         /// <para>Represents the following element tag in the schema: x:ndxf.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.NewDifferentialFormat? NewDifferentialFormat
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NewDifferentialFormat>();
@@ -18167,9 +18167,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -18185,13 +18185,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rfmt.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat" /> <c>&lt;x:dxf></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RevisionFormat : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18316,9 +18316,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Formatting.</para>
         /// <para>Represents the following element tag in the schema: x:dxf.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat? DifferentialFormat
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat>();
@@ -18329,9 +18329,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -18479,14 +18479,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rdn.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Formula" /> <c>&lt;x:formula></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OldFormula" /> <c>&lt;x:oldFormula></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RevisionDefinedName : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18825,9 +18825,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Formula.</para>
         /// <para>Represents the following element tag in the schema: x:formula.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Formula? Formula
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formula>();
@@ -18838,9 +18838,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Old Formula.</para>
         /// <para>Represents the following element tag in the schema: x:oldFormula.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.OldFormula? OldFormula
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OldFormula>();
@@ -18851,9 +18851,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -19169,12 +19169,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sheetIdMap.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetId" /> <c>&lt;x:sheetId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SheetIdMap : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19240,12 +19240,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:reviewedList.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Reviewed" /> <c>&lt;x:reviewed></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ReviewedList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19510,7 +19510,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:oc.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellFormula" /> <c>&lt;x:f></c></description></item>
@@ -19518,7 +19518,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.InlineString" /> <c>&lt;x:is></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellValue" /> <c>&lt;x:v></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OldCell : CellType
     {
         /// <summary>
@@ -19577,7 +19577,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:c.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellFormula" /> <c>&lt;x:f></c></description></item>
@@ -19585,7 +19585,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.InlineString" /> <c>&lt;x:is></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellValue" /> <c>&lt;x:v></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Cell : CellType
     {
         /// <summary>
@@ -19650,7 +19650,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellFormula" /> <c>&lt;x:f></c></description></item>
@@ -19658,7 +19658,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.InlineString" /> <c>&lt;x:is></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellValue" /> <c>&lt;x:v></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class CellType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19772,9 +19772,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Formula.</para>
         /// <para>Represents the following element tag in the schema: x:f.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CellFormula? CellFormula
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CellFormula>();
@@ -19785,9 +19785,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Cell Value.</para>
         /// <para>Represents the following element tag in the schema: x:v.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CellValue? CellValue
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CellValue>();
@@ -19798,9 +19798,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Rich Text Inline.</para>
         /// <para>Represents the following element tag in the schema: x:is.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.InlineString? InlineString
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.InlineString>();
@@ -19811,9 +19811,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Future Feature Data Storage Area.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -19826,7 +19826,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:nc.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellFormula" /> <c>&lt;x:f></c></description></item>
@@ -19834,7 +19834,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.InlineString" /> <c>&lt;x:is></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellValue" /> <c>&lt;x:v></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NewCell : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19962,9 +19962,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Formula.</para>
         /// <para>Represents the following element tag in the schema: x:f.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CellFormula? CellFormula
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CellFormula>();
@@ -19975,9 +19975,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Cell Value.</para>
         /// <para>Represents the following element tag in the schema: x:v.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CellValue? CellValue
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CellValue>();
@@ -19988,9 +19988,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Rich Text Inline.</para>
         /// <para>Represents the following element tag in the schema: x:is.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.InlineString? InlineString
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.InlineString>();
@@ -20001,9 +20001,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Future Feature Data Storage Area.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -20019,7 +20019,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:odxf.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
@@ -20030,7 +20030,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OldDifferentialFormat : DifferentialFormatType
     {
         /// <summary>
@@ -20089,7 +20089,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ndxf.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
@@ -20100,7 +20100,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NewDifferentialFormat : DifferentialFormatType
     {
         /// <summary>
@@ -20159,7 +20159,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:dxf.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
@@ -20170,7 +20170,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DifferentialFormat : DifferentialFormatType
     {
         /// <summary>
@@ -20229,7 +20229,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
@@ -20240,7 +20240,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class DifferentialFormatType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20290,9 +20290,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Font Properties.</para>
         /// <para>Represents the following element tag in the schema: x:font.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Font? Font
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Font>();
@@ -20303,9 +20303,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Number Format.</para>
         /// <para>Represents the following element tag in the schema: x:numFmt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.NumberingFormat? NumberingFormat
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
@@ -20316,9 +20316,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Fill.</para>
         /// <para>Represents the following element tag in the schema: x:fill.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Fill? Fill
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Fill>();
@@ -20329,9 +20329,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Alignment.</para>
         /// <para>Represents the following element tag in the schema: x:alignment.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Alignment? Alignment
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
@@ -20342,9 +20342,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Border Properties.</para>
         /// <para>Represents the following element tag in the schema: x:border.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Border? Border
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Border>();
@@ -20355,9 +20355,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Protection Properties.</para>
         /// <para>Represents the following element tag in the schema: x:protection.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Protection? Protection
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Protection>();
@@ -20368,9 +20368,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Future Feature Data Storage Area.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -20569,9 +20569,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Content Contains Significant Whitespace</para>
         /// <para>Represents the following attribute in the schema: xml:space</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>? Space
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>();
@@ -20609,12 +20609,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:userInfo.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class UserInfo : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20721,9 +20721,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -20739,13 +20739,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:row.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Cell" /> <c>&lt;x:c></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Row : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20903,9 +20903,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>dyDescent, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: x14ac:dyDescent</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14ac=http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac
-        /// </remark>
+        /// </remarks>
         public DoubleValue? DyDescent
         {
             get => GetAttribute<DoubleValue>();
@@ -21369,12 +21369,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pivotSelection.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotArea" /> <c>&lt;x:pivotArea></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotSelection : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21572,9 +21572,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Relationship Id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -21620,9 +21620,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Pivot Area.</para>
         /// <para>Represents the following element tag in the schema: x:pivotArea.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotArea? PivotArea
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
@@ -21764,9 +21764,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>relationship Id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -21793,12 +21793,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rowBreaks.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Break" /> <c>&lt;x:brk></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RowBreaks : PageBreakType
     {
         /// <summary>
@@ -21853,12 +21853,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:colBreaks.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Break" /> <c>&lt;x:brk></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ColumnBreaks : PageBreakType
     {
         /// <summary>
@@ -21913,12 +21913,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Break" /> <c>&lt;x:brk></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class PageBreakType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22355,9 +22355,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -22402,7 +22402,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:headerFooter.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OddHeader" /> <c>&lt;x:oddHeader></c></description></item>
@@ -22412,7 +22412,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FirstHeader" /> <c>&lt;x:firstHeader></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FirstFooter" /> <c>&lt;x:firstFooter></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class HeaderFooter : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22516,9 +22516,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Odd Header.</para>
         /// <para>Represents the following element tag in the schema: x:oddHeader.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.OddHeader? OddHeader
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OddHeader>();
@@ -22529,9 +22529,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Odd Page Footer.</para>
         /// <para>Represents the following element tag in the schema: x:oddFooter.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.OddFooter? OddFooter
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OddFooter>();
@@ -22542,9 +22542,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Even Page Header.</para>
         /// <para>Represents the following element tag in the schema: x:evenHeader.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.EvenHeader? EvenHeader
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.EvenHeader>();
@@ -22555,9 +22555,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Even Page Footer.</para>
         /// <para>Represents the following element tag in the schema: x:evenFooter.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.EvenFooter? EvenFooter
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.EvenFooter>();
@@ -22568,9 +22568,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>First Page Header.</para>
         /// <para>Represents the following element tag in the schema: x:firstHeader.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.FirstHeader? FirstHeader
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FirstHeader>();
@@ -22581,9 +22581,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>First Page Footer.</para>
         /// <para>Represents the following element tag in the schema: x:firstFooter.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.FirstFooter? FirstFooter
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FirstFooter>();
@@ -22599,14 +22599,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:autoFilter.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FilterColumn" /> <c>&lt;x:filterColumn></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortState" /> <c>&lt;x:sortState></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AutoFilter : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22676,7 +22676,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:cfRule.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRuleExtensionList" /> <c>&lt;x:extLst></c></description></item>
@@ -22685,7 +22685,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.IconSet" /> <c>&lt;x:iconSet></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Formula" /> <c>&lt;x:formula></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ConditionalFormattingRule : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22923,9 +22923,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Relationship Id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -22990,12 +22990,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:cfvo.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ConditionalFormatValueObject : OpenXmlCompositeElement
     {
         /// <summary>
@@ -23081,9 +23081,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -23099,12 +23099,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:scenario.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.InputCells" /> <c>&lt;x:inputCells></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Scenario : OpenXmlCompositeElement
     {
         /// <summary>
@@ -23511,9 +23511,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -23575,9 +23575,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Relationship Id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -23754,9 +23754,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Relationship Id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -23783,12 +23783,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sheetView.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ChartSheetView : OpenXmlCompositeElement
     {
         /// <summary>
@@ -23891,9 +23891,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -23909,14 +23909,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:customSheetView.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup" /> <c>&lt;x:pageSetup></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.HeaderFooter" /> <c>&lt;x:headerFooter></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PageMargins" /> <c>&lt;x:pageMargins></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CustomChartsheetView : OpenXmlCompositeElement
     {
         /// <summary>
@@ -24021,9 +24021,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>PageMargins.</para>
         /// <para>Represents the following element tag in the schema: x:pageMargins.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PageMargins? PageMargins
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageMargins>();
@@ -24034,9 +24034,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Chart Sheet Page Setup.</para>
         /// <para>Represents the following element tag in the schema: x:pageSetup.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup? ChartSheetPageSetup
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup>();
@@ -24047,9 +24047,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>HeaderFooter.</para>
         /// <para>Represents the following element tag in the schema: x:headerFooter.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.HeaderFooter? HeaderFooter
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>();
@@ -24152,12 +24152,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:control.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ControlProperties" /> <c>&lt;x:controlPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Control : OpenXmlCompositeElement
     {
         /// <summary>
@@ -24205,9 +24205,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Relationship Id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -24252,9 +24252,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>ControlProperties, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: x:controlPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ControlProperties? ControlProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ControlProperties>();
@@ -24448,14 +24448,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:dataValidation.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Formula1" /> <c>&lt;x:formula1></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Formula2" /> <c>&lt;x:formula2></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.ExcelAc.List" /> <c>&lt;x12ac:list></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataValidation : OpenXmlCompositeElement
     {
         /// <summary>
@@ -24658,9 +24658,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>List, this property is only available in Office 2013 and later..</para>
         /// <para>Represents the following element tag in the schema: x12ac:list.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x12ac = http://schemas.microsoft.com/office/spreadsheetml/2011/1/ac
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.ExcelAc.List? List
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.ExcelAc.List>();
@@ -24671,9 +24671,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Formula1.</para>
         /// <para>Represents the following element tag in the schema: x:formula1.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Formula1? Formula1
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formula1>();
@@ -24684,9 +24684,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Formula2.</para>
         /// <para>Represents the following element tag in the schema: x:formula2.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Formula2? Formula2
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formula2>();
@@ -24702,7 +24702,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sheetView.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
@@ -24710,7 +24710,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotSelection" /> <c>&lt;x:pivotSelection></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Selection" /> <c>&lt;x:selection></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SheetView : OpenXmlCompositeElement
     {
         /// <summary>
@@ -24984,9 +24984,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>View Pane.</para>
         /// <para>Represents the following element tag in the schema: x:pane.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Pane? Pane
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Pane>();
@@ -25002,7 +25002,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:customSheetView.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.AutoFilter" /> <c>&lt;x:autoFilter></c></description></item>
@@ -25016,7 +25016,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PrintOptions" /> <c>&lt;x:printOptions></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Selection" /> <c>&lt;x:selection></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CustomSheetView : OpenXmlCompositeElement
     {
         /// <summary>
@@ -25311,9 +25311,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Pane Split Information.</para>
         /// <para>Represents the following element tag in the schema: x:pane.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Pane? Pane
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Pane>();
@@ -25324,9 +25324,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Selection.</para>
         /// <para>Represents the following element tag in the schema: x:selection.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Selection? Selection
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Selection>();
@@ -25337,9 +25337,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Horizontal Page Breaks.</para>
         /// <para>Represents the following element tag in the schema: x:rowBreaks.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.RowBreaks? RowBreaks
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowBreaks>();
@@ -25350,9 +25350,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Vertical Page Breaks.</para>
         /// <para>Represents the following element tag in the schema: x:colBreaks.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks? ColumnBreaks
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks>();
@@ -25363,9 +25363,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Page Margins.</para>
         /// <para>Represents the following element tag in the schema: x:pageMargins.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PageMargins? PageMargins
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageMargins>();
@@ -25376,9 +25376,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Print Options.</para>
         /// <para>Represents the following element tag in the schema: x:printOptions.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PrintOptions? PrintOptions
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PrintOptions>();
@@ -25389,9 +25389,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Page Setup Settings.</para>
         /// <para>Represents the following element tag in the schema: x:pageSetup.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PageSetup? PageSetup
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageSetup>();
@@ -25402,9 +25402,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Header Footer Settings.</para>
         /// <para>Represents the following element tag in the schema: x:headerFooter.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.HeaderFooter? HeaderFooter
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>();
@@ -25415,9 +25415,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>AutoFilter Settings.</para>
         /// <para>Represents the following element tag in the schema: x:autoFilter.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.AutoFilter? AutoFilter
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.AutoFilter>();
@@ -25428,9 +25428,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -25446,12 +25446,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:oleObject.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.EmbeddedObjectProperties" /> <c>&lt;x:objectPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OleObject : OpenXmlCompositeElement
     {
         /// <summary>
@@ -25549,9 +25549,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Relationship Id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -25587,9 +25587,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>EmbeddedObjectProperties, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: x:objectPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.EmbeddedObjectProperties? EmbeddedObjectProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.EmbeddedObjectProperties>();
@@ -25605,12 +25605,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:metadataTypes.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MetadataType" /> <c>&lt;x:metadataType></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MetadataTypes : OpenXmlCompositeElement
     {
         /// <summary>
@@ -25677,12 +25677,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:metadataStrings.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CharacterValue" /> <c>&lt;x:s></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MetadataStrings : OpenXmlCompositeElement
     {
         /// <summary>
@@ -25749,12 +25749,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:mdxMetadata.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Mdx" /> <c>&lt;x:mdx></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MdxMetadata : OpenXmlCompositeElement
     {
         /// <summary>
@@ -25821,13 +25821,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:futureMetadata.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FutureMetadataBlock" /> <c>&lt;x:bk></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FutureMetadata : OpenXmlCompositeElement
     {
         /// <summary>
@@ -25913,12 +25913,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:cellMetadata.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MetadataBlock" /> <c>&lt;x:bk></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CellMetadata : MetadataBlocksType
     {
         /// <summary>
@@ -25972,12 +25972,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:valueMetadata.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MetadataBlock" /> <c>&lt;x:bk></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ValueMetadata : MetadataBlocksType
     {
         /// <summary>
@@ -26031,12 +26031,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MetadataBlock" /> <c>&lt;x:bk></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class MetadataBlocksType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -26435,12 +26435,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:bk.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MetadataRecord" /> <c>&lt;x:rc></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MetadataBlock : OpenXmlCompositeElement
     {
         /// <summary>
@@ -26549,12 +26549,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:bk.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FutureMetadataBlock : OpenXmlCompositeElement
     {
         /// <summary>
@@ -26603,9 +26603,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Future Feature Storage Area.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -26621,7 +26621,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:mdx.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MdxKpi" /> <c>&lt;x:k></c></description></item>
@@ -26629,7 +26629,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MdxSet" /> <c>&lt;x:ms></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MdxTuple" /> <c>&lt;x:t></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Mdx : OpenXmlCompositeElement
     {
         /// <summary>
@@ -26715,9 +26715,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Tuple MDX Metadata.</para>
         /// <para>Represents the following element tag in the schema: x:t.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.MdxTuple? MdxTuple
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MdxTuple>();
@@ -26728,9 +26728,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Set MDX Metadata.</para>
         /// <para>Represents the following element tag in the schema: x:ms.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.MdxSet? MdxSet
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MdxSet>();
@@ -26741,9 +26741,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Member Property MDX Metadata.</para>
         /// <para>Represents the following element tag in the schema: x:p.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.MdxMemberProp? MdxMemberProp
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MdxMemberProp>();
@@ -26754,9 +26754,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>KPI MDX Metadata.</para>
         /// <para>Represents the following element tag in the schema: x:k.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.MdxKpi? MdxKpi
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MdxKpi>();
@@ -26772,12 +26772,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:t.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NameIndex" /> <c>&lt;x:n></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MdxTuple : OpenXmlCompositeElement
     {
         /// <summary>
@@ -26952,12 +26952,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ms.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NameIndex" /> <c>&lt;x:n></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MdxSet : OpenXmlCompositeElement
     {
         /// <summary>
@@ -27234,13 +27234,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:singleXmlCell.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.XmlCellProperties" /> <c>&lt;x:xmlCellPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SingleXmlCell : OpenXmlCompositeElement
     {
         /// <summary>
@@ -27337,9 +27337,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Cell Properties.</para>
         /// <para>Represents the following element tag in the schema: x:xmlCellPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.XmlCellProperties? XmlCellProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.XmlCellProperties>();
@@ -27350,9 +27350,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Future Feature Data Storage Area.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -27368,13 +27368,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:xmlCellPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.XmlProperties" /> <c>&lt;x:xmlPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class XmlCellProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -27457,9 +27457,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Column XML Properties.</para>
         /// <para>Represents the following element tag in the schema: x:xmlPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.XmlProperties? XmlProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.XmlProperties>();
@@ -27470,9 +27470,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Future Feature Data Storage Area.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -27488,12 +27488,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:xmlPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class XmlProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -27587,9 +27587,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Future Feature Data Storage Area.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -27605,13 +27605,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:patternFill.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ForegroundColor" /> <c>&lt;x:fgColor></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.BackgroundColor" /> <c>&lt;x:bgColor></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PatternFill : OpenXmlCompositeElement
     {
         /// <summary>
@@ -27674,9 +27674,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Foreground Color.</para>
         /// <para>Represents the following element tag in the schema: x:fgColor.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ForegroundColor? ForegroundColor
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ForegroundColor>();
@@ -27687,9 +27687,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Background Color.</para>
         /// <para>Represents the following element tag in the schema: x:bgColor.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.BackgroundColor? BackgroundColor
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.BackgroundColor>();
@@ -27705,12 +27705,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:gradientFill.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.GradientStop" /> <c>&lt;x:stop></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GradientFill : OpenXmlCompositeElement
     {
         /// <summary>
@@ -27836,12 +27836,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:stop.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GradientStop : OpenXmlCompositeElement
     {
         /// <summary>
@@ -27906,9 +27906,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Color.</para>
         /// <para>Represents the following element tag in the schema: x:color.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Color? Color
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Color>();
@@ -28163,7 +28163,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:font.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Bold" /> <c>&lt;x:b></c></description></item>
@@ -28182,7 +28182,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Underline" /> <c>&lt;x:u></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment" /> <c>&lt;x:vertAlign></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Font : OpenXmlCompositeElement
     {
         /// <summary>
@@ -28259,9 +28259,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Bold.</para>
         /// <para>Represents the following element tag in the schema: x:b.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Bold? Bold
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Bold>();
@@ -28272,9 +28272,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Italic.</para>
         /// <para>Represents the following element tag in the schema: x:i.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Italic? Italic
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Italic>();
@@ -28285,9 +28285,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Strike Through.</para>
         /// <para>Represents the following element tag in the schema: x:strike.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Strike? Strike
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Strike>();
@@ -28298,9 +28298,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Condense.</para>
         /// <para>Represents the following element tag in the schema: x:condense.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Condense? Condense
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Condense>();
@@ -28311,9 +28311,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Extend.</para>
         /// <para>Represents the following element tag in the schema: x:extend.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Extend? Extend
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Extend>();
@@ -28324,9 +28324,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Outline.</para>
         /// <para>Represents the following element tag in the schema: x:outline.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Outline? Outline
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Outline>();
@@ -28337,9 +28337,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Shadow.</para>
         /// <para>Represents the following element tag in the schema: x:shadow.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Shadow? Shadow
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Shadow>();
@@ -28350,9 +28350,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Underline.</para>
         /// <para>Represents the following element tag in the schema: x:u.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Underline? Underline
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Underline>();
@@ -28363,9 +28363,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Text Vertical Alignment.</para>
         /// <para>Represents the following element tag in the schema: x:vertAlign.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment? VerticalTextAlignment
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment>();
@@ -28376,9 +28376,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Font Size.</para>
         /// <para>Represents the following element tag in the schema: x:sz.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.FontSize? FontSize
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontSize>();
@@ -28389,9 +28389,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Text Color.</para>
         /// <para>Represents the following element tag in the schema: x:color.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Color? Color
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Color>();
@@ -28402,9 +28402,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Font Name.</para>
         /// <para>Represents the following element tag in the schema: x:name.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.FontName? FontName
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontName>();
@@ -28415,9 +28415,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Font Family.</para>
         /// <para>Represents the following element tag in the schema: x:family.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.FontFamilyNumbering? FontFamilyNumbering
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontFamilyNumbering>();
@@ -28428,9 +28428,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Character Set.</para>
         /// <para>Represents the following element tag in the schema: x:charset.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.FontCharSet? FontCharSet
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontCharSet>();
@@ -28441,9 +28441,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Scheme.</para>
         /// <para>Represents the following element tag in the schema: x:scheme.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.FontScheme? FontScheme
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontScheme>();
@@ -28459,13 +28459,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:fill.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.GradientFill" /> <c>&lt;x:gradientFill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PatternFill" /> <c>&lt;x:patternFill></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Fill : OpenXmlCompositeElement
     {
         /// <summary>
@@ -28516,9 +28516,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Pattern.</para>
         /// <para>Represents the following element tag in the schema: x:patternFill.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PatternFill? PatternFill
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PatternFill>();
@@ -28529,9 +28529,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Gradient.</para>
         /// <para>Represents the following element tag in the schema: x:gradientFill.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.GradientFill? GradientFill
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.GradientFill>();
@@ -28547,7 +28547,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:border.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.StartBorder" /> <c>&lt;x:start></c></description></item>
@@ -28560,7 +28560,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.VerticalBorder" /> <c>&lt;x:vertical></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.HorizontalBorder" /> <c>&lt;x:horizontal></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Border : OpenXmlCompositeElement
     {
         /// <summary>
@@ -28659,9 +28659,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>StartBorder, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: x:start.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.StartBorder? StartBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.StartBorder>();
@@ -28672,9 +28672,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>EndBorder, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: x:end.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.EndBorder? EndBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.EndBorder>();
@@ -28685,9 +28685,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Left Border.</para>
         /// <para>Represents the following element tag in the schema: x:left.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.LeftBorder? LeftBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.LeftBorder>();
@@ -28698,9 +28698,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Right Border.</para>
         /// <para>Represents the following element tag in the schema: x:right.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.RightBorder? RightBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RightBorder>();
@@ -28711,9 +28711,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Top Border.</para>
         /// <para>Represents the following element tag in the schema: x:top.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.TopBorder? TopBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TopBorder>();
@@ -28724,9 +28724,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Bottom Border.</para>
         /// <para>Represents the following element tag in the schema: x:bottom.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.BottomBorder? BottomBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.BottomBorder>();
@@ -28737,9 +28737,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Diagonal.</para>
         /// <para>Represents the following element tag in the schema: x:diagonal.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DiagonalBorder? DiagonalBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DiagonalBorder>();
@@ -28750,9 +28750,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Vertical Inner Border.</para>
         /// <para>Represents the following element tag in the schema: x:vertical.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.VerticalBorder? VerticalBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.VerticalBorder>();
@@ -28763,9 +28763,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Horizontal Inner Borders.</para>
         /// <para>Represents the following element tag in the schema: x:horizontal.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.HorizontalBorder? HorizontalBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.HorizontalBorder>();
@@ -28781,12 +28781,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:indexedColors.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RgbColor" /> <c>&lt;x:rgbColor></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class IndexedColors : OpenXmlCompositeElement
     {
         /// <summary>
@@ -28840,12 +28840,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:mruColors.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MruColors : OpenXmlCompositeElement
     {
         /// <summary>
@@ -28899,12 +28899,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:tableStyle.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableStyleElement" /> <c>&lt;x:tableStyleElement></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TableStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -29046,12 +29046,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:cellStyle.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CellStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -29175,9 +29175,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Future Feature Data Storage Area.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -29193,14 +29193,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:xf.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Alignment" /> <c>&lt;x:alignment></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Protection" /> <c>&lt;x:protection></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CellFormat : OpenXmlCompositeElement
     {
         /// <summary>
@@ -29402,9 +29402,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Alignment.</para>
         /// <para>Represents the following element tag in the schema: x:alignment.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Alignment? Alignment
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
@@ -29415,9 +29415,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Protection.</para>
         /// <para>Represents the following element tag in the schema: x:protection.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Protection? Protection
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Protection>();
@@ -29428,9 +29428,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Future Feature Data Storage Area.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -29697,12 +29697,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sheetData.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExternalRow" /> <c>&lt;x:row></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExternalSheetData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -29783,12 +29783,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:row.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExternalCell" /> <c>&lt;x:cell></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExternalRow : OpenXmlCompositeElement
     {
         /// <summary>
@@ -29861,12 +29861,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:cell.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Xstring" /> <c>&lt;x:v></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExternalCell : OpenXmlCompositeElement
     {
         /// <summary>
@@ -29954,9 +29954,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Value.</para>
         /// <para>Represents the following element tag in the schema: x:v.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Xstring? Xstring
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Xstring>();
@@ -29972,12 +29972,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ddeItems.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DdeItem" /> <c>&lt;x:ddeItem></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DdeItems : OpenXmlCompositeElement
     {
         /// <summary>
@@ -30031,12 +30031,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ddeItem.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Values" /> <c>&lt;x:values></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DdeItem : OpenXmlCompositeElement
     {
         /// <summary>
@@ -30132,9 +30132,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>DDE Name Values.</para>
         /// <para>Represents the following element tag in the schema: x:values.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Values? Values
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Values>();
@@ -30150,12 +30150,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:values.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Value" /> <c>&lt;x:value></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Values : OpenXmlCompositeElement
     {
         /// <summary>
@@ -30234,12 +30234,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:value.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DdeLinkValue" /> <c>&lt;x:val></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Value : OpenXmlCompositeElement
     {
         /// <summary>
@@ -30300,9 +30300,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>DDE Link Value.</para>
         /// <para>Represents the following element tag in the schema: x:val.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DdeLinkValue? DdeLinkValue
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DdeLinkValue>();
@@ -30318,13 +30318,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:oleItems.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OleItem" /> <c>&lt;x:oleItem></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OleItem" /> <c>&lt;x14:oleItem></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OleItems : OpenXmlCompositeElement
     {
         /// <summary>
@@ -30380,7 +30380,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:externalBook.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedNames" /> <c>&lt;x:definedNames></c></description></item>
@@ -30388,7 +30388,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetNames" /> <c>&lt;x:sheetNames></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.ExternalBookAlternateUrls" /> <c>&lt;xxl21:alternateUrls></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExternalBook : OpenXmlCompositeElement
     {
         /// <summary>
@@ -30426,9 +30426,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Relationship to supporting book file path</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -30461,9 +30461,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Alternate URLs and identifiers of the external book, this property is only available in Microsoft365 and later..</para>
         /// <para>Represents the following element tag in the schema: xxl21:alternateUrls.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xxl21 = http://schemas.microsoft.com/office/spreadsheetml/2021/extlinks2021
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.ExternalBookAlternateUrls? ExternalBookAlternateUrls
         {
             get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.ExternalBookAlternateUrls>();
@@ -30474,9 +30474,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Sheet names of supporting book.</para>
         /// <para>Represents the following element tag in the schema: x:sheetNames.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetNames? SheetNames
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetNames>();
@@ -30487,9 +30487,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Defined names associated with supporting book..</para>
         /// <para>Represents the following element tag in the schema: x:definedNames.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedNames? ExternalDefinedNames
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedNames>();
@@ -30500,9 +30500,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Cached worksheet data associated with supporting book.</para>
         /// <para>Represents the following element tag in the schema: x:sheetDataSet.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetDataSet? SheetDataSet
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetDataSet>();
@@ -30518,12 +30518,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ddeLink.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DdeItems" /> <c>&lt;x:ddeItems></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DdeLink : OpenXmlCompositeElement
     {
         /// <summary>
@@ -30603,9 +30603,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>DDE Items Collection.</para>
         /// <para>Represents the following element tag in the schema: x:ddeItems.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DdeItems? DdeItems
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DdeItems>();
@@ -30621,12 +30621,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:oleLink.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OleItems" /> <c>&lt;x:oleItems></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OleLink : OpenXmlCompositeElement
     {
         /// <summary>
@@ -30664,9 +30664,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>OLE Link Relationship</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -30708,9 +30708,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>OLE Link Items.</para>
         /// <para>Represents the following element tag in the schema: x:oleItems.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.OleItems? OleItems
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OleItems>();
@@ -30800,7 +30800,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:tableColumn.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
@@ -30808,7 +30808,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TotalsRowFormula" /> <c>&lt;x:totalsRowFormula></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.XmlColumnProperties" /> <c>&lt;x:xmlColumnPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TableColumn : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31016,9 +31016,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Calculated Column Formula.</para>
         /// <para>Represents the following element tag in the schema: x:calculatedColumnFormula.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CalculatedColumnFormula? CalculatedColumnFormula
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CalculatedColumnFormula>();
@@ -31029,9 +31029,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Totals Row Formula.</para>
         /// <para>Represents the following element tag in the schema: x:totalsRowFormula.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.TotalsRowFormula? TotalsRowFormula
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TotalsRowFormula>();
@@ -31042,9 +31042,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>XML Column Properties.</para>
         /// <para>Represents the following element tag in the schema: x:xmlColumnPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.XmlColumnProperties? XmlColumnProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.XmlColumnProperties>();
@@ -31055,9 +31055,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Future Feature Data Storage Area.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -31183,9 +31183,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>space</para>
         /// <para>Represents the following attribute in the schema: xml:space</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>? Space
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>();
@@ -31206,12 +31206,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:xmlColumnPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class XmlColumnProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31317,9 +31317,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Future Feature Data Storage Area.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -31335,12 +31335,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:volType.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Main" /> <c>&lt;x:main></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class VolatileType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31409,12 +31409,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:main.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Topic" /> <c>&lt;x:tp></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Main : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31484,14 +31484,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:tp.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TopicReferences" /> <c>&lt;x:tr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Subtopic" /> <c>&lt;x:stp></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Xstring" /> <c>&lt;x:v></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Topic : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31556,9 +31556,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Topic Value.</para>
         /// <para>Represents the following element tag in the schema: x:v.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Xstring? Xstring
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Xstring>();
@@ -31651,9 +31651,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Relationship Id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -31804,9 +31804,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Relationship Id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -31833,12 +31833,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:customWorkbookView.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CustomWorkbookView : OpenXmlCompositeElement
     {
         /// <summary>
@@ -32167,9 +32167,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -32228,9 +32228,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Relationship Id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -32273,12 +32273,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:workbookView.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class WorkbookView : OpenXmlCompositeElement
     {
         /// <summary>
@@ -32475,9 +32475,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -32743,13 +32743,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:anchor.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FromMarker" /> <c>&lt;x:from></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ToMarker" /> <c>&lt;x:to></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ObjectAnchor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -32835,9 +32835,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>FromMarker.</para>
         /// <para>Represents the following element tag in the schema: x:from.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.FromMarker? FromMarker
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FromMarker>();
@@ -32848,9 +32848,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>ToMarker.</para>
         /// <para>Represents the following element tag in the schema: x:to.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ToMarker? ToMarker
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ToMarker>();
@@ -32866,7 +32866,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:from.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset" /> <c>&lt;xdr:colOff></c></description></item>
@@ -32874,7 +32874,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId" /> <c>&lt;xdr:col></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId" /> <c>&lt;xdr:row></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FromMarker : MarkerType
     {
         /// <summary>
@@ -32931,7 +32931,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:to.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset" /> <c>&lt;xdr:colOff></c></description></item>
@@ -32939,7 +32939,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId" /> <c>&lt;xdr:col></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId" /> <c>&lt;xdr:row></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ToMarker : MarkerType
     {
         /// <summary>
@@ -32996,7 +32996,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset" /> <c>&lt;xdr:colOff></c></description></item>
@@ -33004,7 +33004,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId" /> <c>&lt;xdr:col></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId" /> <c>&lt;xdr:row></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class MarkerType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -33051,9 +33051,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Column).</para>
         /// <para>Represents the following element tag in the schema: xdr:col.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId? ColumnId
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId>();
@@ -33064,9 +33064,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Column Offset.</para>
         /// <para>Represents the following element tag in the schema: xdr:colOff.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset? ColumnOffset
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset>();
@@ -33077,9 +33077,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Row.</para>
         /// <para>Represents the following element tag in the schema: xdr:row.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId? RowId
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId>();
@@ -33090,9 +33090,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Row Offset.</para>
         /// <para>Represents the following element tag in the schema: xdr:rowOff.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset? RowOffset
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset>();
@@ -33105,12 +33105,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Id" /> <c>&lt;x14:id></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ConditionalFormattingRuleExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -33181,12 +33181,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotHierarchy" /> <c>&lt;x14:pivotHierarchy></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotHierarchyExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -33257,12 +33257,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotField" /> <c>&lt;x14:pivotField></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotFieldExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -33333,12 +33333,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SourceConnection" /> <c>&lt;x14:sourceConnection></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CacheSourceExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -33483,12 +33483,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:start.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StartBorder : BorderPropertiesType
     {
         /// <summary>
@@ -33542,12 +33542,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:end.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class EndBorder : BorderPropertiesType
     {
         /// <summary>
@@ -33601,12 +33601,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:left.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LeftBorder : BorderPropertiesType
     {
         /// <summary>
@@ -33659,12 +33659,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:right.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RightBorder : BorderPropertiesType
     {
         /// <summary>
@@ -33717,12 +33717,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:top.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TopBorder : BorderPropertiesType
     {
         /// <summary>
@@ -33775,12 +33775,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:bottom.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BottomBorder : BorderPropertiesType
     {
         /// <summary>
@@ -33833,12 +33833,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:diagonal.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DiagonalBorder : BorderPropertiesType
     {
         /// <summary>
@@ -33891,12 +33891,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:vertical.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class VerticalBorder : BorderPropertiesType
     {
         /// <summary>
@@ -33949,12 +33949,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:horizontal.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class HorizontalBorder : BorderPropertiesType
     {
         /// <summary>
@@ -34007,12 +34007,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class BorderPropertiesType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -34068,9 +34068,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Color.</para>
         /// <para>Represents the following element tag in the schema: x:color.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Color? Color
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Color>();
@@ -34083,12 +34083,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:controlPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor" /> <c>&lt;x:anchor></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ControlProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -34266,9 +34266,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -34307,9 +34307,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>ObjectAnchor.</para>
         /// <para>Represents the following element tag in the schema: x:anchor.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor? ObjectAnchor
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor>();
@@ -34325,12 +34325,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:objectPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor" /> <c>&lt;x:anchor></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class EmbeddedObjectProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -34478,9 +34478,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -34516,9 +34516,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>ObjectAnchor.</para>
         /// <para>Represents the following element tag in the schema: x:anchor.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor? ObjectAnchor
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor>();
@@ -34534,12 +34534,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sheetPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TabColor" /> <c>&lt;x:tabColor></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ChartSheetProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -34613,9 +34613,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>TabColor.</para>
         /// <para>Represents the following element tag in the schema: x:tabColor.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.TabColor? TabColor
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TabColor>();
@@ -34631,13 +34631,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sheetViews.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ChartSheetView" /> <c>&lt;x:sheetView></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ChartSheetViews : OpenXmlCompositeElement
     {
         /// <summary>
@@ -34798,12 +34798,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:customSheetViews.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomChartsheetView" /> <c>&lt;x:customSheetView></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CustomChartsheetViews : OpenXmlCompositeElement
     {
         /// <summary>
@@ -34870,9 +34870,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Relationship id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -34962,9 +34962,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Relationship Id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -35000,9 +35000,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -35240,9 +35240,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Relationship Id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -35269,12 +35269,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:webPublishItems.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WebPublishItem" /> <c>&lt;x:webPublishItem></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class WebPublishItems : OpenXmlCompositeElement
     {
         /// <summary>
@@ -35340,13 +35340,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:colorScale.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject" /> <c>&lt;x:cfvo></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ColorScale : OpenXmlCompositeElement
     {
         /// <summary>
@@ -35402,13 +35402,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:dataBar.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject" /> <c>&lt;x:cfvo></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataBar : OpenXmlCompositeElement
     {
         /// <summary>
@@ -35500,12 +35500,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:iconSet.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject" /> <c>&lt;x:cfvo></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class IconSet : OpenXmlCompositeElement
     {
         /// <summary>
@@ -35604,12 +35604,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRuleExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ConditionalFormattingRuleExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -35663,12 +35663,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:dataRefs.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataReference" /> <c>&lt;x:dataRef></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataReferences : OpenXmlCompositeElement
     {
         /// <summary>
@@ -35734,14 +35734,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sheetPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TabColor" /> <c>&lt;x:tabColor></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OutlineProperties" /> <c>&lt;x:outlinePr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PageSetupProperties" /> <c>&lt;x:pageSetUpPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SheetProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -35896,9 +35896,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Sheet Tab Color.</para>
         /// <para>Represents the following element tag in the schema: x:tabColor.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.TabColor? TabColor
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TabColor>();
@@ -35909,9 +35909,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Outline Properties.</para>
         /// <para>Represents the following element tag in the schema: x:outlinePr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.OutlineProperties? OutlineProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OutlineProperties>();
@@ -35922,9 +35922,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Page Setup Properties.</para>
         /// <para>Represents the following element tag in the schema: x:pageSetUpPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PageSetupProperties? PageSetupProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageSetupProperties>();
@@ -35940,13 +35940,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sheetViews.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetView" /> <c>&lt;x:sheetView></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SheetViews : OpenXmlCompositeElement
     {
         /// <summary>
@@ -36105,9 +36105,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>dyDescent, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: x14ac:dyDescent</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14ac=http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac
-        /// </remark>
+        /// </remarks>
         public DoubleValue? DyDescent
         {
             get => GetAttribute<DoubleValue>();
@@ -36409,12 +36409,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:customSheetViews.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomSheetView" /> <c>&lt;x:customSheetView></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CustomSheetViews : OpenXmlCompositeElement
     {
         /// <summary>
@@ -36468,12 +36468,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:oleObjects.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OleObject" /> <c>&lt;x:oleObject></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OleObjects : OpenXmlCompositeElement
     {
         /// <summary>
@@ -36527,12 +36527,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:controls.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Control" /> <c>&lt;x:control></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Controls : OpenXmlCompositeElement
     {
         /// <summary>
@@ -36629,12 +36629,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:cols.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Column" /> <c>&lt;x:col></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Columns : OpenXmlCompositeElement
     {
         /// <summary>
@@ -36688,12 +36688,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sheetData.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Row" /> <c>&lt;x:row></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SheetData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -36748,12 +36748,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:dataConsolidate.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataReferences" /> <c>&lt;x:dataRefs></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataConsolidate : OpenXmlCompositeElement
     {
         /// <summary>
@@ -36861,9 +36861,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Data Consolidation References.</para>
         /// <para>Represents the following element tag in the schema: x:dataRefs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DataReferences? DataReferences
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DataReferences>();
@@ -36879,13 +36879,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:conditionalFormatting.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRule" /> <c>&lt;x:cfRule></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ConditionalFormatting : OpenXmlCompositeElement
     {
         /// <summary>
@@ -36965,12 +36965,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:customProperties.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomProperty" /> <c>&lt;x:customPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CustomProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -37024,12 +37024,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:mps.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberProperty" /> <c>&lt;x:mp></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MemberProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -37095,12 +37095,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:members.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Member" /> <c>&lt;x:member></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Members : OpenXmlCompositeElement
     {
         /// <summary>
@@ -37177,12 +37177,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotHierarchyExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotHierarchyExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -37236,12 +37236,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:items.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Item" /> <c>&lt;x:item></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Items : OpenXmlCompositeElement
     {
         /// <summary>
@@ -37307,12 +37307,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:autoSortScope.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotArea" /> <c>&lt;x:pivotArea></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AutoSortScope : OpenXmlCompositeElement
     {
         /// <summary>
@@ -37361,9 +37361,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Auto Sort Scope.</para>
         /// <para>Represents the following element tag in the schema: x:pivotArea.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotArea? PivotArea
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
@@ -37379,12 +37379,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotFieldExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -37481,9 +37481,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Relationship Id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -37513,13 +37513,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:consolidation.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Pages" /> <c>&lt;x:pages></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RangeSets" /> <c>&lt;x:rangeSets></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Consolidation : OpenXmlCompositeElement
     {
         /// <summary>
@@ -37582,9 +37582,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Page Item Values.</para>
         /// <para>Represents the following element tag in the schema: x:pages.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Pages? Pages
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Pages>();
@@ -37595,9 +37595,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Range Sets.</para>
         /// <para>Represents the following element tag in the schema: x:rangeSets.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.RangeSets? RangeSets
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RangeSets>();
@@ -37613,12 +37613,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CacheSourceExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -37672,12 +37672,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:commentPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor" /> <c>&lt;x:anchor></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommentProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -37893,9 +37893,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>ObjectAnchor.</para>
         /// <para>Represents the following element tag in the schema: x:anchor.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor? ObjectAnchor
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor>();
@@ -38173,14 +38173,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:filters.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DateGroupItem" /> <c>&lt;x:dateGroupItem></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Filter" /> <c>&lt;x:filter></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Filter" /> <c>&lt;x14:filter></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Filters : OpenXmlCompositeElement
     {
         /// <summary>
@@ -38333,12 +38333,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:customFilters.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomFilter" /> <c>&lt;x:customFilter></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CustomFilters : OpenXmlCompositeElement
     {
         /// <summary>
@@ -38594,14 +38594,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.SlicerCachePivotTables" /> <c>&lt;x15:slicerCachePivotTables></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.SlicerCacheHideItemsWithNoData" /> <c>&lt;x15:slicerCacheHideItemsWithNoData></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TableSlicerCache" /> <c>&lt;x15:tableSlicerCache></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlicerCacheDefinitionExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -38676,13 +38676,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState" /> <c>&lt;x15:movingPeriodState></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotFilter" /> <c>&lt;x15:pivotFilter></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotFilterExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -38755,12 +38755,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.QueryTable" /> <c>&lt;x15:queryTable></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class QueryTableExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -39030,12 +39030,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:webPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Tables" /> <c>&lt;x:tables></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class WebQueryProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -39229,9 +39229,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Tables.</para>
         /// <para>Represents the following element tag in the schema: x:tables.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Tables? Tables
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Tables>();
@@ -39247,12 +39247,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:textPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TextFields" /> <c>&lt;x:textFields></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TextProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -39483,9 +39483,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>TextFields.</para>
         /// <para>Represents the following element tag in the schema: x:textFields.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.TextFields? TextFields
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TextFields>();
@@ -39501,12 +39501,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:parameters.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Parameter" /> <c>&lt;x:parameter></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Parameters : OpenXmlCompositeElement
     {
         /// <summary>
@@ -39572,12 +39572,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ConnectionExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ConnectionExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -39631,13 +39631,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Connection" /> <c>&lt;x14:connection></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.Connection" /> <c>&lt;x15:connection></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ConnectionExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -39710,12 +39710,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:textFields.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TextField" /> <c>&lt;x:textField></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TextFields : OpenXmlCompositeElement
     {
         /// <summary>
@@ -39781,7 +39781,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sharedItems.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.BooleanItem" /> <c>&lt;x:b></c></description></item>
@@ -39791,7 +39791,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberItem" /> <c>&lt;x:n></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.StringItem" /> <c>&lt;x:s></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SharedItems : OpenXmlCompositeElement
     {
         /// <summary>
@@ -40013,14 +40013,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:fieldGroup.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DiscreteProperties" /> <c>&lt;x:discretePr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.GroupItems" /> <c>&lt;x:groupItems></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RangeProperties" /> <c>&lt;x:rangePr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FieldGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -40104,12 +40104,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CacheFieldExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CacheFieldExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -40163,13 +40163,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.CacheField" /> <c>&lt;x14:cacheField></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueNames" /> <c>&lt;x15:cachedUniqueNames></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CacheFieldExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -40242,12 +40242,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:fieldsUsage.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FieldUsage" /> <c>&lt;x:fieldUsage></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FieldsUsage : OpenXmlCompositeElement
     {
         /// <summary>
@@ -40313,12 +40313,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:groupLevels.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.GroupLevel" /> <c>&lt;x:groupLevel></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GroupLevels : OpenXmlCompositeElement
     {
         /// <summary>
@@ -40384,12 +40384,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CacheHierarchyExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -40443,13 +40443,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.CacheHierarchy" /> <c>&lt;x14:cacheHierarchy></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.CacheHierarchy" /> <c>&lt;x15:cacheHierarchy></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CacheHierarchyExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -40522,12 +40522,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CalculatedMemberExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -40581,13 +40581,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.CalculatedMember" /> <c>&lt;x14:calculatedMember></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.CalculatedMember" /> <c>&lt;x15:calculatedMember></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CalculatedMemberExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -40660,12 +40660,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataFieldExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataFieldExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -40719,13 +40719,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DataField" /> <c>&lt;x14:dataField></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.DataField" /> <c>&lt;x15:dataField></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataFieldExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -40798,12 +40798,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotFilterExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -40857,7 +40857,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:queryTableRefresh.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
@@ -40865,7 +40865,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.QueryTableFields" /> <c>&lt;x:queryTableFields></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortState" /> <c>&lt;x:sortState></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class QueryTableRefresh : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41002,9 +41002,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Query table fields.</para>
         /// <para>Represents the following element tag in the schema: x:queryTableFields.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.QueryTableFields? QueryTableFields
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.QueryTableFields>();
@@ -41015,9 +41015,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Deleted Fields.</para>
         /// <para>Represents the following element tag in the schema: x:queryTableDeletedFields.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.QueryTableDeletedFields? QueryTableDeletedFields
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.QueryTableDeletedFields>();
@@ -41028,9 +41028,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Sort State.</para>
         /// <para>Represents the following element tag in the schema: x:sortState.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SortState? SortState
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SortState>();
@@ -41041,9 +41041,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Future Feature Data Storage Area.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -41059,12 +41059,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.QueryTableExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class QueryTableExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41154,12 +41154,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:protectedRanges.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ProtectedRange" /> <c>&lt;x:protectedRange></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ProtectedRanges : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41213,12 +41213,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:scenarios.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Scenario" /> <c>&lt;x:scenario></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Scenarios : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41306,12 +41306,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:mergeCells.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MergeCell" /> <c>&lt;x:mergeCell></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MergeCells : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41377,12 +41377,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:dataValidations.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataValidation" /> <c>&lt;x:dataValidation></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataValidations : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41484,12 +41484,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:hyperlinks.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Hyperlink" /> <c>&lt;x:hyperlink></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Hyperlinks : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41543,12 +41543,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:cellWatches.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellWatch" /> <c>&lt;x:cellWatch></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CellWatches : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41602,13 +41602,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ignoredErrors.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.IgnoredError" /> <c>&lt;x:ignoredError></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class IgnoredErrors : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41664,12 +41664,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:tableParts.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TablePart" /> <c>&lt;x:tablePart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TableParts : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41735,12 +41735,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WorksheetExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class WorksheetExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41794,7 +41794,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattings" /> <c>&lt;x14:conditionalFormattings></c></description></item>
@@ -41806,7 +41806,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineReferences" /> <c>&lt;x15:timelineRefs></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.WebExtensions" /> <c>&lt;x15:webExtensions></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class WorksheetExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41891,12 +41891,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:numFmts.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NumberingFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41962,12 +41962,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:fonts.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Fonts : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42015,9 +42015,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>knownFonts, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: x14ac:knownFonts</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14ac=http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac
-        /// </remark>
+        /// </remarks>
         public BooleanValue? KnownFonts
         {
             get => GetAttribute<BooleanValue>();
@@ -42050,12 +42050,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:fills.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Fill" /> <c>&lt;x:fill></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Fills : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42121,12 +42121,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:borders.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Borders : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42192,12 +42192,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:cellStyleXfs.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellFormat" /> <c>&lt;x:xf></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CellStyleFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42263,12 +42263,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:cellXfs.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellFormat" /> <c>&lt;x:xf></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CellFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42334,12 +42334,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:cellStyles.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellStyle" /> <c>&lt;x:cellStyle></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CellStyles : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42405,12 +42405,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:dxfs.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat" /> <c>&lt;x:dxf></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DifferentialFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42476,12 +42476,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:tableStyles.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableStyle" /> <c>&lt;x:tableStyle></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TableStyles : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42570,13 +42570,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:colors.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.IndexedColors" /> <c>&lt;x:indexedColors></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MruColors" /> <c>&lt;x:mruColors></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Colors : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42627,9 +42627,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Color Indexes.</para>
         /// <para>Represents the following element tag in the schema: x:indexedColors.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.IndexedColors? IndexedColors
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.IndexedColors>();
@@ -42640,9 +42640,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>MRU Colors.</para>
         /// <para>Represents the following element tag in the schema: x:mruColors.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.MruColors? MruColors
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MruColors>();
@@ -42658,12 +42658,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.StylesheetExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StylesheetExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42717,7 +42717,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DifferentialFormats" /> <c>&lt;x14:dxfs></c></description></item>
@@ -42725,7 +42725,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerStyles" /> <c>&lt;x14:slicerStyles></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineStyles" /> <c>&lt;x15:timelineStyles></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StylesheetExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42905,12 +42905,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pivotFields.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotField" /> <c>&lt;x:pivotField></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotFields : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42976,12 +42976,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rowFields.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Field" /> <c>&lt;x:field></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RowFields : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43047,12 +43047,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rowItems.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RowItem" /> <c>&lt;x:i></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RowItems : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43118,12 +43118,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:colFields.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Field" /> <c>&lt;x:field></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ColumnFields : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43189,12 +43189,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:colItems.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RowItem" /> <c>&lt;x:i></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ColumnItems : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43260,12 +43260,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pageFields.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PageField" /> <c>&lt;x:pageField></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PageFields : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43331,12 +43331,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:dataFields.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataField" /> <c>&lt;x:dataField></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataFields : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43402,12 +43402,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:formats.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Format" /> <c>&lt;x:format></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Formats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43473,12 +43473,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:conditionalFormats.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ConditionalFormat" /> <c>&lt;x:conditionalFormat></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ConditionalFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43544,12 +43544,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:chartFormats.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ChartFormat" /> <c>&lt;x:chartFormat></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ChartFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43615,12 +43615,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pivotHierarchies.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotHierarchy" /> <c>&lt;x:pivotHierarchy></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotHierarchies : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43778,12 +43778,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:filters.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotFilter" /> <c>&lt;x:filter></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotFilters : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43849,12 +43849,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rowHierarchiesUsage.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RowHierarchyUsage" /> <c>&lt;x:rowHierarchyUsage></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RowHierarchiesUsage : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43920,12 +43920,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:colHierarchiesUsage.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchyUsage" /> <c>&lt;x:colHierarchyUsage></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ColumnHierarchiesUsage : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43991,12 +43991,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotTableDefinitionExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44050,7 +44050,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotTableDefinition" /> <c>&lt;x14:pivotTableDefinition></c></description></item>
@@ -44058,7 +44058,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotTableUISettings" /> <c>&lt;x15:pivotTableUISettings></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.PivotVersionInfo" /> <c>&lt;xxpvi:pivotVersionInfo></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotTableDefinitionExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44135,14 +44135,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:cacheSource.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Consolidation" /> <c>&lt;x:consolidation></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WorksheetSource" /> <c>&lt;x:worksheetSource></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CacheSource : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44223,9 +44223,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>WorksheetSource.</para>
         /// <para>Represents the following element tag in the schema: x:worksheetSource.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.WorksheetSource? WorksheetSource
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.WorksheetSource>();
@@ -44236,9 +44236,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Consolidation.</para>
         /// <para>Represents the following element tag in the schema: x:consolidation.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Consolidation? Consolidation
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Consolidation>();
@@ -44249,9 +44249,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>CacheSourceExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtensionList? CacheSourceExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtensionList>();
@@ -44267,12 +44267,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:cacheFields.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CacheField" /> <c>&lt;x:cacheField></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CacheFields : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44338,12 +44338,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:cacheHierarchies.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CacheHierarchy" /> <c>&lt;x:cacheHierarchy></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CacheHierarchies : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44409,12 +44409,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:kpis.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Kpi" /> <c>&lt;x:kpi></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Kpis : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44480,7 +44480,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:tupleCache.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
@@ -44489,7 +44489,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ServerFormats" /> <c>&lt;x:serverFormats></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Sets" /> <c>&lt;x:sets></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TupleCache : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44546,9 +44546,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Entries.</para>
         /// <para>Represents the following element tag in the schema: x:entries.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Entries? Entries
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Entries>();
@@ -44559,9 +44559,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Sets.</para>
         /// <para>Represents the following element tag in the schema: x:sets.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Sets? Sets
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Sets>();
@@ -44572,9 +44572,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>OLAP Query Cache.</para>
         /// <para>Represents the following element tag in the schema: x:queryCache.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.QueryCache? QueryCache
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.QueryCache>();
@@ -44585,9 +44585,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Server Formats.</para>
         /// <para>Represents the following element tag in the schema: x:serverFormats.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ServerFormats? ServerFormats
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ServerFormats>();
@@ -44598,9 +44598,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Future Feature Data Storage Area.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -44616,12 +44616,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:calculatedItems.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CalculatedItem" /> <c>&lt;x:calculatedItem></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CalculatedItems : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44687,12 +44687,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:calculatedMembers.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CalculatedMember" /> <c>&lt;x:calculatedMember></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CalculatedMembers : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44758,12 +44758,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:dimensions.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Dimension" /> <c>&lt;x:dimension></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Dimensions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44829,12 +44829,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:measureGroups.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MeasureGroup" /> <c>&lt;x:measureGroup></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MeasureGroups : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44900,12 +44900,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:maps.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MeasureDimensionMap" /> <c>&lt;x:map></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Maps : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44971,12 +44971,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotCacheDefinitionExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45030,7 +45030,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotCacheDefinition" /> <c>&lt;x14:pivotCacheDefinition></c></description></item>
@@ -45042,7 +45042,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotAutoRefresh.Xsdboolean" /> <c>&lt;xlpar:autoRefresh></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo" /> <c>&lt;xxpvi:cacheVersionInfo></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotCacheDefinitionExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45127,12 +45127,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sheetNames.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetName" /> <c>&lt;x:sheetName></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SheetNames : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45186,12 +45186,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:definedNames.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedName" /> <c>&lt;x:definedName></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExternalDefinedNames : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45245,12 +45245,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sheetDataSet.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExternalSheetData" /> <c>&lt;x:sheetData></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SheetDataSet : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45304,12 +45304,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:tableColumns.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableColumn" /> <c>&lt;x:tableColumn></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TableColumns : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45456,12 +45456,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TableExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45515,13 +45515,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Table" /> <c>&lt;x14:table></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.MsForm" /> <c>&lt;xlmsforms:msForm></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TableExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46198,12 +46198,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:bookViews.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WorkbookView" /> <c>&lt;x:workbookView></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BookViews : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46257,12 +46257,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sheets.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Sheet" /> <c>&lt;x:sheet></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Sheets : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46316,12 +46316,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:functionGroups.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FunctionGroup" /> <c>&lt;x:functionGroup></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FunctionGroups : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46388,12 +46388,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:externalReferences.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExternalReference" /> <c>&lt;x:externalReference></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExternalReferences : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46447,12 +46447,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:definedNames.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DefinedName" /> <c>&lt;x:definedName></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DefinedNames : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46713,12 +46713,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:customWorkbookViews.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookView" /> <c>&lt;x:customWorkbookView></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CustomWorkbookViews : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46772,12 +46772,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pivotCaches.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotCache" /> <c>&lt;x:pivotCache></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotCaches : OpenXmlCompositeElement
     {
         /// <summary>
@@ -47024,12 +47024,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:webPublishObjects.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WebPublishObject" /> <c>&lt;x:webPublishObject></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class WebPublishObjects : OpenXmlCompositeElement
     {
         /// <summary>
@@ -47095,12 +47095,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WorkbookExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class WorkbookExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -47154,7 +47154,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotCaches" /> <c>&lt;x14:pivotCaches></c></description></item>
@@ -47170,7 +47170,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties" /> <c>&lt;x15:workbookPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService.ExternalCodeService" /> <c>&lt;xlecs:externalCodeService></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class WorkbookExtension : OpenXmlCompositeElement
     {
         /// <summary>

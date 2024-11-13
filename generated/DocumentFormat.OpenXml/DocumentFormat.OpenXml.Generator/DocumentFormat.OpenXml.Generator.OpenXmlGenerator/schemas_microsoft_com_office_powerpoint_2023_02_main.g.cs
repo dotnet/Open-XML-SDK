@@ -22,12 +22,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p232:phTypeExt.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeACB" /> <c>&lt;p232:type></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PlaceholderTypeExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -77,9 +77,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main
         /// <para>PlaceholderTypeACB.</para>
         /// <para>Represents the following element tag in the schema: p232:type.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p232 = http://schemas.microsoft.com/office/powerpoint/2023/02/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeACB? PlaceholderTypeACB
         {
             get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeACB>();
@@ -165,13 +165,13 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p232:type.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.CameoEmpty" /> <c>&lt;p232:cameo></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.UnknownEmpty" /> <c>&lt;p232:unknown></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PlaceholderTypeACB : OpenXmlCompositeElement
     {
         /// <summary>
@@ -226,9 +226,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main
         /// <para>CameoEmpty.</para>
         /// <para>Represents the following element tag in the schema: p232:cameo.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p232 = http://schemas.microsoft.com/office/powerpoint/2023/02/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.CameoEmpty? CameoEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.CameoEmpty>();
@@ -239,9 +239,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main
         /// <para>UnknownEmpty.</para>
         /// <para>Represents the following element tag in the schema: p232:unknown.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p232 = http://schemas.microsoft.com/office/powerpoint/2023/02/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.UnknownEmpty? UnknownEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.UnknownEmpty>();

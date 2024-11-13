@@ -23,13 +23,13 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a3danim:embedAnim.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.OfficeArtExtensionList" /> <c>&lt;a3danim:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties" /> <c>&lt;a3danim:animPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class EmbeddedAnimation : OpenXmlCompositeElement
     {
         /// <summary>
@@ -96,9 +96,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
         /// <para>AnimationProperties.</para>
         /// <para>Represents the following element tag in the schema: a3danim:animPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a3danim = http://schemas.microsoft.com/office/drawing/2018/animation/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties? AnimationProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties>();
@@ -109,9 +109,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a3danim:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a3danim = http://schemas.microsoft.com/office/drawing/2018/animation/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.OfficeArtExtensionList>();
@@ -181,12 +181,12 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a3danim:animPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList" /> <c>&lt;aanim:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AnimationProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -324,9 +324,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: aanim:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:aanim = http://schemas.microsoft.com/office/drawing/2018/animation
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList>();
@@ -342,12 +342,12 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a3danim:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>

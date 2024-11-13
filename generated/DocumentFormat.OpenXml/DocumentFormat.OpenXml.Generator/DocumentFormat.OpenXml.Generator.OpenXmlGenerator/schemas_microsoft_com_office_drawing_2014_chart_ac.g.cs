@@ -22,14 +22,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartsAc
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16ac:multiLvlStrLit.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Level" /> <c>&lt;c:lvl></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MultiLvlStrData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -83,9 +83,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartsAc
         /// <para>PointCount.</para>
         /// <para>Represents the following element tag in the schema: c:ptCount.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PointCount? PointCount
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();

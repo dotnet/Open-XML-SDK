@@ -25,14 +25,14 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:nvContentPartPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualDrawingProperties" /> <c>&lt;p14:cNvPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualInkContentPartProperties" /> <c>&lt;p14:cNvContentPartPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.ApplicationNonVisualDrawingProperties" /> <c>&lt;p14:nvPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -86,9 +86,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>NonVisualDrawingProperties.</para>
         /// <para>Represents the following element tag in the schema: p14:cNvPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualDrawingProperties>();
@@ -99,9 +99,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>NonVisualInkContentPartProperties.</para>
         /// <para>Represents the following element tag in the schema: p14:cNvContentPartPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualInkContentPartProperties? NonVisualInkContentPartProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualInkContentPartProperties>();
@@ -112,9 +112,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>ApplicationNonVisualDrawingProperties.</para>
         /// <para>Represents the following element tag in the schema: p14:nvPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ApplicationNonVisualDrawingProperties>();
@@ -130,13 +130,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:xfrm.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Offset" /> <c>&lt;a:off></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Transform2D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -222,9 +222,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Offset.</para>
         /// <para>Represents the following element tag in the schema: a:off.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Offset? Offset
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>();
@@ -235,9 +235,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Extents.</para>
         /// <para>Represents the following element tag in the schema: a:ext.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Extents? Extents
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>();
@@ -253,12 +253,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExtensionListModify : OpenXmlCompositeElement
     {
         /// <summary>
@@ -331,7 +331,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:media.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList" /> <c>&lt;p14:extLst></c></description></item>
@@ -339,7 +339,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.MediaFade" /> <c>&lt;p14:fade></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.MediaTrim" /> <c>&lt;p14:trim></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Media : OpenXmlCompositeElement
     {
         /// <summary>
@@ -377,9 +377,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Embedded Picture Reference</para>
         /// <para>Represents the following attribute in the schema: r:embed</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Embed
         {
             get => GetAttribute<StringValue>();
@@ -390,9 +390,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Linked Picture Reference</para>
         /// <para>Represents the following attribute in the schema: r:link</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Link
         {
             get => GetAttribute<StringValue>();
@@ -426,9 +426,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>MediaTrim.</para>
         /// <para>Represents the following element tag in the schema: p14:trim.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.MediaTrim? MediaTrim
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaTrim>();
@@ -439,9 +439,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>MediaFade.</para>
         /// <para>Represents the following element tag in the schema: p14:fade.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.MediaFade? MediaFade
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaFade>();
@@ -452,9 +452,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>MediaBookmarkList.</para>
         /// <para>Represents the following element tag in the schema: p14:bmkLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList? MediaBookmarkList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList>();
@@ -465,9 +465,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p14:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList>();
@@ -1330,12 +1330,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:sectionPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.SectionOld" /> <c>&lt;p14:section></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SectionProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1390,12 +1390,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:sectionLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.Section" /> <c>&lt;p14:section></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SectionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1487,7 +1487,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:laserClr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -1497,7 +1497,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LaserColor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1563,9 +1563,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>RGB Color Model - Percentage Variant.</para>
         /// <para>Represents the following element tag in the schema: a:scrgbClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
@@ -1576,9 +1576,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>RGB Color Model - Hex Variant.</para>
         /// <para>Represents the following element tag in the schema: a:srgbClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
@@ -1589,9 +1589,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Hue, Saturation, Luminance Color Model.</para>
         /// <para>Represents the following element tag in the schema: a:hslClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
@@ -1602,9 +1602,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>System Color.</para>
         /// <para>Represents the following element tag in the schema: a:sysClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
@@ -1615,9 +1615,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Scheme Color.</para>
         /// <para>Represents the following element tag in the schema: a:schemeClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
@@ -1628,9 +1628,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Preset Color.</para>
         /// <para>Represents the following element tag in the schema: a:prstClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
@@ -1766,12 +1766,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:laserTraceLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.TracePointList" /> <c>&lt;p14:tracePtLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LaserTraceList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1911,7 +1911,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:showEvtLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.PlayEventRecord" /> <c>&lt;p14:playEvt></c></description></item>
@@ -1922,7 +1922,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.NullEventRecord" /> <c>&lt;p14:nullEvt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.TriggerEventRecord" /> <c>&lt;p14:triggerEvt></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ShowEventRecordList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1987,9 +1987,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>TriggerEventRecord.</para>
         /// <para>Represents the following element tag in the schema: p14:triggerEvt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.TriggerEventRecord? TriggerEventRecord
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.TriggerEventRecord>();
@@ -2000,9 +2000,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>PlayEventRecord.</para>
         /// <para>Represents the following element tag in the schema: p14:playEvt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.PlayEventRecord? PlayEventRecord
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.PlayEventRecord>();
@@ -2013,9 +2013,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>StopEventRecord.</para>
         /// <para>Represents the following element tag in the schema: p14:stopEvt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.StopEventRecord? StopEventRecord
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.StopEventRecord>();
@@ -2026,9 +2026,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>PauseEventRecord.</para>
         /// <para>Represents the following element tag in the schema: p14:pauseEvt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.PauseEventRecord? PauseEventRecord
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.PauseEventRecord>();
@@ -2039,9 +2039,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>ResumeEventRecord.</para>
         /// <para>Represents the following element tag in the schema: p14:resumeEvt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.ResumeEventRecord? ResumeEventRecord
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ResumeEventRecord>();
@@ -2052,9 +2052,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>SeekEventRecord.</para>
         /// <para>Represents the following element tag in the schema: p14:seekEvt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.SeekEventRecord? SeekEventRecord
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.SeekEventRecord>();
@@ -2065,9 +2065,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>NullEventRecord.</para>
         /// <para>Represents the following element tag in the schema: p14:nullEvt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.NullEventRecord? NullEventRecord
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.NullEventRecord>();
@@ -2083,14 +2083,14 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:cNvPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnClick" /> <c>&lt;a:hlinkClick></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnHover" /> <c>&lt;a:hlinkHover></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2206,9 +2206,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Hyperlink associated with clicking or selecting the element..</para>
         /// <para>Represents the following element tag in the schema: a:hlinkClick.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick? HyperlinkOnClick
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
@@ -2219,9 +2219,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Hyperlink associated with hovering over the element..</para>
         /// <para>Represents the following element tag in the schema: a:hlinkHover.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover? HyperlinkOnHover
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
@@ -2232,9 +2232,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Future extension.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
@@ -2250,13 +2250,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:cNvContentPartPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList" /> <c>&lt;a14:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks" /> <c>&lt;a14:cpLocks></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2320,9 +2320,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>ContentPartLocks.</para>
         /// <para>Represents the following element tag in the schema: a14:cpLocks.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks? ContentPartLocks
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>();
@@ -2333,9 +2333,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a14:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
@@ -2351,7 +2351,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:nvPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AudioFromCD" /> <c>&lt;a:audioCd></c></description></item>
@@ -2363,7 +2363,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CustomerDataList" /> <c>&lt;p:custDataLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PlaceholderShape" /> <c>&lt;p:ph></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2456,9 +2456,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>Placeholder Shape.</para>
         /// <para>Represents the following element tag in the schema: p:ph.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.PlaceholderShape? PlaceholderShape
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.PlaceholderShape>();
@@ -2620,12 +2620,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:bmkLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmark" /> <c>&lt;p14:bmk></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MediaBookmarkList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2680,12 +2680,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2746,12 +2746,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:section.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList" /> <c>&lt;p14:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SectionOld : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2841,9 +2841,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p14:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList>();
@@ -2900,12 +2900,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:sldIdLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdListEntry" /> <c>&lt;p14:sldId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SectionSlideIdList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2960,13 +2960,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:section.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList" /> <c>&lt;p14:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList" /> <c>&lt;p14:sldIdLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Section : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3044,9 +3044,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>SectionSlideIdList.</para>
         /// <para>Represents the following element tag in the schema: p14:sldIdLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList? SectionSlideIdList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList>();
@@ -3057,9 +3057,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p14:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList>();
@@ -3145,12 +3145,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:tracePtLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.TracePoint" /> <c>&lt;p14:tracePt></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TracePointList : OpenXmlCompositeElement
     {
         /// <summary>

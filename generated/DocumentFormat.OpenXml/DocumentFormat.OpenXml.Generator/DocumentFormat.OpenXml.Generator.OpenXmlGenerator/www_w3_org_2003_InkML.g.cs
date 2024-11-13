@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:ink.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Annotation" /> <c>&lt;inkml:annotation></c></description></item>
@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceGroup" /> <c>&lt;inkml:traceGroup></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceView" /> <c>&lt;inkml:traceView></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Ink : OpenXmlPartRootElement
     {
         /// <summary>
@@ -210,9 +210,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: xml:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -284,9 +284,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: xml:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -310,7 +310,7 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:mapping.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Bind" /> <c>&lt;inkml:bind></c></description></item>
@@ -318,7 +318,7 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Matrix" /> <c>&lt;inkml:matrix></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Table" /> <c>&lt;inkml:table></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Mapping : OpenXmlCompositeElement
     {
         /// <summary>
@@ -356,9 +356,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: xml:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -427,12 +427,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:channel.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Mapping" /> <c>&lt;inkml:mapping></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Channel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -470,9 +470,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: xml:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -624,12 +624,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:intermittentChannels.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Channel" /> <c>&lt;inkml:channel></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class IntermittentChannels : OpenXmlCompositeElement
     {
         /// <summary>
@@ -788,13 +788,13 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:traceFormat.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Channel" /> <c>&lt;inkml:channel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.IntermittentChannels" /> <c>&lt;inkml:intermittentChannels></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TraceFormat : OpenXmlCompositeElement
     {
         /// <summary>
@@ -832,9 +832,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: xml:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -1121,12 +1121,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:channelProperties.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.ChannelProperty" /> <c>&lt;inkml:channelProperty></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ChannelProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1240,12 +1240,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:annotationXML.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Emma" /> <c>&lt;emma:emma></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AnnotationXml : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1331,9 +1331,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>Emma.</para>
         /// <para>Represents the following element tag in the schema: emma:emma.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:emma = http://www.w3.org/2003/04/emma
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.EMMA.Emma? Emma
         {
             get => GetElement<DocumentFormat.OpenXml.EMMA.Emma>();
@@ -1349,13 +1349,13 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:brushProperty.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Annotation" /> <c>&lt;inkml:annotation></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.AnnotationXml" /> <c>&lt;inkml:annotationXML></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BrushProperty : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1481,12 +1481,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:canvas.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceFormat" /> <c>&lt;inkml:traceFormat></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Canvas : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1524,9 +1524,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: xml:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -1564,9 +1564,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>TraceFormat.</para>
         /// <para>Represents the following element tag in the schema: inkml:traceFormat.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.InkML.TraceFormat? TraceFormat
         {
             get => GetElement<DocumentFormat.OpenXml.InkML.TraceFormat>();
@@ -1582,12 +1582,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:canvasTransform.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Mapping" /> <c>&lt;inkml:mapping></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CanvasTransform : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1625,9 +1625,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: xml:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -1667,7 +1667,7 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:inkSource.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.ActiveArea" /> <c>&lt;inkml:activeArea></c></description></item>
@@ -1677,7 +1677,7 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.SourceProperty" /> <c>&lt;inkml:srcProperty></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceFormat" /> <c>&lt;inkml:traceFormat></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class InkSource : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1715,9 +1715,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: xml:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -1812,9 +1812,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>TraceFormat.</para>
         /// <para>Represents the following element tag in the schema: inkml:traceFormat.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.InkML.TraceFormat? TraceFormat
         {
             get => GetElement<DocumentFormat.OpenXml.InkML.TraceFormat>();
@@ -1825,9 +1825,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>SampleRate.</para>
         /// <para>Represents the following element tag in the schema: inkml:sampleRate.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.InkML.SampleRate? SampleRate
         {
             get => GetElement<DocumentFormat.OpenXml.InkML.SampleRate>();
@@ -1838,9 +1838,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>Latency.</para>
         /// <para>Represents the following element tag in the schema: inkml:latency.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.InkML.Latency? Latency
         {
             get => GetElement<DocumentFormat.OpenXml.InkML.Latency>();
@@ -1851,9 +1851,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>ActiveArea.</para>
         /// <para>Represents the following element tag in the schema: inkml:activeArea.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.InkML.ActiveArea? ActiveArea
         {
             get => GetElement<DocumentFormat.OpenXml.InkML.ActiveArea>();
@@ -1869,14 +1869,14 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:brush.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Annotation" /> <c>&lt;inkml:annotation></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.AnnotationXml" /> <c>&lt;inkml:annotationXML></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.BrushProperty" /> <c>&lt;inkml:brushProperty></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Brush : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1914,9 +1914,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: xml:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -1976,9 +1976,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: xml:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2078,9 +2078,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: xml:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2190,7 +2190,7 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:traceGroup.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Annotation" /> <c>&lt;inkml:annotation></c></description></item>
@@ -2198,7 +2198,7 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Trace" /> <c>&lt;inkml:trace></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceGroup" /> <c>&lt;inkml:traceGroup></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TraceGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2236,9 +2236,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: xml:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2301,14 +2301,14 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:traceView.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Annotation" /> <c>&lt;inkml:annotation></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.AnnotationXml" /> <c>&lt;inkml:annotationXML></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceView" /> <c>&lt;inkml:traceView></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TraceView : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2346,9 +2346,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: xml:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2431,7 +2431,7 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:context.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Brush" /> <c>&lt;inkml:brush></c></description></item>
@@ -2441,7 +2441,7 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Timestamp" /> <c>&lt;inkml:timestamp></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceFormat" /> <c>&lt;inkml:traceFormat></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Context : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2479,9 +2479,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: xml:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2613,9 +2613,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>Canvas.</para>
         /// <para>Represents the following element tag in the schema: inkml:canvas.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.InkML.Canvas? Canvas
         {
             get => GetElement<DocumentFormat.OpenXml.InkML.Canvas>();
@@ -2626,9 +2626,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>CanvasTransform.</para>
         /// <para>Represents the following element tag in the schema: inkml:canvasTransform.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.InkML.CanvasTransform? CanvasTransform
         {
             get => GetElement<DocumentFormat.OpenXml.InkML.CanvasTransform>();
@@ -2639,9 +2639,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>TraceFormat.</para>
         /// <para>Represents the following element tag in the schema: inkml:traceFormat.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.InkML.TraceFormat? TraceFormat
         {
             get => GetElement<DocumentFormat.OpenXml.InkML.TraceFormat>();
@@ -2652,9 +2652,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>InkSource.</para>
         /// <para>Represents the following element tag in the schema: inkml:inkSource.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.InkML.InkSource? InkSource
         {
             get => GetElement<DocumentFormat.OpenXml.InkML.InkSource>();
@@ -2665,9 +2665,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>Brush.</para>
         /// <para>Represents the following element tag in the schema: inkml:brush.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.InkML.Brush? Brush
         {
             get => GetElement<DocumentFormat.OpenXml.InkML.Brush>();
@@ -2678,9 +2678,9 @@ namespace DocumentFormat.OpenXml.InkML
         /// <para>Timestamp.</para>
         /// <para>Represents the following element tag in the schema: inkml:timestamp.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:inkml = http://www.w3.org/2003/InkML
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.InkML.Timestamp? Timestamp
         {
             get => GetElement<DocumentFormat.OpenXml.InkML.Timestamp>();
@@ -2696,7 +2696,7 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:definitions.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Brush" /> <c>&lt;inkml:brush></c></description></item>
@@ -2711,7 +2711,7 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceGroup" /> <c>&lt;inkml:traceGroup></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceView" /> <c>&lt;inkml:traceView></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Definitions : OpenXmlCompositeElement
     {
         /// <summary>

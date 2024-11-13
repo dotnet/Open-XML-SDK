@@ -23,12 +23,12 @@ namespace DocumentFormat.OpenXml.CustomProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is op:Properties.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.CustomProperties.CustomDocumentProperty" /> <c>&lt;op:property></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Properties : OpenXmlPartRootElement
     {
         /// <summary>
@@ -113,7 +113,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is op:property.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTArray" /> <c>&lt;vt:array></c></description></item>
@@ -151,7 +151,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64" /> <c>&lt;vt:ui8></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort" /> <c>&lt;vt:ui2></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CustomDocumentProperty : OpenXmlCompositeElement
     {
         /// <summary>
@@ -320,9 +320,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Vector.</para>
         /// <para>Represents the following element tag in the schema: vt:vector.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTVector? VTVector
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVector>();
@@ -333,9 +333,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Array.</para>
         /// <para>Represents the following element tag in the schema: vt:array.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTArray? VTArray
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTArray>();
@@ -346,9 +346,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Binary Blob.</para>
         /// <para>Represents the following element tag in the schema: vt:blob.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTBlob? VTBlob
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBlob>();
@@ -359,9 +359,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Binary Blob Object.</para>
         /// <para>Represents the following element tag in the schema: vt:oblob.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTOBlob? VTOBlob
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTOBlob>();
@@ -372,9 +372,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Empty.</para>
         /// <para>Represents the following element tag in the schema: vt:empty.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTEmpty? VTEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTEmpty>();
@@ -385,9 +385,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Null.</para>
         /// <para>Represents the following element tag in the schema: vt:null.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTNull? VTNull
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTNull>();
@@ -398,9 +398,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>1-Byte Signed Integer.</para>
         /// <para>Represents the following element tag in the schema: vt:i1.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTByte? VTByte
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTByte>();
@@ -411,9 +411,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>2-Byte Signed Integer.</para>
         /// <para>Represents the following element tag in the schema: vt:i2.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTShort? VTShort
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTShort>();
@@ -424,9 +424,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>4-Byte Signed Integer.</para>
         /// <para>Represents the following element tag in the schema: vt:i4.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTInt32? VTInt32
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTInt32>();
@@ -437,9 +437,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>8-Byte Signed Integer.</para>
         /// <para>Represents the following element tag in the schema: vt:i8.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTInt64? VTInt64
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTInt64>();
@@ -450,9 +450,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Integer.</para>
         /// <para>Represents the following element tag in the schema: vt:int.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTInteger? VTInteger
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTInteger>();
@@ -463,9 +463,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>1-Byte Unsigned Integer.</para>
         /// <para>Represents the following element tag in the schema: vt:ui1.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte? VTUnsignedByte
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte>();
@@ -476,9 +476,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>2-Byte Unsigned Integer.</para>
         /// <para>Represents the following element tag in the schema: vt:ui2.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort? VTUnsignedShort
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort>();
@@ -489,9 +489,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>4-Byte Unsigned Integer.</para>
         /// <para>Represents the following element tag in the schema: vt:ui4.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32? VTUnsignedInt32
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32>();
@@ -502,9 +502,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>8-Byte Unsigned Integer.</para>
         /// <para>Represents the following element tag in the schema: vt:ui8.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64? VTUnsignedInt64
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64>();
@@ -515,9 +515,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Unsigned Integer.</para>
         /// <para>Represents the following element tag in the schema: vt:uint.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger? VTUnsignedInteger
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger>();
@@ -528,9 +528,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>4-Byte Real Number.</para>
         /// <para>Represents the following element tag in the schema: vt:r4.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTFloat? VTFloat
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTFloat>();
@@ -541,9 +541,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>8-Byte Real Number.</para>
         /// <para>Represents the following element tag in the schema: vt:r8.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTDouble? VTDouble
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTDouble>();
@@ -554,9 +554,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Decimal.</para>
         /// <para>Represents the following element tag in the schema: vt:decimal.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTDecimal? VTDecimal
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTDecimal>();
@@ -567,9 +567,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>LPSTR.</para>
         /// <para>Represents the following element tag in the schema: vt:lpstr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTLPSTR? VTLPSTR
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTLPSTR>();
@@ -580,9 +580,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>LPWSTR.</para>
         /// <para>Represents the following element tag in the schema: vt:lpwstr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTLPWSTR? VTLPWSTR
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTLPWSTR>();
@@ -593,9 +593,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Basic String.</para>
         /// <para>Represents the following element tag in the schema: vt:bstr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTBString? VTBString
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBString>();
@@ -606,9 +606,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Date and Time.</para>
         /// <para>Represents the following element tag in the schema: vt:date.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTDate? VTDate
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTDate>();
@@ -619,9 +619,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>File Time.</para>
         /// <para>Represents the following element tag in the schema: vt:filetime.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTFileTime? VTFileTime
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTFileTime>();
@@ -632,9 +632,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Boolean.</para>
         /// <para>Represents the following element tag in the schema: vt:bool.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTBool? VTBool
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBool>();
@@ -645,9 +645,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Currency.</para>
         /// <para>Represents the following element tag in the schema: vt:cy.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTCurrency? VTCurrency
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTCurrency>();
@@ -658,9 +658,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Error Status Code.</para>
         /// <para>Represents the following element tag in the schema: vt:error.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTError? VTError
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTError>();
@@ -671,9 +671,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Binary Stream.</para>
         /// <para>Represents the following element tag in the schema: vt:stream.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTStreamData? VTStreamData
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTStreamData>();
@@ -684,9 +684,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Binary Stream Object.</para>
         /// <para>Represents the following element tag in the schema: vt:ostream.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTOStreamData? VTOStreamData
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTOStreamData>();
@@ -697,9 +697,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Binary Storage.</para>
         /// <para>Represents the following element tag in the schema: vt:storage.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTStorage? VTStorage
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTStorage>();
@@ -710,9 +710,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Binary Storage Object.</para>
         /// <para>Represents the following element tag in the schema: vt:ostorage.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTOStorage? VTOStorage
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTOStorage>();
@@ -723,9 +723,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Binary Versioned Stream.</para>
         /// <para>Represents the following element tag in the schema: vt:vstream.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTVStreamData? VTVStreamData
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVStreamData>();
@@ -736,9 +736,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Class ID.</para>
         /// <para>Represents the following element tag in the schema: vt:clsid.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTClassId? VTClassId
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTClassId>();
@@ -749,9 +749,9 @@ namespace DocumentFormat.OpenXml.CustomProperties
         /// <para>Clipboard Data.</para>
         /// <para>Represents the following element tag in the schema: vt:cf.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTClipboardData? VTClipboardData
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTClipboardData>();

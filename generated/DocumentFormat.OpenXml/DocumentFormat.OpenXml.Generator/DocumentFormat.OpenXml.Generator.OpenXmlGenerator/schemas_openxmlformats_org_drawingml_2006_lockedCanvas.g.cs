@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is lc:lockedCanvas.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties" /> <c>&lt;a:grpSpPr></c></description></item>
@@ -37,7 +37,7 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TextShape" /> <c>&lt;a:txSp></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart" /> <c>&lt;a14:contentPart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LockedCanvas : OpenXmlCompositeElement
     {
         /// <summary>
@@ -107,9 +107,9 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
         /// <para>Non-Visual Properties for a Group Shape.</para>
         /// <para>Represents the following element tag in the schema: a:nvGrpSpPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties? NonVisualGroupShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties>();
@@ -120,9 +120,9 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
         /// <para>Visual Group Shape Properties.</para>
         /// <para>Represents the following element tag in the schema: a:grpSpPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties? VisualGroupShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties>();

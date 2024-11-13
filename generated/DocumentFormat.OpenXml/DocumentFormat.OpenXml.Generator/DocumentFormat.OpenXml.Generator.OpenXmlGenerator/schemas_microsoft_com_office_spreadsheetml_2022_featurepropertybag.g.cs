@@ -22,14 +22,14 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xfpb:FeaturePropertyBags.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList" /> <c>&lt;xfpb:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.BagExtensions" /> <c>&lt;xfpb:bagExt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FeaturePropertyBag" /> <c>&lt;xfpb:bag></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FeaturePropertyBags : OpenXmlPartRootElement
     {
         /// <summary>
@@ -131,14 +131,14 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xfpb:fpbs.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList" /> <c>&lt;xfpb:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.BagExtensions" /> <c>&lt;xfpb:bagExt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FeaturePropertyBag" /> <c>&lt;xfpb:bag></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FpbsFeaturePropertyBags : OpenXmlFeaturePropertyBagsElement
     {
         /// <summary>
@@ -194,14 +194,14 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList" /> <c>&lt;xfpb:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.BagExtensions" /> <c>&lt;xfpb:bagExt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FeaturePropertyBag" /> <c>&lt;xfpb:bag></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class OpenXmlFeaturePropertyBagsElement : OpenXmlCompositeElement
     {
         /// <summary>
@@ -341,13 +341,13 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xfpb:revdxf.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType" /> <c>&lt;xfpb:dxf></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags" /> <c>&lt;xfpb:fpbs></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RevDxf : OpenXmlCompositeElement
     {
         /// <summary>
@@ -399,9 +399,9 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         /// <para>FpbsFeaturePropertyBags.</para>
         /// <para>Represents the following element tag in the schema: xfpb:fpbs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xfpb = http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags? FpbsFeaturePropertyBags
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags>();
@@ -412,9 +412,9 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         /// <para>DifferentialFormatType.</para>
         /// <para>Represents the following element tag in the schema: xfpb:dxf.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xfpb = http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType? DifferentialFormatType
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType>();
@@ -430,13 +430,13 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xfpb:headerRowRevDxf.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType" /> <c>&lt;xfpb:dxf></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags" /> <c>&lt;xfpb:fpbs></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class HeaderRowRevDxfTableRevDxf : OpenXmlTableRevDxfElement
     {
         /// <summary>
@@ -491,13 +491,13 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xfpb:dataRevDxf.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType" /> <c>&lt;xfpb:dxf></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags" /> <c>&lt;xfpb:fpbs></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataRevDxfTableRevDxf : OpenXmlTableRevDxfElement
     {
         /// <summary>
@@ -552,13 +552,13 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xfpb:totalsRowRevDxf.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType" /> <c>&lt;xfpb:dxf></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags" /> <c>&lt;xfpb:fpbs></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TotalsRowRevDxfTableRevDxf : OpenXmlTableRevDxfElement
     {
         /// <summary>
@@ -613,13 +613,13 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xfpb:headerRowBorderRevDxf.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType" /> <c>&lt;xfpb:dxf></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags" /> <c>&lt;xfpb:fpbs></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class HeaderRowBorderRevDxfTableRevDxf : OpenXmlTableRevDxfElement
     {
         /// <summary>
@@ -674,13 +674,13 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xfpb:tableBorderRevDxf.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType" /> <c>&lt;xfpb:dxf></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags" /> <c>&lt;xfpb:fpbs></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TableBorderRevDxfTableRevDxf : OpenXmlTableRevDxfElement
     {
         /// <summary>
@@ -735,13 +735,13 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xfpb:totalsRowBorderRevDxf.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType" /> <c>&lt;xfpb:dxf></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags" /> <c>&lt;xfpb:fpbs></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TotalsRowBorderRevDxfTableRevDxf : OpenXmlTableRevDxfElement
     {
         /// <summary>
@@ -796,13 +796,13 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xfpb:columnHeaderRevDxf.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType" /> <c>&lt;xfpb:dxf></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags" /> <c>&lt;xfpb:fpbs></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ColumnHeaderRevDxfTableRevDxf : OpenXmlTableRevDxfElement
     {
         /// <summary>
@@ -857,13 +857,13 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xfpb:columnBodyRevDxf.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType" /> <c>&lt;xfpb:dxf></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags" /> <c>&lt;xfpb:fpbs></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ColumnBodyRevDxfTableRevDxf : OpenXmlTableRevDxfElement
     {
         /// <summary>
@@ -918,13 +918,13 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xfpb:columnTotalsRevDxf.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType" /> <c>&lt;xfpb:dxf></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags" /> <c>&lt;xfpb:fpbs></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ColumnTotalsRevDxfTableRevDxf : OpenXmlTableRevDxfElement
     {
         /// <summary>
@@ -979,13 +979,13 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType" /> <c>&lt;xfpb:dxf></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags" /> <c>&lt;xfpb:fpbs></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class OpenXmlTableRevDxfElement : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1030,9 +1030,9 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         /// <para>FpbsFeaturePropertyBags.</para>
         /// <para>Represents the following element tag in the schema: xfpb:fpbs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xfpb = http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags? FpbsFeaturePropertyBags
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags>();
@@ -1043,9 +1043,9 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         /// <para>DifferentialFormatType.</para>
         /// <para>Represents the following element tag in the schema: xfpb:dxf.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xfpb = http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType? DifferentialFormatType
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType>();
@@ -1058,12 +1058,12 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xfpb:bagExt.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList" /> <c>&lt;xfpb:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BagExtensions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1113,9 +1113,9 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: xfpb:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xfpb = http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList>();
@@ -1131,7 +1131,7 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xfpb:bag.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ArrayFeatureProperty" /> <c>&lt;xfpb:a></c></description></item>
@@ -1142,7 +1142,7 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.RelFeatureProperty" /> <c>&lt;xfpb:rel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.StringFeatureProperty" /> <c>&lt;xfpb:s></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FeaturePropertyBag : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1257,12 +1257,12 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xfpb:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1323,7 +1323,7 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xfpb:a.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.Xsdboolean" /> <c>&lt;xfpb:b></c></description></item>
@@ -1333,7 +1333,7 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.RelXsdstring" /> <c>&lt;xfpb:rel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.XsdunsignedInt" /> <c>&lt;xfpb:bagId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ArrayFeatureProperty : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1731,7 +1731,7 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xfpb:dxf.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
@@ -1742,7 +1742,7 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DifferentialFormatType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1804,9 +1804,9 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         /// <para>Font Properties.</para>
         /// <para>Represents the following element tag in the schema: x:font.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Font? Font
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Font>();
@@ -1817,9 +1817,9 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         /// <para>Number Format.</para>
         /// <para>Represents the following element tag in the schema: x:numFmt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.NumberingFormat? NumberingFormat
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
@@ -1830,9 +1830,9 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         /// <para>Fill.</para>
         /// <para>Represents the following element tag in the schema: x:fill.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Fill? Fill
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Fill>();
@@ -1843,9 +1843,9 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         /// <para>Alignment.</para>
         /// <para>Represents the following element tag in the schema: x:alignment.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Alignment? Alignment
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
@@ -1856,9 +1856,9 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         /// <para>Border Properties.</para>
         /// <para>Represents the following element tag in the schema: x:border.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Border? Border
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Border>();
@@ -1869,9 +1869,9 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         /// <para>Protection Properties.</para>
         /// <para>Represents the following element tag in the schema: x:protection.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Protection? Protection
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Protection>();
@@ -1882,9 +1882,9 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         /// <para>Future Feature Data Storage Area.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();

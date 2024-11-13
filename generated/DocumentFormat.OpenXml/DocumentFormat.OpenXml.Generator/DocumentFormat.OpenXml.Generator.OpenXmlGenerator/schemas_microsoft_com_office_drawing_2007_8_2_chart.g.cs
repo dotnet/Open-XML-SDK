@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:pivotOptions.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneFilter" /> <c>&lt;c14:dropZoneFilter></c></description></item>
@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneSeries" /> <c>&lt;c14:dropZoneSeries></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZonesVisible" /> <c>&lt;c14:dropZonesVisible></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotOptions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -89,9 +89,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <para>DropZoneFilter.</para>
         /// <para>Represents the following element tag in the schema: c14:dropZoneFilter.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneFilter? DropZoneFilter
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneFilter>();
@@ -102,9 +102,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <para>DropZoneCategories.</para>
         /// <para>Represents the following element tag in the schema: c14:dropZoneCategories.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneCategories? DropZoneCategories
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneCategories>();
@@ -115,9 +115,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <para>DropZoneData.</para>
         /// <para>Represents the following element tag in the schema: c14:dropZoneData.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneData? DropZoneData
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneData>();
@@ -128,9 +128,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <para>DropZoneSeries.</para>
         /// <para>Represents the following element tag in the schema: c14:dropZoneSeries.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneSeries? DropZoneSeries
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneSeries>();
@@ -141,9 +141,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <para>DropZonesVisible.</para>
         /// <para>Represents the following element tag in the schema: c14:dropZonesVisible.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZonesVisible? DropZonesVisible
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZonesVisible>();
@@ -159,13 +159,13 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:sketchOptions.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.InSketchMode" /> <c>&lt;c14:inSketchMode></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShowSketchButton" /> <c>&lt;c14:showSketchBtn></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SketchOptions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -217,9 +217,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <para>InSketchMode.</para>
         /// <para>Represents the following element tag in the schema: c14:inSketchMode.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.Charts.InSketchMode? InSketchMode
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.InSketchMode>();
@@ -230,9 +230,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <para>ShowSketchButton.</para>
         /// <para>Represents the following element tag in the schema: c14:showSketchBtn.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShowSketchButton? ShowSketchButton
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShowSketchButton>();
@@ -248,12 +248,12 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:invertSolidFillFmt.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShapeProperties" /> <c>&lt;c14:spPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class InvertSolidFillFormat : OpenXmlCompositeElement
     {
         /// <summary>
@@ -303,9 +303,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <para>ShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c14:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c14 = http://schemas.microsoft.com/office/drawing/2007/8/2/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShapeProperties? ShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShapeProperties>();
@@ -362,7 +362,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:spPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
@@ -381,7 +381,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -492,9 +492,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// <para>2D Transform for Individual Objects.</para>
         /// <para>Represents the following element tag in the schema: a:xfrm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();

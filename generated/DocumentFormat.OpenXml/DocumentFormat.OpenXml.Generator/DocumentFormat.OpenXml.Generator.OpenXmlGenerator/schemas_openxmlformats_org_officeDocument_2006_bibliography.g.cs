@@ -21,12 +21,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Sources.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Source" /> <c>&lt;b:Source></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Sources : OpenXmlPartRootElement
     {
         /// <summary>
@@ -123,14 +123,14 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Person.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Last" /> <c>&lt;b:Last></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.First" /> <c>&lt;b:First></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Middle" /> <c>&lt;b:Middle></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Person : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2240,12 +2240,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:NameList.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Person" /> <c>&lt;b:Person></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NameList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2299,12 +2299,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Artist.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Artist : NameType
     {
         /// <summary>
@@ -2357,12 +2357,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:BookAuthor.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BookAuthor : NameType
     {
         /// <summary>
@@ -2415,12 +2415,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Compiler.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Compiler : NameType
     {
         /// <summary>
@@ -2473,12 +2473,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Composer.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Composer : NameType
     {
         /// <summary>
@@ -2531,12 +2531,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Conductor.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Conductor : NameType
     {
         /// <summary>
@@ -2589,12 +2589,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Counsel.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Counsel : NameType
     {
         /// <summary>
@@ -2647,12 +2647,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Director.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Director : NameType
     {
         /// <summary>
@@ -2705,12 +2705,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Editor.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Editor : NameType
     {
         /// <summary>
@@ -2763,12 +2763,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Interviewee.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Interviewee : NameType
     {
         /// <summary>
@@ -2821,12 +2821,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Interviewer.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Interviewer : NameType
     {
         /// <summary>
@@ -2879,12 +2879,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Inventor.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Inventor : NameType
     {
         /// <summary>
@@ -2937,12 +2937,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:ProducerName.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ProducerName : NameType
     {
         /// <summary>
@@ -2995,12 +2995,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Translator.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Translator : NameType
     {
         /// <summary>
@@ -3053,12 +3053,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Writer.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Writer : NameType
     {
         /// <summary>
@@ -3111,12 +3111,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class NameType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3160,9 +3160,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Name List.</para>
         /// <para>Represents the following element tag in the schema: b:NameList.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.NameList? NameList
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.NameList>();
@@ -3175,13 +3175,13 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Author.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Corporate" /> <c>&lt;b:Corporate></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Author : NameOrCorporateType
     {
         /// <summary>
@@ -3238,13 +3238,13 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Performer.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Corporate" /> <c>&lt;b:Corporate></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Performer : NameOrCorporateType
     {
         /// <summary>
@@ -3301,13 +3301,13 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Corporate" /> <c>&lt;b:Corporate></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class NameOrCorporateType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3352,9 +3352,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>NameList.</para>
         /// <para>Represents the following element tag in the schema: b:NameList.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.NameList? NameList
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.NameList>();
@@ -3365,9 +3365,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Corporate Author.</para>
         /// <para>Represents the following element tag in the schema: b:Corporate.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Corporate? Corporate
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Corporate>();
@@ -3380,7 +3380,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Author.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Author" /> <c>&lt;b:Author></c></description></item>
@@ -3400,7 +3400,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Translator" /> <c>&lt;b:Translator></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Writer" /> <c>&lt;b:Writer></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AuthorList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3482,9 +3482,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Artist.</para>
         /// <para>Represents the following element tag in the schema: b:Artist.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Artist? Artist
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Artist>();
@@ -3495,9 +3495,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Author.</para>
         /// <para>Represents the following element tag in the schema: b:Author.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Author? Author
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Author>();
@@ -3508,9 +3508,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Book Author.</para>
         /// <para>Represents the following element tag in the schema: b:BookAuthor.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.BookAuthor? BookAuthor
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.BookAuthor>();
@@ -3521,9 +3521,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Compiler.</para>
         /// <para>Represents the following element tag in the schema: b:Compiler.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Compiler? Compiler
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Compiler>();
@@ -3534,9 +3534,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Composer.</para>
         /// <para>Represents the following element tag in the schema: b:Composer.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Composer? Composer
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Composer>();
@@ -3547,9 +3547,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Conductor.</para>
         /// <para>Represents the following element tag in the schema: b:Conductor.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Conductor? Conductor
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Conductor>();
@@ -3560,9 +3560,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Counsel.</para>
         /// <para>Represents the following element tag in the schema: b:Counsel.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Counsel? Counsel
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Counsel>();
@@ -3573,9 +3573,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Director.</para>
         /// <para>Represents the following element tag in the schema: b:Director.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Director? Director
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Director>();
@@ -3586,9 +3586,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Editor.</para>
         /// <para>Represents the following element tag in the schema: b:Editor.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Editor? Editor
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Editor>();
@@ -3599,9 +3599,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Interviewee.</para>
         /// <para>Represents the following element tag in the schema: b:Interviewee.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Interviewee? Interviewee
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Interviewee>();
@@ -3612,9 +3612,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Interviewer.</para>
         /// <para>Represents the following element tag in the schema: b:Interviewer.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Interviewer? Interviewer
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Interviewer>();
@@ -3625,9 +3625,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Inventor.</para>
         /// <para>Represents the following element tag in the schema: b:Inventor.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Inventor? Inventor
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Inventor>();
@@ -3638,9 +3638,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Performer.</para>
         /// <para>Represents the following element tag in the schema: b:Performer.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Performer? Performer
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Performer>();
@@ -3651,9 +3651,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Producer Name.</para>
         /// <para>Represents the following element tag in the schema: b:ProducerName.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.ProducerName? ProducerName
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.ProducerName>();
@@ -3664,9 +3664,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Translator.</para>
         /// <para>Represents the following element tag in the schema: b:Translator.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Translator? Translator
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Translator>();
@@ -3677,9 +3677,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Writer.</para>
         /// <para>Represents the following element tag in the schema: b:Writer.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Writer? Writer
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Writer>();
@@ -3733,7 +3733,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Source.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.AuthorList" /> <c>&lt;b:Author></c></description></item>
@@ -3789,7 +3789,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Year" /> <c>&lt;b:Year></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.YearAccessed" /> <c>&lt;b:YearAccessed></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Source : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3943,9 +3943,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Abbreviated Case Number.</para>
         /// <para>Represents the following element tag in the schema: b:AbbreviatedCaseNumber.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber? AbbreviatedCaseNumber
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber>();
@@ -3956,9 +3956,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Album Title.</para>
         /// <para>Represents the following element tag in the schema: b:AlbumTitle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.AlbumTitle? AlbumTitle
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.AlbumTitle>();
@@ -3969,9 +3969,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Contributors List.</para>
         /// <para>Represents the following element tag in the schema: b:Author.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.AuthorList? AuthorList
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.AuthorList>();
@@ -3982,9 +3982,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Book Title.</para>
         /// <para>Represents the following element tag in the schema: b:BookTitle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.BookTitle? BookTitle
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.BookTitle>();
@@ -3995,9 +3995,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Broadcaster.</para>
         /// <para>Represents the following element tag in the schema: b:Broadcaster.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Broadcaster? Broadcaster
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Broadcaster>();
@@ -4008,9 +4008,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Broadcast Title.</para>
         /// <para>Represents the following element tag in the schema: b:BroadcastTitle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.BroadcastTitle? BroadcastTitle
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.BroadcastTitle>();
@@ -4021,9 +4021,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Case Number.</para>
         /// <para>Represents the following element tag in the schema: b:CaseNumber.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.CaseNumber? CaseNumber
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.CaseNumber>();
@@ -4034,9 +4034,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Chapter Number.</para>
         /// <para>Represents the following element tag in the schema: b:ChapterNumber.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.ChapterNumber? ChapterNumber
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.ChapterNumber>();
@@ -4047,9 +4047,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>City.</para>
         /// <para>Represents the following element tag in the schema: b:City.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.City? City
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.City>();
@@ -4060,9 +4060,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Comments.</para>
         /// <para>Represents the following element tag in the schema: b:Comments.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Comments? Comments
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Comments>();
@@ -4073,9 +4073,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Conference or Proceedings Name.</para>
         /// <para>Represents the following element tag in the schema: b:ConferenceName.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.ConferenceName? ConferenceName
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.ConferenceName>();
@@ -4086,9 +4086,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Country or Region.</para>
         /// <para>Represents the following element tag in the schema: b:CountryRegion.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.CountryRegion? CountryRegion
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.CountryRegion>();
@@ -4099,9 +4099,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Court.</para>
         /// <para>Represents the following element tag in the schema: b:Court.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Court? Court
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Court>();
@@ -4112,9 +4112,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Day.</para>
         /// <para>Represents the following element tag in the schema: b:Day.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Day? Day
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Day>();
@@ -4125,9 +4125,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Day Accessed.</para>
         /// <para>Represents the following element tag in the schema: b:DayAccessed.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.DayAccessed? DayAccessed
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.DayAccessed>();
@@ -4138,9 +4138,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Department.</para>
         /// <para>Represents the following element tag in the schema: b:Department.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Department? Department
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Department>();
@@ -4151,9 +4151,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Distributor.</para>
         /// <para>Represents the following element tag in the schema: b:Distributor.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Distributor? Distributor
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Distributor>();
@@ -4164,9 +4164,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Editor.</para>
         /// <para>Represents the following element tag in the schema: b:Edition.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Edition? Edition
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Edition>();
@@ -4177,9 +4177,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>GUID.</para>
         /// <para>Represents the following element tag in the schema: b:Guid.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.GuidString? GuidString
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.GuidString>();
@@ -4190,9 +4190,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Institution.</para>
         /// <para>Represents the following element tag in the schema: b:Institution.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Institution? Institution
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Institution>();
@@ -4203,9 +4203,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Internet Site Title.</para>
         /// <para>Represents the following element tag in the schema: b:InternetSiteTitle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.InternetSiteTitle? InternetSiteTitle
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.InternetSiteTitle>();
@@ -4216,9 +4216,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Issue.</para>
         /// <para>Represents the following element tag in the schema: b:Issue.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Issue? Issue
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Issue>();
@@ -4229,9 +4229,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Journal Name.</para>
         /// <para>Represents the following element tag in the schema: b:JournalName.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.JournalName? JournalName
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.JournalName>();
@@ -4242,9 +4242,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Locale ID.</para>
         /// <para>Represents the following element tag in the schema: b:LCID.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.LcId? LcId
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.LcId>();
@@ -4255,9 +4255,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Medium.</para>
         /// <para>Represents the following element tag in the schema: b:Medium.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Medium? Medium
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Medium>();
@@ -4268,9 +4268,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Month.</para>
         /// <para>Represents the following element tag in the schema: b:Month.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Month? Month
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Month>();
@@ -4281,9 +4281,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Month Accessed.</para>
         /// <para>Represents the following element tag in the schema: b:MonthAccessed.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.MonthAccessed? MonthAccessed
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.MonthAccessed>();
@@ -4294,9 +4294,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Number of Volumes.</para>
         /// <para>Represents the following element tag in the schema: b:NumberVolumes.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.NumberVolumes? NumberVolumes
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.NumberVolumes>();
@@ -4307,9 +4307,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Pages.</para>
         /// <para>Represents the following element tag in the schema: b:Pages.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Pages? Pages
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Pages>();
@@ -4320,9 +4320,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Patent Number.</para>
         /// <para>Represents the following element tag in the schema: b:PatentNumber.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.PatentNumber? PatentNumber
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.PatentNumber>();
@@ -4333,9 +4333,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Periodical Title.</para>
         /// <para>Represents the following element tag in the schema: b:PeriodicalTitle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.PeriodicalTitle? PeriodicalTitle
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.PeriodicalTitle>();
@@ -4346,9 +4346,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Production Company.</para>
         /// <para>Represents the following element tag in the schema: b:ProductionCompany.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.ProductionCompany? ProductionCompany
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.ProductionCompany>();
@@ -4359,9 +4359,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Publication Title.</para>
         /// <para>Represents the following element tag in the schema: b:PublicationTitle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.PublicationTitle? PublicationTitle
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.PublicationTitle>();
@@ -4372,9 +4372,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Publisher.</para>
         /// <para>Represents the following element tag in the schema: b:Publisher.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Publisher? Publisher
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Publisher>();
@@ -4385,9 +4385,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Recording Number.</para>
         /// <para>Represents the following element tag in the schema: b:RecordingNumber.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.RecordingNumber? RecordingNumber
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.RecordingNumber>();
@@ -4398,9 +4398,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Reference Order.</para>
         /// <para>Represents the following element tag in the schema: b:RefOrder.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.ReferenceOrder? ReferenceOrder
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.ReferenceOrder>();
@@ -4411,9 +4411,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Reporter.</para>
         /// <para>Represents the following element tag in the schema: b:Reporter.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Reporter? Reporter
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Reporter>();
@@ -4424,9 +4424,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Source Type.</para>
         /// <para>Represents the following element tag in the schema: b:SourceType.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.SourceType? SourceType
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.SourceType>();
@@ -4437,9 +4437,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Short Title.</para>
         /// <para>Represents the following element tag in the schema: b:ShortTitle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.ShortTitle? ShortTitle
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.ShortTitle>();
@@ -4450,9 +4450,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Standard Number.</para>
         /// <para>Represents the following element tag in the schema: b:StandardNumber.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.StandardNumber? StandardNumber
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.StandardNumber>();
@@ -4463,9 +4463,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>State or Province.</para>
         /// <para>Represents the following element tag in the schema: b:StateProvince.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.StateProvince? StateProvince
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.StateProvince>();
@@ -4476,9 +4476,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Station.</para>
         /// <para>Represents the following element tag in the schema: b:Station.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Station? Station
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Station>();
@@ -4489,9 +4489,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Tag.</para>
         /// <para>Represents the following element tag in the schema: b:Tag.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Tag? Tag
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Tag>();
@@ -4502,9 +4502,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Theater.</para>
         /// <para>Represents the following element tag in the schema: b:Theater.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Theater? Theater
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Theater>();
@@ -4515,9 +4515,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Thesis Type.</para>
         /// <para>Represents the following element tag in the schema: b:ThesisType.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.ThesisType? ThesisType
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.ThesisType>();
@@ -4528,9 +4528,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Title.</para>
         /// <para>Represents the following element tag in the schema: b:Title.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Title? Title
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Title>();
@@ -4541,9 +4541,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Type.</para>
         /// <para>Represents the following element tag in the schema: b:Type.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.PatentType? PatentType
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.PatentType>();
@@ -4554,9 +4554,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>URL.</para>
         /// <para>Represents the following element tag in the schema: b:URL.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.UrlString? UrlString
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.UrlString>();
@@ -4567,9 +4567,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Version.</para>
         /// <para>Represents the following element tag in the schema: b:Version.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Version? Version
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Version>();
@@ -4580,9 +4580,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Volume.</para>
         /// <para>Represents the following element tag in the schema: b:Volume.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Volume? Volume
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Volume>();
@@ -4593,9 +4593,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Year.</para>
         /// <para>Represents the following element tag in the schema: b:Year.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Year? Year
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.Year>();
@@ -4606,9 +4606,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <para>Year Accessed.</para>
         /// <para>Represents the following element tag in the schema: b:YearAccessed.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.YearAccessed? YearAccessed
         {
             get => GetElement<DocumentFormat.OpenXml.Bibliography.YearAccessed>();

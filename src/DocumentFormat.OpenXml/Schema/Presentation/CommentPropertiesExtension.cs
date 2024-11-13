@@ -11,13 +11,13 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reactions" /> <c>&lt;p223:reactions></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskDetails" /> <c>&lt;p228:taskDetails></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     [Obsolete("Unused type, prefer DocumentFormat.OpenXml.Presentation.CommentPropertiesExtension", true)]
     [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
     public partial class CommentPropertiesExtension : DocumentFormat.OpenXml.Presentation.CommentPropertiesExtension

@@ -21,14 +21,14 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xxdsv:versionInfo.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.RequiredFeatureXsdstring" /> <c>&lt;xxdsv:requiredFeature></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.LastRefreshFeatureXsdstring" /> <c>&lt;xxdsv:lastRefreshFeature></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.LastEditFeatureXsdstring" /> <c>&lt;xxdsv:lastEditFeature></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class VersionInfo : OpenXmlCompositeElement
     {
         /// <summary>

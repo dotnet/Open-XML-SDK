@@ -150,14 +150,14 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:contentPart.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList" /> <c>&lt;a14:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Transform2D" /> <c>&lt;a14:xfrm></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.NonVisualContentPartProperties" /> <c>&lt;a14:nvContentPartPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GvmlContentPart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -205,9 +205,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? RelationshipId
         {
             get => GetAttribute<StringValue>();
@@ -243,9 +243,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>NonVisualContentPartProperties.</para>
         /// <para>Represents the following element tag in the schema: a14:nvContentPartPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.NonVisualContentPartProperties? NonVisualContentPartProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.NonVisualContentPartProperties>();
@@ -256,9 +256,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Transform2D.</para>
         /// <para>Represents the following element tag in the schema: a14:xfrm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.Transform2D? Transform2D
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Transform2D>();
@@ -269,9 +269,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a14:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
@@ -324,7 +324,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:hiddenFill.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
@@ -334,7 +334,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class HiddenFillProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -400,9 +400,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>NoFill.</para>
         /// <para>Represents the following element tag in the schema: a:noFill.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NoFill? NoFill
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.NoFill>();
@@ -413,9 +413,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>SolidFill.</para>
         /// <para>Represents the following element tag in the schema: a:solidFill.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SolidFill? SolidFill
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.SolidFill>();
@@ -426,9 +426,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>GradientFill.</para>
         /// <para>Represents the following element tag in the schema: a:gradFill.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.GradientFill? GradientFill
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.GradientFill>();
@@ -439,9 +439,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>BlipFill.</para>
         /// <para>Represents the following element tag in the schema: a:blipFill.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.BlipFill? BlipFill
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.BlipFill>();
@@ -452,9 +452,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Pattern Fill.</para>
         /// <para>Represents the following element tag in the schema: a:pattFill.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PatternFill? PatternFill
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.PatternFill>();
@@ -465,9 +465,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Group Fill.</para>
         /// <para>Represents the following element tag in the schema: a:grpFill.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.GroupFill? GroupFill
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.GroupFill>();
@@ -483,7 +483,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:hiddenLine.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.CustomDash" /> <c>&lt;a:custDash></c></description></item>
@@ -499,7 +499,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetDash" /> <c>&lt;a:prstDash></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class HiddenLineProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -651,13 +651,13 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:hiddenEffects.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectDag" /> <c>&lt;a:effectDag></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectList" /> <c>&lt;a:effectLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class HiddenEffectsProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -715,9 +715,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Effect Container.</para>
         /// <para>Represents the following element tag in the schema: a:effectLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.EffectList? EffectList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.EffectList>();
@@ -728,9 +728,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Effect Container.</para>
         /// <para>Represents the following element tag in the schema: a:effectDag.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.EffectDag? EffectDag
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.EffectDag>();
@@ -746,7 +746,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:hiddenScene3d.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Backdrop" /> <c>&lt;a:backdrop></c></description></item>
@@ -754,7 +754,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.LightRig" /> <c>&lt;a:lightRig></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class HiddenScene3D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -810,9 +810,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Camera.</para>
         /// <para>Represents the following element tag in the schema: a:camera.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Camera? Camera
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Camera>();
@@ -823,9 +823,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Light Rig.</para>
         /// <para>Represents the following element tag in the schema: a:lightRig.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.LightRig? LightRig
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.LightRig>();
@@ -836,9 +836,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Backdrop Plane.</para>
         /// <para>Represents the following element tag in the schema: a:backdrop.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Backdrop? Backdrop
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Backdrop>();
@@ -849,9 +849,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
@@ -867,7 +867,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:hiddenSp3d.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BevelTop" /> <c>&lt;a:bevelT></c></description></item>
@@ -876,7 +876,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ContourColor" /> <c>&lt;a:contourClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class HiddenShape3D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -991,9 +991,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Top Bevel.</para>
         /// <para>Represents the following element tag in the schema: a:bevelT.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.BevelTop? BevelTop
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.BevelTop>();
@@ -1004,9 +1004,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Bottom Bevel.</para>
         /// <para>Represents the following element tag in the schema: a:bevelB.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.BevelBottom? BevelBottom
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.BevelBottom>();
@@ -1017,9 +1017,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Extrusion Color.</para>
         /// <para>Represents the following element tag in the schema: a:extrusionClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtrusionColor? ExtrusionColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtrusionColor>();
@@ -1030,9 +1030,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Contour Color.</para>
         /// <para>Represents the following element tag in the schema: a:contourClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ContourColor? ContourColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ContourColor>();
@@ -1043,9 +1043,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
@@ -1061,12 +1061,12 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:imgProps.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ImageLayer" /> <c>&lt;a14:imgLayer></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ImageProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1116,9 +1116,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>ImageLayer.</para>
         /// <para>Represents the following element tag in the schema: a14:imgLayer.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ImageLayer? ImageLayer
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ImageLayer>();
@@ -1196,12 +1196,12 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1262,12 +1262,12 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:cpLocks.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList" /> <c>&lt;a14:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ContentPartLocks : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1428,9 +1428,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a14:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
@@ -2792,13 +2792,13 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:backgroundRemoval.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.BackgroundMark" /> <c>&lt;a14:backgroundMark></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ForegroundMark" /> <c>&lt;a14:foregroundMark></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BackgroundRemoval : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3090,7 +3090,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:imgEffect.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.BackgroundRemoval" /> <c>&lt;a14:backgroundRemoval></c></description></item>
@@ -3121,7 +3121,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticTexturizer" /> <c>&lt;a14:artisticTexturizer></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticWatercolorSponge" /> <c>&lt;a14:artisticWatercolorSponge></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ImageEffect : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3235,9 +3235,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>ArtisticBlur.</para>
         /// <para>Represents the following element tag in the schema: a14:artisticBlur.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticBlur? ArtisticBlur
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticBlur>();
@@ -3248,9 +3248,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>ArtisticCement.</para>
         /// <para>Represents the following element tag in the schema: a14:artisticCement.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCement? ArtisticCement
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCement>();
@@ -3261,9 +3261,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>ArtisticChalkSketch.</para>
         /// <para>Represents the following element tag in the schema: a14:artisticChalkSketch.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticChalkSketch? ArtisticChalkSketch
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticChalkSketch>();
@@ -3274,9 +3274,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>ArtisticCrisscrossEtching.</para>
         /// <para>Represents the following element tag in the schema: a14:artisticCrisscrossEtching.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCrisscrossEtching? ArtisticCrisscrossEtching
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCrisscrossEtching>();
@@ -3287,9 +3287,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>ArtisticCutout.</para>
         /// <para>Represents the following element tag in the schema: a14:artisticCutout.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCutout? ArtisticCutout
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCutout>();
@@ -3300,9 +3300,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>ArtisticFilmGrain.</para>
         /// <para>Represents the following element tag in the schema: a14:artisticFilmGrain.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticFilmGrain? ArtisticFilmGrain
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticFilmGrain>();
@@ -3313,9 +3313,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>ArtisticGlass.</para>
         /// <para>Represents the following element tag in the schema: a14:artisticGlass.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlass? ArtisticGlass
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlass>();
@@ -3326,9 +3326,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>ArtisticGlowDiffused.</para>
         /// <para>Represents the following element tag in the schema: a14:artisticGlowDiffused.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowDiffused? ArtisticGlowDiffused
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowDiffused>();
@@ -3339,9 +3339,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>ArtisticGlowEdges.</para>
         /// <para>Represents the following element tag in the schema: a14:artisticGlowEdges.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowEdges? ArtisticGlowEdges
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowEdges>();
@@ -3352,9 +3352,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>ArtisticLightScreen.</para>
         /// <para>Represents the following element tag in the schema: a14:artisticLightScreen.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLightScreen? ArtisticLightScreen
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLightScreen>();
@@ -3365,9 +3365,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>ArtisticLineDrawing.</para>
         /// <para>Represents the following element tag in the schema: a14:artisticLineDrawing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLineDrawing? ArtisticLineDrawing
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLineDrawing>();
@@ -3378,9 +3378,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>ArtisticMarker.</para>
         /// <para>Represents the following element tag in the schema: a14:artisticMarker.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMarker? ArtisticMarker
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMarker>();
@@ -3391,9 +3391,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>ArtisticMosaicBubbles.</para>
         /// <para>Represents the following element tag in the schema: a14:artisticMosiaicBubbles.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMosaicBubbles? ArtisticMosaicBubbles
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMosaicBubbles>();
@@ -3404,9 +3404,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>ArtisticPaintStrokes.</para>
         /// <para>Represents the following element tag in the schema: a14:artisticPaintStrokes.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintStrokes? ArtisticPaintStrokes
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintStrokes>();
@@ -3417,9 +3417,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>ArtisticPaintBrush.</para>
         /// <para>Represents the following element tag in the schema: a14:artisticPaintBrush.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintBrush? ArtisticPaintBrush
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintBrush>();
@@ -3430,9 +3430,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>ArtisticPastelsSmooth.</para>
         /// <para>Represents the following element tag in the schema: a14:artisticPastelsSmooth.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPastelsSmooth? ArtisticPastelsSmooth
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPastelsSmooth>();
@@ -3443,9 +3443,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>ArtisticPencilGrayscale.</para>
         /// <para>Represents the following element tag in the schema: a14:artisticPencilGrayscale.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilGrayscale? ArtisticPencilGrayscale
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilGrayscale>();
@@ -3456,9 +3456,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>ArtisticPencilSketch.</para>
         /// <para>Represents the following element tag in the schema: a14:artisticPencilSketch.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilSketch? ArtisticPencilSketch
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilSketch>();
@@ -3469,9 +3469,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>ArtisticPhotocopy.</para>
         /// <para>Represents the following element tag in the schema: a14:artisticPhotocopy.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPhotocopy? ArtisticPhotocopy
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPhotocopy>();
@@ -3482,9 +3482,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>ArtisticPlasticWrap.</para>
         /// <para>Represents the following element tag in the schema: a14:artisticPlasticWrap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPlasticWrap? ArtisticPlasticWrap
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPlasticWrap>();
@@ -3495,9 +3495,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>ArtisticTexturizer.</para>
         /// <para>Represents the following element tag in the schema: a14:artisticTexturizer.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticTexturizer? ArtisticTexturizer
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticTexturizer>();
@@ -3508,9 +3508,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>ArtisticWatercolorSponge.</para>
         /// <para>Represents the following element tag in the schema: a14:artisticWatercolorSponge.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ArtisticWatercolorSponge? ArtisticWatercolorSponge
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticWatercolorSponge>();
@@ -3521,9 +3521,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>BackgroundRemoval.</para>
         /// <para>Represents the following element tag in the schema: a14:backgroundRemoval.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.BackgroundRemoval? BackgroundRemoval
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.BackgroundRemoval>();
@@ -3534,9 +3534,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>BrightnessContrast.</para>
         /// <para>Represents the following element tag in the schema: a14:brightnessContrast.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.BrightnessContrast? BrightnessContrast
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.BrightnessContrast>();
@@ -3547,9 +3547,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>ColorTemperature.</para>
         /// <para>Represents the following element tag in the schema: a14:colorTemperature.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ColorTemperature? ColorTemperature
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ColorTemperature>();
@@ -3560,9 +3560,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Saturation.</para>
         /// <para>Represents the following element tag in the schema: a14:saturation.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.Saturation? Saturation
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Saturation>();
@@ -3573,9 +3573,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>SharpenSoften.</para>
         /// <para>Represents the following element tag in the schema: a14:sharpenSoften.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.SharpenSoften? SharpenSoften
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.SharpenSoften>();
@@ -3591,12 +3591,12 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:imgLayer.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ImageEffect" /> <c>&lt;a14:imgEffect></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ImageLayer : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3634,9 +3634,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>embed, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: r:embed</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Embed
         {
             get => GetAttribute<StringValue>();
@@ -3666,14 +3666,14 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:cNvPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnClick" /> <c>&lt;a:hlinkClick></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnHover" /> <c>&lt;a:hlinkHover></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3789,9 +3789,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Hyperlink associated with clicking or selecting the element..</para>
         /// <para>Represents the following element tag in the schema: a:hlinkClick.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick? HyperlinkOnClick
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
@@ -3802,9 +3802,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Hyperlink associated with hovering over the element..</para>
         /// <para>Represents the following element tag in the schema: a:hlinkHover.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover? HyperlinkOnHover
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
@@ -3815,9 +3815,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Future extension.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
@@ -3833,13 +3833,13 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:cNvContentPartPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList" /> <c>&lt;a14:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks" /> <c>&lt;a14:cpLocks></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3903,9 +3903,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>ContentPartLocks.</para>
         /// <para>Represents the following element tag in the schema: a14:cpLocks.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks? ContentPartLocks
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>();
@@ -3916,9 +3916,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a14:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
@@ -3934,13 +3934,13 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:nvContentPartPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.NonVisualDrawingProperties" /> <c>&lt;a14:cNvPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.NonVisualInkContentPartProperties" /> <c>&lt;a14:cNvContentPartPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3992,9 +3992,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>NonVisualDrawingProperties.</para>
         /// <para>Represents the following element tag in the schema: a14:cNvPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.NonVisualDrawingProperties>();
@@ -4005,9 +4005,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>NonVisualInkContentPartProperties.</para>
         /// <para>Represents the following element tag in the schema: a14:cNvContentPartPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a14 = http://schemas.microsoft.com/office/drawing/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.NonVisualInkContentPartProperties? NonVisualInkContentPartProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.NonVisualInkContentPartProperties>();
@@ -4023,13 +4023,13 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:xfrm.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Offset" /> <c>&lt;a:off></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Transform2D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4115,9 +4115,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Offset.</para>
         /// <para>Represents the following element tag in the schema: a:off.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Offset? Offset
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>();
@@ -4128,9 +4128,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         /// <para>Extents.</para>
         /// <para>Represents the following element tag in the schema: a:ext.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Extents? Extents
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>();

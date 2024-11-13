@@ -61,12 +61,12 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xltc2:hyperlink.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList" /> <c>&lt;xltc2:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommentHyperlink : OpenXmlCompositeElement
     {
         /// <summary>
@@ -159,9 +159,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: xltc2:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xltc2 = http://schemas.microsoft.com/office/spreadsheetml/2020/threadedcomments2
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList>();
@@ -177,12 +177,12 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xltc2:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>

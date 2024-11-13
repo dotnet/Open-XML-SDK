@@ -58,9 +58,9 @@ namespace DocumentFormat.OpenXml.Office2021.Word.ExtensionList
         /// <para>uri, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: w16cur:uri</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w16cur=http://schemas.microsoft.com/office/word/2018/wordml
-        /// </remark>
+        /// </remarks>
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();

@@ -22,13 +22,13 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc2:cmMkLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList" /> <c>&lt;pc:sldMkLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentV2Moniker" /> <c>&lt;pc2:cmMK></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommentV2MonikerList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -80,9 +80,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command
         /// <para>SlideMonikerList.</para>
         /// <para>Represents the following element tag in the schema: pc:sldMkLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:pc = http://schemas.microsoft.com/office/powerpoint/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList? SlideMonikerList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList>();
@@ -93,9 +93,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command
         /// <para>CommentV2Moniker.</para>
         /// <para>Represents the following element tag in the schema: pc2:cmMK.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:pc2 = http://schemas.microsoft.com/office/powerpoint/2019/9/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentV2Moniker? CommentV2Moniker
         {
             get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentV2Moniker>();
@@ -111,13 +111,13 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc2:cmRplyMkLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentReplyV2Moniker" /> <c>&lt;pc2:cmRplyMk></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentV2MonikerList" /> <c>&lt;pc2:cmMkLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommentReplyV2MonikerList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -169,9 +169,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command
         /// <para>CommentV2MonikerList.</para>
         /// <para>Represents the following element tag in the schema: pc2:cmMkLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:pc2 = http://schemas.microsoft.com/office/powerpoint/2019/9/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentV2MonikerList? CommentV2MonikerList
         {
             get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentV2MonikerList>();
@@ -182,9 +182,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command
         /// <para>CommentReplyV2Moniker.</para>
         /// <para>Represents the following element tag in the schema: pc2:cmRplyMk.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:pc2 = http://schemas.microsoft.com/office/powerpoint/2019/9/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentReplyV2Moniker? CommentReplyV2Moniker
         {
             get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentReplyV2Moniker>();

@@ -21,13 +21,13 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is clbl:labelList.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationExtensionList" /> <c>&lt;clbl:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationLabel" /> <c>&lt;clbl:label></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ClassificationLabelList : OpenXmlPartRootElement
     {
         /// <summary>
@@ -325,12 +325,12 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is clbl:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationExtension" /> <c>&lt;clbl:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ClassificationExtensionList : OpenXmlCompositeElement
     {
         /// <summary>

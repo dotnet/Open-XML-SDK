@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:model3d.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ShapeProperties" /> <c>&lt;am3d:spPr></c></description></item>
@@ -41,7 +41,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.UnknownLight" /> <c>&lt;am3d:unkLight></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.WindowViewport" /> <c>&lt;am3d:winViewport></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Model3D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -79,9 +79,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>Embedded Picture Reference</para>
         /// <para>Represents the following attribute in the schema: r:embed</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Embed
         {
             get => GetAttribute<StringValue>();
@@ -92,9 +92,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>Linked Picture Reference</para>
         /// <para>Represents the following attribute in the schema: r:link</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Link
         {
             get => GetAttribute<StringValue>();
@@ -150,9 +150,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>ShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: am3d:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ShapeProperties? ShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ShapeProperties>();
@@ -163,9 +163,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>Model3DCamera.</para>
         /// <para>Represents the following element tag in the schema: am3d:camera.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DCamera? Model3DCamera
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DCamera>();
@@ -176,9 +176,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>Model3DTransform.</para>
         /// <para>Represents the following element tag in the schema: am3d:trans.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DTransform? Model3DTransform
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DTransform>();
@@ -189,9 +189,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>Optional source attribution URL describes from whence the 3D model came..</para>
         /// <para>Represents the following element tag in the schema: am3d:attrSrcUrl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PictureAttributionSourceURL? PictureAttributionSourceURL
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PictureAttributionSourceURL>();
@@ -202,9 +202,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>Model3DRaster.</para>
         /// <para>Represents the following element tag in the schema: am3d:raster.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DRaster? Model3DRaster
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DRaster>();
@@ -215,9 +215,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>Future Model3D extensions.</para>
         /// <para>Represents the following element tag in the schema: am3d:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtensionList? Model3DExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtensionList>();
@@ -647,14 +647,14 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:scale.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SxRatio" /> <c>&lt;am3d:sx></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SyRatio" /> <c>&lt;am3d:sy></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzRatio" /> <c>&lt;am3d:sz></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Scale3D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -708,9 +708,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>SxRatio.</para>
         /// <para>Represents the following element tag in the schema: am3d:sx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SxRatio? SxRatio
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SxRatio>();
@@ -721,9 +721,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>SyRatio.</para>
         /// <para>Represents the following element tag in the schema: am3d:sy.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SyRatio? SyRatio
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SyRatio>();
@@ -734,9 +734,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>SzRatio.</para>
         /// <para>Represents the following element tag in the schema: am3d:sz.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzRatio? SzRatio
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzRatio>();
@@ -811,12 +811,12 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -993,13 +993,13 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:orthographic.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList" /> <c>&lt;am3d:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzPositiveRatio" /> <c>&lt;am3d:sz></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OrthographicProjection : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1051,9 +1051,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>SzPositiveRatio.</para>
         /// <para>Represents the following element tag in the schema: am3d:sz.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzPositiveRatio? SzPositiveRatio
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzPositiveRatio>();
@@ -1064,9 +1064,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: am3d:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
@@ -1082,12 +1082,12 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:perspective.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList" /> <c>&lt;am3d:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PerspectiveProjection : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1153,9 +1153,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: am3d:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
@@ -1171,7 +1171,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:blip.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AlphaBiLevel" /> <c>&lt;a:alphaBiLevel></c></description></item>
@@ -1193,7 +1193,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.LuminanceEffect" /> <c>&lt;a:lum></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TintEffect" /> <c>&lt;a:tint></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Blip : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1231,9 +1231,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>Embedded Picture Reference</para>
         /// <para>Represents the following attribute in the schema: r:embed</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Embed
         {
             get => GetAttribute<StringValue>();
@@ -1244,9 +1244,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>Linked Picture Reference</para>
         /// <para>Represents the following attribute in the schema: r:link</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Link
         {
             get => GetAttribute<StringValue>();
@@ -1328,7 +1328,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:clr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -1338,7 +1338,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ColorType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1404,9 +1404,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>RGB Color Model - Percentage Variant.</para>
         /// <para>Represents the following element tag in the schema: a:scrgbClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
@@ -1417,9 +1417,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>RGB Color Model - Hex Variant.</para>
         /// <para>Represents the following element tag in the schema: a:srgbClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
@@ -1430,9 +1430,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>Hue, Saturation, Luminance Color Model.</para>
         /// <para>Represents the following element tag in the schema: a:hslClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
@@ -1443,9 +1443,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>System Color.</para>
         /// <para>Represents the following element tag in the schema: a:sysClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
@@ -1456,9 +1456,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>Scheme Color.</para>
         /// <para>Represents the following element tag in the schema: a:schemeClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
@@ -1469,9 +1469,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>Preset Color.</para>
         /// <para>Represents the following element tag in the schema: a:prstClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
@@ -1487,13 +1487,13 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.EmbeddedAnimation" /> <c>&lt;a3danim:embedAnim></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.PosterFrame" /> <c>&lt;a3danim:posterFrame></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Model3DExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1567,7 +1567,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:spPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
@@ -1586,7 +1586,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1697,9 +1697,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>2D Transform for Individual Objects.</para>
         /// <para>Represents the following element tag in the schema: a:xfrm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
@@ -1715,7 +1715,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:camera.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList" /> <c>&lt;am3d:extLst></c></description></item>
@@ -1725,7 +1725,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OrthographicProjection" /> <c>&lt;am3d:orthographic></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PerspectiveProjection" /> <c>&lt;am3d:perspective></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Model3DCamera : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1788,9 +1788,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>PosPoint3D.</para>
         /// <para>Represents the following element tag in the schema: am3d:pos.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D? PosPoint3D
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D>();
@@ -1801,9 +1801,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>UpVector3D.</para>
         /// <para>Represents the following element tag in the schema: am3d:up.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.UpVector3D? UpVector3D
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.UpVector3D>();
@@ -1814,9 +1814,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>LookAtPoint3D.</para>
         /// <para>Represents the following element tag in the schema: am3d:lookAt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D? LookAtPoint3D
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D>();
@@ -1832,7 +1832,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:trans.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList" /> <c>&lt;am3d:extLst></c></description></item>
@@ -1842,7 +1842,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Rotate3D" /> <c>&lt;am3d:rot></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Scale3D" /> <c>&lt;am3d:scale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Model3DTransform : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1902,9 +1902,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>MeterPerModelUnitPositiveRatio.</para>
         /// <para>Represents the following element tag in the schema: am3d:meterPerModelUnit.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.MeterPerModelUnitPositiveRatio? MeterPerModelUnitPositiveRatio
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.MeterPerModelUnitPositiveRatio>();
@@ -1915,9 +1915,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>PreTransVector3D.</para>
         /// <para>Represents the following element tag in the schema: am3d:preTrans.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PreTransVector3D? PreTransVector3D
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PreTransVector3D>();
@@ -1928,9 +1928,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>Scale3D.</para>
         /// <para>Represents the following element tag in the schema: am3d:scale.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Scale3D? Scale3D
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Scale3D>();
@@ -1941,9 +1941,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>Rotate3D.</para>
         /// <para>Represents the following element tag in the schema: am3d:rot.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Rotate3D? Rotate3D
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Rotate3D>();
@@ -1954,9 +1954,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>PostTransVector3D.</para>
         /// <para>Represents the following element tag in the schema: am3d:postTrans.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PostTransVector3D? PostTransVector3D
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PostTransVector3D>();
@@ -1967,9 +1967,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: am3d:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
@@ -1998,9 +1998,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>id, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2028,12 +2028,12 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:raster.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Blip" /> <c>&lt;am3d:blip></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Model3DRaster : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2112,9 +2112,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>Blip.</para>
         /// <para>Represents the following element tag in the schema: am3d:blip.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Blip? Blip
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Blip>();
@@ -2130,12 +2130,12 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtension" /> <c>&lt;am3d:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Model3DExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2190,12 +2190,12 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:objViewport.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList" /> <c>&lt;am3d:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ObjectViewport : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2261,9 +2261,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: am3d:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
@@ -2279,12 +2279,12 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:winViewport.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList" /> <c>&lt;am3d:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class WindowViewport : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2334,9 +2334,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: am3d:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
@@ -2352,14 +2352,14 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:ambientLight.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType" /> <c>&lt;am3d:clr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList" /> <c>&lt;am3d:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio" /> <c>&lt;am3d:illuminance></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AmbientLight : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2425,9 +2425,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>ColorType.</para>
         /// <para>Represents the following element tag in the schema: am3d:clr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType? ColorType
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType>();
@@ -2438,9 +2438,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>IlluminancePositiveRatio.</para>
         /// <para>Represents the following element tag in the schema: am3d:illuminance.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio? IlluminancePositiveRatio
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio>();
@@ -2451,9 +2451,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: am3d:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
@@ -2469,7 +2469,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:ptLight.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType" /> <c>&lt;am3d:clr></c></description></item>
@@ -2477,7 +2477,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D" /> <c>&lt;am3d:pos></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio" /> <c>&lt;am3d:intensity></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PointLight : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2560,9 +2560,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>ColorType.</para>
         /// <para>Represents the following element tag in the schema: am3d:clr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType? ColorType
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType>();
@@ -2573,9 +2573,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>IntensityPositiveRatio.</para>
         /// <para>Represents the following element tag in the schema: am3d:intensity.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio? IntensityPositiveRatio
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio>();
@@ -2586,9 +2586,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>PosPoint3D.</para>
         /// <para>Represents the following element tag in the schema: am3d:pos.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D? PosPoint3D
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D>();
@@ -2599,9 +2599,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: am3d:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
@@ -2617,7 +2617,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:spotLight.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType" /> <c>&lt;am3d:clr></c></description></item>
@@ -2626,7 +2626,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D" /> <c>&lt;am3d:lookAt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio" /> <c>&lt;am3d:intensity></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SpotLight : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2726,9 +2726,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>ColorType.</para>
         /// <para>Represents the following element tag in the schema: am3d:clr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType? ColorType
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType>();
@@ -2739,9 +2739,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>IntensityPositiveRatio.</para>
         /// <para>Represents the following element tag in the schema: am3d:intensity.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio? IntensityPositiveRatio
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio>();
@@ -2752,9 +2752,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>PosPoint3D.</para>
         /// <para>Represents the following element tag in the schema: am3d:pos.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D? PosPoint3D
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D>();
@@ -2765,9 +2765,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>LookAtPoint3D.</para>
         /// <para>Represents the following element tag in the schema: am3d:lookAt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D? LookAtPoint3D
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D>();
@@ -2778,9 +2778,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: am3d:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
@@ -2796,7 +2796,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:dirLight.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType" /> <c>&lt;am3d:clr></c></description></item>
@@ -2805,7 +2805,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D" /> <c>&lt;am3d:lookAt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio" /> <c>&lt;am3d:illuminance></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DirectionalLight : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2890,9 +2890,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>ColorType.</para>
         /// <para>Represents the following element tag in the schema: am3d:clr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType? ColorType
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType>();
@@ -2903,9 +2903,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>IlluminancePositiveRatio.</para>
         /// <para>Represents the following element tag in the schema: am3d:illuminance.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio? IlluminancePositiveRatio
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio>();
@@ -2916,9 +2916,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>PosPoint3D.</para>
         /// <para>Represents the following element tag in the schema: am3d:pos.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D? PosPoint3D
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D>();
@@ -2929,9 +2929,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>LookAtPoint3D.</para>
         /// <para>Represents the following element tag in the schema: am3d:lookAt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D? LookAtPoint3D
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D>();
@@ -2942,9 +2942,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: am3d:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:am3d = http://schemas.microsoft.com/office/drawing/2017/model3d
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();

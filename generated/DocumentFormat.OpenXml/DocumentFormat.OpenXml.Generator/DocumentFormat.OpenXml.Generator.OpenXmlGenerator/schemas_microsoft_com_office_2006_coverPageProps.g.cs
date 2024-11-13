@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:CoverPageProperties.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CoverPageProps.PublishDate" /> <c>&lt;cppr:PublishDate></c></description></item>
@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CoverPageProps.CompanyFaxNumber" /> <c>&lt;cppr:CompanyFax></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CoverPageProps.CompanyEmailAddress" /> <c>&lt;cppr:CompanyEmail></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CoverPageProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -90,9 +90,9 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         /// <para>PublishDate.</para>
         /// <para>Represents the following element tag in the schema: cppr:PublishDate.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.CoverPageProps.PublishDate? PublishDate
         {
             get => GetElement<DocumentFormat.OpenXml.Office.CoverPageProps.PublishDate>();
@@ -103,9 +103,9 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         /// <para>DocumentAbstract.</para>
         /// <para>Represents the following element tag in the schema: cppr:Abstract.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.CoverPageProps.DocumentAbstract? DocumentAbstract
         {
             get => GetElement<DocumentFormat.OpenXml.Office.CoverPageProps.DocumentAbstract>();
@@ -116,9 +116,9 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         /// <para>CompanyAddress.</para>
         /// <para>Represents the following element tag in the schema: cppr:CompanyAddress.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.CoverPageProps.CompanyAddress? CompanyAddress
         {
             get => GetElement<DocumentFormat.OpenXml.Office.CoverPageProps.CompanyAddress>();
@@ -129,9 +129,9 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         /// <para>CompanyPhoneNumber.</para>
         /// <para>Represents the following element tag in the schema: cppr:CompanyPhone.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.CoverPageProps.CompanyPhoneNumber? CompanyPhoneNumber
         {
             get => GetElement<DocumentFormat.OpenXml.Office.CoverPageProps.CompanyPhoneNumber>();
@@ -142,9 +142,9 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         /// <para>CompanyFaxNumber.</para>
         /// <para>Represents the following element tag in the schema: cppr:CompanyFax.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.CoverPageProps.CompanyFaxNumber? CompanyFaxNumber
         {
             get => GetElement<DocumentFormat.OpenXml.Office.CoverPageProps.CompanyFaxNumber>();
@@ -155,9 +155,9 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         /// <para>CompanyEmailAddress.</para>
         /// <para>Represents the following element tag in the schema: cppr:CompanyEmail.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.CoverPageProps.CompanyEmailAddress? CompanyEmailAddress
         {
             get => GetElement<DocumentFormat.OpenXml.Office.CoverPageProps.CompanyEmailAddress>();

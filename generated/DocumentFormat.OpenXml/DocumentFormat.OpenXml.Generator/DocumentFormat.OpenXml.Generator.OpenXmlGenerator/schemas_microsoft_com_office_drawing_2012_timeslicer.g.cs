@@ -22,12 +22,12 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is tsle:timeslicer.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.OfficeArtExtensionList" /> <c>&lt;tsle:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TimeSlicer : OpenXmlCompositeElement
     {
         /// <summary>
@@ -92,9 +92,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: tsle:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:tsle = http://schemas.microsoft.com/office/drawing/2012/timeslicer
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.OfficeArtExtensionList>();
@@ -110,12 +110,12 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is tsle:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>

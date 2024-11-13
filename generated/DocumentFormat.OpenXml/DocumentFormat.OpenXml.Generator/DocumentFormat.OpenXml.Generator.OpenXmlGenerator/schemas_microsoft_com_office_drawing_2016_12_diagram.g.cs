@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm1612:spPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
@@ -41,7 +41,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -152,9 +152,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         /// <para>2D Transform for Individual Objects.</para>
         /// <para>Represents the following element tag in the schema: a:xfrm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
@@ -170,7 +170,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm1612:lstStyle.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
@@ -185,7 +185,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties" /> <c>&lt;a:lvl8pPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties" /> <c>&lt;a:lvl9pPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TextListStyleType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -255,9 +255,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         /// <para>Default Paragraph Style.</para>
         /// <para>Represents the following element tag in the schema: a:defPPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties? DefaultParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties>();
@@ -268,9 +268,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         /// <para>List Level 1 Text Style.</para>
         /// <para>Represents the following element tag in the schema: a:lvl1pPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties? Level1ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties>();
@@ -281,9 +281,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         /// <para>List Level 2 Text Style.</para>
         /// <para>Represents the following element tag in the schema: a:lvl2pPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties? Level2ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties>();
@@ -294,9 +294,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         /// <para>List Level 3 Text Style.</para>
         /// <para>Represents the following element tag in the schema: a:lvl3pPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties? Level3ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties>();
@@ -307,9 +307,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         /// <para>List Level 4 Text Style.</para>
         /// <para>Represents the following element tag in the schema: a:lvl4pPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties? Level4ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties>();
@@ -320,9 +320,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         /// <para>List Level 5 Text Style.</para>
         /// <para>Represents the following element tag in the schema: a:lvl5pPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties? Level5ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties>();
@@ -333,9 +333,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         /// <para>List Level 6 Text Style.</para>
         /// <para>Represents the following element tag in the schema: a:lvl6pPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties? Level6ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties>();
@@ -346,9 +346,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         /// <para>List Level 7 Text Style.</para>
         /// <para>Represents the following element tag in the schema: a:lvl7pPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties? Level7ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties>();
@@ -359,9 +359,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         /// <para>List Level 8 Text Style.</para>
         /// <para>Represents the following element tag in the schema: a:lvl8pPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties? Level8ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties>();
@@ -372,9 +372,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         /// <para>List Level 9 Text Style.</para>
         /// <para>Represents the following element tag in the schema: a:lvl9pPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties? Level9ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties>();
@@ -385,9 +385,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();

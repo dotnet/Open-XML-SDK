@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wpc:wpc.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.BackgroundFormatting" /> <c>&lt;wpc:bg></c></description></item>
@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.WordprocessingGroup" /> <c>&lt;wpg:wgp></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape" /> <c>&lt;wps:wsp></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class WordprocessingCanvas : OpenXmlCompositeElement
     {
         /// <summary>
@@ -105,9 +105,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <para>BackgroundFormatting.</para>
         /// <para>Represents the following element tag in the schema: wpc:bg.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wpc = http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.BackgroundFormatting? BackgroundFormatting
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.BackgroundFormatting>();
@@ -118,9 +118,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <para>WholeFormatting.</para>
         /// <para>Represents the following element tag in the schema: wpc:whole.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wpc = http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.WholeFormatting? WholeFormatting
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.WholeFormatting>();
@@ -136,7 +136,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wpc:bg.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
@@ -148,7 +148,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BackgroundFormatting : OpenXmlCompositeElement
     {
         /// <summary>
@@ -229,14 +229,14 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wpc:whole.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectDag" /> <c>&lt;a:effectDag></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectList" /> <c>&lt;a:effectLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Outline" /> <c>&lt;a:ln></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class WholeFormatting : OpenXmlCompositeElement
     {
         /// <summary>
@@ -296,9 +296,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <para>Outline.</para>
         /// <para>Represents the following element tag in the schema: a:ln.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Outline? Outline
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Outline>();
@@ -314,7 +314,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wpc:graphicFrame.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Graphic" /> <c>&lt;a:graphic></c></description></item>
@@ -323,7 +323,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList" /> <c>&lt;wpg:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D" /> <c>&lt;wpg:xfrm></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GraphicFrameType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -381,9 +381,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <para>NonVisualDrawingProperties.</para>
         /// <para>Represents the following element tag in the schema: wpg:cNvPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties>();
@@ -394,9 +394,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <para>NonVisualGraphicFrameProperties.</para>
         /// <para>Represents the following element tag in the schema: wpg:cNvFrPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties? NonVisualGraphicFrameProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties>();
@@ -407,9 +407,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <para>Transform2D.</para>
         /// <para>Represents the following element tag in the schema: wpg:xfrm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D? Transform2D
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D>();
@@ -420,9 +420,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <para>Graphic.</para>
         /// <para>Represents the following element tag in the schema: a:graphic.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Graphic? Graphic
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>();
@@ -433,9 +433,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: wpg:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wpg = http://schemas.microsoft.com/office/word/2010/wordprocessingGroup
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList>();
@@ -451,12 +451,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wpc:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>

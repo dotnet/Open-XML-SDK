@@ -35,9 +35,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: m:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Math.ScriptValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.ScriptValues>>();
@@ -77,9 +77,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: m:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Math.StyleValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.StyleValues>>();
@@ -106,7 +106,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:r.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.RunProperties" /> <c>&lt;m:rPr></c></description></item>
@@ -145,7 +145,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.FieldCode" /> <c>&lt;w:instrText></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedFieldCode" /> <c>&lt;w:delInstrText></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Run : OpenXmlCompositeElement
     {
         /// <summary>
@@ -277,9 +277,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Run Properties.</para>
         /// <para>Represents the following element tag in the schema: m:rPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.RunProperties? MathRunProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.RunProperties>();
@@ -290,9 +290,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Run Properties.</para>
         /// <para>Represents the following element tag in the schema: w:rPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RunProperties? RunProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunProperties>();
@@ -308,13 +308,13 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:acc.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.AccentProperties" /> <c>&lt;m:accPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Accent : OpenXmlCompositeElement
     {
         /// <summary>
@@ -365,9 +365,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Accent Properties.</para>
         /// <para>Represents the following element tag in the schema: m:accPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.AccentProperties? AccentProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.AccentProperties>();
@@ -378,9 +378,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Base.</para>
         /// <para>Represents the following element tag in the schema: m:e.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Base>();
@@ -396,13 +396,13 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:bar.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.BarProperties" /> <c>&lt;m:barPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Bar : OpenXmlCompositeElement
     {
         /// <summary>
@@ -453,9 +453,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Bar Properties.</para>
         /// <para>Represents the following element tag in the schema: m:barPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.BarProperties? BarProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.BarProperties>();
@@ -466,9 +466,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Base.</para>
         /// <para>Represents the following element tag in the schema: m:e.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Base>();
@@ -484,13 +484,13 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:box.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.BoxProperties" /> <c>&lt;m:boxPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Box : OpenXmlCompositeElement
     {
         /// <summary>
@@ -541,9 +541,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Box Properties.</para>
         /// <para>Represents the following element tag in the schema: m:boxPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.BoxProperties? BoxProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.BoxProperties>();
@@ -554,9 +554,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Base.</para>
         /// <para>Represents the following element tag in the schema: m:e.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Base>();
@@ -572,13 +572,13 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:borderBox.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.BorderBoxProperties" /> <c>&lt;m:borderBoxPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BorderBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -629,9 +629,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Border Box Properties.</para>
         /// <para>Represents the following element tag in the schema: m:borderBoxPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.BorderBoxProperties? BorderBoxProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.BorderBoxProperties>();
@@ -642,9 +642,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Base.</para>
         /// <para>Represents the following element tag in the schema: m:e.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Base>();
@@ -660,13 +660,13 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:d.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.DelimiterProperties" /> <c>&lt;m:dPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Delimiter : OpenXmlCompositeElement
     {
         /// <summary>
@@ -717,9 +717,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Delimiter Properties.</para>
         /// <para>Represents the following element tag in the schema: m:dPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.DelimiterProperties? DelimiterProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.DelimiterProperties>();
@@ -735,13 +735,13 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:eqArr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.EquationArrayProperties" /> <c>&lt;m:eqArrPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class EquationArray : OpenXmlCompositeElement
     {
         /// <summary>
@@ -792,9 +792,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Equation Array Properties.</para>
         /// <para>Represents the following element tag in the schema: m:eqArrPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.EquationArrayProperties? EquationArrayProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.EquationArrayProperties>();
@@ -810,14 +810,14 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:f.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.FractionProperties" /> <c>&lt;m:fPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Numerator" /> <c>&lt;m:num></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Denominator" /> <c>&lt;m:den></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Fraction : OpenXmlCompositeElement
     {
         /// <summary>
@@ -870,9 +870,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Fraction Properties.</para>
         /// <para>Represents the following element tag in the schema: m:fPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.FractionProperties? FractionProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.FractionProperties>();
@@ -883,9 +883,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Numerator.</para>
         /// <para>Represents the following element tag in the schema: m:num.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Numerator? Numerator
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Numerator>();
@@ -896,9 +896,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Denominator.</para>
         /// <para>Represents the following element tag in the schema: m:den.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Denominator? Denominator
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Denominator>();
@@ -914,14 +914,14 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:func.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.FunctionProperties" /> <c>&lt;m:funcPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.FunctionName" /> <c>&lt;m:fName></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MathFunction : OpenXmlCompositeElement
     {
         /// <summary>
@@ -974,9 +974,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Function Properties.</para>
         /// <para>Represents the following element tag in the schema: m:funcPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.FunctionProperties? FunctionProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.FunctionProperties>();
@@ -987,9 +987,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Function Name.</para>
         /// <para>Represents the following element tag in the schema: m:fName.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.FunctionName? FunctionName
         {
             get => GetElement<DocumentFormat.OpenXml.Math.FunctionName>();
@@ -1000,9 +1000,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Base (Argument).</para>
         /// <para>Represents the following element tag in the schema: m:e.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Base>();
@@ -1018,13 +1018,13 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:groupChr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.GroupCharProperties" /> <c>&lt;m:groupChrPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GroupChar : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1075,9 +1075,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Group-Character Properties.</para>
         /// <para>Represents the following element tag in the schema: m:groupChrPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.GroupCharProperties? GroupCharProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.GroupCharProperties>();
@@ -1088,9 +1088,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Base.</para>
         /// <para>Represents the following element tag in the schema: m:e.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Base>();
@@ -1106,14 +1106,14 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:limLow.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.LimitLowerProperties" /> <c>&lt;m:limLowPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Limit" /> <c>&lt;m:lim></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LimitLower : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1166,9 +1166,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Lower Limit Properties.</para>
         /// <para>Represents the following element tag in the schema: m:limLowPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.LimitLowerProperties? LimitLowerProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.LimitLowerProperties>();
@@ -1179,9 +1179,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Base.</para>
         /// <para>Represents the following element tag in the schema: m:e.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Base>();
@@ -1192,9 +1192,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Limit (Lower).</para>
         /// <para>Represents the following element tag in the schema: m:lim.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Limit? Limit
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Limit>();
@@ -1210,14 +1210,14 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:limUpp.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.LimitUpperProperties" /> <c>&lt;m:limUppPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Limit" /> <c>&lt;m:lim></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LimitUpper : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1270,9 +1270,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Upper Limit Properties.</para>
         /// <para>Represents the following element tag in the schema: m:limUppPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.LimitUpperProperties? LimitUpperProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.LimitUpperProperties>();
@@ -1283,9 +1283,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Base.</para>
         /// <para>Represents the following element tag in the schema: m:e.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Base>();
@@ -1296,9 +1296,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Limit (Upper).</para>
         /// <para>Represents the following element tag in the schema: m:lim.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Limit? Limit
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Limit>();
@@ -1314,13 +1314,13 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:m.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.MatrixProperties" /> <c>&lt;m:mPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.MatrixRow" /> <c>&lt;m:mr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Matrix : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1371,9 +1371,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Matrix Properties.</para>
         /// <para>Represents the following element tag in the schema: m:mPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.MatrixProperties? MatrixProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.MatrixProperties>();
@@ -1389,7 +1389,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:nary.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.NaryProperties" /> <c>&lt;m:naryPr></c></description></item>
@@ -1397,7 +1397,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.SuperArgument" /> <c>&lt;m:sup></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Nary : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1452,9 +1452,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>n-ary Properties.</para>
         /// <para>Represents the following element tag in the schema: m:naryPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.NaryProperties? NaryProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.NaryProperties>();
@@ -1465,9 +1465,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Lower limit (n-ary) .</para>
         /// <para>Represents the following element tag in the schema: m:sub.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.SubArgument? SubArgument
         {
             get => GetElement<DocumentFormat.OpenXml.Math.SubArgument>();
@@ -1478,9 +1478,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Upper limit (n-ary).</para>
         /// <para>Represents the following element tag in the schema: m:sup.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.SuperArgument? SuperArgument
         {
             get => GetElement<DocumentFormat.OpenXml.Math.SuperArgument>();
@@ -1491,9 +1491,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Base (Argument).</para>
         /// <para>Represents the following element tag in the schema: m:e.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Base>();
@@ -1509,13 +1509,13 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:phant.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.PhantomProperties" /> <c>&lt;m:phantPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Phantom : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1566,9 +1566,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Phantom Properties.</para>
         /// <para>Represents the following element tag in the schema: m:phantPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.PhantomProperties? PhantomProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.PhantomProperties>();
@@ -1579,9 +1579,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Base.</para>
         /// <para>Represents the following element tag in the schema: m:e.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Base>();
@@ -1597,14 +1597,14 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:rad.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Degree" /> <c>&lt;m:deg></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.RadicalProperties" /> <c>&lt;m:radPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Radical : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1657,9 +1657,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Radical Properties.</para>
         /// <para>Represents the following element tag in the schema: m:radPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.RadicalProperties? RadicalProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.RadicalProperties>();
@@ -1670,9 +1670,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Degree.</para>
         /// <para>Represents the following element tag in the schema: m:deg.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Degree? Degree
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Degree>();
@@ -1683,9 +1683,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Base.</para>
         /// <para>Represents the following element tag in the schema: m:e.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Base>();
@@ -1701,7 +1701,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sPre.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.SubArgument" /> <c>&lt;m:sub></c></description></item>
@@ -1709,7 +1709,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.PreSubSuperProperties" /> <c>&lt;m:sPrePr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PreSubSuper : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1764,9 +1764,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Pre-Sub-Superscript Properties.</para>
         /// <para>Represents the following element tag in the schema: m:sPrePr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.PreSubSuperProperties? PreSubSuperProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.PreSubSuperProperties>();
@@ -1777,9 +1777,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Subscript (Pre-Sub-Superscript).</para>
         /// <para>Represents the following element tag in the schema: m:sub.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.SubArgument? SubArgument
         {
             get => GetElement<DocumentFormat.OpenXml.Math.SubArgument>();
@@ -1790,9 +1790,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Superscript(Pre-Sub-Superscript function).</para>
         /// <para>Represents the following element tag in the schema: m:sup.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.SuperArgument? SuperArgument
         {
             get => GetElement<DocumentFormat.OpenXml.Math.SuperArgument>();
@@ -1803,9 +1803,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Base.</para>
         /// <para>Represents the following element tag in the schema: m:e.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Base>();
@@ -1821,14 +1821,14 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sSub.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.SubArgument" /> <c>&lt;m:sub></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.SubscriptProperties" /> <c>&lt;m:sSubPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Subscript : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1881,9 +1881,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Subscript Properties.</para>
         /// <para>Represents the following element tag in the schema: m:sSubPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.SubscriptProperties? SubscriptProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.SubscriptProperties>();
@@ -1894,9 +1894,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Base.</para>
         /// <para>Represents the following element tag in the schema: m:e.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Base>();
@@ -1907,9 +1907,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Subscript (Subscript function).</para>
         /// <para>Represents the following element tag in the schema: m:sub.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.SubArgument? SubArgument
         {
             get => GetElement<DocumentFormat.OpenXml.Math.SubArgument>();
@@ -1925,7 +1925,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sSubSup.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
@@ -1933,7 +1933,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.SuperArgument" /> <c>&lt;m:sup></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.SubSuperscriptProperties" /> <c>&lt;m:sSubSupPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SubSuperscript : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1988,9 +1988,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Sub-Superscript Properties.</para>
         /// <para>Represents the following element tag in the schema: m:sSubSupPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.SubSuperscriptProperties? SubSuperscriptProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.SubSuperscriptProperties>();
@@ -2001,9 +2001,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Base.</para>
         /// <para>Represents the following element tag in the schema: m:e.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Base>();
@@ -2014,9 +2014,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Subscript (Sub-Superscript).</para>
         /// <para>Represents the following element tag in the schema: m:sub.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.SubArgument? SubArgument
         {
             get => GetElement<DocumentFormat.OpenXml.Math.SubArgument>();
@@ -2027,9 +2027,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Superscript (Sub-Superscript function).</para>
         /// <para>Represents the following element tag in the schema: m:sup.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.SuperArgument? SuperArgument
         {
             get => GetElement<DocumentFormat.OpenXml.Math.SuperArgument>();
@@ -2045,14 +2045,14 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sSup.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.SuperArgument" /> <c>&lt;m:sup></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.SuperscriptProperties" /> <c>&lt;m:sSupPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Superscript : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2105,9 +2105,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Superscript Properties.</para>
         /// <para>Represents the following element tag in the schema: m:sSupPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.SuperscriptProperties? SuperscriptProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.SuperscriptProperties>();
@@ -2118,9 +2118,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Base.</para>
         /// <para>Represents the following element tag in the schema: m:e.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Base>();
@@ -2131,9 +2131,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Superscript (Superscript function).</para>
         /// <para>Represents the following element tag in the schema: m:sup.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.SuperArgument? SuperArgument
         {
             get => GetElement<DocumentFormat.OpenXml.Math.SuperArgument>();
@@ -2149,7 +2149,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:oMathPara.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.OfficeMath" /> <c>&lt;m:oMath></c></description></item>
@@ -2187,7 +2187,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Paragraph : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2359,9 +2359,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Office Math Paragraph Properties.</para>
         /// <para>Represents the following element tag in the schema: m:oMathParaPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ParagraphProperties? ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ParagraphProperties>();
@@ -2377,7 +2377,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:oMath.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -2437,7 +2437,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OfficeMath : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2717,7 +2717,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mathPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.BreakBinary" /> <c>&lt;m:brkBin></c></description></item>
@@ -2737,7 +2737,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.IntraSpacing" /> <c>&lt;m:intraSp></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.WrapIndent" /> <c>&lt;m:wrapIndent></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MathProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2819,9 +2819,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Math Font.</para>
         /// <para>Represents the following element tag in the schema: m:mathFont.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.MathFont? MathFont
         {
             get => GetElement<DocumentFormat.OpenXml.Math.MathFont>();
@@ -2832,9 +2832,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Break on Binary Operators.</para>
         /// <para>Represents the following element tag in the schema: m:brkBin.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.BreakBinary? BreakBinary
         {
             get => GetElement<DocumentFormat.OpenXml.Math.BreakBinary>();
@@ -2845,9 +2845,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Break on Binary Subtraction.</para>
         /// <para>Represents the following element tag in the schema: m:brkBinSub.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.BreakBinarySubtraction? BreakBinarySubtraction
         {
             get => GetElement<DocumentFormat.OpenXml.Math.BreakBinarySubtraction>();
@@ -2858,9 +2858,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Small Fraction.</para>
         /// <para>Represents the following element tag in the schema: m:smallFrac.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.SmallFraction? SmallFraction
         {
             get => GetElement<DocumentFormat.OpenXml.Math.SmallFraction>();
@@ -2871,9 +2871,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Use Display Math Defaults.</para>
         /// <para>Represents the following element tag in the schema: m:dispDef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.DisplayDefaults? DisplayDefaults
         {
             get => GetElement<DocumentFormat.OpenXml.Math.DisplayDefaults>();
@@ -2884,9 +2884,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Left Margin.</para>
         /// <para>Represents the following element tag in the schema: m:lMargin.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.LeftMargin? LeftMargin
         {
             get => GetElement<DocumentFormat.OpenXml.Math.LeftMargin>();
@@ -2897,9 +2897,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Right Margin.</para>
         /// <para>Represents the following element tag in the schema: m:rMargin.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.RightMargin? RightMargin
         {
             get => GetElement<DocumentFormat.OpenXml.Math.RightMargin>();
@@ -2910,9 +2910,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Default Justification.</para>
         /// <para>Represents the following element tag in the schema: m:defJc.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.DefaultJustification? DefaultJustification
         {
             get => GetElement<DocumentFormat.OpenXml.Math.DefaultJustification>();
@@ -2923,9 +2923,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Pre-Equation Spacing.</para>
         /// <para>Represents the following element tag in the schema: m:preSp.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.PreSpacing? PreSpacing
         {
             get => GetElement<DocumentFormat.OpenXml.Math.PreSpacing>();
@@ -2936,9 +2936,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Post-Equation Spacing.</para>
         /// <para>Represents the following element tag in the schema: m:postSp.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.PostSpacing? PostSpacing
         {
             get => GetElement<DocumentFormat.OpenXml.Math.PostSpacing>();
@@ -2949,9 +2949,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Inter-Equation Spacing.</para>
         /// <para>Represents the following element tag in the schema: m:interSp.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.InterSpacing? InterSpacing
         {
             get => GetElement<DocumentFormat.OpenXml.Math.InterSpacing>();
@@ -2962,9 +2962,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Intra-Equation Spacing.</para>
         /// <para>Represents the following element tag in the schema: m:intraSp.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.IntraSpacing? IntraSpacing
         {
             get => GetElement<DocumentFormat.OpenXml.Math.IntraSpacing>();
@@ -3713,9 +3713,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>value</para>
         /// <para>Represents the following attribute in the schema: m:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Math.BooleanValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.BooleanValues>>();
@@ -3748,9 +3748,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Index of Operator to Align To</para>
         /// <para>Represents the following attribute in the schema: m:alnAt</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public IntegerValue? AlignAt
         {
             get => GetAttribute<IntegerValue>();
@@ -3761,9 +3761,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Index of Operator to Align To</para>
         /// <para>Represents the following attribute in the schema: m:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public IntegerValue? Val
         {
             get => GetAttribute<IntegerValue>();
@@ -3794,7 +3794,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:rPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Break" /> <c>&lt;m:brk></c></description></item>
@@ -3804,7 +3804,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Script" /> <c>&lt;m:scr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Style" /> <c>&lt;m:sty></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RunProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3875,9 +3875,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Literal.</para>
         /// <para>Represents the following element tag in the schema: m:lit.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Literal? Literal
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Literal>();
@@ -3919,9 +3919,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>space</para>
         /// <para>Represents the following attribute in the schema: xml:space</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>? Space
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>();
@@ -4054,9 +4054,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>value</para>
         /// <para>Represents the following attribute in the schema: m:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -4080,7 +4080,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:ctrlPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedMathControl" /> <c>&lt;w:del></c></description></item>
@@ -4089,7 +4089,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToMathControl" /> <c>&lt;w:moveTo></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ControlProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4175,13 +4175,13 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:accPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.AccentChar" /> <c>&lt;m:chr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AccentProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4232,9 +4232,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Accent Character.</para>
         /// <para>Represents the following element tag in the schema: m:chr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.AccentChar? AccentChar
         {
             get => GetElement<DocumentFormat.OpenXml.Math.AccentChar>();
@@ -4245,9 +4245,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Control Properties.</para>
         /// <para>Represents the following element tag in the schema: m:ctrlPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>();
@@ -4263,7 +4263,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:e.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -4325,7 +4325,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Base : OfficeMathArgumentType
     {
         /// <summary>
@@ -4551,7 +4551,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:num.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -4613,7 +4613,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Numerator : OfficeMathArgumentType
     {
         /// <summary>
@@ -4839,7 +4839,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:den.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -4901,7 +4901,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Denominator : OfficeMathArgumentType
     {
         /// <summary>
@@ -5127,7 +5127,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:fName.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -5189,7 +5189,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FunctionName : OfficeMathArgumentType
     {
         /// <summary>
@@ -5415,7 +5415,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:lim.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -5477,7 +5477,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Limit : OfficeMathArgumentType
     {
         /// <summary>
@@ -5703,7 +5703,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sub.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -5765,7 +5765,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SubArgument : OfficeMathArgumentType
     {
         /// <summary>
@@ -5991,7 +5991,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sup.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -6053,7 +6053,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SuperArgument : OfficeMathArgumentType
     {
         /// <summary>
@@ -6279,7 +6279,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:deg.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -6341,7 +6341,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Degree : OfficeMathArgumentType
     {
         /// <summary>
@@ -6567,7 +6567,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -6629,7 +6629,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class OfficeMathArgumentType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6730,9 +6730,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Argument Properties.</para>
         /// <para>Represents the following element tag in the schema: m:argPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ArgumentProperties? ArgumentProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ArgumentProperties>();
@@ -6806,9 +6806,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: m:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues>>();
@@ -6831,13 +6831,13 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:barPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Position" /> <c>&lt;m:pos></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BarProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6888,9 +6888,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Position (Bar).</para>
         /// <para>Represents the following element tag in the schema: m:pos.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Position? Position
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Position>();
@@ -6901,9 +6901,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>ControlProperties.</para>
         /// <para>Represents the following element tag in the schema: m:ctrlPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>();
@@ -6919,7 +6919,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:boxPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
@@ -6929,7 +6929,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Differential" /> <c>&lt;m:diff></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Alignment" /> <c>&lt;m:aln></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BoxProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6988,9 +6988,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Operator Emulator.</para>
         /// <para>Represents the following element tag in the schema: m:opEmu.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.OperatorEmulator? OperatorEmulator
         {
             get => GetElement<DocumentFormat.OpenXml.Math.OperatorEmulator>();
@@ -7001,9 +7001,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>No Break.</para>
         /// <para>Represents the following element tag in the schema: m:noBreak.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.NoBreak? NoBreak
         {
             get => GetElement<DocumentFormat.OpenXml.Math.NoBreak>();
@@ -7014,9 +7014,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Differential.</para>
         /// <para>Represents the following element tag in the schema: m:diff.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Differential? Differential
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Differential>();
@@ -7027,9 +7027,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Break.</para>
         /// <para>Represents the following element tag in the schema: m:brk.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Break? Break
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Break>();
@@ -7040,9 +7040,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Alignment.</para>
         /// <para>Represents the following element tag in the schema: m:aln.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Alignment? Alignment
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Alignment>();
@@ -7053,9 +7053,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>ControlProperties.</para>
         /// <para>Represents the following element tag in the schema: m:ctrlPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>();
@@ -7071,7 +7071,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:borderBoxPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
@@ -7084,7 +7084,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.StrikeBottomLeftToTopRight" /> <c>&lt;m:strikeBLTR></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.StrikeTopLeftToBottomRight" /> <c>&lt;m:strikeTLBR></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BorderBoxProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7149,9 +7149,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Hide Top Edge.</para>
         /// <para>Represents the following element tag in the schema: m:hideTop.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.HideTop? HideTop
         {
             get => GetElement<DocumentFormat.OpenXml.Math.HideTop>();
@@ -7162,9 +7162,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Hide Bottom Edge.</para>
         /// <para>Represents the following element tag in the schema: m:hideBot.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.HideBottom? HideBottom
         {
             get => GetElement<DocumentFormat.OpenXml.Math.HideBottom>();
@@ -7175,9 +7175,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Hide Left Edge.</para>
         /// <para>Represents the following element tag in the schema: m:hideLeft.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.HideLeft? HideLeft
         {
             get => GetElement<DocumentFormat.OpenXml.Math.HideLeft>();
@@ -7188,9 +7188,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Hide Right Edge.</para>
         /// <para>Represents the following element tag in the schema: m:hideRight.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.HideRight? HideRight
         {
             get => GetElement<DocumentFormat.OpenXml.Math.HideRight>();
@@ -7201,9 +7201,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Border Box Strikethrough Horizontal.</para>
         /// <para>Represents the following element tag in the schema: m:strikeH.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.StrikeHorizontal? StrikeHorizontal
         {
             get => GetElement<DocumentFormat.OpenXml.Math.StrikeHorizontal>();
@@ -7214,9 +7214,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Border Box Strikethrough Vertical.</para>
         /// <para>Represents the following element tag in the schema: m:strikeV.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.StrikeVertical? StrikeVertical
         {
             get => GetElement<DocumentFormat.OpenXml.Math.StrikeVertical>();
@@ -7227,9 +7227,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Border Box Strikethrough Bottom-Left to Top-Right.</para>
         /// <para>Represents the following element tag in the schema: m:strikeBLTR.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.StrikeBottomLeftToTopRight? StrikeBottomLeftToTopRight
         {
             get => GetElement<DocumentFormat.OpenXml.Math.StrikeBottomLeftToTopRight>();
@@ -7240,9 +7240,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Border Box Strikethrough Top-Left to Bottom-Right.</para>
         /// <para>Represents the following element tag in the schema: m:strikeTLBR.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.StrikeTopLeftToBottomRight? StrikeTopLeftToBottomRight
         {
             get => GetElement<DocumentFormat.OpenXml.Math.StrikeTopLeftToBottomRight>();
@@ -7253,9 +7253,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>ControlProperties.</para>
         /// <para>Represents the following element tag in the schema: m:ctrlPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>();
@@ -7284,9 +7284,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: m:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues>>();
@@ -7313,7 +7313,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:dPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.BeginChar" /> <c>&lt;m:begChr></c></description></item>
@@ -7323,7 +7323,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.GrowOperators" /> <c>&lt;m:grow></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Shape" /> <c>&lt;m:shp></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DelimiterProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7382,9 +7382,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Delimiter Beginning Character.</para>
         /// <para>Represents the following element tag in the schema: m:begChr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.BeginChar? BeginChar
         {
             get => GetElement<DocumentFormat.OpenXml.Math.BeginChar>();
@@ -7395,9 +7395,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Delimiter Separator Character.</para>
         /// <para>Represents the following element tag in the schema: m:sepChr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.SeparatorChar? SeparatorChar
         {
             get => GetElement<DocumentFormat.OpenXml.Math.SeparatorChar>();
@@ -7408,9 +7408,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Delimiter Ending Character.</para>
         /// <para>Represents the following element tag in the schema: m:endChr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.EndChar? EndChar
         {
             get => GetElement<DocumentFormat.OpenXml.Math.EndChar>();
@@ -7421,9 +7421,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Delimiter Grow.</para>
         /// <para>Represents the following element tag in the schema: m:grow.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.GrowOperators? GrowOperators
         {
             get => GetElement<DocumentFormat.OpenXml.Math.GrowOperators>();
@@ -7434,9 +7434,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Shape (Delimiters).</para>
         /// <para>Represents the following element tag in the schema: m:shp.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Shape? Shape
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Shape>();
@@ -7447,9 +7447,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>ControlProperties.</para>
         /// <para>Represents the following element tag in the schema: m:ctrlPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>();
@@ -7478,9 +7478,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: m:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues>>();
@@ -7568,9 +7568,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: m:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public IntegerValue? Val
         {
             get => GetAttribute<IntegerValue>();
@@ -7655,9 +7655,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: m:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public UInt16Value? Val
         {
             get => GetAttribute<UInt16Value>();
@@ -7680,7 +7680,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:eqArrPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
@@ -7690,7 +7690,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.RowSpacing" /> <c>&lt;m:rSp></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.BaseJustification" /> <c>&lt;m:baseJc></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class EquationArrayProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7749,9 +7749,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Equation Array Base Justification.</para>
         /// <para>Represents the following element tag in the schema: m:baseJc.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.BaseJustification? BaseJustification
         {
             get => GetElement<DocumentFormat.OpenXml.Math.BaseJustification>();
@@ -7762,9 +7762,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Maximum Distribution.</para>
         /// <para>Represents the following element tag in the schema: m:maxDist.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.MaxDistribution? MaxDistribution
         {
             get => GetElement<DocumentFormat.OpenXml.Math.MaxDistribution>();
@@ -7775,9 +7775,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Object Distribution.</para>
         /// <para>Represents the following element tag in the schema: m:objDist.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ObjectDistribution? ObjectDistribution
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ObjectDistribution>();
@@ -7788,9 +7788,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Row Spacing Rule.</para>
         /// <para>Represents the following element tag in the schema: m:rSpRule.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.RowSpacingRule? RowSpacingRule
         {
             get => GetElement<DocumentFormat.OpenXml.Math.RowSpacingRule>();
@@ -7801,9 +7801,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Row Spacing (Equation Array).</para>
         /// <para>Represents the following element tag in the schema: m:rSp.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.RowSpacing? RowSpacing
         {
             get => GetElement<DocumentFormat.OpenXml.Math.RowSpacing>();
@@ -7814,9 +7814,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>ControlProperties.</para>
         /// <para>Represents the following element tag in the schema: m:ctrlPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>();
@@ -7845,9 +7845,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: m:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues>>();
@@ -7874,13 +7874,13 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:fPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.FractionType" /> <c>&lt;m:type></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FractionProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7931,9 +7931,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Fraction type.</para>
         /// <para>Represents the following element tag in the schema: m:type.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.FractionType? FractionType
         {
             get => GetElement<DocumentFormat.OpenXml.Math.FractionType>();
@@ -7944,9 +7944,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>ControlProperties.</para>
         /// <para>Represents the following element tag in the schema: m:ctrlPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>();
@@ -7962,12 +7962,12 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:funcPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FunctionProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8016,9 +8016,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>ControlProperties.</para>
         /// <para>Represents the following element tag in the schema: m:ctrlPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>();
@@ -8034,7 +8034,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:groupChrPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.AccentChar" /> <c>&lt;m:chr></c></description></item>
@@ -8042,7 +8042,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Position" /> <c>&lt;m:pos></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.VerticalJustification" /> <c>&lt;m:vertJc></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GroupCharProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8097,9 +8097,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Group Character (Grouping Character).</para>
         /// <para>Represents the following element tag in the schema: m:chr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.AccentChar? AccentChar
         {
             get => GetElement<DocumentFormat.OpenXml.Math.AccentChar>();
@@ -8110,9 +8110,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Position (Group Character).</para>
         /// <para>Represents the following element tag in the schema: m:pos.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Position? Position
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Position>();
@@ -8123,9 +8123,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Vertical Justification.</para>
         /// <para>Represents the following element tag in the schema: m:vertJc.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.VerticalJustification? VerticalJustification
         {
             get => GetElement<DocumentFormat.OpenXml.Math.VerticalJustification>();
@@ -8136,9 +8136,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>ControlProperties.</para>
         /// <para>Represents the following element tag in the schema: m:ctrlPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>();
@@ -8154,12 +8154,12 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:limLowPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LimitLowerProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8208,9 +8208,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>ControlProperties.</para>
         /// <para>Represents the following element tag in the schema: m:ctrlPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>();
@@ -8226,12 +8226,12 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:limUppPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LimitUpperProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8280,9 +8280,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>ControlProperties.</para>
         /// <para>Represents the following element tag in the schema: m:ctrlPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>();
@@ -8311,9 +8311,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: m:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public IntegerValue? Val
         {
             get => GetAttribute<IntegerValue>();
@@ -8354,9 +8354,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: m:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues>>();
@@ -8383,13 +8383,13 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mcPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.MatrixColumnCount" /> <c>&lt;m:count></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.MatrixColumnJustification" /> <c>&lt;m:mcJc></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MatrixColumnProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8440,9 +8440,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Matrix Column Count.</para>
         /// <para>Represents the following element tag in the schema: m:count.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.MatrixColumnCount? MatrixColumnCount
         {
             get => GetElement<DocumentFormat.OpenXml.Math.MatrixColumnCount>();
@@ -8453,9 +8453,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Matrix Column Justification.</para>
         /// <para>Represents the following element tag in the schema: m:mcJc.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.MatrixColumnJustification? MatrixColumnJustification
         {
             get => GetElement<DocumentFormat.OpenXml.Math.MatrixColumnJustification>();
@@ -8471,12 +8471,12 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mc.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.MatrixColumnProperties" /> <c>&lt;m:mcPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MatrixColumn : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8525,9 +8525,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Matrix Column Properties.</para>
         /// <para>Represents the following element tag in the schema: m:mcPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.MatrixColumnProperties? MatrixColumnProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.MatrixColumnProperties>();
@@ -8748,9 +8748,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: m:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
@@ -8774,12 +8774,12 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mcs.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.MatrixColumn" /> <c>&lt;m:mc></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MatrixColumns : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8833,7 +8833,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
@@ -8846,7 +8846,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ColumnGap" /> <c>&lt;m:cGp></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.BaseJustification" /> <c>&lt;m:baseJc></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MatrixProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8911,9 +8911,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Matrix Base Justification.</para>
         /// <para>Represents the following element tag in the schema: m:baseJc.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.BaseJustification? BaseJustification
         {
             get => GetElement<DocumentFormat.OpenXml.Math.BaseJustification>();
@@ -8924,9 +8924,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Hide Placeholders (Matrix).</para>
         /// <para>Represents the following element tag in the schema: m:plcHide.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.HidePlaceholder? HidePlaceholder
         {
             get => GetElement<DocumentFormat.OpenXml.Math.HidePlaceholder>();
@@ -8937,9 +8937,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Row Spacing Rule.</para>
         /// <para>Represents the following element tag in the schema: m:rSpRule.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.RowSpacingRule? RowSpacingRule
         {
             get => GetElement<DocumentFormat.OpenXml.Math.RowSpacingRule>();
@@ -8950,9 +8950,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Matrix Column Gap Rule.</para>
         /// <para>Represents the following element tag in the schema: m:cGpRule.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ColumnGapRule? ColumnGapRule
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ColumnGapRule>();
@@ -8963,9 +8963,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Row Spacing (Matrix).</para>
         /// <para>Represents the following element tag in the schema: m:rSp.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.RowSpacing? RowSpacing
         {
             get => GetElement<DocumentFormat.OpenXml.Math.RowSpacing>();
@@ -8976,9 +8976,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Matrix Column Spacing.</para>
         /// <para>Represents the following element tag in the schema: m:cSp.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ColumnSpacing? ColumnSpacing
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ColumnSpacing>();
@@ -8989,9 +8989,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Matrix Column Gap.</para>
         /// <para>Represents the following element tag in the schema: m:cGp.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ColumnGap? ColumnGap
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ColumnGap>();
@@ -9002,9 +9002,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Matrix Columns.</para>
         /// <para>Represents the following element tag in the schema: m:mcs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.MatrixColumns? MatrixColumns
         {
             get => GetElement<DocumentFormat.OpenXml.Math.MatrixColumns>();
@@ -9015,9 +9015,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>ControlProperties.</para>
         /// <para>Represents the following element tag in the schema: m:ctrlPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>();
@@ -9033,12 +9033,12 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MatrixRow : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9177,9 +9177,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: m:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues>>();
@@ -9202,7 +9202,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:naryPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.AccentChar" /> <c>&lt;m:chr></c></description></item>
@@ -9212,7 +9212,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.HideSubArgument" /> <c>&lt;m:subHide></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.HideSuperArgument" /> <c>&lt;m:supHide></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NaryProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9271,9 +9271,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>n-ary Operator Character.</para>
         /// <para>Represents the following element tag in the schema: m:chr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.AccentChar? AccentChar
         {
             get => GetElement<DocumentFormat.OpenXml.Math.AccentChar>();
@@ -9284,9 +9284,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>n-ary Limit Location.</para>
         /// <para>Represents the following element tag in the schema: m:limLoc.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.LimitLocation? LimitLocation
         {
             get => GetElement<DocumentFormat.OpenXml.Math.LimitLocation>();
@@ -9297,9 +9297,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>n-ary Grow.</para>
         /// <para>Represents the following element tag in the schema: m:grow.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.GrowOperators? GrowOperators
         {
             get => GetElement<DocumentFormat.OpenXml.Math.GrowOperators>();
@@ -9310,9 +9310,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Hide Subscript (n-ary).</para>
         /// <para>Represents the following element tag in the schema: m:subHide.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.HideSubArgument? HideSubArgument
         {
             get => GetElement<DocumentFormat.OpenXml.Math.HideSubArgument>();
@@ -9323,9 +9323,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Hide Superscript (n-ary).</para>
         /// <para>Represents the following element tag in the schema: m:supHide.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.HideSuperArgument? HideSuperArgument
         {
             get => GetElement<DocumentFormat.OpenXml.Math.HideSuperArgument>();
@@ -9336,9 +9336,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>ControlProperties.</para>
         /// <para>Represents the following element tag in the schema: m:ctrlPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>();
@@ -9354,7 +9354,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:phantPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
@@ -9364,7 +9364,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ZeroDescent" /> <c>&lt;m:zeroDesc></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Transparent" /> <c>&lt;m:transp></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PhantomProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9423,9 +9423,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Phantom Show.</para>
         /// <para>Represents the following element tag in the schema: m:show.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ShowPhantom? ShowPhantom
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ShowPhantom>();
@@ -9436,9 +9436,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Phantom Zero Width.</para>
         /// <para>Represents the following element tag in the schema: m:zeroWid.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ZeroWidth? ZeroWidth
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ZeroWidth>();
@@ -9449,9 +9449,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Phantom Zero Ascent.</para>
         /// <para>Represents the following element tag in the schema: m:zeroAsc.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ZeroAscent? ZeroAscent
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ZeroAscent>();
@@ -9462,9 +9462,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Phantom Zero Descent.</para>
         /// <para>Represents the following element tag in the schema: m:zeroDesc.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ZeroDescent? ZeroDescent
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ZeroDescent>();
@@ -9475,9 +9475,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Transparent (Phantom).</para>
         /// <para>Represents the following element tag in the schema: m:transp.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Transparent? Transparent
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Transparent>();
@@ -9488,9 +9488,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>ControlProperties.</para>
         /// <para>Represents the following element tag in the schema: m:ctrlPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>();
@@ -9506,13 +9506,13 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:radPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.HideDegree" /> <c>&lt;m:degHide></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RadicalProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9563,9 +9563,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Hide Degree.</para>
         /// <para>Represents the following element tag in the schema: m:degHide.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.HideDegree? HideDegree
         {
             get => GetElement<DocumentFormat.OpenXml.Math.HideDegree>();
@@ -9576,9 +9576,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>ControlProperties.</para>
         /// <para>Represents the following element tag in the schema: m:ctrlPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>();
@@ -9594,12 +9594,12 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sPrePr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PreSubSuperProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9648,9 +9648,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>ControlProperties.</para>
         /// <para>Represents the following element tag in the schema: m:ctrlPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>();
@@ -9666,12 +9666,12 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sSubPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SubscriptProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9720,9 +9720,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>ControlProperties.</para>
         /// <para>Represents the following element tag in the schema: m:ctrlPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>();
@@ -9738,13 +9738,13 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sSubSupPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.AlignScripts" /> <c>&lt;m:alnScr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SubSuperscriptProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9795,9 +9795,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Align Scripts.</para>
         /// <para>Represents the following element tag in the schema: m:alnScr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.AlignScripts? AlignScripts
         {
             get => GetElement<DocumentFormat.OpenXml.Math.AlignScripts>();
@@ -9808,9 +9808,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>ControlProperties.</para>
         /// <para>Represents the following element tag in the schema: m:ctrlPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>();
@@ -9826,12 +9826,12 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sSupPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SuperscriptProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9880,9 +9880,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>ControlProperties.</para>
         /// <para>Represents the following element tag in the schema: m:ctrlPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>();
@@ -9911,9 +9911,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: m:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public IntegerValue? Val
         {
             get => GetAttribute<IntegerValue>();
@@ -9941,12 +9941,12 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:argPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ArgumentSize" /> <c>&lt;m:argSz></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ArgumentProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9995,9 +9995,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Argument Size.</para>
         /// <para>Represents the following element tag in the schema: m:argSz.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.ArgumentSize? ArgumentSize
         {
             get => GetElement<DocumentFormat.OpenXml.Math.ArgumentSize>();
@@ -10074,9 +10074,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: m:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Math.JustificationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.JustificationValues>>();
@@ -10112,9 +10112,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: m:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -10155,9 +10155,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: m:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues>>();
@@ -10194,9 +10194,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: m:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues>>();
@@ -10224,12 +10224,12 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:oMathParaPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Justification" /> <c>&lt;m:jc></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ParagraphProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10278,9 +10278,9 @@ namespace DocumentFormat.OpenXml.Math
         /// <para>Justification.</para>
         /// <para>Represents the following element tag in the schema: m:jc.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Math.Justification? Justification
         {
             get => GetElement<DocumentFormat.OpenXml.Math.Justification>();

@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:colorStyle.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyleVariation" /> <c>&lt;cs:variation></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ColorStyle : OpenXmlPartRootElement
     {
         /// <summary>
@@ -171,7 +171,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:chartStyle.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -207,7 +207,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ValueAxis" /> <c>&lt;cs:valueAxis></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Wall" /> <c>&lt;cs:wall></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ChartStyle : OpenXmlPartRootElement
     {
         /// <summary>
@@ -331,9 +331,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>AxisTitle.</para>
         /// <para>Represents the following element tag in the schema: cs:axisTitle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.AxisTitle? AxisTitle
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.AxisTitle>();
@@ -344,9 +344,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>CategoryAxis.</para>
         /// <para>Represents the following element tag in the schema: cs:categoryAxis.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.CategoryAxis? CategoryAxis
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.CategoryAxis>();
@@ -357,9 +357,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>ChartArea.</para>
         /// <para>Represents the following element tag in the schema: cs:chartArea.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ChartArea? ChartArea
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ChartArea>();
@@ -370,9 +370,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>DataLabel.</para>
         /// <para>Represents the following element tag in the schema: cs:dataLabel.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabel? DataLabel
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabel>();
@@ -383,9 +383,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>DataLabelCallout.</para>
         /// <para>Represents the following element tag in the schema: cs:dataLabelCallout.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelCallout? DataLabelCallout
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelCallout>();
@@ -396,9 +396,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>DataPoint.</para>
         /// <para>Represents the following element tag in the schema: cs:dataPoint.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint? DataPoint
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint>();
@@ -409,9 +409,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>DataPoint3D.</para>
         /// <para>Represents the following element tag in the schema: cs:dataPoint3D.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint3D? DataPoint3D
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint3D>();
@@ -422,9 +422,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>DataPointLine.</para>
         /// <para>Represents the following element tag in the schema: cs:dataPointLine.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointLine? DataPointLine
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointLine>();
@@ -435,9 +435,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>DataPointMarker.</para>
         /// <para>Represents the following element tag in the schema: cs:dataPointMarker.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointMarker? DataPointMarker
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointMarker>();
@@ -448,9 +448,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>MarkerLayoutProperties.</para>
         /// <para>Represents the following element tag in the schema: cs:dataPointMarkerLayout.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerLayoutProperties? MarkerLayoutProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerLayoutProperties>();
@@ -461,9 +461,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>DataPointWireframe.</para>
         /// <para>Represents the following element tag in the schema: cs:dataPointWireframe.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointWireframe? DataPointWireframe
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointWireframe>();
@@ -474,9 +474,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>DataTableStyle.</para>
         /// <para>Represents the following element tag in the schema: cs:dataTable.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataTableStyle? DataTableStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataTableStyle>();
@@ -487,9 +487,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>DownBar.</para>
         /// <para>Represents the following element tag in the schema: cs:downBar.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DownBar? DownBar
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DownBar>();
@@ -500,9 +500,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>DropLine.</para>
         /// <para>Represents the following element tag in the schema: cs:dropLine.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DropLine? DropLine
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DropLine>();
@@ -513,9 +513,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>ErrorBar.</para>
         /// <para>Represents the following element tag in the schema: cs:errorBar.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ErrorBar? ErrorBar
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ErrorBar>();
@@ -526,9 +526,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>Floor.</para>
         /// <para>Represents the following element tag in the schema: cs:floor.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Floor? Floor
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Floor>();
@@ -539,9 +539,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>GridlineMajor.</para>
         /// <para>Represents the following element tag in the schema: cs:gridlineMajor.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMajor? GridlineMajor
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMajor>();
@@ -552,9 +552,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>GridlineMinor.</para>
         /// <para>Represents the following element tag in the schema: cs:gridlineMinor.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMinor? GridlineMinor
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMinor>();
@@ -565,9 +565,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>HiLoLine.</para>
         /// <para>Represents the following element tag in the schema: cs:hiLoLine.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.HiLoLine? HiLoLine
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.HiLoLine>();
@@ -578,9 +578,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>LeaderLine.</para>
         /// <para>Represents the following element tag in the schema: cs:leaderLine.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LeaderLine? LeaderLine
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LeaderLine>();
@@ -591,9 +591,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>LegendStyle.</para>
         /// <para>Represents the following element tag in the schema: cs:legend.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendStyle? LegendStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendStyle>();
@@ -604,9 +604,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>PlotArea.</para>
         /// <para>Represents the following element tag in the schema: cs:plotArea.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea? PlotArea
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea>();
@@ -617,9 +617,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>PlotArea3D.</para>
         /// <para>Represents the following element tag in the schema: cs:plotArea3D.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea3D? PlotArea3D
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea3D>();
@@ -630,9 +630,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>SeriesAxis.</para>
         /// <para>Represents the following element tag in the schema: cs:seriesAxis.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesAxis? SeriesAxis
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesAxis>();
@@ -643,9 +643,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>SeriesLine.</para>
         /// <para>Represents the following element tag in the schema: cs:seriesLine.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesLine? SeriesLine
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesLine>();
@@ -656,9 +656,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>TitleStyle.</para>
         /// <para>Represents the following element tag in the schema: cs:title.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitleStyle? TitleStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitleStyle>();
@@ -669,9 +669,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>TrendlineStyle.</para>
         /// <para>Represents the following element tag in the schema: cs:trendline.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineStyle? TrendlineStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineStyle>();
@@ -682,9 +682,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>TrendlineLabel.</para>
         /// <para>Represents the following element tag in the schema: cs:trendlineLabel.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineLabel? TrendlineLabel
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineLabel>();
@@ -695,9 +695,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>UpBar.</para>
         /// <para>Represents the following element tag in the schema: cs:upBar.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.UpBar? UpBar
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.UpBar>();
@@ -708,9 +708,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>ValueAxis.</para>
         /// <para>Represents the following element tag in the schema: cs:valueAxis.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ValueAxis? ValueAxis
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ValueAxis>();
@@ -721,9 +721,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>Wall.</para>
         /// <para>Represents the following element tag in the schema: cs:wall.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Wall? Wall
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Wall>();
@@ -734,9 +734,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: cs:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList>();
@@ -783,7 +783,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:variation.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HueOffset" /> <c>&lt;a:hueOff></c></description></item>
@@ -815,7 +815,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AlphaModulation" /> <c>&lt;a:alphaMod></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HueModulation" /> <c>&lt;a:hueMod></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ColorStyleVariation : OpenXmlCompositeElement
     {
         /// <summary>
@@ -930,12 +930,12 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -996,7 +996,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:styleClr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HueOffset" /> <c>&lt;a:hueOff></c></description></item>
@@ -1028,7 +1028,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AlphaModulation" /> <c>&lt;a:alphaMod></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HueModulation" /> <c>&lt;a:hueMod></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StyleColor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1163,7 +1163,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:lnRef.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -1174,7 +1174,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor" /> <c>&lt;cs:styleClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LineReference : StyleReference
     {
         /// <summary>
@@ -1240,7 +1240,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:fillRef.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -1251,7 +1251,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor" /> <c>&lt;cs:styleClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FillReference : StyleReference
     {
         /// <summary>
@@ -1317,7 +1317,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:effectRef.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -1328,7 +1328,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor" /> <c>&lt;cs:styleClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class EffectReference : StyleReference
     {
         /// <summary>
@@ -1394,7 +1394,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -1405,7 +1405,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor" /> <c>&lt;cs:styleClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class StyleReference : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1522,7 +1522,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:fontRef.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -1533,7 +1533,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor" /> <c>&lt;cs:styleClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FontReference : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1633,7 +1633,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:spPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
@@ -1652,7 +1652,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1763,9 +1763,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>2D Transform for Individual Objects.</para>
         /// <para>Represents the following element tag in the schema: a:xfrm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
@@ -1781,7 +1781,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:defRPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
@@ -1807,7 +1807,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.UnderlineFill" /> <c>&lt;a:uFill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.UnderlineFollowsText" /> <c>&lt;a:uLnTx></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2151,9 +2151,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>Outline.</para>
         /// <para>Represents the following element tag in the schema: a:ln.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Outline? Outline
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Outline>();
@@ -2169,7 +2169,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:bodyPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.FlatText" /> <c>&lt;a:flatTx></c></description></item>
@@ -2181,7 +2181,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NormalAutoFit" /> <c>&lt;a:normAutofit></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeAutoFit" /> <c>&lt;a:spAutoFit></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TextBodyProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2488,9 +2488,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>Preset Text Shape.</para>
         /// <para>Represents the following element tag in the schema: a:prstTxWarp.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PresetTextWarp? PresetTextWarp
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.PresetTextWarp>();
@@ -3316,7 +3316,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:axisTitle.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -3329,7 +3329,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AxisTitle : StyleEntry
     {
         /// <summary>
@@ -3391,7 +3391,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:categoryAxis.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -3404,7 +3404,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CategoryAxis : StyleEntry
     {
         /// <summary>
@@ -3466,7 +3466,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:chartArea.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -3479,7 +3479,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ChartArea : StyleEntry
     {
         /// <summary>
@@ -3541,7 +3541,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataLabel.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -3554,7 +3554,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataLabel : StyleEntry
     {
         /// <summary>
@@ -3616,7 +3616,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataLabelCallout.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -3629,7 +3629,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataLabelCallout : StyleEntry
     {
         /// <summary>
@@ -3691,7 +3691,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataPoint.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -3704,7 +3704,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataPoint : StyleEntry
     {
         /// <summary>
@@ -3766,7 +3766,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataPoint3D.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -3779,7 +3779,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataPoint3D : StyleEntry
     {
         /// <summary>
@@ -3841,7 +3841,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataPointLine.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -3854,7 +3854,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataPointLine : StyleEntry
     {
         /// <summary>
@@ -3916,7 +3916,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataPointMarker.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -3929,7 +3929,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataPointMarker : StyleEntry
     {
         /// <summary>
@@ -3991,7 +3991,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataPointWireframe.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -4004,7 +4004,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataPointWireframe : StyleEntry
     {
         /// <summary>
@@ -4066,7 +4066,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataTable.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -4079,7 +4079,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataTableStyle : StyleEntry
     {
         /// <summary>
@@ -4141,7 +4141,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:downBar.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -4154,7 +4154,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DownBar : StyleEntry
     {
         /// <summary>
@@ -4216,7 +4216,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dropLine.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -4229,7 +4229,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DropLine : StyleEntry
     {
         /// <summary>
@@ -4291,7 +4291,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:errorBar.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -4304,7 +4304,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ErrorBar : StyleEntry
     {
         /// <summary>
@@ -4366,7 +4366,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:floor.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -4379,7 +4379,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Floor : StyleEntry
     {
         /// <summary>
@@ -4441,7 +4441,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:gridlineMajor.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -4454,7 +4454,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GridlineMajor : StyleEntry
     {
         /// <summary>
@@ -4516,7 +4516,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:gridlineMinor.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -4529,7 +4529,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GridlineMinor : StyleEntry
     {
         /// <summary>
@@ -4591,7 +4591,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:hiLoLine.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -4604,7 +4604,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class HiLoLine : StyleEntry
     {
         /// <summary>
@@ -4666,7 +4666,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:leaderLine.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -4679,7 +4679,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LeaderLine : StyleEntry
     {
         /// <summary>
@@ -4741,7 +4741,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:legend.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -4754,7 +4754,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LegendStyle : StyleEntry
     {
         /// <summary>
@@ -4816,7 +4816,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:plotArea.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -4829,7 +4829,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PlotArea : StyleEntry
     {
         /// <summary>
@@ -4891,7 +4891,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:plotArea3D.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -4904,7 +4904,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PlotArea3D : StyleEntry
     {
         /// <summary>
@@ -4966,7 +4966,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:seriesAxis.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -4979,7 +4979,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SeriesAxis : StyleEntry
     {
         /// <summary>
@@ -5041,7 +5041,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:seriesLine.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -5054,7 +5054,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SeriesLine : StyleEntry
     {
         /// <summary>
@@ -5116,7 +5116,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:title.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -5129,7 +5129,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TitleStyle : StyleEntry
     {
         /// <summary>
@@ -5191,7 +5191,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:trendline.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -5204,7 +5204,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TrendlineStyle : StyleEntry
     {
         /// <summary>
@@ -5266,7 +5266,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:trendlineLabel.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -5279,7 +5279,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TrendlineLabel : StyleEntry
     {
         /// <summary>
@@ -5341,7 +5341,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:upBar.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -5354,7 +5354,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class UpBar : StyleEntry
     {
         /// <summary>
@@ -5416,7 +5416,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:valueAxis.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -5429,7 +5429,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ValueAxis : StyleEntry
     {
         /// <summary>
@@ -5491,7 +5491,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:wall.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -5504,7 +5504,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Wall : StyleEntry
     {
         /// <summary>
@@ -5566,7 +5566,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList" /> <c>&lt;cs:extLst></c></description></item>
@@ -5579,7 +5579,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference" /> <c>&lt;cs:effectRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class StyleEntry : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5643,9 +5643,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>LineReference.</para>
         /// <para>Represents the following element tag in the schema: cs:lnRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference? LineReference
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference>();
@@ -5656,9 +5656,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>LineWidthScale.</para>
         /// <para>Represents the following element tag in the schema: cs:lineWidthScale.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale? LineWidthScale
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale>();
@@ -5669,9 +5669,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>FillReference.</para>
         /// <para>Represents the following element tag in the schema: cs:fillRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference? FillReference
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference>();
@@ -5682,9 +5682,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>EffectReference.</para>
         /// <para>Represents the following element tag in the schema: cs:effectRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference? EffectReference
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference>();
@@ -5695,9 +5695,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>FontReference.</para>
         /// <para>Represents the following element tag in the schema: cs:fontRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference? FontReference
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference>();
@@ -5708,9 +5708,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>ShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: cs:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties? ShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties>();
@@ -5721,9 +5721,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>TextCharacterPropertiesType.</para>
         /// <para>Represents the following element tag in the schema: cs:defRPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType? TextCharacterPropertiesType
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType>();
@@ -5734,9 +5734,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>TextBodyProperties.</para>
         /// <para>Represents the following element tag in the schema: cs:bodyPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties? TextBodyProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties>();
@@ -5747,9 +5747,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: cs:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cs = http://schemas.microsoft.com/office/drawing/2012/chartStyle
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList>();

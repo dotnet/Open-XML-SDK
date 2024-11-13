@@ -42,10 +42,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <summary>
         /// Gets or sets the custom XML Markup Namespace.
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// Represents the attribute in schema: w:uri.
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main.
-        /// </remark>
+        /// </remarks>
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -55,10 +55,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <summary>
         /// Gets or sets the element name.
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// Represents the attribute in schema: w:element.
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main.
-        /// </remark>
+        /// </remarks>
         public StringValue? Element
         {
             get => GetAttribute<StringValue>();
@@ -68,9 +68,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <summary>
         /// Gets or sets the CustomXmlProperties which represents the element tag in schema: w:customXmlPr.
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main.
-        /// </remark>
+        /// </remarks>
         public CustomXmlProperties? CustomXmlProperties
         {
             get => GetElement<CustomXmlProperties>();

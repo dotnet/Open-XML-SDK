@@ -1193,13 +1193,13 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:gallery.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Item" /> <c>&lt;mso14:item></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GalleryRegular : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2525,14 +2525,14 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:splitButton.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular" /> <c>&lt;mso14:menu></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.VisibleButton" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SplitButtonRegular : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2813,7 +2813,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:menu.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular" /> <c>&lt;mso14:button></c></description></item>
@@ -2826,7 +2826,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular" /> <c>&lt;mso14:splitButton></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MenuRegular : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3767,14 +3767,14 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:splitButton.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.MenuWithTitle" /> <c>&lt;mso14:menu></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.VisibleButton" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4055,7 +4055,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:menu.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular" /> <c>&lt;mso14:button></c></description></item>
@@ -4068,7 +4068,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonWithTitle" /> <c>&lt;mso14:splitButton></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MenuWithTitle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6798,12 +6798,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:comboBox.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Item" /> <c>&lt;mso14:item></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ComboBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7390,13 +7390,13 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:dropDown.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Item" /> <c>&lt;mso14:item></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DropDownRegular : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7985,13 +7985,13 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:gallery.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Item" /> <c>&lt;mso14:item></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Gallery : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8745,7 +8745,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:menu.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular" /> <c>&lt;mso14:button></c></description></item>
@@ -8758,7 +8758,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular" /> <c>&lt;mso14:splitButton></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Menu : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9752,14 +9752,14 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:splitButton.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular" /> <c>&lt;mso14:menu></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.VisibleButton" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SplitButton : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10068,7 +10068,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:box.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Box" /> <c>&lt;mso14:box></c></description></item>
@@ -10086,7 +10086,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.SplitButton" /> <c>&lt;mso14:splitButton></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButton" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Box : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10305,7 +10305,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:buttonGroup.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular" /> <c>&lt;mso14:button></c></description></item>
@@ -10317,7 +10317,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular" /> <c>&lt;mso14:splitButton></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ButtonGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11014,12 +11014,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:menu.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuGroup" /> <c>&lt;mso14:menuGroup></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BackstageSubMenu : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12441,12 +12441,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:dropDown.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ItemBackstageItem" /> <c>&lt;mso14:item></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BackstageDropDown : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12812,12 +12812,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:radioGroup.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.RadioButtonBackstageItem" /> <c>&lt;mso14:radioButton></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RadioGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13113,12 +13113,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:comboBox.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ItemBackstageItem" /> <c>&lt;mso14:item></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BackstageComboBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13943,7 +13943,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:groupBox.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox" /> <c>&lt;mso14:checkBox></c></description></item>
@@ -13958,7 +13958,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer" /> <c>&lt;mso14:layoutContainer></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup" /> <c>&lt;mso14:radioGroup></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GroupBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14121,7 +14121,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:layoutContainer.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox" /> <c>&lt;mso14:checkBox></c></description></item>
@@ -14136,7 +14136,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer" /> <c>&lt;mso14:layoutContainer></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup" /> <c>&lt;mso14:radioGroup></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LayoutContainer : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14481,14 +14481,14 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:group.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.TopItemsGroupControls" /> <c>&lt;mso14:topItems></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BottomItemsGroupControls" /> <c>&lt;mso14:bottomItems></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.PrimaryItem" /> <c>&lt;mso14:primaryItem></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BackstageGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14794,12 +14794,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:taskGroup.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroupCategory" /> <c>&lt;mso14:category></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TaskGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15084,7 +15084,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:menu.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular" /> <c>&lt;mso14:button></c></description></item>
@@ -15097,7 +15097,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular" /> <c>&lt;mso14:splitButton></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MenuRoot : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15223,7 +15223,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:customUI.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Backstage" /> <c>&lt;mso14:backstage></c></description></item>
@@ -15231,7 +15231,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ContextMenus" /> <c>&lt;mso14:contextMenus></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Ribbon" /> <c>&lt;mso14:ribbon></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CustomUI : OpenXmlPartRootElement
     {
         /// <summary>
@@ -15316,9 +15316,9 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>Commands.</para>
         /// <para>Represents the following element tag in the schema: mso14:commands.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.CustomUI.Commands? Commands
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.Commands>();
@@ -15329,9 +15329,9 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>Ribbon.</para>
         /// <para>Represents the following element tag in the schema: mso14:ribbon.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.CustomUI.Ribbon? Ribbon
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.Ribbon>();
@@ -15342,9 +15342,9 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>Backstage.</para>
         /// <para>Represents the following element tag in the schema: mso14:backstage.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.CustomUI.Backstage? Backstage
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.Backstage>();
@@ -15355,9 +15355,9 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>ContextMenus.</para>
         /// <para>Represents the following element tag in the schema: mso14:contextMenus.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.CustomUI.ContextMenus? ContextMenus
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.ContextMenus>();
@@ -16497,12 +16497,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:dialogBoxLauncher.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular" /> <c>&lt;mso14:button></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DialogBoxLauncher : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16552,9 +16552,9 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>ButtonRegular.</para>
         /// <para>Represents the following element tag in the schema: mso14:button.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular? ButtonRegular
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular>();
@@ -16570,7 +16570,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:group.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Box" /> <c>&lt;mso14:box></c></description></item>
@@ -16590,7 +16590,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.SplitButton" /> <c>&lt;mso14:splitButton></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButton" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Group : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17433,14 +17433,14 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:sharedControls.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneQat" /> <c>&lt;mso14:control></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Separator" /> <c>&lt;mso14:separator></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SharedControlsQatItems : QatItemsType
     {
         /// <summary>
@@ -17499,14 +17499,14 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:documentControls.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneQat" /> <c>&lt;mso14:control></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Separator" /> <c>&lt;mso14:separator></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DocumentControlsQatItems : QatItemsType
     {
         /// <summary>
@@ -17565,14 +17565,14 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneQat" /> <c>&lt;mso14:control></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Separator" /> <c>&lt;mso14:separator></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class QatItemsType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17620,12 +17620,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:tab.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Group" /> <c>&lt;mso14:group></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Tab : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17877,12 +17877,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:tabSet.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Tab" /> <c>&lt;mso14:tab></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TabSet : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18057,13 +18057,13 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:qat.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.SharedControlsQatItems" /> <c>&lt;mso14:sharedControls></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.DocumentControlsQatItems" /> <c>&lt;mso14:documentControls></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class QuickAccessToolbar : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18115,9 +18115,9 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>SharedControlsQatItems.</para>
         /// <para>Represents the following element tag in the schema: mso14:sharedControls.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.CustomUI.SharedControlsQatItems? SharedControlsQatItems
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.SharedControlsQatItems>();
@@ -18128,9 +18128,9 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>DocumentControlsQatItems.</para>
         /// <para>Represents the following element tag in the schema: mso14:documentControls.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.CustomUI.DocumentControlsQatItems? DocumentControlsQatItems
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.DocumentControlsQatItems>();
@@ -18146,12 +18146,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:tabs.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Tab" /> <c>&lt;mso14:tab></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Tabs : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18206,12 +18206,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:contextualTabs.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.TabSet" /> <c>&lt;mso14:tabSet></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ContextualTabs : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18266,7 +18266,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:contextMenu.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular" /> <c>&lt;mso14:button></c></description></item>
@@ -18279,7 +18279,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular" /> <c>&lt;mso14:splitButton></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ContextMenu : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18786,12 +18786,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:menu.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuGroup" /> <c>&lt;mso14:menuGroup></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19099,7 +19099,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:menuGroup.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuButton" /> <c>&lt;mso14:button></c></description></item>
@@ -19107,7 +19107,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuToggleButton" /> <c>&lt;mso14:toggleButton></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageSubMenu" /> <c>&lt;mso14:menu></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BackstageMenuGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19259,13 +19259,13 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:primaryItem.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstagePrimaryMenu" /> <c>&lt;mso14:menu></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageRegularButton" /> <c>&lt;mso14:button></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PrimaryItem : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19317,9 +19317,9 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>BackstageRegularButton.</para>
         /// <para>Represents the following element tag in the schema: mso14:button.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.CustomUI.BackstageRegularButton? BackstageRegularButton
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageRegularButton>();
@@ -19330,9 +19330,9 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>BackstagePrimaryMenu.</para>
         /// <para>Represents the following element tag in the schema: mso14:menu.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.CustomUI.BackstagePrimaryMenu? BackstagePrimaryMenu
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.BackstagePrimaryMenu>();
@@ -19348,7 +19348,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:topItems.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox" /> <c>&lt;mso14:checkBox></c></description></item>
@@ -19363,7 +19363,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer" /> <c>&lt;mso14:layoutContainer></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup" /> <c>&lt;mso14:radioGroup></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TopItemsGroupControls : GroupControlsType
     {
         /// <summary>
@@ -19433,7 +19433,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:bottomItems.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox" /> <c>&lt;mso14:checkBox></c></description></item>
@@ -19448,7 +19448,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer" /> <c>&lt;mso14:layoutContainer></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup" /> <c>&lt;mso14:radioGroup></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BottomItemsGroupControls : GroupControlsType
     {
         /// <summary>
@@ -19518,7 +19518,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox" /> <c>&lt;mso14:checkBox></c></description></item>
@@ -19533,7 +19533,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer" /> <c>&lt;mso14:layoutContainer></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup" /> <c>&lt;mso14:radioGroup></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class GroupControlsType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19589,12 +19589,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:category.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroupTask" /> <c>&lt;mso14:task></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TaskGroupCategory : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20154,12 +20154,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:category.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroupTask" /> <c>&lt;mso14:task></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TaskFormGroupCategory : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20380,12 +20380,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:task.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroup" /> <c>&lt;mso14:group></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TaskFormGroupTask : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20729,12 +20729,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:taskFormGroup.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroupCategory" /> <c>&lt;mso14:category></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TaskFormGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20963,14 +20963,14 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:firstColumn.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroup" /> <c>&lt;mso14:group></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroup" /> <c>&lt;mso14:taskFormGroup></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroup" /> <c>&lt;mso14:taskGroup></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BackstageGroups : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21041,13 +21041,13 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:secondColumn.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroup" /> <c>&lt;mso14:group></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroup" /> <c>&lt;mso14:taskGroup></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SimpleGroups : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21110,13 +21110,13 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:tab.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroups" /> <c>&lt;mso14:firstColumn></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.SimpleGroups" /> <c>&lt;mso14:secondColumn></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BackstageTab : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21485,9 +21485,9 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>BackstageGroups.</para>
         /// <para>Represents the following element tag in the schema: mso14:firstColumn.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroups? BackstageGroups
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroups>();
@@ -21498,9 +21498,9 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>SimpleGroups.</para>
         /// <para>Represents the following element tag in the schema: mso14:secondColumn.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.CustomUI.SimpleGroups? SimpleGroups
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.SimpleGroups>();
@@ -21829,12 +21829,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:commands.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Command" /> <c>&lt;mso14:command></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Commands : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21889,14 +21889,14 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:ribbon.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ContextualTabs" /> <c>&lt;mso14:contextualTabs></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.QuickAccessToolbar" /> <c>&lt;mso14:qat></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Tabs" /> <c>&lt;mso14:tabs></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Ribbon : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21962,9 +21962,9 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>QuickAccessToolbar.</para>
         /// <para>Represents the following element tag in the schema: mso14:qat.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.CustomUI.QuickAccessToolbar? QuickAccessToolbar
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.QuickAccessToolbar>();
@@ -21975,9 +21975,9 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>Tabs.</para>
         /// <para>Represents the following element tag in the schema: mso14:tabs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.CustomUI.Tabs? Tabs
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.Tabs>();
@@ -21988,9 +21988,9 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// <para>ContextualTabs.</para>
         /// <para>Represents the following element tag in the schema: mso14:contextualTabs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:mso14 = http://schemas.microsoft.com/office/2009/07/customui
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.CustomUI.ContextualTabs? ContextualTabs
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.ContextualTabs>();
@@ -22006,13 +22006,13 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:backstage.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageFastCommandButton" /> <c>&lt;mso14:button></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageTab" /> <c>&lt;mso14:tab></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Backstage : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22101,12 +22101,12 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:contextMenus.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ContextMenu" /> <c>&lt;mso14:contextMenu></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ContextMenus : OpenXmlCompositeElement
     {
         /// <summary>

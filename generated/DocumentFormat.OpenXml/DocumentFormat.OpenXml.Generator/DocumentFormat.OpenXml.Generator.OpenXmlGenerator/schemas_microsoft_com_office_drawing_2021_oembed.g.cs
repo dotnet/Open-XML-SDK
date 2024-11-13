@@ -22,12 +22,12 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is aoe:oembedShared.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed.OfficeArtExtensionList" /> <c>&lt;aoe:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OEmbedShared : OpenXmlCompositeElement
     {
         /// <summary>
@@ -106,9 +106,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: aoe:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:aoe = http://schemas.microsoft.com/office/drawing/2021/oembed
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed.OfficeArtExtensionList>();
@@ -124,12 +124,12 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is aoe:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
