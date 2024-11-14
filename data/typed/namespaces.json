@@ -180,6 +180,10 @@
     "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotAutoRefresh"
   },
   {
+    "Prefix": "xlpda",
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays"
+  },
+  {
     "Prefix": "wne",
     "Namespace": "DocumentFormat.OpenXml.Office.Word"
   },
@@ -190,6 +194,10 @@
   {
     "Prefix": "w16du",
     "Namespace": "DocumentFormat.OpenXml.Office.Word.Y2023.WordML.Word16DU"
+  },
+  {
+    "Prefix": "w16sdtfl",
+    "Namespace": "DocumentFormat.OpenXml.Office.Word.Y2024.WordML.SdtFormatLock"
   },
   {
     "Prefix": "xfpb",

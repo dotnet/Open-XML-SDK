@@ -22872,6 +22872,10 @@
     "Children": []
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays.PivotCacheDynamicArray",
+    "Children": []
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office.Word.AllocatedCommand",
     "Children": []
   },
@@ -45149,6 +45153,10 @@
       {
         "Name": "autoRefresh",
         "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2024/pivotAutoRefresh"
+      },
+      {
+        "Name": "pivotCacheDynamicArray",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2024/pivotDynamicArrays"
       }
     ]
   },

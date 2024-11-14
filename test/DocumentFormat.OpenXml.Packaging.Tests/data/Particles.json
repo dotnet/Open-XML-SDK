@@ -65333,6 +65333,9 @@
        "ElementType": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotAutoRefresh.Xsdboolean"
       },
       {
+       "ElementType": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays.PivotCacheDynamicArray"
+      },
+      {
        "MinOccurs": 0,
        "ParticleType": "Any"
       }

@@ -24282,6 +24282,10 @@
         {
           "Name": "xsd:boolean/xlpar:autoRefresh",
           "PropertyName": "Xsdboolean"
+        },
+        {
+          "Name": "xlpda:CT_PivotCacheDynamicArray/xlpda:pivotCacheDynamicArray",
+          "PropertyName": "PivotCacheDynamicArray"
         }
       ],
       "Particle": {
@@ -24317,6 +24321,10 @@
           },
           {
             "Name": "xsd:boolean/xlpar:autoRefresh",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "xlpda:CT_PivotCacheDynamicArray/xlpda:pivotCacheDynamicArray",
             "InitialVersion": "Microsoft365"
           },
           {

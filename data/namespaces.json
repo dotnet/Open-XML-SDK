@@ -491,6 +491,11 @@
     "Version": "Office2021"
   },
   {
+    "Prefix": "w16sdtfl",
+    "Uri": "http://schemas.microsoft.com/office/word/2024/wordml/sdtformatlock",
+    "Version": "Microsoft365"
+  },
+  {
     "Prefix": "w16se",
     "Uri": "http://schemas.microsoft.com/office/word/2015/wordml/symex",
     "Version": "Office2016"

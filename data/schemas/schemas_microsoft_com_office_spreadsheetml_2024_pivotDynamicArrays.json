@@ -1,0 +1,26 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2024/pivotDynamicArrays",
+  "Types": [
+    {
+      "Name": "xlpda:CT_PivotCacheDynamicArray/xlpda:pivotCacheDynamicArray",
+      "ClassName": "PivotCacheDynamicArray",
+      "Summary": "Defines the PivotCacheDynamicArray Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":ref",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "ref",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
