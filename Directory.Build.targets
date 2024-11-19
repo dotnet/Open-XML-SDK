@@ -13,12 +13,14 @@
     </PackageReference>
     <Reference Condition="$(IsFramework)" Include="WindowsBase" />
   </ItemGroup>
-  <!-- The tool is used by default, but we don't want it to. It must be set in a target to ensure it is not overridden -->
-  <Target Name="BeforeResGen" Condition=" '$(TargetFramework)' == 'net35' ">
-    <PropertyGroup>
-      <ResGenExecuteAsTool>false</ResGenExecuteAsTool>
-    </PropertyGroup>
-  </Target>
+
+  <!-- By default, the .NET 3.5 build will try to use the ResGen.exe included with .NET 3.5, but that doesn't work on .NET Core-->
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net35' ">
+    <GenerateResourceMSBuildArchitecture>CurrentArchitecture</GenerateResourceMSBuildArchitecture>
+    <GenerateResourceMSBuildRuntime>CurrentRuntime</GenerateResourceMSBuildRuntime>
+    <ResGenExecuteAsTool>false</ResGenExecuteAsTool>
+  </PropertyGroup>
+
   <PropertyGroup>
     <IncludeFrameworkShims Condition=" '$(IncludeFrameworkShims)' == '' ">false</IncludeFrameworkShims>
   </PropertyGroup>

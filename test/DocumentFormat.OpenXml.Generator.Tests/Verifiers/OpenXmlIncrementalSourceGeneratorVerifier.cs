@@ -5,7 +5,6 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Testing;
 using Microsoft.CodeAnalysis.Testing;
-using Microsoft.CodeAnalysis.Testing.Verifiers;
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
@@ -15,7 +14,7 @@ namespace DocumentFormat.OpenXml.Generator.Tests.Verifiers
     public static partial class OpenXmlIncrementalSourceGeneratorVerifier<TSourceGenerator>
         where TSourceGenerator : IIncrementalGenerator, new()
     {
-        public class Test : CSharpSourceGeneratorTest<EmptySourceGeneratorProvider, XUnitVerifier>
+        public class Test : CSharpSourceGeneratorTest<EmptySourceGeneratorProvider, DefaultVerifier>
         {
             private static ImmutableDictionary<string, ReportDiagnostic> NullableWarnings { get; } = GetNullableWarningsFromCompiler();
 
@@ -25,10 +24,7 @@ namespace DocumentFormat.OpenXml.Generator.Tests.Verifiers
 
             public LanguageVersion LanguageVersion { get; set; } = LanguageVersion.Default;
 
-            protected override IEnumerable<ISourceGenerator> GetSourceGenerators()
-            {
-                yield return new TSourceGenerator().AsSourceGenerator();
-            }
+            protected override IEnumerable<Type> GetSourceGenerators() => new[] { typeof(TSourceGenerator) };
 
             protected override CompilationOptions CreateCompilationOptions()
             {
