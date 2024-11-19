@@ -22,4 +22,8 @@ internal interface IPackageFactory<TPackage>
     /// <param name="initializer">Initializer for the package.</param>
     /// <returns>The created package.</returns>
     TPackage Create(IPackageInitializer initializer);
+
+    PackageDelegate<TPackage>? Template { get; set; }
+
+    IPackageFactory<TPackage> New();
 }

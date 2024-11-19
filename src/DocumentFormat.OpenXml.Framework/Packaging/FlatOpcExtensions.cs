@@ -161,13 +161,14 @@ public static class FlatOpcExtensions
                 sb => sb.ToString());
     }
 
-    internal static IPackageBuilder<TPackage> UseFlatOpcTemplate<TPackage>(this IPackageBuilder<TPackage> builder, string text, bool? isEditable = default)
+    internal static IPackageFactory<TPackage> WithFlatOpcTemplate<TPackage>(this IPackageFactory<TPackage> builder, string text, bool? isEditable = default)
         where TPackage : OpenXmlPackage
-        => builder.UseFlatOpcTemplate(XDocument.Parse(text), isEditable);
+        => builder.WithFlatOpcTemplate(XDocument.Parse(text), isEditable);
 
-    internal static IPackageBuilder<TPackage> UseFlatOpcTemplate<TPackage>(this IPackageBuilder<TPackage> builder, XDocument document, bool? isEditable = default)
+    internal static IPackageFactory<TPackage> WithFlatOpcTemplate<TPackage>(this IPackageFactory<TPackage> builder, XDocument document, bool? isEditable = default)
         where TPackage : OpenXmlPackage
-        => builder.WithTemplate(package =>
+    {
+        builder.Template += package =>
         {
             var p = package.Features.GetRequired<IPackageFeature>().Package;
 
@@ -192,7 +193,10 @@ public static class FlatOpcExtensions
             {
                 package.Reload(isEditable);
             }
-        });
+        };
+
+        return builder;
+    }
 
     private static void AddPackageParts(XElement flatOpcPackage, IPackage package)
     {

@@ -55,7 +55,7 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
 
     public abstract TPackage Create();
 
-    public IPackageFactory<TPackage> Build() => new Factory(this.GetTemplate(), Create, BuildPipeline());
+    public IPackageFactory<TPackage> Build() => new Factory(Create, BuildPipeline());
 
     [MemberNotNull(nameof(_pipeline))]
     private PackageDelegate<TPackage> BuildPipeline()
@@ -72,7 +72,7 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
 
         if (_middleware is not null)
         {
-            for (int i = _middleware.Count - 1; i >= 0; i--)
+            for (var i = _middleware.Count - 1; i >= 0; i--)
             {
                 pipeline = _middleware[i](pipeline);
             }
@@ -83,16 +83,18 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
 
     private sealed class Factory : IPackageFactory<TPackage>
     {
-        private readonly PackageDelegate<TPackage>? _template;
         private readonly Func<TPackage> _package;
         private readonly PackageDelegate<TPackage> _pipeline;
 
-        public Factory(PackageDelegate<TPackage>? template, Func<TPackage> package, PackageDelegate<TPackage> pipeline)
+        public Factory(Func<TPackage> package, PackageDelegate<TPackage> pipeline)
         {
-            _template = template;
             _package = package;
             _pipeline = pipeline;
         }
+
+        public PackageDelegate<TPackage>? Template { get; set; }
+
+        public IPackageFactory<TPackage> New() => new Factory(_package, _pipeline);
 
         public TPackage Create(IPackageInitializer initializer)
         {
@@ -100,24 +102,12 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
 
             initializer.Initialize(package);
 
-            package.Features.Set<TemplateFeature>(new TemplateFeature(_template));
+            package.Features.Set<TemplateFeature>(new TemplateFeature(Template));
             _pipeline(package);
             package.Features.Set<TemplateFeature>(null);
 
             return package;
         }
-    }
-
-    private sealed class TemplateFeature
-    {
-        private readonly PackageDelegate<TPackage>? _initializer;
-
-        public TemplateFeature(PackageDelegate<TPackage>? initializer)
-        {
-            _initializer = initializer;
-        }
-
-        public void Initialize(TPackage package) => _initializer?.Invoke(package);
     }
 
     private sealed class PackageFactoryFeature : IPackageFactoryFeature<TPackage>
@@ -137,5 +127,17 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
                 feature.Initialize(package);
             }
         }
+    }
+
+    private sealed class TemplateFeature
+    {
+        private readonly PackageDelegate<TPackage>? _initializer;
+
+        public TemplateFeature(PackageDelegate<TPackage>? initializer)
+        {
+            _initializer = initializer;
+        }
+
+        public void Initialize(TPackage package) => _initializer?.Invoke(package);
     }
 }

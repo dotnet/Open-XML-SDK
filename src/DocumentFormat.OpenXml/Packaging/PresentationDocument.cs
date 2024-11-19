@@ -179,8 +179,8 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             return CreateDefaultBuilder()
-                .UseTemplate(path, PresentationDocumentType.Presentation)
                 .Build()
+                .WithTemplate(path, PresentationDocumentType.Presentation)
                 .Open();
         }
 

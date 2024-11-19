@@ -21,8 +21,8 @@ public partial class PresentationDocument
     /// <returns>A new instance of PresentationDocument.</returns>
     public static PresentationDocument FromFlatOpcDocument(XDocument document)
         => CreateDefaultBuilder()
-            .UseFlatOpcTemplate(document)
             .Build()
+            .WithFlatOpcTemplate(document)
             .Open();
 
     /// <summary>
@@ -35,8 +35,8 @@ public partial class PresentationDocument
     /// <returns>A new instance of PresentationDocument.</returns>
     public static PresentationDocument FromFlatOpcDocument(XDocument document, Stream stream, bool isEditable)
         => CreateDefaultBuilder()
-            .UseFlatOpcTemplate(document, isEditable)
             .Build()
+            .WithFlatOpcTemplate(document, isEditable)
             .Open(stream, PackageOpenMode.Create);
 
     /// <summary>
@@ -49,8 +49,8 @@ public partial class PresentationDocument
     /// <returns>A new instance of PresentationDocument.</returns>
     public static PresentationDocument FromFlatOpcDocument(XDocument document, string path, bool isEditable)
         => CreateDefaultBuilder()
-            .UseFlatOpcTemplate(document, isEditable)
             .Build()
+            .WithFlatOpcTemplate(document, isEditable)
             .Open(path, PackageOpenMode.Create);
 
     /// <summary>
@@ -62,8 +62,8 @@ public partial class PresentationDocument
     /// <returns>A new instance of PresentationDocument.</returns>
     public static PresentationDocument FromFlatOpcDocument(XDocument document, Package package)
         => CreateDefaultBuilder()
-            .UseFlatOpcTemplate(document)
             .Build()
+            .WithFlatOpcTemplate(document)
             .Open(package);
 
     /// <summary>
@@ -75,8 +75,8 @@ public partial class PresentationDocument
     /// <returns>A new instance of PresentationDocument.</returns>
     public static PresentationDocument FromFlatOpcString(string text)
         => CreateDefaultBuilder()
-            .UseFlatOpcTemplate(text)
             .Build()
+            .WithFlatOpcTemplate(text)
             .Open();
 
     /// <summary>
@@ -89,8 +89,8 @@ public partial class PresentationDocument
     /// <returns>A new instance of PresentationDocument.</returns>
     public static PresentationDocument FromFlatOpcString(string text, Stream stream, bool isEditable)
         => CreateDefaultBuilder()
-            .UseFlatOpcTemplate(text, isEditable)
             .Build()
+            .WithFlatOpcTemplate(text, isEditable)
             .Open(stream, PackageOpenMode.Create);
 
     /// <summary>
@@ -103,8 +103,8 @@ public partial class PresentationDocument
     /// <returns>A new instance of PresentationDocument.</returns>
     public static PresentationDocument FromFlatOpcString(string text, string path, bool isEditable)
         => CreateDefaultBuilder()
-            .UseFlatOpcTemplate(text, isEditable)
             .Build()
+            .WithFlatOpcTemplate(text, isEditable)
             .Open(path, PackageOpenMode.Create);
 
     /// <summary>
@@ -116,7 +116,7 @@ public partial class PresentationDocument
     /// <returns>A new instance of PresentationDocument.</returns>
     public static PresentationDocument FromFlatOpcString(string text, Package package)
         => CreateDefaultBuilder()
-            .UseFlatOpcTemplate(text)
             .Build()
+            .WithFlatOpcTemplate(text)
             .Open(package);
 }
