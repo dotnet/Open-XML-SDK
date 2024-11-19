@@ -17,9 +17,9 @@ public partial class SpreadsheetDocument
     /// <param name="document">The document in Flat OPC format.</param>
     /// <returns>A new instance of SpreadsheetDocument.</returns>
     public static SpreadsheetDocument FromFlatOpcDocument(XDocument document)
-        => CreateDefaultBuilder()
-            .UseFlatOpcTemplate(document)
+        => DefaultBuilder
             .Build()
+            .WithFlatOpcTemplate(document)
             .Open();
 
     /// <summary>
@@ -31,9 +31,9 @@ public partial class SpreadsheetDocument
     /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
     /// <returns>A new instance of SpreadsheetDocument.</returns>
     public static SpreadsheetDocument FromFlatOpcDocument(XDocument document, Stream stream, bool isEditable)
-        => CreateDefaultBuilder()
-            .UseFlatOpcTemplate(document, isEditable)
+        => DefaultBuilder
             .Build()
+            .WithFlatOpcTemplate(document, isEditable)
             .Open(stream, PackageOpenMode.Create);
 
     /// <summary>
@@ -45,9 +45,9 @@ public partial class SpreadsheetDocument
     /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
     /// <returns>A new instance of SpreadsheetDocument.</returns>
     public static SpreadsheetDocument FromFlatOpcDocument(XDocument document, string path, bool isEditable)
-        => CreateDefaultBuilder()
-            .UseFlatOpcTemplate(document, isEditable)
+        => DefaultBuilder
             .Build()
+            .WithFlatOpcTemplate(document, isEditable)
             .Open(path, PackageOpenMode.Create);
 
     /// <summary>
@@ -58,9 +58,9 @@ public partial class SpreadsheetDocument
     /// <param name="package">The specified instance of Package.</param>
     /// <returns>A new instance of SpreadsheetDocument.</returns>
     public static SpreadsheetDocument FromFlatOpcDocument(XDocument document, Package package)
-        => CreateDefaultBuilder()
-            .UseFlatOpcTemplate(document)
+        => DefaultBuilder
             .Build()
+            .WithFlatOpcTemplate(document)
             .Open(package);
 
     /// <summary>
@@ -71,9 +71,9 @@ public partial class SpreadsheetDocument
     /// <param name="text">The string in Flat OPC format.</param>
     /// <returns>A new instance of SpreadsheetDocument.</returns>
     public static SpreadsheetDocument FromFlatOpcString(string text)
-        => CreateDefaultBuilder()
-            .UseFlatOpcTemplate(text)
+        => DefaultBuilder
             .Build()
+            .WithFlatOpcTemplate(text)
             .Open();
 
     /// <summary>
@@ -85,9 +85,9 @@ public partial class SpreadsheetDocument
     /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
     /// <returns>A new instance of SpreadsheetDocument.</returns>
     public static SpreadsheetDocument FromFlatOpcString(string text, Stream stream, bool isEditable)
-        => CreateDefaultBuilder()
-            .UseFlatOpcTemplate(text, isEditable)
+        => DefaultBuilder
             .Build()
+            .WithFlatOpcTemplate(text, isEditable)
             .Open(stream, PackageOpenMode.Create);
 
     /// <summary>
@@ -99,9 +99,9 @@ public partial class SpreadsheetDocument
     /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
     /// <returns>A new instance of SpreadsheetDocument.</returns>
     public static SpreadsheetDocument FromFlatOpcString(string text, string path, bool isEditable)
-        => CreateDefaultBuilder()
-            .UseFlatOpcTemplate(text, isEditable)
+        => DefaultBuilder
             .Build()
+            .WithFlatOpcTemplate(text, isEditable)
             .Open(path, PackageOpenMode.Create);
 
     /// <summary>
@@ -112,8 +112,8 @@ public partial class SpreadsheetDocument
     /// <param name="package">The <see cref="Package"/> of the target SpreadsheetDocument.</param>
     /// <returns>A new instance of SpreadsheetDocument.</returns>
     public static SpreadsheetDocument FromFlatOpcString(string text, Package package)
-        => CreateDefaultBuilder()
-            .UseFlatOpcTemplate(text)
+        => DefaultBuilder
             .Build()
+            .WithFlatOpcTemplate(text)
             .Open(package);
 }

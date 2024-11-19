@@ -202,29 +202,29 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(path));
             }
 
-            return CreateDefaultBuilder()
-                .UseTemplate(path, WordprocessingDocumentType.Document)
-                .Use((package, next) =>
-                {
-                    next(package);
-
-                    if (isTemplateAttached)
-                    {
-                        // Create a relative or absolute external relationship to the template.
-                        // TODO: Check whether relative URIs are universally supported. They work in Office 2010.
-                        var documentSettingsPart = package.MainDocumentPart?.DocumentSettingsPart;
-
-                        if (documentSettingsPart is not null)
-                        {
-                            var relationship = documentSettingsPart.AddExternalRelationship(
-                                "http://schemas.openxmlformats.org/officeDocument/2006/relationships/attachedTemplate",
-                                new Uri(path, UriHelper.RelativeOrAbsolute));
-                            documentSettingsPart.Settings.AppendChild(new AttachedTemplate { Id = relationship.Id });
-                        }
-                    }
-                })
+            var factory = DefaultBuilder
                 .Build()
-                .Open(new MemoryStream(), PackageOpenMode.Create);
+                .WithTemplate(path, WordprocessingDocumentType.Document);
+
+            if (isTemplateAttached)
+            {
+                factory.Template += package =>
+                {
+                    // Create a relative or absolute external relationship to the template.
+                    // TODO: Check whether relative URIs are universally supported. They work in Office 2010.
+                    var documentSettingsPart = package.MainDocumentPart?.DocumentSettingsPart;
+
+                    if (documentSettingsPart is not null)
+                    {
+                        var relationship = documentSettingsPart.AddExternalRelationship(
+                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/attachedTemplate",
+                            new Uri(path, UriHelper.RelativeOrAbsolute));
+                        documentSettingsPart.Settings.AppendChild(new AttachedTemplate { Id = relationship.Id });
+                    }
+                };
+            }
+
+            return factory.Open(new MemoryStream(), PackageOpenMode.Create);
         }
 
         /// <summary>

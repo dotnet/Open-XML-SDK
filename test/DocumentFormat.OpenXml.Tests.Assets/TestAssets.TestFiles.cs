@@ -54,6 +54,10 @@ namespace DocumentFormat.OpenXml.Tests
 
             public const string HelloO14 = "TestFiles.HelloO14.docx";
 
+            public const string HelloWorldDocx = "TestFiles.HelloWorld.docx";
+
+            public const string HelloWorldFlatOpc = "TestFiles.HelloWorldFlatOpc.xml";
+
             public const string Hyperlink = "TestFiles.Hyperlink.docx";
 
             public const string Image = "TestFiles.Image.png";

@@ -13,9 +13,9 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
     where TPackage : OpenXmlPackage
 {
     private Dictionary<string, object?>? _properties;
-    private PackageInitializerDelegate<TPackage>? _pipeline;
+    private PackageDelegate<TPackage>? _pipeline;
     private bool _isLocked;
-    private List<Func<PackageInitializerDelegate<TPackage>, PackageInitializerDelegate<TPackage>>>? _middleware;
+    private List<Func<PackageDelegate<TPackage>, PackageDelegate<TPackage>>>? _middleware;
 
     public IDictionary<string, object?> Properties => _properties ??= new();
 
@@ -37,7 +37,7 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
         }
     }
 
-    public IPackageBuilder<TPackage> Use(Func<PackageInitializerDelegate<TPackage>, PackageInitializerDelegate<TPackage>> configure)
+    public IPackageBuilder<TPackage> Use(Func<PackageDelegate<TPackage>, PackageDelegate<TPackage>> configure)
     {
         if (_isLocked)
         {
@@ -58,7 +58,7 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
     public IPackageFactory<TPackage> Build() => new Factory(Create, BuildPipeline());
 
     [MemberNotNull(nameof(_pipeline))]
-    private PackageInitializerDelegate<TPackage> BuildPipeline()
+    private PackageDelegate<TPackage> BuildPipeline()
     {
         _isLocked = true;
 
@@ -68,11 +68,11 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
         }
 
         var factory = new PackageFactoryFeature(Clone());
-        var pipeline = new PackageInitializerDelegate<TPackage>(factory.PipelineTerminator);
+        var pipeline = new PackageDelegate<TPackage>(factory.PipelineTerminator);
 
         if (_middleware is not null)
         {
-            for (int i = _middleware.Count - 1; i >= 0; i--)
+            for (var i = _middleware.Count - 1; i >= 0; i--)
             {
                 pipeline = _middleware[i](pipeline);
             }
@@ -84,20 +84,27 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
     private sealed class Factory : IPackageFactory<TPackage>
     {
         private readonly Func<TPackage> _package;
-        private readonly PackageInitializerDelegate<TPackage> _pipeline;
+        private readonly PackageDelegate<TPackage> _pipeline;
 
-        public Factory(Func<TPackage> package, PackageInitializerDelegate<TPackage> pipeline)
+        public Factory(Func<TPackage> package, PackageDelegate<TPackage> pipeline)
         {
             _package = package;
             _pipeline = pipeline;
         }
+
+        public PackageDelegate<TPackage>? Template { get; set; }
+
+        public IPackageFactory<TPackage> New() => new Factory(_package, _pipeline);
 
         public TPackage Create(IPackageInitializer initializer)
         {
             var package = _package();
 
             initializer.Initialize(package);
+
+            package.Features.Set<TemplateFeature>(new TemplateFeature(Template));
             _pipeline(package);
+            package.Features.Set<TemplateFeature>(null);
 
             return package;
         }
@@ -114,6 +121,23 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
         public void PipelineTerminator(TPackage package)
         {
             package.Features.Set<IPackageFactoryFeature<TPackage>>(this);
+
+            if (package.Features.Get<TemplateFeature>() is { } feature)
+            {
+                feature.Initialize(package);
+            }
         }
+    }
+
+    private sealed class TemplateFeature
+    {
+        private readonly PackageDelegate<TPackage>? _initializer;
+
+        public TemplateFeature(PackageDelegate<TPackage>? initializer)
+        {
+            _initializer = initializer;
+        }
+
+        public void Initialize(TPackage package) => _initializer?.Invoke(package);
     }
 }
