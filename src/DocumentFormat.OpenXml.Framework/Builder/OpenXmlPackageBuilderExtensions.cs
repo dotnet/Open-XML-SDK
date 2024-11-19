@@ -74,14 +74,14 @@ internal static class OpenXmlPackageBuilderExtensions
         where TPackage : OpenXmlPackage
         => builder.Create(new StreamPackageFeature(new MemoryStream(), PackageOpenMode.Create));
 
-    internal static TPackage Use<TPackage>(this TPackage package, PackageInitializerDelegate<TPackage> action)
+    internal static TPackage Use<TPackage>(this TPackage package, PackageDelegate<TPackage> action)
         where TPackage : OpenXmlPackage
     {
         action(package);
         return package;
     }
 
-    internal static IPackageBuilder<TPackage> Use<TPackage>(this IPackageBuilder<TPackage> builder, PackageInitializerDelegate<TPackage> action)
+    internal static IPackageBuilder<TPackage> Use<TPackage>(this IPackageBuilder<TPackage> builder, PackageDelegate<TPackage> action)
         where TPackage : OpenXmlPackage
         => builder.Use((package, next) =>
         {
@@ -92,7 +92,7 @@ internal static class OpenXmlPackageBuilderExtensions
     /// <summary>
     /// Adds the <paramref name="middleware"/> to the builder for initializing a package.
     /// </summary>
-    public static IPackageBuilder<TPackage> Use<TPackage>(this IPackageBuilder<TPackage> builder, Action<TPackage, PackageInitializerDelegate<TPackage>> middleware)
+    public static IPackageBuilder<TPackage> Use<TPackage>(this IPackageBuilder<TPackage> builder, Action<TPackage, PackageDelegate<TPackage>> middleware)
         where TPackage : OpenXmlPackage
     {
         if (builder is null)

@@ -167,7 +167,7 @@ public static class FlatOpcExtensions
 
     internal static IPackageBuilder<TPackage> UseFlatOpcTemplate<TPackage>(this IPackageBuilder<TPackage> builder, XDocument document, bool? isEditable = default)
         where TPackage : OpenXmlPackage
-        => builder.WithInitializer(package =>
+        => builder.WithTemplate(package =>
         {
             var p = package.Features.GetRequired<IPackageFeature>().Package;
 

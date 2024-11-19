@@ -13,9 +13,9 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
     where TPackage : OpenXmlPackage
 {
     private Dictionary<string, object?>? _properties;
-    private PackageInitializerDelegate<TPackage>? _pipeline;
+    private PackageDelegate<TPackage>? _pipeline;
     private bool _isLocked;
-    private List<Func<PackageInitializerDelegate<TPackage>, PackageInitializerDelegate<TPackage>>>? _middleware;
+    private List<Func<PackageDelegate<TPackage>, PackageDelegate<TPackage>>>? _middleware;
 
     public IDictionary<string, object?> Properties => _properties ??= new();
 
@@ -37,7 +37,7 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
         }
     }
 
-    public IPackageBuilder<TPackage> Use(Func<PackageInitializerDelegate<TPackage>, PackageInitializerDelegate<TPackage>> configure)
+    public IPackageBuilder<TPackage> Use(Func<PackageDelegate<TPackage>, PackageDelegate<TPackage>> configure)
     {
         if (_isLocked)
         {
@@ -55,10 +55,10 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
 
     public abstract TPackage Create();
 
-    public IPackageFactory<TPackage> Build() => new Factory(this.GetInitializers(), Create, BuildPipeline());
+    public IPackageFactory<TPackage> Build() => new Factory(this.GetTemplate(), Create, BuildPipeline());
 
     [MemberNotNull(nameof(_pipeline))]
-    private PackageInitializerDelegate<TPackage> BuildPipeline()
+    private PackageDelegate<TPackage> BuildPipeline()
     {
         _isLocked = true;
 
@@ -68,7 +68,7 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
         }
 
         var factory = new PackageFactoryFeature(Clone());
-        var pipeline = new PackageInitializerDelegate<TPackage>(factory.PipelineTerminator);
+        var pipeline = new PackageDelegate<TPackage>(factory.PipelineTerminator);
 
         if (_middleware is not null)
         {
@@ -83,13 +83,13 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
 
     private sealed class Factory : IPackageFactory<TPackage>
     {
-        private readonly List<IPackageInitializer>? _initializers;
+        private readonly PackageDelegate<TPackage>? _template;
         private readonly Func<TPackage> _package;
-        private readonly PackageInitializerDelegate<TPackage> _pipeline;
+        private readonly PackageDelegate<TPackage> _pipeline;
 
-        public Factory(List<IPackageInitializer>? initializers, Func<TPackage> package, PackageInitializerDelegate<TPackage> pipeline)
+        public Factory(PackageDelegate<TPackage>? template, Func<TPackage> package, PackageDelegate<TPackage> pipeline)
         {
-            _initializers = initializers;
+            _template = template;
             _package = package;
             _pipeline = pipeline;
         }
@@ -100,19 +100,24 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
 
             initializer.Initialize(package);
 
-            if (_initializers is not null)
-            {
-                package.Features.Set(_initializers);
-                _pipeline(package);
-                package.Features.Set<List<IPackageInitializer>>(null);
-            }
-            else
-            {
-                _pipeline(package);
-            }
+            package.Features.Set<TemplateFeature>(new TemplateFeature(_template));
+            _pipeline(package);
+            package.Features.Set<TemplateFeature>(null);
 
             return package;
         }
+    }
+
+    private sealed class TemplateFeature
+    {
+        private readonly PackageDelegate<TPackage>? _initializer;
+
+        public TemplateFeature(PackageDelegate<TPackage>? initializer)
+        {
+            _initializer = initializer;
+        }
+
+        public void Initialize(TPackage package) => _initializer?.Invoke(package);
     }
 
     private sealed class PackageFactoryFeature : IPackageFactoryFeature<TPackage>
@@ -127,12 +132,9 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
         {
             package.Features.Set<IPackageFactoryFeature<TPackage>>(this);
 
-            if (package.Features.Get<List<IPackageInitializer>>() is { } initializers)
+            if (package.Features.Get<TemplateFeature>() is { } feature)
             {
-                foreach (var initializer in initializers)
-                {
-                    initializer.Initialize(package);
-                }
+                feature.Initialize(package);
             }
         }
     }

@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Builder;
 /// <summary>
 /// A delegate for initializing a package.
 /// </summary>
-internal delegate void PackageInitializerDelegate<TPackage>(TPackage package);
+internal delegate void PackageDelegate<TPackage>(TPackage package);
 
 /// <summary>
 /// Defines a builder to create an initialization pipeline for a <typeparamref name="TPackage"/>.
@@ -32,7 +32,7 @@ internal interface IPackageBuilder<TPackage>
     /// </summary>
     /// <param name="configure">The middleware to add.</param>
     /// <returns>The <see cref="IPackageBuilder{TPackage}"/>.</returns>
-    IPackageBuilder<TPackage> Use(Func<PackageInitializerDelegate<TPackage>, PackageInitializerDelegate<TPackage>> configure);
+    IPackageBuilder<TPackage> Use(Func<PackageDelegate<TPackage>, PackageDelegate<TPackage>> configure);
 
     /// <summary>
     /// Create a copy of the builder that will be independent of the original, but retains the existing middleware and properties.

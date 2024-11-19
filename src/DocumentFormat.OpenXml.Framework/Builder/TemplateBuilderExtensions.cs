@@ -61,7 +61,7 @@ internal static class TemplateBuilderExtensions
 
         public IPackageBuilder<TPackage> Clone() => new TemplateBuilder<TPackage>(_otherBuilder.Clone(), _templateFactory, _onLoad);
 
-        public IPackageBuilder<TPackage> Use(Func<PackageInitializerDelegate<TPackage>, PackageInitializerDelegate<TPackage>> configure)
+        public IPackageBuilder<TPackage> Use(Func<PackageDelegate<TPackage>, PackageDelegate<TPackage>> configure)
         {
             _otherBuilder.Use(configure);
             return this;
