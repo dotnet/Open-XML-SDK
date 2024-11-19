@@ -12518,18 +12518,6 @@
           "Name": "p14:CT_ShowEventRecordList/p14:showEvtLst"
         },
         {
-          "Name": "sl:CT_SchemaLibrary/sl:schemaLibrary"
-        },
-        {
-          "Name": "m:CT_MathPr/m:mathPr"
-        },
-        {
-          "Name": "m:CT_OMathPara/m:oMathPara"
-        },
-        {
-          "Name": "m:CT_OMath/m:oMath"
-        },
-        {
           "Name": "w:CT_Recipients/w:recipients"
         },
         {
@@ -12642,6 +12630,18 @@
         },
         {
           "Name": "w14:CT_SdtCheckbox/w14:checkbox"
+        },
+        {
+          "Name": "sl:CT_SchemaLibrary/sl:schemaLibrary"
+        },
+        {
+          "Name": "m:CT_MathPr/m:mathPr"
+        },
+        {
+          "Name": "m:CT_OMathPara/m:oMathPara"
+        },
+        {
+          "Name": "m:CT_OMath/m:oMath"
         },
         {
           "Name": "v:CT_Shape/v:shape"
