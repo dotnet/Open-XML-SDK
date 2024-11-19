@@ -249,7 +249,7 @@ public static class CloneableExtensions
         {
             var existing = destination.Features.GetRequired<IPartUriFeature>();
             destination.Features.Set<IPartUriFeature>(new CloningFeatures(existing));
-
+           
             source.Save();
 
             foreach (var part in source.Parts)

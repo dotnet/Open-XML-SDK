@@ -55,7 +55,7 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
 
     public abstract TPackage Create();
 
-    public IPackageFactory<TPackage> Build() => new Factory(Create, BuildPipeline());
+    public IPackageFactory<TPackage> Build() => new Factory(this.GetInitializers(), Create, BuildPipeline());
 
     [MemberNotNull(nameof(_pipeline))]
     private PackageInitializerDelegate<TPackage> BuildPipeline()
@@ -83,11 +83,13 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
 
     private sealed class Factory : IPackageFactory<TPackage>
     {
+        private readonly List<IPackageInitializer>? _initializers;
         private readonly Func<TPackage> _package;
         private readonly PackageInitializerDelegate<TPackage> _pipeline;
 
-        public Factory(Func<TPackage> package, PackageInitializerDelegate<TPackage> pipeline)
+        public Factory(List<IPackageInitializer>? initializers, Func<TPackage> package, PackageInitializerDelegate<TPackage> pipeline)
         {
+            _initializers = initializers;
             _package = package;
             _pipeline = pipeline;
         }
@@ -97,7 +99,17 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
             var package = _package();
 
             initializer.Initialize(package);
-            _pipeline(package);
+
+            if (_initializers is not null)
+            {
+                package.Features.Set(_initializers);
+                _pipeline(package);
+                package.Features.Set<List<IPackageInitializer>>(null);
+            }
+            else
+            {
+                _pipeline(package);
+            }
 
             return package;
         }
@@ -114,6 +126,14 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
         public void PipelineTerminator(TPackage package)
         {
             package.Features.Set<IPackageFactoryFeature<TPackage>>(this);
+
+            if (package.Features.Get<List<IPackageInitializer>>() is { } initializers)
+            {
+                foreach (var initializer in initializers)
+                {
+                    initializer.Initialize(package);
+                }
+            }
         }
     }
 }
