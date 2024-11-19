@@ -10,6 +10,7 @@
     <PackageReference Include="NuGet.Packaging" />
     <PackageReference Include="NuGet.Protocol" />
     <PackageReference Include="NuGet.Resolver" />
+    <PackageReference Include="System.Text.Json" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\gen\DocumentFormat.OpenXml.Generator\DocumentFormat.OpenXml.Generator.csproj" />
