@@ -191,10 +191,10 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
 
-            using (Stream partStream = openXmlPart.GetStream(FileMode.Create))
-            {
-                Save(partStream);
-            }
+            // If we're saving the existing root to the the part, we don't need to unload the root as they're already equal
+            using var partStream = openXmlPart.GetStream(FileMode.Create, unloadRootOnChange: !ReferenceEquals(this, openXmlPart.PartRootElement));
+
+            Save(partStream);
         }
 
         /// <summary>

@@ -6,7 +6,7 @@ using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Framework.Metadata
 {
-    [DebuggerDisplay("{Namespace}:{Name}")]
+    [DebuggerDisplay("{QName,nq}")]
     internal sealed class ElementFactory
     {
         private readonly Func<OpenXmlElement> _factory;
