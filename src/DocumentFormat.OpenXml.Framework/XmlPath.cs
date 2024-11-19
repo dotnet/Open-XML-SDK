@@ -105,7 +105,7 @@ namespace DocumentFormat.OpenXml
             return new XmlPath(part);
         }
 
-        private static string TryBuildXPath(Stack<OpenXmlElement> elements, [MaybeNullWhen(false)] out XmlNamespaceManager namespaces)
+        private static string TryBuildXPath(Stack<OpenXmlElement> elements, out XmlNamespaceManager? namespaces)
         {
             if (elements.Count == 0)
             {
