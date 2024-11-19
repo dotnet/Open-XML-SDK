@@ -82,7 +82,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <LangVersion>11.0</LangVersion>
+    <LangVersion>13</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup>
