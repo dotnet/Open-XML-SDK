@@ -50,7 +50,17 @@ internal class StreamPackageFeature : PackageFeatureBase, IDisposable, IPackageS
         Mode = initialMode == FileMode.Create ? Mode = FileMode.Open : initialMode;
         Access = openMode == PackageOpenMode.Read ? FileAccess.Read : FileAccess.ReadWrite;
 
-        InitializePackage(initialMode, Access);
+        try
+        {
+            InitializePackage(initialMode, Access);
+        }
+        catch when (isOwned)
+        {
+            // Ensure that the stream if created is disposed before leaving the constructor so we don't hold onto it
+            _stream?.Dispose();
+            throw;
+        }
+
         _isOwned = isOwned;
     }
 
