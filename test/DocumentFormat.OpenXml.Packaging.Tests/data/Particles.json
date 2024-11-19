@@ -65324,7 +65324,16 @@
        "ElementType": "DocumentFormat.OpenXml.Office2021.Excel.Pivot.Xsdboolean"
       },
       {
+       "ElementType": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.PivotCacheRichInfo"
+      },
+      {
        "ElementType": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotAutoRefresh.Xsdboolean"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays.PivotCacheDynamicArray"
       },
       {
        "MinOccurs": 0,

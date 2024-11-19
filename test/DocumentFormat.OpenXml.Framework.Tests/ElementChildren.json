@@ -22750,6 +22750,10 @@
     "Children": []
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.PivotCacheRichInfo",
+    "Children": []
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo",
     "Children": [
       {
@@ -22865,6 +22869,10 @@
   },
   {
     "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotAutoRefresh.Xsdboolean",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays.PivotCacheDynamicArray",
     "Children": []
   },
   {
@@ -45135,8 +45143,20 @@
         "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2020/pivotNov2020"
       },
       {
+        "Name": "richInfo",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/pivotRichData"
+      },
+      {
         "Name": "cacheVersionInfo",
         "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo"
+      },
+      {
+        "Name": "autoRefresh",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2024/pivotAutoRefresh"
+      },
+      {
+        "Name": "pivotCacheDynamicArray",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2024/pivotDynamicArrays"
       }
     ]
   },
