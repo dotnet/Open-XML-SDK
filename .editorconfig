@@ -89,7 +89,7 @@ csharp_style_prefer_top_level_statements = true:silent
 csharp_style_expression_bodied_methods = when_on_single_line:silent
 csharp_style_expression_bodied_constructors = false:silent
 csharp_style_expression_bodied_operators = false:silent
-csharp_style_expression_bodied_properties = true:silent
+csharp_style_expression_bodied_properties = true:suggestion
 csharp_style_expression_bodied_indexers = true:silent
 csharp_style_expression_bodied_accessors = true:silent
 csharp_style_expression_bodied_lambdas = true:silent
@@ -99,6 +99,15 @@ csharp_style_throw_expression = true:suggestion
 
 # IDE0058: Expression value is never used
 dotnet_diagnostic.IDE0058.severity = suggestion
+
+# IDE0161: Convert to file-scoped namespace
+dotnet_diagnostic.IDE0161.severity = suggestion
+
+# IDE0290: Use primary constructor
+dotnet_diagnostic.IDE0290.severity = suggestion
+
+# IDE0025: Use expression body for property
+dotnet_diagnostic.IDE0025.severity = suggestion
 
 [*.{cs,vb}]
 #### Naming styles ####
@@ -170,3 +179,6 @@ dotnet_diagnostic.CA1043.severity = suggestion
 
 # IDE0046: Convert to conditional expression
 dotnet_diagnostic.IDE0046.severity = suggestion
+
+# IDE0028: Simplify collection initialization
+dotnet_diagnostic.IDE0028.severity = suggestion
