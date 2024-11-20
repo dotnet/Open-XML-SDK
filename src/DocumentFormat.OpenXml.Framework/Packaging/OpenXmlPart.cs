@@ -236,9 +236,10 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="mode">The I/O mode to be used to open the content stream.</param>
         /// <returns>The content stream of the part. </returns>
         public Stream GetStream(FileMode mode)
-        {
-            return GetStream(mode, Features.GetRequired<IPackageFeature>().Package.FileOpenAccess);
-        }
+            => GetStream(mode, unloadRootOnChange: true);
+
+        internal Stream GetStream(FileMode mode, bool unloadRootOnChange)
+            => GetStream(mode, Features.GetRequired<IPackageFeature>().Package.FileOpenAccess, unloadRootOnChange);
 
         /// <summary>
         /// Returns the part content stream that was opened using a specified FileMode and FileAccess.
@@ -247,20 +248,26 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="access">The access permissions to be used to open the content stream.</param>
         /// <returns>The content stream of the part. </returns>
         public Stream GetStream(FileMode mode, FileAccess access)
+            => GetStream(mode, access, true);
+
+        internal Stream GetStream(FileMode mode, FileAccess access, bool unloadRootOnChange)
         {
             ThrowIfObjectDisposed();
 
             var stream = PackagePart.GetStream(mode, access);
 
-            if (mode is FileMode.Create || stream.Length == 0)
+            if (unloadRootOnChange)
             {
-                UnloadRootElement();
-                return new UnloadingRootElementStream(this, stream);
-            }
+                if (mode is FileMode.Create || stream.Length == 0)
+                {
+                    UnloadRootElement();
+                    return new UnloadingRootElementStream(this, stream);
+                }
 
-            if (stream.CanWrite)
-            {
-                return new UnloadingRootElementStream(this, stream);
+                if (stream.CanWrite)
+                {
+                    return new UnloadingRootElementStream(this, stream);
+                }
             }
 
             return stream;
