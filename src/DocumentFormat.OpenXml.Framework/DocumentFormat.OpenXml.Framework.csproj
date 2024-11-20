@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <IsShipped>true</IsShipped>
     <NoWarn>$(NoWarn);3003</NoWarn>
     <IncludeFrameworkShims>true</IncludeFrameworkShims>
     <IsNew>true</IsNew>    

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Project>
   <Choose>
     <When Condition="$(IsTestProject)">
@@ -36,5 +37,6 @@
     <MSBuild Projects="$(MSBuildProjectFile)" Targets="Publish" Properties="TargetFramework=%(_PublishFramework.Identity)" />
   </Target>
   <Target Name="PublishAll" Condition="$(IsTestProject) OR $(IsBenchmarkProject)" DependsOnTargets="PublishProjectIfFrameworkSet;PublishProjectForAllFrameworksIfFrameworkUnset" />
-  <Import Project="..\Directory.Build.targets" />
+
+	<Import Project="$(MSBuildThisFileDirectory)..\Directory.Build.targets" />
 </Project>

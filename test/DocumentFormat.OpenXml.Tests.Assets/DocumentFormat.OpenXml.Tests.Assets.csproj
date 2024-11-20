@@ -3,7 +3,6 @@
     <TargetFrameworks>$(AssetsTargetFrameworks)</TargetFrameworks>
     <NoWarn>$(NoWarn);CA1822;CA1034</NoWarn>
     <IsTestProject>false</IsTestProject>
-    <IsPackable>false</IsPackable>
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="assets\**\*" />
