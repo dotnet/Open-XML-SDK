@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.DotNet.BuildTools.GenAPI" Version="3.0.0-preview4-06015-01" />
+    <PackageReference Include="Microsoft.DotNet.BuildTools.GenAPI" />
   </ItemGroup>
 
 </Project>
