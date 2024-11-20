@@ -39,12 +39,10 @@ internal abstract partial class TypedPackageFeatureCollection<TDocumentType, TMa
             return existing;
         }
 
-        var hasRelationships = false;
         var package = this.GetRequired<IPackageFeature>().Package;
 
         foreach (var relationship in package.Relationships)
         {
-            hasRelationships = true;
             if (relationship.RelationshipType == RelationshipType)
             {
                 var uriTarget = PackUriHelper.ResolvePartUri(OpenXmlPackage.Uri, relationship.TargetUri);
@@ -55,14 +53,10 @@ internal abstract partial class TypedPackageFeatureCollection<TDocumentType, TMa
             }
         }
 
-        if (!hasRelationships)
+        // If document type hasn't been set by content, start with the TDocumentType default value
+        if (!_documentType.HasValue)
         {
-            _documentType = default;
-        }
-
-        if (_documentType is null)
-        {
-            throw new OpenXmlPackageException(ExceptionMessages.NoMainPart);
+            _documentType = default(TDocumentType);
         }
 
         return _documentType.Value;

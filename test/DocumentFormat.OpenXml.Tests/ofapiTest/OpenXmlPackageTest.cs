@@ -570,6 +570,26 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(PresentationDocumentType.Template, doc.DocumentType);
         }
 
+        [Fact]
+        public void DocumentTypeUsesDefault()
+        {
+            // Arrange
+            using var ms = new MemoryStream();
+
+            // Note - if a main part is not created, then no type is persisted
+            using (var emptySpreadsheet = SpreadsheetDocument.Create(ms, SpreadsheetDocumentType.MacroEnabledTemplate))
+            {
+            }
+
+            ms.Position = 0;
+
+            // Assert/Act
+            using (var result = SpreadsheetDocument.Open(ms, true))
+            {
+                Assert.Equal(default, result.DocumentType);
+            }
+        }
+
         /// <summary>
         /// ChangeDocumentTypeInternalTest.
         /// </summary>
