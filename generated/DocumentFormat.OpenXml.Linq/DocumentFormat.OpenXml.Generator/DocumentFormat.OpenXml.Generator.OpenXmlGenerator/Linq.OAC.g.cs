@@ -304,6 +304,20 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName inkMkLst = oac + "inkMkLst";
 
         /// <summary>
+        /// Represents the oac:lineProps XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="DSP.spPr" />.</description></item>
+        /// <item><description>has the following child XML elements: <see cref="A.bevel" />, <see cref="A.custDash" />, <see cref="A.extLst" />, <see cref="A.gradFill" />, <see cref="A.headEnd" />, <see cref="A.miter" />, <see cref="A.noFill" />, <see cref="A.pattFill" />, <see cref="A.prstDash" />, <see cref="A.round" />, <see cref="A.solidFill" />, <see cref="A.tailEnd" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.algn" />, <see cref="NoNamespace.cap" />, <see cref="NoNamespace.cmpd" />, <see cref="NoNamespace.w" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: LinePropertiesType.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName lineProps = oac + "lineProps";
+
+        /// <summary>
         /// Represents the oac:model3DMkLst XML element.
         /// </summary>
         /// <remarks>
@@ -314,6 +328,19 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName model3DMkLst = oac + "model3DMkLst";
+
+        /// <summary>
+        /// Represents the oac:off XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="A.xfrm" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.x" />, <see cref="NoNamespace.y" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: Point2DType.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName off = oac + "off";
 
         /// <summary>
         /// Represents the oac:origImgData XML element.
@@ -351,6 +378,20 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName picMkLst = oac + "picMkLst";
+
+        /// <summary>
+        /// Represents the oac:pPr XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="A.lstStyle" />.</description></item>
+        /// <item><description>has the following child XML elements: <see cref="A.buAutoNum" />, <see cref="A.buBlip" />, <see cref="A.buChar" />, <see cref="A.buClr" />, <see cref="A.buClrTx" />, <see cref="A.buFont" />, <see cref="A.buFontTx" />, <see cref="A.buNone" />, <see cref="A.buSzPct" />, <see cref="A.buSzPts" />, <see cref="A.buSzTx" />, <see cref="A.defRPr" />, <see cref="A.extLst" />, <see cref="A.lnSpc" />, <see cref="A.spcAft" />, <see cref="A.spcBef" />, <see cref="A.tabLst" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.algn" />, <see cref="NoNamespace.defTabSz" />, <see cref="NoNamespace.eaLnBrk" />, <see cref="NoNamespace.fontAlgn" />, <see cref="NoNamespace.hangingPunct" />, <see cref="NoNamespace.indent" />, <see cref="NoNamespace.latinLnBrk" />, <see cref="NoNamespace.lvl" />, <see cref="NoNamespace.marL" />, <see cref="NoNamespace.marR" />, <see cref="NoNamespace.rtl" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: TextParagraphPropertiesType.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName pPr = oac + "pPr";
 
         /// <summary>
         /// Represents the oac:spMk XML element.

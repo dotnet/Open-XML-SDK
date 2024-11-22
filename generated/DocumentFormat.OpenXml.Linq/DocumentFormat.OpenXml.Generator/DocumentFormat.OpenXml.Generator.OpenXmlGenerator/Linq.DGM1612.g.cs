@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="DGM.ext" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="DGM.ext" />, <see cref="P.presentation" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="A.defPPr" />, <see cref="A.extLst" />, <see cref="A.lvl1pPr" />, <see cref="A.lvl2pPr" />, <see cref="A.lvl3pPr" />, <see cref="A.lvl4pPr" />, <see cref="A.lvl5pPr" />, <see cref="A.lvl6pPr" />, <see cref="A.lvl7pPr" />, <see cref="A.lvl8pPr" />, <see cref="A.lvl9pPr" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TextListStyleType.</description></item>
         /// </list>

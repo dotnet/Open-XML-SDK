@@ -45,7 +45,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="filteredCategoryTitle" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="C.ser" />, <see cref="filteredCategoryTitle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="C.multiLvlStrRef" />, <see cref="C.numLit" />, <see cref="C.numRef" />, <see cref="C.strLit" />, <see cref="C.strRef" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AxisDataSourceType.</description></item>
         /// </list>

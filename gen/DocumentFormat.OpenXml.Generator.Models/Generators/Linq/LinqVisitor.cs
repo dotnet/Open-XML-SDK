@@ -104,6 +104,10 @@ internal class LinqVisitor(OpenXmlGeneratorServices services)
                     }
                 }
             }
+            else if (services.DataSource.TypedClasses.FirstOrDefault(t => t.ClassName == className) is { } @class && services.TryFindType(@class.Name, out var found))
+            {
+                yield return found;
+            }
         }
     }
 
