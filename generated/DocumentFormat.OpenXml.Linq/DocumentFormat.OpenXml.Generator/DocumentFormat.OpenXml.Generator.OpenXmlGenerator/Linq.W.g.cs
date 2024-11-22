@@ -276,6 +276,18 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName algorithmName = w + "algorithmName";
 
         /// <summary>
+        /// Represents the w:alias XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="sdtPr" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: SdtAlias.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName alias = w + "alias";
+
+        /// <summary>
         /// Represents the w:aliases XML element.
         /// </summary>
         /// <remarks>
@@ -875,6 +887,18 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName bg2 = w + "bg2";
 
         /// <summary>
+        /// Represents the w:bibliography XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="sdtPr" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: SdtContentBibliography.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName bibliography = w + "bibliography";
+
+        /// <summary>
         /// Represents the w:bidi XML element.
         /// </summary>
         /// <remarks>
@@ -1085,6 +1109,19 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName calcOnExit = w + "calcOnExit";
+
+        /// <summary>
+        /// Represents the w:calendar XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="date" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: Calendar.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName calendar = w + "calendar";
 
         /// <summary>
         /// Represents the w:cantSplit XML element.
@@ -1339,6 +1376,18 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName checkStyle = w + "checkStyle";
 
         /// <summary>
+        /// Represents the w:citation XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="sdtPr" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: SdtContentCitation.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName citation = w + "citation";
+
+        /// <summary>
         /// Represents the w:clear XML attribute.
         /// </summary>
         /// <remarks>
@@ -1528,6 +1577,20 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName combineBrackets = w + "combineBrackets";
+
+        /// <summary>
+        /// Represents the w:comboBox XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="sdtPr" />.</description></item>
+        /// <item><description>has the following child XML elements: <see cref="listItem" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="lastValue" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: SdtContentComboBox.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName comboBox = w + "comboBox";
 
         /// <summary>
         /// Represents the w:comment XML element.
@@ -2041,6 +2104,19 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName customXmlMoveToRangeStart = w + "customXmlMoveToRangeStart";
 
         /// <summary>
+        /// Represents the w:dataBinding XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="sdtPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="prefixMappings" />, <see cref="storeItemID" />, <see cref="xpath" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: DataBinding.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName dataBinding = w + "dataBinding";
+
+        /// <summary>
         /// Represents the w:dataSource XML element.
         /// </summary>
         /// <remarks>
@@ -2066,9 +2142,16 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName dataType = w + "dataType";
 
         /// <summary>
-        /// Represents the w:date XML attributes.
+        /// Represents the w:date XML element and attributes.
         /// </summary>
         /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="sdtPr" />.</description></item>
+        /// <item><description>has the following child XML elements: <see cref="calendar" />, <see cref="dateFormat" />, <see cref="lid" />, <see cref="storeMappedDataAs" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="fullDate" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: SdtContentDate.</description></item>
+        /// </list>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
         /// <item><description>is contained in the following XML elements: <see cref="cellMerge" />, <see cref="comment" />, <see cref="del" />, <see cref="ins" />, <see cref="numberingChange" />, <see cref="pPrChange" />, <see cref="rPrChange" />, <see cref="sectPrChange" />, <see cref="tblPrChange" />, <see cref="tblPrExChange" />, <see cref="tcPrChange" />, <see cref="trPrChange" />.</description></item>
@@ -2076,6 +2159,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName date = w + "date";
+
+        /// <summary>
+        /// Represents the w:dateFormat XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="date" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: DateFormat.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName dateFormat = w + "dateFormat";
 
         /// <summary>
         /// Represents the w:dayLong XML element.
@@ -2443,6 +2538,18 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName displayHorizontalDrawingGridEvery = w + "displayHorizontalDrawingGridEvery";
 
         /// <summary>
+        /// Represents the w:displayText XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="listItem" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: ListItem.DisplayText.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName displayText = w + "displayText";
+
+        /// <summary>
         /// Represents the w:displayVerticalDrawingGridEvery XML element.
         /// </summary>
         /// <remarks>
@@ -2583,14 +2690,14 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName docLocation = w + "docLocation";
 
         /// <summary>
-        /// Represents the w:docPart XML element.
+        /// Represents the w:docPart XML elements.
         /// </summary>
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="docParts" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="docParts" />, <see cref="placeholder" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="docPartBody" />, <see cref="docPartPr" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed classes: DocPart.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: DocPart, DocPartReference.</description></item>
         /// </list>
         /// </remarks>
         public static readonly XName docPart = w + "docPart";
@@ -2607,6 +2714,56 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName docPartBody = w + "docPartBody";
+
+        /// <summary>
+        /// Represents the w:docPartCategory XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="docPartList" />, <see cref="docPartObj" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: DocPartCategory.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName docPartCategory = w + "docPartCategory";
+
+        /// <summary>
+        /// Represents the w:docPartGallery XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="docPartList" />, <see cref="docPartObj" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: DocPartGallery.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName docPartGallery = w + "docPartGallery";
+
+        /// <summary>
+        /// Represents the w:docPartList XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="sdtPr" />.</description></item>
+        /// <item><description>has the following child XML elements: <see cref="docPartCategory" />, <see cref="docPartGallery" />, <see cref="docPartUnique" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: SdtContentDocPartList.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName docPartList = w + "docPartList";
+
+        /// <summary>
+        /// Represents the w:docPartObj XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="sdtPr" />.</description></item>
+        /// <item><description>has the following child XML elements: <see cref="docPartCategory" />, <see cref="docPartGallery" />, <see cref="docPartUnique" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: SdtContentDocPartObject.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName docPartObj = w + "docPartObj";
 
         /// <summary>
         /// Represents the w:docPartPr XML element.
@@ -2633,6 +2790,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName docParts = w + "docParts";
+
+        /// <summary>
+        /// Represents the w:docPartUnique XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="docPartList" />, <see cref="docPartObj" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: DocPartUnique.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName docPartUnique = w + "docPartUnique";
 
         /// <summary>
         /// Represents the w:document XML element.
@@ -3134,6 +3303,20 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName dropCap = w + "dropCap";
 
         /// <summary>
+        /// Represents the w:dropDownList XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="sdtPr" />.</description></item>
+        /// <item><description>has the following child XML elements: <see cref="listItem" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="lastValue" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: SdtContentDropDownList.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName dropDownList = w + "dropDownList";
+
+        /// <summary>
         /// Represents the w:dstrike XML element.
         /// </summary>
         /// <remarks>
@@ -3527,6 +3710,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName equalWidth = w + "equalWidth";
+
+        /// <summary>
+        /// Represents the w:equation XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="sdtPr" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: SdtContentEquation.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName equation = w + "equation";
 
         /// <summary>
         /// Represents the w:evenAndOddHeaders XML element.
@@ -4148,6 +4343,18 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName ftr = w + "ftr";
 
         /// <summary>
+        /// Represents the w:fullDate XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="date" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: SdtContentDate.FullDate.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName fullDate = w + "fullDate";
+
+        /// <summary>
         /// Represents the w:gallery XML element.
         /// </summary>
         /// <remarks>
@@ -4233,6 +4440,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName gridSpan = w + "gridSpan";
+
+        /// <summary>
+        /// Represents the w:group XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="sdtPr" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: SdtContentGroup.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName group = w + "group";
 
         /// <summary>
         /// Represents the w:growAutofit XML element.
@@ -4705,9 +4924,14 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName iCs = w + "iCs";
 
         /// <summary>
-        /// Represents the w:id XML attributes.
+        /// Represents the w:id XML element and attributes.
         /// </summary>
         /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="sdtPr" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: SdtId.</description></item>
+        /// </list>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
         /// <item><description>is contained in the following XML elements: <see cref="bookmarkStart" />, <see cref="cellMerge" />, <see cref="comment" />, <see cref="del" />, <see cref="div" />, <see cref="eastAsianLayout" />, <see cref="fitText" />, <see cref="ins" />, <see cref="numberingChange" />, <see cref="permEnd" />, <see cref="permStart" />, <see cref="pPrChange" />, <see cref="rPrChange" />, <see cref="sectPrChange" />, <see cref="tblGridChange" />, <see cref="tblPrChange" />, <see cref="tblPrExChange" />, <see cref="tcPrChange" />, <see cref="trPrChange" />.</description></item>
@@ -5021,6 +5245,18 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName lastRowLastColumn = w + "lastRowLastColumn";
 
         /// <summary>
+        /// Represents the w:lastValue XML attributes.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="comboBox" />, <see cref="dropDownList" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: SdtContentComboBox.LastValue, SdtContentDropDownList.LastValue.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName lastValue = w + "lastValue";
+
+        /// <summary>
         /// Represents the w:latentStyles XML element and attribute.
         /// </summary>
         /// <remarks>
@@ -5164,7 +5400,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="fieldMapData" />, <see cref="rubyPr" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="date" />, <see cref="fieldMapData" />, <see cref="rubyPr" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: LanguageId.</description></item>
         /// </list>
@@ -5292,6 +5528,19 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName listEntry = w + "listEntry";
 
         /// <summary>
+        /// Represents the w:listItem XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="comboBox" />, <see cref="dropDownList" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="displayText" />, <see cref="value" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: ListItem.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName listItem = w + "listItem";
+
+        /// <summary>
         /// Represents the w:listSeparator XML element.
         /// </summary>
         /// <remarks>
@@ -5315,6 +5564,19 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName lnNumType = w + "lnNumType";
+
+        /// <summary>
+        /// Represents the w:lock XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="sdtPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: Lock.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName @lock = w + "lock";
 
         /// <summary>
         /// Represents the w:locked XML element and attribute.
@@ -5753,6 +6015,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName multiLevelType = w + "multiLevelType";
+
+        /// <summary>
+        /// Represents the w:multiLine XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="text" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: SdtContentText.MultiLine.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName multiLine = w + "multiLine";
 
         /// <summary>
         /// Represents the w:mwSmallCaps XML element.
@@ -6635,6 +6909,18 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName pict = w + "pict";
 
         /// <summary>
+        /// Represents the w:picture XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="sdtPr" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: SdtContentPicture.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName picture = w + "picture";
+
+        /// <summary>
         /// Represents the w:pitch XML element.
         /// </summary>
         /// <remarks>
@@ -6658,6 +6944,19 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName pixelsPerInch = w + "pixelsPerInch";
+
+        /// <summary>
+        /// Represents the w:placeholder XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="sdtPr" />.</description></item>
+        /// <item><description>has the following child XML elements: <see cref="docPart" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: SdtPlaceholder.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName placeholder = w + "placeholder";
 
         /// <summary>
         /// Represents the w:pos XML elements and attributes.
@@ -6736,7 +7035,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="W15.dataBinding" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="dataBinding" />, <see cref="W15.dataBinding" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: DataBinding.PrefixMappings.</description></item>
         /// </list>
         /// </remarks>
@@ -7082,6 +7381,18 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName rFonts = w + "rFonts";
 
         /// <summary>
+        /// Represents the w:richText XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="sdtPr" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: SdtContentRichText.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName richText = w + "richText";
+
+        /// <summary>
         /// Represents the w:right XML elements and attributes.
         /// </summary>
         /// <remarks>
@@ -7128,7 +7439,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="M.ctrlPr" />, <see cref="M.r" />, <see cref="del" />, <see cref="ins" />, <see cref="lvl" />, <see cref="moveFrom" />, <see cref="moveTo" />, <see cref="pPr" />, <see cref="r" />, <see cref="rPrChange" />, <see cref="rPrDefault" />, <see cref="style" />, <see cref="tblStylePr" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="M.ctrlPr" />, <see cref="M.r" />, <see cref="del" />, <see cref="ins" />, <see cref="lvl" />, <see cref="moveFrom" />, <see cref="moveTo" />, <see cref="pPr" />, <see cref="r" />, <see cref="rPrChange" />, <see cref="rPrDefault" />, <see cref="sdtPr" />, <see cref="style" />, <see cref="tblStylePr" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="b" />, <see cref="bCs" />, <see cref="bdr" />, <see cref="caps" />, <see cref="color" />, <see cref="cs" />, <see cref="del" />, <see cref="dstrike" />, <see cref="eastAsianLayout" />, <see cref="effect" />, <see cref="em" />, <see cref="emboss" />, <see cref="fitText" />, <see cref="highlight" />, <see cref="i" />, <see cref="iCs" />, <see cref="imprint" />, <see cref="ins" />, <see cref="kern" />, <see cref="lang" />, <see cref="moveFrom" />, <see cref="moveTo" />, <see cref="noProof" />, <see cref="oMath" />, <see cref="outline" />, <see cref="position" />, <see cref="rFonts" />, <see cref="rPrChange" />, <see cref="rStyle" />, <see cref="rtl" />, <see cref="shadow" />, <see cref="shd" />, <see cref="smallCaps" />, <see cref="snapToGrid" />, <see cref="spacing" />, <see cref="specVanish" />, <see cref="strike" />, <see cref="sz" />, <see cref="szCs" />, <see cref="u" />, <see cref="vanish" />, <see cref="vertAlign" />, <see cref="w_" />, <see cref="webHidden" />, <see cref="W14.cntxtAlts" />, <see cref="W14.conflictDel" />, <see cref="W14.conflictIns" />, <see cref="W14.glow" />, <see cref="W14.ligatures" />, <see cref="W14.numForm" />, <see cref="W14.numSpacing" />, <see cref="W14.props3d" />, <see cref="W14.reflection" />, <see cref="W14.scene3d" />, <see cref="W14.shadow" />, <see cref="W14.stylisticSets" />, <see cref="W14.textFill" />, <see cref="W14.textOutline" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: NumberingSymbolRunProperties, ParagraphMarkRunProperties, PreviousParagraphMarkRunProperties, PreviousRunProperties, RunProperties, RunPropertiesBaseStyle, StyleRunProperties.</description></item>
         /// </list>
@@ -7521,6 +7832,19 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName sdtContent = w + "sdtContent";
 
         /// <summary>
+        /// Represents the w:sdtPr XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="hyperlink" />.</description></item>
+        /// <item><description>has the following child XML elements: <see cref="alias" />, <see cref="bibliography" />, <see cref="citation" />, <see cref="comboBox" />, <see cref="dataBinding" />, <see cref="date" />, <see cref="docPartList" />, <see cref="docPartObj" />, <see cref="dropDownList" />, <see cref="equation" />, <see cref="group" />, <see cref="id" />, <see cref="@lock" />, <see cref="picture" />, <see cref="placeholder" />, <see cref="richText" />, <see cref="rPr" />, <see cref="showingPlcHdr" />, <see cref="tag" />, <see cref="temporary" />, <see cref="text" />, <see cref="W14.checkbox" />, <see cref="W14.entityPicker" />, <see cref="W15.appearance" />, <see cref="W15.color" />, <see cref="W15.dataBinding" />, <see cref="W15.repeatingSection" />, <see cref="W15.repeatingSectionItem" />, <see cref="W15.webExtensionCreated" />, <see cref="W15.webExtensionLinked" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: SdtProperties.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName sdtPr = w + "sdtPr";
+
+        /// <summary>
         /// Represents the w:sectPr XML elements.
         /// </summary>
         /// <remarks>
@@ -7711,6 +8035,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName showEnvelope = w + "showEnvelope";
+
+        /// <summary>
+        /// Represents the w:showingPlcHdr XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="sdtPr" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: ShowingPlaceholder.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName showingPlcHdr = w + "showingPlcHdr";
 
         /// <summary>
         /// Represents the w:showXMLTags XML element.
@@ -7990,11 +8326,24 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="W15.dataBinding" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="dataBinding" />, <see cref="W15.dataBinding" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: DataBinding.StoreItemId.</description></item>
         /// </list>
         /// </remarks>
         public static readonly XName storeItemID = w + "storeItemID";
+
+        /// <summary>
+        /// Represents the w:storeMappedDataAs XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="date" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: SdtDateMappingType.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName storeMappedDataAs = w + "storeMappedDataAs";
 
         /// <summary>
         /// Represents the w:strictFirstAndLastChars XML element.
@@ -8413,6 +8762,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName tabs = w + "tabs";
+
+        /// <summary>
+        /// Represents the w:tag XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="sdtPr" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: Tag.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName tag = w + "tag";
 
         /// <summary>
         /// Represents the w:targetScreenSz XML element.
@@ -8861,6 +9222,18 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName tcW = w + "tcW";
 
         /// <summary>
+        /// Represents the w:temporary XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="sdtPr" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: TemporarySdt.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName temporary = w + "temporary";
+
+        /// <summary>
         /// Represents the w:tentative XML attribute.
         /// </summary>
         /// <remarks>
@@ -8871,6 +9244,19 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName tentative = w + "tentative";
+
+        /// <summary>
+        /// Represents the w:text XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="sdtPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="multiLine" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: SdtContentText.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName text = w + "text";
 
         /// <summary>
         /// Represents the w:textAlignment XML element.
@@ -9575,8 +9961,8 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="bdo" />, <see cref="behavior" />, <see cref="characterSpacingControl" />, <see cref="charset" />, <see cref="cnfStyle" />, <see cref="color" />, <see cref="compatSetting" />, <see cref="consecutiveHyphenLimit" />, <see cref="dataType" />, <see cref="@default" />, <see cref="destination" />, <see cref="dir" />, <see cref="divId" />, <see cref="documentType" />, <see cref="docVar" />, <see cref="effect" />, <see cref="em" />, <see cref="family" />, <see cref="fitText" />, <see cref="format" />, <see cref="frameLayout" />, <see cref="gallery" />, <see cref="guid" />, <see cref="helpText" />, <see cref="highlight" />, <see cref="hMerge" />, <see cref="hpsRaise" />, <see cref="ilvl" />, <see cref="jc" />, <see cref="kern" />, <see cref="lid" />, <see cref="lvlJc" />, <see cref="lvlText" />, <see cref="mainDocumentType" />, <see cref="maxLength" />, <see cref="multiLevelType" />, <see cref="name" />, <see cref="noLineBreaksAfter" />, <see cref="noLineBreaksBefore" />, <see cref="numFmt" />, <see cref="numRestart" />, <see cref="numStart" />, <see cref="panose1" />, <see cref="pitch" />, <see cref="pos" />, <see cref="position" />, <see cref="rubyAlign" />, <see cref="scrollbar" />, <see cref="shd" />, <see cref="spacing" />, <see cref="statusText" />, <see cref="stylePaneFormatFilter" />, <see cref="stylePaneSortMethod" />, <see cref="suff" />, <see cref="summaryLength" />, <see cref="tab" />, <see cref="targetScreenSz" />, <see cref="tblLook" />, <see cref="tblOverlap" />, <see cref="textAlignment" />, <see cref="textboxTightWrap" />, <see cref="textDirection" />, <see cref="trHeight" />, <see cref="type" />, <see cref="u" />, <see cref="uiPriority" />, <see cref="uniqueTag" />, <see cref="vAlign" />, <see cref="vertAlign" />, <see cref="view" />, <see cref="vMerge" />, <see cref="w_" />, <see cref="zoom" />, <see cref="W15.color" />, <see cref="W15.footnoteColumns" />, <see cref="W15.sectionTitle" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: Behavior.Val, BidirectionalEmbedding.Val, BidirectionalOverride.Val, CharacterScale.Val, CharacterSpacingControl.Val, Color.Val, CompatibilitySetting.Val, ConditionalFormatStyle.Val, ConsecutiveHyphenLimit.Val, DataType.Val, DefaultDropDownListItemIndex.Val, Destination.Val, DivId.Val, DocPartId.Val, DocPartName.Val, DocPartType.Val, DocumentType.Val, DocumentVariable.Val, Emphasis.Val, EndnotePosition.Val, FitText.Val, FontCharSet.Val, FontFamily.Val, FootnoteColumns.Val, FootnotePosition.Val, Format.Val, FormFieldName.Val, FrameLayout.Val, Gallery.Val, HelpText.Val, Highlight.Val, HorizontalMerge.Val, Justification.Val, Kern.Val, LanguageId.Val, LevelJustification.Val, LevelSuffix.Val, LevelText.Val, MailMergeFieldType.Val, MailMergeSource.Val, MainDocumentType.Val, MaxLength.Val, MultiLevelType.Val, NoLineBreaksAfterKinsoku.Val, NoLineBreaksBeforeKinsoku.Val, NumberingFormat.Val, NumberingLevelReference.Val, NumberingRestart.Val, NumberingStart.Val, Panose1Number.Val, PhoneticGuideRaise.Val, Pitch.Val, Position.Val, RubyAlign.Val, ScrollbarVisibility.Val, SectionTitle.Val, SectionType.Val, Shading.Val, Spacing.Val, StatusText.Val, StyleName.Val, StylePaneFormatFilter.Val, StylePaneSortMethods.Val, SummaryLength.Val, TableCellVerticalAlignment.Val, TableJustification.Val, TableLook.Val, TableOverlap.Val, TableRowHeight.Val, TabStop.Val, TargetScreenSize.Val, TextAlignment.Val, TextBoxFormFieldType.Val, TextBoxTightWrap.Val, TextDirection.Val, TextEffect.Val, UIPriority.Val, Underline.Val, UniqueTag.Val, VerticalMerge.Val, VerticalTextAlignment.Val, VerticalTextAlignmentOnPage.Val, View.Val, Zoom.Val.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="bdo" />, <see cref="behavior" />, <see cref="calendar" />, <see cref="characterSpacingControl" />, <see cref="charset" />, <see cref="cnfStyle" />, <see cref="color" />, <see cref="compatSetting" />, <see cref="consecutiveHyphenLimit" />, <see cref="dataType" />, <see cref="@default" />, <see cref="destination" />, <see cref="dir" />, <see cref="divId" />, <see cref="documentType" />, <see cref="docVar" />, <see cref="effect" />, <see cref="em" />, <see cref="family" />, <see cref="fitText" />, <see cref="format" />, <see cref="frameLayout" />, <see cref="gallery" />, <see cref="guid" />, <see cref="helpText" />, <see cref="highlight" />, <see cref="hMerge" />, <see cref="hpsRaise" />, <see cref="ilvl" />, <see cref="jc" />, <see cref="kern" />, <see cref="lid" />, <see cref="@lock" />, <see cref="lvlJc" />, <see cref="lvlText" />, <see cref="mainDocumentType" />, <see cref="maxLength" />, <see cref="multiLevelType" />, <see cref="name" />, <see cref="noLineBreaksAfter" />, <see cref="noLineBreaksBefore" />, <see cref="numFmt" />, <see cref="numRestart" />, <see cref="numStart" />, <see cref="panose1" />, <see cref="pitch" />, <see cref="pos" />, <see cref="position" />, <see cref="rubyAlign" />, <see cref="scrollbar" />, <see cref="shd" />, <see cref="spacing" />, <see cref="statusText" />, <see cref="storeMappedDataAs" />, <see cref="stylePaneFormatFilter" />, <see cref="stylePaneSortMethod" />, <see cref="suff" />, <see cref="summaryLength" />, <see cref="tab" />, <see cref="targetScreenSz" />, <see cref="tblLook" />, <see cref="tblOverlap" />, <see cref="textAlignment" />, <see cref="textboxTightWrap" />, <see cref="textDirection" />, <see cref="trHeight" />, <see cref="type" />, <see cref="u" />, <see cref="uiPriority" />, <see cref="uniqueTag" />, <see cref="vAlign" />, <see cref="vertAlign" />, <see cref="view" />, <see cref="vMerge" />, <see cref="w_" />, <see cref="zoom" />, <see cref="W15.color" />, <see cref="W15.footnoteColumns" />, <see cref="W15.sectionTitle" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: Behavior.Val, BidirectionalEmbedding.Val, BidirectionalOverride.Val, Calendar.Val, CharacterScale.Val, CharacterSpacingControl.Val, Color.Val, CompatibilitySetting.Val, ConditionalFormatStyle.Val, ConsecutiveHyphenLimit.Val, DataType.Val, DefaultDropDownListItemIndex.Val, Destination.Val, DivId.Val, DocPartId.Val, DocPartName.Val, DocPartType.Val, DocumentType.Val, DocumentVariable.Val, Emphasis.Val, EndnotePosition.Val, FitText.Val, FontCharSet.Val, FontFamily.Val, FootnoteColumns.Val, FootnotePosition.Val, Format.Val, FormFieldName.Val, FrameLayout.Val, Gallery.Val, HelpText.Val, Highlight.Val, HorizontalMerge.Val, Justification.Val, Kern.Val, LanguageId.Val, LevelJustification.Val, LevelSuffix.Val, LevelText.Val, Lock.Val, MailMergeFieldType.Val, MailMergeSource.Val, MainDocumentType.Val, MaxLength.Val, MultiLevelType.Val, NoLineBreaksAfterKinsoku.Val, NoLineBreaksBeforeKinsoku.Val, NumberingFormat.Val, NumberingLevelReference.Val, NumberingRestart.Val, NumberingStart.Val, Panose1Number.Val, PhoneticGuideRaise.Val, Pitch.Val, Position.Val, RubyAlign.Val, ScrollbarVisibility.Val, SdtDateMappingType.Val, SectionTitle.Val, SectionType.Val, Shading.Val, Spacing.Val, StatusText.Val, StyleName.Val, StylePaneFormatFilter.Val, StylePaneSortMethods.Val, SummaryLength.Val, TableCellVerticalAlignment.Val, TableJustification.Val, TableLook.Val, TableOverlap.Val, TableRowHeight.Val, TabStop.Val, TargetScreenSize.Val, TextAlignment.Val, TextBoxFormFieldType.Val, TextBoxTightWrap.Val, TextDirection.Val, TextEffect.Val, UIPriority.Val, Underline.Val, UniqueTag.Val, VerticalMerge.Val, VerticalTextAlignment.Val, VerticalTextAlignmentOnPage.Val, View.Val, Zoom.Val.</description></item>
         /// </list>
         /// </remarks>
         public static readonly XName val = w + "val";
@@ -9593,6 +9979,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName vAlign = w + "vAlign";
+
+        /// <summary>
+        /// Represents the w:value XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="listItem" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: ListItem.Value.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName value = w + "value";
 
         /// <summary>
         /// Represents the w:vAnchor XML attribute.
@@ -9940,7 +10338,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="W15.dataBinding" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="dataBinding" />, <see cref="W15.dataBinding" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: DataBinding.XPath.</description></item>
         /// </list>
         /// </remarks>

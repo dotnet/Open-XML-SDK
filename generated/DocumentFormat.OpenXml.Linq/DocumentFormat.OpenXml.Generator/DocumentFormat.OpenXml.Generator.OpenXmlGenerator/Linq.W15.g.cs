@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="W.sdtPr" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Appearance.</description></item>
         /// </list>
@@ -70,7 +70,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="W.sdtPr" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="W.themeColor" />, <see cref="W.themeShade" />, <see cref="W.themeTint" />, <see cref="W.val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Color.</description></item>
         /// </list>
@@ -109,7 +109,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="W.sdtPr" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="W.prefixMappings" />, <see cref="W.storeItemID" />, <see cref="W.xpath" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DataBinding.</description></item>
         /// </list>
@@ -248,7 +248,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="W.sdtPr" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="doNotAllowInsertDeleteSection" />, <see cref="sectionTitle" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SdtRepeatedSection.</description></item>
         /// </list>
@@ -261,7 +261,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="W.sdtPr" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SdtRepeatedSectionItem.</description></item>
         /// </list>
         /// </remarks>
@@ -310,7 +310,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="W.sdtPr" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: WebExtensionCreated.</description></item>
         /// </list>
         /// </remarks>
@@ -322,7 +322,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="W.sdtPr" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: WebExtensionLinked.</description></item>
         /// </list>
         /// </remarks>

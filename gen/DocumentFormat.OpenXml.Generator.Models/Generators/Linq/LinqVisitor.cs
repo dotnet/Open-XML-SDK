@@ -66,24 +66,52 @@ internal class LinqVisitor(OpenXmlGeneratorServices services)
                 typeField.AddChildElementMetadata(childType);
             }
 
-            //var @base = type.BaseClass;
+            var @base = type.BaseClass;
 
-            //while (!string.IsNullOrEmpty(@base))
-            //{
-            //    if (_classNames.Add(@base!))
-            //    {
-            //        if (services.DataSource.TypedClasses.FirstOrDefault(t => t.ClassName == type.BaseClass) is { } @class && services.TryFindType(@class.Name, out var found))
-            //        {
-            //            VisitType(parent, found);
-            //            @base = found.BaseClass;
-            //            continue;
-            //        }
-            //    }
+            while (!string.IsNullOrEmpty(@base))
+            {
+                if (_classNames.Add(@base!))
+                {
+                    if (FindBaseClass(@base) is { } foundElements)
+                    {
+                        foreach (var found in foundElements)
+                        {
+                            VisitType(parent, found);
+                            @base = found.BaseClass;
+                        }
 
-            //    @base = null;
-            //}
+                        continue;
+                    }
+                }
+
+                @base = null;
+            }
         }
     }
+
+    private IEnumerable<SchemaType> FindBaseClass(string? className)
+    {
+        if (className is { })
+        {
+            // Fallback to known types implemented in the SDK
+            if (_knownBaseClasses.TryGetValue(className, out var known))
+            {
+                foreach (var typeName in known)
+                {
+                    if (services.TryFindType(typeName, out var type))
+                    {
+                        yield return type;
+                    }
+                }
+            }
+        }
+    }
+
+    // This is for custom base classes the SDK adds that are not fully in the dataset so that the LINQ generation can pick them up and include them in the output
+    private static readonly Dictionary<string, IEnumerable<TypedQName>> _knownBaseClasses = new()
+    {
+        { "SdtElement", ["w:CT_SdtPr/w:sdtPr", "w:CT_SdtPr/w:sdtEndPr"] },
+    };
 
     public FieldInfo VisitAttribute(SchemaAttribute attribute)
     {
