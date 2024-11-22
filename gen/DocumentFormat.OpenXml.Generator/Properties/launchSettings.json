@@ -1,8 +1,12 @@
 {
   "profiles": {
-    "Generator": {
+    "SDK Generator": {
       "commandName": "DebugRoslynComponent",
       "targetProject": "..\\..\\src\\DocumentFormat.OpenXml\\DocumentFormat.OpenXml.csproj"
+    },
+    "LINQ Code Generator": {
+      "commandName": "DebugRoslynComponent",
+      "targetProject": "..\\..\\src\\DocumentFormat.OpenXml.Linq\\DocumentFormat.OpenXml.Linq.csproj"
     }
   }
 }

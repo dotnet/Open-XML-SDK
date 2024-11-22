@@ -85,7 +85,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="categoryFilterException" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="C.pivotSource" />, <see cref="categoryFilterException" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: UnsignedIntegerType.</description></item>
         /// </list>
@@ -116,6 +116,19 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName marker = c16 + "marker";
+
+        /// <summary>
+        /// Represents the c16:numCache XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="C.numRef" />.</description></item>
+        /// <item><description>has the following child XML elements: <see cref="C.extLst" />, <see cref="C.formatCode" />, <see cref="C.pt" />, <see cref="C.ptCount" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: NumberDataType.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName numCache = c16 + "numCache";
 
         /// <summary>
         /// Represents the c16:pivotOptions16 XML element.
@@ -181,6 +194,19 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName spPr = c16 + "spPr";
+
+        /// <summary>
+        /// Represents the c16:strCache XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="C.strRef" />.</description></item>
+        /// <item><description>has the following child XML elements: <see cref="C.extLst" />, <see cref="C.pt" />, <see cref="C.ptCount" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: StringDataType.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName strCache = c16 + "strCache";
 
         /// <summary>
         /// Represents the c16:uniqueId XML element.

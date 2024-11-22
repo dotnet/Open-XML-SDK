@@ -27,5 +27,19 @@ public sealed record class TypedQName : IComparable<TypedQName>
         return QName.CompareTo(other.QName);
     }
 
+    public static TypedQName Parse(string input)
+    {
+        var split = input.Split('/');
+
+        if (split.Length == 2)
+        {
+            return new(split[0], split[1]);
+        }
+
+        throw new FormatException("Invalid TypedQName");
+    }
+
     public override string ToString() => $"{Type}/{QName}";
+
+    public static implicit operator TypedQName(string typed) => Parse(typed);
 }

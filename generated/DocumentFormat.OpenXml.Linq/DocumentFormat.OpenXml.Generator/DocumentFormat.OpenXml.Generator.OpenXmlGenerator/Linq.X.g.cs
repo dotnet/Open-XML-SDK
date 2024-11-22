@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="dxf" />, <see cref="ndxf" />, <see cref="odxf" />, <see cref="xf" />, <see cref="X14.dxf" />, <see cref="XNSV.dxf" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="dxf" />, <see cref="ndxf" />, <see cref="odxf" />, <see cref="xf" />, <see cref="X14.dxf" />, <see cref="XNSV.dxf" />, <see cref="XR.dxf" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.horizontal" />, <see cref="NoNamespace.indent" />, <see cref="NoNamespace.justifyLastLine" />, <see cref="NoNamespace.mergeCell" />, <see cref="NoNamespace.readingOrder" />, <see cref="NoNamespace.relativeIndent" />, <see cref="NoNamespace.shrinkToFit" />, <see cref="NoNamespace.textRotation" />, <see cref="NoNamespace.vertical" />, <see cref="NoNamespace.wrapText" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Alignment.</description></item>
         /// </list>
@@ -152,7 +152,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="borders" />, <see cref="dxf" />, <see cref="ndxf" />, <see cref="odxf" />, <see cref="X14.dxf" />, <see cref="XNSV.dxf" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="borders" />, <see cref="dxf" />, <see cref="ndxf" />, <see cref="odxf" />, <see cref="X14.dxf" />, <see cref="XNSV.dxf" />, <see cref="XR.dxf" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bottom" />, <see cref="diagonal" />, <see cref="end" />, <see cref="horizontal" />, <see cref="left" />, <see cref="right" />, <see cref="start" />, <see cref="top" />, <see cref="vertical" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.diagonalDown" />, <see cref="NoNamespace.diagonalUp" />, <see cref="NoNamespace.outline" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Border.</description></item>
@@ -1531,7 +1531,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="autoFilter" />, <see cref="bk" />, <see cref="c" />, <see cref="cacheField" />, <see cref="cacheHierarchy" />, <see cref="cacheSource" />, <see cref="calcChain" />, <see cref="calculatedItem" />, <see cref="calculatedMember" />, <see cref="cellStyle" />, <see cref="cfRule" />, <see cref="cfvo" />, <see cref="chartsheet" />, <see cref="comments" />, <see cref="conditionalFormat" />, <see cref="conditionalFormatting" />, <see cref="connection" />, <see cref="customSheetView" />, <see cref="customWorkbookView" />, <see cref="dataField" />, <see cref="dialogsheet" />, <see cref="dxf" />, <see cref="externalLink" />, <see cref="filter" />, <see cref="filterColumn" />, <see cref="format" />, <see cref="futureMetadata" />, <see cref="groupLevel" />, <see cref="header" />, <see cref="ignoredErrors" />, <see cref="metadata" />, <see cref="nc" />, <see cref="ndxf" />, <see cref="oc" />, <see cref="odxf" />, <see cref="pageField" />, <see cref="pivotArea" />, <see cref="pivotCacheDefinition" />, <see cref="pivotCacheRecords" />, <see cref="pivotField" />, <see cref="pivotHierarchy" />, <see cref="pivotTableDefinition" />, <see cref="queryTable" />, <see cref="queryTableField" />, <see cref="queryTableRefresh" />, <see cref="rcc" />, <see cref="rdn" />, <see cref="reference" />, <see cref="rfmt" />, <see cref="row" />, <see cref="rsnm" />, <see cref="sheetView" />, <see cref="sheetViews" />, <see cref="singleXmlCell" />, <see cref="sortState" />, <see cref="sst" />, <see cref="styleSheet" />, <see cref="table" />, <see cref="tableColumn" />, <see cref="tupleCache" />, <see cref="userInfo" />, <see cref="volTypes" />, <see cref="workbook" />, <see cref="workbookView" />, <see cref="worksheet" />, <see cref="xf" />, <see cref="xmlCellPr" />, <see cref="xmlColumnPr" />, <see cref="xmlPr" />, <see cref="X14.dxf" />, <see cref="X14.pivotArea" />, <see cref="XNE.macrosheet" />, <see cref="XNSV.dxf" />, <see cref="XNSV.filter" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="autoFilter" />, <see cref="bk" />, <see cref="c" />, <see cref="cacheField" />, <see cref="cacheHierarchy" />, <see cref="cacheSource" />, <see cref="calcChain" />, <see cref="calculatedItem" />, <see cref="calculatedMember" />, <see cref="cellStyle" />, <see cref="cfRule" />, <see cref="cfvo" />, <see cref="chartsheet" />, <see cref="comments" />, <see cref="conditionalFormat" />, <see cref="conditionalFormatting" />, <see cref="connection" />, <see cref="customSheetView" />, <see cref="customWorkbookView" />, <see cref="dataField" />, <see cref="dialogsheet" />, <see cref="dxf" />, <see cref="externalLink" />, <see cref="filter" />, <see cref="filterColumn" />, <see cref="format" />, <see cref="futureMetadata" />, <see cref="groupLevel" />, <see cref="header" />, <see cref="ignoredErrors" />, <see cref="metadata" />, <see cref="nc" />, <see cref="ndxf" />, <see cref="oc" />, <see cref="odxf" />, <see cref="pageField" />, <see cref="pivotArea" />, <see cref="pivotCacheDefinition" />, <see cref="pivotCacheRecords" />, <see cref="pivotField" />, <see cref="pivotHierarchy" />, <see cref="pivotTableDefinition" />, <see cref="queryTable" />, <see cref="queryTableField" />, <see cref="queryTableRefresh" />, <see cref="rcc" />, <see cref="rdn" />, <see cref="reference" />, <see cref="rfmt" />, <see cref="row" />, <see cref="rsnm" />, <see cref="sheetView" />, <see cref="sheetViews" />, <see cref="singleXmlCell" />, <see cref="sortState" />, <see cref="sst" />, <see cref="styleSheet" />, <see cref="table" />, <see cref="tableColumn" />, <see cref="tupleCache" />, <see cref="userInfo" />, <see cref="volTypes" />, <see cref="workbook" />, <see cref="workbookView" />, <see cref="worksheet" />, <see cref="xf" />, <see cref="xmlCellPr" />, <see cref="xmlColumnPr" />, <see cref="xmlPr" />, <see cref="X14.dxf" />, <see cref="X14.pivotArea" />, <see cref="XNE.macrosheet" />, <see cref="XNSV.dxf" />, <see cref="XNSV.filter" />, <see cref="XR.dxf" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="ext" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CacheFieldExtensionList, CacheHierarchyExtensionList, CacheSourceExtensionList, CalculatedMemberExtensionList, ConditionalFormattingRuleExtensionList, ConnectionExtensionList, DataFieldExtensionList, ExtensionList, PivotCacheDefinitionExtensionList, PivotFieldExtensionList, PivotFilterExtensionList, PivotHierarchyExtensionList, PivotTableDefinitionExtensionList, QueryTableExtensionList, StylesheetExtensionList, TableExtensionList, WorkbookExtensionList, WorksheetExtensionList.</description></item>
         /// </list>
@@ -1675,7 +1675,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="dxf" />, <see cref="fills" />, <see cref="ndxf" />, <see cref="odxf" />, <see cref="X14.dxf" />, <see cref="XNSV.dxf" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="dxf" />, <see cref="fills" />, <see cref="ndxf" />, <see cref="odxf" />, <see cref="X14.dxf" />, <see cref="XNSV.dxf" />, <see cref="XR.dxf" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="gradientFill" />, <see cref="patternFill" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Fill.</description></item>
         /// </list>
@@ -1768,7 +1768,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="dxf" />, <see cref="fonts" />, <see cref="ndxf" />, <see cref="odxf" />, <see cref="X14.dxf" />, <see cref="XNSV.dxf" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="dxf" />, <see cref="fonts" />, <see cref="ndxf" />, <see cref="odxf" />, <see cref="X14.dxf" />, <see cref="XNSV.dxf" />, <see cref="XR.dxf" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="b" />, <see cref="charset" />, <see cref="color" />, <see cref="condense" />, <see cref="extend" />, <see cref="family" />, <see cref="i" />, <see cref="name" />, <see cref="outline" />, <see cref="scheme" />, <see cref="shadow" />, <see cref="strike" />, <see cref="sz" />, <see cref="u" />, <see cref="vertAlign" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Font.</description></item>
         /// </list>
@@ -2691,7 +2691,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="dxf" />, <see cref="ndxf" />, <see cref="numFmts" />, <see cref="odxf" />, <see cref="X14.dxf" />, <see cref="XNSV.dxf" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="dxf" />, <see cref="ndxf" />, <see cref="numFmts" />, <see cref="odxf" />, <see cref="X14.dxf" />, <see cref="XNSV.dxf" />, <see cref="XR.dxf" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.formatCode" />, <see cref="NoNamespace.numFmtId" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: NumberingFormat.</description></item>
         /// </list>
@@ -3087,7 +3087,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="@is" />, <see cref="si" />, <see cref="text" />, <see cref="worksheet" />, <see cref="XNE.macrosheet" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="@is" />, <see cref="si" />, <see cref="text" />, <see cref="worksheet" />, <see cref="XNE.macrosheet" />, <see cref="XR.@is" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.alignment" />, <see cref="NoNamespace.fontId" />, <see cref="NoNamespace.type" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: PhoneticProperties.</description></item>
         /// </list>
@@ -3328,7 +3328,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="dxf" />, <see cref="ndxf" />, <see cref="odxf" />, <see cref="xf" />, <see cref="X14.dxf" />, <see cref="XNSV.dxf" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="dxf" />, <see cref="ndxf" />, <see cref="odxf" />, <see cref="xf" />, <see cref="X14.dxf" />, <see cref="XNSV.dxf" />, <see cref="XR.dxf" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.hidden" />, <see cref="NoNamespace.locked" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Protection.</description></item>
         /// </list>
@@ -3438,7 +3438,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="@is" />, <see cref="pivotCacheRecords" />, <see cref="si" />, <see cref="text" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="@is" />, <see cref="pivotCacheRecords" />, <see cref="si" />, <see cref="text" />, <see cref="XR.@is" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="b" />, <see cref="d" />, <see cref="e" />, <see cref="m" />, <see cref="n" />, <see cref="rPr" />, <see cref="s" />, <see cref="t" />, <see cref="x_" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: PivotCacheRecord, Run.</description></item>
         /// </list>
@@ -3812,7 +3812,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="@is" />, <see cref="si" />, <see cref="text" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="@is" />, <see cref="si" />, <see cref="text" />, <see cref="XR.@is" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="t" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.eb" />, <see cref="NoNamespace.sb" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: PhoneticRun.</description></item>
@@ -4396,7 +4396,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="@is" />, <see cref="mdx" />, <see cref="r" />, <see cref="rPh" />, <see cref="si" />, <see cref="text" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="@is" />, <see cref="mdx" />, <see cref="r" />, <see cref="rPh" />, <see cref="si" />, <see cref="text" />, <see cref="XR.@is" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="n" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.b" />, <see cref="NoNamespace.bc" />, <see cref="NoNamespace.c" />, <see cref="NoNamespace.ct" />, <see cref="NoNamespace.fc" />, <see cref="NoNamespace.fi" />, <see cref="NoNamespace.i" />, <see cref="NoNamespace.si" />, <see cref="NoNamespace.st" />, <see cref="NoNamespace.u" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: MdxTuple, Text.</description></item>

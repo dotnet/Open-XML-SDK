@@ -69,4 +69,6 @@ public sealed record class QName : IComparable<QName>
     }
 
     public static implicit operator string(QName qname) => qname.ToString();
+
+    public static implicit operator QName(string qname) => Parse(qname);
 }

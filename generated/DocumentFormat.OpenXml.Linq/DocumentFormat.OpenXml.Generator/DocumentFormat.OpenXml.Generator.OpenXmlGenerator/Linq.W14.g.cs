@@ -166,7 +166,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="W.sdtPr" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="@checked" />, <see cref="checkedState" />, <see cref="uncheckedState" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SdtContentCheckBox.</description></item>
         /// </list>
@@ -466,7 +466,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="W.sdtPr" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: EntityPickerEmpty.</description></item>
         /// </list>
         /// </remarks>

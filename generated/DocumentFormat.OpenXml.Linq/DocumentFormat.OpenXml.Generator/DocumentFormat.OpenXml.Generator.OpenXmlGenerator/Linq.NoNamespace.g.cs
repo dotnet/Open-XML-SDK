@@ -509,8 +509,8 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="A.outerShdw" />, <see cref="A.reflection" />, <see cref="A.tab" />, <see cref="A.tile" />, <see cref="A14.hiddenLine" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: HiddenLineProperties.Alignment, OuterShadow.Alignment, Reflection.Alignment, TabStop.Alignment, Tile.Alignment.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="A.outerShdw" />, <see cref="A.reflection" />, <see cref="A.tab" />, <see cref="A.tile" />, <see cref="A14.hiddenLine" />, <see cref="OAC.lineProps" />, <see cref="OAC.pPr" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: HiddenLineProperties.Alignment, LinePropertiesType.Alignment, OuterShadow.Alignment, Reflection.Alignment, TabStop.Alignment, TextParagraphPropertiesType.Alignment, Tile.Alignment.</description></item>
         /// </list>
         /// </remarks>
         public static readonly XName algn = "algn";
@@ -2525,8 +2525,8 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="A14.hiddenLine" />, <see cref="CS.defRPr" />, <see cref="X.pageField" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: HiddenLineProperties.CapType, PageField.Caption, TextCharacterPropertiesType.Capital.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="A14.hiddenLine" />, <see cref="CS.defRPr" />, <see cref="OAC.lineProps" />, <see cref="X.pageField" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: HiddenLineProperties.CapType, LinePropertiesType.CapType, PageField.Caption, TextCharacterPropertiesType.Capital.</description></item>
         /// </list>
         /// </remarks>
         public static readonly XName cap = "cap";
@@ -3084,13 +3084,13 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName cmd = "cmd";
 
         /// <summary>
-        /// Represents the cmpd XML attribute.
+        /// Represents the cmpd XML attributes.
         /// </summary>
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="A14.hiddenLine" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: HiddenLineProperties.CompoundLineType.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="A14.hiddenLine" />, <see cref="OAC.lineProps" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: HiddenLineProperties.CompoundLineType, LinePropertiesType.CompoundLineType.</description></item>
         /// </list>
         /// </remarks>
         public static readonly XName cmpd = "cmpd";
@@ -5172,6 +5172,18 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName defStyle = "defStyle";
 
         /// <summary>
+        /// Represents the defTabSz XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="OAC.pPr" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: TextParagraphPropertiesType.DefaultTabSize.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName defTabSz = "defTabSz";
+
+        /// <summary>
         /// Represents the degree XML attribute.
         /// </summary>
         /// <remarks>
@@ -6238,6 +6250,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName e = "e";
+
+        /// <summary>
+        /// Represents the eaLnBrk XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="OAC.pPr" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: TextParagraphPropertiesType.EastAsianLineBreak.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName eaLnBrk = "eaLnBrk";
 
         /// <summary>
         /// Represents the east XML attribute.
@@ -7812,6 +7836,18 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName followColorScheme = "followColorScheme";
 
         /// <summary>
+        /// Represents the fontAlgn XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="OAC.pPr" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: TextParagraphPropertiesType.FontAlignment.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName fontAlgn = "fontAlgn";
+
+        /// <summary>
         /// Represents the fontId XML attributes.
         /// </summary>
         /// <remarks>
@@ -8964,6 +9000,18 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName h = "h";
 
         /// <summary>
+        /// Represents the hangingPunct XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="OAC.pPr" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: TextParagraphPropertiesType.Height.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName hangingPunct = "hangingPunct";
+
+        /// <summary>
         /// Represents the hasBounce XML attribute.
         /// </summary>
         /// <remarks>
@@ -10037,8 +10085,8 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="X.alignment" />, <see cref="X.pivotTableDefinition" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: Alignment.Indent, PivotTableDefinition.Indent.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="OAC.pPr" />, <see cref="X.alignment" />, <see cref="X.pivotTableDefinition" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: Alignment.Indent, PivotTableDefinition.Indent, TextParagraphPropertiesType.Indent.</description></item>
         /// </list>
         /// </remarks>
         public static readonly XName indent = "indent";
@@ -11040,6 +11088,18 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName latestEventMarker = "latestEventMarker";
 
         /// <summary>
+        /// Represents the latinLnBrk XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="OAC.pPr" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: TextParagraphPropertiesType.LatinLineBreak.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName latinLnBrk = "latinLnBrk";
+
+        /// <summary>
         /// Represents the latitude XML attributes.
         /// </summary>
         /// <remarks>
@@ -11801,8 +11861,8 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="DGM1611.autoBuNodeInfo" />, <see cref="P.oleChartEl" />, <see cref="P.tmpl" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: NumberDiagramInfo.Lvl, OleChartElement.Level, Template.Level.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="DGM1611.autoBuNodeInfo" />, <see cref="OAC.pPr" />, <see cref="P.oleChartEl" />, <see cref="P.tmpl" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: NumberDiagramInfo.Lvl, OleChartElement.Level, Template.Level, TextParagraphPropertiesType.Level.</description></item>
         /// </list>
         /// </remarks>
         public static readonly XName lvl = "lvl";
@@ -11964,25 +12024,25 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName markers = "markers";
 
         /// <summary>
-        /// Represents the marL XML attribute.
+        /// Represents the marL XML attributes.
         /// </summary>
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="A.tcPr" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: TableCellProperties.LeftMargin.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="A.tcPr" />, <see cref="OAC.pPr" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: TableCellProperties.LeftMargin, TextParagraphPropertiesType.LeftMargin.</description></item>
         /// </list>
         /// </remarks>
         public static readonly XName marL = "marL";
 
         /// <summary>
-        /// Represents the marR XML attribute.
+        /// Represents the marR XML attributes.
         /// </summary>
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="A.tcPr" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: TableCellProperties.RightMargin.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="A.tcPr" />, <see cref="OAC.pPr" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: TableCellProperties.RightMargin, TextParagraphPropertiesType.RightMargin.</description></item>
         /// </list>
         /// </remarks>
         public static readonly XName marR = "marR";
@@ -17045,8 +17105,8 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="A.tblPr" />, <see cref="P.presentation" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: Presentation.RightToLeft, TableProperties.RightToLeft.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="A.tblPr" />, <see cref="OAC.pPr" />, <see cref="P.presentation" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: Presentation.RightToLeft, TableProperties.RightToLeft, TextParagraphPropertiesType.RightToLeft.</description></item>
         /// </list>
         /// </remarks>
         public static readonly XName rtl = "rtl";
@@ -22445,8 +22505,8 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="A.gridCol" />, <see cref="A.path" />, <see cref="A14.hiddenLine" />, <see cref="WP15.webVideoPr" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: GridColumn.Width, HiddenLineProperties.Width, Path.Width, WebVideoProperty.Width.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="A.gridCol" />, <see cref="A.path" />, <see cref="A14.hiddenLine" />, <see cref="OAC.lineProps" />, <see cref="WP15.webVideoPr" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: GridColumn.Width, HiddenLineProperties.Width, LinePropertiesType.Width, Path.Width, WebVideoProperty.Width.</description></item>
         /// </list>
         /// </remarks>
         public static readonly XName w = "w";
@@ -22685,7 +22745,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="A.anchor" />, <see cref="P14.tracePt" />, <see cref="P188.pos" />, <see cref="X.field" />, <see cref="X.fieldUsage" />, <see cref="X.item" />, <see cref="X.n" />, <see cref="X14.i" />, <see cref="XDR.pos" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="A.anchor" />, <see cref="OAC.off" />, <see cref="P14.tracePt" />, <see cref="P188.pos" />, <see cref="X.field" />, <see cref="X.fieldUsage" />, <see cref="X.item" />, <see cref="X.n" />, <see cref="X14.i" />, <see cref="XDR.pos" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: Anchor.X, Field.Index, FieldUsage.Index, Item.Index, NameIndex.Index, Point2DType.X, Position.X, TabularSlicerCacheItem.Atom, TracePoint.XCoordinate.</description></item>
         /// </list>
         /// </remarks>
@@ -22877,7 +22937,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="A.anchor" />, <see cref="P14.tracePt" />, <see cref="P188.pos" />, <see cref="XDR.pos" />.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="A.anchor" />, <see cref="OAC.off" />, <see cref="P14.tracePt" />, <see cref="P188.pos" />, <see cref="XDR.pos" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed properties: Anchor.Y, Point2DType.Y, Position.Y, TracePoint.YCoordinate.</description></item>
         /// </list>
         /// </remarks>

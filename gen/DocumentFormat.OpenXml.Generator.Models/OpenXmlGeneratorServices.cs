@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml.Generator.Models;
 using DocumentFormat.OpenXml.Generator.Schematron;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DocumentFormat.OpenXml.Generator;
 
@@ -13,7 +14,6 @@ public class OpenXmlGeneratorServices
     private readonly Dictionary<string, NamespaceInfo> _namespacesByUri;
     private readonly Dictionary<string, string> _prefixToApi;
     private readonly Dictionary<TypedQName, StronglyTypedElement> _lookup;
-    private readonly ILookup<(string ClassName, string Prefix), StronglyTypedElement> _classNameLookup;
     private readonly Dictionary<(QName Type, string), StronglyTypedElement> _partLookup;
     private readonly Dictionary<QName, (SchemaEnum, string)> _enums;
     private readonly Dictionary<string, Part> _parts;
@@ -25,7 +25,6 @@ public class OpenXmlGeneratorServices
         _namespacesByPrefix = context.KnownNamespaces.ToDictionary(i => i.Prefix);
         _namespacesByUri = context.KnownNamespaces.ToDictionary(i => i.Uri);
         _lookup = context.TypedClasses.ToDictionary(t => t.Name);
-        _classNameLookup = context.TypedClasses.ToLookup(t => (t.ClassName, t.Name.Type.Prefix));
 
         _types = context.Namespaces
             .SelectMany(t => t.Types)
@@ -74,6 +73,8 @@ public class OpenXmlGeneratorServices
     }
 
     public SchemaType FindType(TypedQName type) => _types[type];
+
+    public bool TryFindType(TypedQName type, [MaybeNullWhen(false)] out SchemaType schemaType) => _types.TryGetValue(type, out schemaType) && schemaType is { };
 
     public bool TryGetPartClassName(QName? type, string name, out (string Namespace, string Class) apiName)
     {
