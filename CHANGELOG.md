@@ -18,7 +18,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
-- Fixed cannot access a disposed object (DeflateStream) after recovering from malformed url (#1802)
+- Fixed issue where a disposed object (DeflateStream) cannot be accessed after recovering from malformed url (#1802)
 - Fixed issue with relationships not being created when cloning Flat OPC (#1814)
 - Fixed issue with corrupt files remaining locked after attempting to open with `WordprocessingDocument.Open` (#1681)
 - Fixed issue with changes not applied after `.Save()` (#1771)
