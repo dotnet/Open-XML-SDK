@@ -5,6 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [3.2.0] - 2024-11-22
+
+### Added
+
+- Added `DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData` namespace
+- Added `DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays` namespace
+
+### Changed
+
+- Updated Nuget badge on README
+
+### Fixed
+
+- Fixed cannot access a disposed object (DeflateStream) after recovering from malformed url (#1802)
+- Fixed issue with relationships not being created when cloning Flat OPC (#1814)
+- Fixed issue with corrupt files remaining locked after attempting to open with `WordprocessingDocument.Open` (#1681)
+- Fixed issue with changes not applied after `.Save()` (#1771)
+- Fixed `AddWorkbookPart` throws exception if no main part is available (#1745)
+
+Thanks to the following for their contributions:
+
+@WeihanLi
+
 ## [3.1.1] - 2024-10-15
 
 ### Fixed
