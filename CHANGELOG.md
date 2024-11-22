@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fixed issue with corrupt files remaining locked after attempting to open with `WordprocessingDocument.Open` (#1681)
 - Fixed issue with changes not applied after `.Save()` (#1771)
 - Fixed `AddWorkbookPart` throws exception if no main part is available (#1745)
+- Fixed issue with base classes not included with LINQ generation (#1838)
 
 Thanks to the following for their contributions:
 
