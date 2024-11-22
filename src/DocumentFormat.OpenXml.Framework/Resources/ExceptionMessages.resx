@@ -240,9 +240,6 @@
   <data name="MultipleRelationshipsToSamePart" xml:space="preserve">
     <value>There are more than one relationship references that target the specified part.</value>
   </data>
-  <data name="NoMainPart" xml:space="preserve">
-    <value>The specified package is invalid. The main part is missing.</value>
-  </data>
   <data name="NonCompositeNoChild" xml:space="preserve">
     <value>Non-composite elements do not have child elements.</value>
   </data>

@@ -550,15 +550,6 @@ namespace DocumentFormat.OpenXml {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The specified package is invalid. The main part is missing..
-        /// </summary>
-        internal static string NoMainPart {
-            get {
-                return ResourceManager.GetString("NoMainPart", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Non-composite elements do not have child elements..
         /// </summary>
         internal static string NonCompositeNoChild {
