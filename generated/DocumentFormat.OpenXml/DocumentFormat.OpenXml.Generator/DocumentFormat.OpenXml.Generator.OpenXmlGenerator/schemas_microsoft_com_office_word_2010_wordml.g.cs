@@ -137,7 +137,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
                             {
                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                 {
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
+                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "sdt"), 1, 1),
                                     new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                     {
                                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -150,9 +150,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word
                                                     {
                                                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                         {
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "proofErr"), 0, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "permStart"), 0, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "permEnd"), 0, 1)
                                                         }
                                                     },
                                                     new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -163,47 +163,47 @@ namespace DocumentFormat.OpenXml.Office2010.Word
                                                             {
                                                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                 {
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "bookmarkStart"), 1, 1),
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "bookmarkEnd"), 1, 1),
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "commentRangeStart"), 1, 1),
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "commentRangeEnd"), 1, 1)
                                                                 }
                                                             },
                                                             new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                             {
                                                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                 {
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFromRangeStart"), 1, 1),
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFromRangeEnd"), 1, 1),
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveToRangeStart"), 1, 1),
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveToRangeEnd"), 1, 1),
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlInsRangeStart"), 1, 1),
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlInsRangeEnd"), 1, 1),
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlDelRangeStart"), 1, 1),
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlDelRangeEnd"), 1, 1),
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveFromRangeStart"), 1, 1),
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveFromRangeEnd"), 1, 1),
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveToRangeStart"), 1, 1),
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveToRangeEnd"), 1, 1)
                                                                 }
                                                             },
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                                            new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictInsRangeStart"), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictInsRangeEnd"), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictDelRangeStart"), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictDelRangeEnd"), 0, 1, version: FileFormatVersions.Office2010)
                                                         }
                                                     },
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0, version: FileFormatVersions.Office2010),
+                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "ins"), 0, 1),
+                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "del"), 0, 1),
+                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFrom"), 1, 1),
+                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveTo"), 1, 1),
+                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "contentPart"), 0, 0, version: FileFormatVersions.Office2010),
                                                     new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
                                                     {
                                                         new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                         {
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                                            new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "conflictIns"), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "conflictDel"), 0, 1, version: FileFormatVersions.Office2010)
                                                         }
                                                     }
                                                 }
@@ -212,36 +212,36 @@ namespace DocumentFormat.OpenXml.Office2010.Word
                                             {
                                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                 {
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
+                                                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMathPara"), 1, 1),
+                                                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMath"), 1, 1),
                                                     new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                     {
                                                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                         {
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Box), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BorderBox), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Delimiter), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.EquationArray), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Fraction), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MathFunction), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GroupChar), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLower), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitUpper), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Matrix), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Nary), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Phantom), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Radical), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PreSubSuper), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "acc"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "bar"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "box"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "borderBox"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "d"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "eqArr"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "f"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "func"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "groupChr"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLow"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limUpp"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "m"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "nary"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "phant"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rad"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sPre"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSub"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubSup"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSup"), 1, 1),
                                                             new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                             {
                                                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                 {
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "r"), 1, 1)
                                                                 }
                                                             }
                                                         }
@@ -256,11 +256,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
                             {
                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                 {
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Run), 1, 1)
+                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "r"), 1, 1)
                                 }
                             },
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride), 0, 1, version: FileFormatVersions.Office2010),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding), 0, 1, version: FileFormatVersions.Office2010)
+                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "bdo"), 0, 1, version: FileFormatVersions.Office2010),
+                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "dir"), 0, 1, version: FileFormatVersions.Office2010)
                         }
                     }
                 }
@@ -387,7 +387,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
                             {
                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                 {
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
+                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "sdt"), 1, 1),
                                     new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                     {
                                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -400,9 +400,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word
                                                     {
                                                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                         {
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "proofErr"), 0, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "permStart"), 0, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "permEnd"), 0, 1)
                                                         }
                                                     },
                                                     new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -413,47 +413,47 @@ namespace DocumentFormat.OpenXml.Office2010.Word
                                                             {
                                                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                 {
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "bookmarkStart"), 1, 1),
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "bookmarkEnd"), 1, 1),
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "commentRangeStart"), 1, 1),
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "commentRangeEnd"), 1, 1)
                                                                 }
                                                             },
                                                             new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                             {
                                                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                 {
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFromRangeStart"), 1, 1),
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFromRangeEnd"), 1, 1),
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveToRangeStart"), 1, 1),
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveToRangeEnd"), 1, 1),
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlInsRangeStart"), 1, 1),
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlInsRangeEnd"), 1, 1),
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlDelRangeStart"), 1, 1),
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlDelRangeEnd"), 1, 1),
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveFromRangeStart"), 1, 1),
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveFromRangeEnd"), 1, 1),
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveToRangeStart"), 1, 1),
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveToRangeEnd"), 1, 1)
                                                                 }
                                                             },
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
+                                                            new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictInsRangeStart"), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictInsRangeEnd"), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictDelRangeStart"), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictDelRangeEnd"), 0, 1, version: FileFormatVersions.Office2010)
                                                         }
                                                     },
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0, version: FileFormatVersions.Office2010),
+                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "ins"), 0, 1),
+                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "del"), 0, 1),
+                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFrom"), 1, 1),
+                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveTo"), 1, 1),
+                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "contentPart"), 0, 0, version: FileFormatVersions.Office2010),
                                                     new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
                                                     {
                                                         new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                         {
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), 0, 1, version: FileFormatVersions.Office2010),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), 0, 1, version: FileFormatVersions.Office2010)
+                                                            new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "conflictIns"), 0, 1, version: FileFormatVersions.Office2010),
+                                                            new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "conflictDel"), 0, 1, version: FileFormatVersions.Office2010)
                                                         }
                                                     }
                                                 }
@@ -462,36 +462,36 @@ namespace DocumentFormat.OpenXml.Office2010.Word
                                             {
                                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                 {
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
+                                                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMathPara"), 1, 1),
+                                                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMath"), 1, 1),
                                                     new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                     {
                                                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                         {
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Box), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BorderBox), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Delimiter), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.EquationArray), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Fraction), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MathFunction), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GroupChar), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLower), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitUpper), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Matrix), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Nary), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Phantom), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Radical), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PreSubSuper), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "acc"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "bar"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "box"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "borderBox"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "d"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "eqArr"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "f"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "func"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "groupChr"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLow"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limUpp"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "m"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "nary"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "phant"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rad"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sPre"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSub"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubSup"), 1, 1),
+                                                            new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSup"), 1, 1),
                                                             new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                             {
                                                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                 {
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
+                                                                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "r"), 1, 1)
                                                                 }
                                                             }
                                                         }
@@ -506,11 +506,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word
                             {
                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                 {
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Run), 1, 1)
+                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "r"), 1, 1)
                                 }
                             },
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride), 0, 1, version: FileFormatVersions.Office2010),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding), 0, 1, version: FileFormatVersions.Office2010)
+                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "bdo"), 0, 1, version: FileFormatVersions.Office2010),
+                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "dir"), 0, 1, version: FileFormatVersions.Office2010)
                         }
                     }
                 }
@@ -1389,16 +1389,16 @@ namespace DocumentFormat.OpenXml.Office2010.Word
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Tint), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Shade), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Alpha), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.HueModulation), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Saturation), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.SaturationOffset), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.SaturationModulation), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Luminance), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.LuminanceOffset), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.LuminanceModulation), 1, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "tint"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "shade"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "alpha"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "hueMod"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "sat"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "satOff"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "satMod"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "lum"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "lumOff"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "lumMod"), 1, 1, version: FileFormatVersions.Office2010)
                     }
                 }
             };
@@ -1501,16 +1501,16 @@ namespace DocumentFormat.OpenXml.Office2010.Word
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Tint), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Shade), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Alpha), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.HueModulation), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Saturation), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.SaturationOffset), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.SaturationModulation), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Luminance), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.LuminanceOffset), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.LuminanceModulation), 1, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "tint"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "shade"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "alpha"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "hueMod"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "sat"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "satOff"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "satMod"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "lum"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "lumOff"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "lumMod"), 1, 1, version: FileFormatVersions.Office2010)
                     }
                 }
             };
@@ -1651,7 +1651,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.FillToRectangle), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "fillToRect"), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -1664,8 +1664,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.FillToRectangle? FillToRectangle
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.FillToRectangle>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.FillToRectangle>(new("http://schemas.microsoft.com/office/word/2010/wordml", "fillToRect"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "fillToRect"));
         }
 
         /// <inheritdoc/>
@@ -1850,8 +1850,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.SchemeColor), 1, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "srgbClr"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "schemeClr"), 1, 1, version: FileFormatVersions.Office2010)
                     }
                 }
             };
@@ -1866,8 +1866,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex>(new("http://schemas.microsoft.com/office/word/2010/wordml", "srgbClr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "srgbClr"));
         }
 
         /// <summary>
@@ -1879,8 +1879,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.SchemeColor? SchemeColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.SchemeColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.SchemeColor>(new("http://schemas.microsoft.com/office/word/2010/wordml", "schemeClr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "schemeClr"));
         }
 
         /// <inheritdoc/>
@@ -1943,13 +1943,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.PathShadeProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.GradientStopList), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "gsLst"), 0, 1, version: FileFormatVersions.Office2010),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.LinearShadeProperties), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.PathShadeProperties), 1, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "lin"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "path"), 1, 1, version: FileFormatVersions.Office2010)
                     }
                 }
             };
@@ -1964,8 +1964,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.GradientStopList? GradientStopList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.GradientStopList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.GradientStopList>(new("http://schemas.microsoft.com/office/word/2010/wordml", "gsLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "gsLst"));
         }
 
         /// <inheritdoc/>
@@ -2136,8 +2136,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.SchemeColor), 1, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "srgbClr"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "schemeClr"), 1, 1, version: FileFormatVersions.Office2010)
                     }
                 }
             };
@@ -2152,8 +2152,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex>(new("http://schemas.microsoft.com/office/word/2010/wordml", "srgbClr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "srgbClr"));
         }
 
         /// <summary>
@@ -2165,8 +2165,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.SchemeColor? SchemeColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.SchemeColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.SchemeColor>(new("http://schemas.microsoft.com/office/word/2010/wordml", "schemeClr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "schemeClr"));
         }
 
         /// <inheritdoc/>
@@ -2373,8 +2373,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.SchemeColor), 1, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "srgbClr"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "schemeClr"), 1, 1, version: FileFormatVersions.Office2010)
                     }
                 }
             };
@@ -2389,8 +2389,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex>(new("http://schemas.microsoft.com/office/word/2010/wordml", "srgbClr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "srgbClr"));
         }
 
         /// <summary>
@@ -2402,8 +2402,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.SchemeColor? SchemeColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.SchemeColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.SchemeColor>(new("http://schemas.microsoft.com/office/word/2010/wordml", "schemeClr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "schemeClr"));
         }
 
         /// <inheritdoc/>
@@ -2805,25 +2805,25 @@ namespace DocumentFormat.OpenXml.Office2010.Word
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.NoFillEmpty), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.SolidColorFillProperties), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.GradientFillProperties), 1, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "noFill"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "solidFill"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "gradFill"), 1, 1, version: FileFormatVersions.Office2010)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.PresetLineDashProperties), 1, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "prstDash"), 1, 1, version: FileFormatVersions.Office2010)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RoundEmpty), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.BevelEmpty), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.LineJoinMiterProperties), 1, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "round"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "bevel"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "miter"), 1, 1, version: FileFormatVersions.Office2010)
                     }
                 }
             };
@@ -2893,9 +2893,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.NoFillEmpty), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.SolidColorFillProperties), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.GradientFillProperties), 1, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "noFill"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "solidFill"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "gradFill"), 1, 1, version: FileFormatVersions.Office2010)
                     }
                 }
             };
@@ -2910,8 +2910,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.NoFillEmpty? NoFillEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.NoFillEmpty>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.NoFillEmpty>(new("http://schemas.microsoft.com/office/word/2010/wordml", "noFill"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "noFill"));
         }
 
         /// <summary>
@@ -2923,8 +2923,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.SolidColorFillProperties? SolidColorFillProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.SolidColorFillProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.SolidColorFillProperties>(new("http://schemas.microsoft.com/office/word/2010/wordml", "solidFill"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "solidFill"));
         }
 
         /// <summary>
@@ -2936,8 +2936,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.GradientFillProperties? GradientFillProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.GradientFillProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.GradientFillProperties>(new("http://schemas.microsoft.com/office/word/2010/wordml", "gradFill"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "gradFill"));
         }
 
         /// <inheritdoc/>
@@ -2998,8 +2998,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.LightRig>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Camera), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.LightRig), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "camera"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "lightRig"), 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -3012,8 +3012,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.Camera? Camera
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Camera>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Camera>(new("http://schemas.microsoft.com/office/word/2010/wordml", "camera"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "camera"));
         }
 
         /// <summary>
@@ -3025,8 +3025,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.LightRig? LightRig
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.LightRig>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.LightRig>(new("http://schemas.microsoft.com/office/word/2010/wordml", "lightRig"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "lightRig"));
         }
 
         /// <inheritdoc/>
@@ -3146,10 +3146,10 @@ namespace DocumentFormat.OpenXml.Office2010.Word
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.BevelTop), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.BevelBottom), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.ExtrusionColor), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.ContourColor), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "bevelT"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "bevelB"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "extrusionClr"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "contourClr"), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -3162,8 +3162,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.BevelTop? BevelTop
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.BevelTop>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.BevelTop>(new("http://schemas.microsoft.com/office/word/2010/wordml", "bevelT"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "bevelT"));
         }
 
         /// <summary>
@@ -3175,8 +3175,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.BevelBottom? BevelBottom
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.BevelBottom>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.BevelBottom>(new("http://schemas.microsoft.com/office/word/2010/wordml", "bevelB"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "bevelB"));
         }
 
         /// <summary>
@@ -3188,8 +3188,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.ExtrusionColor? ExtrusionColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.ExtrusionColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.ExtrusionColor>(new("http://schemas.microsoft.com/office/word/2010/wordml", "extrusionClr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "extrusionClr"));
         }
 
         /// <summary>
@@ -3201,8 +3201,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.ContourColor? ContourColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.ContourColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.ContourColor>(new("http://schemas.microsoft.com/office/word/2010/wordml", "contourClr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "contourClr"));
         }
 
         /// <inheritdoc/>
@@ -3393,7 +3393,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.StyleSet>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.StyleSet), 0, 0, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "styleSet"), 0, 0, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -3631,9 +3631,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.WordNonVisualContentPartShapeProperties), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Transform2D), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "nvContentPartPr"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "xfrm"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "extLst"), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -3646,8 +3646,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.WordNonVisualContentPartShapeProperties? WordNonVisualContentPartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.WordNonVisualContentPartShapeProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.WordNonVisualContentPartShapeProperties>(new("http://schemas.microsoft.com/office/word/2010/wordml", "nvContentPartPr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "nvContentPartPr"));
         }
 
         /// <summary>
@@ -3659,8 +3659,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.Transform2D? Transform2D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Transform2D>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Transform2D>(new("http://schemas.microsoft.com/office/word/2010/wordml", "xfrm"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "xfrm"));
         }
 
         /// <summary>
@@ -3672,8 +3672,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.OfficeArtExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.OfficeArtExtensionList>(new("http://schemas.microsoft.com/office/word/2010/wordml", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -3919,9 +3919,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.UncheckedState>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Checked), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.CheckedState), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.UncheckedState), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "checked"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "checkedState"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "uncheckedState"), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -3934,8 +3934,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.Checked? Checked
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Checked>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Checked>(new("http://schemas.microsoft.com/office/word/2010/wordml", "checked"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "checked"));
         }
 
         /// <summary>
@@ -3947,8 +3947,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.CheckedState? CheckedState
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.CheckedState>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.CheckedState>(new("http://schemas.microsoft.com/office/word/2010/wordml", "checkedState"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "checkedState"));
         }
 
         /// <summary>
@@ -3960,8 +3960,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.UncheckedState? UncheckedState
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.UncheckedState>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.UncheckedState>(new("http://schemas.microsoft.com/office/word/2010/wordml", "uncheckedState"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "uncheckedState"));
         }
 
         /// <inheritdoc/>
@@ -4046,8 +4046,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.SchemeColor), 1, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "srgbClr"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "schemeClr"), 1, 1, version: FileFormatVersions.Office2010)
                     }
                 }
             };
@@ -4062,8 +4062,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex>(new("http://schemas.microsoft.com/office/word/2010/wordml", "srgbClr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "srgbClr"));
         }
 
         /// <summary>
@@ -4075,8 +4075,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.SchemeColor? SchemeColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.SchemeColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.SchemeColor>(new("http://schemas.microsoft.com/office/word/2010/wordml", "schemeClr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "schemeClr"));
         }
 
         /// <inheritdoc/>
@@ -4229,7 +4229,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.GradientStop>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.GradientStop), 2, 10, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "gs"), 2, 10, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -4456,7 +4456,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.SphereCoordinates), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "rot"), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -4469,8 +4469,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.SphereCoordinates? SphereCoordinates
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.SphereCoordinates>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.SphereCoordinates>(new("http://schemas.microsoft.com/office/word/2010/wordml", "rot"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "rot"));
         }
 
         /// <inheritdoc/>
@@ -4658,8 +4658,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.SchemeColor), 1, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "srgbClr"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "schemeClr"), 1, 1, version: FileFormatVersions.Office2010)
                     }
                 }
             };
@@ -4725,8 +4725,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.SchemeColor), 1, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "srgbClr"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "schemeClr"), 1, 1, version: FileFormatVersions.Office2010)
                     }
                 }
             };
@@ -4797,8 +4797,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex>(new("http://schemas.microsoft.com/office/word/2010/wordml", "srgbClr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "srgbClr"));
         }
 
         /// <summary>
@@ -4810,8 +4810,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.SchemeColor? SchemeColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.SchemeColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.SchemeColor>(new("http://schemas.microsoft.com/office/word/2010/wordml", "schemeClr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "schemeClr"));
         }
     }
 
@@ -5101,9 +5101,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word
                 .AddAttribute("title", a => a.Title);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkClick"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkHover"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -5116,8 +5116,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick? HyperlinkOnClick
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkClick"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkClick"));
         }
 
         /// <summary>
@@ -5129,8 +5129,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover? HyperlinkOnHover
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkHover"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkHover"));
         }
 
         /// <summary>
@@ -5142,8 +5142,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -5216,8 +5216,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
                 .AddAttribute("isComment", a => a.IsComment);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2010/main", "cpLocks"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2010/main", "extLst"), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -5230,8 +5230,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks? ContentPartLocks
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>(new("http://schemas.microsoft.com/office/drawing/2010/main", "cpLocks"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2010/main", "cpLocks"));
         }
 
         /// <summary>
@@ -5243,8 +5243,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>(new("http://schemas.microsoft.com/office/drawing/2010/main", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2010/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -5305,8 +5305,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NonVisualInkContentPartProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.NonVisualDrawingProperties), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.NonVisualInkContentPartProperties), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "cNvPr"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "cNvContentPartPr"), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -5319,8 +5319,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.NonVisualDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.NonVisualDrawingProperties>(new("http://schemas.microsoft.com/office/word/2010/wordml", "cNvPr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "cNvPr"));
         }
 
         /// <summary>
@@ -5332,8 +5332,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.NonVisualInkContentPartProperties? NonVisualInkContentPartProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.NonVisualInkContentPartProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.NonVisualInkContentPartProperties>(new("http://schemas.microsoft.com/office/word/2010/wordml", "cNvContentPartPr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordml", "cNvContentPartPr"));
         }
 
         /// <inheritdoc/>
@@ -5428,8 +5428,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
                 .AddAttribute("flipV", a => a.VerticalFlip);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extents), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "off"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"), 0, 1)
             };
         }
 
@@ -5442,8 +5442,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Offset? Offset
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "off"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "off"));
         }
 
         /// <summary>
@@ -5455,8 +5455,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Extents? Extents
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"));
         }
 
         /// <inheritdoc/>
@@ -5519,7 +5519,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"), 0, 0)
                     }
                 }
             };

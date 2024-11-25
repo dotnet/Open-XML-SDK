@@ -163,7 +163,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "pctWidth"), 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -176,8 +176,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth? PercentageWidth
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth>(new("http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "pctWidth"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "pctWidth"));
         }
 
         /// <inheritdoc/>
@@ -252,7 +252,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "pctHeight"), 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -265,8 +265,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight? PercentageHeight
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight>(new("http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "pctHeight"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "pctHeight"));
         }
 
         /// <inheritdoc/>

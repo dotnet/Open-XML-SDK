@@ -71,8 +71,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Person>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Person), 0, 0, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "person"), 0, 0, version: FileFormatVersions.Office2019),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "extLst"), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -165,8 +165,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedComment>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedComment), 0, 0, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "threadedComment"), 0, 0, version: FileFormatVersions.Office2019),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "extLst"), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -309,7 +309,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
                 .AddAttribute("providerId", a => a.ProviderId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "extLst"), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -322,8 +322,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList>(new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -386,7 +386,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
                     }
                 }
             };
@@ -530,9 +530,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
                 .AddAttribute("done", a => a.Done);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentText), 0, 1, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions), 0, 1, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "text"), 0, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "mentions"), 0, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "extLst"), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -545,8 +545,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentText? ThreadedCommentText
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentText>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentText>(new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "text"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "text"));
         }
 
         /// <summary>
@@ -558,8 +558,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions? ThreadedCommentMentions
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions>(new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "mentions"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "mentions"));
         }
 
         /// <summary>
@@ -571,8 +571,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList>(new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -669,7 +669,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Mention>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Mention), 0, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "mention"), 0, 0, version: FileFormatVersions.Office2019)
             };
         }
 

@@ -30,19 +30,19 @@ namespace DocumentFormat.OpenXml.Framework
 
         public ParticleConstraint? Particle { get; }
 
-        public ParticlePath? Find(object? obj)
-            => Find(obj?.GetType());
+        public ParticlePath? Find(OpenXmlElement? obj)
+            => Find(obj?.QName);
 
-        public ParticlePath? Find(Type? type)
+        public ParticlePath? Find(OpenXmlQualifiedName? qname)
         {
-            if (type is null)
+            if (qname is null)
             {
                 return null;
             }
 
-            foreach (var (t, p) in Lookup)
+            foreach (var (q, p) in Lookup)
             {
-                if (t == type)
+                if (q == qname)
                 {
                     return p;
                 }
@@ -53,8 +53,8 @@ namespace DocumentFormat.OpenXml.Framework
 
         public int Compare(OpenXmlElement? x, OpenXmlElement? y)
         {
-            var xPath = Find(x?.GetType());
-            var yPath = Find(y?.GetType());
+            var xPath = Find(x?.QName);
+            var yPath = Find(y?.QName);
 
             if (xPath is null && yPath is null)
             {

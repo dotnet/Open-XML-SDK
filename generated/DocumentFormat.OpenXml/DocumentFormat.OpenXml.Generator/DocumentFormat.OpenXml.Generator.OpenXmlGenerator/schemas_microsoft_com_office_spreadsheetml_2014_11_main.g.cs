@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
             builder.AddChild<DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGrouping>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGrouping), 1, 0, version: FileFormatVersions.Office2016)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/11/main", "modelTimeGrouping"), 1, 0, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -171,7 +171,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.ExcelAc.CalculatedTimeColumn), 1, 0, version: FileFormatVersions.Office2016)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/11/main", "calculatedTimeColumn"), 1, 0, version: FileFormatVersions.Office2016)
             };
         }
 

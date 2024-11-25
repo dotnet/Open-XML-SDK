@@ -71,8 +71,8 @@ namespace DocumentFormat.OpenXml.Office.Y2022.RichValueRel
             builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.RichValueRel.RichValueRelRelationship>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.RichValueRel.RichValueRelRelationship), 0, 0, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.RichValueRel.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/richvaluerel", "rel"), 0, 0, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/richvaluerel", "extLst"), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -179,7 +179,7 @@ namespace DocumentFormat.OpenXml.Office.Y2022.RichValueRel
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
                     }
                 }
             };

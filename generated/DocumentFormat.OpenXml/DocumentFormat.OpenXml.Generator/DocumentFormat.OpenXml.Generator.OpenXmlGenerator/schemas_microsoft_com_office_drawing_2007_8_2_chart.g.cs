@@ -77,11 +77,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZonesVisible>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneFilter), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneCategories), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneData), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneSeries), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZonesVisible), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2007/8/2/chart", "dropZoneFilter"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2007/8/2/chart", "dropZoneCategories"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2007/8/2/chart", "dropZoneData"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2007/8/2/chart", "dropZoneSeries"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2007/8/2/chart", "dropZonesVisible"), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -94,8 +94,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneFilter? DropZoneFilter
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneFilter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneFilter>(new("http://schemas.microsoft.com/office/drawing/2007/8/2/chart", "dropZoneFilter"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2007/8/2/chart", "dropZoneFilter"));
         }
 
         /// <summary>
@@ -107,8 +107,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneCategories? DropZoneCategories
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneCategories>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneCategories>(new("http://schemas.microsoft.com/office/drawing/2007/8/2/chart", "dropZoneCategories"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2007/8/2/chart", "dropZoneCategories"));
         }
 
         /// <summary>
@@ -120,8 +120,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneData? DropZoneData
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneData>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneData>(new("http://schemas.microsoft.com/office/drawing/2007/8/2/chart", "dropZoneData"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2007/8/2/chart", "dropZoneData"));
         }
 
         /// <summary>
@@ -133,8 +133,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneSeries? DropZoneSeries
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneSeries>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneSeries>(new("http://schemas.microsoft.com/office/drawing/2007/8/2/chart", "dropZoneSeries"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2007/8/2/chart", "dropZoneSeries"));
         }
 
         /// <summary>
@@ -146,8 +146,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZonesVisible? DropZonesVisible
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZonesVisible>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZonesVisible>(new("http://schemas.microsoft.com/office/drawing/2007/8/2/chart", "dropZonesVisible"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2007/8/2/chart", "dropZonesVisible"));
         }
 
         /// <inheritdoc/>
@@ -208,8 +208,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShowSketchButton>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.InSketchMode), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShowSketchButton), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2007/8/2/chart", "inSketchMode"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2007/8/2/chart", "showSketchBtn"), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -222,8 +222,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.Charts.InSketchMode? InSketchMode
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.InSketchMode>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.InSketchMode>(new("http://schemas.microsoft.com/office/drawing/2007/8/2/chart", "inSketchMode"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2007/8/2/chart", "inSketchMode"));
         }
 
         /// <summary>
@@ -235,8 +235,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShowSketchButton? ShowSketchButton
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShowSketchButton>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShowSketchButton>(new("http://schemas.microsoft.com/office/drawing/2007/8/2/chart", "showSketchBtn"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2007/8/2/chart", "showSketchBtn"));
         }
 
         /// <inheritdoc/>
@@ -295,7 +295,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShapeProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShapeProperties), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2007/8/2/chart", "spPr"), 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -308,8 +308,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShapeProperties? ShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShapeProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShapeProperties>(new("http://schemas.microsoft.com/office/drawing/2007/8/2/chart", "spPr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2007/8/2/chart", "spPr"));
         }
 
         /// <inheritdoc/>
@@ -452,39 +452,39 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "xfrm"), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "custGeom"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstGeom"), 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "noFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "solidFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "gradFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "blipFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "pattFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "grpFill"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ln"), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectLst"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectDag"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scene3d"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sp3d"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -497,8 +497,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "xfrm"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "xfrm"));
         }
 
         /// <inheritdoc/>

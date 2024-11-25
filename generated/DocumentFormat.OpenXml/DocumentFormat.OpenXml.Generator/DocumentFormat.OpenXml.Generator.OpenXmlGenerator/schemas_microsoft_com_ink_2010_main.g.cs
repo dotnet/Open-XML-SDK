@@ -364,9 +364,9 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Ink.ContextNodeProperty), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Ink.SourceLink), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Ink.DestinationLink), 0, 0)
+                new ElementParticle(new("http://schemas.microsoft.com/ink/2010/main", "property"), 0, 0),
+                new ElementParticle(new("http://schemas.microsoft.com/ink/2010/main", "sourceLink"), 0, 0),
+                new ElementParticle(new("http://schemas.microsoft.com/ink/2010/main", "destinationLink"), 0, 0)
             };
         }
 

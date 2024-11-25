@@ -1890,8 +1890,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Item), 0, 1000),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 0, 16)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "item"), 0, 1000),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "button"), 0, 16)
                     }
                 }
             };
@@ -2760,10 +2760,10 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.VisibleButton), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton), 1, 1)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "button"), 1, 1),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "toggleButton"), 1, 1)
                     },
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu), 1, 1)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "menu"), 1, 1)
                 }
             };
         }
@@ -3253,21 +3253,21 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
                         {
                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.CheckBox), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator), 1, 1)
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "control"), 1, 1),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "button"), 1, 1),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "checkBox"), 1, 1),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "gallery"), 1, 1),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "toggleButton"), 1, 1),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "menuSeparator"), 1, 1)
                             }
                         },
                         new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu), 1, 1)
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "splitButton"), 1, 1),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "menu"), 1, 1),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "dynamicMenu"), 1, 1)
                             }
                         }
                     }
@@ -3999,10 +3999,10 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.VisibleButton), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton), 1, 1)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "button"), 1, 1),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "toggleButton"), 1, 1)
                     },
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.MenuWithTitle), 1, 1)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "menu"), 1, 1)
                 }
             };
         }
@@ -4492,21 +4492,21 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
                         {
                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.CheckBox), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator), 1, 1)
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "control"), 1, 1),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "button"), 1, 1),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "checkBox"), 1, 1),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "gallery"), 1, 1),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "toggleButton"), 1, 1),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "menuSeparator"), 1, 1)
                             }
                         },
                         new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.SplitButtonWithTitle), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.MenuWithTitle), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu), 1, 1)
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "splitButton"), 1, 1),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "menu"), 1, 1),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "dynamicMenu"), 1, 1)
                             }
                         }
                     }
@@ -7203,7 +7203,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Item), 0, 1000)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "item"), 0, 1000)
                 }
             };
         }
@@ -7796,8 +7796,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Item), 0, 1000),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 0, 16)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "item"), 0, 1000),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "button"), 0, 16)
                 }
             };
         }
@@ -8542,8 +8542,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
                     {
                         new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Item), 0, 1000),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 0, 16)
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "item"), 0, 1000),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "button"), 0, 16)
                         }
                     }
                 }
@@ -9062,21 +9062,21 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
                             {
                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                 {
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone), 1, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.CheckBox), 1, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery), 1, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton), 1, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator), 1, 1)
+                                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "control"), 1, 1),
+                                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "button"), 1, 1),
+                                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "checkBox"), 1, 1),
+                                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "gallery"), 1, 1),
+                                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "toggleButton"), 1, 1),
+                                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "menuSeparator"), 1, 1)
                                 }
                             },
                             new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                             {
                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                 {
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton), 1, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu), 1, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu), 1, 1)
+                                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "splitButton"), 1, 1),
+                                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "menu"), 1, 1),
+                                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "dynamicMenu"), 1, 1)
                                 }
                             }
                         }
@@ -9861,10 +9861,10 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
                     {
                         new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.VisibleButton), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton), 1, 1)
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "button"), 1, 1),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "toggleButton"), 1, 1)
                         },
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu), 1, 1)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "menu"), 1, 1)
                     }
                 }
             };
@@ -10074,20 +10074,20 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.ControlClone), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.TextLabel), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Button), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.ToggleButton), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.CheckBox), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.EditBox), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.ComboBox), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.DropDown), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Gallery), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Menu), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.DynamicMenu), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.SplitButton), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Box), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.ButtonGroup), 1, 1)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "control"), 1, 1),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "labelControl"), 1, 1),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "button"), 1, 1),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "toggleButton"), 1, 1),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "checkBox"), 1, 1),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "editBox"), 1, 1),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "comboBox"), 1, 1),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "dropDown"), 1, 1),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "gallery"), 1, 1),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "menu"), 1, 1),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "dynamicMenu"), 1, 1),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "splitButton"), 1, 1),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "box"), 1, 1),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "buttonGroup"), 1, 1)
                 }
             };
         }
@@ -10271,13 +10271,13 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton), 1, 1)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "control"), 1, 1),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "button"), 1, 1),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "toggleButton"), 1, 1),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "gallery"), 1, 1),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "menu"), 1, 1),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "dynamicMenu"), 1, 1),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "splitButton"), 1, 1)
                 }
             };
         }
@@ -10399,21 +10399,21 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
                     {
                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.CheckBox), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator), 1, 1)
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "control"), 1, 1),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "button"), 1, 1),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "checkBox"), 1, 1),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "gallery"), 1, 1),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "toggleButton"), 1, 1),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "menuSeparator"), 1, 1)
                         }
                     },
                     new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                     {
                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu), 1, 1)
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "splitButton"), 1, 1),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "menu"), 1, 1),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "dynamicMenu"), 1, 1)
                         }
                     }
                 }
@@ -10506,8 +10506,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommands), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Ribbon), 0, 1)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "commands"), 0, 1),
+                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "ribbon"), 0, 1)
             };
         }
 
@@ -10520,8 +10520,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommands? RepurposedCommands
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommands>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommands>(new("http://schemas.microsoft.com/office/2006/01/customui", "commands"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2006/01/customui", "commands"));
         }
 
         /// <summary>
@@ -10533,8 +10533,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomUI.Ribbon? Ribbon
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.Ribbon>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.Ribbon>(new("http://schemas.microsoft.com/office/2006/01/customui", "ribbon"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2006/01/customui", "ribbon"));
         }
 
         /// <inheritdoc/>
@@ -11665,7 +11665,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "button"), 1, 1)
             };
         }
 
@@ -11678,8 +11678,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton? UnsizedButton
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>(new("http://schemas.microsoft.com/office/2006/01/customui", "button"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2006/01/customui", "button"));
         }
 
         /// <inheritdoc/>
@@ -12067,26 +12067,26 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
                         {
                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.ControlClone), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.TextLabel), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Button), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.ToggleButton), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.CheckBox), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.EditBox), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.ComboBox), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.DropDown), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Gallery), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Menu), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.DynamicMenu), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.SplitButton), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Box), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.ButtonGroup), 1, 1)
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "control"), 1, 1),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "labelControl"), 1, 1),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "button"), 1, 1),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "toggleButton"), 1, 1),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "checkBox"), 1, 1),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "editBox"), 1, 1),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "comboBox"), 1, 1),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "dropDown"), 1, 1),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "gallery"), 1, 1),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "menu"), 1, 1),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "dynamicMenu"), 1, 1),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "splitButton"), 1, 1),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "box"), 1, 1),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "buttonGroup"), 1, 1)
                             }
                         },
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.VerticalSeparator), 1, 1)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "separator"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.DialogBoxLauncher), 0, 1)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "dialogBoxLauncher"), 0, 1)
             };
         }
 
@@ -12578,9 +12578,9 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbarControlClone), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.VerticalSeparator), 1, 1)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "control"), 1, 1),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "button"), 1, 1),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "separator"), 1, 1)
                 }
             };
         }
@@ -12643,9 +12643,9 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbarControlClone), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.VerticalSeparator), 1, 1)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "control"), 1, 1),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "button"), 1, 1),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "separator"), 1, 1)
                 }
             };
         }
@@ -12956,7 +12956,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 100)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Group), 1, 1)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "group"), 1, 1)
                 }
             };
         }
@@ -13057,7 +13057,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Tab), 0, 50)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "tab"), 0, 50)
             };
         }
 
@@ -13216,21 +13216,21 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
                     {
                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.CheckBox), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator), 1, 1)
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "control"), 1, 1),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "button"), 1, 1),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "checkBox"), 1, 1),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "gallery"), 1, 1),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "toggleButton"), 1, 1),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "menuSeparator"), 1, 1)
                         }
                     },
                     new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                     {
                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.SplitButtonWithTitle), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.MenuWithTitle), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu), 1, 1)
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "splitButton"), 1, 1),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "menu"), 1, 1),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "dynamicMenu"), 1, 1)
                         }
                     }
                 }
@@ -13294,8 +13294,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.DocumentSpecificQuickAccessToolbarControls>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.SharedQatControls), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.DocumentSpecificQuickAccessToolbarControls), 0, 1)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "sharedControls"), 0, 1),
+                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "documentControls"), 0, 1)
             };
         }
 
@@ -13308,8 +13308,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomUI.SharedQatControls? SharedQatControls
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.SharedQatControls>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.SharedQatControls>(new("http://schemas.microsoft.com/office/2006/01/customui", "sharedControls"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2006/01/customui", "sharedControls"));
         }
 
         /// <summary>
@@ -13321,8 +13321,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomUI.DocumentSpecificQuickAccessToolbarControls? DocumentSpecificQuickAccessToolbarControls
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.DocumentSpecificQuickAccessToolbarControls>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.DocumentSpecificQuickAccessToolbarControls>(new("http://schemas.microsoft.com/office/2006/01/customui", "documentControls"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2006/01/customui", "documentControls"));
         }
 
         /// <inheritdoc/>
@@ -13380,7 +13380,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Tab>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Tab), 1, 100)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "tab"), 1, 100)
             };
         }
 
@@ -13439,7 +13439,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSet>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSet), 1, 100)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "tabSet"), 1, 100)
             };
         }
 
@@ -13498,7 +13498,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommand>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommand), 1, 5000)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "command"), 1, 5000)
             };
         }
 
@@ -13575,10 +13575,10 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
                 .AddAttribute("startFromScratch", a => a.StartFromScratch);
             builder.Particle = new CompositeParticle.Builder(ParticleType.All, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.OfficeMenu), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbar), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Tabs), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSets), 0, 1)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "officeMenu"), 0, 1),
+                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "qat"), 0, 1),
+                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "tabs"), 0, 1),
+                new ElementParticle(new("http://schemas.microsoft.com/office/2006/01/customui", "contextualTabs"), 0, 1)
             };
         }
 
@@ -13591,8 +13591,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomUI.OfficeMenu? OfficeMenu
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.OfficeMenu>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.OfficeMenu>(new("http://schemas.microsoft.com/office/2006/01/customui", "officeMenu"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2006/01/customui", "officeMenu"));
         }
 
         /// <summary>
@@ -13604,8 +13604,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbar? QuickAccessToolbar
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbar>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbar>(new("http://schemas.microsoft.com/office/2006/01/customui", "qat"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2006/01/customui", "qat"));
         }
 
         /// <summary>
@@ -13617,8 +13617,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomUI.Tabs? Tabs
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.Tabs>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.Tabs>(new("http://schemas.microsoft.com/office/2006/01/customui", "tabs"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2006/01/customui", "tabs"));
         }
 
         /// <summary>
@@ -13630,8 +13630,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSets? ContextualTabSets
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSets>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSets>(new("http://schemas.microsoft.com/office/2006/01/customui", "contextualTabs"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2006/01/customui", "contextualTabs"));
         }
 
         /// <inheritdoc/>

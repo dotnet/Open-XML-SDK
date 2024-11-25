@@ -1,31 +1,33 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Diagnostics;
-
-#if !NET5_0_OR_GREATER
-using DocumentFormat.OpenXml.Framework;
-#endif
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
     /// Particle constraint data for particle which type is ParticleType.Element.
     /// </summary>
-    [DebuggerDisplay("ElementId={ElementId}")]
+    [DebuggerDisplay("Element={QName}")]
     internal class ElementParticle : ParticleConstraint, IParticleValidator
     {
         /// <summary>
         /// Initializes a new instance of the ElementParticle.
         /// </summary>
-        public ElementParticle(Type elementType, int minOccurs, int maxOccurs, FileFormatVersions version = FileFormatVersions.Office2007)
+        public ElementParticle(OpenXmlQualifiedName qname, int minOccurs, int maxOccurs, FileFormatVersions version = FileFormatVersions.Office2007)
             : base(ParticleType.Element, minOccurs, maxOccurs, version)
         {
-            ElementType = elementType ?? throw new ArgumentNullException(nameof(elementType));
+            if (qname == default)
+            {
+                throw new ArgumentNullException(nameof(qname));
+            }
+
+            QName = qname;
         }
 
-        public Type ElementType { get; }
+        public OpenXmlQualifiedName QName { get; }
 
         /// <inheritdoc/>
         internal override IParticleValidator ParticleValidator => this;
@@ -33,7 +35,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <inheritdoc/>
         public void TryMatchOnce(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)
         {
-            if (particleMatchInfo.StartElement?.GetType() == ElementType)
+            if (particleMatchInfo.StartElement?.QName != QName)
             {
                 particleMatchInfo.Match = ParticleMatch.Matched;
                 particleMatchInfo.LastMatchedElement = particleMatchInfo.StartElement;
@@ -49,7 +51,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <inheritdoc/>
         public void TryMatch(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)
         {
-            if (ElementType != particleMatchInfo.StartElement?.GetType())
+            if (particleMatchInfo.StartElement?.QName != QName)
             {
                 particleMatchInfo.Match = ParticleMatch.Nomatch;
             }
@@ -65,7 +67,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 var element = particleMatchInfo.StartElement;
                 int count = 0;
 
-                while (element is not null && MaxOccursGreaterThan(count) && element.GetType() == ElementType)
+                while (element is not null && MaxOccursGreaterThan(count) && element.QName == QName)
                 {
                     count++;
                     particleMatchInfo.LastMatchedElement = element;
@@ -81,7 +83,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     particleMatchInfo.Match = ParticleMatch.Partial;
                     if (validationContext.CollectExpectedChildren)
                     {
-                        particleMatchInfo.ExpectedChildren.Add(ElementType);
+                        particleMatchInfo.ExpectedChildren.Add(QName);
                     }
                 }
             }
@@ -96,7 +98,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 if (result is not null)
                 {
-                    result.Add(ElementType);
+                    result.Add(QName);
                 }
 
                 return true;
@@ -112,7 +114,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             if (MinOccurs > 0)
             {
-                requiredElements.Add(ElementType);
+                requiredElements.Add(QName);
             }
 
             return requiredElements;
@@ -121,7 +123,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <inheritdoc/>
         public bool GetExpectedElements(ExpectedChildren result)
         {
-            result.Add(ElementType);
+            result.Add(QName);
             return true;
         }
 
@@ -130,7 +132,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             var expectedElements = new ExpectedChildren();
 
-            expectedElements.Add(ElementType);
+            expectedElements.Add(QName);
 
             return expectedElements;
         }
@@ -144,13 +146,13 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             if (obj is ElementParticle element)
             {
-                return ElementType == element.ElementType
+                return QName == element.QName
                     && base.Equals(element);
             }
 
             return false;
         }
 
-        public override int GetHashCode() => HashCode.Combine(base.GetHashCode(), ElementType);
+        public override int GetHashCode() => HashCode.Combine(base.GetHashCode(), QName);
     }
 }

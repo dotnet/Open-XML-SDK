@@ -1909,8 +1909,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Item), 0, 1000, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 0, 16, version: FileFormatVersions.Office2010)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "item"), 0, 1000, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "button"), 0, 16, version: FileFormatVersions.Office2010)
                     }
                 }
             };
@@ -2796,10 +2796,10 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.VisibleButton), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton), 1, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "button"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "toggleButton"), 1, 1, version: FileFormatVersions.Office2010)
                     },
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular), 1, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "menu"), 1, 1, version: FileFormatVersions.Office2010)
                 }
             };
         }
@@ -3290,21 +3290,21 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                         {
                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular), 1, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox), 1, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular), 1, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator), 1, 1, version: FileFormatVersions.Office2010)
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "control"), 1, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "button"), 1, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "checkBox"), 1, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "gallery"), 1, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "toggleButton"), 1, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "menuSeparator"), 1, 1, version: FileFormatVersions.Office2010)
                             }
                         },
                         new CompositeParticle.Builder(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
                         {
                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular), 1, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular), 1, 1, version: FileFormatVersions.Office2010)
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "splitButton"), 1, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "menu"), 1, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "dynamicMenu"), 1, 1, version: FileFormatVersions.Office2010)
                             }
                         }
                     }
@@ -4038,10 +4038,10 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.VisibleButton), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton), 1, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "button"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "toggleButton"), 1, 1, version: FileFormatVersions.Office2010)
                     },
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuWithTitle), 1, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "menu"), 1, 1, version: FileFormatVersions.Office2010)
                 }
             };
         }
@@ -4532,21 +4532,21 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                         {
                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular), 1, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox), 1, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular), 1, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator), 1, 1, version: FileFormatVersions.Office2010)
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "control"), 1, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "button"), 1, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "checkBox"), 1, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "gallery"), 1, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "toggleButton"), 1, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "menuSeparator"), 1, 1, version: FileFormatVersions.Office2010)
                             }
                         },
                         new CompositeParticle.Builder(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
                         {
                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonWithTitle), 1, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuWithTitle), 1, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular), 1, 1, version: FileFormatVersions.Office2010)
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "splitButton"), 1, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "menu"), 1, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "dynamicMenu"), 1, 1, version: FileFormatVersions.Office2010)
                             }
                         }
                     }
@@ -7376,7 +7376,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Item), 0, 1000, version: FileFormatVersions.Office2010)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "item"), 0, 1000, version: FileFormatVersions.Office2010)
                 }
             };
         }
@@ -7970,8 +7970,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Item), 0, 1000, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 0, 16, version: FileFormatVersions.Office2010)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "item"), 0, 1000, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "button"), 0, 16, version: FileFormatVersions.Office2010)
                 }
             };
         }
@@ -8728,8 +8728,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                     {
                         new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Item), 0, 1000, version: FileFormatVersions.Office2010),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 0, 16, version: FileFormatVersions.Office2010)
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "item"), 0, 1000, version: FileFormatVersions.Office2010),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "button"), 0, 16, version: FileFormatVersions.Office2010)
                         }
                     }
                 }
@@ -9249,21 +9249,21 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                             {
                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                 {
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular), 1, 1, version: FileFormatVersions.Office2010),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox), 1, 1, version: FileFormatVersions.Office2010),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular), 1, 1, version: FileFormatVersions.Office2010),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator), 1, 1, version: FileFormatVersions.Office2010)
+                                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "control"), 1, 1, version: FileFormatVersions.Office2010),
+                                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "button"), 1, 1, version: FileFormatVersions.Office2010),
+                                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "checkBox"), 1, 1, version: FileFormatVersions.Office2010),
+                                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "gallery"), 1, 1, version: FileFormatVersions.Office2010),
+                                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "toggleButton"), 1, 1, version: FileFormatVersions.Office2010),
+                                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "menuSeparator"), 1, 1, version: FileFormatVersions.Office2010)
                                 }
                             },
                             new CompositeParticle.Builder(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
                             {
                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                 {
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular), 1, 1, version: FileFormatVersions.Office2010),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular), 1, 1, version: FileFormatVersions.Office2010)
+                                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "splitButton"), 1, 1, version: FileFormatVersions.Office2010),
+                                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "menu"), 1, 1, version: FileFormatVersions.Office2010),
+                                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "dynamicMenu"), 1, 1, version: FileFormatVersions.Office2010)
                                 }
                             }
                         }
@@ -10050,10 +10050,10 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                     {
                         new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.VisibleButton), 1, 1, version: FileFormatVersions.Office2010),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton), 1, 1, version: FileFormatVersions.Office2010)
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "button"), 1, 1, version: FileFormatVersions.Office2010),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "toggleButton"), 1, 1, version: FileFormatVersions.Office2010)
                         },
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular), 1, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "menu"), 1, 1, version: FileFormatVersions.Office2010)
                     }
                 }
             };
@@ -10278,20 +10278,20 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlClone), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.LabelControl), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Button), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButton), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.EditBox), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ComboBox), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.DropDownRegular), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Gallery), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Menu), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenu), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.SplitButton), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Box), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonGroup), 1, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "control"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "labelControl"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "button"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "toggleButton"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "checkBox"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "editBox"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "comboBox"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "dropDown"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "gallery"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "menu"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "dynamicMenu"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "splitButton"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "box"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "buttonGroup"), 1, 1, version: FileFormatVersions.Office2010)
                 }
             };
         }
@@ -10492,14 +10492,14 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Separator), 1, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "control"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "button"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "toggleButton"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "gallery"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "menu"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "dynamicMenu"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "splitButton"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "separator"), 1, 1, version: FileFormatVersions.Office2010)
                 }
             };
         }
@@ -11284,7 +11284,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuGroup), 1, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "menuGroup"), 1, 1, version: FileFormatVersions.Office2010)
                     }
                 }
             };
@@ -12799,7 +12799,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ItemBackstageItem), 0, 1000, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "item"), 0, 1000, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -13100,7 +13100,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.RadioButtonBackstageItem), 0, 1000, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "radioButton"), 0, 1000, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -13415,7 +13415,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ItemBackstageItem), 0, 1000, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "item"), 0, 1000, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -14096,17 +14096,17 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageComboBox), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageLabelControl), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.GroupBox), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ImageControl), 1, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "button"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "checkBox"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "editBox"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "dropDown"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "radioGroup"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "comboBox"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "hyperlink"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "labelControl"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "groupBox"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "layoutContainer"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "imageControl"), 1, 1, version: FileFormatVersions.Office2010)
                     }
                 }
             };
@@ -14268,17 +14268,17 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageComboBox), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageLabelControl), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.GroupBox), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ImageControl), 1, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "button"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "checkBox"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "editBox"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "dropDown"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "radioGroup"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "comboBox"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "hyperlink"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "labelControl"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "groupBox"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "layoutContainer"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "imageControl"), 1, 1, version: FileFormatVersions.Office2010)
                     }
                 }
             };
@@ -14778,10 +14778,10 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.PrimaryItem), 0, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "primaryItem"), 0, 1, version: FileFormatVersions.Office2010)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.TopItemsGroupControls), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BottomItemsGroupControls), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "topItems"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "bottomItems"), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -15071,7 +15071,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                 .AddAttribute("allowedTaskSizes", a => a.AllowedTaskSizes);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroupCategory), 0, 100, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "category"), 0, 100, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -15193,21 +15193,21 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                     {
                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular), 1, 1, version: FileFormatVersions.Office2010),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox), 1, 1, version: FileFormatVersions.Office2010),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular), 1, 1, version: FileFormatVersions.Office2010),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator), 1, 1, version: FileFormatVersions.Office2010)
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "control"), 1, 1, version: FileFormatVersions.Office2010),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "button"), 1, 1, version: FileFormatVersions.Office2010),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "checkBox"), 1, 1, version: FileFormatVersions.Office2010),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "gallery"), 1, 1, version: FileFormatVersions.Office2010),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "toggleButton"), 1, 1, version: FileFormatVersions.Office2010),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "menuSeparator"), 1, 1, version: FileFormatVersions.Office2010)
                         }
                     },
                     new CompositeParticle.Builder(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
                     {
                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular), 1, 1, version: FileFormatVersions.Office2010),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular), 1, 1, version: FileFormatVersions.Office2010)
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "splitButton"), 1, 1, version: FileFormatVersions.Office2010),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "menu"), 1, 1, version: FileFormatVersions.Office2010),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "dynamicMenu"), 1, 1, version: FileFormatVersions.Office2010)
                         }
                     }
                 }
@@ -15305,10 +15305,10 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Commands), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Ribbon), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Backstage), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ContextMenus), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "commands"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "ribbon"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "backstage"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "contextMenus"), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -15321,8 +15321,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.CustomUI.Commands? Commands
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.Commands>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.Commands>(new("http://schemas.microsoft.com/office/2009/07/customui", "commands"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2009/07/customui", "commands"));
         }
 
         /// <summary>
@@ -15334,8 +15334,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.CustomUI.Ribbon? Ribbon
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.Ribbon>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.Ribbon>(new("http://schemas.microsoft.com/office/2009/07/customui", "ribbon"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2009/07/customui", "ribbon"));
         }
 
         /// <summary>
@@ -15347,8 +15347,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.CustomUI.Backstage? Backstage
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.Backstage>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.Backstage>(new("http://schemas.microsoft.com/office/2009/07/customui", "backstage"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2009/07/customui", "backstage"));
         }
 
         /// <summary>
@@ -15360,8 +15360,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.CustomUI.ContextMenus? ContextMenus
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.ContextMenus>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.ContextMenus>(new("http://schemas.microsoft.com/office/2009/07/customui", "contextMenus"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2009/07/customui", "contextMenus"));
         }
 
         /// <inheritdoc/>
@@ -16544,7 +16544,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "button"), 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -16557,8 +16557,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular? ButtonRegular
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular>(new("http://schemas.microsoft.com/office/2009/07/customui", "button"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2009/07/customui", "button"));
         }
 
         /// <inheritdoc/>
@@ -16969,26 +16969,26 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                         {
                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlClone), 1, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.LabelControl), 1, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Button), 1, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButton), 1, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox), 1, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.EditBox), 1, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ComboBox), 1, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.DropDownRegular), 1, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Gallery), 1, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Menu), 1, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenu), 1, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.SplitButton), 1, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Box), 1, 1, version: FileFormatVersions.Office2010),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonGroup), 1, 1, version: FileFormatVersions.Office2010)
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "control"), 1, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "labelControl"), 1, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "button"), 1, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "toggleButton"), 1, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "checkBox"), 1, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "editBox"), 1, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "comboBox"), 1, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "dropDown"), 1, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "gallery"), 1, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "menu"), 1, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "dynamicMenu"), 1, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "splitButton"), 1, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "box"), 1, 1, version: FileFormatVersions.Office2010),
+                                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "buttonGroup"), 1, 1, version: FileFormatVersions.Office2010)
                             }
                         },
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Separator), 1, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "separator"), 1, 1, version: FileFormatVersions.Office2010)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.DialogBoxLauncher), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "dialogBoxLauncher"), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -17483,9 +17483,9 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneQat), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Separator), 1, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "control"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "button"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "separator"), 1, 1, version: FileFormatVersions.Office2010)
                 }
             };
         }
@@ -17549,9 +17549,9 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneQat), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Separator), 1, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "control"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "button"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "separator"), 1, 1, version: FileFormatVersions.Office2010)
                 }
             };
         }
@@ -17863,7 +17863,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 100)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Group), 1, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "group"), 1, 1, version: FileFormatVersions.Office2010)
                 }
             };
         }
@@ -17965,7 +17965,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Tab), 0, 50, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "tab"), 0, 50, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -18106,8 +18106,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DocumentControlsQatItems>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.SharedControlsQatItems), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.DocumentControlsQatItems), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "sharedControls"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "documentControls"), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -18120,8 +18120,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.CustomUI.SharedControlsQatItems? SharedControlsQatItems
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.SharedControlsQatItems>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.SharedControlsQatItems>(new("http://schemas.microsoft.com/office/2009/07/customui", "sharedControls"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2009/07/customui", "sharedControls"));
         }
 
         /// <summary>
@@ -18133,8 +18133,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.CustomUI.DocumentControlsQatItems? DocumentControlsQatItems
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.DocumentControlsQatItems>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.DocumentControlsQatItems>(new("http://schemas.microsoft.com/office/2009/07/customui", "documentControls"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2009/07/customui", "documentControls"));
         }
 
         /// <inheritdoc/>
@@ -18193,7 +18193,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Tab>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Tab), 1, 100, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "tab"), 1, 100, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -18253,7 +18253,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.TabSet>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.TabSet), 1, 100, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "tabSet"), 1, 100, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -18350,15 +18350,15 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                     {
                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular), 1, 1, version: FileFormatVersions.Office2010),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox), 1, 1, version: FileFormatVersions.Office2010),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular), 1, 1, version: FileFormatVersions.Office2010),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular), 1, 1, version: FileFormatVersions.Office2010),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular), 1, 1, version: FileFormatVersions.Office2010),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular), 1, 1, version: FileFormatVersions.Office2010),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparatorNoTitle), 1, 1, version: FileFormatVersions.Office2010)
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "control"), 1, 1, version: FileFormatVersions.Office2010),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "button"), 1, 1, version: FileFormatVersions.Office2010),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "checkBox"), 1, 1, version: FileFormatVersions.Office2010),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "gallery"), 1, 1, version: FileFormatVersions.Office2010),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "toggleButton"), 1, 1, version: FileFormatVersions.Office2010),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "splitButton"), 1, 1, version: FileFormatVersions.Office2010),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "menu"), 1, 1, version: FileFormatVersions.Office2010),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "dynamicMenu"), 1, 1, version: FileFormatVersions.Office2010),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "menuSeparator"), 1, 1, version: FileFormatVersions.Office2010)
                         }
                     }
                 }
@@ -19084,7 +19084,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuGroup), 1, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "menuGroup"), 1, 1, version: FileFormatVersions.Office2010)
                     }
                 }
             };
@@ -19240,10 +19240,10 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                     {
                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuButton), 1, 1, version: FileFormatVersions.Office2010),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuCheckBox), 1, 1, version: FileFormatVersions.Office2010),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageSubMenu), 1, 1, version: FileFormatVersions.Office2010),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuToggleButton), 1, 1, version: FileFormatVersions.Office2010)
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "button"), 1, 1, version: FileFormatVersions.Office2010),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "checkBox"), 1, 1, version: FileFormatVersions.Office2010),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "menu"), 1, 1, version: FileFormatVersions.Office2010),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "toggleButton"), 1, 1, version: FileFormatVersions.Office2010)
                         }
                     }
                 }
@@ -19308,8 +19308,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageRegularButton>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageRegularButton), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstagePrimaryMenu), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "button"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "menu"), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -19322,8 +19322,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.CustomUI.BackstageRegularButton? BackstageRegularButton
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageRegularButton>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageRegularButton>(new("http://schemas.microsoft.com/office/2009/07/customui", "button"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2009/07/customui", "button"));
         }
 
         /// <summary>
@@ -19335,8 +19335,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.CustomUI.BackstagePrimaryMenu? BackstagePrimaryMenu
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.BackstagePrimaryMenu>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.BackstagePrimaryMenu>(new("http://schemas.microsoft.com/office/2009/07/customui", "menu"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2009/07/customui", "menu"));
         }
 
         /// <inheritdoc/>
@@ -19408,17 +19408,17 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageComboBox), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageLabelControl), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.GroupBox), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ImageControl), 1, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "button"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "checkBox"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "editBox"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "dropDown"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "radioGroup"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "comboBox"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "hyperlink"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "labelControl"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "groupBox"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "layoutContainer"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "imageControl"), 1, 1, version: FileFormatVersions.Office2010)
                     }
                 }
             };
@@ -19493,17 +19493,17 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageComboBox), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageLabelControl), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.GroupBox), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ImageControl), 1, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "button"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "checkBox"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "editBox"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "dropDown"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "radioGroup"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "comboBox"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "hyperlink"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "labelControl"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "groupBox"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "layoutContainer"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "imageControl"), 1, 1, version: FileFormatVersions.Office2010)
                     }
                 }
             };
@@ -19802,7 +19802,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroupTask), 0, 1000, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "task"), 0, 1000, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -20367,7 +20367,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroupTask), 0, 1000, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "task"), 0, 1000, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -20716,7 +20716,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroup), 0, 1000, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "group"), 0, 1000, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -20950,7 +20950,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                 .AddAttribute("allowedTaskSizes", a => a.AllowedTaskSizes);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroupCategory), 0, 100, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "category"), 0, 100, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -21016,7 +21016,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroup), 1, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "taskFormGroup"), 1, 1, version: FileFormatVersions.Office2010)
                 },
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                 {
@@ -21024,8 +21024,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                     {
                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroup), 1, 1, version: FileFormatVersions.Office2010),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroup), 1, 1, version: FileFormatVersions.Office2010)
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "group"), 1, 1, version: FileFormatVersions.Office2010),
+                            new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "taskGroup"), 1, 1, version: FileFormatVersions.Office2010)
                         }
                     }
                 }
@@ -21094,8 +21094,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroup), 1, 1, version: FileFormatVersions.Office2010),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroup), 1, 1, version: FileFormatVersions.Office2010)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "group"), 1, 1, version: FileFormatVersions.Office2010),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "taskGroup"), 1, 1, version: FileFormatVersions.Office2010)
                     }
                 }
             };
@@ -21476,8 +21476,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroups), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.SimpleGroups), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "firstColumn"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "secondColumn"), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -21490,8 +21490,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroups? BackstageGroups
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroups>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroups>(new("http://schemas.microsoft.com/office/2009/07/customui", "firstColumn"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2009/07/customui", "firstColumn"));
         }
 
         /// <summary>
@@ -21503,8 +21503,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.CustomUI.SimpleGroups? SimpleGroups
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.SimpleGroups>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.SimpleGroups>(new("http://schemas.microsoft.com/office/2009/07/customui", "secondColumn"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2009/07/customui", "secondColumn"));
         }
 
         /// <inheritdoc/>
@@ -21876,7 +21876,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Command>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Command), 1, 5000, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "command"), 1, 5000, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -21952,9 +21952,9 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
                 .AddAttribute("startFromScratch", a => a.StartFromScratch);
             builder.Particle = new CompositeParticle.Builder(ParticleType.All, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.QuickAccessToolbar), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.Tabs), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ContextualTabs), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "qat"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "tabs"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "contextualTabs"), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -21967,8 +21967,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.CustomUI.QuickAccessToolbar? QuickAccessToolbar
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.QuickAccessToolbar>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.QuickAccessToolbar>(new("http://schemas.microsoft.com/office/2009/07/customui", "qat"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2009/07/customui", "qat"));
         }
 
         /// <summary>
@@ -21980,8 +21980,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.CustomUI.Tabs? Tabs
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.Tabs>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.Tabs>(new("http://schemas.microsoft.com/office/2009/07/customui", "tabs"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2009/07/customui", "tabs"));
         }
 
         /// <summary>
@@ -21993,8 +21993,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.CustomUI.ContextualTabs? ContextualTabs
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.ContextualTabs>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.CustomUI.ContextualTabs>(new("http://schemas.microsoft.com/office/2009/07/customui", "contextualTabs"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2009/07/customui", "contextualTabs"));
         }
 
         /// <inheritdoc/>
@@ -22086,8 +22086,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 255)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageTab), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageFastCommandButton), 1, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "tab"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "button"), 1, 1, version: FileFormatVersions.Office2010)
                 }
             };
         }
@@ -22148,7 +22148,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ContextMenu>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.CustomUI.ContextMenu), 1, 1000, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2009/07/customui", "contextMenu"), 1, 1000, version: FileFormatVersions.Office2010)
             };
         }
 

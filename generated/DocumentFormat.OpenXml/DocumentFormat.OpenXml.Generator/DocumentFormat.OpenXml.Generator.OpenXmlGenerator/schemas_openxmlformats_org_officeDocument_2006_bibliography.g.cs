@@ -110,7 +110,7 @@ namespace DocumentFormat.OpenXml.Bibliography
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Source), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Source"), 0, 0)
             };
         }
 
@@ -173,9 +173,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.AddChild<DocumentFormat.OpenXml.Bibliography.Middle>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Last), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.First), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Middle), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Last"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "First"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Middle"), 0, 0)
             };
         }
 
@@ -2286,7 +2286,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.AddChild<DocumentFormat.OpenXml.Bibliography.Person>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Person), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Person"), 1, 0)
             };
         }
 
@@ -2344,7 +2344,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:Artist");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "NameList"), 1, 1)
             };
         }
 
@@ -2402,7 +2402,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:BookAuthor");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "NameList"), 1, 1)
             };
         }
 
@@ -2460,7 +2460,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:Compiler");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "NameList"), 1, 1)
             };
         }
 
@@ -2518,7 +2518,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:Composer");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "NameList"), 1, 1)
             };
         }
 
@@ -2576,7 +2576,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:Conductor");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "NameList"), 1, 1)
             };
         }
 
@@ -2634,7 +2634,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:Counsel");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "NameList"), 1, 1)
             };
         }
 
@@ -2692,7 +2692,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:Director");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "NameList"), 1, 1)
             };
         }
 
@@ -2750,7 +2750,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:Editor");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "NameList"), 1, 1)
             };
         }
 
@@ -2808,7 +2808,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:Interviewee");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "NameList"), 1, 1)
             };
         }
 
@@ -2866,7 +2866,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:Interviewer");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "NameList"), 1, 1)
             };
         }
 
@@ -2924,7 +2924,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:Inventor");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "NameList"), 1, 1)
             };
         }
 
@@ -2982,7 +2982,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:ProducerName");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "NameList"), 1, 1)
             };
         }
 
@@ -3040,7 +3040,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:Translator");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "NameList"), 1, 1)
             };
         }
 
@@ -3098,7 +3098,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:Writer");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "NameList"), 1, 1)
             };
         }
 
@@ -3165,8 +3165,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.NameList? NameList
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.NameList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.NameList>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "NameList"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "NameList"));
         }
     }
 
@@ -3223,8 +3223,8 @@ namespace DocumentFormat.OpenXml.Bibliography
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Corporate), 1, 1)
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "NameList"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Corporate"), 1, 1)
                 }
             };
         }
@@ -3286,8 +3286,8 @@ namespace DocumentFormat.OpenXml.Bibliography
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Corporate), 1, 1)
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "NameList"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Corporate"), 1, 1)
                 }
             };
         }
@@ -3357,8 +3357,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.NameList? NameList
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.NameList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.NameList>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "NameList"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "NameList"));
         }
 
         /// <summary>
@@ -3370,8 +3370,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Corporate? Corporate
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Corporate>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Corporate>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Corporate"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Corporate"));
         }
     }
 
@@ -3458,22 +3458,22 @@ namespace DocumentFormat.OpenXml.Bibliography
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Artist), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Author), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.BookAuthor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Compiler), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Composer), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Conductor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Counsel), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Director), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Editor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Interviewee), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Interviewer), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Inventor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Performer), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ProducerName), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Translator), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Writer), 1, 1)
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Artist"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Author"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "BookAuthor"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Compiler"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Composer"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Conductor"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Counsel"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Director"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Editor"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Interviewee"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Interviewer"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Inventor"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Performer"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ProducerName"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Translator"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Writer"), 1, 1)
                 }
             };
         }
@@ -3487,8 +3487,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Artist? Artist
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Artist>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Artist>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Artist"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Artist"));
         }
 
         /// <summary>
@@ -3500,8 +3500,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Author? Author
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Author>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Author>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Author"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Author"));
         }
 
         /// <summary>
@@ -3513,8 +3513,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.BookAuthor? BookAuthor
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.BookAuthor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.BookAuthor>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "BookAuthor"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "BookAuthor"));
         }
 
         /// <summary>
@@ -3526,8 +3526,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Compiler? Compiler
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Compiler>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Compiler>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Compiler"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Compiler"));
         }
 
         /// <summary>
@@ -3539,8 +3539,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Composer? Composer
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Composer>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Composer>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Composer"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Composer"));
         }
 
         /// <summary>
@@ -3552,8 +3552,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Conductor? Conductor
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Conductor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Conductor>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Conductor"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Conductor"));
         }
 
         /// <summary>
@@ -3565,8 +3565,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Counsel? Counsel
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Counsel>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Counsel>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Counsel"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Counsel"));
         }
 
         /// <summary>
@@ -3578,8 +3578,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Director? Director
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Director>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Director>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Director"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Director"));
         }
 
         /// <summary>
@@ -3591,8 +3591,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Editor? Editor
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Editor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Editor>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Editor"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Editor"));
         }
 
         /// <summary>
@@ -3604,8 +3604,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Interviewee? Interviewee
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Interviewee>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Interviewee>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Interviewee"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Interviewee"));
         }
 
         /// <summary>
@@ -3617,8 +3617,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Interviewer? Interviewer
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Interviewer>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Interviewer>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Interviewer"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Interviewer"));
         }
 
         /// <summary>
@@ -3630,8 +3630,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Inventor? Inventor
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Inventor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Inventor>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Inventor"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Inventor"));
         }
 
         /// <summary>
@@ -3643,8 +3643,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Performer? Performer
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Performer>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Performer>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Performer"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Performer"));
         }
 
         /// <summary>
@@ -3656,8 +3656,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.ProducerName? ProducerName
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.ProducerName>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.ProducerName>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ProducerName"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ProducerName"));
         }
 
         /// <summary>
@@ -3669,8 +3669,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Translator? Translator
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Translator>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Translator>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Translator"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Translator"));
         }
 
         /// <summary>
@@ -3682,8 +3682,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Writer? Writer
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Writer>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Writer>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Writer"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Writer"));
         }
 
         /// <inheritdoc/>
@@ -3883,58 +3883,58 @@ namespace DocumentFormat.OpenXml.Bibliography
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AlbumTitle), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AuthorList), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.BookTitle), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Broadcaster), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.BroadcastTitle), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.CaseNumber), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ChapterNumber), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.City), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Comments), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ConferenceName), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.CountryRegion), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Court), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Day), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.DayAccessed), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Department), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Distributor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Edition), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.GuidString), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Institution), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.InternetSiteTitle), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Issue), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.JournalName), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.LcId), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Medium), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Month), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.MonthAccessed), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NumberVolumes), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Pages), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PatentNumber), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PeriodicalTitle), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ProductionCompany), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PublicationTitle), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Publisher), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.RecordingNumber), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ReferenceOrder), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Reporter), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.SourceType), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ShortTitle), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.StandardNumber), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.StateProvince), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Station), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Tag), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Theater), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ThesisType), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Title), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PatentType), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.UrlString), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Version), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Volume), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Year), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.YearAccessed), 1, 1)
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "AbbreviatedCaseNumber"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "AlbumTitle"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Author"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "BookTitle"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Broadcaster"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "BroadcastTitle"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CaseNumber"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ChapterNumber"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "City"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Comments"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ConferenceName"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CountryRegion"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Court"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Day"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "DayAccessed"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Department"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Distributor"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Edition"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Guid"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Institution"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "InternetSiteTitle"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Issue"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "JournalName"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "LCID"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Medium"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Month"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "MonthAccessed"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "NumberVolumes"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Pages"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "PatentNumber"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "PeriodicalTitle"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ProductionCompany"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "PublicationTitle"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Publisher"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "RecordingNumber"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "RefOrder"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Reporter"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "SourceType"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ShortTitle"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "StandardNumber"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "StateProvince"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Station"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Tag"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Theater"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ThesisType"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Title"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Type"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "URL"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Version"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Volume"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Year"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "YearAccessed"), 1, 1)
                 }
             };
         }
@@ -3948,8 +3948,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber? AbbreviatedCaseNumber
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "AbbreviatedCaseNumber"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "AbbreviatedCaseNumber"));
         }
 
         /// <summary>
@@ -3961,8 +3961,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.AlbumTitle? AlbumTitle
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.AlbumTitle>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.AlbumTitle>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "AlbumTitle"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "AlbumTitle"));
         }
 
         /// <summary>
@@ -3974,8 +3974,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.AuthorList? AuthorList
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.AuthorList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.AuthorList>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Author"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Author"));
         }
 
         /// <summary>
@@ -3987,8 +3987,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.BookTitle? BookTitle
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.BookTitle>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.BookTitle>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "BookTitle"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "BookTitle"));
         }
 
         /// <summary>
@@ -4000,8 +4000,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Broadcaster? Broadcaster
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Broadcaster>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Broadcaster>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Broadcaster"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Broadcaster"));
         }
 
         /// <summary>
@@ -4013,8 +4013,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.BroadcastTitle? BroadcastTitle
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.BroadcastTitle>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.BroadcastTitle>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "BroadcastTitle"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "BroadcastTitle"));
         }
 
         /// <summary>
@@ -4026,8 +4026,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.CaseNumber? CaseNumber
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.CaseNumber>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.CaseNumber>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CaseNumber"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CaseNumber"));
         }
 
         /// <summary>
@@ -4039,8 +4039,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.ChapterNumber? ChapterNumber
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.ChapterNumber>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.ChapterNumber>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ChapterNumber"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ChapterNumber"));
         }
 
         /// <summary>
@@ -4052,8 +4052,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.City? City
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.City>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.City>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "City"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "City"));
         }
 
         /// <summary>
@@ -4065,8 +4065,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Comments? Comments
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Comments>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Comments>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Comments"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Comments"));
         }
 
         /// <summary>
@@ -4078,8 +4078,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.ConferenceName? ConferenceName
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.ConferenceName>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.ConferenceName>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ConferenceName"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ConferenceName"));
         }
 
         /// <summary>
@@ -4091,8 +4091,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.CountryRegion? CountryRegion
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.CountryRegion>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.CountryRegion>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CountryRegion"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CountryRegion"));
         }
 
         /// <summary>
@@ -4104,8 +4104,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Court? Court
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Court>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Court>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Court"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Court"));
         }
 
         /// <summary>
@@ -4117,8 +4117,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Day? Day
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Day>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Day>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Day"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Day"));
         }
 
         /// <summary>
@@ -4130,8 +4130,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.DayAccessed? DayAccessed
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.DayAccessed>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.DayAccessed>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "DayAccessed"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "DayAccessed"));
         }
 
         /// <summary>
@@ -4143,8 +4143,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Department? Department
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Department>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Department>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Department"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Department"));
         }
 
         /// <summary>
@@ -4156,8 +4156,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Distributor? Distributor
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Distributor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Distributor>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Distributor"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Distributor"));
         }
 
         /// <summary>
@@ -4169,8 +4169,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Edition? Edition
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Edition>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Edition>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Edition"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Edition"));
         }
 
         /// <summary>
@@ -4182,8 +4182,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.GuidString? GuidString
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.GuidString>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.GuidString>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Guid"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Guid"));
         }
 
         /// <summary>
@@ -4195,8 +4195,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Institution? Institution
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Institution>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Institution>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Institution"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Institution"));
         }
 
         /// <summary>
@@ -4208,8 +4208,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.InternetSiteTitle? InternetSiteTitle
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.InternetSiteTitle>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.InternetSiteTitle>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "InternetSiteTitle"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "InternetSiteTitle"));
         }
 
         /// <summary>
@@ -4221,8 +4221,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Issue? Issue
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Issue>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Issue>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Issue"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Issue"));
         }
 
         /// <summary>
@@ -4234,8 +4234,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.JournalName? JournalName
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.JournalName>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.JournalName>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "JournalName"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "JournalName"));
         }
 
         /// <summary>
@@ -4247,8 +4247,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.LcId? LcId
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.LcId>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.LcId>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "LCID"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "LCID"));
         }
 
         /// <summary>
@@ -4260,8 +4260,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Medium? Medium
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Medium>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Medium>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Medium"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Medium"));
         }
 
         /// <summary>
@@ -4273,8 +4273,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Month? Month
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Month>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Month>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Month"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Month"));
         }
 
         /// <summary>
@@ -4286,8 +4286,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.MonthAccessed? MonthAccessed
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.MonthAccessed>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.MonthAccessed>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "MonthAccessed"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "MonthAccessed"));
         }
 
         /// <summary>
@@ -4299,8 +4299,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.NumberVolumes? NumberVolumes
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.NumberVolumes>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.NumberVolumes>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "NumberVolumes"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "NumberVolumes"));
         }
 
         /// <summary>
@@ -4312,8 +4312,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Pages? Pages
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Pages>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Pages>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Pages"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Pages"));
         }
 
         /// <summary>
@@ -4325,8 +4325,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.PatentNumber? PatentNumber
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.PatentNumber>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.PatentNumber>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "PatentNumber"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "PatentNumber"));
         }
 
         /// <summary>
@@ -4338,8 +4338,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.PeriodicalTitle? PeriodicalTitle
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.PeriodicalTitle>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.PeriodicalTitle>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "PeriodicalTitle"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "PeriodicalTitle"));
         }
 
         /// <summary>
@@ -4351,8 +4351,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.ProductionCompany? ProductionCompany
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.ProductionCompany>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.ProductionCompany>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ProductionCompany"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ProductionCompany"));
         }
 
         /// <summary>
@@ -4364,8 +4364,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.PublicationTitle? PublicationTitle
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.PublicationTitle>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.PublicationTitle>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "PublicationTitle"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "PublicationTitle"));
         }
 
         /// <summary>
@@ -4377,8 +4377,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Publisher? Publisher
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Publisher>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Publisher>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Publisher"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Publisher"));
         }
 
         /// <summary>
@@ -4390,8 +4390,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.RecordingNumber? RecordingNumber
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.RecordingNumber>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.RecordingNumber>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "RecordingNumber"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "RecordingNumber"));
         }
 
         /// <summary>
@@ -4403,8 +4403,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.ReferenceOrder? ReferenceOrder
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.ReferenceOrder>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.ReferenceOrder>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "RefOrder"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "RefOrder"));
         }
 
         /// <summary>
@@ -4416,8 +4416,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Reporter? Reporter
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Reporter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Reporter>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Reporter"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Reporter"));
         }
 
         /// <summary>
@@ -4429,8 +4429,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.SourceType? SourceType
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.SourceType>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.SourceType>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "SourceType"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "SourceType"));
         }
 
         /// <summary>
@@ -4442,8 +4442,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.ShortTitle? ShortTitle
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.ShortTitle>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.ShortTitle>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ShortTitle"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ShortTitle"));
         }
 
         /// <summary>
@@ -4455,8 +4455,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.StandardNumber? StandardNumber
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.StandardNumber>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.StandardNumber>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "StandardNumber"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "StandardNumber"));
         }
 
         /// <summary>
@@ -4468,8 +4468,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.StateProvince? StateProvince
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.StateProvince>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.StateProvince>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "StateProvince"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "StateProvince"));
         }
 
         /// <summary>
@@ -4481,8 +4481,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Station? Station
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Station>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Station>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Station"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Station"));
         }
 
         /// <summary>
@@ -4494,8 +4494,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Tag? Tag
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Tag>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Tag>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Tag"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Tag"));
         }
 
         /// <summary>
@@ -4507,8 +4507,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Theater? Theater
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Theater>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Theater>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Theater"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Theater"));
         }
 
         /// <summary>
@@ -4520,8 +4520,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.ThesisType? ThesisType
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.ThesisType>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.ThesisType>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ThesisType"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ThesisType"));
         }
 
         /// <summary>
@@ -4533,8 +4533,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Title? Title
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Title>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Title>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Title"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Title"));
         }
 
         /// <summary>
@@ -4546,8 +4546,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.PatentType? PatentType
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.PatentType>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.PatentType>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Type"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Type"));
         }
 
         /// <summary>
@@ -4559,8 +4559,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.UrlString? UrlString
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.UrlString>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.UrlString>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "URL"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "URL"));
         }
 
         /// <summary>
@@ -4572,8 +4572,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Version? Version
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Version>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Version>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Version"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Version"));
         }
 
         /// <summary>
@@ -4585,8 +4585,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Volume? Volume
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Volume>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Volume>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Volume"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Volume"));
         }
 
         /// <summary>
@@ -4598,8 +4598,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Year? Year
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Year>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.Year>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Year"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Year"));
         }
 
         /// <summary>
@@ -4611,8 +4611,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.YearAccessed? YearAccessed
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.YearAccessed>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Bibliography.YearAccessed>(new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "YearAccessed"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "YearAccessed"));
         }
 
         /// <inheritdoc/>

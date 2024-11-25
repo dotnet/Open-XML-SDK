@@ -70,8 +70,8 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
             builder.AddChild<DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationLabel>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationLabel), 0, 0, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2020/mipLabelMetadata", "label"), 0, 0, version: FileFormatVersions.Office2021),
+                new ElementParticle(new("http://schemas.microsoft.com/office/2020/mipLabelMetadata", "extLst"), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -372,7 +372,7 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
             builder.AddChild<DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationExtension), 0, 0, version: FileFormatVersions.Office2021)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2020/mipLabelMetadata", "ext"), 0, 0, version: FileFormatVersions.Office2021)
             };
         }
 

@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTag>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTag), 0, 0, version: FileFormatVersions.Office2021)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2020/02/main", "designTag"), 0, 0, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -143,8 +143,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
                 .AddAttribute("edtDesignElem", a => a.EdtDesignElem);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList), 0, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2020/02/main", "designTagLst"), 0, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2020/02/main", "extLst"), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -157,8 +157,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList? DesignerTagList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList>(new("http://schemas.microsoft.com/office/powerpoint/2020/02/main", "designTagLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2020/02/main", "designTagLst"));
         }
 
         /// <summary>
@@ -170,8 +170,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.ExtensionList>(new("http://schemas.microsoft.com/office/powerpoint/2020/02/main", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2020/02/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -288,7 +288,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ext"), 0, 0)
                     }
                 }
             };

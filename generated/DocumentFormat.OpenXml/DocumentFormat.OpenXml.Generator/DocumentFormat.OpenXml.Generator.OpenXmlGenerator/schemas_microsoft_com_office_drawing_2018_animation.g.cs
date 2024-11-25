@@ -157,7 +157,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
                 .AddAttribute("end", a => a.End);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2018/animation", "extLst"), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -170,8 +170,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
         /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList>(new("http://schemas.microsoft.com/office/drawing/2018/animation", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2018/animation", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -234,7 +234,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"), 0, 0)
                     }
                 }
             };

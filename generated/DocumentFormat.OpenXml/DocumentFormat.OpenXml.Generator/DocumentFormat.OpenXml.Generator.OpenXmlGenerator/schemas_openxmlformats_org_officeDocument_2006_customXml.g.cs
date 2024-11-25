@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/customXml", "schemaRefs"), 0, 1)
             };
         }
 
@@ -99,8 +99,8 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         /// </remarks>
         public DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences? SchemaReferences
         {
-            get => GetElement<DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences>(new("http://schemas.openxmlformats.org/officeDocument/2006/customXml", "schemaRefs"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/customXml", "schemaRefs"));
         }
 
         /// <inheritdoc/>
@@ -231,7 +231,7 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
             builder.AddChild<DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReference>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReference), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/customXml", "schemaRef"), 0, 0)
             };
         }
 

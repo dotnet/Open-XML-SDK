@@ -94,8 +94,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
                 .AddAttribute("inactive", a => a.Inactive);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistory), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "history"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "extLst"), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -108,8 +108,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistory? TaskHistory
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistory>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistory>(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "history"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "history"));
         }
 
         /// <summary>
@@ -121,8 +121,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList>(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -226,7 +226,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ext"), 0, 0)
                     }
                 }
             };
@@ -376,8 +376,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.CommentAnchor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.CommentAnchor), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "comment"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "extLst"), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -390,8 +390,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.CommentAnchor? CommentAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.CommentAnchor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.CommentAnchor>(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "comment"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "comment"));
         }
 
         /// <summary>
@@ -403,8 +403,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList>(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -778,20 +778,20 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AtrbtnTaskAssignUnassignUser), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskAnchor), 0, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "atrbtn"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "anchr"), 0, 1, version: FileFormatVersions.Microsoft365),
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AsgnTaskAssignUnassignUser), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AddEmpty), 0, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskTitleEventInfo), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskScheduleEventInfo), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskProgressEventInfo), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.UnasgnAllEmpty), 0, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskUndo), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskUnknownRecord), 1, 1, version: FileFormatVersions.Microsoft365)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "asgn"), 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "add"), 0, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "title"), 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "date"), 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "pcntCmplt"), 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "unasgnAll"), 0, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "undo"), 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "unknown"), 1, 1, version: FileFormatVersions.Microsoft365)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "extLst"), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -804,8 +804,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AtrbtnTaskAssignUnassignUser? AtrbtnTaskAssignUnassignUser
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AtrbtnTaskAssignUnassignUser>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AtrbtnTaskAssignUnassignUser>(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "atrbtn"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "atrbtn"));
         }
 
         /// <summary>
@@ -817,8 +817,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskAnchor? TaskAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskAnchor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskAnchor>(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "anchr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "anchr"));
         }
 
         /// <inheritdoc/>
@@ -877,7 +877,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistoryEvent>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistoryEvent), 0, 0, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "event"), 0, 0, version: FileFormatVersions.Microsoft365)
             };
         }
 

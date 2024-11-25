@@ -276,7 +276,7 @@ namespace DocumentFormat.OpenXml.Vml
             builder.AddChild<DocumentFormat.OpenXml.Vml.Formula>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formula), 0, 128)
+                new ElementParticle(new("urn:schemas-microsoft-com:vml", "f"), 0, 128)
             };
         }
 
@@ -335,7 +335,7 @@ namespace DocumentFormat.OpenXml.Vml
             builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandle>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandle), 0, 4)
+                new ElementParticle(new("urn:schemas-microsoft-com:vml", "h"), 0, 4)
             };
         }
 
@@ -699,7 +699,7 @@ namespace DocumentFormat.OpenXml.Vml
                 .AddAttribute("r:id", a => a.RelationshipId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties), 0, 1)
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "fill"), 0, 1)
             };
             builder.AddConstraint(new RelationshipTypeConstraint(builder.CreateQName("r:id"), "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"));
             builder.AddConstraint(new AttributeValuePatternConstraint(builder.CreateQName("v:focus"), @"-?(\d{1,2}|100)%"));
@@ -719,8 +719,8 @@ namespace DocumentFormat.OpenXml.Vml
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties? FillExtendedProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties>(new("urn:schemas-microsoft-com:office:office", "fill"));
+            set => SetElement(value, new("urn:schemas-microsoft-com:office:office", "fill"));
         }
 
         /// <inheritdoc/>
@@ -1110,11 +1110,11 @@ namespace DocumentFormat.OpenXml.Vml
                 .AddAttribute("insetpen", a => a.Insetpen);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.LeftStroke), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.TopStroke), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.RightStroke), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.BottomStroke), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ColumnStroke), 0, 1)
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "left"), 0, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "top"), 0, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "right"), 0, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "bottom"), 0, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "column"), 0, 1)
             };
             builder.AddConstraint(new RelationshipTypeConstraint(builder.CreateQName("r:id"), "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"));
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName(":id"), false, null));
@@ -1132,8 +1132,8 @@ namespace DocumentFormat.OpenXml.Vml
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.LeftStroke? LeftStroke
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.LeftStroke>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.LeftStroke>(new("urn:schemas-microsoft-com:office:office", "left"));
+            set => SetElement(value, new("urn:schemas-microsoft-com:office:office", "left"));
         }
 
         /// <summary>
@@ -1145,8 +1145,8 @@ namespace DocumentFormat.OpenXml.Vml
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.TopStroke? TopStroke
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.TopStroke>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.TopStroke>(new("urn:schemas-microsoft-com:office:office", "top"));
+            set => SetElement(value, new("urn:schemas-microsoft-com:office:office", "top"));
         }
 
         /// <summary>
@@ -1158,8 +1158,8 @@ namespace DocumentFormat.OpenXml.Vml
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.RightStroke? RightStroke
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.RightStroke>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.RightStroke>(new("urn:schemas-microsoft-com:office:office", "right"));
+            set => SetElement(value, new("urn:schemas-microsoft-com:office:office", "right"));
         }
 
         /// <summary>
@@ -1171,8 +1171,8 @@ namespace DocumentFormat.OpenXml.Vml
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.BottomStroke? BottomStroke
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.BottomStroke>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.BottomStroke>(new("urn:schemas-microsoft-com:office:office", "bottom"));
+            set => SetElement(value, new("urn:schemas-microsoft-com:office:office", "bottom"));
         }
 
         /// <summary>
@@ -1184,8 +1184,8 @@ namespace DocumentFormat.OpenXml.Vml
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.ColumnStroke? ColumnStroke
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.ColumnStroke>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.ColumnStroke>(new("urn:schemas-microsoft-com:office:office", "column"));
+            set => SetElement(value, new("urn:schemas-microsoft-com:office:office", "column"));
         }
 
         /// <inheritdoc/>
@@ -1438,7 +1438,7 @@ namespace DocumentFormat.OpenXml.Vml
                 .AddAttribute("o:singleclick", a => a.SingleClick);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "txbxContent"), 0, 1),
                 new AnyParticle(XsdAny.Local, 1, 1)
             };
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName("v:id"), true, null));
@@ -2650,33 +2650,33 @@ namespace DocumentFormat.OpenXml.Vml
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "path"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "formulas"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "handles"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "fill"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "stroke"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "shadow"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "textbox"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "textpath"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "imagedata"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "skew"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "extrusion"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "callout"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "lock"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "clippath"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "signatureline"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "wrap"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "anchorlock"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "bordertop"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderbottom"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderleft"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderright"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:excel", "ClientData"), 0, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:powerpoint", "textdata"), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Ink), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag), 1, 1)
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "ink"), 1, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:office:powerpoint", "iscomment"), 1, 1)
             };
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("v:dgmlayout"), true, new string[] { "0", "1", "2", "3" }));
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("v:dgmlayoutmru"), true, new string[] { "0", "1", "2", "3" }));
@@ -3491,32 +3491,32 @@ namespace DocumentFormat.OpenXml.Vml
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "path"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "formulas"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "handles"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "fill"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "stroke"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "shadow"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "textbox"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "textpath"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "imagedata"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "skew"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "extrusion"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "callout"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "lock"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "clippath"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "signatureline"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "wrap"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "anchorlock"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "bordertop"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderbottom"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderleft"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderright"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:excel", "ClientData"), 0, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:powerpoint", "textdata"), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Complex), 0, 1)
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "complex"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("v:dgmlayout"), true, new string[] { "0", "1", "2", "3" }));
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("v:dgmlayoutmru"), true, new string[] { "0", "1", "2", "3" }));
@@ -4051,23 +4051,23 @@ namespace DocumentFormat.OpenXml.Vml
                 .AddAttribute("o:tablelimits", a => a.TableLimits);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Group), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shape), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shapetype), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Arc), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Curve), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageFile), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Line), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Oval), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.PolyLine), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Rectangle), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.RoundRectangle), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Diagram), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1)
+                new ElementParticle(new("urn:schemas-microsoft-com:vml", "group"), 1, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:vml", "shape"), 1, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:vml", "shapetype"), 1, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:vml", "arc"), 1, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:vml", "curve"), 1, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:vml", "image"), 1, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:vml", "line"), 1, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:vml", "oval"), 1, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:vml", "polyline"), 1, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:vml", "rect"), 1, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:vml", "roundrect"), 1, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "diagram"), 1, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "lock"), 1, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "clippath"), 1, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:office:word", "wrap"), 1, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:office:word", "anchorlock"), 1, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:office:excel", "ClientData"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("v:tableproperties"), true, new string[] { "1", "2", "3" }));
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("v:dgmlayout"), true, new string[] { "0", "1", "2", "3" }));
@@ -4223,7 +4223,7 @@ namespace DocumentFormat.OpenXml.Vml
                 .AddAttribute("o:targetscreensize", a => a.TargetScreenSize);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 0, 1)
+                new ElementParticle(new("urn:schemas-microsoft-com:vml", "fill"), 0, 1)
             };
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName("v:id"), true, null));
         }
@@ -4237,8 +4237,8 @@ namespace DocumentFormat.OpenXml.Vml
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Fill? Fill
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Fill>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Vml.Fill>(new("urn:schemas-microsoft-com:vml", "fill"));
+            set => SetElement(value, new("urn:schemas-microsoft-com:vml", "fill"));
         }
 
         /// <inheritdoc/>
@@ -5039,29 +5039,29 @@ namespace DocumentFormat.OpenXml.Vml
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "path"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "formulas"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "handles"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "fill"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "stroke"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "shadow"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "textbox"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "textpath"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "imagedata"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "skew"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "extrusion"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "callout"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "lock"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "clippath"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "signatureline"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "wrap"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "anchorlock"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "bordertop"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderbottom"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderleft"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderright"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:excel", "ClientData"), 0, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:powerpoint", "textdata"), 0, 1)
                     }
                 }
             };
@@ -5901,29 +5901,29 @@ namespace DocumentFormat.OpenXml.Vml
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "path"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "formulas"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "handles"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "fill"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "stroke"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "shadow"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "textbox"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "textpath"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "imagedata"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "skew"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "extrusion"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "callout"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "lock"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "clippath"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "signatureline"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "wrap"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "anchorlock"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "bordertop"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderbottom"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderleft"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderright"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:excel", "ClientData"), 0, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:powerpoint", "textdata"), 0, 1)
                     }
                 }
             };
@@ -6816,29 +6816,29 @@ namespace DocumentFormat.OpenXml.Vml
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "path"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "formulas"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "handles"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "fill"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "stroke"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "shadow"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "textbox"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "textpath"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "imagedata"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "skew"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "extrusion"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "callout"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "lock"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "clippath"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "signatureline"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "wrap"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "anchorlock"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "bordertop"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderbottom"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderleft"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderright"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:excel", "ClientData"), 0, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:powerpoint", "textdata"), 0, 1)
                     }
                 }
             };
@@ -7654,29 +7654,29 @@ namespace DocumentFormat.OpenXml.Vml
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "path"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "formulas"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "handles"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "fill"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "stroke"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "shadow"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "textbox"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "textpath"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "imagedata"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "skew"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "extrusion"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "callout"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "lock"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "clippath"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "signatureline"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "wrap"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "anchorlock"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "bordertop"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderbottom"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderleft"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderright"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:excel", "ClientData"), 0, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:powerpoint", "textdata"), 0, 1)
                     }
                 }
             };
@@ -8468,29 +8468,29 @@ namespace DocumentFormat.OpenXml.Vml
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "path"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "formulas"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "handles"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "fill"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "stroke"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "shadow"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "textbox"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "textpath"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "imagedata"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "skew"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "extrusion"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "callout"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "lock"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "clippath"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "signatureline"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "wrap"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "anchorlock"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "bordertop"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderbottom"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderleft"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderright"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:excel", "ClientData"), 0, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:powerpoint", "textdata"), 0, 1)
                     }
                 }
             };
@@ -9297,32 +9297,32 @@ namespace DocumentFormat.OpenXml.Vml
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "path"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "formulas"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "handles"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "fill"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "stroke"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "shadow"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "textbox"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "textpath"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "imagedata"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "skew"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "extrusion"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "callout"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "lock"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "clippath"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "signatureline"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "wrap"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "anchorlock"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "bordertop"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderbottom"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderleft"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderright"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:excel", "ClientData"), 0, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:powerpoint", "textdata"), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Ink), 1, 1)
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "ink"), 1, 1)
             };
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("v:dgmlayout"), true, new string[] { "0", "1", "2", "3" }));
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("v:dgmlayoutmru"), true, new string[] { "0", "1", "2", "3" }));
@@ -10113,29 +10113,29 @@ namespace DocumentFormat.OpenXml.Vml
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "path"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "formulas"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "handles"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "fill"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "stroke"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "shadow"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "textbox"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "textpath"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "imagedata"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "skew"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "extrusion"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "callout"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "lock"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "clippath"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "signatureline"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "wrap"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "anchorlock"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "bordertop"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderbottom"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderleft"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderright"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:excel", "ClientData"), 0, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:powerpoint", "textdata"), 0, 1)
                     }
                 }
             };
@@ -10929,29 +10929,29 @@ namespace DocumentFormat.OpenXml.Vml
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "path"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "formulas"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "handles"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "fill"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "stroke"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "shadow"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "textbox"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "textpath"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:vml", "imagedata"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "skew"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "extrusion"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "callout"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "lock"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "clippath"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:office", "signatureline"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "wrap"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "anchorlock"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "bordertop"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderbottom"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderleft"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:word", "borderright"), 1, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:excel", "ClientData"), 0, 1),
+                        new ElementParticle(new("urn:schemas-microsoft-com:office:powerpoint", "textdata"), 0, 1)
                     }
                 }
             };

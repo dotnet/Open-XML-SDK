@@ -93,8 +93,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
                 .AddAttribute("itemId", a => a.ItemId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl), 0, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2021/extlinks2021", "absoluteUrl"), 0, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2021/extlinks2021", "relativeUrl"), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -107,8 +107,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
         /// </remarks>
         public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl? AbsoluteUrlAlternateUrl
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl>(new("http://schemas.microsoft.com/office/spreadsheetml/2021/extlinks2021", "absoluteUrl"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2021/extlinks2021", "absoluteUrl"));
         }
 
         /// <summary>
@@ -120,8 +120,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
         /// </remarks>
         public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl? RelativeUrlAlternateUrl
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl>(new("http://schemas.microsoft.com/office/spreadsheetml/2021/extlinks2021", "relativeUrl"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2021/extlinks2021", "relativeUrl"));
         }
 
         /// <inheritdoc/>

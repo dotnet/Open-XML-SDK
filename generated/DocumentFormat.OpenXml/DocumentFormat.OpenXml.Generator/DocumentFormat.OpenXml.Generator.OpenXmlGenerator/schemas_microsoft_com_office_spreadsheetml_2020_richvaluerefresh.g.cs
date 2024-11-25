@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals.RichValueRefreshInterval>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals.RichValueRefreshInterval), 1, 0, version: FileFormatVersions.Office2021)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2020/richvaluerefresh", "refreshInterval"), 1, 0, version: FileFormatVersions.Office2021)
             };
         }
 

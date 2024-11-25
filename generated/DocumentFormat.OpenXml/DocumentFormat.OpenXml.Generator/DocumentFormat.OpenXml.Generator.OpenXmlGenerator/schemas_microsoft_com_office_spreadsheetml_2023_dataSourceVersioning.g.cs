@@ -72,9 +72,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.LastEditFeatureXsdstring>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.RequiredFeatureXsdstring), 0, 0, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.LastRefreshFeatureXsdstring), 0, 0, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.LastEditFeatureXsdstring), 0, 0, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2023/dataSourceVersioning", "requiredFeature"), 0, 0, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2023/dataSourceVersioning", "lastRefreshFeature"), 0, 0, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2023/dataSourceVersioning", "lastEditFeature"), 0, 0, version: FileFormatVersions.Microsoft365)
             };
         }
 

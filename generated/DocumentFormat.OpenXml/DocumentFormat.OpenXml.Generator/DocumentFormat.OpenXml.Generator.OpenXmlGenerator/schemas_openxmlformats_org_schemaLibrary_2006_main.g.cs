@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
             builder.AddChild<DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/schemaLibrary/2006/main", "schema"), 0, 0)
             };
         }
 

@@ -96,13 +96,13 @@ namespace DocumentFormat.OpenXml.InkML
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Definitions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Context), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Trace), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceGroup), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceView), 0, 1)
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "annotation"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "annotationXML"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "definitions"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "context"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "trace"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "traceGroup"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "traceView"), 0, 1)
             };
         }
 
@@ -404,16 +404,16 @@ namespace DocumentFormat.OpenXml.InkML
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Bind), 0, 0),
+                    new ElementParticle(new("http://www.w3.org/2003/InkML", "bind"), 0, 0),
                     new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Table), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Matrix), 1, 1)
+                        new ElementParticle(new("http://www.w3.org/2003/InkML", "table"), 1, 1),
+                        new ElementParticle(new("http://www.w3.org/2003/InkML", "matrix"), 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, 0)
+                    new ElementParticle(new("http://www.w3.org/2003/InkML", "mapping"), 0, 0)
                 }
             };
         }
@@ -610,7 +610,7 @@ namespace DocumentFormat.OpenXml.InkML
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, 0)
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "mapping"), 0, 0)
             };
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("inkml:units"), true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 });
         }
@@ -670,7 +670,7 @@ namespace DocumentFormat.OpenXml.InkML
             builder.AddChild<DocumentFormat.OpenXml.InkML.Channel>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Channel), 0, 0)
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "channel"), 0, 0)
             };
         }
 
@@ -851,8 +851,8 @@ namespace DocumentFormat.OpenXml.InkML
                 .AddAttribute("xml:id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Channel), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.IntermittentChannels), 0, 1)
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "channel"), 0, 0),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "intermittentChannels"), 0, 1)
             };
         }
 
@@ -1167,7 +1167,7 @@ namespace DocumentFormat.OpenXml.InkML
             builder.AddChild<DocumentFormat.OpenXml.InkML.ChannelProperty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.ChannelProperty), 0, 0)
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "channelProperty"), 0, 0)
             };
         }
 
@@ -1323,7 +1323,7 @@ namespace DocumentFormat.OpenXml.InkML
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Emma), 0, 1)
+                new ElementParticle(new("http://www.w3.org/2003/04/emma", "emma"), 0, 1)
             };
         }
 
@@ -1336,8 +1336,8 @@ namespace DocumentFormat.OpenXml.InkML
         /// </remarks>
         public DocumentFormat.OpenXml.EMMA.Emma? Emma
         {
-            get => GetElement<DocumentFormat.OpenXml.EMMA.Emma>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.EMMA.Emma>(new("http://www.w3.org/2003/04/emma", "emma"));
+            set => SetElement(value, new("http://www.w3.org/2003/04/emma", "emma"));
         }
 
         /// <inheritdoc/>
@@ -1466,8 +1466,8 @@ namespace DocumentFormat.OpenXml.InkML
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 0)
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "annotation"), 0, 0),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "annotationXML"), 0, 0)
             };
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("inkml:units"), true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 });
         }
@@ -1556,7 +1556,7 @@ namespace DocumentFormat.OpenXml.InkML
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 0, 1)
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "traceFormat"), 0, 1)
             };
         }
 
@@ -1569,8 +1569,8 @@ namespace DocumentFormat.OpenXml.InkML
         /// </remarks>
         public DocumentFormat.OpenXml.InkML.TraceFormat? TraceFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.TraceFormat>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.InkML.TraceFormat>(new("http://www.w3.org/2003/InkML", "traceFormat"));
+            set => SetElement(value, new("http://www.w3.org/2003/InkML", "traceFormat"));
         }
 
         /// <inheritdoc/>
@@ -1654,7 +1654,7 @@ namespace DocumentFormat.OpenXml.InkML
                 .AddAttribute("invertible", a => a.Invertible);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 1, 2)
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "mapping"), 1, 2)
             };
         }
 
@@ -1799,12 +1799,12 @@ namespace DocumentFormat.OpenXml.InkML
                 .AddAttribute("description", a => a.Description);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.SampleRate), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Latency), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.ActiveArea), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.SourceProperty), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.ChannelProperties), 0, 1)
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "traceFormat"), 1, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "sampleRate"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "latency"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "activeArea"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "srcProperty"), 0, 0),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "channelProperties"), 0, 1)
             };
         }
 
@@ -1817,8 +1817,8 @@ namespace DocumentFormat.OpenXml.InkML
         /// </remarks>
         public DocumentFormat.OpenXml.InkML.TraceFormat? TraceFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.TraceFormat>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.InkML.TraceFormat>(new("http://www.w3.org/2003/InkML", "traceFormat"));
+            set => SetElement(value, new("http://www.w3.org/2003/InkML", "traceFormat"));
         }
 
         /// <summary>
@@ -1830,8 +1830,8 @@ namespace DocumentFormat.OpenXml.InkML
         /// </remarks>
         public DocumentFormat.OpenXml.InkML.SampleRate? SampleRate
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.SampleRate>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.InkML.SampleRate>(new("http://www.w3.org/2003/InkML", "sampleRate"));
+            set => SetElement(value, new("http://www.w3.org/2003/InkML", "sampleRate"));
         }
 
         /// <summary>
@@ -1843,8 +1843,8 @@ namespace DocumentFormat.OpenXml.InkML
         /// </remarks>
         public DocumentFormat.OpenXml.InkML.Latency? Latency
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.Latency>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.InkML.Latency>(new("http://www.w3.org/2003/InkML", "latency"));
+            set => SetElement(value, new("http://www.w3.org/2003/InkML", "latency"));
         }
 
         /// <summary>
@@ -1856,8 +1856,8 @@ namespace DocumentFormat.OpenXml.InkML
         /// </remarks>
         public DocumentFormat.OpenXml.InkML.ActiveArea? ActiveArea
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.ActiveArea>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.InkML.ActiveArea>(new("http://www.w3.org/2003/InkML", "activeArea"));
+            set => SetElement(value, new("http://www.w3.org/2003/InkML", "activeArea"));
         }
 
         /// <inheritdoc/>
@@ -1948,9 +1948,9 @@ namespace DocumentFormat.OpenXml.InkML
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.BrushProperty), 0, 0)
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "annotation"), 0, 0),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "annotationXML"), 0, 0),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "brushProperty"), 0, 0)
             };
         }
 
@@ -2285,10 +2285,10 @@ namespace DocumentFormat.OpenXml.InkML
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Trace), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceGroup), 0, 1)
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "annotation"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "annotationXML"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "trace"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "traceGroup"), 0, 1)
             };
         }
 
@@ -2416,9 +2416,9 @@ namespace DocumentFormat.OpenXml.InkML
                 .AddAttribute("to", a => a.To);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceView), 0, 1)
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "annotation"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "annotationXML"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "traceView"), 0, 1)
             };
         }
 
@@ -2600,12 +2600,12 @@ namespace DocumentFormat.OpenXml.InkML
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Canvas), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.CanvasTransform), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.InkSource), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Brush), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Timestamp), 0, 1)
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "canvas"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "canvasTransform"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "traceFormat"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "inkSource"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "brush"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "timestamp"), 0, 1)
             };
         }
 
@@ -2618,8 +2618,8 @@ namespace DocumentFormat.OpenXml.InkML
         /// </remarks>
         public DocumentFormat.OpenXml.InkML.Canvas? Canvas
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.Canvas>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.InkML.Canvas>(new("http://www.w3.org/2003/InkML", "canvas"));
+            set => SetElement(value, new("http://www.w3.org/2003/InkML", "canvas"));
         }
 
         /// <summary>
@@ -2631,8 +2631,8 @@ namespace DocumentFormat.OpenXml.InkML
         /// </remarks>
         public DocumentFormat.OpenXml.InkML.CanvasTransform? CanvasTransform
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.CanvasTransform>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.InkML.CanvasTransform>(new("http://www.w3.org/2003/InkML", "canvasTransform"));
+            set => SetElement(value, new("http://www.w3.org/2003/InkML", "canvasTransform"));
         }
 
         /// <summary>
@@ -2644,8 +2644,8 @@ namespace DocumentFormat.OpenXml.InkML
         /// </remarks>
         public DocumentFormat.OpenXml.InkML.TraceFormat? TraceFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.TraceFormat>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.InkML.TraceFormat>(new("http://www.w3.org/2003/InkML", "traceFormat"));
+            set => SetElement(value, new("http://www.w3.org/2003/InkML", "traceFormat"));
         }
 
         /// <summary>
@@ -2657,8 +2657,8 @@ namespace DocumentFormat.OpenXml.InkML
         /// </remarks>
         public DocumentFormat.OpenXml.InkML.InkSource? InkSource
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.InkSource>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.InkML.InkSource>(new("http://www.w3.org/2003/InkML", "inkSource"));
+            set => SetElement(value, new("http://www.w3.org/2003/InkML", "inkSource"));
         }
 
         /// <summary>
@@ -2670,8 +2670,8 @@ namespace DocumentFormat.OpenXml.InkML
         /// </remarks>
         public DocumentFormat.OpenXml.InkML.Brush? Brush
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.Brush>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.InkML.Brush>(new("http://www.w3.org/2003/InkML", "brush"));
+            set => SetElement(value, new("http://www.w3.org/2003/InkML", "brush"));
         }
 
         /// <summary>
@@ -2683,8 +2683,8 @@ namespace DocumentFormat.OpenXml.InkML
         /// </remarks>
         public DocumentFormat.OpenXml.InkML.Timestamp? Timestamp
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.Timestamp>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.InkML.Timestamp>(new("http://www.w3.org/2003/InkML", "timestamp"));
+            set => SetElement(value, new("http://www.w3.org/2003/InkML", "timestamp"));
         }
 
         /// <inheritdoc/>
@@ -2762,17 +2762,17 @@ namespace DocumentFormat.OpenXml.InkML
             builder.AddChild<DocumentFormat.OpenXml.InkML.TraceView>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Brush), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Canvas), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.CanvasTransform), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Context), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.InkSource), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Timestamp), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Trace), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceGroup), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceView), 0, 1)
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "brush"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "canvas"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "canvasTransform"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "context"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "inkSource"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "mapping"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "timestamp"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "trace"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "traceFormat"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "traceGroup"), 0, 1),
+                new ElementParticle(new("http://www.w3.org/2003/InkML", "traceView"), 0, 1)
             };
         }
 

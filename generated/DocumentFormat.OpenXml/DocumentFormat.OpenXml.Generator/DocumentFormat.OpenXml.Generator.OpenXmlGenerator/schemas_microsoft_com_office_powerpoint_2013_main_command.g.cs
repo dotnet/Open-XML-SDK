@@ -547,8 +547,8 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMoniker>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Presentation.Command.DocumentMoniker), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMoniker), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "docMk"), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "sldMk"), 1, 1, version: FileFormatVersions.Office2016),
                 new AnyParticle(0, 0)
             };
         }
@@ -562,8 +562,8 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Presentation.Command.DocumentMoniker? DocumentMoniker
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Presentation.Command.DocumentMoniker>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Presentation.Command.DocumentMoniker>(new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "docMk"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "docMk"));
         }
 
         /// <summary>
@@ -575,8 +575,8 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMoniker? SlideMoniker
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMoniker>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMoniker>(new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "sldMk"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "sldMk"));
         }
 
         /// <inheritdoc/>

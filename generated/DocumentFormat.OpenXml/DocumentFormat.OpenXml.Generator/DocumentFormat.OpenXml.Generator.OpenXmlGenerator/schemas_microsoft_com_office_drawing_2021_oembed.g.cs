@@ -98,7 +98,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2021/oembed", "extLst"), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -111,8 +111,8 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed
         /// </remarks>
         public DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed.OfficeArtExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed.OfficeArtExtensionList>(new("http://schemas.microsoft.com/office/drawing/2021/oembed", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2021/oembed", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -175,7 +175,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"), 0, 0)
                     }
                 }
             };

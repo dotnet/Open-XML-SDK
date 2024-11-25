@@ -70,7 +70,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCache), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotCache"), 1, 0)
             };
         }
 
@@ -129,7 +129,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCache), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotCache"), 1, 0)
             };
         }
 
@@ -240,7 +240,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotTableReference>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotTableReference), 1, 0, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "pivotTableReference"), 1, 0, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -359,7 +359,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.WebExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.WebExtension), 1, 0, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "webExtension"), 1, 0, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -419,7 +419,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReference>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReference), 1, 0, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "timelineCacheRef"), 1, 0, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -479,7 +479,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineReference>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineReference), 1, 0, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "timelineRef"), 1, 0, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -591,7 +591,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineStyle), 0, 0, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "timelineStyle"), 0, 0, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -663,7 +663,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dxf"), 0, 0)
             };
         }
 
@@ -790,11 +790,11 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
                 .AddAttribute("usedByAddin", a => a.UsedByAddin);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TextProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ModelTextProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.RangeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.OleDbPrpoperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.DataFeedProperties), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "textPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "modelTextPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "rangePr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "oledbPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "dataFeedPr"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -807,8 +807,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.TextProperties? TextProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.TextProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.TextProperties>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "textPr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "textPr"));
         }
 
         /// <summary>
@@ -820,8 +820,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.ModelTextProperties? ModelTextProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ModelTextProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ModelTextProperties>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "modelTextPr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "modelTextPr"));
         }
 
         /// <summary>
@@ -833,8 +833,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.RangeProperties? RangeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.RangeProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.RangeProperties>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "rangePr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "rangePr"));
         }
 
         /// <summary>
@@ -846,8 +846,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.OleDbPrpoperties? OleDbPrpoperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.OleDbPrpoperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.OleDbPrpoperties>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "oledbPr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "oledbPr"));
         }
 
         /// <summary>
@@ -859,8 +859,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.DataFeedProperties? DataFeedProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.DataFeedProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.DataFeedProperties>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "dataFeedPr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "dataFeedPr"));
         }
 
         /// <inheritdoc/>
@@ -1003,8 +1003,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
                 .AddAttribute("relNeededHidden", a => a.RelNeededHidden);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.FieldListActiveTabTopLevelEntity), 0, 0, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "activeTabTopLevelEntity"), 0, 0, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -1104,7 +1104,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueName>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueName), 1, 0, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "cachedUniqueName"), 1, 0, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -1311,9 +1311,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
                 .AddAttribute("minVersionLoad", a => a.MinVersionLoad);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ModelTables), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ModelRelationships), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "modelTables"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "modelRelationships"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -1326,8 +1326,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.ModelTables? ModelTables
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ModelTables>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ModelTables>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "modelTables"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "modelTables"));
         }
 
         /// <summary>
@@ -1339,8 +1339,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.ModelRelationships? ModelRelationships
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ModelRelationships>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ModelRelationships>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "modelRelationships"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "modelRelationships"));
         }
 
         /// <summary>
@@ -1352,8 +1352,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -1451,7 +1451,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotRow), 1, 0, version: FileFormatVersions.Office2013)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "pivotRow"), 1, 0, version: FileFormatVersions.Office2013)
                 }
             };
         }
@@ -1682,7 +1682,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerCache>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerCache), 1, 0, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "slicerCache"), 1, 0, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -1804,7 +1804,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
                 .AddAttribute("crossFilter", a => a.CrossFilter);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -1817,8 +1817,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -1889,7 +1889,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.SlicerCacheOlapLevelName), 0, 0, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "slicerCacheOlapLevelName"), 0, 0, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -1949,7 +1949,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable), 1, 0, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "pivotTable"), 1, 0, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -2069,11 +2069,11 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
                 .AddAttribute("description", a => a.Description);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.SurveyPrSurveyElementPr), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TitlePrSurveyElementPr), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.DescriptionPrSurveyElementPr), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestions), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "surveyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "titlePr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "descriptionPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "questions"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -2086,8 +2086,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.SurveyPrSurveyElementPr? SurveyPrSurveyElementPr
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.SurveyPrSurveyElementPr>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.SurveyPrSurveyElementPr>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "surveyPr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "surveyPr"));
         }
 
         /// <summary>
@@ -2099,8 +2099,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.TitlePrSurveyElementPr? TitlePrSurveyElementPr
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.TitlePrSurveyElementPr>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.TitlePrSurveyElementPr>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "titlePr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "titlePr"));
         }
 
         /// <summary>
@@ -2112,8 +2112,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.DescriptionPrSurveyElementPr? DescriptionPrSurveyElementPr
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.DescriptionPrSurveyElementPr>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.DescriptionPrSurveyElementPr>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "descriptionPr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "descriptionPr"));
         }
 
         /// <summary>
@@ -2125,8 +2125,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestions? SurveyQuestions
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestions>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestions>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "questions"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "questions"));
         }
 
         /// <summary>
@@ -2138,8 +2138,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -2198,7 +2198,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.Timeline>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.Timeline), 1, 0, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "timeline"), 1, 0, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -2322,9 +2322,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotTables), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineState), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "pivotTables"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "state"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -2337,8 +2337,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotTables? TimelineCachePivotTables
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotTables>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotTables>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "pivotTables"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "pivotTables"));
         }
 
         /// <summary>
@@ -2350,8 +2350,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.TimelineState? TimelineState
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.TimelineState>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.TimelineState>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "state"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "state"));
         }
 
         /// <summary>
@@ -2363,8 +2363,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -2512,7 +2512,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Formula), 1, 1)
+                new ElementParticle(new("http://schemas.microsoft.com/office/excel/2006/main", "f"), 1, 1)
             };
         }
 
@@ -2525,8 +2525,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office.Excel.Formula? Formula
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Excel.Formula>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.Excel.Formula>(new("http://schemas.microsoft.com/office/excel/2006/main", "f"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/excel/2006/main", "f"));
         }
 
         /// <inheritdoc/>
@@ -2686,7 +2686,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElements), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "timelineStyleElements"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -2699,8 +2699,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElements? TimelineStyleElements
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElements>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElements>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "timelineStyleElements"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "timelineStyleElements"));
         }
 
         /// <inheritdoc/>
@@ -2810,7 +2810,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElement>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElement), 1, 0, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "timelineStyleElement"), 1, 0, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -2910,7 +2910,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.DbTable>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.DbTable), 1, 0, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "dbTable"), 1, 0, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -3187,7 +3187,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
                 .AddAttribute("delimiter", a => a.Delimiter);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TextFields), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "textFields"), 0, 1)
             };
         }
 
@@ -3200,8 +3200,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.TextFields? TextFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TextFields>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TextFields>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "textFields"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "textFields"));
         }
 
         /// <inheritdoc/>
@@ -3351,8 +3351,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
                 .AddAttribute("connection", a => a.Connection);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.DbTables), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.DbCommand), 1, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "dbTables"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "dbCommand"), 1, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -3365,8 +3365,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.DbTables? DbTables
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.DbTables>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.DbTables>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "dbTables"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "dbTables"));
         }
 
         /// <summary>
@@ -3378,8 +3378,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.DbCommand? DbCommand
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.DbCommand>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.DbCommand>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "dbCommand"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "dbCommand"));
         }
 
         /// <inheritdoc/>
@@ -3453,7 +3453,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.DbTables), 1, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "dbTables"), 1, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -3466,8 +3466,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.DbTables? DbTables
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.DbTables>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.DbTables>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "dbTables"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "dbTables"));
         }
 
         /// <inheritdoc/>
@@ -3581,7 +3581,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
                     }
                 }
             };
@@ -3847,7 +3847,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ModelTable>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ModelTable), 1, 0, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "modelTable"), 1, 0, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -3907,7 +3907,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ModelRelationship>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ModelRelationship), 1, 0, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "modelRelationship"), 1, 0, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -3992,8 +3992,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
                 .AddAttribute("t", a => a.Text);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.Xstring), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotValueCellExtra), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "v"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "x"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -4006,8 +4006,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.Xstring? Xstring
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.Xstring>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.Xstring>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "v"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "v"));
         }
 
         /// <summary>
@@ -4019,8 +4019,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.PivotValueCellExtra? PivotValueCellExtra
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.PivotValueCellExtra>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.PivotValueCellExtra>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "x"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "x"));
         }
 
         /// <inheritdoc/>
@@ -4241,7 +4241,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ServerFormat), 1, 0, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "serverFormat"), 1, 0, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -4402,7 +4402,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -4461,7 +4461,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -4520,7 +4520,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -4579,7 +4579,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -4638,7 +4638,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -4794,8 +4794,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"));
         }
     }
 
@@ -4853,8 +4853,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestion>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.QuestionsPrSurveyElementPr), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestion), 1, 0, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "questionsPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "question"), 1, 0, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -4867,8 +4867,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.QuestionsPrSurveyElementPr? QuestionsPrSurveyElementPr
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.QuestionsPrSurveyElementPr>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.QuestionsPrSurveyElementPr>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "questionsPr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "questionsPr"));
         }
 
         /// <inheritdoc/>
@@ -5032,8 +5032,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
                 .AddAttribute("rowSource", a => a.RowSource);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.QuestionPrSurveyElementPr), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "questionPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -5046,8 +5046,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.QuestionPrSurveyElementPr? QuestionPrSurveyElementPr
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.QuestionPrSurveyElementPr>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.QuestionPrSurveyElementPr>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "questionPr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "questionPr"));
         }
 
         /// <summary>
@@ -5059,8 +5059,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -5253,7 +5253,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
                 .AddAttribute("style", a => a.Style);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x15:name"), 1, 1000) { Application = ApplicationType.Excel, Version = FileFormatVersions.Office2013 });
         }
@@ -5267,8 +5267,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -5496,9 +5496,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
                 .AddAttribute("ref", a => a.Reference);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FilterColumn), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SortState), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "filterColumn"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sortState"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -5558,7 +5558,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotTable>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotTable), 1, 0, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "pivotTable"), 1, 0, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -5725,10 +5725,10 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
                 .AddAttribute("filterPivotName", a => a.FilterPivotName);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.SelectionTimelineRange), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.BoundsTimelineRange), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "selection"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "bounds"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "movingPeriodState"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -5741,8 +5741,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.SelectionTimelineRange? SelectionTimelineRange
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.SelectionTimelineRange>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.SelectionTimelineRange>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "selection"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "selection"));
         }
 
         /// <summary>
@@ -5754,8 +5754,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.BoundsTimelineRange? BoundsTimelineRange
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.BoundsTimelineRange>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.BoundsTimelineRange>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "bounds"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "bounds"));
         }
 
         /// <summary>
@@ -5767,8 +5767,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState? MovingPeriodState
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "movingPeriodState"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "movingPeriodState"));
         }
 
         /// <summary>
@@ -5780,8 +5780,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -5866,7 +5866,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotValueCell), 1, 0, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "c"), 1, 0, version: FileFormatVersions.Office2013)
             };
         }
 

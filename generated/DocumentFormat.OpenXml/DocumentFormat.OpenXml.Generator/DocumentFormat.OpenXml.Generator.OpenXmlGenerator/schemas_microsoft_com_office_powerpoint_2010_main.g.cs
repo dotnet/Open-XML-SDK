@@ -76,9 +76,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ApplicationNonVisualDrawingProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualDrawingProperties), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualInkContentPartProperties), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ApplicationNonVisualDrawingProperties), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "cNvPr"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "cNvContentPartPr"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "nvPr"), 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -91,8 +91,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualDrawingProperties>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "cNvPr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "cNvPr"));
         }
 
         /// <summary>
@@ -104,8 +104,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualInkContentPartProperties? NonVisualInkContentPartProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualInkContentPartProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualInkContentPartProperties>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "cNvContentPartPr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "cNvContentPartPr"));
         }
 
         /// <summary>
@@ -117,8 +117,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ApplicationNonVisualDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ApplicationNonVisualDrawingProperties>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "nvPr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "nvPr"));
         }
 
         /// <inheritdoc/>
@@ -213,8 +213,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
                 .AddAttribute("flipV", a => a.VerticalFlip);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extents), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "off"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"), 0, 1)
             };
         }
 
@@ -227,8 +227,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Offset? Offset
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "off"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "off"));
         }
 
         /// <summary>
@@ -240,8 +240,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Extents? Extents
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"));
         }
 
         /// <inheritdoc/>
@@ -316,7 +316,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ext"), 0, 0)
                     }
                 }
             };
@@ -413,10 +413,10 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
                 .AddAttribute("r:link", a => a.Link);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaTrim), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaFade), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "trim"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "fade"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "bmkLst"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "extLst"), 0, 1, version: FileFormatVersions.Office2010)
             };
             builder.AddConstraint(new RelationshipExistConstraint(builder.CreateQName("r:link")) { Version = FileFormatVersions.Office2010 });
             builder.AddConstraint(new RelationshipExistConstraint(builder.CreateQName("r:embed")) { Version = FileFormatVersions.Office2010 });
@@ -431,8 +431,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.MediaTrim? MediaTrim
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaTrim>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaTrim>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "trim"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "trim"));
         }
 
         /// <summary>
@@ -444,8 +444,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.MediaFade? MediaFade
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaFade>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaFade>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "fade"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "fade"));
         }
 
         /// <summary>
@@ -457,8 +457,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList? MediaBookmarkList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "bmkLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "bmkLst"));
         }
 
         /// <summary>
@@ -470,8 +470,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -1377,7 +1377,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.SectionOld>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionOld), 1, 0, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "section"), 1, 0, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -1437,7 +1437,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.Section>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.Section), 1, 0, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "section"), 1, 0, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -1548,12 +1548,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"), 1, 1)
                     }
                 }
             };
@@ -1568,8 +1568,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"));
         }
 
         /// <summary>
@@ -1581,8 +1581,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"));
         }
 
         /// <summary>
@@ -1594,8 +1594,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"));
         }
 
         /// <summary>
@@ -1607,8 +1607,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"));
         }
 
         /// <summary>
@@ -1620,8 +1620,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"));
         }
 
         /// <summary>
@@ -1633,8 +1633,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"));
         }
 
         /// <inheritdoc/>
@@ -1813,7 +1813,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.TracePointList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.TracePointList), 0, 0, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "tracePtLst"), 0, 0, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -1972,13 +1972,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.TriggerEventRecord), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.PlayEventRecord), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.StopEventRecord), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.PauseEventRecord), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ResumeEventRecord), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SeekEventRecord), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.NullEventRecord), 1, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "triggerEvt"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "playEvt"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "stopEvt"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "pauseEvt"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "resumeEvt"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "seekEvt"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "nullEvt"), 1, 1, version: FileFormatVersions.Office2010)
                 }
             };
         }
@@ -1992,8 +1992,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.TriggerEventRecord? TriggerEventRecord
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.TriggerEventRecord>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.TriggerEventRecord>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "triggerEvt"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "triggerEvt"));
         }
 
         /// <summary>
@@ -2005,8 +2005,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.PlayEventRecord? PlayEventRecord
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.PlayEventRecord>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.PlayEventRecord>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "playEvt"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "playEvt"));
         }
 
         /// <summary>
@@ -2018,8 +2018,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.StopEventRecord? StopEventRecord
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.StopEventRecord>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.StopEventRecord>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "stopEvt"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "stopEvt"));
         }
 
         /// <summary>
@@ -2031,8 +2031,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.PauseEventRecord? PauseEventRecord
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.PauseEventRecord>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.PauseEventRecord>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "pauseEvt"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "pauseEvt"));
         }
 
         /// <summary>
@@ -2044,8 +2044,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.ResumeEventRecord? ResumeEventRecord
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ResumeEventRecord>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ResumeEventRecord>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "resumeEvt"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "resumeEvt"));
         }
 
         /// <summary>
@@ -2057,8 +2057,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.SeekEventRecord? SeekEventRecord
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.SeekEventRecord>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.SeekEventRecord>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "seekEvt"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "seekEvt"));
         }
 
         /// <summary>
@@ -2070,8 +2070,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.NullEventRecord? NullEventRecord
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.NullEventRecord>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.NullEventRecord>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "nullEvt"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "nullEvt"));
         }
 
         /// <inheritdoc/>
@@ -2196,9 +2196,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
                 .AddAttribute("title", a => a.Title);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkClick"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkHover"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -2211,8 +2211,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick? HyperlinkOnClick
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkClick"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkClick"));
         }
 
         /// <summary>
@@ -2224,8 +2224,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover? HyperlinkOnHover
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkHover"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkHover"));
         }
 
         /// <summary>
@@ -2237,8 +2237,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -2311,8 +2311,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
                 .AddAttribute("isComment", a => a.IsComment);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2010/main", "cpLocks"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2010/main", "extLst"), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -2325,8 +2325,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks? ContentPartLocks
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>(new("http://schemas.microsoft.com/office/drawing/2010/main", "cpLocks"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2010/main", "cpLocks"));
         }
 
         /// <summary>
@@ -2338,8 +2338,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>(new("http://schemas.microsoft.com/office/drawing/2010/main", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2010/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -2435,20 +2435,20 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
                 .AddAttribute("userDrawn", a => a.UserDrawn);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PlaceholderShape), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ph"), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AudioFromCD), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.WaveAudioFile), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AudioFromFile), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.VideoFromFile), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.QuickTimeFromFile), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "audioCd"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "wavAudioFile"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "audioFile"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "videoFile"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "quickTimeFile"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomerDataList), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "custDataLst"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -2461,8 +2461,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.PlaceholderShape? PlaceholderShape
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.PlaceholderShape>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.PlaceholderShape>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ph"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "ph"));
         }
 
         /// <inheritdoc/>
@@ -2667,7 +2667,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmark>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmark), 0, 0, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "bmk"), 0, 0, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -2731,7 +2731,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ext"), 0, 0)
                     }
                 }
             };
@@ -2833,7 +2833,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "extLst"), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -2846,8 +2846,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -2947,7 +2947,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdListEntry>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdListEntry), 0, 0, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "sldId"), 0, 0, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -3035,8 +3035,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "sldIdLst"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "extLst"), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -3049,8 +3049,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList? SectionSlideIdList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "sldIdLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "sldIdLst"));
         }
 
         /// <summary>
@@ -3062,8 +3062,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -3192,7 +3192,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.TracePoint>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.TracePoint), 0, 0, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "tracePt"), 0, 0, version: FileFormatVersions.Office2010)
             };
         }
 

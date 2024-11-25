@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2017/03/chart", "dispNaAsBlank"), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -81,8 +81,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
         /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse? BooleanFalse
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse>(new("http://schemas.microsoft.com/office/drawing/2017/03/chart", "dispNaAsBlank"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2017/03/chart", "dispNaAsBlank"));
         }
 
         /// <inheritdoc/>

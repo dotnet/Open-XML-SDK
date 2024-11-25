@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
             builder.AddChild<DocumentFormat.OpenXml.Office.LongProperties.LongProperty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.LongProperties.LongProperty), 0, 0)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2006/metadata/longProperties", "LongProp"), 0, 0)
             };
         }
 

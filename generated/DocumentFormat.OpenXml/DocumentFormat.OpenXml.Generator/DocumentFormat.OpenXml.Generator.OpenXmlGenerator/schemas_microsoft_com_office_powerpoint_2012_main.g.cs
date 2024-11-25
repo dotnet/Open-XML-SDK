@@ -198,7 +198,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
                 .AddAttribute("timeZoneBias", a => a.TimeZoneBias);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "parentCm"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -211,8 +211,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier? ParentCommentIdentifier
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier>(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "parentCm"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2012/main", "parentCm"));
         }
 
         /// <inheritdoc/>
@@ -271,8 +271,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ExtendedGuide), 0, 0, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "guide"), 0, 0, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -332,8 +332,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ExtendedGuide), 0, 0, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "guide"), 0, 0, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -548,12 +548,12 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"), 1, 1)
                     }
                 }
             };
@@ -568,8 +568,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"));
         }
 
         /// <summary>
@@ -581,8 +581,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"));
         }
 
         /// <summary>
@@ -594,8 +594,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"));
         }
 
         /// <summary>
@@ -607,8 +607,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"));
         }
 
         /// <summary>
@@ -620,8 +620,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"));
         }
 
         /// <summary>
@@ -633,8 +633,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"));
         }
 
         /// <inheritdoc/>
@@ -697,7 +697,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ext"), 0, 0)
                     }
                 }
             };
@@ -823,8 +823,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
                 .AddAttribute("userDrawn", a => a.IsUserDrawn);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "clr"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -837,8 +837,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType? ColorType
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType>(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "clr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2012/main", "clr"));
         }
 
         /// <summary>
@@ -850,8 +850,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList>(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2012/main", "extLst"));
         }
 
         /// <inheritdoc/>

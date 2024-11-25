@@ -73,9 +73,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartsAc
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Level), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ptCount"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "lvl"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst"), 0, 1)
             };
         }
 
@@ -88,8 +88,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartsAc
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PointCount? PointCount
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ptCount"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ptCount"));
         }
 
         /// <inheritdoc/>

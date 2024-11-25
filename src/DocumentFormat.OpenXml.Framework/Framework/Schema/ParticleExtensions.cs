@@ -12,12 +12,10 @@ namespace DocumentFormat.OpenXml.Framework
     /// </summary>
     internal static class ParticleExtensions
     {
-        public static ParticleCollection GetCollection<TElement>(this CompiledParticle compiled, OpenXmlCompositeElement element)
-            where TElement : OpenXmlElement
-            => new ParticleCollection(typeof(TElement), compiled, element);
+        public static ParticleCollection GetCollection(this CompiledParticle compiled, OpenXmlQualifiedName qname, OpenXmlCompositeElement element)
+            => new(qname, compiled, element);
 
-        public static TElement? Get<TElement>(this CompiledParticle? compiled, OpenXmlCompositeElement element)
-            where TElement : OpenXmlElement
+        public static OpenXmlElement? Get(this CompiledParticle? compiled, OpenXmlCompositeElement element, OpenXmlQualifiedName qname)
         {
             if (compiled is null)
             {
@@ -33,9 +31,9 @@ namespace DocumentFormat.OpenXml.Framework
 
             do
             {
-                if (child.GetType() == typeof(TElement))
+                if (child.QName == qname)
                 {
-                    return (TElement)child;
+                    return child;
                 }
 
                 child = child.Next;
@@ -45,13 +43,12 @@ namespace DocumentFormat.OpenXml.Framework
             return null;
         }
 
-        public static bool Set<T>(this CompiledParticle? compiled, OpenXmlCompositeElement parent, T? value)
-            where T : OpenXmlElement
-            => Set(compiled, parent, value, typeof(T));
+        public static bool Set(this CompiledParticle? compiled, OpenXmlCompositeElement parent, OpenXmlElement value)
+            => Set(compiled, parent, value, value.QName);
 
-        public static bool Set(this CompiledParticle? compiled, OpenXmlCompositeElement parent, OpenXmlElement? value, Type? type)
+        public static bool Set(this CompiledParticle? compiled, OpenXmlCompositeElement parent, OpenXmlElement? value, OpenXmlQualifiedName? qname)
         {
-            if (type is null)
+            if (qname is null)
             {
                 return false;
             }
@@ -61,7 +58,7 @@ namespace DocumentFormat.OpenXml.Framework
                 return false;
             }
 
-            var collection = new ParticleCollection(type, compiled, parent);
+            var collection = new ParticleCollection(qname.Value, compiled, parent);
 
             collection.Clear();
 

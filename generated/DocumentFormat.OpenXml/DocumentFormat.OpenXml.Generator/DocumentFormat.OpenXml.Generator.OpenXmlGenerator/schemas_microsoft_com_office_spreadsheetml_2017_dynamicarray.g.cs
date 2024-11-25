@@ -92,7 +92,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
                 .AddAttribute("fCollapsed", a => a.FCollapsed);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2017/dynamicarray", "extLst"), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -105,8 +105,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
         /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList>(new("http://schemas.microsoft.com/office/spreadsheetml/2017/dynamicarray", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2017/dynamicarray", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -169,7 +169,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
                     }
                 }
             };

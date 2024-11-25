@@ -71,9 +71,9 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.CustomPropertyEditor), 1, 0)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2006/customDocumentInformationPanel", "showOnOpen"), 1, 1),
+                new ElementParticle(new("http://schemas.microsoft.com/office/2006/customDocumentInformationPanel", "defaultPropertyEditorNamespace"), 1, 1),
+                new ElementParticle(new("http://schemas.microsoft.com/office/2006/customDocumentInformationPanel", "customPropertyEditor"), 1, 0)
             };
         }
 
@@ -86,8 +86,8 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen? ShowOnOpen
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen>(new("http://schemas.microsoft.com/office/2006/customDocumentInformationPanel", "showOnOpen"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2006/customDocumentInformationPanel", "showOnOpen"));
         }
 
         /// <summary>
@@ -99,8 +99,8 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace? DefaultPropertyEditorNamespace
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace>(new("http://schemas.microsoft.com/office/2006/customDocumentInformationPanel", "defaultPropertyEditorNamespace"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2006/customDocumentInformationPanel", "defaultPropertyEditorNamespace"));
         }
 
         /// <inheritdoc/>
@@ -311,8 +311,8 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.XsnFileLocation>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.PropertyEditorNamespace), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.XsnFileLocation), 1, 1)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2006/customDocumentInformationPanel", "XMLNamespace"), 1, 1),
+                new ElementParticle(new("http://schemas.microsoft.com/office/2006/customDocumentInformationPanel", "XSNLocation"), 1, 1)
             };
         }
 
@@ -325,8 +325,8 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.PropertyEditorNamespace? PropertyEditorNamespace
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.PropertyEditorNamespace>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.PropertyEditorNamespace>(new("http://schemas.microsoft.com/office/2006/customDocumentInformationPanel", "XMLNamespace"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2006/customDocumentInformationPanel", "XMLNamespace"));
         }
 
         /// <summary>
@@ -338,8 +338,8 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.XsnFileLocation? XsnFileLocation
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.XsnFileLocation>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.XsnFileLocation>(new("http://schemas.microsoft.com/office/2006/customDocumentInformationPanel", "XSNLocation"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2006/customDocumentInformationPanel", "XSNLocation"));
         }
 
         /// <inheritdoc/>

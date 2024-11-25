@@ -283,7 +283,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.CommentEx>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.CommentEx), 0, 0, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2012/wordml", "commentEx"), 0, 0, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -374,7 +374,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.Person>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.Person), 0, 0, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2012/wordml", "person"), 0, 0, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -467,8 +467,8 @@ namespace DocumentFormat.OpenXml.Office2013.Word
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.SectionTitle>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.SectionTitle), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2012/wordml", "sectionTitle"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2012/wordml", "doNotAllowInsertDeleteSection"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -481,8 +481,8 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Word.SectionTitle? SectionTitle
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Word.SectionTitle>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Word.SectionTitle>(new("http://schemas.microsoft.com/office/word/2012/wordml", "sectionTitle"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2012/wordml", "sectionTitle"));
         }
 
         /// <summary>
@@ -494,8 +494,8 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection? DoNotAllowInsertDeleteSection
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection>(new("http://schemas.microsoft.com/office/word/2012/wordml", "doNotAllowInsertDeleteSection"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2012/wordml", "doNotAllowInsertDeleteSection"));
         }
 
         /// <inheritdoc/>
@@ -927,7 +927,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.PresenceInfo), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2012/wordml", "presenceInfo"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -940,8 +940,8 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Word.PresenceInfo? PresenceInfo
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Word.PresenceInfo>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Word.PresenceInfo>(new("http://schemas.microsoft.com/office/word/2012/wordml", "presenceInfo"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2012/wordml", "presenceInfo"));
         }
 
         /// <inheritdoc/>

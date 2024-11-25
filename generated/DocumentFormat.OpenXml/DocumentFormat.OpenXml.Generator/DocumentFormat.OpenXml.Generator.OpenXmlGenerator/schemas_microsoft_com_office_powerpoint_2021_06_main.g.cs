@@ -87,8 +87,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskHistory), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "history"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "extLst"), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -101,8 +101,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskHistory? TaskHistory
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskHistory>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskHistory>(new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "history"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "history"));
         }
 
         /// <summary>
@@ -114,8 +114,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.ExtensionList>(new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -219,7 +219,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ext"), 0, 0)
                     }
                 }
             };
@@ -394,8 +394,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.CommentAnchor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.CommentAnchor), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "comment"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "extLst"), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -408,8 +408,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.CommentAnchor? CommentAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.CommentAnchor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.CommentAnchor>(new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "comment"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "comment"));
         }
 
         /// <summary>
@@ -421,8 +421,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.ExtensionList>(new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -841,22 +841,22 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.AtrbtnTaskAssignUnassignUser), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskAnchor), 0, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "atrbtn"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "anchr"), 0, 1, version: FileFormatVersions.Microsoft365),
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.AsgnTaskAssignUnassignUser), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.UnAsgnTaskAssignUnassignUser), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.AddEmpty), 0, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskTitleEventInfo), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskScheduleEventInfo), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskProgressEventInfo), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskPriorityRecord), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.UnasgnAllEmpty), 0, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskUndo), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskUnknownRecord), 1, 1, version: FileFormatVersions.Microsoft365)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "asgn"), 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "unAsgn"), 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "add"), 0, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "title"), 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "date"), 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "pcntCmplt"), 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "pri"), 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "unasgnAll"), 0, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "undo"), 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "unknown"), 1, 1, version: FileFormatVersions.Microsoft365)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "extLst"), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -869,8 +869,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.AtrbtnTaskAssignUnassignUser? AtrbtnTaskAssignUnassignUser
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.AtrbtnTaskAssignUnassignUser>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.AtrbtnTaskAssignUnassignUser>(new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "atrbtn"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "atrbtn"));
         }
 
         /// <summary>
@@ -882,8 +882,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskAnchor? TaskAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskAnchor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskAnchor>(new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "anchr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "anchr"));
         }
 
         /// <inheritdoc/>
@@ -942,7 +942,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskHistoryEvent>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskHistoryEvent), 0, 0, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "event"), 0, 0, version: FileFormatVersions.Microsoft365)
             };
         }
 

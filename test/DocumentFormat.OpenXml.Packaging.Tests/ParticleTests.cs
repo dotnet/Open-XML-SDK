@@ -20,6 +20,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 {
     public class ParticleTests
     {
+        private readonly OpenXmlQualifiedName _qname = new OpenXmlQualifiedName("Test", "http://test.com");
         private readonly ITestOutputHelper _output;
 
         public ParticleTests(ITestOutputHelper output)
@@ -62,7 +63,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         {
             var particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(ParticleTests), 1, 1),
+                new ElementParticle(_qname, 1, 1),
                 new AnyParticle(1, 1, version: FileFormatVersions.Office2010),
                 new AnyParticle(0, 1, 1),
             }.Build();
@@ -92,8 +93,8 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         {
             var particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(ParticleTests), 1, 1),
-                new ElementParticle(typeof(ParticleTests), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(_qname, 1, 1),
+                new ElementParticle(_qname, 1, 1, version: FileFormatVersions.Office2010),
                 new AnyParticle(0, 1, 1),
             }.Build();
 
@@ -122,7 +123,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         {
             var particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(ParticleTests), 1, 1),
+                new ElementParticle(_qname, 1, 1),
                 new AnyParticle(1, 1),
                 new AnyParticle(0, 1, 1),
             }.Build();
@@ -142,7 +143,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         [Theory]
         public void ElementParticleBuildSame(FileFormatVersions version)
         {
-            var particle = new ElementParticle(typeof(ParticleTests), 1, 1);
+            var particle = new ElementParticle(_qname, 1, 1);
 
             Assert.Same(particle, particle.Build(version));
         }
@@ -213,6 +214,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                 {
                     new StringEnumConverter(),
                     new TypeNameConverter(),
+                    new QNameConverter(),
                 },
                 ContractResolver = new OccursDefaultResolver(),
                 NullValueHandling = NullValueHandling.Ignore,
@@ -328,9 +330,16 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                 => throw new NotImplementedException();
 
             public override void WriteJson(JsonWriter writer, Type value, JsonSerializer serializer)
-            {
-                serializer.Serialize(writer, value.FullName);
-            }
+                => serializer.Serialize(writer, value.FullName);
+        }
+
+        private sealed class QNameConverter : JsonConverter<OpenXmlQualifiedName>
+        {
+            public override OpenXmlQualifiedName ReadJson(JsonReader reader, Type objectType, OpenXmlQualifiedName existingValue, bool hasExistingValue, JsonSerializer serializer)
+                => throw new NotImplementedException();
+
+            public override void WriteJson(JsonWriter writer, OpenXmlQualifiedName value, JsonSerializer serializer)
+                => writer.WriteValue(value.ToString());
         }
     }
 }

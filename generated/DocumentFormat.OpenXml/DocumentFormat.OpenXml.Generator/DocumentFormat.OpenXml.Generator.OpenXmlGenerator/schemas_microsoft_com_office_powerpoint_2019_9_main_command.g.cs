@@ -71,8 +71,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentV2Moniker>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentV2Moniker), 1, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "sldMkLst"), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2019/9/main/command", "cmMK"), 1, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -85,8 +85,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList? SlideMonikerList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList>(new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "sldMkLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "sldMkLst"));
         }
 
         /// <summary>
@@ -98,8 +98,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentV2Moniker? CommentV2Moniker
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentV2Moniker>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentV2Moniker>(new("http://schemas.microsoft.com/office/powerpoint/2019/9/main/command", "cmMK"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2019/9/main/command", "cmMK"));
         }
 
         /// <inheritdoc/>
@@ -160,8 +160,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentV2MonikerList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentV2MonikerList), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentReplyV2Moniker), 1, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2019/9/main/command", "cmMkLst"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2019/9/main/command", "cmRplyMk"), 1, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -174,8 +174,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentV2MonikerList? CommentV2MonikerList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentV2MonikerList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentV2MonikerList>(new("http://schemas.microsoft.com/office/powerpoint/2019/9/main/command", "cmMkLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2019/9/main/command", "cmMkLst"));
         }
 
         /// <summary>
@@ -187,8 +187,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentReplyV2Moniker? CommentReplyV2Moniker
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentReplyV2Moniker>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentReplyV2Moniker>(new("http://schemas.microsoft.com/office/powerpoint/2019/9/main/command", "cmRplyMk"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2019/9/main/command", "cmRplyMk"));
         }
 
         /// <inheritdoc/>

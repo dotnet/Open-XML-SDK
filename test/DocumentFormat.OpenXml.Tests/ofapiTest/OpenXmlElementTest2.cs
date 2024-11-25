@@ -7,6 +7,7 @@ using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System;
 using System.IO;
+using System.Xml;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
@@ -200,21 +201,24 @@ namespace DocumentFormat.OpenXml.Tests
         {
             public ChildElement Child
             {
-                get => GetElement<ChildElement>();
-                set => SetElement(value);
+                get => GetElement<ChildElement>(new ChildElement().QName);
+                set => SetElement(value, new ChildElement().QName);
             }
 
             internal override void ConfigureMetadata(ElementMetadata.Builder builder)
             {
                 builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new ElementParticle(typeof(ChildElement), 0, 1),
+                    new ElementParticle(new ChildElement().QName, 0, 1),
                 };
             }
         }
 
         private class ChildElement : OpenXmlLeafElement
         {
+            public override string LocalName => "child";
+
+            public override string NamespaceUri => "http://testns";
         }
     }
 }

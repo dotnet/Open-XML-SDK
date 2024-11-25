@@ -40,8 +40,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// </summary>
         public SdtProperties? SdtProperties
         {
-            get => GetElement<SdtProperties>();
-            set => SetElement(value);
+            get => GetElement<SdtProperties>(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "sdtPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "sdtPr"));
         }
 
         /// <summary>
@@ -49,8 +49,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// </summary>
         public SdtEndCharProperties? SdtEndCharProperties
         {
-            get => GetElement<SdtEndCharProperties>();
-            set => SetElement(value);
+            get => GetElement<SdtEndCharProperties>(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "sdtEndPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "sdtEndPr"));
         }
     }
 }

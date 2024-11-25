@@ -127,7 +127,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExHeader), 0, 0, version: FileFormatVersions.Office2016)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hdr"), 0, 0, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -213,20 +213,20 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevListAutoExpandRw>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExFuture), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExUnsupported), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExTrimmed), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExRowColumn), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExMove), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExChangeCell), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExFormatting), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExDefinedName), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExDelObj), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExChgObj), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExSheetOp), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevisionList), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevListAutoExpandRw), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevGroup), 0, 0, version: FileFormatVersions.Office2016)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrftr"), 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrUspt"), 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrTrim"), 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrrc"), 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrm"), 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrc"), 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrf"), 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrDefName"), 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrdo"), 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrco"), 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrSheet"), 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrList"), 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrListExpR"), 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrg"), 0, 0, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -298,13 +298,13 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Fill), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Alignment), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Border), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "font"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "numFmt"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fill"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "alignment"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "border"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "protection"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -317,8 +317,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Font? Font
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Font>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Font>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "font"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "font"));
         }
 
         /// <summary>
@@ -330,8 +330,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.NumberingFormat? NumberingFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "numFmt"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "numFmt"));
         }
 
         /// <summary>
@@ -343,8 +343,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Fill? Fill
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Fill>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Fill>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fill"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fill"));
         }
 
         /// <summary>
@@ -356,8 +356,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Alignment? Alignment
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Alignment>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "alignment"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "alignment"));
         }
 
         /// <summary>
@@ -369,8 +369,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Border? Border
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Border>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Border>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "border"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "border"));
         }
 
         /// <summary>
@@ -382,8 +382,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Protection? Protection
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Protection>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Protection>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "protection"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "protection"));
         }
 
         /// <summary>
@@ -395,8 +395,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -519,12 +519,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.SparklineGroup>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.DataValidation), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.Hyperlink), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.SparklineGroup), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.Comments), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.AutoFilter), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.pivotTableDefinition), 1, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "dataValidation"), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hyperlink"), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "sparklineGroup"), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "comments"), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "autoFilter"), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "pivotTableDefinition"), 1, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -537,8 +537,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.DataValidation? DataValidation
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.DataValidation>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.DataValidation>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "dataValidation"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "dataValidation"));
         }
 
         /// <summary>
@@ -550,8 +550,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.Hyperlink? Hyperlink
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.Hyperlink>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.Hyperlink>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hyperlink"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hyperlink"));
         }
 
         /// <summary>
@@ -563,8 +563,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.SparklineGroup? SparklineGroup
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.SparklineGroup>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.SparklineGroup>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "sparklineGroup"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "sparklineGroup"));
         }
 
         /// <summary>
@@ -576,8 +576,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.Comments? Comments
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.Comments>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.Comments>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "comments"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "comments"));
         }
 
         /// <summary>
@@ -589,8 +589,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.AutoFilter? AutoFilter
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.AutoFilter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.AutoFilter>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "autoFilter"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "autoFilter"));
         }
 
         /// <summary>
@@ -602,8 +602,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.pivotTableDefinition? pivotTableDefinition
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.pivotTableDefinition>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.pivotTableDefinition>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "pivotTableDefinition"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "pivotTableDefinition"));
         }
 
         /// <inheritdoc/>
@@ -822,7 +822,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 .AddAttribute("sti", a => a.Sti);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExTest), 0, 0, version: FileFormatVersions.Office2016)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrtest"), 0, 0, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -1476,8 +1476,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 .AddAttribute("w", a => a.W);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevCell), 1, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.ChangeCellSubEdit), 0, 0, version: FileFormatVersions.Office2016)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "c"), 1, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "ccse"), 0, 0, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -1769,8 +1769,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 .AddAttribute("applyProtection", a => a.ApplyProtection);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "dxf"), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "extLst"), 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -1783,8 +1783,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType? DifferentialFormatType
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "dxf"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "dxf"));
         }
 
         /// <summary>
@@ -1796,8 +1796,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.ExtensionList>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -2052,8 +2052,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 .AddAttribute("comment", a => a.Comment);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.ExtensionList), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "formula"), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "extLst"), 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -2066,8 +2066,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula? FormulaFormula
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "formula"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "formula"));
         }
 
         /// <summary>
@@ -2079,8 +2079,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.ExtensionList>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -2209,7 +2209,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 .AddAttribute("ctx", a => a.Ctx);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader), 1, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hdr"), 1, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -2222,8 +2222,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader? StateBasedHeader
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hdr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hdr"));
         }
 
         /// <inheritdoc/>
@@ -2356,11 +2356,11 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 .AddAttribute("ctx", a => a.Ctx);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hdr"), 1, 1, version: FileFormatVersions.Office2016),
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevisionStateLink), 0, 1, version: FileFormatVersions.Office2016),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevisionState), 0, 1, version: FileFormatVersions.Office2016)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "link"), 0, 1, version: FileFormatVersions.Office2016),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "body"), 0, 1, version: FileFormatVersions.Office2016)
                 }
             };
         }
@@ -2374,8 +2374,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader? StateBasedHeader
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hdr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hdr"));
         }
 
         /// <inheritdoc/>
@@ -2983,19 +2983,19 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 .AddAttribute("ctx", a => a.Ctx);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExFuture), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExUnsupported), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExTrimmed), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExRowColumn), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExMove), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExChangeCell), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExFormatting), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExDefinedName), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExDelObj), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExChgObj), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevExSheetOp), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevisionList), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevListAutoExpandRw), 0, 0, version: FileFormatVersions.Office2016)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrftr"), 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrUspt"), 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrTrim"), 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrrc"), 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrm"), 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrc"), 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrf"), 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrDefName"), 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrdo"), 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrco"), 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrSheet"), 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrList"), 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrListExpR"), 0, 0, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -3129,9 +3129,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 .AddAttribute("rep", a => a.Rep);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.FFormula), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.Xstring), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RstType), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "f"), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "v"), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "is"), 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -3144,8 +3144,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.FFormula? FFormula
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.FFormula>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.FFormula>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "f"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "f"));
         }
 
         /// <summary>
@@ -3157,8 +3157,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.Xstring? Xstring
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.Xstring>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.Xstring>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "v"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "v"));
         }
 
         /// <summary>
@@ -3170,8 +3170,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.RstType? RstType
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.RstType>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.RstType>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "is"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "is"));
         }
 
         /// <inheritdoc/>
@@ -3278,7 +3278,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 .AddAttribute("w", a => a.W);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RevCell), 1, 0, version: FileFormatVersions.Office2016)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "c"), 1, 0, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -3342,7 +3342,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
                     }
                 }
             };
@@ -3543,7 +3543,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 .AddAttribute("seftx", a => a.Seftx);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RefMap), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "refmap"), 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -3556,8 +3556,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.RefMap? RefMap
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.RefMap>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.RefMap>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "refmap"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "refmap"));
         }
 
         /// <inheritdoc/>
@@ -3667,11 +3667,11 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.ShowGridlinesHeadings>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOps), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.HideUnhideSheet), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.ShowGridlinesHeadings), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.FreezePanes), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.Outlines), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "rowColVisualOps"), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hideUnhideSheet"), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "showGridlinesHeadings"), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "freezePanes"), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "outlines"), 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -3684,8 +3684,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOps? RowColVisualOps
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOps>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOps>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "rowColVisualOps"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "rowColVisualOps"));
         }
 
         /// <summary>
@@ -3697,8 +3697,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.HideUnhideSheet? HideUnhideSheet
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.HideUnhideSheet>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.HideUnhideSheet>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hideUnhideSheet"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hideUnhideSheet"));
         }
 
         /// <summary>
@@ -3710,8 +3710,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.ShowGridlinesHeadings? ShowGridlinesHeadings
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.ShowGridlinesHeadings>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.ShowGridlinesHeadings>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "showGridlinesHeadings"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "showGridlinesHeadings"));
         }
 
         /// <summary>
@@ -3723,8 +3723,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.FreezePanes? FreezePanes
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.FreezePanes>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.FreezePanes>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "freezePanes"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "freezePanes"));
         }
 
         /// <summary>
@@ -3736,8 +3736,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.Outlines? Outlines
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.Outlines>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.Outlines>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "outlines"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "outlines"));
         }
 
         /// <inheritdoc/>
@@ -3804,11 +3804,11 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.SheetXluid>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RefCell), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.SheetXluid), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RefOartAnchor), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RefFuture), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.RefTest), 1, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "ref"), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "sheetUid"), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "oartAnchor"), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "future"), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "test"), 1, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -4093,7 +4093,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.Outline), 0, 0, version: FileFormatVersions.Office2016)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "outline"), 0, 0, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -4251,10 +4251,10 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Text>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Text), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Run), 0, 32767),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PhoneticRun), 0, 32767),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "t"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "r"), 0, 32767),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rPh"), 0, 32767),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "phoneticPr"), 0, 1)
             };
         }
 
@@ -4267,8 +4267,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Text? Text
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Text>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Text>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "t"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "t"));
         }
 
         /// <inheritdoc/>
@@ -5001,9 +5001,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.ExcelAc.List), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula1), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula2), 0, 1)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2011/1/ac", "list"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formula1"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formula2"), 0, 1)
             };
         }
 
@@ -5016,8 +5016,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.ExcelAc.List? List
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.ExcelAc.List>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.ExcelAc.List>(new("http://schemas.microsoft.com/office/spreadsheetml/2011/1/ac", "list"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2011/1/ac", "list"));
         }
 
         /// <summary>
@@ -5029,8 +5029,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Formula1? Formula1
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formula1>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formula1>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formula1"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formula1"));
         }
 
         /// <summary>
@@ -5042,8 +5042,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Formula2? Formula2
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formula2>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formula2>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formula2"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formula2"));
         }
 
         /// <inheritdoc/>
@@ -5395,16 +5395,16 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 .AddAttribute("rightToLeft", a => a.RightToLeft);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SeriesColor), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.NegativeColor), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.AxisColor), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.MarkersColor), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Formula), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Sparklines), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorSeries"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorNegative"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorAxis"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorMarkers"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorFirst"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorLast"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorHigh"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorLow"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/excel/2006/main", "f"), 0, 1),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "sparklines"), 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -5417,8 +5417,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.SeriesColor? SeriesColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.SeriesColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.SeriesColor>(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorSeries"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorSeries"));
         }
 
         /// <summary>
@@ -5430,8 +5430,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.NegativeColor? NegativeColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.NegativeColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.NegativeColor>(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorNegative"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorNegative"));
         }
 
         /// <summary>
@@ -5443,8 +5443,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.AxisColor? AxisColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.AxisColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.AxisColor>(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorAxis"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorAxis"));
         }
 
         /// <summary>
@@ -5456,8 +5456,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.MarkersColor? MarkersColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.MarkersColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.MarkersColor>(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorMarkers"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorMarkers"));
         }
 
         /// <summary>
@@ -5469,8 +5469,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor? FirstMarkerColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor>(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorFirst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorFirst"));
         }
 
         /// <summary>
@@ -5482,8 +5482,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor? LastMarkerColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor>(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorLast"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorLast"));
         }
 
         /// <summary>
@@ -5495,8 +5495,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor? HighMarkerColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor>(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorHigh"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorHigh"));
         }
 
         /// <summary>
@@ -5508,8 +5508,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor? LowMarkerColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor>(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorLow"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorLow"));
         }
 
         /// <summary>
@@ -5521,8 +5521,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office.Excel.Formula? Formula
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Excel.Formula>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.Excel.Formula>(new("http://schemas.microsoft.com/office/excel/2006/main", "f"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/excel/2006/main", "f"));
         }
 
         /// <summary>
@@ -5534,8 +5534,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.Sparklines? Sparklines
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Sparklines>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Sparklines>(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "sparklines"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "sparklines"));
         }
 
         /// <inheritdoc/>
@@ -5598,9 +5598,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Authors), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CommentList), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "authors"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "commentList"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -5613,8 +5613,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Authors? Authors
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Authors>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Authors>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "authors"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "authors"));
         }
 
         /// <summary>
@@ -5626,8 +5626,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CommentList? CommentList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CommentList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CommentList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "commentList"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "commentList"));
         }
 
         /// <summary>
@@ -5639,8 +5639,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -5715,9 +5715,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 .AddAttribute("ref", a => a.Reference);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FilterColumn), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SortState), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "filterColumn"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sortState"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -6567,23 +6567,23 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 .AddAttribute("customListSort", a => a.CustomListSort);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Location), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFields), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowFields), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowItems), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnFields), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnItems), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageFields), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataFields), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formats), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ChartFormats), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFilters), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "location"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotFields"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowFields"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowItems"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colFields"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colItems"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageFields"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dataFields"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formats"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "conditionalFormats"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "chartFormats"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotHierarchies"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotTableStyleInfo"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "filters"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowHierarchiesUsage"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colHierarchiesUsage"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -6596,8 +6596,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Location? Location
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Location>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Location>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "location"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "location"));
         }
 
         /// <summary>
@@ -6609,8 +6609,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotFields? PivotFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFields>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFields>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotFields"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotFields"));
         }
 
         /// <summary>
@@ -6622,8 +6622,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.RowFields? RowFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowFields>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowFields>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowFields"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowFields"));
         }
 
         /// <summary>
@@ -6635,8 +6635,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.RowItems? RowItems
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowItems>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowItems>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowItems"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowItems"));
         }
 
         /// <summary>
@@ -6648,8 +6648,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ColumnFields? ColumnFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnFields>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnFields>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colFields"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colFields"));
         }
 
         /// <summary>
@@ -6661,8 +6661,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ColumnItems? ColumnItems
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnItems>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnItems>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colItems"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colItems"));
         }
 
         /// <summary>
@@ -6674,8 +6674,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PageFields? PageFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageFields>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageFields>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageFields"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageFields"));
         }
 
         /// <summary>
@@ -6687,8 +6687,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DataFields? DataFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DataFields>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DataFields>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dataFields"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dataFields"));
         }
 
         /// <summary>
@@ -6700,8 +6700,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Formats? Formats
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formats>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formats>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formats"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formats"));
         }
 
         /// <summary>
@@ -6713,8 +6713,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats? ConditionalFormats
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "conditionalFormats"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "conditionalFormats"));
         }
 
         /// <summary>
@@ -6726,8 +6726,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ChartFormats? ChartFormats
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartFormats>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartFormats>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "chartFormats"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "chartFormats"));
         }
 
         /// <summary>
@@ -6739,8 +6739,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies? PivotHierarchies
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotHierarchies"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotHierarchies"));
         }
 
         /// <summary>
@@ -6752,8 +6752,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle? PivotTableStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotTableStyleInfo"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotTableStyleInfo"));
         }
 
         /// <summary>
@@ -6765,8 +6765,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotFilters? PivotFilters
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFilters>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFilters>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "filters"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "filters"));
         }
 
         /// <summary>
@@ -6778,8 +6778,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage? RowHierarchiesUsage
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowHierarchiesUsage"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowHierarchiesUsage"));
         }
 
         /// <summary>
@@ -6791,8 +6791,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage? ColumnHierarchiesUsage
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colHierarchiesUsage"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colHierarchiesUsage"));
         }
 
         /// <summary>
@@ -6804,8 +6804,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList? PivotTableDefinitionExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>

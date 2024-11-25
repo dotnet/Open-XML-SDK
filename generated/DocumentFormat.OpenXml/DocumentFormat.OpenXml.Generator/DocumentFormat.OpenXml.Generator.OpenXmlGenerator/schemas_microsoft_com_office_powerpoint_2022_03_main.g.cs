@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reaction>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reaction), 0, 0, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/03/main", "rxn"), 0, 0, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -133,7 +133,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ext"), 0, 0)
                     }
                 }
             };
@@ -225,7 +225,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/03/main", "extLst"), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -238,8 +238,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ExtensionList>(new("http://schemas.microsoft.com/office/powerpoint/2022/03/main", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2022/03/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -313,7 +313,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ReactionInstance), 0, 0, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/03/main", "instance"), 0, 0, version: FileFormatVersions.Microsoft365)
             };
         }
 

@@ -73,8 +73,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NamedSheetView>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NamedSheetView), 0, 0, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "namedSheetView"), 0, 0, version: FileFormatVersions.Office2021),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "extLst"), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -197,8 +197,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NsvFilter), 0, 0, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "nsvFilter"), 0, 0, version: FileFormatVersions.Office2021),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "extLst"), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -262,7 +262,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
                     }
                 }
             };
@@ -366,9 +366,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
                 .AddAttribute("tableId", a => a.TableId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ColumnFilter), 0, 0, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRules), 0, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "columnFilter"), 0, 0, version: FileFormatVersions.Office2021),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "sortRules"), 0, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "extLst"), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -461,9 +461,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType), 0, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.FilterColumn), 0, 0, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "dxf"), 0, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "filter"), 0, 0, version: FileFormatVersions.Office2021),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "extLst"), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -476,8 +476,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType? DifferentialFormatType
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType>(new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "dxf"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "dxf"));
         }
 
         /// <inheritdoc/>
@@ -561,8 +561,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
                 .AddAttribute("caseSensitive", a => a.CaseSensitive);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRule), 0, 64, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "sortRule"), 0, 64, version: FileFormatVersions.Office2021),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "extLst"), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -634,13 +634,13 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Fill), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Alignment), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Border), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "font"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "numFmt"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fill"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "alignment"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "border"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "protection"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -653,8 +653,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Font? Font
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Font>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Font>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "font"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "font"));
         }
 
         /// <summary>
@@ -666,8 +666,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.NumberingFormat? NumberingFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "numFmt"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "numFmt"));
         }
 
         /// <summary>
@@ -679,8 +679,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Fill? Fill
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Fill>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Fill>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fill"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fill"));
         }
 
         /// <summary>
@@ -692,8 +692,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Alignment? Alignment
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Alignment>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "alignment"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "alignment"));
         }
 
         /// <summary>
@@ -705,8 +705,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Border? Border
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Border>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Border>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "border"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "border"));
         }
 
         /// <summary>
@@ -718,8 +718,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Protection? Protection
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Protection>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Protection>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "protection"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "protection"));
         }
 
         /// <summary>
@@ -731,8 +731,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -844,15 +844,15 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
                 .AddAttribute("showButton", a => a.ShowButton);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Filters), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Top10), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.CustomFilters), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomFilters), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DynamicFilter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColorFilter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.IconFilter), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.IconFilter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "filters"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "top10"), 0, 1),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "customFilters"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "customFilters"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dynamicFilter"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colorFilter"), 0, 1),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "iconFilter"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "iconFilter"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -865,8 +865,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Filters? Filters
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Filters>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Filters>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "filters"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "filters"));
         }
 
         /// <summary>
@@ -878,8 +878,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Top10? Top10
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Top10>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Top10>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "top10"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "top10"));
         }
 
         /// <summary>
@@ -891,8 +891,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.CustomFilters? CustomFilters14
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.CustomFilters>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.CustomFilters>(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "customFilters"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "customFilters"));
         }
 
         /// <summary>
@@ -904,8 +904,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CustomFilters? CustomFilters
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CustomFilters>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CustomFilters>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "customFilters"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "customFilters"));
         }
 
         /// <summary>
@@ -917,8 +917,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DynamicFilter? DynamicFilter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DynamicFilter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DynamicFilter>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dynamicFilter"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dynamicFilter"));
         }
 
         /// <summary>
@@ -930,8 +930,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ColorFilter? ColorFilter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColorFilter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColorFilter>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colorFilter"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colorFilter"));
         }
 
         /// <summary>
@@ -943,8 +943,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.IconFilter? IconFilter14
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.IconFilter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.IconFilter>(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "iconFilter"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "iconFilter"));
         }
 
         /// <summary>
@@ -956,8 +956,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.IconFilter? IconFilter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.IconFilter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.IconFilter>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "iconFilter"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "iconFilter"));
         }
 
         /// <summary>
@@ -969,8 +969,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -1062,11 +1062,11 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType), 0, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "dxf"), 0, 1, version: FileFormatVersions.Office2021),
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortCondition), 0, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.RichSortCondition), 0, 1, version: FileFormatVersions.Office2021)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "sortCondition"), 0, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "richSortCondition"), 0, 1, version: FileFormatVersions.Office2021)
                 }
             };
         }
@@ -1080,8 +1080,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType? DifferentialFormatType
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType>(new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "dxf"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "dxf"));
         }
 
         /// <inheritdoc/>

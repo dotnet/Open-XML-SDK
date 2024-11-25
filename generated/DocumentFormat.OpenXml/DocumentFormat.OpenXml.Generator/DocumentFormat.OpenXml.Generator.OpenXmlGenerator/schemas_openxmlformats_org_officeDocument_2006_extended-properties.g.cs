@@ -120,33 +120,33 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.ApplicationVersion>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.All, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.Template), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.Manager), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.Company), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.Pages), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.Words), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.Characters), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.PresentationFormat), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.Lines), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.Paragraphs), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.Slides), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.Notes), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.TotalTime), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.HiddenSlides), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.MultimediaClips), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.ScaleCrop), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.HeadingPairs), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.LinksUpToDate), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.CharactersWithSpaces), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.SharedDocument), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.HyperlinkBase), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.HyperlinkList), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.HyperlinksChanged), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.DigitalSignature), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.Application), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.ApplicationVersion), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.ExtendedProperties.DocumentSecurity), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Template"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Manager"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Company"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Pages"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Words"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Characters"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "PresentationFormat"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Lines"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Paragraphs"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Slides"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Notes"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "TotalTime"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "HiddenSlides"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "MMClips"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "ScaleCrop"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "HeadingPairs"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "TitlesOfParts"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "LinksUpToDate"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "CharactersWithSpaces"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "SharedDoc"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "HyperlinkBase"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "HLinks"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "HyperlinksChanged"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "DigSig"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Application"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "AppVersion"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "DocSecurity"), 0, 1)
             };
         }
 
@@ -159,8 +159,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.Template? Template
         {
-            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Template>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Template>(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Template"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Template"));
         }
 
         /// <summary>
@@ -172,8 +172,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.Manager? Manager
         {
-            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Manager>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Manager>(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Manager"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Manager"));
         }
 
         /// <summary>
@@ -185,8 +185,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.Company? Company
         {
-            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Company>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Company>(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Company"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Company"));
         }
 
         /// <summary>
@@ -198,8 +198,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.Pages? Pages
         {
-            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Pages>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Pages>(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Pages"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Pages"));
         }
 
         /// <summary>
@@ -211,8 +211,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.Words? Words
         {
-            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Words>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Words>(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Words"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Words"));
         }
 
         /// <summary>
@@ -224,8 +224,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.Characters? Characters
         {
-            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Characters>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Characters>(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Characters"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Characters"));
         }
 
         /// <summary>
@@ -237,8 +237,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.PresentationFormat? PresentationFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.PresentationFormat>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.PresentationFormat>(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "PresentationFormat"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "PresentationFormat"));
         }
 
         /// <summary>
@@ -250,8 +250,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.Lines? Lines
         {
-            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Lines>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Lines>(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Lines"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Lines"));
         }
 
         /// <summary>
@@ -263,8 +263,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.Paragraphs? Paragraphs
         {
-            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Paragraphs>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Paragraphs>(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Paragraphs"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Paragraphs"));
         }
 
         /// <summary>
@@ -276,8 +276,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.Slides? Slides
         {
-            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Slides>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Slides>(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Slides"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Slides"));
         }
 
         /// <summary>
@@ -289,8 +289,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.Notes? Notes
         {
-            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Notes>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Notes>(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Notes"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Notes"));
         }
 
         /// <summary>
@@ -302,8 +302,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.TotalTime? TotalTime
         {
-            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.TotalTime>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.TotalTime>(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "TotalTime"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "TotalTime"));
         }
 
         /// <summary>
@@ -315,8 +315,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.HiddenSlides? HiddenSlides
         {
-            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.HiddenSlides>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.HiddenSlides>(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "HiddenSlides"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "HiddenSlides"));
         }
 
         /// <summary>
@@ -328,8 +328,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.MultimediaClips? MultimediaClips
         {
-            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.MultimediaClips>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.MultimediaClips>(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "MMClips"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "MMClips"));
         }
 
         /// <summary>
@@ -341,8 +341,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.ScaleCrop? ScaleCrop
         {
-            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.ScaleCrop>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.ScaleCrop>(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "ScaleCrop"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "ScaleCrop"));
         }
 
         /// <summary>
@@ -354,8 +354,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.HeadingPairs? HeadingPairs
         {
-            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.HeadingPairs>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.HeadingPairs>(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "HeadingPairs"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "HeadingPairs"));
         }
 
         /// <summary>
@@ -367,8 +367,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts? TitlesOfParts
         {
-            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts>(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "TitlesOfParts"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "TitlesOfParts"));
         }
 
         /// <summary>
@@ -380,8 +380,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.LinksUpToDate? LinksUpToDate
         {
-            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.LinksUpToDate>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.LinksUpToDate>(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "LinksUpToDate"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "LinksUpToDate"));
         }
 
         /// <summary>
@@ -393,8 +393,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.CharactersWithSpaces? CharactersWithSpaces
         {
-            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.CharactersWithSpaces>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.CharactersWithSpaces>(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "CharactersWithSpaces"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "CharactersWithSpaces"));
         }
 
         /// <summary>
@@ -406,8 +406,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.SharedDocument? SharedDocument
         {
-            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.SharedDocument>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.SharedDocument>(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "SharedDoc"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "SharedDoc"));
         }
 
         /// <summary>
@@ -419,8 +419,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.HyperlinkBase? HyperlinkBase
         {
-            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.HyperlinkBase>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.HyperlinkBase>(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "HyperlinkBase"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "HyperlinkBase"));
         }
 
         /// <summary>
@@ -432,8 +432,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.HyperlinkList? HyperlinkList
         {
-            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.HyperlinkList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.HyperlinkList>(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "HLinks"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "HLinks"));
         }
 
         /// <summary>
@@ -445,8 +445,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.HyperlinksChanged? HyperlinksChanged
         {
-            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.HyperlinksChanged>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.HyperlinksChanged>(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "HyperlinksChanged"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "HyperlinksChanged"));
         }
 
         /// <summary>
@@ -458,8 +458,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.DigitalSignature? DigitalSignature
         {
-            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.DigitalSignature>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.DigitalSignature>(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "DigSig"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "DigSig"));
         }
 
         /// <summary>
@@ -471,8 +471,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.Application? Application
         {
-            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Application>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Application>(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Application"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Application"));
         }
 
         /// <summary>
@@ -484,8 +484,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.ApplicationVersion? ApplicationVersion
         {
-            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.ApplicationVersion>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.ApplicationVersion>(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "AppVersion"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "AppVersion"));
         }
 
         /// <summary>
@@ -497,8 +497,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.DocumentSecurity? DocumentSecurity
         {
-            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.DocumentSecurity>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.DocumentSecurity>(new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "DocSecurity"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "DocSecurity"));
         }
 
         /// <inheritdoc/>
@@ -1453,7 +1453,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             builder.SetSchema("ap:HeadingPairs");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes", "vector"), 1, 1)
             };
         }
 
@@ -1511,7 +1511,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             builder.SetSchema("ap:HLinks");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes", "vector"), 1, 1)
             };
         }
 
@@ -1578,8 +1578,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTVector? VTVector
         {
-            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVector>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVector>(new("http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes", "vector"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes", "vector"));
         }
     }
 
@@ -1634,7 +1634,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTVector>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes", "vector"), 1, 1)
             };
         }
 
@@ -1647,8 +1647,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTVector? VTVector
         {
-            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVector>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVector>(new("http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes", "vector"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes", "vector"));
         }
 
         /// <inheritdoc/>
@@ -1706,7 +1706,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
             builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTBlob>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.VariantTypes.VTBlob), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes", "blob"), 1, 1)
             };
         }
 
@@ -1719,8 +1719,8 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTBlob? VTBlob
         {
-            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBlob>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBlob>(new("http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes", "blob"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes", "blob"));
         }
 
         /// <inheritdoc/>

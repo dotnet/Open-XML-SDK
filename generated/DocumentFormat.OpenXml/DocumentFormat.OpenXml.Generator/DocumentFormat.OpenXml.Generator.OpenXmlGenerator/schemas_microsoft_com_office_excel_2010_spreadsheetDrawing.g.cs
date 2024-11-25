@@ -108,10 +108,10 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing", "nvContentPartPr"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing", "nvPr"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing", "xfrm"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing", "extLst"), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -124,8 +124,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties? ExcelNonVisualContentPartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties>(new("http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing", "nvContentPartPr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing", "nvContentPartPr"));
         }
 
         /// <summary>
@@ -137,8 +137,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties>(new("http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing", "nvPr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing", "nvPr"));
         }
 
         /// <summary>
@@ -150,8 +150,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D? Transform2D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D>(new("http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing", "xfrm"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing", "xfrm"));
         }
 
         /// <summary>
@@ -163,8 +163,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList>(new("http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -289,9 +289,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
                 .AddAttribute("title", a => a.Title);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkClick"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkHover"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -304,8 +304,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick? HyperlinkOnClick
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkClick"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkClick"));
         }
 
         /// <summary>
@@ -317,8 +317,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover? HyperlinkOnHover
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkHover"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkHover"));
         }
 
         /// <summary>
@@ -330,8 +330,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -404,8 +404,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
                 .AddAttribute("isComment", a => a.IsComment);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2010/main", "cpLocks"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2010/main", "extLst"), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -418,8 +418,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks? ContentPartLocks
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>(new("http://schemas.microsoft.com/office/drawing/2010/main", "cpLocks"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2010/main", "cpLocks"));
         }
 
         /// <summary>
@@ -431,8 +431,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>(new("http://schemas.microsoft.com/office/drawing/2010/main", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2010/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -493,8 +493,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.NonVisualInkContentPartProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.NonVisualDrawingProperties), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.NonVisualInkContentPartProperties), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing", "cNvPr"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing", "cNvContentPartPr"), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -507,8 +507,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.Drawing.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.NonVisualDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.NonVisualDrawingProperties>(new("http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing", "cNvPr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing", "cNvPr"));
         }
 
         /// <summary>
@@ -520,8 +520,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.Drawing.NonVisualInkContentPartProperties? NonVisualInkContentPartProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.NonVisualInkContentPartProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.NonVisualInkContentPartProperties>(new("http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing", "cNvContentPartPr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing", "cNvContentPartPr"));
         }
 
         /// <inheritdoc/>
@@ -664,8 +664,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
                 .AddAttribute("flipV", a => a.VerticalFlip);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extents), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "off"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"), 0, 1)
             };
         }
 
@@ -678,8 +678,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Offset? Offset
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "off"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "off"));
         }
 
         /// <summary>
@@ -691,8 +691,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Extents? Extents
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"));
         }
 
         /// <inheritdoc/>
@@ -755,7 +755,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"), 0, 0)
                     }
                 }
             };

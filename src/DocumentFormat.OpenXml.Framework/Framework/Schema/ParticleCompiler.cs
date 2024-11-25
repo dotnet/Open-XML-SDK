@@ -61,7 +61,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
 
             var particlePath = ParticlePath.Create(newValues);
 
-            _path.Add(new LookupItem(element.ElementType, particlePath));
+            _path.Add(new LookupItem(element.QName, particlePath));
         }
 
         private void VisitComposite(CompositeParticle seq)

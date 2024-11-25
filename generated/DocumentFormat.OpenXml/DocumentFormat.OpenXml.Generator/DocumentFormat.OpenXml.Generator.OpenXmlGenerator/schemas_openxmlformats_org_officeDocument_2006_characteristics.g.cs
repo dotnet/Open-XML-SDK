@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
             builder.AddChild<DocumentFormat.OpenXml.AdditionalCharacteristics.Characteristic>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.AdditionalCharacteristics.Characteristic), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/characteristics", "characteristic"), 0, 0)
             };
         }
 

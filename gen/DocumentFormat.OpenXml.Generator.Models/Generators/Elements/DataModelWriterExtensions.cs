@@ -329,9 +329,17 @@ public static class DataModelWriterExtensions
         {
             writer.Write("get => GetElement<");
             writer.Write(className);
-            writer.WriteLine(">();");
+            writer.Write(">(new(");
+            writer.WriteString(services.GetNamespaceInfo(element.Name.QName.Prefix).Uri);
+            writer.Write(", ");
+            writer.WriteString(element.Name.QName.Name);
+            writer.WriteLine("));");
 
-            writer.WriteLine("set => SetElement(value);");
+            writer.Write("set => SetElement(value, new(");
+            writer.WriteString(services.GetNamespaceInfo(element.Name.QName.Prefix).Uri);
+            writer.Write(", ");
+            writer.WriteString(element.Name.QName.Name);
+            writer.WriteLine("));");
         }
     }
 

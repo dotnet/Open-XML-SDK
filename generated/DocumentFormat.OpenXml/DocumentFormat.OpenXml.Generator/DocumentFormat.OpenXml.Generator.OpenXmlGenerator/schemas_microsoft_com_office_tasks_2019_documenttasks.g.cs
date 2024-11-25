@@ -71,8 +71,8 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
             builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.Task>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.Task), 0, 0, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Task"), 0, 0, version: FileFormatVersions.Office2021),
+                new ElementParticle(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "extLst"), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -183,9 +183,9 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor), 0, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistory), 0, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Anchor"), 0, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "History"), 0, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "extLst"), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -198,8 +198,8 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor? TaskAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor>(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Anchor"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Anchor"));
         }
 
         /// <summary>
@@ -211,8 +211,8 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistory? TaskHistory
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistory>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistory>(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "History"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "History"));
         }
 
         /// <summary>
@@ -224,8 +224,8 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList>(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -284,7 +284,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
             builder.AddChild<DocumentFormat.OpenXml.Office2021.OfficeExtLst.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.OfficeExtLst.Extension), 0, 0, version: FileFormatVersions.Office2021)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2019/extlst", "ext"), 0, 0, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -346,8 +346,8 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
             builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.CommentAnchor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.CommentAnchor), 0, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Comment"), 0, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "extLst"), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -360,8 +360,8 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.DocumentTasks.CommentAnchor? CommentAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.CommentAnchor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.CommentAnchor>(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Comment"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Comment"));
         }
 
         /// <summary>
@@ -373,8 +373,8 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList>(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -433,7 +433,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
             builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistoryEvent>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistoryEvent), 0, 0, version: FileFormatVersions.Office2021)
+                new ElementParticle(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Event"), 0, 0, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -549,23 +549,23 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.AttributionTaskUser), 1, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor), 0, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Attribution"), 1, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Anchor"), 0, 1, version: FileFormatVersions.Office2021),
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.AssignTaskUser), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.UnassignTaskUser), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskCreateEventInfo), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskTitleEventInfo), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskScheduleEventInfo), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskProgressEventInfo), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskPriorityEventInfo), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskDeleteEventInfo), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskUndeleteEventInfo), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskUnassignAll), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskUndo), 1, 1, version: FileFormatVersions.Office2021)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Assign"), 1, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Unassign"), 1, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Create"), 1, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "SetTitle"), 1, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Schedule"), 1, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Progress"), 1, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Priority"), 1, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Delete"), 1, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Undelete"), 1, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "UnassignAll"), 1, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Undo"), 1, 1, version: FileFormatVersions.Office2021)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "extLst"), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -578,8 +578,8 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.DocumentTasks.AttributionTaskUser? AttributionTaskUser
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.AttributionTaskUser>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.AttributionTaskUser>(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Attribution"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Attribution"));
         }
 
         /// <summary>
@@ -591,8 +591,8 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor? TaskAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor>(new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Anchor"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Anchor"));
         }
 
         /// <inheritdoc/>

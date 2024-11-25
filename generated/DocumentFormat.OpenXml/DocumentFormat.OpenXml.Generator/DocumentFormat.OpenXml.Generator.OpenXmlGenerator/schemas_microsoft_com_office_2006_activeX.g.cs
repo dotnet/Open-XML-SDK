@@ -130,7 +130,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty), 0, 0)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2006/activeX", "ocxPr"), 0, 0)
             };
         }
 
@@ -225,8 +225,8 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.ActiveX.SharedComFont), 0, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture), 0, 1)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/activeX", "font"), 0, 1),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/activeX", "picture"), 0, 1)
                 }
             };
         }
@@ -240,8 +240,8 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// </remarks>
         public DocumentFormat.OpenXml.Office.ActiveX.SharedComFont? SharedComFont
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.ActiveX.SharedComFont>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.ActiveX.SharedComFont>(new("http://schemas.microsoft.com/office/2006/activeX", "font"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2006/activeX", "font"));
         }
 
         /// <summary>
@@ -253,8 +253,8 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// </remarks>
         public DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture? SharedComPicture
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture>(new("http://schemas.microsoft.com/office/2006/activeX", "picture"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2006/activeX", "picture"));
         }
 
         /// <inheritdoc/>
@@ -341,7 +341,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
                 .AddAttribute("r:id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty), 0, 0)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2006/activeX", "ocxPr"), 0, 0)
             };
         }
 

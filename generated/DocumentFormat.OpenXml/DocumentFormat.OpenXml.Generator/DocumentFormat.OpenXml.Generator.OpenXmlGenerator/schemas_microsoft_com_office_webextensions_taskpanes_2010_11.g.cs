@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
             builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionTaskpane>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionTaskpane), 0, 0, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11", "taskpane"), 0, 0, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -210,7 +210,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"), 0, 0)
                     }
                 }
             };
@@ -342,8 +342,8 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
                 .AddAttribute("locked", a => a.Locked);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionPartReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.WebExtentionPane.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11", "webextensionref"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -356,8 +356,8 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionPartReference? WebExtensionPartReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionPartReference>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionPartReference>(new("http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11", "webextensionref"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11", "webextensionref"));
         }
 
         /// <summary>
@@ -369,8 +369,8 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.WebExtentionPane.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtentionPane.OfficeArtExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtentionPane.OfficeArtExtensionList>(new("http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11", "extLst"));
         }
 
         /// <inheritdoc/>

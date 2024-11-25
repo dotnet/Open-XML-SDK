@@ -70,8 +70,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.LastRefreshFeatureXsdstring>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.RequiredFeatureXsdstring), 0, 0, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.LastRefreshFeatureXsdstring), 0, 0, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo", "requiredFeature"), 0, 0, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo", "lastRefreshFeature"), 0, 0, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -133,8 +133,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.LastUpdateFeatureXsdstring>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.RequiredFeatureXsdstring), 0, 0, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.LastUpdateFeatureXsdstring), 0, 0, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo", "requiredFeature"), 0, 0, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo", "lastUpdateFeature"), 0, 0, version: FileFormatVersions.Microsoft365)
             };
         }
 

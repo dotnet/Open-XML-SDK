@@ -149,8 +149,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculationCell), 1, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "c"), 1, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -244,9 +244,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Authors), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CommentList), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "authors"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "commentList"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -259,8 +259,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Authors? Authors
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Authors>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Authors>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "authors"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "authors"));
         }
 
         /// <summary>
@@ -272,8 +272,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CommentList? CommentList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CommentList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CommentList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "commentList"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "commentList"));
         }
 
         /// <summary>
@@ -285,8 +285,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -392,8 +392,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Schema), 1, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Map), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "Schema"), 1, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "Map"), 1, 0)
             };
         }
 
@@ -483,7 +483,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Connection>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Connection), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "connection"), 1, 0)
             };
         }
 
@@ -806,17 +806,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("supportAdvancedDrill", a => a.SupportAdvancedDrill);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheSource), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheFields), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheHierarchies), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Kpis), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TupleCache), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedItems), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedMembers), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Dimensions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MeasureGroups), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Maps), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cacheSource"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cacheFields"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cacheHierarchies"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "kpis"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tupleCache"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "calculatedItems"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "calculatedMembers"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dimensions"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "measureGroups"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "maps"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:refreshedBy"), 0, 255));
         }
@@ -830,8 +830,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CacheSource? CacheSource
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CacheSource>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CacheSource>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cacheSource"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cacheSource"));
         }
 
         /// <summary>
@@ -843,8 +843,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CacheFields? CacheFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CacheFields>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CacheFields>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cacheFields"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cacheFields"));
         }
 
         /// <summary>
@@ -856,8 +856,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CacheHierarchies? CacheHierarchies
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CacheHierarchies>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CacheHierarchies>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cacheHierarchies"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cacheHierarchies"));
         }
 
         /// <summary>
@@ -869,8 +869,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Kpis? Kpis
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Kpis>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Kpis>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "kpis"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "kpis"));
         }
 
         /// <summary>
@@ -882,8 +882,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.TupleCache? TupleCache
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TupleCache>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TupleCache>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tupleCache"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tupleCache"));
         }
 
         /// <summary>
@@ -895,8 +895,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CalculatedItems? CalculatedItems
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CalculatedItems>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CalculatedItems>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "calculatedItems"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "calculatedItems"));
         }
 
         /// <summary>
@@ -908,8 +908,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CalculatedMembers? CalculatedMembers
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CalculatedMembers>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CalculatedMembers>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "calculatedMembers"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "calculatedMembers"));
         }
 
         /// <summary>
@@ -921,8 +921,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Dimensions? Dimensions
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Dimensions>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Dimensions>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dimensions"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dimensions"));
         }
 
         /// <summary>
@@ -934,8 +934,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.MeasureGroups? MeasureGroups
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MeasureGroups>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MeasureGroups>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "measureGroups"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "measureGroups"));
         }
 
         /// <summary>
@@ -947,8 +947,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Maps? Maps
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Maps>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Maps>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "maps"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "maps"));
         }
 
         /// <summary>
@@ -960,8 +960,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtensionList? PivotCacheDefinitionExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -1064,8 +1064,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCacheRecord), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "r"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -1945,23 +1945,23 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("customListSort", a => a.CustomListSort);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Location), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFields), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowFields), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowItems), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnFields), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnItems), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageFields), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataFields), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formats), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ChartFormats), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFilters), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "location"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotFields"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowFields"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowItems"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colFields"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colItems"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageFields"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dataFields"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formats"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "conditionalFormats"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "chartFormats"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotHierarchies"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotTableStyleInfo"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "filters"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowHierarchiesUsage"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colHierarchiesUsage"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:autoFormatId"), true, 0, true, 16, true));
             builder.AddConstraint(new ReferenceExistConstraint(builder.CreateQName("x:cacheId"), "/WorkbookPart", builder.CreateQName("x:pivotCache"), "x:pivotCache", builder.CreateQName("x:cacheId")));
@@ -1987,8 +1987,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Location? Location
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Location>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Location>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "location"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "location"));
         }
 
         /// <summary>
@@ -2000,8 +2000,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotFields? PivotFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFields>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFields>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotFields"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotFields"));
         }
 
         /// <summary>
@@ -2013,8 +2013,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.RowFields? RowFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowFields>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowFields>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowFields"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowFields"));
         }
 
         /// <summary>
@@ -2026,8 +2026,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.RowItems? RowItems
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowItems>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowItems>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowItems"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowItems"));
         }
 
         /// <summary>
@@ -2039,8 +2039,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ColumnFields? ColumnFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnFields>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnFields>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colFields"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colFields"));
         }
 
         /// <summary>
@@ -2052,8 +2052,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ColumnItems? ColumnItems
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnItems>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnItems>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colItems"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colItems"));
         }
 
         /// <summary>
@@ -2065,8 +2065,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PageFields? PageFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageFields>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageFields>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageFields"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageFields"));
         }
 
         /// <summary>
@@ -2078,8 +2078,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DataFields? DataFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DataFields>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DataFields>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dataFields"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dataFields"));
         }
 
         /// <summary>
@@ -2091,8 +2091,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Formats? Formats
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formats>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formats>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formats"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formats"));
         }
 
         /// <summary>
@@ -2104,8 +2104,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats? ConditionalFormats
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "conditionalFormats"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "conditionalFormats"));
         }
 
         /// <summary>
@@ -2117,8 +2117,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ChartFormats? ChartFormats
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartFormats>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartFormats>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "chartFormats"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "chartFormats"));
         }
 
         /// <summary>
@@ -2130,8 +2130,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies? PivotHierarchies
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotHierarchies"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotHierarchies"));
         }
 
         /// <summary>
@@ -2143,8 +2143,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle? PivotTableStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotTableStyleInfo"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotTableStyleInfo"));
         }
 
         /// <summary>
@@ -2156,8 +2156,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotFilters? PivotFilters
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFilters>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFilters>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "filters"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "filters"));
         }
 
         /// <summary>
@@ -2169,8 +2169,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage? RowHierarchiesUsage
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowHierarchiesUsage"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowHierarchiesUsage"));
         }
 
         /// <summary>
@@ -2182,8 +2182,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage? ColumnHierarchiesUsage
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colHierarchiesUsage"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colHierarchiesUsage"));
         }
 
         /// <summary>
@@ -2195,8 +2195,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList? PivotTableDefinitionExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -2536,8 +2536,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("applyWidthHeightFormats", a => a.ApplyWidthHeightFormats);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryTableRefresh), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryTableExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "queryTableRefresh"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueConditionToAnother(builder.CreateQName("x:backgroundRefresh"), builder.CreateQName("x:firstBackgroundRefresh"), new string[] { "true" }, new string[] { "true" }));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:connectionId"), true, 1, true, double.PositiveInfinity, true));
@@ -2554,8 +2554,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.QueryTableRefresh? QueryTableRefresh
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.QueryTableRefresh>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.QueryTableRefresh>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "queryTableRefresh"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "queryTableRefresh"));
         }
 
         /// <summary>
@@ -2567,8 +2567,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.QueryTableExtensionList? QueryTableExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.QueryTableExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.QueryTableExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -2682,8 +2682,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("uniqueCount", a => a.UniqueCount);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SharedStringItem), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "si"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:uniqueCount"), true, double.NegativeInfinity, true, 2147483647, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:count"), true, double.NegativeInfinity, true, 2147483647, true));
@@ -2915,7 +2915,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("preserveHistory", a => a.PreserveHistory);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Header), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "header"), 1, 0)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:version"), true, 1, true, 2147483647, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:preserveHistory"), true, 0, true, 32768, true));
@@ -3031,18 +3031,18 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionSheetName>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionRowColumn), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionMove), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionCustomView), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionSheetName), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionInsertSheet), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionCellChange), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionFormat), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionAutoFormat), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionDefinedName), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionComment), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionQueryTable), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionConflict), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rrc"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rm"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rcv"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rsnm"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ris"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rcc"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rfmt"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "raf"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rdn"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rcmt"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rqt"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rcft"), 0, 0)
             };
         }
 
@@ -3144,7 +3144,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.UserInfo), 0, 256)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "userInfo"), 0, 256)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:count"), true, double.NegativeInfinity, true, 256, true) { Application = ApplicationType.Excel });
         }
@@ -3309,44 +3309,44 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorksheetExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetDimension), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetViews), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Columns), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetData), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetCalculationProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetProtection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ProtectedRanges), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Scenarios), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.AutoFilter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SortState), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataConsolidate), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MergeCells), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatting), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataValidations), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Hyperlinks), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PrintOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageMargins), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageSetup), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.HeaderFooter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowBreaks), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellWatches), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.IgnoredErrors), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Drawing), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Picture), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleObjects), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Controls), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WebPublishItems), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableParts), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorksheetExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dimension"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetViews"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetFormatPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cols"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetData"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetCalcPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetProtection"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "protectedRanges"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "scenarios"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "autoFilter"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sortState"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dataConsolidate"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "customSheetViews"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "mergeCells"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "phoneticPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "conditionalFormatting"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dataValidations"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "hyperlinks"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "printOptions"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageMargins"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageSetup"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "headerFooter"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowBreaks"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colBreaks"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "customProperties"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cellWatches"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ignoredErrors"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "drawing"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "legacyDrawing"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "legacyDrawingHF"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "drawingHF"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "picture"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "oleObjects"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "controls"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "webPublishItems"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tableParts"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -3359,8 +3359,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetProperties? SheetProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetPr"));
         }
 
         /// <summary>
@@ -3372,8 +3372,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetDimension? SheetDimension
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetDimension>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetDimension>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dimension"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dimension"));
         }
 
         /// <summary>
@@ -3385,8 +3385,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetViews? SheetViews
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetViews>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetViews>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetViews"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetViews"));
         }
 
         /// <summary>
@@ -3398,8 +3398,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties? SheetFormatProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetFormatPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetFormatPr"));
         }
 
         /// <inheritdoc/>
@@ -3514,20 +3514,20 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WebPublishItems>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ChartSheetProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ChartSheetViews), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ChartSheetProtection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomChartsheetViews), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageMargins), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.HeaderFooter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Drawing), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Picture), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WebPublishItems), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetViews"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetProtection"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "customSheetViews"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageMargins"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageSetup"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "headerFooter"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "drawing"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "legacyDrawing"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "legacyDrawingHF"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "drawingHF"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "picture"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "webPublishItems"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -3540,8 +3540,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ChartSheetProperties? ChartSheetProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartSheetProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartSheetProperties>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetPr"));
         }
 
         /// <summary>
@@ -3553,8 +3553,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ChartSheetViews? ChartSheetViews
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartSheetViews>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartSheetViews>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetViews"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetViews"));
         }
 
         /// <summary>
@@ -3566,8 +3566,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ChartSheetProtection? ChartSheetProtection
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartSheetProtection>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartSheetProtection>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetProtection"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetProtection"));
         }
 
         /// <summary>
@@ -3579,8 +3579,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CustomChartsheetViews? CustomChartsheetViews
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CustomChartsheetViews>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CustomChartsheetViews>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "customSheetViews"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "customSheetViews"));
         }
 
         /// <summary>
@@ -3592,8 +3592,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PageMargins? PageMargins
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageMargins>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageMargins>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageMargins"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageMargins"));
         }
 
         /// <summary>
@@ -3605,8 +3605,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup? ChartSheetPageSetup
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageSetup"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageSetup"));
         }
 
         /// <summary>
@@ -3618,8 +3618,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.HeaderFooter? HeaderFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "headerFooter"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "headerFooter"));
         }
 
         /// <summary>
@@ -3631,8 +3631,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Drawing? Drawing
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Drawing>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Drawing>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "drawing"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "drawing"));
         }
 
         /// <summary>
@@ -3644,8 +3644,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing? LegacyDrawing
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "legacyDrawing"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "legacyDrawing"));
         }
 
         /// <summary>
@@ -3657,8 +3657,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter? LegacyDrawingHeaderFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "legacyDrawingHF"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "legacyDrawingHF"));
         }
 
         /// <summary>
@@ -3670,8 +3670,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter? DrawingHeaderFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "drawingHF"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "drawingHF"));
         }
 
         /// <summary>
@@ -3683,8 +3683,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Picture? Picture
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Picture>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Picture>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "picture"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "picture"));
         }
 
         /// <summary>
@@ -3696,8 +3696,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.WebPublishItems? WebPublishItems
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.WebPublishItems>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.WebPublishItems>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "webPublishItems"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "webPublishItems"));
         }
 
         /// <summary>
@@ -3709,8 +3709,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -3829,22 +3829,22 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetViews>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetViews), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetProtection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PrintOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageMargins), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageSetup), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.HeaderFooter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Drawing), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleObjects), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Controls), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetViews"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetFormatPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetProtection"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "customSheetViews"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "printOptions"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageMargins"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageSetup"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "headerFooter"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "drawing"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "legacyDrawing"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "legacyDrawingHF"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "drawingHF"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "oleObjects"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "controls"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -3857,8 +3857,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetProperties? SheetProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetPr"));
         }
 
         /// <summary>
@@ -3870,8 +3870,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetViews? SheetViews
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetViews>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetViews>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetViews"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetViews"));
         }
 
         /// <summary>
@@ -3883,8 +3883,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties? SheetFormatProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetFormatPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetFormatPr"));
         }
 
         /// <summary>
@@ -3896,8 +3896,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetProtection? SheetProtection
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetProtection>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetProtection>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetProtection"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetProtection"));
         }
 
         /// <summary>
@@ -3909,8 +3909,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews? CustomSheetViews
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "customSheetViews"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "customSheetViews"));
         }
 
         /// <summary>
@@ -3922,8 +3922,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PrintOptions? PrintOptions
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PrintOptions>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PrintOptions>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "printOptions"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "printOptions"));
         }
 
         /// <summary>
@@ -3935,8 +3935,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PageMargins? PageMargins
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageMargins>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageMargins>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageMargins"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageMargins"));
         }
 
         /// <summary>
@@ -3948,8 +3948,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PageSetup? PageSetup
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageSetup>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageSetup>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageSetup"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageSetup"));
         }
 
         /// <summary>
@@ -3961,8 +3961,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.HeaderFooter? HeaderFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "headerFooter"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "headerFooter"));
         }
 
         /// <summary>
@@ -3974,8 +3974,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Drawing? Drawing
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Drawing>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Drawing>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "drawing"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "drawing"));
         }
 
         /// <summary>
@@ -3987,8 +3987,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing? LegacyDrawing
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "legacyDrawing"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "legacyDrawing"));
         }
 
         /// <summary>
@@ -4000,8 +4000,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter? LegacyDrawingHeaderFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "legacyDrawingHF"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "legacyDrawingHF"));
         }
 
         /// <summary>
@@ -4013,8 +4013,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter? DrawingHeaderFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "drawingHF"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "drawingHF"));
         }
 
         /// <summary>
@@ -4026,8 +4026,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.OleObjects? OleObjects
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OleObjects>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OleObjects>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "oleObjects"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "oleObjects"));
         }
 
         /// <summary>
@@ -4039,8 +4039,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Controls? Controls
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Controls>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Controls>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "controls"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "controls"));
         }
 
         /// <summary>
@@ -4052,8 +4052,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -4154,13 +4154,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MetadataTypes>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataTypes), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MdxMetadata), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FutureMetadata), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellMetadata), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ValueMetadata), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "metadataTypes"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "metadataStrings"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "mdxMetadata"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "futureMetadata"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cellMetadata"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "valueMetadata"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -4173,8 +4173,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.MetadataTypes? MetadataTypes
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MetadataTypes>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MetadataTypes>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "metadataTypes"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "metadataTypes"));
         }
 
         /// <summary>
@@ -4186,8 +4186,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.MetadataStrings? MetadataStrings
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MetadataStrings>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MetadataStrings>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "metadataStrings"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "metadataStrings"));
         }
 
         /// <summary>
@@ -4199,8 +4199,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.MdxMetadata? MdxMetadata
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MdxMetadata>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MdxMetadata>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "mdxMetadata"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "mdxMetadata"));
         }
 
         /// <inheritdoc/>
@@ -4289,7 +4289,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SingleXmlCell>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SingleXmlCell), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "singleXmlCell"), 1, 0)
             };
         }
 
@@ -4399,17 +4399,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableStyles>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberingFormats), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Fonts), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Fills), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Borders), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellStyleFormats), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormats), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellStyles), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormats), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableStyles), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Colors), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.StylesheetExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "numFmts"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fonts"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fills"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "borders"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cellStyleXfs"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cellXfs"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cellStyles"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dxfs"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tableStyles"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colors"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -4422,8 +4422,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.NumberingFormats? NumberingFormats
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NumberingFormats>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NumberingFormats>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "numFmts"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "numFmts"));
         }
 
         /// <summary>
@@ -4435,8 +4435,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Fonts? Fonts
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Fonts>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Fonts>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fonts"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fonts"));
         }
 
         /// <summary>
@@ -4448,8 +4448,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Fills? Fills
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Fills>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Fills>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fills"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fills"));
         }
 
         /// <summary>
@@ -4461,8 +4461,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Borders? Borders
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Borders>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Borders>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "borders"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "borders"));
         }
 
         /// <summary>
@@ -4474,8 +4474,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CellStyleFormats? CellStyleFormats
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CellStyleFormats>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CellStyleFormats>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cellStyleXfs"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cellStyleXfs"));
         }
 
         /// <summary>
@@ -4487,8 +4487,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CellFormats? CellFormats
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CellFormats>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CellFormats>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cellXfs"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cellXfs"));
         }
 
         /// <summary>
@@ -4500,8 +4500,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CellStyles? CellStyles
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CellStyles>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CellStyles>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cellStyles"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cellStyles"));
         }
 
         /// <summary>
@@ -4513,8 +4513,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DifferentialFormats? DifferentialFormats
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DifferentialFormats>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DifferentialFormats>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dxfs"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dxfs"));
         }
 
         /// <summary>
@@ -4526,8 +4526,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.TableStyles? TableStyles
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TableStyles>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TableStyles>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tableStyles"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tableStyles"));
         }
 
         /// <summary>
@@ -4539,8 +4539,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Colors? Colors
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Colors>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Colors>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colors"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colors"));
         }
 
         /// <summary>
@@ -4552,8 +4552,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.StylesheetExtensionList? StylesheetExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.StylesheetExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.StylesheetExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -4650,11 +4650,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalBook), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DdeLink), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleLink), 1, 1)
+                    new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "externalBook"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ddeLink"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "oleLink"), 1, 1)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -5004,11 +5004,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("connectionId", a => a.ConnectionId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.AutoFilter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SortState), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableColumns), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableStyleInfo), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "autoFilter"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sortState"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tableColumns"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tableStyleInfo"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new IndexReferenceConstraint(builder.CreateQName("x:dataDxfId"), "/WorkbookPart/WorkbookStylesPart", null, builder.CreateQName("x:dxf"), "x:dxf", 0));
             builder.AddConstraint(new IndexReferenceConstraint(builder.CreateQName("x:headerRowBorderDxfId"), "/WorkbookPart/WorkbookStylesPart", null, builder.CreateQName("x:dxf"), "x:dxf", 0));
@@ -5036,8 +5036,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.AutoFilter? AutoFilter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.AutoFilter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.AutoFilter>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "autoFilter"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "autoFilter"));
         }
 
         /// <summary>
@@ -5049,8 +5049,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SortState? SortState
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SortState>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SortState>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sortState"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sortState"));
         }
 
         /// <summary>
@@ -5062,8 +5062,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.TableColumns? TableColumns
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TableColumns>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TableColumns>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tableColumns"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tableColumns"));
         }
 
         /// <summary>
@@ -5075,8 +5075,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.TableStyleInfo? TableStyleInfo
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TableStyleInfo>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TableStyleInfo>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tableStyleInfo"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tableStyleInfo"));
         }
 
         /// <summary>
@@ -5088,8 +5088,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.TableExtensionList? TableExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TableExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TableExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -5180,8 +5180,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.VolatileType>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.VolatileType), 1, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "volType"), 1, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -5317,24 +5317,24 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("conformance", a => a.Conformance);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FileVersion), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FileSharing), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorkbookProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorkbookProtection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.BookViews), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Sheets), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FunctionGroups), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalReferences), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DefinedNames), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculationProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleSize), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookViews), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCaches), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WebPublishing), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FileRecoveryProperties), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WebPublishObjects), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorkbookExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fileVersion"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fileSharing"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "workbookPr"), 0, 1),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/ac", "absPath"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "workbookProtection"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "bookViews"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheets"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "functionGroups"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "externalReferences"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "definedNames"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "calcPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "oleSize"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "customWorkbookViews"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotCaches"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "webPublishing"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fileRecoveryPr"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "webPublishObjects"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -5347,8 +5347,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.FileVersion? FileVersion
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FileVersion>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FileVersion>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fileVersion"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fileVersion"));
         }
 
         /// <summary>
@@ -5360,8 +5360,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.FileSharing? FileSharing
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FileSharing>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FileSharing>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fileSharing"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fileSharing"));
         }
 
         /// <summary>
@@ -5373,8 +5373,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.WorkbookProperties? WorkbookProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.WorkbookProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.WorkbookProperties>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "workbookPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "workbookPr"));
         }
 
         /// <summary>
@@ -5386,8 +5386,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath? AbsolutePath
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath>(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/ac", "absPath"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/ac", "absPath"));
         }
 
         /// <summary>
@@ -5399,8 +5399,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.WorkbookProtection? WorkbookProtection
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.WorkbookProtection>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.WorkbookProtection>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "workbookProtection"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "workbookProtection"));
         }
 
         /// <summary>
@@ -5412,8 +5412,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.BookViews? BookViews
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.BookViews>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.BookViews>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "bookViews"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "bookViews"));
         }
 
         /// <summary>
@@ -5425,8 +5425,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Sheets? Sheets
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Sheets>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Sheets>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheets"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheets"));
         }
 
         /// <summary>
@@ -5438,8 +5438,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.FunctionGroups? FunctionGroups
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FunctionGroups>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FunctionGroups>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "functionGroups"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "functionGroups"));
         }
 
         /// <summary>
@@ -5451,8 +5451,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExternalReferences? ExternalReferences
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExternalReferences>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExternalReferences>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "externalReferences"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "externalReferences"));
         }
 
         /// <summary>
@@ -5464,8 +5464,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DefinedNames? DefinedNames
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DefinedNames>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DefinedNames>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "definedNames"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "definedNames"));
         }
 
         /// <summary>
@@ -5477,8 +5477,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CalculationProperties? CalculationProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CalculationProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CalculationProperties>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "calcPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "calcPr"));
         }
 
         /// <summary>
@@ -5490,8 +5490,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.OleSize? OleSize
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OleSize>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OleSize>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "oleSize"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "oleSize"));
         }
 
         /// <summary>
@@ -5503,8 +5503,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookViews? CustomWorkbookViews
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookViews>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookViews>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "customWorkbookViews"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "customWorkbookViews"));
         }
 
         /// <summary>
@@ -5516,8 +5516,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotCaches? PivotCaches
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotCaches>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotCaches>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotCaches"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotCaches"));
         }
 
         /// <summary>
@@ -5529,8 +5529,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.WebPublishing? WebPublishing
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.WebPublishing>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.WebPublishing>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "webPublishing"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "webPublishing"));
         }
 
         /// <inheritdoc/>
@@ -5672,15 +5672,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("showButton", a => a.ShowButton);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Filters), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Top10), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.CustomFilters), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomFilters), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DynamicFilter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColorFilter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.IconFilter), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.IconFilter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "filters"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "top10"), 0, 1),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "customFilters"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "customFilters"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dynamicFilter"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colorFilter"), 0, 1),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "iconFilter"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "iconFilter"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -5693,8 +5693,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Filters? Filters
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Filters>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Filters>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "filters"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "filters"));
         }
 
         /// <summary>
@@ -5706,8 +5706,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Top10? Top10
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Top10>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Top10>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "top10"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "top10"));
         }
 
         /// <summary>
@@ -5719,8 +5719,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.CustomFilters? CustomFilters14
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.CustomFilters>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.CustomFilters>(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "customFilters"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "customFilters"));
         }
 
         /// <summary>
@@ -5732,8 +5732,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CustomFilters? CustomFilters
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CustomFilters>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CustomFilters>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "customFilters"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "customFilters"));
         }
 
         /// <summary>
@@ -5745,8 +5745,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DynamicFilter? DynamicFilter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DynamicFilter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DynamicFilter>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dynamicFilter"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dynamicFilter"));
         }
 
         /// <summary>
@@ -5758,8 +5758,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ColorFilter? ColorFilter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColorFilter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColorFilter>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colorFilter"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colorFilter"));
         }
 
         /// <summary>
@@ -5771,8 +5771,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.IconFilter? IconFilter14
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.IconFilter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.IconFilter>(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "iconFilter"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "iconFilter"));
         }
 
         /// <summary>
@@ -5784,8 +5784,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.IconFilter? IconFilter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.IconFilter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.IconFilter>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "iconFilter"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "iconFilter"));
         }
 
         /// <summary>
@@ -5797,8 +5797,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -5910,10 +5910,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SortCondition), 0, 64, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SortCondition), 0, 64)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "sortCondition"), 0, 64, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sortCondition"), 0, 64)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -5976,7 +5976,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
                     }
                 }
             };
@@ -6187,7 +6187,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Author>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Author), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "author"), 0, 0)
             };
         }
 
@@ -6246,7 +6246,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Comment>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Comment), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "comment"), 0, 0)
             };
         }
 
@@ -6364,8 +6364,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CommentText), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CommentProperties), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "text"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "commentPr"), 0, 1, version: FileFormatVersions.Office2010)
             };
             builder.AddConstraint(new IndexReferenceConstraint(builder.CreateQName("x:authorId"), ".", null, builder.CreateQName("x:author"), "x:author", 0));
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName("x:guid"), false, null));
@@ -6380,8 +6380,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CommentText? CommentText
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CommentText>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CommentText>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "text"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "text"));
         }
 
         /// <summary>
@@ -6393,8 +6393,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CommentProperties? CommentProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CommentProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CommentProperties>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "commentPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "commentPr"));
         }
 
         /// <inheritdoc/>
@@ -7279,7 +7279,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataBinding), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "DataBinding"), 0, 1)
             };
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName("x:SchemaID"), true, null));
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:Name"), 0, 65535));
@@ -7296,8 +7296,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DataBinding? DataBinding
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DataBinding>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DataBinding>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "DataBinding"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "DataBinding"));
         }
 
         /// <inheritdoc/>
@@ -7712,12 +7712,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("singleSignOnId", a => a.SingleSignOnId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DatabaseProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OlapProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WebQueryProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TextProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Parameters), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConnectionExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dbPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "olapPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "webPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "textPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "parameters"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName("x:name"), true, null));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:type"), true, 1, true, 8, true));
@@ -7739,8 +7739,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DatabaseProperties? DatabaseProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DatabaseProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DatabaseProperties>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dbPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dbPr"));
         }
 
         /// <summary>
@@ -7752,8 +7752,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.OlapProperties? OlapProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OlapProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OlapProperties>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "olapPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "olapPr"));
         }
 
         /// <summary>
@@ -7765,8 +7765,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.WebQueryProperties? WebQueryProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.WebQueryProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.WebQueryProperties>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "webPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "webPr"));
         }
 
         /// <summary>
@@ -7778,8 +7778,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.TextProperties? TextProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TextProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TextProperties>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "textPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "textPr"));
         }
 
         /// <summary>
@@ -7791,8 +7791,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Parameters? Parameters
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Parameters>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Parameters>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "parameters"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "parameters"));
         }
 
         /// <summary>
@@ -7804,8 +7804,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ConnectionExtensionList? ConnectionExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ConnectionExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ConnectionExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -7879,9 +7879,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MissingTable), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FieldItem), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "m"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "s"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "x"), 1, 1)
             };
         }
 
@@ -8387,10 +8387,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("memberPropertyField", a => a.MemberPropertyField);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SharedItems), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FieldGroup), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertiesMap), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheFieldExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sharedItems"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fieldGroup"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "mpMap"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName("x:name"), true, null));
         }
@@ -8404,8 +8404,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SharedItems? SharedItems
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SharedItems>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SharedItems>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sharedItems"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sharedItems"));
         }
 
         /// <summary>
@@ -8417,8 +8417,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.FieldGroup? FieldGroup
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FieldGroup>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FieldGroup>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fieldGroup"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fieldGroup"));
         }
 
         /// <inheritdoc/>
@@ -8488,7 +8488,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Page), 1, 4)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "page"), 1, 4)
             };
         }
 
@@ -8559,7 +8559,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RangeSet), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rangeSet"), 1, 0)
             };
         }
 
@@ -8630,7 +8630,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageItem), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageItem"), 0, 0)
             };
         }
 
@@ -8976,8 +8976,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("b", a => a.Bold);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tpls"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "x"), 0, 0)
             };
             builder.AddConstraint(new IndexReferenceConstraint(builder.CreateQName("x:in"), ".", null, builder.CreateQName("x:serverFormat"), "x:serverFormat", 0));
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:c"), 0, 65535) { Application = ApplicationType.Excel });
@@ -9182,8 +9182,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("b", a => a.Bold);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tpls"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "x"), 0, 0)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:x"), true, 0, true, double.PositiveInfinity, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:x"), true, double.NegativeInfinity, true, 2147483647, true));
@@ -9306,7 +9306,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("cp", a => a.PropertyCount);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "x"), 0, 0)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:c"), 0, 65535) { Application = ApplicationType.Excel });
         }
@@ -9510,8 +9510,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("b", a => a.Bold);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tpls"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "x"), 0, 0)
             };
             builder.AddConstraint(new IndexReferenceConstraint(builder.CreateQName("x:in"), ".", null, builder.CreateQName("x:serverFormat"), "x:serverFormat", 0));
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:c"), 0, 65535) { Application = ApplicationType.Excel });
@@ -9526,8 +9526,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Tuples? Tuples
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Tuples>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Tuples>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tpls"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tpls"));
         }
 
         /// <inheritdoc/>
@@ -9729,8 +9729,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("b", a => a.Bold);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tpls"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "x"), 0, 0)
             };
             builder.AddConstraint(new IndexReferenceConstraint(builder.CreateQName("x:in"), ".", null, builder.CreateQName("x:serverFormat"), "x:serverFormat", 0));
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:c"), 0, 65535) { Application = ApplicationType.Excel });
@@ -9850,7 +9850,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("cp", a => a.PropertyCount);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "x"), 0, 0)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:c"), 0, 65535) { Application = ApplicationType.Excel });
         }
@@ -9909,7 +9909,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.SetSchema("x:tpls");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuple), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tpl"), 1, 0)
             };
         }
 
@@ -9967,7 +9967,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.SetSchema("x:sortByTuple");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuple), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tpl"), 1, 0)
             };
         }
 
@@ -10182,13 +10182,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.StringItem>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MissingItem), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberItem), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.BooleanItem), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ErrorItem), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.StringItem), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DateTimeItem), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FieldItem), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "m"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "n"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "b"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "e"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "s"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "d"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "x"), 1, 1)
             };
         }
 
@@ -10495,8 +10495,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("customRollUp", a => a.CustomRollUp);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Groups), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "groups"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName("x:uniqueName"), true, null));
         }
@@ -10510,8 +10510,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Groups? Groups
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Groups>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Groups>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "groups"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "groups"));
         }
 
         /// <summary>
@@ -10523,8 +10523,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -10594,7 +10594,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Group), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "group"), 1, 0)
             };
         }
 
@@ -10718,7 +10718,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GroupMembers), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "groupMembers"), 1, 1)
             };
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName("x:id"), true, builder.CreateQName("x:groups")));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:id"), true, 1, true, double.PositiveInfinity, true));
@@ -10735,8 +10735,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.GroupMembers? GroupMembers
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.GroupMembers>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.GroupMembers>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "groupMembers"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "groupMembers"));
         }
 
         /// <inheritdoc/>
@@ -10806,7 +10806,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GroupMember), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "groupMember"), 1, 0)
             };
         }
 
@@ -10935,10 +10935,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MissingItem), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberItem), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ErrorItem), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.StringItem), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "m"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "n"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "e"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "s"), 1, 1)
             };
         }
 
@@ -11009,7 +11009,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TupleSet), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "set"), 1, 0)
             };
         }
 
@@ -11080,7 +11080,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Query), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "query"), 1, 0)
             };
         }
 
@@ -11151,7 +11151,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ServerFormat), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "serverFormat"), 0, 0)
             };
         }
 
@@ -11388,8 +11388,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("queryFailed", a => a.QueryFailed);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SortByTuple), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tpls"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sortByTuple"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:setDefinition"), 0, 65535) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:maxRank"), true, 0, true, 1048576, true) { Application = ApplicationType.Excel });
@@ -11465,7 +11465,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tuples), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tpls"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:mdx"), 0, 65535));
         }
@@ -11479,8 +11479,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Tuples? Tuples
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Tuples>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Tuples>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tpls"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tpls"));
         }
 
         /// <inheritdoc/>
@@ -11563,8 +11563,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("formula", a => a.Formula);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotArea"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -11577,8 +11577,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotArea? PivotArea
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotArea>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotArea"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotArea"));
         }
 
         /// <summary>
@@ -11590,8 +11590,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -11784,8 +11784,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("fieldPosition", a => a.FieldPosition);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "references"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:fieldPosition"), true, 0, true, 255, true));
         }
@@ -11799,8 +11799,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences? PivotAreaReferences
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "references"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "references"));
         }
 
         /// <summary>
@@ -11812,8 +11812,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -11955,7 +11955,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("set", a => a.Set);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:name"), 1, 63999));
             builder.AddConstraint(new AttributeAbsentConditionToValue(builder.CreateQName("x:hierarchy"), builder.CreateQName("x:set"), "1"));
@@ -11977,8 +11977,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtensionList? CalculatedMemberExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -12569,9 +12569,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("defaultAttributeDrillState", a => a.DefaultAttributeDrillState);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Items), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.AutoSortScope), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "items"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "autoSortScope"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("x:axis"), false, new string[] { "axisValues" }));
         }
@@ -12585,8 +12585,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Items? Items
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Items>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Items>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "items"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "items"));
         }
 
         /// <summary>
@@ -12598,8 +12598,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.AutoSortScope? AutoSortScope
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.AutoSortScope>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.AutoSortScope>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "autoSortScope"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "autoSortScope"));
         }
 
         /// <summary>
@@ -12611,8 +12611,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtensionList? PivotFieldExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -12900,7 +12900,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("numFmtId", a => a.NumberFormatId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataFieldExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new IndexReferenceConstraint(builder.CreateQName("x:fld"), ".", null, builder.CreateQName("x:pivotField"), "x:pivotField", 0));
         }
@@ -12914,8 +12914,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DataFieldExtensionList? DataFieldExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DataFieldExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DataFieldExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -13007,7 +13007,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("i", a => a.Index);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "x"), 0, 0)
             };
             builder.AddConstraint(new IndexReferenceConstraint(builder.CreateQName("x:i"), ".", null, builder.CreateQName("x:dataField"), "x:dataField", 0));
         }
@@ -13132,8 +13132,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("dxfId", a => a.FormatId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotArea"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new IndexReferenceConstraint(builder.CreateQName("x:dxfId"), "/WorkbookPart/WorkbookStylesPart", null, builder.CreateQName("x:dxf"), "x:dxf", 0));
         }
@@ -13147,8 +13147,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotArea? PivotArea
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotArea>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotArea"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotArea"));
         }
 
         /// <summary>
@@ -13160,8 +13160,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -13258,8 +13258,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotAreas), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotAreas"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueConditionToAnother(builder.CreateQName("x:type"), builder.CreateQName("x:scope"), new string[] { "none", "all" }, new string[] { "data", "selection" }));
         }
@@ -13273,8 +13273,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotAreas? PivotAreas
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotAreas>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotAreas>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotAreas"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotAreas"));
         }
 
         /// <summary>
@@ -13286,8 +13286,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -13357,7 +13357,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotArea"), 0, 0)
             };
         }
 
@@ -13456,7 +13456,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("series", a => a.Series);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotArea"), 1, 1)
             };
         }
 
@@ -13469,8 +13469,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotArea? PivotArea
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotArea>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotArea"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotArea"));
         }
 
         /// <inheritdoc/>
@@ -13654,9 +13654,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("caption", a => a.Caption);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Members), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotHierarchyExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "mps"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "members"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:caption"), 0, 65535));
         }
@@ -13670,8 +13670,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.MemberProperties? MemberProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MemberProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MemberProperties>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "mps"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "mps"));
         }
 
         /// <inheritdoc/>
@@ -14302,8 +14302,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("stringValue2", a => a.StringValue2);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.AutoFilter), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "autoFilter"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new IndexReferenceConstraint(builder.CreateQName("x:fld"), ".", null, builder.CreateQName("x:pivotField"), "x:pivotField", 0));
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName("x:id"), false, null));
@@ -14320,8 +14320,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.AutoFilter? AutoFilter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.AutoFilter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.AutoFilter>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "autoFilter"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "autoFilter"));
         }
 
         /// <summary>
@@ -14333,8 +14333,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtensionList? PivotFilterExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -14645,9 +14645,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("hidden", a => a.Hidden);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FieldsUsage), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GroupLevels), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fieldsUsage"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "groupLevels"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName("x:allUniqueName"), true, null));
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName("x:defaultMemberUniqueName"), true, null));
@@ -14666,8 +14666,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.FieldsUsage? FieldsUsage
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FieldsUsage>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FieldsUsage>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fieldsUsage"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fieldsUsage"));
         }
 
         /// <summary>
@@ -14679,8 +14679,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.GroupLevels? GroupLevels
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.GroupLevels>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.GroupLevels>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "groupLevels"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "groupLevels"));
         }
 
         /// <summary>
@@ -14692,8 +14692,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtensionList? CacheHierarchyExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -14877,7 +14877,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FieldItem), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "x"), 1, 0)
             };
         }
 
@@ -14958,12 +14958,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MissingItem), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberItem), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.BooleanItem), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ErrorItem), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.StringItem), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DateTimeItem), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "m"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "n"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "b"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "e"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "s"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "d"), 1, 1)
             };
         }
 
@@ -15081,7 +15081,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("cap", a => a.Caption);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new IndexReferenceConstraint(builder.CreateQName("x:fld"), "PivotTableCacheDefinitionPart", null, builder.CreateQName("x:cacheField"), "x:cacheField", 0));
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName("x:name"), true, null));
@@ -15096,8 +15096,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -15167,7 +15167,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotAreaReference), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "reference"), 1, 0)
             };
         }
 
@@ -15416,8 +15416,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("varPSubtotal", a => a.ApplyVariancePInSubtotal);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FieldItem), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "x"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -15488,7 +15488,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryTableField), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "queryTableField"), 0, 0)
             };
         }
 
@@ -15559,7 +15559,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DeletedField), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "deletedField"), 1, 0)
             };
         }
 
@@ -15739,7 +15739,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("tableColumnId", a => a.TableColumnId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName("x:id"), true, null));
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName("x:name"), true, null));
@@ -15758,8 +15758,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -15819,10 +15819,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.SetSchema("x:si");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Text), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Run), 0, 32767),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PhoneticRun), 0, 32767),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "t"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "r"), 0, 32767),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rPh"), 0, 32767),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "phoneticPr"), 0, 1)
             };
         }
 
@@ -15883,10 +15883,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.SetSchema("x:is");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Text), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Run), 0, 32767),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PhoneticRun), 0, 32767),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "t"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "r"), 0, 32767),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rPh"), 0, 32767),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "phoneticPr"), 0, 1)
             };
         }
 
@@ -15947,10 +15947,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.SetSchema("x:text");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Text), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Run), 0, 32767),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PhoneticRun), 0, 32767),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "t"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "r"), 0, 32767),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rPh"), 0, 32767),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "phoneticPr"), 0, 1)
             };
         }
 
@@ -16023,8 +16023,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Text? Text
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Text>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Text>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "t"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "t"));
         }
     }
 
@@ -16770,21 +16770,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Bold), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Italic), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Strike), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Condense), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Extend), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Outline), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Shadow), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Underline), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FontSize), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RunFont), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FontFamily), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RunPropertyCharSet), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FontScheme), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "b"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "i"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "strike"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "condense"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extend"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "outline"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "shadow"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "u"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "vertAlign"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sz"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "color"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rFont"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "family"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "charset"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "scheme"), 0, 1)
             };
         }
 
@@ -16845,8 +16845,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Text>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RunProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Text), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "t"), 1, 1)
             };
         }
 
@@ -16859,8 +16859,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.RunProperties? RunProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RunProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RunProperties>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rPr"));
         }
 
         /// <summary>
@@ -16872,8 +16872,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Text? Text
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Text>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Text>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "t"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "t"));
         }
 
         /// <inheritdoc/>
@@ -16960,7 +16960,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Text), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "t"), 1, 1)
             };
             builder.AddConstraint(new AttributeValueLessEqualToAnother(builder.CreateQName("x:sb"), builder.CreateQName("x:eb"), false));
         }
@@ -16974,8 +16974,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Text? Text
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Text>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Text>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "t"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "t"));
         }
 
         /// <inheritdoc/>
@@ -17196,9 +17196,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("maxRId", a => a.MaxRevisionId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetIdMap), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ReviewedList), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetIdMap"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "reviewedList"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:maxSheetId"), true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:userName"), 1, 54) { Application = ApplicationType.Excel });
@@ -17214,8 +17214,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetIdMap? SheetIdMap
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetIdMap>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetIdMap>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetIdMap"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetIdMap"));
         }
 
         /// <summary>
@@ -17227,8 +17227,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ReviewedList? ReviewedList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ReviewedList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ReviewedList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "reviewedList"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "reviewedList"));
         }
 
         /// <summary>
@@ -17240,8 +17240,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -17404,9 +17404,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("edge", a => a.Edge);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Undo), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionCellChange), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionFormat), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "undo"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rcc"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rfmt"), 0, 0)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:sId"), 0, 32767));
         }
@@ -17560,9 +17560,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("sourceSheetId", a => a.SourceSheetId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Undo), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionCellChange), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RevisionFormat), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "undo"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rcc"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rfmt"), 0, 0)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:sheetId"), true, double.NegativeInfinity, true, 32767, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:sourceSheetId"), true, double.NegativeInfinity, true, 32767, true));
@@ -17756,7 +17756,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:sheetId"), 0, 32767));
         }
@@ -17770,8 +17770,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -18103,11 +18103,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("endOfListFormulaUpdate", a => a.EndOfListFormulaUpdate);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OldCell), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NewCell), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OldDifferentialFormat), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NewDifferentialFormat), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "oc"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "nc"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "odxf"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ndxf"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:sId"), true, double.NegativeInfinity, true, 32767, true) { Application = ApplicationType.Excel });
         }
@@ -18121,8 +18121,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.OldCell? OldCell
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OldCell>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OldCell>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "oc"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "oc"));
         }
 
         /// <summary>
@@ -18134,8 +18134,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.NewCell? NewCell
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NewCell>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NewCell>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "nc"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "nc"));
         }
 
         /// <summary>
@@ -18147,8 +18147,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.OldDifferentialFormat? OldDifferentialFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OldDifferentialFormat>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OldDifferentialFormat>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "odxf"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "odxf"));
         }
 
         /// <summary>
@@ -18160,8 +18160,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.NewDifferentialFormat? NewDifferentialFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NewDifferentialFormat>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NewDifferentialFormat>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ndxf"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ndxf"));
         }
 
         /// <summary>
@@ -18173,8 +18173,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -18307,8 +18307,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("length", a => a.Length);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dxf"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:sheetId"), true, 0, true, 32767, true));
         }
@@ -18322,8 +18322,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat? DifferentialFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dxf"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dxf"));
         }
 
         /// <summary>
@@ -18335,8 +18335,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -18801,9 +18801,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("oldComment", a => a.OldComment);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OldFormula), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formula"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "oldFormula"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:functionGroupId"), true, 1, true, 14, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:localSheetId"), true, double.NegativeInfinity, true, 32767, true));
@@ -18831,8 +18831,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Formula? Formula
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formula>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formula>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formula"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formula"));
         }
 
         /// <summary>
@@ -18844,8 +18844,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.OldFormula? OldFormula
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OldFormula>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OldFormula>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "oldFormula"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "oldFormula"));
         }
 
         /// <summary>
@@ -18857,8 +18857,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -19228,7 +19228,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetId), 1, 65535)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetId"), 1, 65535)
             };
         }
 
@@ -19299,7 +19299,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Reviewed), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "reviewed"), 1, 0)
             };
         }
 
@@ -19559,10 +19559,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.SetSchema("x:oc");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormula), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellValue), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.InlineString), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "f"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "v"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "is"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new IndexReferenceConstraint(builder.CreateQName("x:cm"), "/WorkbookPart/CellMetadataPart", null, builder.CreateQName("x:cellMetadata"), "x:cellMetadata", 0));
             builder.AddConstraint(new IndexReferenceConstraint(builder.CreateQName("x:s"), "/WorkbookPart/WorkbookStylesPart", null, builder.CreateQName("x:cellStyle"), "x:cellStyle", 0));
@@ -19626,10 +19626,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.SetSchema("x:c");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormula), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellValue), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.InlineString), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "f"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "v"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "is"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:cm"), true, double.NegativeInfinity, true, 2147483647, true));
             builder.AddConstraint(new IndexReferenceConstraint(builder.CreateQName("x:cm"), "/WorkbookPart/CellMetadataPart", builder.CreateQName("x:cellMetadata"), builder.CreateQName("x:bk"), "x:bk", 1));
@@ -19778,8 +19778,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CellFormula? CellFormula
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CellFormula>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CellFormula>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "f"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "f"));
         }
 
         /// <summary>
@@ -19791,8 +19791,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CellValue? CellValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CellValue>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CellValue>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "v"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "v"));
         }
 
         /// <summary>
@@ -19804,8 +19804,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.InlineString? InlineString
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.InlineString>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.InlineString>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "is"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "is"));
         }
 
         /// <summary>
@@ -19817,8 +19817,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
     }
 
@@ -19949,10 +19949,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("ph", a => a.ShowPhonetic);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormula), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellValue), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.InlineString), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "f"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "v"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "is"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("x:cm"), true, new string[] { "0" }) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("x:vm"), true, new string[] { "0" }) { Application = ApplicationType.Excel });
@@ -19968,8 +19968,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CellFormula? CellFormula
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CellFormula>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CellFormula>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "f"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "f"));
         }
 
         /// <summary>
@@ -19981,8 +19981,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CellValue? CellValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CellValue>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CellValue>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "v"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "v"));
         }
 
         /// <summary>
@@ -19994,8 +19994,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.InlineString? InlineString
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.InlineString>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.InlineString>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "is"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "is"));
         }
 
         /// <summary>
@@ -20007,8 +20007,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -20071,13 +20071,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.SetSchema("x:odxf");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Fill), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Alignment), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Border), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "font"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "numFmt"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fill"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "alignment"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "border"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "protection"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -20141,13 +20141,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.SetSchema("x:ndxf");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Fill), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Alignment), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Border), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "font"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "numFmt"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fill"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "alignment"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "border"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "protection"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -20211,13 +20211,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.SetSchema("x:dxf");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Fill), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Alignment), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Border), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "font"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "numFmt"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fill"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "alignment"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "border"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "protection"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -20296,8 +20296,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Font? Font
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Font>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Font>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "font"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "font"));
         }
 
         /// <summary>
@@ -20309,8 +20309,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.NumberingFormat? NumberingFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "numFmt"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "numFmt"));
         }
 
         /// <summary>
@@ -20322,8 +20322,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Fill? Fill
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Fill>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Fill>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fill"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fill"));
         }
 
         /// <summary>
@@ -20335,8 +20335,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Alignment? Alignment
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Alignment>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "alignment"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "alignment"));
         }
 
         /// <summary>
@@ -20348,8 +20348,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Border? Border
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Border>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Border>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "border"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "border"));
         }
 
         /// <summary>
@@ -20361,8 +20361,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Protection? Protection
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Protection>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Protection>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "protection"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "protection"));
         }
 
         /// <summary>
@@ -20374,8 +20374,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
     }
 
@@ -20714,7 +20714,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -20727,8 +20727,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -20938,8 +20938,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Cell), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "c"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:r"), true, 1, true, 1048576, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:outlineLevel"), true, 0, true, 7, true));
@@ -21610,7 +21610,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotArea"), 1, 1)
             };
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("x:axis"), false, new string[] { "axisValues" }));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:previousCol"), true, double.NegativeInfinity, true, 16383, true) { Application = ApplicationType.Excel });
@@ -21626,8 +21626,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotArea? PivotArea
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotArea>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotArea"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotArea"));
         }
 
         /// <inheritdoc/>
@@ -21839,7 +21839,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.SetSchema("x:rowBreaks");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Break), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "brk"), 0, 0)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:count"), true, double.NegativeInfinity, true, 1022, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:manualBreakCount"), true, double.NegativeInfinity, true, 1022, true));
@@ -21899,7 +21899,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.SetSchema("x:colBreaks");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Break), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "brk"), 0, 0)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:count"), true, double.NegativeInfinity, true, 1023, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:manualBreakCount"), true, double.NegativeInfinity, true, 1023, true));
@@ -22504,12 +22504,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("alignWithMargins", a => a.AlignWithMargins);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OddHeader), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OddFooter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.EvenHeader), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.EvenFooter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FirstHeader), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FirstFooter), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "oddHeader"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "oddFooter"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "evenHeader"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "evenFooter"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "firstHeader"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "firstFooter"), 0, 1)
             };
         }
 
@@ -22522,8 +22522,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.OddHeader? OddHeader
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OddHeader>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OddHeader>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "oddHeader"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "oddHeader"));
         }
 
         /// <summary>
@@ -22535,8 +22535,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.OddFooter? OddFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OddFooter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OddFooter>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "oddFooter"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "oddFooter"));
         }
 
         /// <summary>
@@ -22548,8 +22548,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.EvenHeader? EvenHeader
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.EvenHeader>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.EvenHeader>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "evenHeader"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "evenHeader"));
         }
 
         /// <summary>
@@ -22561,8 +22561,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.EvenFooter? EvenFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.EvenFooter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.EvenFooter>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "evenFooter"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "evenFooter"));
         }
 
         /// <summary>
@@ -22574,8 +22574,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.FirstHeader? FirstHeader
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FirstHeader>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FirstHeader>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "firstHeader"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "firstHeader"));
         }
 
         /// <summary>
@@ -22587,8 +22587,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.FirstFooter? FirstFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FirstFooter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FirstFooter>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "firstFooter"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "firstFooter"));
         }
 
         /// <inheritdoc/>
@@ -22662,9 +22662,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("ref", a => a.Reference);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FilterColumn), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SortState), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "filterColumn"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sortState"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -22881,11 +22881,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("equalAverage", a => a.EqualAverage);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula), 0, 3),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColorScale), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataBar), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.IconSet), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRuleExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formula"), 0, 3),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colorScale"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dataBar"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "iconSet"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeRequiredConditionToValue(builder.CreateQName("x:operator"), builder.CreateQName("x:type") , "cells"));
             builder.AddConstraint(new AttributeRequiredConditionToValue(builder.CreateQName("x:timePeriod"), builder.CreateQName("x:type") , "timePeriod"));
@@ -23074,7 +23074,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("gte", a => a.GreaterThanOrEqual);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -23087,8 +23087,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -23216,7 +23216,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("comment", a => a.Comment);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.InputCells), 1, 32)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "inputCells"), 1, 32)
             };
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName("x:name"), true, builder.CreateQName("x:worksheet")));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:count"), true, 1, true, 32, true) { Application = ApplicationType.Excel });
@@ -23878,7 +23878,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("zoomToFit", a => a.ZoomToFit);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:colorId"), true, double.NegativeInfinity, true, 64, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:zoomScale"), true, 10, true, 400, true));
@@ -23897,8 +23897,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -24009,9 +24009,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("zoomToFit", a => a.ZoomToFit);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageMargins), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.HeaderFooter), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageMargins"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageSetup"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "headerFooter"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:scale"), true, 10, true, 400, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:colorId"), true, double.NegativeInfinity, true, 64, true));
@@ -24027,8 +24027,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PageMargins? PageMargins
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageMargins>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageMargins>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageMargins"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageMargins"));
         }
 
         /// <summary>
@@ -24040,8 +24040,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup? ChartSheetPageSetup
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageSetup"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageSetup"));
         }
 
         /// <summary>
@@ -24053,8 +24053,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.HeaderFooter? HeaderFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "headerFooter"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "headerFooter"));
         }
 
         /// <inheritdoc/>
@@ -24242,7 +24242,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("name", a => a.Name);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ControlProperties), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "controlPr"), 0, 1, version: FileFormatVersions.Office2010)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:shapeId"), true, 1, true, 67098623, true));
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName("x:name"), true, null) { Application = ApplicationType.Excel });
@@ -24258,8 +24258,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ControlProperties? ControlProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ControlProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ControlProperties>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "controlPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "controlPr"));
         }
 
         /// <inheritdoc/>
@@ -24646,9 +24646,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.ExcelAc.List), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula1), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Formula2), 0, 1)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2011/1/ac", "list"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formula1"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formula2"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:sqref"), true, 1, true, 32767, true));
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:errorTitle"), 0, 32));
@@ -24664,8 +24664,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.ExcelAc.List? List
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.ExcelAc.List>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.ExcelAc.List>(new("http://schemas.microsoft.com/office/spreadsheetml/2011/1/ac", "list"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2011/1/ac", "list"));
         }
 
         /// <summary>
@@ -24677,8 +24677,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Formula1? Formula1
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formula1>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formula1>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formula1"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formula1"));
         }
 
         /// <summary>
@@ -24690,8 +24690,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Formula2? Formula2
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formula2>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formula2>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formula2"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formula2"));
         }
 
         /// <inheritdoc/>
@@ -24968,10 +24968,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Pane), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Selection), 0, 4),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotSelection), 0, 4),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pane"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "selection"), 0, 4),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotSelection"), 0, 4),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:colorId"), true, double.NegativeInfinity, true, 64, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:zoomScale"), true, 10, true, 400, true));
@@ -24990,8 +24990,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Pane? Pane
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Pane>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Pane>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pane"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pane"));
         }
 
         /// <inheritdoc/>
@@ -25292,16 +25292,16 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("topLeftCell", a => a.TopLeftCell);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Pane), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Selection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowBreaks), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageMargins), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PrintOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageSetup), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.HeaderFooter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.AutoFilter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pane"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "selection"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowBreaks"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colBreaks"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageMargins"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "printOptions"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageSetup"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "headerFooter"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "autoFilter"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:scale"), true, 10, true, 400, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:colorId"), true, double.NegativeInfinity, true, 64, true));
@@ -25317,8 +25317,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Pane? Pane
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Pane>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Pane>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pane"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pane"));
         }
 
         /// <summary>
@@ -25330,8 +25330,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Selection? Selection
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Selection>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Selection>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "selection"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "selection"));
         }
 
         /// <summary>
@@ -25343,8 +25343,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.RowBreaks? RowBreaks
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowBreaks>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowBreaks>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowBreaks"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowBreaks"));
         }
 
         /// <summary>
@@ -25356,8 +25356,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks? ColumnBreaks
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colBreaks"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colBreaks"));
         }
 
         /// <summary>
@@ -25369,8 +25369,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PageMargins? PageMargins
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageMargins>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageMargins>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageMargins"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageMargins"));
         }
 
         /// <summary>
@@ -25382,8 +25382,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PrintOptions? PrintOptions
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PrintOptions>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PrintOptions>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "printOptions"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "printOptions"));
         }
 
         /// <summary>
@@ -25395,8 +25395,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PageSetup? PageSetup
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageSetup>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageSetup>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageSetup"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageSetup"));
         }
 
         /// <summary>
@@ -25408,8 +25408,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.HeaderFooter? HeaderFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "headerFooter"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "headerFooter"));
         }
 
         /// <summary>
@@ -25421,8 +25421,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.AutoFilter? AutoFilter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.AutoFilter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.AutoFilter>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "autoFilter"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "autoFilter"));
         }
 
         /// <summary>
@@ -25434,8 +25434,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -25577,7 +25577,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("r:id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.EmbeddedObjectProperties), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "objectPr"), 0, 1, version: FileFormatVersions.Office2010)
             };
             builder.AddConstraint(new AttributeValuePatternConstraint(builder.CreateQName("x:progId"), @"[^\d].*"));
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:progId"), 0, 39));
@@ -25593,8 +25593,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.EmbeddedObjectProperties? EmbeddedObjectProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.EmbeddedObjectProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.EmbeddedObjectProperties>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "objectPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "objectPr"));
         }
 
         /// <inheritdoc/>
@@ -25664,7 +25664,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataType), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "metadataType"), 1, 0)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:count"), true, double.NegativeInfinity, true, 2147483647, true));
         }
@@ -25736,7 +25736,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CharacterValue), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "s"), 1, 0)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:count"), true, double.NegativeInfinity, true, 2147483647, true));
         }
@@ -25808,7 +25808,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Mdx), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "mdx"), 1, 0)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:count"), true, double.NegativeInfinity, true, 2147483647, true));
         }
@@ -25896,8 +25896,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FutureMetadataBlock), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "bk"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:count"), true, double.NegativeInfinity, true, 2147483647, true));
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName("x:name"), true, builder.CreateQName("x:metadata")));
@@ -25959,7 +25959,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.SetSchema("x:cellMetadata");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataBlock), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "bk"), 1, 0)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:count"), true, double.NegativeInfinity, true, 2147483647, true));
         }
@@ -26018,7 +26018,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.SetSchema("x:valueMetadata");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataBlock), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "bk"), 1, 0)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:count"), true, double.NegativeInfinity, true, 2147483647, true));
         }
@@ -26482,7 +26482,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MetadataRecord>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MetadataRecord), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rc"), 1, 0)
             };
         }
 
@@ -26596,7 +26596,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -26609,8 +26609,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -26703,10 +26703,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MdxTuple), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MdxSet), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MdxMemberProp), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MdxKpi), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "t"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ms"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "p"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "k"), 1, 1)
             };
             builder.AddConstraint(new IndexReferenceConstraint(builder.CreateQName("x:n"), "/WorkbookPart/CellMetadataPart", builder.CreateQName("x:metadataStrings"), builder.CreateQName("x:s"), "x:s", 0));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:n"), true, double.NegativeInfinity, true, 2147483647, true));
@@ -26721,8 +26721,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.MdxTuple? MdxTuple
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MdxTuple>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MdxTuple>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "t"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "t"));
         }
 
         /// <summary>
@@ -26734,8 +26734,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.MdxSet? MdxSet
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MdxSet>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MdxSet>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ms"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ms"));
         }
 
         /// <summary>
@@ -26747,8 +26747,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.MdxMemberProp? MdxMemberProp
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MdxMemberProp>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MdxMemberProp>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "p"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "p"));
         }
 
         /// <summary>
@@ -26760,8 +26760,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.MdxKpi? MdxKpi
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MdxKpi>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MdxKpi>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "k"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "k"));
         }
 
         /// <inheritdoc/>
@@ -26936,7 +26936,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("b", a => a.Bold);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NameIndex), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "n"), 0, 0)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:si"), true, double.NegativeInfinity, true, 2147483647, true));
             builder.AddConstraint(new IndexReferenceConstraint(builder.CreateQName("x:si"), "/WorkbookPart/CellMetadataPart", builder.CreateQName("x:metadataStrings"), builder.CreateQName("x:s"), "x:s", 0));
@@ -27036,7 +27036,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("o", a => a.SortingOrder);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NameIndex), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "n"), 0, 0)
             };
             builder.AddConstraint(new IndexReferenceConstraint(builder.CreateQName("x:ns"), "/WorkbookPart/CellMetadataPart", builder.CreateQName("x:metadataStrings"), builder.CreateQName("x:s"), "x:s", 0));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:ns"), true, 0, true, 2147483647, true));
@@ -27326,8 +27326,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.XmlCellProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "xmlCellPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:id"), true, 1, true, 4294967294, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:connectionId"), true, double.NegativeInfinity, true, 2147483647, true));
@@ -27343,8 +27343,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.XmlCellProperties? XmlCellProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.XmlCellProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.XmlCellProperties>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "xmlCellPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "xmlCellPr"));
         }
 
         /// <summary>
@@ -27356,8 +27356,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -27446,8 +27446,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.XmlProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "xmlPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("x:id"), true, new string[] { "1" }));
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName("x:uniqueName"), true, null));
@@ -27463,8 +27463,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.XmlProperties? XmlProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.XmlProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.XmlProperties>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "xmlPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "xmlPr"));
         }
 
         /// <summary>
@@ -27476,8 +27476,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -27578,7 +27578,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:xpath"), 0, 32000));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:mapId"), true, 1, true, 2147483647, true));
@@ -27593,8 +27593,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -27666,8 +27666,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("patternType", a => a.PatternType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ForegroundColor), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.BackgroundColor), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fgColor"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "bgColor"), 0, 1)
             };
         }
 
@@ -27680,8 +27680,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ForegroundColor? ForegroundColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ForegroundColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ForegroundColor>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fgColor"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fgColor"));
         }
 
         /// <summary>
@@ -27693,8 +27693,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.BackgroundColor? BackgroundColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.BackgroundColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.BackgroundColor>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "bgColor"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "bgColor"));
         }
 
         /// <inheritdoc/>
@@ -27819,7 +27819,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("bottom", a => a.Bottom);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GradientStop), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "stop"), 0, 0)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:top"), true, 0, true, 1, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:bottom"), true, 0, true, 1, true));
@@ -27898,7 +27898,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "color"), 1, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:position"), true, 0, true, 1, true));
         }
@@ -27912,8 +27912,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Color? Color
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Color>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Color>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "color"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "color"));
         }
 
         /// <inheritdoc/>
@@ -28238,21 +28238,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Bold), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Italic), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Strike), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Condense), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Extend), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Outline), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Shadow), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Underline), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FontSize), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FontName), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FontFamilyNumbering), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FontCharSet), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FontScheme), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "b"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "i"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "strike"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "condense"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extend"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "outline"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "shadow"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "u"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "vertAlign"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sz"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "color"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "name"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "family"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "charset"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "scheme"), 0, 1)
             };
         }
 
@@ -28265,8 +28265,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Bold? Bold
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Bold>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Bold>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "b"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "b"));
         }
 
         /// <summary>
@@ -28278,8 +28278,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Italic? Italic
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Italic>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Italic>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "i"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "i"));
         }
 
         /// <summary>
@@ -28291,8 +28291,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Strike? Strike
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Strike>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Strike>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "strike"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "strike"));
         }
 
         /// <summary>
@@ -28304,8 +28304,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Condense? Condense
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Condense>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Condense>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "condense"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "condense"));
         }
 
         /// <summary>
@@ -28317,8 +28317,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Extend? Extend
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Extend>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Extend>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extend"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extend"));
         }
 
         /// <summary>
@@ -28330,8 +28330,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Outline? Outline
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Outline>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Outline>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "outline"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "outline"));
         }
 
         /// <summary>
@@ -28343,8 +28343,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Shadow? Shadow
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Shadow>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Shadow>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "shadow"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "shadow"));
         }
 
         /// <summary>
@@ -28356,8 +28356,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Underline? Underline
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Underline>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Underline>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "u"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "u"));
         }
 
         /// <summary>
@@ -28369,8 +28369,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment? VerticalTextAlignment
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "vertAlign"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "vertAlign"));
         }
 
         /// <summary>
@@ -28382,8 +28382,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.FontSize? FontSize
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontSize>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontSize>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sz"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sz"));
         }
 
         /// <summary>
@@ -28395,8 +28395,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Color? Color
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Color>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Color>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "color"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "color"));
         }
 
         /// <summary>
@@ -28408,8 +28408,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.FontName? FontName
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontName>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontName>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "name"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "name"));
         }
 
         /// <summary>
@@ -28421,8 +28421,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.FontFamilyNumbering? FontFamilyNumbering
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontFamilyNumbering>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontFamilyNumbering>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "family"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "family"));
         }
 
         /// <summary>
@@ -28434,8 +28434,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.FontCharSet? FontCharSet
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontCharSet>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontCharSet>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "charset"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "charset"));
         }
 
         /// <summary>
@@ -28447,8 +28447,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.FontScheme? FontScheme
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontScheme>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontScheme>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "scheme"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "scheme"));
         }
 
         /// <inheritdoc/>
@@ -28508,8 +28508,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PatternFill>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PatternFill), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GradientFill), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "patternFill"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "gradientFill"), 0, 1)
             };
         }
 
@@ -28522,8 +28522,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PatternFill? PatternFill
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PatternFill>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PatternFill>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "patternFill"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "patternFill"));
         }
 
         /// <summary>
@@ -28535,8 +28535,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.GradientFill? GradientFill
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.GradientFill>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.GradientFill>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "gradientFill"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "gradientFill"));
         }
 
         /// <inheritdoc/>
@@ -28644,15 +28644,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("outline", a => a.Outline);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.StartBorder), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.EndBorder), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.LeftBorder), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RightBorder), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TopBorder), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.BottomBorder), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DiagonalBorder), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.VerticalBorder), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.HorizontalBorder), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "start"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "end"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "left"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "right"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "top"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "bottom"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "diagonal"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "vertical"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "horizontal"), 0, 1)
             };
         }
 
@@ -28665,8 +28665,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.StartBorder? StartBorder
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.StartBorder>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.StartBorder>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "start"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "start"));
         }
 
         /// <summary>
@@ -28678,8 +28678,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.EndBorder? EndBorder
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.EndBorder>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.EndBorder>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "end"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "end"));
         }
 
         /// <summary>
@@ -28691,8 +28691,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.LeftBorder? LeftBorder
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.LeftBorder>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.LeftBorder>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "left"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "left"));
         }
 
         /// <summary>
@@ -28704,8 +28704,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.RightBorder? RightBorder
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RightBorder>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RightBorder>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "right"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "right"));
         }
 
         /// <summary>
@@ -28717,8 +28717,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.TopBorder? TopBorder
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TopBorder>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TopBorder>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "top"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "top"));
         }
 
         /// <summary>
@@ -28730,8 +28730,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.BottomBorder? BottomBorder
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.BottomBorder>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.BottomBorder>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "bottom"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "bottom"));
         }
 
         /// <summary>
@@ -28743,8 +28743,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DiagonalBorder? DiagonalBorder
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DiagonalBorder>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DiagonalBorder>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "diagonal"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "diagonal"));
         }
 
         /// <summary>
@@ -28756,8 +28756,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.VerticalBorder? VerticalBorder
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.VerticalBorder>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.VerticalBorder>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "vertical"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "vertical"));
         }
 
         /// <summary>
@@ -28769,8 +28769,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.HorizontalBorder? HorizontalBorder
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.HorizontalBorder>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.HorizontalBorder>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "horizontal"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "horizontal"));
         }
 
         /// <inheritdoc/>
@@ -28828,7 +28828,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RgbColor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RgbColor), 1, 64)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rgbColor"), 1, 64)
             };
         }
 
@@ -28887,7 +28887,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 1, 10)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "color"), 1, 10)
             };
         }
 
@@ -28994,7 +28994,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableStyleElement), 0, 28)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tableStyleElement"), 0, 28)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:name"), 1, 255) { Application = ApplicationType.Excel });
         }
@@ -29163,7 +29163,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("customBuiltin", a => a.CustomBuiltin);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:name"), 0, 255));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:builtinId"), true, 0, true, 53, true));
@@ -29181,8 +29181,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -29388,9 +29388,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("applyProtection", a => a.ApplyProtection);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Alignment), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "alignment"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "protection"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new IndexReferenceConstraint(builder.CreateQName("x:borderId"), "/WorkbookPart/WorkbookStylesPart", null, builder.CreateQName("x:border"), "x:border", 0));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:borderId"), true, 0, true, double.PositiveInfinity, true));
@@ -29408,8 +29408,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Alignment? Alignment
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Alignment>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "alignment"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "alignment"));
         }
 
         /// <summary>
@@ -29421,8 +29421,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Protection? Protection
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Protection>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Protection>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "protection"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "protection"));
         }
 
         /// <summary>
@@ -29434,8 +29434,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -29770,7 +29770,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("refreshError", a => a.RefreshError);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalRow), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "row"), 0, 0)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:sheetId"), true, 0, true, 65533, true));
         }
@@ -29845,7 +29845,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalCell), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cell"), 0, 0)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:r"), true, 1, true, 1048576, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:outlineLevel"), true, 0, true, 7, true));
@@ -29945,7 +29945,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("vm", a => a.ValueMetaIndex);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Xstring), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "v"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("x:t"), false, new string[] { "s" }));
             builder.AddConstraint(new IndexReferenceConstraint(builder.CreateQName("x:vm"), "/WorkbookPart/CellMetadataPart", null, builder.CreateQName("x:valueMetadata"), "x:valueMetadata", 0));
@@ -29960,8 +29960,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Xstring? Xstring
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Xstring>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Xstring>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "v"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "v"));
         }
 
         /// <inheritdoc/>
@@ -30019,7 +30019,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DdeItem>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DdeItem), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ddeItem"), 0, 0)
             };
         }
 
@@ -30123,7 +30123,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("preferPic", a => a.PreferPicture);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Values), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "values"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:name"), 0, 255));
             builder.AddConstraint(new AttributeValueConditionToAnother(builder.CreateQName("x:name"), builder.CreateQName("x:ole"), new string[] { "StdDocumentName" }, new string[] { "true" }));
@@ -30138,8 +30138,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Values? Values
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Values>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Values>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "values"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "values"));
         }
 
         /// <inheritdoc/>
@@ -30220,7 +30220,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("cols", a => a.Columns);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Value), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "value"), 1, 0)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:cols"), true, 1, true, 16384, true) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:rows"), true, 1, true, 1048576, true) { Application = ApplicationType.Excel });
@@ -30293,7 +30293,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("t", a => a.ValueType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DdeLinkValue), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "val"), 1, 1)
             };
         }
 
@@ -30306,8 +30306,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DdeLinkValue? DdeLinkValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DdeLinkValue>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DdeLinkValue>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "val"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "val"));
         }
 
         /// <inheritdoc/>
@@ -30367,8 +30367,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OleItem>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleItem), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.OleItem), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "oleItem"), 1, 1),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "oleItem"), 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -30451,10 +30451,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.ExternalBookAlternateUrls), 0, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetNames), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedNames), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetDataSet), 0, 1)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2021/extlinks2021", "alternateUrls"), 0, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetNames"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "definedNames"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetDataSet"), 0, 1)
             };
         }
 
@@ -30467,8 +30467,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.ExternalBookAlternateUrls? ExternalBookAlternateUrls
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.ExternalBookAlternateUrls>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.ExternalBookAlternateUrls>(new("http://schemas.microsoft.com/office/spreadsheetml/2021/extlinks2021", "alternateUrls"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2021/extlinks2021", "alternateUrls"));
         }
 
         /// <summary>
@@ -30480,8 +30480,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetNames? SheetNames
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetNames>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetNames>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetNames"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetNames"));
         }
 
         /// <summary>
@@ -30493,8 +30493,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedNames? ExternalDefinedNames
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedNames>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedNames>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "definedNames"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "definedNames"));
         }
 
         /// <summary>
@@ -30506,8 +30506,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetDataSet? SheetDataSet
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetDataSet>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetDataSet>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetDataSet"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetDataSet"));
         }
 
         /// <inheritdoc/>
@@ -30594,7 +30594,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DdeItems), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ddeItems"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:ddeService"), 1, 255));
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:ddeTopic"), 0, 255));
@@ -30609,8 +30609,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DdeItems? DdeItems
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DdeItems>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DdeItems>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ddeItems"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ddeItems"));
         }
 
         /// <inheritdoc/>
@@ -30700,7 +30700,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleItems), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "oleItems"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:progId"), 1, 255));
         }
@@ -30714,8 +30714,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.OleItems? OleItems
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OleItems>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OleItems>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "oleItems"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "oleItems"));
         }
 
         /// <inheritdoc/>
@@ -30992,10 +30992,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("totalsRowCellStyle", a => a.TotalsRowCellStyle);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedColumnFormula), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TotalsRowFormula), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.XmlColumnProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "calculatedColumnFormula"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "totalsRowFormula"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "xmlColumnPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:name"), 0, 255));
             builder.AddConstraint(new AttributeAbsentConditionToValue(builder.CreateQName("x:totalsRowLabel"), builder.CreateQName("x:totalsRowFunction"), "custom"));
@@ -31022,8 +31022,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CalculatedColumnFormula? CalculatedColumnFormula
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CalculatedColumnFormula>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CalculatedColumnFormula>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "calculatedColumnFormula"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "calculatedColumnFormula"));
         }
 
         /// <summary>
@@ -31035,8 +31035,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.TotalsRowFormula? TotalsRowFormula
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TotalsRowFormula>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TotalsRowFormula>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "totalsRowFormula"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "totalsRowFormula"));
         }
 
         /// <summary>
@@ -31048,8 +31048,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.XmlColumnProperties? XmlColumnProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.XmlColumnProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.XmlColumnProperties>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "xmlColumnPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "xmlColumnPr"));
         }
 
         /// <summary>
@@ -31061,8 +31061,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -31307,7 +31307,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:xpath"), 0, 32000));
             builder.AddConstraint(new ReferenceExistConstraint(builder.CreateQName("x:mapId"), "CustomXmlMappingsPart", builder.CreateQName("x:Map"), "x:Map", builder.CreateQName("x:ID")));
@@ -31323,8 +31323,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -31397,7 +31397,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Main), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "main"), 1, 0)
             };
         }
 
@@ -31471,7 +31471,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Topic), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tp"), 1, 0)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:first"), 1, 255) { Application = ApplicationType.Excel });
         }
@@ -31547,9 +31547,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("t", a => a.ValueType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Xstring), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Subtopic), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TopicReferences), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "v"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "stp"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tr"), 1, 0)
             };
         }
 
@@ -31562,8 +31562,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Xstring? Xstring
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Xstring>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Xstring>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "v"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "v"));
         }
 
         /// <inheritdoc/>
@@ -32155,7 +32155,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("showObjects", a => a.ShowObjects);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:windowWidth"), true, double.NegativeInfinity, true, 2147483647, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:tabRatio"), true, double.NegativeInfinity, true, 1000, true));
@@ -32173,8 +32173,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -32464,7 +32464,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("autoFilterDateGrouping", a => a.AutoFilterDateGrouping);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:windowWidth"), true, double.NegativeInfinity, true, 2147483647, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:windowHeight"), true, double.NegativeInfinity, true, 2147483647, true));
@@ -32481,8 +32481,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -32827,8 +32827,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("z-order", a => a.ZOrder);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FromMarker), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ToMarker), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "from"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "to"), 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -32841,8 +32841,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.FromMarker? FromMarker
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FromMarker>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FromMarker>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "from"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "from"));
         }
 
         /// <summary>
@@ -32854,8 +32854,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ToMarker? ToMarker
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ToMarker>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ToMarker>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "to"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "to"));
         }
 
         /// <inheritdoc/>
@@ -32916,10 +32916,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.Availability = FileFormatVersions.Office2010;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "col"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "colOff"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "row"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "rowOff"), 1, 1)
             };
         }
 
@@ -32981,10 +32981,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.Availability = FileFormatVersions.Office2010;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "col"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "colOff"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "row"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "rowOff"), 1, 1)
             };
         }
 
@@ -33057,8 +33057,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId? ColumnId
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId>(new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "col"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "col"));
         }
 
         /// <summary>
@@ -33070,8 +33070,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset? ColumnOffset
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset>(new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "colOff"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "colOff"));
         }
 
         /// <summary>
@@ -33083,8 +33083,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId? RowId
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId>(new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "row"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "row"));
         }
 
         /// <summary>
@@ -33096,8 +33096,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset? RowOffset
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset>(new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "rowOff"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "rowOff"));
         }
     }
 
@@ -33168,7 +33168,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Id), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "id"), 1, 1, version: FileFormatVersions.Office2010),
                 new AnyParticle(0, 1)
             };
         }
@@ -33244,7 +33244,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotHierarchy), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "pivotHierarchy"), 1, 1, version: FileFormatVersions.Office2010),
                 new AnyParticle(0, 1)
             };
         }
@@ -33320,7 +33320,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotField), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "pivotField"), 1, 1, version: FileFormatVersions.Office2010),
                 new AnyParticle(0, 1)
             };
         }
@@ -33396,7 +33396,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SourceConnection), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "sourceConnection"), 1, 1, version: FileFormatVersions.Office2010),
                 new AnyParticle(0, 1)
             };
         }
@@ -33530,7 +33530,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.Availability = FileFormatVersions.Office2010;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "color"), 0, 1)
             };
         }
 
@@ -33589,7 +33589,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.Availability = FileFormatVersions.Office2010;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "color"), 0, 1)
             };
         }
 
@@ -33647,7 +33647,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.SetSchema("x:left");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "color"), 0, 1)
             };
         }
 
@@ -33705,7 +33705,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.SetSchema("x:right");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "color"), 0, 1)
             };
         }
 
@@ -33763,7 +33763,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.SetSchema("x:top");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "color"), 0, 1)
             };
         }
 
@@ -33821,7 +33821,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.SetSchema("x:bottom");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "color"), 0, 1)
             };
         }
 
@@ -33879,7 +33879,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.SetSchema("x:diagonal");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "color"), 0, 1)
             };
         }
 
@@ -33937,7 +33937,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.SetSchema("x:vertical");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "color"), 0, 1)
             };
         }
 
@@ -33995,7 +33995,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.SetSchema("x:horizontal");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "color"), 0, 1)
             };
         }
 
@@ -34074,8 +34074,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Color? Color
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Color>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Color>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "color"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "color"));
         }
     }
 
@@ -34300,7 +34300,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("r:id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "anchor"), 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -34313,8 +34313,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor? ObjectAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "anchor"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "anchor"));
         }
 
         /// <inheritdoc/>
@@ -34509,7 +34509,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("r:id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "anchor"), 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -34522,8 +34522,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor? ObjectAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "anchor"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "anchor"));
         }
 
         /// <inheritdoc/>
@@ -34604,7 +34604,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("codeName", a => a.CodeName);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TabColor), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tabColor"), 0, 1)
             };
             builder.AddConstraint(new AttributeValuePatternConstraint(builder.CreateQName("x:codeName"), @"[\p{L}\P{IsBasicLatin}][_\d\p{L}\P{IsBasicLatin}]*"));
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:codeName"), 0, 32));
@@ -34619,8 +34619,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.TabColor? TabColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TabColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TabColor>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tabColor"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tabColor"));
         }
 
         /// <inheritdoc/>
@@ -34680,8 +34680,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ChartSheetView), 1, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetView"), 1, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -34845,7 +34845,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomChartsheetView>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomChartsheetView), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "customSheetView"), 0, 0)
             };
         }
 
@@ -35328,7 +35328,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WebPublishItem), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "webPublishItem"), 1, 0)
             };
         }
 
@@ -35389,8 +35389,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject), 2, 3),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 2, 3)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cfvo"), 2, 3),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "color"), 2, 3)
             };
         }
 
@@ -35485,8 +35485,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("showValue", a => a.ShowValue);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject), 2, 2),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cfvo"), 2, 2),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "color"), 1, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:maxLength"), true, double.NegativeInfinity, true, 100, true) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:minLength"), true, double.NegativeInfinity, true, 100, true) { Application = ApplicationType.Excel });
@@ -35592,7 +35592,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("reverse", a => a.Reverse);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject), 2, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cfvo"), 2, 0)
             };
         }
 
@@ -35651,7 +35651,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRuleExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRuleExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -35722,7 +35722,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataReference), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dataRef"), 0, 0)
             };
         }
 
@@ -35885,9 +35885,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("enableFormatConditionsCalculation", a => a.EnableFormatConditionsCalculation);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TabColor), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OutlineProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageSetupProperties), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tabColor"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "outlinePr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageSetUpPr"), 0, 1)
             };
             builder.AddConstraint(new AttributeValuePatternConstraint(builder.CreateQName("x:codeName"), @"[\p{L}\P{IsBasicLatin}][_\d\p{L}\P{IsBasicLatin}]*"));
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:codeName"), 0, 32));
@@ -35902,8 +35902,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.TabColor? TabColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TabColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TabColor>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tabColor"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tabColor"));
         }
 
         /// <summary>
@@ -35915,8 +35915,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.OutlineProperties? OutlineProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OutlineProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.OutlineProperties>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "outlinePr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "outlinePr"));
         }
 
         /// <summary>
@@ -35928,8 +35928,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PageSetupProperties? PageSetupProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageSetupProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageSetupProperties>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageSetUpPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageSetUpPr"));
         }
 
         /// <inheritdoc/>
@@ -35989,8 +35989,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetView>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetView), 1, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetView"), 1, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -36456,7 +36456,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomSheetView>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomSheetView), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "customSheetView"), 1, 0)
             };
         }
 
@@ -36515,7 +36515,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OleObject>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleObject), 1, 65535)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "oleObject"), 1, 65535)
             };
         }
 
@@ -36574,7 +36574,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Control>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Control), 1, 65535)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "control"), 1, 65535)
             };
         }
 
@@ -36676,7 +36676,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Column>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Column), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "col"), 1, 0)
             };
         }
 
@@ -36735,7 +36735,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Row>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Row), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "row"), 0, 0)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:sheetId"), true, 0, true, 65533, true));
         }
@@ -36854,7 +36854,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("link", a => a.Link);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataReferences), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dataRefs"), 0, 1)
             };
         }
 
@@ -36867,8 +36867,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DataReferences? DataReferences
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DataReferences>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DataReferences>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dataRefs"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dataRefs"));
         }
 
         /// <inheritdoc/>
@@ -36951,8 +36951,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("sqref", a => a.SequenceOfReferences);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRule), 1, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cfRule"), 1, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:sqref"), 1, int.MaxValue));
         }
@@ -37012,7 +37012,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomProperty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomProperty), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "customPr"), 1, 0)
             };
         }
 
@@ -37083,7 +37083,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MemberProperty), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "mp"), 1, 0)
             };
         }
 
@@ -37165,7 +37165,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("level", a => a.Level);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Member), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "member"), 1, 0)
             };
         }
 
@@ -37224,7 +37224,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotHierarchyExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotHierarchyExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -37295,7 +37295,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Item), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "item"), 1, 0)
             };
         }
 
@@ -37354,7 +37354,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotArea"), 1, 1)
             };
         }
 
@@ -37367,8 +37367,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotArea? PivotArea
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotArea>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotArea"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotArea"));
         }
 
         /// <inheritdoc/>
@@ -37426,7 +37426,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -37574,8 +37574,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("autoPage", a => a.AutoPage);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Pages), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RangeSets), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pages"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rangeSets"), 1, 1)
             };
         }
 
@@ -37588,8 +37588,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Pages? Pages
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Pages>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Pages>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pages"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pages"));
         }
 
         /// <summary>
@@ -37601,8 +37601,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.RangeSets? RangeSets
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RangeSets>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RangeSets>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rangeSets"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rangeSets"));
         }
 
         /// <inheritdoc/>
@@ -37660,7 +37660,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -37886,7 +37886,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("colHidden", a => a.ColHidden);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "anchor"), 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -37899,8 +37899,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor? ObjectAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "anchor"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "anchor"));
         }
 
         /// <inheritdoc/>
@@ -38247,9 +38247,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("calendarType", a => a.CalendarType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Filter), 0, 0, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Filter), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DateGroupItem), 0, 0)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "filter"), 0, 0, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "filter"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dateGroupItem"), 0, 0)
             };
         }
 
@@ -38392,7 +38392,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("and", a => a.And);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomFilter), 1, 2)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "customFilter"), 1, 2)
             };
         }
 
@@ -38661,9 +38661,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.SlicerCachePivotTables), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TableSlicerCache), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.SlicerCacheHideItemsWithNoData), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "slicerCachePivotTables"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "tableSlicerCache"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "slicerCacheHideItemsWithNoData"), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -38741,8 +38741,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotFilter), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "pivotFilter"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "movingPeriodState"), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -38818,7 +38818,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.QueryTable), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "queryTable"), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -39221,7 +39221,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("editPage", a => a.EditPage);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Tables), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tables"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:url"), 1, int.MaxValue));
         }
@@ -39235,8 +39235,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Tables? Tables
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Tables>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Tables>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tables"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tables"));
         }
 
         /// <inheritdoc/>
@@ -39471,7 +39471,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("delimiter", a => a.Delimiter);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TextFields), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "textFields"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:decimal"), 1, 255));
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:thousands"), 1, 255));
@@ -39489,8 +39489,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.TextFields? TextFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TextFields>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TextFields>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "textFields"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "textFields"));
         }
 
         /// <inheritdoc/>
@@ -39560,7 +39560,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Parameter), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "parameter"), 1, 0)
             };
         }
 
@@ -39619,7 +39619,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConnectionExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConnectionExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -39696,8 +39696,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Connection), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.Connection), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "connection"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "connection"), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -39769,7 +39769,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TextField), 1, 2001)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "textField"), 1, 2001)
             };
         }
 
@@ -39993,12 +39993,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("longText", a => a.LongText);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MissingItem), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberItem), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.BooleanItem), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ErrorItem), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.StringItem), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DateTimeItem), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "m"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "n"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "b"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "e"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "s"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "d"), 1, 1)
             };
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("x:maxValue"), false, new string[] { "NaN", "INF", "-INF" }));
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("x:minValue"), false, new string[] { "NaN", "INF", "-INF" }));
@@ -40089,10 +40089,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RangeProperties), 0, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DiscreteProperties), 0, 1)
+                    new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rangePr"), 0, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "discretePr"), 0, 1)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GroupItems), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "groupItems"), 0, 1)
             };
         }
 
@@ -40151,7 +40151,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CacheFieldExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheFieldExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -40228,8 +40228,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.CacheField), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueNames), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "cacheField"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "cachedUniqueNames"), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -40301,7 +40301,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FieldUsage), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fieldUsage"), 0, 0)
             };
         }
 
@@ -40372,7 +40372,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GroupLevel), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "groupLevel"), 1, 0)
             };
         }
 
@@ -40431,7 +40431,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -40508,8 +40508,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.CacheHierarchy), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.CacheHierarchy), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "cacheHierarchy"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "cacheHierarchy"), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -40569,7 +40569,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -40646,8 +40646,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.CalculatedMember), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.CalculatedMember), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "calculatedMember"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "calculatedMember"), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -40707,7 +40707,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataFieldExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataFieldExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -40784,8 +40784,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DataField), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.DataField), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "dataField"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "dataField"), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -40845,7 +40845,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -40988,10 +40988,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("unboundColumnsRight", a => a.UnboundColumnsRight);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryTableFields), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryTableDeletedFields), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SortState), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "queryTableFields"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "queryTableDeletedFields"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sortState"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:unboundColumnsLeft"), true, double.NegativeInfinity, true, 16383, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:unboundColumnsRight"), true, double.NegativeInfinity, true, 16383, true));
@@ -41008,8 +41008,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.QueryTableFields? QueryTableFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.QueryTableFields>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.QueryTableFields>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "queryTableFields"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "queryTableFields"));
         }
 
         /// <summary>
@@ -41021,8 +41021,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.QueryTableDeletedFields? QueryTableDeletedFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.QueryTableDeletedFields>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.QueryTableDeletedFields>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "queryTableDeletedFields"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "queryTableDeletedFields"));
         }
 
         /// <summary>
@@ -41034,8 +41034,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SortState? SortState
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SortState>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SortState>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sortState"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sortState"));
         }
 
         /// <summary>
@@ -41047,8 +41047,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -41106,7 +41106,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.QueryTableExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryTableExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -41201,7 +41201,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ProtectedRange>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ProtectedRange), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "protectedRange"), 1, 0)
             };
         }
 
@@ -41294,7 +41294,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("sqref", a => a.SequenceOfReferences);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Scenario), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "scenario"), 1, 0)
             };
         }
 
@@ -41365,7 +41365,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MergeCell), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "mergeCell"), 1, 0)
             };
         }
 
@@ -41469,7 +41469,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataValidation), 1, 65534)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dataValidation"), 1, 65534)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:xWindow"), true, double.NegativeInfinity, true, 65535, true) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:yWindow"), true, double.NegativeInfinity, true, 65535, true) { Application = ApplicationType.Excel });
@@ -41531,7 +41531,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Hyperlink>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Hyperlink), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "hyperlink"), 1, 0)
             };
         }
 
@@ -41590,7 +41590,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellWatch>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellWatch), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cellWatch"), 1, 0)
             };
         }
 
@@ -41651,8 +41651,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.IgnoredError>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.IgnoredError), 1, 9),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ignoredError"), 1, 9),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -41723,7 +41723,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TablePart), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tablePart"), 0, 0)
             };
         }
 
@@ -41782,7 +41782,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorksheetExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorksheetExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -41871,14 +41871,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattings), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DataValidations), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SparklineGroups), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerList), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.ProtectedRanges), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.IgnoredErrors), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.WebExtensions), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineReferences), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "conditionalFormattings"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "dataValidations"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "sparklineGroups"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "slicerList"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "protectedRanges"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "ignoredErrors"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "webExtensions"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "timelineRefs"), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -41950,7 +41950,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "numFmt"), 0, 0)
             };
         }
 
@@ -42038,7 +42038,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0, 65491)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "font"), 0, 65491)
             };
         }
 
@@ -42109,7 +42109,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Fill), 1, 65430)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fill"), 1, 65430)
             };
         }
 
@@ -42180,7 +42180,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Border), 0, 65430)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "border"), 0, 65430)
             };
         }
 
@@ -42251,7 +42251,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormat), 1, 65430)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "xf"), 1, 65430)
             };
         }
 
@@ -42322,7 +42322,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellFormat), 1, 65430)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "xf"), 1, 65430)
             };
         }
 
@@ -42393,7 +42393,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CellStyle), 1, 65430)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cellStyle"), 1, 65430)
             };
         }
 
@@ -42464,7 +42464,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dxf"), 0, 0)
             };
         }
 
@@ -42557,7 +42557,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("defaultPivotStyle", a => a.DefaultPivotStyle);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableStyle), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tableStyle"), 0, 0)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:defaultTableStyle"), 1, 255));
         }
@@ -42619,8 +42619,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MruColors>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.IndexedColors), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MruColors), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "indexedColors"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "mruColors"), 0, 1)
             };
         }
 
@@ -42633,8 +42633,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.IndexedColors? IndexedColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.IndexedColors>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.IndexedColors>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "indexedColors"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "indexedColors"));
         }
 
         /// <summary>
@@ -42646,8 +42646,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.MruColors? MruColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MruColors>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.MruColors>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "mruColors"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "mruColors"));
         }
 
         /// <inheritdoc/>
@@ -42705,7 +42705,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.StylesheetExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.StylesheetExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -42786,10 +42786,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DifferentialFormats), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerStyles), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.DifferentialFormats), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineStyles), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "dxfs"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "slicerStyles"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "dxfs"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "timelineStyles"), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -42964,7 +42964,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotField), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotField"), 1, 0)
             };
         }
 
@@ -43035,7 +43035,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Field), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "field"), 1, 0)
             };
         }
 
@@ -43106,7 +43106,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowItem), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "i"), 1, 0)
             };
         }
 
@@ -43177,7 +43177,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Field), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "field"), 1, 0)
             };
         }
 
@@ -43248,7 +43248,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowItem), 1, 1048576)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "i"), 1, 1048576)
             };
         }
 
@@ -43319,7 +43319,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageField), 1, 256)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageField"), 1, 256)
             };
         }
 
@@ -43390,7 +43390,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataField), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dataField"), 1, 0)
             };
         }
 
@@ -43461,7 +43461,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Format), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "format"), 1, 0)
             };
         }
 
@@ -43532,7 +43532,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormat), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "conditionalFormat"), 1, 0)
             };
         }
 
@@ -43603,7 +43603,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ChartFormat), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "chartFormat"), 1, 0)
             };
         }
 
@@ -43674,7 +43674,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotHierarchy), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotHierarchy"), 1, 0)
             };
         }
 
@@ -43837,7 +43837,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotFilter), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "filter"), 0, 0)
             };
         }
 
@@ -43908,7 +43908,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowHierarchyUsage), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowHierarchyUsage"), 1, 0)
             };
         }
 
@@ -43979,7 +43979,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchyUsage), 1, 16384)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colHierarchyUsage"), 1, 16384)
             };
         }
 
@@ -44038,7 +44038,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -44119,10 +44119,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotTableDefinition), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotTableData), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotTableUISettings), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.PivotVersionInfo), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "pivotTableDefinition"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "pivotTableData"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "pivotTableUISettings"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo", "pivotVersionInfo"), 1, 1, version: FileFormatVersions.Microsoft365),
                 new AnyParticle(0, 1)
             };
         }
@@ -44212,9 +44212,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("connectionId", a => a.ConnectionId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorksheetSource), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Consolidation), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "worksheetSource"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "consolidation"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new ReferenceExistConstraint(builder.CreateQName("x:connectionId"), "/WorkbookPart/ConnectionsPart", builder.CreateQName("x:connection"), "x:connection", builder.CreateQName("x:id")));
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName("x:connectionId"), true, null));
@@ -44229,8 +44229,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.WorksheetSource? WorksheetSource
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.WorksheetSource>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.WorksheetSource>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "worksheetSource"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "worksheetSource"));
         }
 
         /// <summary>
@@ -44242,8 +44242,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Consolidation? Consolidation
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Consolidation>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Consolidation>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "consolidation"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "consolidation"));
         }
 
         /// <summary>
@@ -44255,8 +44255,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtensionList? CacheSourceExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -44326,7 +44326,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheField), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cacheField"), 0, 0)
             };
         }
 
@@ -44397,7 +44397,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CacheHierarchy), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cacheHierarchy"), 1, 0)
             };
         }
 
@@ -44468,7 +44468,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Kpi), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "kpi"), 0, 0)
             };
         }
 
@@ -44535,11 +44535,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Sets>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Entries), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Sets), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.QueryCache), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ServerFormats), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "entries"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sets"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "queryCache"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "serverFormats"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -44552,8 +44552,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Entries? Entries
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Entries>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Entries>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "entries"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "entries"));
         }
 
         /// <summary>
@@ -44565,8 +44565,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Sets? Sets
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Sets>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Sets>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sets"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sets"));
         }
 
         /// <summary>
@@ -44578,8 +44578,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.QueryCache? QueryCache
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.QueryCache>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.QueryCache>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "queryCache"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "queryCache"));
         }
 
         /// <summary>
@@ -44591,8 +44591,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ServerFormats? ServerFormats
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ServerFormats>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ServerFormats>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "serverFormats"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "serverFormats"));
         }
 
         /// <summary>
@@ -44604,8 +44604,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -44675,7 +44675,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedItem), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "calculatedItem"), 1, 0)
             };
         }
 
@@ -44746,7 +44746,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedMember), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "calculatedMember"), 1, 0)
             };
         }
 
@@ -44817,7 +44817,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Dimension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dimension"), 0, 0)
             };
         }
 
@@ -44888,7 +44888,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MeasureGroup), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "measureGroup"), 0, 0)
             };
         }
 
@@ -44959,7 +44959,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.MeasureDimensionMap), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "map"), 0, 0)
             };
         }
 
@@ -45018,7 +45018,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -45109,15 +45109,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotCacheDefinition), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotCacheDecoupled), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelinePivotCacheDefinition), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.Pivot.Xsdboolean), 1, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.PivotCacheRichInfo), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotAutoRefresh.Xsdboolean), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays.PivotCacheDynamicArray), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "pivotCacheDefinition"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "pivotCacheDecoupled"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "timelinePivotCacheDefinition"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "pivotCacheIdVersion"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2020/pivotNov2020", "implicitMeasureSupport"), 1, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/pivotRichData", "richInfo"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo", "cacheVersionInfo"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2024/pivotAutoRefresh", "autoRefresh"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2024/pivotDynamicArrays", "pivotCacheDynamicArray"), 1, 1, version: FileFormatVersions.Microsoft365),
                 new AnyParticle(0, 1)
             };
         }
@@ -45177,7 +45177,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetName>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetName), 1, 65534)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetName"), 1, 65534)
             };
         }
 
@@ -45236,7 +45236,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedName>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedName), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "definedName"), 0, 0)
             };
         }
 
@@ -45295,7 +45295,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExternalSheetData>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalSheetData), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetData"), 1, 0)
             };
         }
 
@@ -45366,7 +45366,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableColumn), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tableColumn"), 1, 0)
             };
         }
 
@@ -45506,7 +45506,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -45583,8 +45583,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Table), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.MsForm), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "table"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2023/msForms", "msForm"), 1, 1, version: FileFormatVersions.Microsoft365),
                 new AnyParticle(0, 1)
             };
         }
@@ -46248,7 +46248,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorkbookView>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorkbookView), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "workbookView"), 1, 0)
             };
         }
 
@@ -46307,7 +46307,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Sheet>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Sheet), 1, 32767)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheet"), 1, 32767)
             };
         }
 
@@ -46378,7 +46378,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("builtInGroupCount", a => a.BuiltInGroupCount);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FunctionGroup), 0, 255)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "functionGroup"), 0, 255)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:builtInGroupCount"), true, double.NegativeInfinity, true, 255, true));
         }
@@ -46438,7 +46438,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExternalReference>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalReference), 1, 65534)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "externalReference"), 1, 65534)
             };
         }
 
@@ -46497,7 +46497,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DefinedName>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DefinedName), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "definedName"), 0, 0)
             };
         }
 
@@ -46763,7 +46763,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookView>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookView), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "customWorkbookView"), 1, 0)
             };
         }
 
@@ -46822,7 +46822,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotCache>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCache), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotCache"), 1, 0)
             };
         }
 
@@ -47086,7 +47086,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WebPublishObject), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "webPublishObject"), 1, 0)
             };
         }
 
@@ -47145,7 +47145,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorkbookExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorkbookExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -47242,18 +47242,18 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DefinedNames), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotCaches), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerCaches), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.SlicerCaches), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.WorkbookProperties), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotCaches), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotTableReferences), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotCaches), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReferences), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.DataModel), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService.ExternalCodeService), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "definedNames"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "pivotCaches"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "slicerCaches"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "slicerCaches"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "workbookPr"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "pivotCaches"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "pivotTableReferences"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "timelineCachePivotCaches"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "timelineCacheRefs"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "workbookPr"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "dataModel"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2023/externalCodeService", "externalCodeService"), 1, 1, version: FileFormatVersions.Microsoft365),
                 new AnyParticle(0, 1)
             };
         }

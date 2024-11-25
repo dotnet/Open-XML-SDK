@@ -85,9 +85,9 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.BagExtensions), 0, 0, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FeaturePropertyBag), 0, 0, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "bagExt"), 0, 0, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "bag"), 0, 0, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "extLst"), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -179,9 +179,9 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.BagExtensions), 0, 0, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FeaturePropertyBag), 0, 0, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "bagExt"), 0, 0, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "bag"), 0, 0, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "extLst"), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -390,8 +390,8 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
             builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "fpbs"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "dxf"), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -404,8 +404,8 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         /// </remarks>
         public DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags? FpbsFeaturePropertyBags
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags>(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "fpbs"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "fpbs"));
         }
 
         /// <summary>
@@ -417,8 +417,8 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         /// </remarks>
         public DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType? DifferentialFormatType
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType>(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "dxf"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "dxf"));
         }
 
         /// <inheritdoc/>
@@ -477,8 +477,8 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "fpbs"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "dxf"), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -538,8 +538,8 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "fpbs"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "dxf"), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -599,8 +599,8 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "fpbs"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "dxf"), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -660,8 +660,8 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "fpbs"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "dxf"), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -721,8 +721,8 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "fpbs"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "dxf"), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -782,8 +782,8 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "fpbs"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "dxf"), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -843,8 +843,8 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "fpbs"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "dxf"), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -904,8 +904,8 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "fpbs"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "dxf"), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -965,8 +965,8 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "fpbs"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "dxf"), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -1035,8 +1035,8 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         /// </remarks>
         public DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags? FpbsFeaturePropertyBags
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags>(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "fpbs"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "fpbs"));
         }
 
         /// <summary>
@@ -1048,8 +1048,8 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         /// </remarks>
         public DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType? DifferentialFormatType
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType>(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "dxf"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "dxf"));
         }
     }
 
@@ -1105,7 +1105,7 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
             builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "extLst"), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -1118,8 +1118,8 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         /// </remarks>
         public DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList>(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -1238,13 +1238,13 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
                 .AddAttribute("att", a => a.Att);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ArrayFeatureProperty), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.BagFeatureProperty), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.IntFeatureProperty), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.StringFeatureProperty), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.BoolFeatureProperty), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DecimalFeatureProperty), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.RelFeatureProperty), 1, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "a"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "bagId"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "i"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "s"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "b"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "d"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "rel"), 1, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -1308,7 +1308,7 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
                     }
                 }
             };
@@ -1395,12 +1395,12 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.XsdunsignedInt), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.Xsdinteger), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.SXsdstring), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.Xsdboolean), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.Xsddouble), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.RelXsdstring), 1, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "bagId"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "i"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "s"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "b"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "d"), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "rel"), 1, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -1790,13 +1790,13 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Fill), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Alignment), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Border), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "font"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "numFmt"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fill"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "alignment"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "border"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "protection"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -1809,8 +1809,8 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Font? Font
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Font>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Font>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "font"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "font"));
         }
 
         /// <summary>
@@ -1822,8 +1822,8 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.NumberingFormat? NumberingFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "numFmt"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "numFmt"));
         }
 
         /// <summary>
@@ -1835,8 +1835,8 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Fill? Fill
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Fill>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Fill>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fill"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fill"));
         }
 
         /// <summary>
@@ -1848,8 +1848,8 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Alignment? Alignment
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Alignment>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "alignment"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "alignment"));
         }
 
         /// <summary>
@@ -1861,8 +1861,8 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Border? Border
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Border>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Border>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "border"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "border"));
         }
 
         /// <summary>
@@ -1874,8 +1874,8 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Protection? Protection
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Protection>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Protection>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "protection"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "protection"));
         }
 
         /// <summary>
@@ -1887,8 +1887,8 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>

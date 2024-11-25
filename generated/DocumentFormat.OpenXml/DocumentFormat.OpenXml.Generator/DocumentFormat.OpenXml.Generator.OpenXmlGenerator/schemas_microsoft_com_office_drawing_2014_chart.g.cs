@@ -113,39 +113,39 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "xfrm"), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "custGeom"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstGeom"), 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "noFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "solidFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "gradFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "blipFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "pattFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "grpFill"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ln"), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectLst"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectDag"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scene3d"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sp3d"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -158,8 +158,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "xfrm"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "xfrm"));
         }
 
         /// <inheritdoc/>
@@ -346,10 +346,10 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Symbol>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Symbol), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Size), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "symbol"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "size"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "spPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst"), 0, 1)
             };
         }
 
@@ -362,8 +362,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Symbol? Symbol
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Symbol>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Symbol>(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "symbol"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/chart", "symbol"));
         }
 
         /// <summary>
@@ -375,8 +375,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Size? Size
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Size>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Size>(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "size"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/chart", "size"));
         }
 
         /// <summary>
@@ -388,8 +388,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "spPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/chart", "spPr"));
         }
 
         /// <summary>
@@ -401,8 +401,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -491,37 +491,37 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Separator>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "idx"), 1, 1),
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Delete), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "delete"), 1, 1),
                     new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                     {
                         new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Layout), 0, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartText), 0, 1),
+                            new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "layout"), 0, 1),
+                            new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "tx"), 0, 1),
                             new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                             {
                                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                 {
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabelPosition), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowLegendKey), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowValue), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowCategoryName), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowSeriesName), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowPercent), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowBubbleSize), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Separator), 0, 1)
+                                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "numFmt"), 0, 1),
+                                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "spPr"), 0, 1),
+                                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "txPr"), 0, 1),
+                                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "dLblPos"), 0, 1),
+                                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "showLegendKey"), 0, 1),
+                                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "showVal"), 0, 1),
+                                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "showCatName"), 0, 1),
+                                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "showSerName"), 0, 1),
+                                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "showPercent"), 0, 1),
+                                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "showBubbleSize"), 0, 1),
+                                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "separator"), 0, 1)
                                 }
                             }
                         }
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DLblExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst"), 0, 1)
             };
         }
 
@@ -534,8 +534,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "idx"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/chart", "idx"));
         }
 
         /// <inheritdoc/>
@@ -594,7 +594,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterException>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterException), 1, 0, version: FileFormatVersions.Office2016)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2014/chart", "categoryFilterException"), 1, 0, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -654,7 +654,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.BooleanFalse>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.BooleanFalse), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2014/chart", "showExpandCollapseFieldButtons"), 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -667,8 +667,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Charts.BooleanFalse? BooleanFalse
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.BooleanFalse>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.BooleanFalse>(new("http://schemas.microsoft.com/office/drawing/2014/chart", "showExpandCollapseFieldButtons"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2014/chart", "showExpandCollapseFieldButtons"));
         }
 
         /// <inheritdoc/>
@@ -727,7 +727,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMapEntry>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMapEntry), 0, 0, version: FileFormatVersions.Office2016)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2014/chart", "ptentry"), 0, 0, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -884,13 +884,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ShapeProperties), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UnsignedIntegerType), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.InvertIfNegativeBoolean), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.Bubble3DBoolean), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.Marker), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.DLbl), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2014/chart", "uniqueId"), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2014/chart", "spPr"), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2014/chart", "explosion"), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2014/chart", "invertIfNegative"), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2014/chart", "bubble3D"), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2014/chart", "marker"), 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2014/chart", "dLbl"), 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -903,8 +903,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID? UniqueIdChartUniqueID
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID>(new("http://schemas.microsoft.com/office/drawing/2014/chart", "uniqueId"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2014/chart", "uniqueId"));
         }
 
         /// <summary>
@@ -916,8 +916,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Charts.ShapeProperties? ShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.ShapeProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.ShapeProperties>(new("http://schemas.microsoft.com/office/drawing/2014/chart", "spPr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2014/chart", "spPr"));
         }
 
         /// <summary>
@@ -929,8 +929,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Charts.UnsignedIntegerType? UnsignedIntegerType
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UnsignedIntegerType>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UnsignedIntegerType>(new("http://schemas.microsoft.com/office/drawing/2014/chart", "explosion"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2014/chart", "explosion"));
         }
 
         /// <summary>
@@ -942,8 +942,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Charts.InvertIfNegativeBoolean? InvertIfNegativeBoolean
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.InvertIfNegativeBoolean>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.InvertIfNegativeBoolean>(new("http://schemas.microsoft.com/office/drawing/2014/chart", "invertIfNegative"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2014/chart", "invertIfNegative"));
         }
 
         /// <summary>
@@ -955,8 +955,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Charts.Bubble3DBoolean? Bubble3DBoolean
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.Bubble3DBoolean>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.Bubble3DBoolean>(new("http://schemas.microsoft.com/office/drawing/2014/chart", "bubble3D"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2014/chart", "bubble3D"));
         }
 
         /// <summary>
@@ -968,8 +968,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Charts.Marker? Marker
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.Marker>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.Marker>(new("http://schemas.microsoft.com/office/drawing/2014/chart", "marker"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2014/chart", "marker"));
         }
 
         /// <summary>
@@ -981,8 +981,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Charts.DLbl? DLbl
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.DLbl>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.DLbl>(new("http://schemas.microsoft.com/office/drawing/2014/chart", "dLbl"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2014/chart", "dLbl"));
         }
 
         /// <inheritdoc/>
@@ -1047,10 +1047,10 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.FormatCode>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.FormatCode), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumericPoint), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "formatCode"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ptCount"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "pt"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst"), 0, 1)
             };
         }
 
@@ -1063,8 +1063,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.FormatCode? FormatCode
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.FormatCode>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.FormatCode>(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "formatCode"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/chart", "formatCode"));
         }
 
         /// <summary>
@@ -1076,8 +1076,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PointCount? PointCount
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ptCount"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ptCount"));
         }
 
         /// <inheritdoc/>
@@ -1136,7 +1136,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.NumberDataType>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.NumberDataType), 1, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2014/chart", "numCache"), 1, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -1149,8 +1149,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Charts.NumberDataType? NumberDataType
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.NumberDataType>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.NumberDataType>(new("http://schemas.microsoft.com/office/drawing/2014/chart", "numCache"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2014/chart", "numCache"));
         }
 
         /// <inheritdoc/>
@@ -1213,9 +1213,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringPoint), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ptCount"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "pt"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst"), 0, 1)
             };
         }
 
@@ -1228,8 +1228,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PointCount? PointCount
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ptCount"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ptCount"));
         }
 
         /// <inheritdoc/>
@@ -1288,7 +1288,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.StringDataType>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.StringDataType), 1, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2014/chart", "strCache"), 1, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -1301,8 +1301,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Charts.StringDataType? StringDataType
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.StringDataType>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.StringDataType>(new("http://schemas.microsoft.com/office/drawing/2014/chart", "strCache"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2014/chart", "strCache"));
         }
 
         /// <inheritdoc/>
@@ -1365,9 +1365,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Level), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ptCount"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "lvl"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst"), 0, 1)
             };
         }
 
@@ -1380,8 +1380,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PointCount? PointCount
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>(new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ptCount"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ptCount"));
         }
 
         /// <inheritdoc/>
@@ -1440,7 +1440,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.MultiLvlStrData>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.MultiLvlStrData), 1, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2014/chart", "multiLvlStrCache"), 1, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -1453,8 +1453,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Charts.MultiLvlStrData? MultiLvlStrData
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.MultiLvlStrData>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.MultiLvlStrData>(new("http://schemas.microsoft.com/office/drawing/2014/chart", "multiLvlStrCache"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2014/chart", "multiLvlStrCache"));
         }
 
         /// <inheritdoc/>
@@ -1631,8 +1631,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.XsdunsignedInt>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.XsdunsignedInt), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueID), 1, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2014/chart", "ptidx"), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2014/chart", "uniqueID"), 1, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -1645,8 +1645,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Charts.XsdunsignedInt? XsdunsignedInt
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.XsdunsignedInt>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.XsdunsignedInt>(new("http://schemas.microsoft.com/office/drawing/2014/chart", "ptidx"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2014/chart", "ptidx"));
         }
 
         /// <summary>
@@ -1658,8 +1658,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueID? UniqueID
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueID>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueID>(new("http://schemas.microsoft.com/office/drawing/2014/chart", "uniqueID"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2014/chart", "uniqueID"));
         }
 
         /// <inheritdoc/>

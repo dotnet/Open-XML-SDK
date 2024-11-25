@@ -71,8 +71,8 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible), 0, 0, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2018/wordml/cex", "commentExtensible"), 0, 0, version: FileFormatVersions.Office2021),
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2018/wordml/cex", "extLst"), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -217,7 +217,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2018/wordml/cex", "extLst"), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -230,8 +230,8 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList>(new("http://schemas.microsoft.com/office/word/2018/wordml/cex", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2018/wordml/cex", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -290,7 +290,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Word.ExtensionList.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Word.ExtensionList.Extension), 0, 0, version: FileFormatVersions.Office2021)
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2018/wordml", "ext"), 0, 0, version: FileFormatVersions.Office2021)
             };
         }
 

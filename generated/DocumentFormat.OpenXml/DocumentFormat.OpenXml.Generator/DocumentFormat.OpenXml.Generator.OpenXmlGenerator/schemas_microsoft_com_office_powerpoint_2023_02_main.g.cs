@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeACB>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeACB), 1, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2023/02/main", "type"), 1, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -82,8 +82,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeACB? PlaceholderTypeACB
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeACB>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeACB>(new("http://schemas.microsoft.com/office/powerpoint/2023/02/main", "type"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2023/02/main", "type"));
         }
 
         /// <inheritdoc/>
@@ -216,8 +216,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.CameoEmpty), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.UnknownEmpty), 1, 1, version: FileFormatVersions.Microsoft365)
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2023/02/main", "cameo"), 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2023/02/main", "unknown"), 1, 1, version: FileFormatVersions.Microsoft365)
                 }
             };
         }
@@ -231,8 +231,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.CameoEmpty? CameoEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.CameoEmpty>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.CameoEmpty>(new("http://schemas.microsoft.com/office/powerpoint/2023/02/main", "cameo"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2023/02/main", "cameo"));
         }
 
         /// <summary>
@@ -244,8 +244,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.UnknownEmpty? UnknownEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.UnknownEmpty>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.UnknownEmpty>(new("http://schemas.microsoft.com/office/powerpoint/2023/02/main", "unknown"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2023/02/main", "unknown"));
         }
 
         /// <inheritdoc/>

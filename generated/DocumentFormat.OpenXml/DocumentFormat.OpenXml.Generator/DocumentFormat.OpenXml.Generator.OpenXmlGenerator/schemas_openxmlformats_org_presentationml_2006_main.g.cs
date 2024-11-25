@@ -891,7 +891,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -904,8 +904,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -967,8 +967,8 @@ namespace DocumentFormat.OpenXml.Presentation
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.MasterColorMapping), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.OverrideColorMapping), 1, 1)
+                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "masterClrMapping"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "overrideClrMapping"), 1, 1)
                 }
             };
         }
@@ -982,8 +982,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.MasterColorMapping? MasterColorMapping
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.MasterColorMapping>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.MasterColorMapping>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "masterClrMapping"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "masterClrMapping"));
         }
 
         /// <summary>
@@ -995,8 +995,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.OverrideColorMapping? OverrideColorMapping
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.OverrideColorMapping>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.OverrideColorMapping>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "overrideClrMapping"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "overrideClrMapping"));
         }
 
         /// <inheritdoc/>
@@ -1084,22 +1084,22 @@ namespace DocumentFormat.OpenXml.Presentation
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "noFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "solidFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "gradFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "blipFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "pattFill"), 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectLst"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectDag"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -1187,12 +1187,12 @@ namespace DocumentFormat.OpenXml.Presentation
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"), 1, 1)
                     }
                 }
             };
@@ -1207,8 +1207,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"));
         }
 
         /// <summary>
@@ -1220,8 +1220,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"));
         }
 
         /// <summary>
@@ -1233,8 +1233,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"));
         }
 
         /// <summary>
@@ -1246,8 +1246,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"));
         }
 
         /// <summary>
@@ -1259,8 +1259,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"));
         }
 
         /// <summary>
@@ -1272,8 +1272,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"));
         }
 
         /// <inheritdoc/>
@@ -1334,8 +1334,8 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskDetails>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskDetails), 0, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reactions), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "taskDetails"), 0, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/03/main", "reactions"), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -1348,8 +1348,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskDetails? TaskDetails
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskDetails>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskDetails>(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "taskDetails"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "taskDetails"));
         }
 
         /// <summary>
@@ -1361,8 +1361,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reactions? Reactions
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reactions>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reactions>(new("http://schemas.microsoft.com/office/powerpoint/2022/03/main", "reactions"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2022/03/main", "reactions"));
         }
 
         /// <inheritdoc/>
@@ -1420,7 +1420,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CommentAuthor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommentAuthor), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cmAuthor"), 0, 0)
             };
         }
 
@@ -1510,7 +1510,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Comment>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Comment), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cm"), 0, 0)
             };
         }
 
@@ -1696,10 +1696,10 @@ namespace DocumentFormat.OpenXml.Presentation
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.OleObjectEmbed), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.OleObjectLink), 1, 1)
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "embed"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "link"), 1, 1)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Picture), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "pic"), 0, 1)
             };
             builder.AddConstraint(new RelationshipExistConstraint(builder.CreateQName("r:id")));
         }
@@ -1921,20 +1921,20 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("conformance", a => a.Conformance);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideMasterIdList), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesMasterIdList), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HandoutMasterIdList), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideIdList), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideSize), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesSize), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.EmbeddedFontList), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomShowList), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PhotoAlbum), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomerDataList), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Kinsoku), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.DefaultTextStyle), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ModificationVerifier), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PresentationExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldMasterIdLst"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "notesMasterIdLst"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "handoutMasterIdLst"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldIdLst"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldSz"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "notesSz"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "embeddedFontLst"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "custShowLst"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "photoAlbum"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "custDataLst"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "kinsoku"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "defaultTextStyle"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "modifyVerifier"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("p:firstSlideNum"), true, 0, true, 9999, true) { Application = ApplicationType.PowerPoint });
         }
@@ -1948,8 +1948,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.SlideMasterIdList? SlideMasterIdList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideMasterIdList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideMasterIdList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldMasterIdLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldMasterIdLst"));
         }
 
         /// <summary>
@@ -1961,8 +1961,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NotesMasterIdList? NotesMasterIdList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NotesMasterIdList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.NotesMasterIdList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "notesMasterIdLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "notesMasterIdLst"));
         }
 
         /// <summary>
@@ -1974,8 +1974,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.HandoutMasterIdList? HandoutMasterIdList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.HandoutMasterIdList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.HandoutMasterIdList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "handoutMasterIdLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "handoutMasterIdLst"));
         }
 
         /// <summary>
@@ -1987,8 +1987,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.SlideIdList? SlideIdList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideIdList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideIdList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldIdLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldIdLst"));
         }
 
         /// <summary>
@@ -2000,8 +2000,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.SlideSize? SlideSize
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideSize>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideSize>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldSz"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldSz"));
         }
 
         /// <summary>
@@ -2013,8 +2013,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NotesSize? NotesSize
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NotesSize>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.NotesSize>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "notesSz"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "notesSz"));
         }
 
         /// <summary>
@@ -2026,8 +2026,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.EmbeddedFontList? EmbeddedFontList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.EmbeddedFontList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.EmbeddedFontList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "embeddedFontLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "embeddedFontLst"));
         }
 
         /// <summary>
@@ -2039,8 +2039,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CustomShowList? CustomShowList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CustomShowList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CustomShowList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "custShowLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "custShowLst"));
         }
 
         /// <summary>
@@ -2052,8 +2052,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.PhotoAlbum? PhotoAlbum
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.PhotoAlbum>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.PhotoAlbum>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "photoAlbum"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "photoAlbum"));
         }
 
         /// <summary>
@@ -2065,8 +2065,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CustomerDataList? CustomerDataList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CustomerDataList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CustomerDataList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "custDataLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "custDataLst"));
         }
 
         /// <summary>
@@ -2078,8 +2078,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Kinsoku? Kinsoku
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Kinsoku>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.Kinsoku>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "kinsoku"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "kinsoku"));
         }
 
         /// <summary>
@@ -2091,8 +2091,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.DefaultTextStyle? DefaultTextStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.DefaultTextStyle>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.DefaultTextStyle>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "defaultTextStyle"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "defaultTextStyle"));
         }
 
         /// <summary>
@@ -2104,8 +2104,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ModificationVerifier? ModificationVerifier
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ModificationVerifier>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ModificationVerifier>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "modifyVerifier"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "modifyVerifier"));
         }
 
         /// <summary>
@@ -2117,8 +2117,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.PresentationExtensionList? PresentationExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.PresentationExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.PresentationExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -2217,12 +2217,12 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.WebProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HtmlPublishProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.WebProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PrintingProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShowProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorMostRecentlyUsed), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "htmlPubPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "webPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "prnPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "showPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "clrMru"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -2235,8 +2235,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.HtmlPublishProperties? HtmlPublishProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.HtmlPublishProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.HtmlPublishProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "htmlPubPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "htmlPubPr"));
         }
 
         /// <summary>
@@ -2248,8 +2248,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.WebProperties? WebProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.WebProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.WebProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "webPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "webPr"));
         }
 
         /// <summary>
@@ -2261,8 +2261,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.PrintingProperties? PrintingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.PrintingProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.PrintingProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "prnPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "prnPr"));
         }
 
         /// <summary>
@@ -2274,8 +2274,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ShowProperties? ShowProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ShowProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ShowProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "showPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "showPr"));
         }
 
         /// <summary>
@@ -2287,8 +2287,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ColorMostRecentlyUsed? ColorMostRecentlyUsed
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ColorMostRecentlyUsed>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ColorMostRecentlyUsed>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "clrMru"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "clrMru"));
         }
 
         /// <summary>
@@ -2300,8 +2300,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtensionList? PresentationPropertiesExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -2432,17 +2432,17 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("show", a => a.Show);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cSld"), 1, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorMapOverride), 0, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "clrMapOvr"), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Transition), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Timing), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "transition"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "timing"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new RelationshipExistConstraint(builder.CreateQName("r:id")));
         }
@@ -2456,8 +2456,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonSlideData? CommonSlideData
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideData>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cSld"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cSld"));
         }
 
         /// <summary>
@@ -2469,8 +2469,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ColorMapOverride? ColorMapOverride
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ColorMapOverride>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ColorMapOverride>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "clrMapOvr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "clrMapOvr"));
         }
 
         /// <summary>
@@ -2482,8 +2482,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Transition? Transition
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Transition>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.Transition>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "transition"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "transition"));
         }
 
         /// <summary>
@@ -2495,8 +2495,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Timing? Timing
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Timing>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.Timing>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "timing"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "timing"));
         }
 
         /// <summary>
@@ -2508,8 +2508,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.SlideExtensionList? SlideExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -2678,18 +2678,18 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("userDrawn", a => a.UserDrawn);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cSld"), 1, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorMapOverride), 0, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "clrMapOvr"), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Transition), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Timing), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HeaderFooter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideLayoutExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "transition"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "timing"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "hf"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -2702,8 +2702,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonSlideData? CommonSlideData
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideData>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cSld"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cSld"));
         }
 
         /// <summary>
@@ -2715,8 +2715,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ColorMapOverride? ColorMapOverride
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ColorMapOverride>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ColorMapOverride>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "clrMapOvr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "clrMapOvr"));
         }
 
         /// <summary>
@@ -2728,8 +2728,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Transition? Transition
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Transition>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.Transition>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "transition"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "transition"));
         }
 
         /// <summary>
@@ -2741,8 +2741,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Timing? Timing
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Timing>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.Timing>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "timing"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "timing"));
         }
 
         /// <summary>
@@ -2754,8 +2754,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.HeaderFooter? HeaderFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.HeaderFooter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.HeaderFooter>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "hf"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "hf"));
         }
 
         /// <summary>
@@ -2767,8 +2767,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.SlideLayoutExtensionList? SlideLayoutExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideLayoutExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideLayoutExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -2883,20 +2883,20 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("preserve", a => a.Preserve);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cSld"), 1, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorMap), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "clrMap"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideLayoutIdList), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Transition), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Timing), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HeaderFooter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TextStyles), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideMasterExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldLayoutIdLst"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "transition"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "timing"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "hf"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "txStyles"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -2909,8 +2909,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonSlideData? CommonSlideData
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideData>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cSld"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cSld"));
         }
 
         /// <summary>
@@ -2922,8 +2922,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ColorMap? ColorMap
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ColorMap>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ColorMap>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "clrMap"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "clrMap"));
         }
 
         /// <summary>
@@ -2935,8 +2935,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.SlideLayoutIdList? SlideLayoutIdList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideLayoutIdList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideLayoutIdList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldLayoutIdLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldLayoutIdLst"));
         }
 
         /// <summary>
@@ -2948,8 +2948,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Transition? Transition
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Transition>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.Transition>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "transition"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "transition"));
         }
 
         /// <summary>
@@ -2961,8 +2961,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Timing? Timing
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Timing>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.Timing>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "timing"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "timing"));
         }
 
         /// <summary>
@@ -2974,8 +2974,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.HeaderFooter? HeaderFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.HeaderFooter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.HeaderFooter>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "hf"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "hf"));
         }
 
         /// <summary>
@@ -2987,8 +2987,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.TextStyles? TextStyles
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.TextStyles>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.TextStyles>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "txStyles"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "txStyles"));
         }
 
         /// <summary>
@@ -3000,8 +3000,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.SlideMasterExtensionList? SlideMasterExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideMasterExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideMasterExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -3096,16 +3096,16 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.HeaderFooter>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cSld"), 1, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorMap), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "clrMap"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HeaderFooter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HandoutMasterExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "hf"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -3118,8 +3118,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonSlideData? CommonSlideData
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideData>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cSld"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cSld"));
         }
 
         /// <summary>
@@ -3131,8 +3131,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ColorMap? ColorMap
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ColorMap>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ColorMap>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "clrMap"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "clrMap"));
         }
 
         /// <summary>
@@ -3144,8 +3144,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.HeaderFooter? HeaderFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.HeaderFooter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.HeaderFooter>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "hf"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "hf"));
         }
 
         /// <summary>
@@ -3157,8 +3157,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.HandoutMasterExtensionList? HandoutMasterExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.HandoutMasterExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.HandoutMasterExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -3255,17 +3255,17 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.NotesMasterExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cSld"), 1, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorMap), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "clrMap"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HeaderFooter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesStyle), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesMasterExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "hf"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "notesStyle"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -3278,8 +3278,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonSlideData? CommonSlideData
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideData>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cSld"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cSld"));
         }
 
         /// <summary>
@@ -3291,8 +3291,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ColorMap? ColorMap
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ColorMap>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ColorMap>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "clrMap"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "clrMap"));
         }
 
         /// <summary>
@@ -3304,8 +3304,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.HeaderFooter? HeaderFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.HeaderFooter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.HeaderFooter>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "hf"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "hf"));
         }
 
         /// <summary>
@@ -3317,8 +3317,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NotesStyle? NotesStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NotesStyle>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.NotesStyle>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "notesStyle"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "notesStyle"));
         }
 
         /// <summary>
@@ -3330,8 +3330,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NotesMasterExtensionList? NotesMasterExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NotesMasterExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.NotesMasterExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -3447,15 +3447,15 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("showMasterPhAnim", a => a.ShowMasterPlaceholderAnimations);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideData), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cSld"), 1, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorMapOverride), 0, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "clrMapOvr"), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -3468,8 +3468,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonSlideData? CommonSlideData
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideData>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cSld"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cSld"));
         }
 
         /// <summary>
@@ -3481,8 +3481,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ColorMapOverride? ColorMapOverride
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ColorMapOverride>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ColorMapOverride>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "clrMapOvr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "clrMapOvr"));
         }
 
         /// <summary>
@@ -3494,8 +3494,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionListWithModification? ExtensionListWithModification
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -3627,7 +3627,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -3640,8 +3640,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -3730,7 +3730,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Tag>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Tag), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "tag"), 0, 0)
             };
         }
 
@@ -3860,14 +3860,14 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("showComments", a => a.ShowComments);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NormalViewProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideViewProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.OutlineViewProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesTextViewProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SorterViewProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesViewProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GridSpacing), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "normalViewPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "slideViewPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "outlineViewPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "notesTextViewPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sorterViewPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "notesViewPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "gridSpacing"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -3880,8 +3880,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NormalViewProperties? NormalViewProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NormalViewProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.NormalViewProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "normalViewPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "normalViewPr"));
         }
 
         /// <summary>
@@ -3893,8 +3893,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.SlideViewProperties? SlideViewProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideViewProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideViewProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "slideViewPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "slideViewPr"));
         }
 
         /// <summary>
@@ -3906,8 +3906,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.OutlineViewProperties? OutlineViewProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.OutlineViewProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.OutlineViewProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "outlineViewPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "outlineViewPr"));
         }
 
         /// <summary>
@@ -3919,8 +3919,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NotesTextViewProperties? NotesTextViewProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NotesTextViewProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.NotesTextViewProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "notesTextViewPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "notesTextViewPr"));
         }
 
         /// <summary>
@@ -3932,8 +3932,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.SorterViewProperties? SorterViewProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.SorterViewProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.SorterViewProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sorterViewPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "sorterViewPr"));
         }
 
         /// <summary>
@@ -3945,8 +3945,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NotesViewProperties? NotesViewProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NotesViewProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.NotesViewProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "notesViewPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "notesViewPr"));
         }
 
         /// <summary>
@@ -3958,8 +3958,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.GridSpacing? GridSpacing
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.GridSpacing>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.GridSpacing>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "gridSpacing"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "gridSpacing"));
         }
 
         /// <summary>
@@ -3971,8 +3971,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -4101,9 +4101,9 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualContentPartProperties), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.Transform2D), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionListModify), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "nvContentPartPr"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "xfrm"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "extLst"), 0, 1, version: FileFormatVersions.Office2010)
             };
             builder.AddConstraint(new RelationshipExistConstraint(builder.CreateQName("r:id")) { Version = FileFormatVersions.Office2010 });
         }
@@ -4117,8 +4117,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualContentPartProperties? NonVisualContentPartProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualContentPartProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualContentPartProperties>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "nvContentPartPr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "nvContentPartPr"));
         }
 
         /// <summary>
@@ -4130,8 +4130,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.Transform2D? Transform2D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.Transform2D>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.Transform2D>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "xfrm"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "xfrm"));
         }
 
         /// <summary>
@@ -4143,8 +4143,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionListModify? ExtensionListModify
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionListModify>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionListModify>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -4322,7 +4322,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("loop", a => a.Loop);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Sound), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "snd"), 1, 1)
             };
         }
 
@@ -4335,8 +4335,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Sound? Sound
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Sound>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.Sound>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "snd"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "snd"));
         }
 
         /// <inheritdoc/>
@@ -4492,11 +4492,11 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.BookmarkTarget>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideTarget), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SoundTarget), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShapeTarget), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.InkTarget), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.BookmarkTarget), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldTgt"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sndTgt"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "spTgt"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "inkTgt"), 1, 1),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "bmkTgt"), 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -4509,8 +4509,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.SlideTarget? SlideTarget
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideTarget>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideTarget>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldTgt"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldTgt"));
         }
 
         /// <summary>
@@ -4522,8 +4522,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.SoundTarget? SoundTarget
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.SoundTarget>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.SoundTarget>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sndTgt"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "sndTgt"));
         }
 
         /// <summary>
@@ -4535,8 +4535,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ShapeTarget? ShapeTarget
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeTarget>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeTarget>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "spTgt"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "spTgt"));
         }
 
         /// <summary>
@@ -4548,8 +4548,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.InkTarget? InkTarget
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.InkTarget>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.InkTarget>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "inkTgt"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "inkTgt"));
         }
 
         /// <summary>
@@ -4561,8 +4561,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.BookmarkTarget? BookmarkTarget
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.BookmarkTarget>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.BookmarkTarget>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "bmkTgt"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "bmkTgt"));
         }
 
         /// <inheritdoc/>
@@ -4700,9 +4700,9 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.SetSchema("p:cond");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TargetElement), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeNode), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RuntimeNodeTrigger), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "tgtEl"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "tn"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "rtn"), 1, 1)
             };
         }
 
@@ -4762,9 +4762,9 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.SetSchema("p:endSync");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TargetElement), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeNode), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RuntimeNodeTrigger), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "tgtEl"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "tn"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "rtn"), 1, 1)
             };
         }
 
@@ -4873,8 +4873,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.TargetElement? TargetElement
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.TargetElement>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.TargetElement>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "tgtEl"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "tgtEl"));
         }
 
         /// <summary>
@@ -4886,8 +4886,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.TimeNode? TimeNode
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.TimeNode>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.TimeNode>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "tn"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "tn"));
         }
 
         /// <summary>
@@ -4899,8 +4899,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.RuntimeNodeTrigger? RuntimeNodeTrigger
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.RuntimeNodeTrigger>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.RuntimeNodeTrigger>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "rtn"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "rtn"));
         }
     }
 
@@ -4955,7 +4955,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonTimeNode>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cTn"), 1, 1)
             };
         }
 
@@ -4968,8 +4968,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonTimeNode? CommonTimeNode
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonTimeNode>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonTimeNode>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cTn"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cTn"));
         }
 
         /// <inheritdoc/>
@@ -5071,9 +5071,9 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PreviousConditionList), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NextConditionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cTn"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "prevCondLst"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "nextCondLst"), 0, 1)
             };
         }
 
@@ -5086,8 +5086,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonTimeNode? CommonTimeNode
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonTimeNode>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonTimeNode>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cTn"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cTn"));
         }
 
         /// <summary>
@@ -5099,8 +5099,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.PreviousConditionList? PreviousConditionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.PreviousConditionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.PreviousConditionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "prevCondLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "prevCondLst"));
         }
 
         /// <summary>
@@ -5112,8 +5112,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NextConditionList? NextConditionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NextConditionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.NextConditionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "nextCondLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "nextCondLst"));
         }
 
         /// <inheritdoc/>
@@ -5171,7 +5171,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonTimeNode>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cTn"), 1, 1)
             };
         }
 
@@ -5184,8 +5184,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonTimeNode? CommonTimeNode
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonTimeNode>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonTimeNode>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cTn"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cTn"));
         }
 
         /// <inheritdoc/>
@@ -5325,8 +5325,8 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeAnimateValueList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cBhvr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "tavLst"), 0, 1)
             };
         }
 
@@ -5339,8 +5339,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonBehavior? CommonBehavior
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cBhvr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cBhvr"));
         }
 
         /// <summary>
@@ -5352,8 +5352,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.TimeAnimateValueList? TimeAnimateValueList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.TimeAnimateValueList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.TimeAnimateValueList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "tavLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "tavLst"));
         }
 
         /// <inheritdoc/>
@@ -5446,10 +5446,10 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ByColor), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.FromColor), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ToColor), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cBhvr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "by"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "from"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "to"), 0, 1)
             };
         }
 
@@ -5462,8 +5462,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonBehavior? CommonBehavior
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cBhvr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cBhvr"));
         }
 
         /// <summary>
@@ -5475,8 +5475,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ByColor? ByColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ByColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ByColor>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "by"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "by"));
         }
 
         /// <summary>
@@ -5488,8 +5488,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.FromColor? FromColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.FromColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.FromColor>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "from"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "from"));
         }
 
         /// <summary>
@@ -5501,8 +5501,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ToColor? ToColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ToColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ToColor>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "to"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "to"));
         }
 
         /// <inheritdoc/>
@@ -5599,8 +5599,8 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("prLst", a => a.PropertyList);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Progress), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cBhvr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "progress"), 0, 1)
             };
         }
 
@@ -5613,8 +5613,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonBehavior? CommonBehavior
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cBhvr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cBhvr"));
         }
 
         /// <summary>
@@ -5626,8 +5626,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Progress? Progress
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Progress>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.Progress>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "progress"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "progress"));
         }
 
         /// <inheritdoc/>
@@ -5773,11 +5773,11 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ByPosition), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.FromPosition), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ToPosition), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RotationCenter), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cBhvr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "by"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "from"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "to"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "rCtr"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("p:rAng"), true, -2147483554, true, 2147483554, true) { Application = ApplicationType.PowerPoint });
         }
@@ -5791,8 +5791,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonBehavior? CommonBehavior
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cBhvr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cBhvr"));
         }
 
         /// <summary>
@@ -5804,8 +5804,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ByPosition? ByPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ByPosition>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ByPosition>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "by"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "by"));
         }
 
         /// <summary>
@@ -5817,8 +5817,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.FromPosition? FromPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.FromPosition>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.FromPosition>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "from"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "from"));
         }
 
         /// <summary>
@@ -5830,8 +5830,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ToPosition? ToPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ToPosition>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ToPosition>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "to"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "to"));
         }
 
         /// <summary>
@@ -5843,8 +5843,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.RotationCenter? RotationCenter
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.RotationCenter>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.RotationCenter>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "rCtr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "rCtr"));
         }
 
         /// <inheritdoc/>
@@ -5954,7 +5954,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cBhvr"), 1, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("p:by"), true, -2147483554, true, 2147483554, true) { Application = ApplicationType.PowerPoint });
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("p:from"), true, -2147483554, true, 2147483554, true) { Application = ApplicationType.PowerPoint });
@@ -5970,8 +5970,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonBehavior? CommonBehavior
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cBhvr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cBhvr"));
         }
 
         /// <inheritdoc/>
@@ -6065,10 +6065,10 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ByPosition), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.FromPosition), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ToPosition), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cBhvr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "by"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "from"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "to"), 0, 1)
             };
         }
 
@@ -6081,8 +6081,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonBehavior? CommonBehavior
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cBhvr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cBhvr"));
         }
 
         /// <summary>
@@ -6094,8 +6094,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ByPosition? ByPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ByPosition>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ByPosition>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "by"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "by"));
         }
 
         /// <summary>
@@ -6107,8 +6107,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.FromPosition? FromPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.FromPosition>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.FromPosition>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "from"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "from"));
         }
 
         /// <summary>
@@ -6120,8 +6120,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ToPosition? ToPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ToPosition>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ToPosition>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "to"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "to"));
         }
 
         /// <inheritdoc/>
@@ -6205,7 +6205,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("cmd", a => a.CommandName);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cBhvr"), 1, 1)
             };
         }
 
@@ -6218,8 +6218,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonBehavior? CommonBehavior
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cBhvr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cBhvr"));
         }
 
         /// <inheritdoc/>
@@ -6279,8 +6279,8 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonBehavior), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ToVariantValue), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cBhvr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "to"), 0, 1)
             };
         }
 
@@ -6293,8 +6293,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonBehavior? CommonBehavior
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cBhvr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cBhvr"));
         }
 
         /// <summary>
@@ -6306,8 +6306,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ToVariantValue? ToVariantValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ToVariantValue>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ToVariantValue>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "to"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "to"));
         }
 
         /// <inheritdoc/>
@@ -6377,7 +6377,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("isNarration", a => a.IsNarration);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonMediaNode), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cMediaNode"), 1, 1)
             };
         }
 
@@ -6390,8 +6390,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonMediaNode? CommonMediaNode
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonMediaNode>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonMediaNode>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cMediaNode"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cMediaNode"));
         }
 
         /// <inheritdoc/>
@@ -6461,7 +6461,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("fullScrn", a => a.FullScreen);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonMediaNode), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cMediaNode"), 1, 1)
             };
         }
 
@@ -6474,8 +6474,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonMediaNode? CommonMediaNode
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonMediaNode>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonMediaNode>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cMediaNode"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cMediaNode"));
         }
 
         /// <inheritdoc/>
@@ -6839,12 +6839,12 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.StartConditionList), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.EndConditionList), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.EndSync), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Iterate), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ChildTimeNodeList), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SubTimeNodeList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "stCondLst"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "endCondLst"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "endSync"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "iterate"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "childTnLst"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "subTnLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("p:spd"), false, new string[] { "0" }) { Application = ApplicationType.PowerPoint });
         }
@@ -6858,8 +6858,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.StartConditionList? StartConditionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.StartConditionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.StartConditionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "stCondLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "stCondLst"));
         }
 
         /// <summary>
@@ -6871,8 +6871,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.EndConditionList? EndConditionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.EndConditionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.EndConditionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "endCondLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "endCondLst"));
         }
 
         /// <summary>
@@ -6884,8 +6884,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.EndSync? EndSync
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.EndSync>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.EndSync>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "endSync"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "endSync"));
         }
 
         /// <summary>
@@ -6897,8 +6897,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Iterate? Iterate
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Iterate>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.Iterate>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "iterate"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "iterate"));
         }
 
         /// <summary>
@@ -6910,8 +6910,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ChildTimeNodeList? ChildTimeNodeList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ChildTimeNodeList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ChildTimeNodeList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "childTnLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "childTnLst"));
         }
 
         /// <summary>
@@ -6923,8 +6923,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.SubTimeNodeList? SubTimeNodeList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.SubTimeNodeList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.SubTimeNodeList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "subTnLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "subTnLst"));
         }
 
         /// <inheritdoc/>
@@ -6981,7 +6981,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.SetSchema("p:prevCondLst");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Condition), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cond"), 1, 0)
             };
         }
 
@@ -7039,7 +7039,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.SetSchema("p:nextCondLst");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Condition), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cond"), 1, 0)
             };
         }
 
@@ -7097,7 +7097,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.SetSchema("p:stCondLst");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Condition), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cond"), 1, 0)
             };
         }
 
@@ -7155,7 +7155,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.SetSchema("p:endCondLst");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Condition), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cond"), 1, 0)
             };
         }
 
@@ -7339,7 +7339,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.AttributeName>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AttributeName), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "attrName"), 1, 0)
             };
         }
 
@@ -7562,12 +7562,12 @@ namespace DocumentFormat.OpenXml.Presentation
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"), 1, 1)
                     }
                 }
             };
@@ -7636,12 +7636,12 @@ namespace DocumentFormat.OpenXml.Presentation
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"), 1, 1)
                     }
                 }
             };
@@ -7720,8 +7720,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"));
         }
 
         /// <summary>
@@ -7733,8 +7733,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"));
         }
 
         /// <summary>
@@ -7746,8 +7746,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"));
         }
 
         /// <summary>
@@ -7759,8 +7759,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"));
         }
 
         /// <summary>
@@ -7772,8 +7772,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"));
         }
 
         /// <summary>
@@ -7785,8 +7785,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"));
         }
     }
 
@@ -7871,7 +7871,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("fmla", a => a.Fomula);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.VariantValue), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "val"), 0, 1)
             };
         }
 
@@ -7884,8 +7884,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.VariantValue? VariantValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.VariantValue>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.VariantValue>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "val"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "val"));
         }
 
         /// <inheritdoc/>
@@ -8187,9 +8187,9 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TargetElement), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AttributeNameList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cTn"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "tgtEl"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "attrNameLst"), 0, 1)
             };
         }
 
@@ -8202,8 +8202,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonTimeNode? CommonTimeNode
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonTimeNode>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonTimeNode>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cTn"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cTn"));
         }
 
         /// <summary>
@@ -8215,8 +8215,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.TargetElement? TargetElement
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.TargetElement>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.TargetElement>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "tgtEl"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "tgtEl"));
         }
 
         /// <summary>
@@ -8228,8 +8228,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.AttributeNameList? AttributeNameList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.AttributeNameList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.AttributeNameList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "attrNameLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "attrNameLst"));
         }
 
         /// <inheritdoc/>
@@ -8287,7 +8287,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.FloatVariantValue>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.FloatVariantValue), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "fltVal"), 1, 1)
             };
         }
 
@@ -8300,8 +8300,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.FloatVariantValue? FloatVariantValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.FloatVariantValue>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.FloatVariantValue>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "fltVal"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "fltVal"));
         }
 
         /// <inheritdoc/>
@@ -8362,11 +8362,11 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.SetSchema("p:to");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BooleanVariantValue), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.IntegerVariantValue), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.FloatVariantValue), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.StringVariantValue), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorValue), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "boolVal"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "intVal"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "fltVal"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "strVal"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "clrVal"), 1, 1)
             };
         }
 
@@ -8428,11 +8428,11 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.SetSchema("p:val");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BooleanVariantValue), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.IntegerVariantValue), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.FloatVariantValue), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.StringVariantValue), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ColorValue), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "boolVal"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "intVal"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "fltVal"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "strVal"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "clrVal"), 1, 1)
             };
         }
 
@@ -8507,8 +8507,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.BooleanVariantValue? BooleanVariantValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.BooleanVariantValue>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.BooleanVariantValue>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "boolVal"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "boolVal"));
         }
 
         /// <summary>
@@ -8520,8 +8520,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.IntegerVariantValue? IntegerVariantValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.IntegerVariantValue>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.IntegerVariantValue>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "intVal"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "intVal"));
         }
 
         /// <summary>
@@ -8533,8 +8533,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.FloatVariantValue? FloatVariantValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.FloatVariantValue>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.FloatVariantValue>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "fltVal"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "fltVal"));
         }
 
         /// <summary>
@@ -8546,8 +8546,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.StringVariantValue? StringVariantValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.StringVariantValue>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.StringVariantValue>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "strVal"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "strVal"));
         }
 
         /// <summary>
@@ -8559,8 +8559,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ColorValue? ColorValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ColorValue>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ColorValue>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "clrVal"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "clrVal"));
         }
     }
 
@@ -8665,8 +8665,8 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("showWhenStopped", a => a.ShowWhenStopped);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonTimeNode), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TargetElement), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cTn"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "tgtEl"), 1, 1)
             };
         }
 
@@ -8679,8 +8679,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonTimeNode? CommonTimeNode
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonTimeNode>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonTimeNode>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cTn"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cTn"));
         }
 
         /// <summary>
@@ -8692,8 +8692,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.TargetElement? TargetElement
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.TargetElement>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.TargetElement>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "tgtEl"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "tgtEl"));
         }
 
         /// <inheritdoc/>
@@ -8751,7 +8751,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ParallelTimeNode>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ParallelTimeNode), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "par"), 1, 1)
             };
         }
 
@@ -8764,8 +8764,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ParallelTimeNode? ParallelTimeNode
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ParallelTimeNode>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ParallelTimeNode>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "par"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "par"));
         }
 
         /// <inheritdoc/>
@@ -8835,7 +8835,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("lvl", a => a.Level);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeNodeList), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "tnLst"), 1, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("p:lvl"), true, double.NegativeInfinity, true, 9, true) { Application = ApplicationType.PowerPoint });
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName("p:lvl"), true, builder.CreateQName("p:tmplLst")) { Application = ApplicationType.PowerPoint });
@@ -8850,8 +8850,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.TimeNodeList? TimeNodeList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.TimeNodeList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.TimeNodeList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "tnLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "tnLst"));
         }
 
         /// <inheritdoc/>
@@ -8909,7 +8909,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Template>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Template), 0, 9)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "tmpl"), 0, 9)
             };
         }
 
@@ -8970,8 +8970,8 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BuildDiagram>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BuildDiagram), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BuildChart), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "bldDgm"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "bldChart"), 1, 1)
             };
         }
 
@@ -8984,8 +8984,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.BuildDiagram? BuildDiagram
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.BuildDiagram>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.BuildDiagram>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "bldDgm"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "bldDgm"));
         }
 
         /// <summary>
@@ -8997,8 +8997,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.BuildChart? BuildChart
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.BuildChart>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.BuildChart>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "bldChart"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "bldChart"));
         }
 
         /// <inheritdoc/>
@@ -9180,7 +9180,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TemplateList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "tmplLst"), 0, 1)
             };
             builder.AddConstraint(new ReferenceExistConstraint(builder.CreateQName("p:spid"), ".", builder.CreateQName("p:cNvPr"), "p:cNvPr", builder.CreateQName("p:id")) { Application = ApplicationType.PowerPoint });
         }
@@ -9194,8 +9194,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.TemplateList? TemplateList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.TemplateList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.TemplateList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "tmplLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "tmplLst"));
         }
 
         /// <inheritdoc/>
@@ -9475,8 +9475,8 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("uiExpand", a => a.UiExpand);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildAsOne), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildSubElement), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "bldAsOne"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "bldSub"), 1, 1)
             };
             builder.AddConstraint(new ReferenceExistConstraint(builder.CreateQName("p:spid"), ".", builder.CreateQName("p:cNvPr"), "p:cNvPr", builder.CreateQName("p:id")) { Application = ApplicationType.PowerPoint });
             builder.AddConstraint(new ReferenceExistConstraint(builder.CreateQName("p:grpId"), ".", builder.CreateQName("p:cTn"), "p:cTn", builder.CreateQName("p:grpId")) { Application = ApplicationType.PowerPoint });
@@ -9491,8 +9491,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.BuildAsOne? BuildAsOne
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.BuildAsOne>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.BuildAsOne>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "bldAsOne"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "bldAsOne"));
         }
 
         /// <summary>
@@ -9504,8 +9504,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.BuildSubElement? BuildSubElement
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.BuildSubElement>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.BuildSubElement>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "bldSub"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "bldSub"));
         }
 
         /// <inheritdoc/>
@@ -9569,10 +9569,10 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.BuildOleChart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildParagraph), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildDiagram), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildOleChart), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildGraphics), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "bldP"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "bldDgm"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "bldOleChart"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "bldGraphic"), 1, 1)
             };
         }
 
@@ -9647,7 +9647,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ext"), 0, 0)
                     }
                 }
             };
@@ -9710,8 +9710,8 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.RgbColor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RgbColor), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HslColor), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "rgb"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "hsl"), 1, 1)
             };
         }
 
@@ -9724,8 +9724,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.RgbColor? RgbColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.RgbColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.RgbColor>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "rgb"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "rgb"));
         }
 
         /// <summary>
@@ -9737,8 +9737,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.HslColor? HslColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.HslColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.HslColor>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "hsl"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "hsl"));
         }
 
         /// <inheritdoc/>
@@ -9800,12 +9800,12 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.SetSchema("p:from");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"), 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -9868,12 +9868,12 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.SetSchema("p:to");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"), 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -9950,8 +9950,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"));
         }
 
         /// <summary>
@@ -9963,8 +9963,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"));
         }
 
         /// <summary>
@@ -9976,8 +9976,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"));
         }
 
         /// <summary>
@@ -9989,8 +9989,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"));
         }
 
         /// <summary>
@@ -10002,8 +10002,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"));
         }
 
         /// <summary>
@@ -10015,8 +10015,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"));
         }
     }
 
@@ -10269,7 +10269,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommentAuthorExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName("p:id"), false, null));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("p:id"), true, 0, true, double.PositiveInfinity, true));
@@ -10285,8 +10285,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommentAuthorExtensionList? CommentAuthorExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommentAuthorExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommentAuthorExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -10388,9 +10388,9 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Position), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Text), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommentExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "pos"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "text"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -10403,8 +10403,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Position? Position
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Position>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.Position>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "pos"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "pos"));
         }
 
         /// <summary>
@@ -10416,8 +10416,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Text? Text
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Text>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.Text>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "text"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "text"));
         }
 
         /// <summary>
@@ -10429,8 +10429,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommentExtensionList? CommentExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommentExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommentExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -10492,7 +10492,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ext"), 0, 0)
                     }
                 }
             };
@@ -10634,8 +10634,8 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Picture), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "pic"), 0, 1)
             };
         }
 
@@ -10648,8 +10648,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <summary>
@@ -10661,8 +10661,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Picture? Picture
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Picture>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.Picture>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "pic"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "pic"));
         }
 
         /// <inheritdoc/>
@@ -10753,7 +10753,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName(":id"), true, null));
             builder.AddConstraint(new RelationshipExistConstraint(builder.CreateQName("r:id")));
@@ -10768,8 +10768,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -10859,7 +10859,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName(":id"), false, null));
             builder.AddConstraint(new RelationshipExistConstraint(builder.CreateQName("r:id")));
@@ -10874,8 +10874,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -10951,7 +10951,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new RelationshipExistConstraint(builder.CreateQName("r:id")));
         }
@@ -10965,8 +10965,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -11042,7 +11042,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new RelationshipExistConstraint(builder.CreateQName("r:id")));
         }
@@ -11056,8 +11056,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -11329,11 +11329,11 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.BoldItalicFont>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Font), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RegularFont), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BoldFont), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ItalicFont), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BoldItalicFont), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "font"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "regular"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "bold"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "italic"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "boldItalic"), 0, 1)
             };
         }
 
@@ -11346,8 +11346,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Font? Font
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Font>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.Font>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "font"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "font"));
         }
 
         /// <summary>
@@ -11359,8 +11359,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.RegularFont? RegularFont
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.RegularFont>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.RegularFont>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "regular"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "regular"));
         }
 
         /// <summary>
@@ -11372,8 +11372,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.BoldFont? BoldFont
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.BoldFont>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.BoldFont>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "bold"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "bold"));
         }
 
         /// <summary>
@@ -11385,8 +11385,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ItalicFont? ItalicFont
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ItalicFont>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ItalicFont>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "italic"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "italic"));
         }
 
         /// <summary>
@@ -11398,8 +11398,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.BoldItalicFont? BoldItalicFont
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.BoldItalicFont>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.BoldItalicFont>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "boldItalic"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "boldItalic"));
         }
 
         /// <inheritdoc/>
@@ -11457,7 +11457,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideListEntry>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideListEntry), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sld"), 0, 0)
             };
         }
 
@@ -11547,8 +11547,8 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideList), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldLst"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName("p:id"), false, null) { Application = ApplicationType.PowerPoint });
         }
@@ -11562,8 +11562,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.SlideList? SlideList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.SlideList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldLst"));
         }
 
         /// <summary>
@@ -11575,8 +11575,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -11700,9 +11700,9 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("title", a => a.Title);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkClick"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkHover"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -11715,8 +11715,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick? HyperlinkOnClick
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkClick"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkClick"));
         }
 
         /// <summary>
@@ -11728,8 +11728,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover? HyperlinkOnHover
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkHover"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkHover"));
         }
 
         /// <summary>
@@ -11741,8 +11741,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -11814,8 +11814,8 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("txBox", a => a.TextBox);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeLocks), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "spLocks"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -11828,8 +11828,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ShapeLocks? ShapeLocks
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ShapeLocks>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ShapeLocks>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "spLocks"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "spLocks"));
         }
 
         /// <summary>
@@ -11841,8 +11841,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -11937,20 +11937,20 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("userDrawn", a => a.UserDrawn);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PlaceholderShape), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ph"), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AudioFromCD), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.WaveAudioFile), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AudioFromFile), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.VideoFromFile), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.QuickTimeFromFile), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "audioCd"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "wavAudioFile"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "audioFile"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "videoFile"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "quickTimeFile"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomerDataList), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "custDataLst"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -11963,8 +11963,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.PlaceholderShape? PlaceholderShape
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.PlaceholderShape>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.PlaceholderShape>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ph"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "ph"));
         }
 
         /// <inheritdoc/>
@@ -12026,9 +12026,9 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualShapeDrawingProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvSpPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvPr"), 1, 1)
             };
         }
 
@@ -12041,8 +12041,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvPr"));
         }
 
         /// <summary>
@@ -12054,8 +12054,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualShapeDrawingProperties? NonVisualShapeDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualShapeDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualShapeDrawingProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvSpPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvSpPr"));
         }
 
         /// <summary>
@@ -12067,8 +12067,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvPr"));
         }
 
         /// <inheritdoc/>
@@ -12169,39 +12169,39 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "xfrm"), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "custGeom"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstGeom"), 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "noFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "solidFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "gradFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "blipFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "pattFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "grpFill"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ln"), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectLst"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectDag"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scene3d"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sp3d"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -12214,8 +12214,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "xfrm"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "xfrm"));
         }
 
         /// <inheritdoc/>
@@ -12279,10 +12279,10 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectReference>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineReference), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FillReference), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectReference), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FontReference), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lnRef"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "fillRef"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectRef"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "fontRef"), 1, 1)
             };
         }
 
@@ -12295,8 +12295,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.LineReference? LineReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.LineReference>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.LineReference>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lnRef"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "lnRef"));
         }
 
         /// <summary>
@@ -12308,8 +12308,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.FillReference? FillReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.FillReference>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.FillReference>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "fillRef"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "fillRef"));
         }
 
         /// <summary>
@@ -12321,8 +12321,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.EffectReference? EffectReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectRef"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectRef"));
         }
 
         /// <summary>
@@ -12334,8 +12334,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.FontReference? FontReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.FontReference>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.FontReference>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "fontRef"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "fontRef"));
         }
 
         /// <inheritdoc/>
@@ -12397,9 +12397,9 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Paragraph>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ListStyle), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Paragraph), 1, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "bodyPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lstStyle"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "p"), 1, 0)
             };
         }
 
@@ -12412,8 +12412,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.BodyProperties? BodyProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "bodyPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "bodyPr"));
         }
 
         /// <summary>
@@ -12425,8 +12425,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ListStyle? ListStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lstStyle"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "lstStyle"));
         }
 
         /// <inheritdoc/>
@@ -12490,10 +12490,10 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.StartConnection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EndConnection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "cxnSpLocks"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "stCxn"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "endCxn"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -12506,8 +12506,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks? ConnectionShapeLocks
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "cxnSpLocks"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "cxnSpLocks"));
         }
 
         /// <summary>
@@ -12519,8 +12519,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.StartConnection? StartConnection
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.StartConnection>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.StartConnection>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "stCxn"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "stCxn"));
         }
 
         /// <summary>
@@ -12532,8 +12532,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.EndConnection? EndConnection
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.EndConnection>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.EndConnection>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "endCxn"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "endCxn"));
         }
 
         /// <summary>
@@ -12545,8 +12545,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -12608,9 +12608,9 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualConnectorShapeDrawingProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvCxnSpPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvPr"), 1, 1)
             };
         }
 
@@ -12623,8 +12623,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvPr"));
         }
 
         /// <summary>
@@ -12636,8 +12636,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualConnectorShapeDrawingProperties? NonVisualConnectorShapeDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualConnectorShapeDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualConnectorShapeDrawingProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvCxnSpPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvCxnSpPr"));
         }
 
         /// <summary>
@@ -12649,8 +12649,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvPr"));
         }
 
         /// <inheritdoc/>
@@ -12722,8 +12722,8 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("preferRelativeResize", a => a.PreferRelativeResize);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PictureLocks), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "picLocks"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -12736,8 +12736,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PictureLocks? PictureLocks
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.PictureLocks>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PictureLocks>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "picLocks"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "picLocks"));
         }
 
         /// <summary>
@@ -12749,8 +12749,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList? NonVisualPicturePropertiesExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -12812,9 +12812,9 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualPictureDrawingProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvPicPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvPr"), 1, 1)
             };
         }
 
@@ -12827,8 +12827,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvPr"));
         }
 
         /// <summary>
@@ -12840,8 +12840,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualPictureDrawingProperties? NonVisualPictureDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualPictureDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualPictureDrawingProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvPicPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvPicPr"));
         }
 
         /// <summary>
@@ -12853,8 +12853,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvPr"));
         }
 
         /// <inheritdoc/>
@@ -12941,14 +12941,14 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("rotWithShape", a => a.RotateWithShape);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Blip), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SourceRectangle), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "blip"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "srcRect"), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Tile), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Stretch), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "tile"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "stretch"), 1, 1)
                     }
                 }
             };
@@ -12963,8 +12963,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Blip? Blip
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Blip>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Blip>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "blip"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "blip"));
         }
 
         /// <summary>
@@ -12976,8 +12976,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SourceRectangle? SourceRectangle
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.SourceRectangle>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SourceRectangle>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "srcRect"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "srcRect"));
         }
 
         /// <inheritdoc/>
@@ -13037,8 +13037,8 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "graphicFrameLocks"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -13051,8 +13051,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.GraphicFrameLocks? GraphicFrameLocks
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "graphicFrameLocks"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "graphicFrameLocks"));
         }
 
         /// <summary>
@@ -13064,8 +13064,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -13127,9 +13127,9 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameDrawingProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvGraphicFramePr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvPr"), 1, 1)
             };
         }
 
@@ -13142,8 +13142,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvPr"));
         }
 
         /// <summary>
@@ -13155,8 +13155,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameDrawingProperties? NonVisualGraphicFrameDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameDrawingProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvGraphicFramePr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvGraphicFramePr"));
         }
 
         /// <summary>
@@ -13168,8 +13168,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvPr"));
         }
 
         /// <inheritdoc/>
@@ -13263,8 +13263,8 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("flipV", a => a.VerticalFlip);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extents), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "off"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"), 0, 1)
             };
         }
 
@@ -13277,8 +13277,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Offset? Offset
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "off"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "off"));
         }
 
         /// <summary>
@@ -13290,8 +13290,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Extents? Extents
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"));
         }
 
         /// <inheritdoc/>
@@ -13351,8 +13351,8 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupShapeLocks), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "grpSpLocks"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -13365,8 +13365,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.GroupShapeLocks? GroupShapeLocks
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "grpSpLocks"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "grpSpLocks"));
         }
 
         /// <summary>
@@ -13378,8 +13378,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList? NonVisualGroupDrawingShapePropsExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -13446,17 +13446,17 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.SetSchema("p:titleStyle");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "defPPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl1pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl2pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl3pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl4pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl5pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl6pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl7pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl8pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl9pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -13524,17 +13524,17 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.SetSchema("p:bodyStyle");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "defPPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl1pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl2pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl3pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl4pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl5pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl6pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl7pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl8pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl9pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -13602,17 +13602,17 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.SetSchema("p:otherStyle");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "defPPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl1pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl2pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl3pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl4pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl5pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl6pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl7pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl8pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl9pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -13680,17 +13680,17 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.SetSchema("p:defaultTextStyle");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "defPPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl1pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl2pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl3pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl4pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl5pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl6pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl7pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl8pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl9pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -13758,17 +13758,17 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.SetSchema("p:notesStyle");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "defPPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl1pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl2pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl3pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl4pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl5pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl6pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl7pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl8pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl9pPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -13855,8 +13855,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties? DefaultParagraphProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "defPPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "defPPr"));
         }
 
         /// <summary>
@@ -13868,8 +13868,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties? Level1ParagraphProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl1pPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl1pPr"));
         }
 
         /// <summary>
@@ -13881,8 +13881,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties? Level2ParagraphProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl2pPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl2pPr"));
         }
 
         /// <summary>
@@ -13894,8 +13894,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties? Level3ParagraphProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl3pPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl3pPr"));
         }
 
         /// <summary>
@@ -13907,8 +13907,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties? Level4ParagraphProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl4pPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl4pPr"));
         }
 
         /// <summary>
@@ -13920,8 +13920,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties? Level5ParagraphProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl5pPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl5pPr"));
         }
 
         /// <summary>
@@ -13933,8 +13933,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties? Level6ParagraphProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl6pPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl6pPr"));
         }
 
         /// <summary>
@@ -13946,8 +13946,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties? Level7ParagraphProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl7pPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl7pPr"));
         }
 
         /// <summary>
@@ -13959,8 +13959,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties? Level8ParagraphProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl8pPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl8pPr"));
         }
 
         /// <summary>
@@ -13972,8 +13972,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties? Level9ParagraphProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl9pPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl9pPr"));
         }
 
         /// <summary>
@@ -13985,8 +13985,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
         }
     }
 
@@ -14073,7 +14073,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName(":id"), true, null));
             builder.AddConstraint(new RelationshipExistConstraint(builder.CreateQName("r:id")));
@@ -14088,8 +14088,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -14167,11 +14167,11 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("name", a => a.Name);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Background), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShapeTree), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomerDataList), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ControlList), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideDataExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "bg"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "spTree"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "custDataLst"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "controls"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -14184,8 +14184,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Background? Background
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Background>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.Background>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "bg"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "bg"));
         }
 
         /// <summary>
@@ -14197,8 +14197,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ShapeTree? ShapeTree
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeTree>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeTree>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "spTree"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "spTree"));
         }
 
         /// <summary>
@@ -14210,8 +14210,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CustomerDataList? CustomerDataList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CustomerDataList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CustomerDataList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "custDataLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "custDataLst"));
         }
 
         /// <summary>
@@ -14223,8 +14223,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ControlList? ControlList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ControlList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ControlList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "controls"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "controls"));
         }
 
         /// <summary>
@@ -14236,8 +14236,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonSlideDataExtensionList? CommonSlideDataExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideDataExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideDataExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -14446,8 +14446,8 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ScaleY>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ScaleX), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ScaleY), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sx"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sy"), 1, 1)
             };
         }
 
@@ -14460,8 +14460,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ScaleX? ScaleX
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ScaleX>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ScaleX>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sx"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "sx"));
         }
 
         /// <summary>
@@ -14473,8 +14473,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ScaleY? ScaleY
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ScaleY>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ScaleY>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sy"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "sy"));
         }
 
         /// <inheritdoc/>
@@ -14645,8 +14645,8 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("varScale", a => a.VariableScale);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ScaleFactor), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Origin), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "scale"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "origin"), 1, 1)
             };
         }
 
@@ -14659,8 +14659,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ScaleFactor? ScaleFactor
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ScaleFactor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ScaleFactor>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "scale"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "scale"));
         }
 
         /// <summary>
@@ -14672,8 +14672,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Origin? Origin
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Origin>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.Origin>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "origin"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "origin"));
         }
 
         /// <inheritdoc/>
@@ -14785,7 +14785,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.OutlineViewSlideListEntry>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.OutlineViewSlideListEntry), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sld"), 0, 0)
             };
         }
 
@@ -14894,7 +14894,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Guide>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Guide), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "guide"), 0, 0)
             };
         }
 
@@ -14989,8 +14989,8 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("showGuides", a => a.ShowGuides);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonViewProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GuideList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cViewPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "guideLst"), 0, 1)
             };
         }
 
@@ -15003,8 +15003,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonViewProperties? CommonViewProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonViewProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonViewProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cViewPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cViewPr"));
         }
 
         /// <summary>
@@ -15016,8 +15016,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.GuideList? GuideList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.GuideList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.GuideList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "guideLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "guideLst"));
         }
 
         /// <inheritdoc/>
@@ -15141,9 +15141,9 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("preferSingleView", a => a.PreferSingleView);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RestoredLeft), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RestoredTop), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "restoredLeft"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "restoredTop"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -15156,8 +15156,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.RestoredLeft? RestoredLeft
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.RestoredLeft>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.RestoredLeft>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "restoredLeft"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "restoredLeft"));
         }
 
         /// <summary>
@@ -15169,8 +15169,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.RestoredTop? RestoredTop
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.RestoredTop>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.RestoredTop>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "restoredTop"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "restoredTop"));
         }
 
         /// <summary>
@@ -15182,8 +15182,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -15243,8 +15243,8 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cSldViewPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -15257,8 +15257,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties? CommonSlideViewProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cSldViewPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cSldViewPr"));
         }
 
         /// <summary>
@@ -15270,8 +15270,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -15333,9 +15333,9 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.OutlineViewSlideList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonViewProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.OutlineViewSlideList), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cViewPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldLst"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -15348,8 +15348,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonViewProperties? CommonViewProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonViewProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonViewProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cViewPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cViewPr"));
         }
 
         /// <summary>
@@ -15361,8 +15361,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.OutlineViewSlideList? OutlineViewSlideList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.OutlineViewSlideList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.OutlineViewSlideList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldLst"));
         }
 
         /// <summary>
@@ -15374,8 +15374,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -15435,8 +15435,8 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonViewProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cViewPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -15449,8 +15449,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonViewProperties? CommonViewProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonViewProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonViewProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cViewPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cViewPr"));
         }
 
         /// <summary>
@@ -15462,8 +15462,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -15535,8 +15535,8 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("showFormatting", a => a.ShowFormatting);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonViewProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cViewPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -15549,8 +15549,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonViewProperties? CommonViewProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonViewProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonViewProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cViewPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cViewPr"));
         }
 
         /// <summary>
@@ -15562,8 +15562,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -15623,8 +15623,8 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cSldViewPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -15637,8 +15637,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties? CommonSlideViewProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cSldViewPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cSldViewPr"));
         }
 
         /// <summary>
@@ -15650,8 +15650,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -15828,9 +15828,9 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.LaserTraceList), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ShowEventRecordList), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentRelationship), 1, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "laserTraceLst"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "showEvtLst"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2018/8/main", "commentRel"), 1, 1, version: FileFormatVersions.Office2021),
                 new AnyParticle(0, 1)
             };
         }
@@ -15906,7 +15906,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.CreationId), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "creationId"), 1, 1, version: FileFormatVersions.Office2010),
                 new AnyParticle(0, 1)
             };
         }
@@ -15986,9 +15986,9 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.BrowseMode), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.LaserColor), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ShowMediaControls), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "browseMode"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "laserClr"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "showMediaCtrls"), 1, 1, version: FileFormatVersions.Office2010),
                 new AnyParticle(0, 1)
             };
         }
@@ -16056,11 +16056,11 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualPictureProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualPictureProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BlipFill), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShapeProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShapeStyle), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvPicPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "blipFill"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "spPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "style"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -16073,8 +16073,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualPictureProperties? NonVisualPictureProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualPictureProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualPictureProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvPicPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvPicPr"));
         }
 
         /// <summary>
@@ -16086,8 +16086,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.BlipFill? BlipFill
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.BlipFill>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.BlipFill>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "blipFill"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "blipFill"));
         }
 
         /// <summary>
@@ -16099,8 +16099,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ShapeProperties? ShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "spPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "spPr"));
         }
 
         /// <summary>
@@ -16112,8 +16112,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ShapeStyle? ShapeStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeStyle>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeStyle>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "style"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "style"));
         }
 
         /// <summary>
@@ -16125,8 +16125,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionListWithModification? ExtensionListWithModification
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -16199,7 +16199,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -16212,8 +16212,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -16283,7 +16283,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("updateAutomatic", a => a.AutoUpdate);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -16296,8 +16296,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -16500,50 +16500,50 @@ namespace DocumentFormat.OpenXml.Presentation
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BlindsTransition), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CheckerTransition), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CircleTransition), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.DissolveTransition), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CombTransition), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CoverTransition), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CutTransition), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.DiamondTransition), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.FadeTransition), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NewsflashTransition), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PlusTransition), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PullTransition), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PushTransition), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RandomTransition), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.RandomBarTransition), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SplitTransition), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.StripsTransition), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.WedgeTransition), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.WheelTransition), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.WipeTransition), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ZoomTransition), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.FlashTransition), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.VortexTransition), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SwitchTransition), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.FlipTransition), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.RippleTransition), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.GlitterTransition), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.HoneycombTransition), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.PrismTransition), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.DoorsTransition), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.WindowTransition), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ShredTransition), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.FerrisTransition), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.FlythroughTransition), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.WarpTransition), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.GalleryTransition), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ConveyorTransition), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.PanTransition), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.RevealTransition), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.WheelReverseTransition), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.PresetTransition), 1, 1, version: FileFormatVersions.Office2013)
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "blinds"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "checker"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "circle"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "dissolve"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "comb"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cover"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cut"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "diamond"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "fade"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "newsflash"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "plus"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "pull"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "push"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "random"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "randomBar"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "split"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "strips"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "wedge"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "wheel"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "wipe"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "zoom"), 1, 1),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "flash"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "vortex"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "switch"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "flip"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "ripple"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "glitter"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "honeycomb"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "prism"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "doors"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "window"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "shred"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "ferris"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "flythrough"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "warp"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "gallery"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "conveyor"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "pan"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "reveal"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "wheelReverse"), 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "prstTrans"), 1, 1, version: FileFormatVersions.Office2013)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SoundAction), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sndAc"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("p:advTm"), true, 0, true, 2147483647, true) { Application = ApplicationType.PowerPoint });
         }
@@ -16607,9 +16607,9 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.TimeNodeList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeNodeList), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BuildList), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "tnLst"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "bldLst"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -16622,8 +16622,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.TimeNodeList? TimeNodeList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.TimeNodeList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.TimeNodeList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "tnLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "tnLst"));
         }
 
         /// <summary>
@@ -16635,8 +16635,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.BuildList? BuildList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.BuildList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.BuildList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "bldLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "bldLst"));
         }
 
         /// <summary>
@@ -16648,8 +16648,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionListWithModification? ExtensionListWithModification
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -16707,7 +16707,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -16787,8 +16787,8 @@ namespace DocumentFormat.OpenXml.Presentation
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BackgroundProperties), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BackgroundStyleReference), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "bgPr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "bgRef"), 1, 1)
                     }
                 }
             };
@@ -16803,8 +16803,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.BackgroundProperties? BackgroundProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.BackgroundProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.BackgroundProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "bgPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "bgPr"));
         }
 
         /// <summary>
@@ -16816,8 +16816,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.BackgroundStyleReference? BackgroundStyleReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.BackgroundStyleReference>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.BackgroundStyleReference>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "bgRef"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "bgRef"));
         }
 
         /// <inheritdoc/>
@@ -16882,18 +16882,18 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.SetSchema("p:spTree");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GroupShapeProperties), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvGrpSpPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "grpSpPr"), 1, 1),
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Shape), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GroupShape), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GraphicFrame), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ConnectionShape), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Picture), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ContentPart), 1, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sp"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "grpSp"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "graphicFrame"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cxnSp"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "pic"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "contentPart"), 1, 1, version: FileFormatVersions.Office2010)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -16959,18 +16959,18 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.SetSchema("p:grpSp");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GroupShapeProperties), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvGrpSpPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "grpSpPr"), 1, 1),
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Shape), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GroupShape), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GraphicFrame), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ConnectionShape), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Picture), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ContentPart), 1, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sp"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "grpSp"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "graphicFrame"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cxnSp"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "pic"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "contentPart"), 1, 1, version: FileFormatVersions.Office2010)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -17053,8 +17053,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeProperties? NonVisualGroupShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvGrpSpPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvGrpSpPr"));
         }
 
         /// <summary>
@@ -17066,8 +17066,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.GroupShapeProperties? GroupShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.GroupShapeProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.GroupShapeProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "grpSpPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "grpSpPr"));
         }
     }
 
@@ -17124,8 +17124,8 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomerDataTags>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomerData), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomerDataTags), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "custData"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "tags"), 0, 1)
             };
         }
 
@@ -17184,7 +17184,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Control>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Control), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "control"), 0, 0)
             };
         }
 
@@ -17243,7 +17243,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonSlideDataExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommonSlideDataExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -17306,9 +17306,9 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeDrawingProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvGrpSpPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvPr"), 1, 1)
             };
         }
 
@@ -17321,8 +17321,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvPr"));
         }
 
         /// <summary>
@@ -17334,8 +17334,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeDrawingProperties? NonVisualGroupShapeDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeDrawingProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvGrpSpPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvGrpSpPr"));
         }
 
         /// <summary>
@@ -17347,8 +17347,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvPr"));
         }
 
         /// <inheritdoc/>
@@ -17441,29 +17441,29 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TransformGroup), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "xfrm"), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "noFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "solidFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "gradFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "blipFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "pattFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "grpFill"), 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectLst"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectDag"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scene3d"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -17476,8 +17476,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.TransformGroup? TransformGroup
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.TransformGroup>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.TransformGroup>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "xfrm"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "xfrm"));
         }
 
         /// <inheritdoc/>
@@ -17555,11 +17555,11 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("useBgFill", a => a.UseBackgroundFill);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualShapeProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShapeProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShapeStyle), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TextBody), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvSpPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "spPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "style"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "txBody"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -17572,8 +17572,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualShapeProperties? NonVisualShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualShapeProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualShapeProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvSpPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvSpPr"));
         }
 
         /// <summary>
@@ -17585,8 +17585,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ShapeProperties? ShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "spPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "spPr"));
         }
 
         /// <summary>
@@ -17598,8 +17598,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ShapeStyle? ShapeStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeStyle>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeStyle>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "style"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "style"));
         }
 
         /// <summary>
@@ -17611,8 +17611,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.TextBody? TextBody
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.TextBody>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.TextBody>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "txBody"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "txBody"));
         }
 
         /// <summary>
@@ -17624,8 +17624,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionListWithModification? ExtensionListWithModification
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -17689,10 +17689,10 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Transform), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Graphic), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvGraphicFramePr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "xfrm"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "graphic"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -17705,8 +17705,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameProperties? NonVisualGraphicFrameProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvGraphicFramePr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvGraphicFramePr"));
         }
 
         /// <summary>
@@ -17718,8 +17718,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Transform? Transform
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.Transform>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.Transform>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "xfrm"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "xfrm"));
         }
 
         /// <summary>
@@ -17731,8 +17731,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Graphic? Graphic
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "graphic"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "graphic"));
         }
 
         /// <summary>
@@ -17744,8 +17744,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionListWithModification? ExtensionListWithModification
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -17809,10 +17809,10 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NonVisualConnectionShapeProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShapeProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShapeStyle), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvCxnSpPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "spPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "style"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -17825,8 +17825,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualConnectionShapeProperties? NonVisualConnectionShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualConnectionShapeProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualConnectionShapeProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvCxnSpPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvCxnSpPr"));
         }
 
         /// <summary>
@@ -17838,8 +17838,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ShapeProperties? ShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeProperties>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "spPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "spPr"));
         }
 
         /// <summary>
@@ -17851,8 +17851,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ShapeStyle? ShapeStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeStyle>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeStyle>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "style"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "style"));
         }
 
         /// <summary>
@@ -17864,8 +17864,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionListWithModification? ExtensionListWithModification
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -17923,7 +17923,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ShowPropertiesExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShowPropertiesExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -18008,11 +18008,11 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BackgroundAnimation), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SubShape), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.OleChartElement), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TextElement), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.GraphicElement), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "bg"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "subSp"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "oleChartEl"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "txEl"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "graphicEl"), 1, 1)
             };
         }
 
@@ -18025,8 +18025,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.BackgroundAnimation? BackgroundAnimation
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.BackgroundAnimation>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.BackgroundAnimation>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "bg"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "bg"));
         }
 
         /// <summary>
@@ -18038,8 +18038,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.SubShape? SubShape
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.SubShape>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.SubShape>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "subSp"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "subSp"));
         }
 
         /// <summary>
@@ -18051,8 +18051,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.OleChartElement? OleChartElement
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.OleChartElement>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.OleChartElement>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "oleChartEl"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "oleChartEl"));
         }
 
         /// <summary>
@@ -18064,8 +18064,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.TextElement? TextElement
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.TextElement>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.TextElement>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "txEl"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "txEl"));
         }
 
         /// <summary>
@@ -18077,8 +18077,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.GraphicElement? GraphicElement
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.GraphicElement>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.GraphicElement>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "graphicEl"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "graphicEl"));
         }
 
         /// <inheritdoc/>
@@ -18236,7 +18236,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.PresenceInfo), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "presenceInfo"), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -18312,7 +18312,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ThreadingInfo), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "threadingInfo"), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -18388,7 +18388,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "sldGuideLst"), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -18464,7 +18464,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "sldGuideLst"), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -18540,7 +18540,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "sldGuideLst"), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -18616,7 +18616,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "sldGuideLst"), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -18741,7 +18741,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("hasCustomPrompt", a => a.HasCustomPrompt);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -18754,8 +18754,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionListWithModification? ExtensionListWithModification
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -18813,7 +18813,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -18890,8 +18890,8 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.Media), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.ModificationId), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "media"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "modId"), 1, 1, version: FileFormatVersions.Office2010),
                 new AnyParticle(0, 1)
             };
         }
@@ -18979,8 +18979,8 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("backwards", a => a.Backwards);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeAbsolute), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimePercentage), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "tmAbs"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "tmPct"), 1, 1)
             };
         }
 
@@ -18993,8 +18993,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.TimeAbsolute? TimeAbsolute
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.TimeAbsolute>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.TimeAbsolute>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "tmAbs"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "tmAbs"));
         }
 
         /// <summary>
@@ -19006,8 +19006,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.TimePercentage? TimePercentage
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.TimePercentage>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.TimePercentage>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "tmPct"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "tmPct"));
         }
 
         /// <inheritdoc/>
@@ -19076,19 +19076,19 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.SetSchema("p:childTnLst");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ParallelTimeNode), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SequenceTimeNode), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExclusiveTimeNode), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Animate), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateColor), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateEffect), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateMotion), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateRotation), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateScale), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Command), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SetBehavior), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Audio), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Video), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "par"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "seq"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "excl"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "anim"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "animClr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "animEffect"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "animMotion"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "animRot"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "animScale"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cmd"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "set"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "audio"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "video"), 1, 1)
             };
         }
 
@@ -19158,19 +19158,19 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.SetSchema("p:subTnLst");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ParallelTimeNode), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SequenceTimeNode), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExclusiveTimeNode), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Animate), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateColor), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateEffect), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateMotion), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateRotation), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.AnimateScale), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Command), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SetBehavior), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Audio), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Video), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "par"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "seq"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "excl"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "anim"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "animClr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "animEffect"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "animMotion"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "animRot"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "animScale"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "cmd"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "set"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "audio"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "video"), 1, 1)
             };
         }
 
@@ -19304,7 +19304,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.TimeAnimateValue>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TimeAnimateValue), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "tav"), 0, 0)
             };
         }
 
@@ -19508,7 +19508,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CommentAuthorExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommentAuthorExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -19567,7 +19567,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CommentExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommentExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -19626,7 +19626,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideMasterId>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideMasterId), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldMasterId"), 0, 0)
             };
         }
 
@@ -19685,7 +19685,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.NotesMasterId>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesMasterId), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "notesMasterId"), 0, 1)
             };
         }
 
@@ -19698,8 +19698,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NotesMasterId? NotesMasterId
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.NotesMasterId>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.NotesMasterId>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "notesMasterId"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "notesMasterId"));
         }
 
         /// <inheritdoc/>
@@ -19757,7 +19757,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.HandoutMasterId>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HandoutMasterId), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "handoutMasterId"), 0, 1)
             };
         }
 
@@ -19770,8 +19770,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.HandoutMasterId? HandoutMasterId
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.HandoutMasterId>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.HandoutMasterId>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "handoutMasterId"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "handoutMasterId"));
         }
 
         /// <inheritdoc/>
@@ -19829,7 +19829,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideId>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideId), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldId"), 0, 0)
             };
         }
 
@@ -19957,7 +19957,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.EmbeddedFont>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.EmbeddedFont), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "embeddedFont"), 0, 0)
             };
         }
 
@@ -20016,7 +20016,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomShow>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomShow), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "custShow"), 0, 0)
             };
         }
 
@@ -20126,7 +20126,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -20139,8 +20139,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -20507,7 +20507,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.PresentationExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PresentationExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -20588,10 +20588,10 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionProperties), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionList), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.NotesGuideList), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "sectionPr"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "sectionLst"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "sldGuideLst"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "notesGuideLst"), 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -20704,12 +20704,12 @@ namespace DocumentFormat.OpenXml.Presentation
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideAll), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideRange), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomShowReference), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldAll"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldRg"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "custShow"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -20874,7 +20874,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -20887,8 +20887,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -21008,7 +21008,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("frameSlides", a => a.FrameSlides);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -21021,8 +21021,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -21143,22 +21143,22 @@ namespace DocumentFormat.OpenXml.Presentation
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PresenterSlideMode), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BrowseSlideMode), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.KioskSlideMode), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "present"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "browse"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "kiosk"), 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideAll), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideRange), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomShowReference), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldAll"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldRg"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "custShow"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PenColor), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ShowPropertiesExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "penClr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -21231,24 +21231,24 @@ namespace DocumentFormat.OpenXml.Presentation
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"), 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0, version: FileFormatVersions.Office2010)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"), 1, 1)
                     }
                 }
             };
@@ -21309,7 +21309,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -21390,10 +21390,10 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.DiscardImageEditData), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.PowerPoint.DefaultImageDpi), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.TextMath), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.ChartTrackingReferenceBased), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "discardImageEditData"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "defaultImageDpi"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2010/main", "m"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "chartTrackingRefBased"), 1, 1, version: FileFormatVersions.Office2010),
                 new AnyParticle(0, 1)
             };
         }
@@ -21498,7 +21498,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 .AddAttribute("dt", a => a.DateTime);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -21511,8 +21511,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionListWithModification? ExtensionListWithModification
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -21570,7 +21570,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideLayoutExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideLayoutExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -21629,7 +21629,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideLayoutId>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideLayoutId), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldLayoutId"), 0, 0)
             };
         }
 
@@ -21694,10 +21694,10 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.TitleStyle), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.BodyStyle), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.OtherStyle), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "titleStyle"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "bodyStyle"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "otherStyle"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -21710,8 +21710,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.TitleStyle? TitleStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.TitleStyle>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.TitleStyle>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "titleStyle"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "titleStyle"));
         }
 
         /// <summary>
@@ -21723,8 +21723,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.BodyStyle? BodyStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.BodyStyle>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.BodyStyle>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "bodyStyle"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "bodyStyle"));
         }
 
         /// <summary>
@@ -21736,8 +21736,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.OtherStyle? OtherStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.OtherStyle>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.OtherStyle>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "otherStyle"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "otherStyle"));
         }
 
         /// <summary>
@@ -21749,8 +21749,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -21808,7 +21808,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideMasterExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.SlideMasterExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -21867,7 +21867,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.HandoutMasterExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.HandoutMasterExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -21926,7 +21926,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.NotesMasterExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.NotesMasterExtension), 0, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ext"), 0, 0)
             };
         }
 
@@ -22038,8 +22038,8 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.ParagraphIndexRange>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CharRange), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ParagraphIndexRange), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "charRg"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "pRg"), 1, 1)
             };
         }
 
@@ -22052,8 +22052,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CharRange? CharRange
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.CharRange>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.CharRange>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "charRg"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "charRg"));
         }
 
         /// <summary>
@@ -22065,8 +22065,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ParagraphIndexRange? ParagraphIndexRange
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.ParagraphIndexRange>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.ParagraphIndexRange>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "pRg"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "pRg"));
         }
 
         /// <inheritdoc/>
@@ -22126,8 +22126,8 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagram>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Diagram), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Chart), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "dgm"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "chart"), 1, 1)
             };
         }
 
@@ -22140,8 +22140,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagram? Diagram
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagram>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Diagram>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "dgm"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "dgm"));
         }
 
         /// <summary>
@@ -22153,8 +22153,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Chart? Chart
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Chart>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Chart>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "chart"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "chart"));
         }
 
         /// <inheritdoc/>
@@ -22762,8 +22762,8 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Presentation.StartSoundAction>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.StartSoundAction), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.EndSoundAction), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "stSnd"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "endSnd"), 1, 1)
             };
         }
 
@@ -22776,8 +22776,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.StartSoundAction? StartSoundAction
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.StartSoundAction>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.StartSoundAction>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "stSnd"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "stSnd"));
         }
 
         /// <summary>
@@ -22789,8 +22789,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.EndSoundAction? EndSoundAction
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.EndSoundAction>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Presentation.EndSoundAction>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "endSnd"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "endSnd"));
         }
 
         /// <inheritdoc/>
@@ -22849,7 +22849,7 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeExtension), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2023/02/main", "phTypeExt"), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -22862,8 +22862,8 @@ namespace DocumentFormat.OpenXml.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeExtension? PlaceholderTypeExtension
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeExtension>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeExtension>(new("http://schemas.microsoft.com/office/powerpoint/2023/02/main", "phTypeExt"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2023/02/main", "phTypeExt"));
         }
 
         /// <inheritdoc/>

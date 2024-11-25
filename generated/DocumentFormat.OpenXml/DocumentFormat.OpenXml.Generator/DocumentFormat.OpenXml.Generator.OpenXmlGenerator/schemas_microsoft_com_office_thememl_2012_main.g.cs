@@ -115,7 +115,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/thememl/2012/main", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("thm15:id"), 1, 100) { Application = ApplicationType.Excel | ApplicationType.PowerPoint, Version = FileFormatVersions.Office2013 });
         }
@@ -129,8 +129,8 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList>(new("http://schemas.microsoft.com/office/thememl/2012/main", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/thememl/2012/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -193,7 +193,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"), 0, 0)
                     }
                 }
             };
@@ -332,7 +332,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/thememl/2012/main", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -345,8 +345,8 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList>(new("http://schemas.microsoft.com/office/thememl/2012/main", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/thememl/2012/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -405,7 +405,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Theme.ThemeVariant>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Theme.ThemeVariant), 1, 0, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/thememl/2012/main", "themeVariant"), 1, 0, version: FileFormatVersions.Office2013)
             };
         }
 

@@ -120,33 +120,33 @@ namespace DocumentFormat.OpenXml.Office.Excel
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortState>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetDimension), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetViews), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Columns), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetData), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetProtection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.AutoFilter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SortState), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataConsolidate), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatting), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PrintOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageMargins), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageSetup), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.HeaderFooter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowBreaks), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Drawing), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Picture), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleObjects), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dimension"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetViews"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetFormatPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cols"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetData"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetProtection"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "autoFilter"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sortState"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dataConsolidate"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "customSheetViews"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "phoneticPr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "conditionalFormatting"), 0, 0),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "printOptions"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageMargins"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageSetup"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "headerFooter"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowBreaks"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colBreaks"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "customProperties"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "drawing"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "legacyDrawing"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "legacyDrawingHF"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "picture"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "oleObjects"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "drawingHF"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -159,8 +159,8 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetProperties? SheetProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetPr"));
         }
 
         /// <summary>
@@ -172,8 +172,8 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetDimension? SheetDimension
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetDimension>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetDimension>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dimension"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dimension"));
         }
 
         /// <summary>
@@ -185,8 +185,8 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetViews? SheetViews
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetViews>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetViews>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetViews"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetViews"));
         }
 
         /// <summary>
@@ -198,8 +198,8 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties? SheetFormatProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetFormatPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetFormatPr"));
         }
 
         /// <inheritdoc/>
@@ -290,8 +290,8 @@ namespace DocumentFormat.OpenXml.Office.Excel
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.RowSortMap>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.RowSortMap), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.ColumnSortMap), 0, 1)
+                new ElementParticle(new("http://schemas.microsoft.com/office/excel/2006/main", "rowSortMap"), 0, 1),
+                new ElementParticle(new("http://schemas.microsoft.com/office/excel/2006/main", "colSortMap"), 0, 1)
             };
         }
 
@@ -304,8 +304,8 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office.Excel.RowSortMap? RowSortMap
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Excel.RowSortMap>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.Excel.RowSortMap>(new("http://schemas.microsoft.com/office/excel/2006/main", "rowSortMap"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/excel/2006/main", "rowSortMap"));
         }
 
         /// <summary>
@@ -317,8 +317,8 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office.Excel.ColumnSortMap? ColumnSortMap
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Excel.ColumnSortMap>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.Excel.ColumnSortMap>(new("http://schemas.microsoft.com/office/excel/2006/main", "colSortMap"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/excel/2006/main", "colSortMap"));
         }
 
         /// <inheritdoc/>
@@ -513,7 +513,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.RowSortMapItem), 1, 536870910)
+                new ElementParticle(new("http://schemas.microsoft.com/office/excel/2006/main", "row"), 1, 536870910)
             };
         }
 
@@ -601,7 +601,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.ColumnSortMapItem), 1, 536870910)
+                new ElementParticle(new("http://schemas.microsoft.com/office/excel/2006/main", "col"), 1, 536870910)
             };
         }
 

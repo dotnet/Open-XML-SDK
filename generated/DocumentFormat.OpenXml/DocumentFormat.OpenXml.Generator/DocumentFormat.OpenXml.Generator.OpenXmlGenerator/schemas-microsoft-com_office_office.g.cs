@@ -212,17 +212,17 @@ namespace DocumentFormat.OpenXml.Vml.Office
                 .AddAttribute("o:insetmode", a => a.InsetMode);
             builder.Particle = new CompositeParticle.Builder(ParticleType.All, 0, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ColorMostRecentlyUsed), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ColorMenu), 0, 1)
+                new ElementParticle(new("urn:schemas-microsoft-com:vml", "fill"), 0, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:vml", "imagedata"), 0, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:vml", "stroke"), 0, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:vml", "textbox"), 0, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:vml", "shadow"), 0, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "skew"), 0, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "extrusion"), 0, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "callout"), 0, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "lock"), 0, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "colormru"), 0, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "colormenu"), 0, 1)
             };
         }
 
@@ -235,8 +235,8 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Fill? Fill
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Fill>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Vml.Fill>(new("urn:schemas-microsoft-com:vml", "fill"));
+            set => SetElement(value, new("urn:schemas-microsoft-com:vml", "fill"));
         }
 
         /// <summary>
@@ -248,8 +248,8 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.ImageData? ImageData
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.ImageData>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Vml.ImageData>(new("urn:schemas-microsoft-com:vml", "imagedata"));
+            set => SetElement(value, new("urn:schemas-microsoft-com:vml", "imagedata"));
         }
 
         /// <summary>
@@ -261,8 +261,8 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Stroke? Stroke
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Stroke>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Vml.Stroke>(new("urn:schemas-microsoft-com:vml", "stroke"));
+            set => SetElement(value, new("urn:schemas-microsoft-com:vml", "stroke"));
         }
 
         /// <summary>
@@ -274,8 +274,8 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.TextBox? TextBox
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.TextBox>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Vml.TextBox>(new("urn:schemas-microsoft-com:vml", "textbox"));
+            set => SetElement(value, new("urn:schemas-microsoft-com:vml", "textbox"));
         }
 
         /// <summary>
@@ -287,8 +287,8 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Shadow? Shadow
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Shadow>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Vml.Shadow>(new("urn:schemas-microsoft-com:vml", "shadow"));
+            set => SetElement(value, new("urn:schemas-microsoft-com:vml", "shadow"));
         }
 
         /// <summary>
@@ -300,8 +300,8 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.Skew? Skew
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.Skew>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.Skew>(new("urn:schemas-microsoft-com:office:office", "skew"));
+            set => SetElement(value, new("urn:schemas-microsoft-com:office:office", "skew"));
         }
 
         /// <summary>
@@ -313,8 +313,8 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.Extrusion? Extrusion
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.Extrusion>(new("urn:schemas-microsoft-com:office:office", "extrusion"));
+            set => SetElement(value, new("urn:schemas-microsoft-com:office:office", "extrusion"));
         }
 
         /// <summary>
@@ -326,8 +326,8 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.Callout? Callout
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.Callout>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.Callout>(new("urn:schemas-microsoft-com:office:office", "callout"));
+            set => SetElement(value, new("urn:schemas-microsoft-com:office:office", "callout"));
         }
 
         /// <summary>
@@ -339,8 +339,8 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.Lock? Lock
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.Lock>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.Lock>(new("urn:schemas-microsoft-com:office:office", "lock"));
+            set => SetElement(value, new("urn:schemas-microsoft-com:office:office", "lock"));
         }
 
         /// <summary>
@@ -352,8 +352,8 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.ColorMostRecentlyUsed? ColorMostRecentlyUsed
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.ColorMostRecentlyUsed>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.ColorMostRecentlyUsed>(new("urn:schemas-microsoft-com:office:office", "colormru"));
+            set => SetElement(value, new("urn:schemas-microsoft-com:office:office", "colormru"));
         }
 
         /// <summary>
@@ -365,8 +365,8 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.ColorMenu? ColorMenu
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.ColorMenu>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.ColorMenu>(new("urn:schemas-microsoft-com:office:office", "colormenu"));
+            set => SetElement(value, new("urn:schemas-microsoft-com:office:office", "colormenu"));
         }
 
         /// <inheritdoc/>
@@ -443,9 +443,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
                 .AddAttribute("v:ext", a => a.Extension);
             builder.Particle = new CompositeParticle.Builder(ParticleType.All, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ShapeIdMap), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.RegroupTable), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Rules), 0, 1)
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "idmap"), 0, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "regrouptable"), 0, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "rules"), 0, 1)
             };
         }
 
@@ -458,8 +458,8 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.ShapeIdMap? ShapeIdMap
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.ShapeIdMap>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.ShapeIdMap>(new("urn:schemas-microsoft-com:office:office", "idmap"));
+            set => SetElement(value, new("urn:schemas-microsoft-com:office:office", "idmap"));
         }
 
         /// <summary>
@@ -471,8 +471,8 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.RegroupTable? RegroupTable
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.RegroupTable>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.RegroupTable>(new("urn:schemas-microsoft-com:office:office", "regrouptable"));
+            set => SetElement(value, new("urn:schemas-microsoft-com:office:office", "regrouptable"));
         }
 
         /// <summary>
@@ -484,8 +484,8 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.Rules? Rules
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.Rules>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.Rules>(new("urn:schemas-microsoft-com:office:office", "rules"));
+            set => SetElement(value, new("urn:schemas-microsoft-com:office:office", "rules"));
         }
 
         /// <inheritdoc/>
@@ -891,7 +891,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
                 .AddAttribute("dgmbasetextscale", a => a.BaseTextScale);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.RelationTable), 0, 1)
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "relationtable"), 0, 1)
             };
         }
 
@@ -904,8 +904,8 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.RelationTable? RelationTable
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.RelationTable>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.RelationTable>(new("urn:schemas-microsoft-com:office:office", "relationtable"));
+            set => SetElement(value, new("urn:schemas-microsoft-com:office:office", "relationtable"));
         }
 
         /// <inheritdoc/>
@@ -1858,9 +1858,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
                 .AddAttribute("UpdateMode", a => a.UpdateMode);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.LinkType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.LockedField), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.FieldCodes), 0, 1)
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "LinkType"), 0, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "LockedField"), 0, 1),
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "FieldCodes"), 0, 1)
             };
             builder.AddConstraint(new AttributeValuePatternConstraint(builder.CreateQName("ovml:ObjectID"), @"_(\d{1,9}|1\d{9}|20\d{8}|21[0-3]\d{7}|214[0-6]\d{6}|2147[0-3]\d{5}|21474[0-7]\d{4}|214748[0-2]\d{3}|2147483[0-5]\d{2}|21474836[0-3]\d|214748364[0-7])"));
             builder.AddConstraint(new ReferenceExistConstraint(builder.CreateQName(":ShapeID"), ".", builder.CreateQName("v:shape"), "v:shape", builder.CreateQName(":id")));
@@ -1875,8 +1875,8 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.LinkType? LinkType
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.LinkType>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.LinkType>(new("urn:schemas-microsoft-com:office:office", "LinkType"));
+            set => SetElement(value, new("urn:schemas-microsoft-com:office:office", "LinkType"));
         }
 
         /// <summary>
@@ -1888,8 +1888,8 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.LockedField? LockedField
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.LockedField>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.LockedField>(new("urn:schemas-microsoft-com:office:office", "LockedField"));
+            set => SetElement(value, new("urn:schemas-microsoft-com:office:office", "LockedField"));
         }
 
         /// <summary>
@@ -1901,8 +1901,8 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.FieldCodes? FieldCodes
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.FieldCodes>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Vml.Office.FieldCodes>(new("urn:schemas-microsoft-com:office:office", "FieldCodes"));
+            set => SetElement(value, new("urn:schemas-microsoft-com:office:office", "FieldCodes"));
         }
 
         /// <inheritdoc/>
@@ -2612,7 +2612,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
                 .AddAttribute("v:ext", a => a.Extension);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Entry), 0, 0)
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "entry"), 0, 0)
             };
         }
 
@@ -2686,7 +2686,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
                 .AddAttribute("v:ext", a => a.Extension);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Rule), 0, 0)
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "r"), 0, 0)
             };
         }
 
@@ -2843,7 +2843,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Proxy), 0, 0)
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "proxy"), 0, 0)
             };
         }
 
@@ -2917,7 +2917,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
                 .AddAttribute("v:ext", a => a.Extension);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Relation), 0, 0)
+                new ElementParticle(new("urn:schemas-microsoft-com:office:office", "rel"), 0, 0)
             };
         }
 

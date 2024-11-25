@@ -118,16 +118,16 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyleVariation), 0, 0, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "variation"), 0, 0, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -292,38 +292,38 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
                 .AddAttribute("id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.AxisTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.CategoryAxis), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ChartArea), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabel), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelCallout), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint3D), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointLine), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointMarker), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerLayoutProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointWireframe), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataTableStyle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DownBar), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DropLine), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ErrorBar), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Floor), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMajor), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMinor), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.HiLoLine), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LeaderLine), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendStyle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea3D), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesAxis), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesLine), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitleStyle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineStyle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineLabel), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.UpBar), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ValueAxis), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Wall), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "axisTitle"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "categoryAxis"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "chartArea"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataLabel"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataLabelCallout"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataPoint"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataPoint3D"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataPointLine"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataPointMarker"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataPointMarkerLayout"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataPointWireframe"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataTable"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "downBar"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dropLine"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "errorBar"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "floor"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "gridlineMajor"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "gridlineMinor"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "hiLoLine"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "leaderLine"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "legend"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "plotArea"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "plotArea3D"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "seriesAxis"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "seriesLine"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "title"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "trendline"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "trendlineLabel"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "upBar"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "valueAxis"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "wall"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -336,8 +336,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.AxisTitle? AxisTitle
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.AxisTitle>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.AxisTitle>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "axisTitle"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "axisTitle"));
         }
 
         /// <summary>
@@ -349,8 +349,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.CategoryAxis? CategoryAxis
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.CategoryAxis>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.CategoryAxis>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "categoryAxis"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "categoryAxis"));
         }
 
         /// <summary>
@@ -362,8 +362,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ChartArea? ChartArea
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ChartArea>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ChartArea>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "chartArea"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "chartArea"));
         }
 
         /// <summary>
@@ -375,8 +375,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabel? DataLabel
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabel>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabel>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataLabel"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataLabel"));
         }
 
         /// <summary>
@@ -388,8 +388,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelCallout? DataLabelCallout
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelCallout>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelCallout>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataLabelCallout"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataLabelCallout"));
         }
 
         /// <summary>
@@ -401,8 +401,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint? DataPoint
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataPoint"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataPoint"));
         }
 
         /// <summary>
@@ -414,8 +414,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint3D? DataPoint3D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint3D>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint3D>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataPoint3D"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataPoint3D"));
         }
 
         /// <summary>
@@ -427,8 +427,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointLine? DataPointLine
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointLine>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointLine>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataPointLine"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataPointLine"));
         }
 
         /// <summary>
@@ -440,8 +440,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointMarker? DataPointMarker
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointMarker>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointMarker>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataPointMarker"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataPointMarker"));
         }
 
         /// <summary>
@@ -453,8 +453,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerLayoutProperties? MarkerLayoutProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerLayoutProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerLayoutProperties>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataPointMarkerLayout"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataPointMarkerLayout"));
         }
 
         /// <summary>
@@ -466,8 +466,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointWireframe? DataPointWireframe
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointWireframe>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointWireframe>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataPointWireframe"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataPointWireframe"));
         }
 
         /// <summary>
@@ -479,8 +479,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataTableStyle? DataTableStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataTableStyle>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataTableStyle>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataTable"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataTable"));
         }
 
         /// <summary>
@@ -492,8 +492,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DownBar? DownBar
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DownBar>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DownBar>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "downBar"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "downBar"));
         }
 
         /// <summary>
@@ -505,8 +505,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DropLine? DropLine
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DropLine>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DropLine>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dropLine"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dropLine"));
         }
 
         /// <summary>
@@ -518,8 +518,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ErrorBar? ErrorBar
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ErrorBar>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ErrorBar>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "errorBar"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "errorBar"));
         }
 
         /// <summary>
@@ -531,8 +531,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Floor? Floor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Floor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Floor>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "floor"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "floor"));
         }
 
         /// <summary>
@@ -544,8 +544,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMajor? GridlineMajor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMajor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMajor>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "gridlineMajor"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "gridlineMajor"));
         }
 
         /// <summary>
@@ -557,8 +557,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMinor? GridlineMinor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMinor>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMinor>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "gridlineMinor"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "gridlineMinor"));
         }
 
         /// <summary>
@@ -570,8 +570,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.HiLoLine? HiLoLine
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.HiLoLine>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.HiLoLine>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "hiLoLine"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "hiLoLine"));
         }
 
         /// <summary>
@@ -583,8 +583,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LeaderLine? LeaderLine
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LeaderLine>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LeaderLine>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "leaderLine"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "leaderLine"));
         }
 
         /// <summary>
@@ -596,8 +596,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendStyle? LegendStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendStyle>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendStyle>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "legend"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "legend"));
         }
 
         /// <summary>
@@ -609,8 +609,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea? PlotArea
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "plotArea"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "plotArea"));
         }
 
         /// <summary>
@@ -622,8 +622,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea3D? PlotArea3D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea3D>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea3D>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "plotArea3D"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "plotArea3D"));
         }
 
         /// <summary>
@@ -635,8 +635,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesAxis? SeriesAxis
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesAxis>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesAxis>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "seriesAxis"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "seriesAxis"));
         }
 
         /// <summary>
@@ -648,8 +648,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesLine? SeriesLine
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesLine>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesLine>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "seriesLine"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "seriesLine"));
         }
 
         /// <summary>
@@ -661,8 +661,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitleStyle? TitleStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitleStyle>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitleStyle>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "title"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "title"));
         }
 
         /// <summary>
@@ -674,8 +674,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineStyle? TrendlineStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineStyle>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineStyle>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "trendline"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "trendline"));
         }
 
         /// <summary>
@@ -687,8 +687,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineLabel? TrendlineLabel
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineLabel>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineLabel>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "trendlineLabel"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "trendlineLabel"));
         }
 
         /// <summary>
@@ -700,8 +700,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.UpBar? UpBar
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.UpBar>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.UpBar>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "upBar"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "upBar"));
         }
 
         /// <summary>
@@ -713,8 +713,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ValueAxis? ValueAxis
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ValueAxis>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ValueAxis>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "valueAxis"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "valueAxis"));
         }
 
         /// <summary>
@@ -726,8 +726,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Wall? Wall
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Wall>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Wall>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "wall"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "wall"));
         }
 
         /// <summary>
@@ -739,8 +739,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -888,34 +888,34 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Tint), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shade), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Complement), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Inverse), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Gray), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Alpha), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaOffset), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaModulation), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Hue), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HueOffset), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HueModulation), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Saturation), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SaturationOffset), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SaturationModulation), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Luminance), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LuminanceOffset), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LuminanceModulation), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Red), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RedOffset), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RedModulation), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Green), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GreenOffset), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GreenModulation), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Blue), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlueOffset), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlueModulation), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Gamma), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.InverseGamma), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "tint"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "shade"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "comp"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "inv"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "gray"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "alpha"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "alphaOff"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "alphaMod"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hue"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hueOff"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hueMod"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sat"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "satOff"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "satMod"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lum"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lumOff"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lumMod"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "red"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "redOff"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "redMod"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "green"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "greenOff"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "greenMod"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "blue"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "blueOff"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "blueMod"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "gamma"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "invGamma"), 1, 1)
                     }
                 }
             };
@@ -981,7 +981,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"), 0, 0)
                     }
                 }
             };
@@ -1121,34 +1121,34 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Tint), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shade), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Complement), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Inverse), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Gray), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Alpha), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaOffset), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AlphaModulation), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Hue), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HueOffset), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HueModulation), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Saturation), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SaturationOffset), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SaturationModulation), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Luminance), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LuminanceOffset), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LuminanceModulation), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Red), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RedOffset), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RedModulation), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Green), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GreenOffset), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GreenModulation), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Blue), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlueOffset), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlueModulation), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Gamma), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.InverseGamma), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "tint"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "shade"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "comp"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "inv"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "gray"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "alpha"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "alphaOff"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "alphaMod"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hue"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hueOff"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hueMod"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sat"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "satOff"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "satMod"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lum"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lumOff"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lumMod"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "red"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "redOff"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "redMod"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "green"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "greenOff"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "greenMod"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "blue"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "blueOff"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "blueMod"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "gamma"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "invGamma"), 1, 1)
                     }
                 }
             };
@@ -1219,15 +1219,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "styleClr"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -1296,15 +1296,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "styleClr"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -1373,15 +1373,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "styleClr"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -1612,15 +1612,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "styleClr"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -1723,39 +1723,39 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "xfrm"), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "custGeom"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstGeom"), 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "noFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "solidFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "gradFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "blipFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "pattFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "grpFill"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ln"), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectLst"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectDag"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scene3d"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sp3d"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -1768,8 +1768,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "xfrm"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "xfrm"));
         }
 
         /// <inheritdoc/>
@@ -2098,52 +2098,52 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
                 .AddAttribute("bmk", a => a.Bookmark);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ln"), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "noFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "solidFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "gradFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "blipFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "pattFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "grpFill"), 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectLst"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectDag"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Highlight), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "highlight"), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.UnderlineFollowsText), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Underline), 0, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "uLnTx"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "uLn"), 0, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.UnderlineFillText), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.UnderlineFill), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "uFillTx"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "uFill"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LatinFont), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EastAsianFont), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ComplexScriptFont), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SymbolFont), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnMouseOver), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RightToLeft), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "latin"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ea"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "cs"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sym"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkClick"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkMouseOver"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "rtl"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -2156,8 +2156,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Outline? Outline
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Outline>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Outline>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ln"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "ln"));
         }
 
         /// <inheritdoc/>
@@ -2461,26 +2461,26 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
                 .AddAttribute("compatLnSpc", a => a.CompatibleLineSpacing);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetTextWarp), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstTxWarp"), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoAutoFit), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NormalAutoFit), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeAutoFit), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "noAutofit"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "normAutofit"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "spAutoFit"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scene3d"), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FlatText), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sp3d"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "flatTx"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -2493,8 +2493,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PresetTextWarp? PresetTextWarp
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetTextWarp>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetTextWarp>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstTxWarp"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstTxWarp"));
         }
 
         /// <inheritdoc/>
@@ -3370,15 +3370,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -3445,15 +3445,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -3520,15 +3520,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -3595,15 +3595,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -3670,15 +3670,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -3745,15 +3745,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -3820,15 +3820,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -3895,15 +3895,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -3970,15 +3970,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -4045,15 +4045,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -4120,15 +4120,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -4195,15 +4195,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -4270,15 +4270,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -4345,15 +4345,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -4420,15 +4420,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -4495,15 +4495,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -4570,15 +4570,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -4645,15 +4645,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -4720,15 +4720,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -4795,15 +4795,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -4870,15 +4870,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -4945,15 +4945,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -5020,15 +5020,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -5095,15 +5095,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -5170,15 +5170,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -5245,15 +5245,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -5320,15 +5320,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -5395,15 +5395,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -5470,15 +5470,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -5545,15 +5545,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"), 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -5648,8 +5648,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference? LineReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lnRef"));
         }
 
         /// <summary>
@@ -5661,8 +5661,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale? LineWidthScale
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "lineWidthScale"));
         }
 
         /// <summary>
@@ -5674,8 +5674,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference? FillReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fillRef"));
         }
 
         /// <summary>
@@ -5687,8 +5687,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference? EffectReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "effectRef"));
         }
 
         /// <summary>
@@ -5700,8 +5700,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference? FontReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "fontRef"));
         }
 
         /// <summary>
@@ -5713,8 +5713,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties? ShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr"));
         }
 
         /// <summary>
@@ -5726,8 +5726,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType? TextCharacterPropertiesType
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr"));
         }
 
         /// <summary>
@@ -5739,8 +5739,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties? TextBodyProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr"));
         }
 
         /// <summary>
@@ -5752,8 +5752,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList>(new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "extLst"));
         }
     }
 

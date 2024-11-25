@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Word.Cid.CommentId>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Word.Cid.CommentId), 0, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2016/wordml/cid", "commentId"), 0, 0, version: FileFormatVersions.Office2019)
             };
         }
 

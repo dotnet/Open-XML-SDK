@@ -151,7 +151,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2020/threadedcomments2", "extLst"), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -164,8 +164,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList>(new("http://schemas.microsoft.com/office/spreadsheetml/2020/threadedcomments2", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2020/threadedcomments2", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -228,7 +228,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
                     }
                 }
             };

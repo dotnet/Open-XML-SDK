@@ -73,8 +73,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// </remarks>
         public CustomXmlProperties? CustomXmlProperties
         {
-            get => GetElement<CustomXmlProperties>();
-            set => SetElement(value);
+            get => GetElement<CustomXmlProperties>(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlPr"));
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -90,7 +90,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
 
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
-                new ElementParticle(typeof(CustomXmlProperties), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlPr"), 0, 1),
             };
         }
     }

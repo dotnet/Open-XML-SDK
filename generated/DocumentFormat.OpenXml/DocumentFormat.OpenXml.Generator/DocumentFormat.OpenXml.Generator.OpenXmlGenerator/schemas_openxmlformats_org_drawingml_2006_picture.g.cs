@@ -77,11 +77,11 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Pictures.BlipFill), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Pictures.ShapeProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Pictures.ShapeStyle), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Pictures.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/picture", "nvPicPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/picture", "blipFill"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/picture", "spPr"), 1, 1),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2010/picture", "style"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2010/picture", "extLst"), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -94,8 +94,8 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureProperties? NonVisualPictureProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureProperties>(new("http://schemas.openxmlformats.org/drawingml/2006/picture", "nvPicPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/picture", "nvPicPr"));
         }
 
         /// <summary>
@@ -107,8 +107,8 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Pictures.BlipFill? BlipFill
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Pictures.BlipFill>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Pictures.BlipFill>(new("http://schemas.openxmlformats.org/drawingml/2006/picture", "blipFill"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/picture", "blipFill"));
         }
 
         /// <summary>
@@ -120,8 +120,8 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Pictures.ShapeProperties? ShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Pictures.ShapeProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Pictures.ShapeProperties>(new("http://schemas.openxmlformats.org/drawingml/2006/picture", "spPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/picture", "spPr"));
         }
 
         /// <summary>
@@ -133,8 +133,8 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.Pictures.ShapeStyle? ShapeStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Pictures.ShapeStyle>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Pictures.ShapeStyle>(new("http://schemas.microsoft.com/office/drawing/2010/picture", "style"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2010/picture", "style"));
         }
 
         /// <summary>
@@ -146,8 +146,8 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.Pictures.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Pictures.OfficeArtExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Pictures.OfficeArtExtensionList>(new("http://schemas.microsoft.com/office/drawing/2010/picture", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2010/picture", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -271,9 +271,9 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
                 .AddAttribute("title", a => a.Title);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkClick"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkHover"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName("pic:id"), true, builder.CreateQName("a:graphicData")));
         }
@@ -287,8 +287,8 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick? HyperlinkOnClick
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkClick"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkClick"));
         }
 
         /// <summary>
@@ -300,8 +300,8 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover? HyperlinkOnHover
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkHover"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkHover"));
         }
 
         /// <summary>
@@ -313,8 +313,8 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -386,8 +386,8 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
                 .AddAttribute("preferRelativeResize", a => a.PreferRelativeResize);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PictureLocks), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "picLocks"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -400,8 +400,8 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PictureLocks? PictureLocks
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.PictureLocks>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PictureLocks>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "picLocks"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "picLocks"));
         }
 
         /// <summary>
@@ -413,8 +413,8 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList? NonVisualPicturePropertiesExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -474,8 +474,8 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureDrawingProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Pictures.NonVisualDrawingProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureDrawingProperties), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/picture", "cNvPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/picture", "cNvPicPr"), 1, 1)
             };
         }
 
@@ -488,8 +488,8 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Pictures.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Pictures.NonVisualDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Pictures.NonVisualDrawingProperties>(new("http://schemas.openxmlformats.org/drawingml/2006/picture", "cNvPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/picture", "cNvPr"));
         }
 
         /// <summary>
@@ -501,8 +501,8 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureDrawingProperties? NonVisualPictureDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureDrawingProperties>(new("http://schemas.openxmlformats.org/drawingml/2006/picture", "cNvPicPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/picture", "cNvPicPr"));
         }
 
         /// <inheritdoc/>
@@ -589,14 +589,14 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
                 .AddAttribute("rotWithShape", a => a.RotateWithShape);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Blip), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SourceRectangle), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "blip"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "srcRect"), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Tile), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Stretch), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "tile"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "stretch"), 1, 1)
                     }
                 }
             };
@@ -611,8 +611,8 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Blip? Blip
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Blip>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Blip>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "blip"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "blip"));
         }
 
         /// <summary>
@@ -624,8 +624,8 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SourceRectangle? SourceRectangle
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.SourceRectangle>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.SourceRectangle>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "srcRect"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "srcRect"));
         }
 
         /// <inheritdoc/>
@@ -726,39 +726,39 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "xfrm"), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "custGeom"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstGeom"), 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "noFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "solidFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "gradFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "blipFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "pattFill"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "grpFill"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ln"), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectLst"), 1, 1),
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectDag"), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scene3d"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sp3d"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -771,8 +771,8 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "xfrm"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "xfrm"));
         }
 
         /// <inheritdoc/>

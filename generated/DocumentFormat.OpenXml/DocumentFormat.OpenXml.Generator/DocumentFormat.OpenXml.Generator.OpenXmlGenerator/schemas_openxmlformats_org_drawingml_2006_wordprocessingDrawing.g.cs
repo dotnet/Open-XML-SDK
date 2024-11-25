@@ -154,7 +154,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
                 .AddAttribute("distR", a => a.DistanceFromRight);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "effectExtent"), 0, 1)
             };
         }
 
@@ -167,8 +167,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent? EffectExtent
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent>(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "effectExtent"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "effectExtent"));
         }
 
         /// <inheritdoc/>
@@ -264,7 +264,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
                 .AddAttribute("distR", a => a.DistanceFromRight);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "wrapPolygon"), 1, 1)
             };
         }
 
@@ -277,8 +277,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon? WrapPolygon
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon>(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "wrapPolygon"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "wrapPolygon"));
         }
 
         /// <inheritdoc/>
@@ -374,7 +374,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
                 .AddAttribute("distR", a => a.DistanceFromRight);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "wrapPolygon"), 1, 1)
             };
         }
 
@@ -387,8 +387,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon? WrapPolygon
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon>(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "wrapPolygon"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "wrapPolygon"));
         }
 
         /// <inheritdoc/>
@@ -469,7 +469,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
                 .AddAttribute("distB", a => a.DistanceFromBottom);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "effectExtent"), 0, 1)
             };
         }
 
@@ -482,8 +482,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent? EffectExtent
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent>(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "effectExtent"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "effectExtent"));
         }
 
         /// <inheritdoc/>
@@ -630,11 +630,11 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.DocProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.NonVisualGraphicFrameDrawingProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Graphic), 1, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "extent"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "effectExtent"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "docPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "cNvGraphicFramePr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "graphic"), 1, 1)
             };
         }
 
@@ -647,8 +647,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent? Extent
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent>(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "extent"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "extent"));
         }
 
         /// <summary>
@@ -660,8 +660,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent? EffectExtent
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent>(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "effectExtent"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "effectExtent"));
         }
 
         /// <summary>
@@ -673,8 +673,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Wordprocessing.DocProperties? DocProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.DocProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.DocProperties>(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "docPr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "docPr"));
         }
 
         /// <summary>
@@ -686,8 +686,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Wordprocessing.NonVisualGraphicFrameDrawingProperties? NonVisualGraphicFrameDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.NonVisualGraphicFrameDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.NonVisualGraphicFrameDrawingProperties>(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "cNvGraphicFramePr"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "cNvGraphicFramePr"));
         }
 
         /// <summary>
@@ -699,8 +699,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Graphic? Graphic
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "graphic"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "graphic"));
         }
 
         /// <inheritdoc/>
@@ -959,30 +959,30 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.SimplePosition), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalPosition), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalPosition), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "simplePos"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "positionH"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "positionV"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "extent"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "effectExtent"), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapNone), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapSquare), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTight), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapThrough), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTopBottom), 1, 1)
+                            new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "wrapNone"), 1, 1),
+                            new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "wrapSquare"), 1, 1),
+                            new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "wrapTight"), 1, 1),
+                            new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "wrapThrough"), 1, 1),
+                            new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "wrapTopAndBottom"), 1, 1)
                         }
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.DocProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.NonVisualGraphicFrameDrawingProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Graphic), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeWidth), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "docPr"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "cNvGraphicFramePr"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "graphic"), 1, 1),
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "sizeRelH"), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "sizeRelV"), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -995,8 +995,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Wordprocessing.SimplePosition? SimplePosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.SimplePosition>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.SimplePosition>(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "simplePos"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "simplePos"));
         }
 
         /// <summary>
@@ -1008,8 +1008,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalPosition? HorizontalPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalPosition>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalPosition>(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "positionH"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "positionH"));
         }
 
         /// <summary>
@@ -1021,8 +1021,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalPosition? VerticalPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalPosition>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalPosition>(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "positionV"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "positionV"));
         }
 
         /// <summary>
@@ -1034,8 +1034,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent? Extent
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent>(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "extent"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "extent"));
         }
 
         /// <summary>
@@ -1047,8 +1047,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent? EffectExtent
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent>(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "effectExtent"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "effectExtent"));
         }
 
         /// <inheritdoc/>
@@ -1328,8 +1328,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
                 .AddAttribute("edited", a => a.Edited);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.StartPoint), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.LineTo), 2, 0)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "start"), 1, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "lineTo"), 2, 0)
             };
         }
 
@@ -1342,8 +1342,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Wordprocessing.StartPoint? StartPoint
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.StartPoint>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.StartPoint>(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "start"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "start"));
         }
 
         /// <inheritdoc/>
@@ -1423,9 +1423,9 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignment), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset), 0, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "align"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "posOffset"), 1, 1),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "pctPosHOffset"), 0, 1, version: FileFormatVersions.Office2010)
                 }
             };
         }
@@ -1439,8 +1439,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignment? HorizontalAlignment
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignment>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignment>(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "align"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "align"));
         }
 
         /// <summary>
@@ -1452,8 +1452,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset? PositionOffset
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset>(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "posOffset"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "posOffset"));
         }
 
         /// <summary>
@@ -1465,8 +1465,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset? PercentagePositionHeightOffset
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset>(new("http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "pctPosHOffset"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "pctPosHOffset"));
         }
 
         /// <inheritdoc/>
@@ -1546,9 +1546,9 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignment), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset), 0, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "align"), 1, 1),
+                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "posOffset"), 1, 1),
+                    new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "pctPosVOffset"), 0, 1, version: FileFormatVersions.Office2010)
                 }
             };
         }
@@ -1562,8 +1562,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignment? VerticalAlignment
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignment>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignment>(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "align"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "align"));
         }
 
         /// <summary>
@@ -1575,8 +1575,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset? PositionOffset
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset>(new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "posOffset"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing", "posOffset"));
         }
 
         /// <summary>
@@ -1588,8 +1588,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset? PercentagePositionVerticalOffset
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset>(new("http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "pctPosVOffset"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "pctPosVOffset"));
         }
 
         /// <inheritdoc/>
@@ -1768,9 +1768,9 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
                 .AddAttribute("title", a => a.Title);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkClick"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkHover"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
             };
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName("wp:id"), true, null));
         }
@@ -1784,8 +1784,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick? HyperlinkOnClick
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkClick"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkClick"));
         }
 
         /// <summary>
@@ -1797,8 +1797,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover? HyperlinkOnHover
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkHover"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkHover"));
         }
 
         /// <summary>
@@ -1810,8 +1810,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -1871,8 +1871,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "graphicFrameLocks"), 0, 1),
+                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
             };
         }
 
@@ -1885,8 +1885,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.GraphicFrameLocks? GraphicFrameLocks
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "graphicFrameLocks"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "graphicFrameLocks"));
         }
 
         /// <summary>
@@ -1898,8 +1898,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
+            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
         }
 
         /// <inheritdoc/>

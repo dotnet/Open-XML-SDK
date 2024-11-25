@@ -247,8 +247,8 @@ namespace DocumentFormat.OpenXml.EMMA
                 .AddAttribute("emma:time-ref-anchor-point", a => a.TimeReferenceAnchorPoint);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Arc), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Node), 1, 1)
+                new ElementParticle(new("http://www.w3.org/2003/04/emma", "arc"), 1, 1),
+                new ElementParticle(new("http://www.w3.org/2003/04/emma", "node"), 1, 1)
             };
         }
 
@@ -726,11 +726,11 @@ namespace DocumentFormat.OpenXml.EMMA
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.DerivedFrom), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Lattice), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Literal), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Ink.ContextNode), 0, 1)
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "derived-from"), 1, 1),
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "info"), 1, 1),
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "lattice"), 1, 1),
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "literal"), 1, 1),
+                    new ElementParticle(new("http://schemas.microsoft.com/ink/2010/main", "context"), 0, 1)
                 }
             };
             builder.AddConstraint(new AttributeValuePatternConstraint(builder.CreateQName("emma:id"), @"[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}") { Version = FileFormatVersions.Office2010 });
@@ -1159,12 +1159,12 @@ namespace DocumentFormat.OpenXml.EMMA
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.DerivedFrom), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1)
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "derived-from"), 1, 1),
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "info"), 1, 1),
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "interpretation"), 1, 1),
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "one-of"), 1, 1),
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "group"), 1, 1),
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "sequence"), 1, 1)
                 }
             };
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("emma:disjunction-type"), true, new string[] { "recognition" }) { Version = FileFormatVersions.Office2010 });
@@ -1583,13 +1583,13 @@ namespace DocumentFormat.OpenXml.EMMA
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.DerivedFrom), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.GroupInfo), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1)
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "derived-from"), 1, 1),
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "group-info"), 1, 1),
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "info"), 1, 1),
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "interpretation"), 1, 1),
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "one-of"), 1, 1),
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "group"), 1, 1),
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "sequence"), 1, 1)
                 }
             };
         }
@@ -2005,12 +2005,12 @@ namespace DocumentFormat.OpenXml.EMMA
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.DerivedFrom), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1)
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "derived-from"), 1, 1),
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "info"), 1, 1),
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "interpretation"), 1, 1),
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "one-of"), 1, 1),
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "group"), 1, 1),
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "sequence"), 1, 1)
                 }
             };
         }
@@ -2143,10 +2143,10 @@ namespace DocumentFormat.OpenXml.EMMA
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Sequence>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1)
+                new ElementParticle(new("http://www.w3.org/2003/04/emma", "interpretation"), 1, 1),
+                new ElementParticle(new("http://www.w3.org/2003/04/emma", "one-of"), 1, 1),
+                new ElementParticle(new("http://www.w3.org/2003/04/emma", "sequence"), 1, 1),
+                new ElementParticle(new("http://www.w3.org/2003/04/emma", "group"), 1, 1)
             };
         }
 
@@ -2358,7 +2358,7 @@ namespace DocumentFormat.OpenXml.EMMA
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.EndPoint), 1, 1)
+                new ElementParticle(new("http://www.w3.org/2003/04/emma", "endpoint"), 1, 1)
             };
         }
 
@@ -2675,7 +2675,7 @@ namespace DocumentFormat.OpenXml.EMMA
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1)
+                new ElementParticle(new("http://www.w3.org/2003/04/emma", "info"), 1, 1)
             };
         }
 
@@ -2911,7 +2911,7 @@ namespace DocumentFormat.OpenXml.EMMA
                 .AddAttribute("emma:source", a => a.Source);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1)
+                new ElementParticle(new("http://www.w3.org/2003/04/emma", "info"), 1, 1)
             };
         }
 
@@ -3003,15 +3003,15 @@ namespace DocumentFormat.OpenXml.EMMA
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Derivation), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Grammar), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Model), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.EndPointInfo), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1)
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "derivation"), 1, 1),
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "grammar"), 1, 1),
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "model"), 1, 1),
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "endpoint-info"), 1, 1),
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "info"), 1, 1),
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "interpretation"), 1, 1),
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "one-of"), 1, 1),
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "group"), 1, 1),
+                    new ElementParticle(new("http://www.w3.org/2003/04/emma", "sequence"), 1, 1)
                 }
             };
         }

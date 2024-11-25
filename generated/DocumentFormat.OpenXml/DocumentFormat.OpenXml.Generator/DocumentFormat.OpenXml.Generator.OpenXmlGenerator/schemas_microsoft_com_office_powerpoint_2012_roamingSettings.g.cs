@@ -146,8 +146,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
             builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Value>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Key), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Value), 1, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings", "key"), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings", "value"), 1, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -160,8 +160,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Key? Key
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Key>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Key>(new("http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings", "key"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings", "key"));
         }
 
         /// <summary>
@@ -173,8 +173,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Value? Value
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Value>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Value>(new("http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings", "value"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings", "value"));
         }
 
         /// <inheritdoc/>

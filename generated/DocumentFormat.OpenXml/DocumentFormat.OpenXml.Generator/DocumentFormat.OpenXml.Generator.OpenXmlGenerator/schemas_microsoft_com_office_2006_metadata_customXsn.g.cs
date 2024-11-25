@@ -73,10 +73,10 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomXsn.Scope>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.CachedView), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.Scope), 1, 1)
+                new ElementParticle(new("http://schemas.microsoft.com/office/2006/metadata/customXsn", "xsnLocation"), 1, 1),
+                new ElementParticle(new("http://schemas.microsoft.com/office/2006/metadata/customXsn", "cached"), 1, 1),
+                new ElementParticle(new("http://schemas.microsoft.com/office/2006/metadata/customXsn", "openByDefault"), 1, 1),
+                new ElementParticle(new("http://schemas.microsoft.com/office/2006/metadata/customXsn", "xsnScope"), 1, 1)
             };
         }
 
@@ -89,8 +89,8 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation? XsnLocation
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation>(new("http://schemas.microsoft.com/office/2006/metadata/customXsn", "xsnLocation"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2006/metadata/customXsn", "xsnLocation"));
         }
 
         /// <summary>
@@ -102,8 +102,8 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomXsn.CachedView? CachedView
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomXsn.CachedView>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomXsn.CachedView>(new("http://schemas.microsoft.com/office/2006/metadata/customXsn", "cached"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2006/metadata/customXsn", "cached"));
         }
 
         /// <summary>
@@ -115,8 +115,8 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault? OpenByDefault
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault>(new("http://schemas.microsoft.com/office/2006/metadata/customXsn", "openByDefault"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2006/metadata/customXsn", "openByDefault"));
         }
 
         /// <summary>
@@ -128,8 +128,8 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomXsn.Scope? Scope
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomXsn.Scope>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.CustomXsn.Scope>(new("http://schemas.microsoft.com/office/2006/metadata/customXsn", "xsnScope"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/2006/metadata/customXsn", "xsnScope"));
         }
 
         /// <inheritdoc/>

@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Slicer.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2010/slicer", "extLst"), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -97,8 +97,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.Slicer.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Slicer.OfficeArtExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.Slicer.OfficeArtExtensionList>(new("http://schemas.microsoft.com/office/drawing/2010/slicer", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2010/slicer", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -161,7 +161,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"), 0, 0)
                     }
                 }
             };

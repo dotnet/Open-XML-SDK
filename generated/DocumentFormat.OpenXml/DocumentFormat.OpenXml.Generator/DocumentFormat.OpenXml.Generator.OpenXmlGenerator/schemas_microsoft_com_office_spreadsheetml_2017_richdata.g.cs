@@ -126,8 +126,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValue), 0, 0, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "rv"), 0, 0, version: FileFormatVersions.Office2019),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "extLst"), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -235,8 +235,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueStructure), 0, 0, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "s"), 0, 0, version: FileFormatVersions.Office2019),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "extLst"), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -344,8 +344,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueFallback), 0, 1, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData.Value), 1, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "fb"), 0, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "v"), 1, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -358,8 +358,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
         /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueFallback? RichValueFallback
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueFallback>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueFallback>(new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "fb"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "fb"));
         }
 
         /// <inheritdoc/>
@@ -422,7 +422,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
                     }
                 }
             };
@@ -587,7 +587,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.RichData.Key), 1, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "k"), 1, 0, version: FileFormatVersions.Office2019)
             };
         }
 

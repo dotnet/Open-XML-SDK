@@ -87,8 +87,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties), 1, 1, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2018/animation/model3d", "animPr"), 1, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2018/animation/model3d", "extLst"), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -101,8 +101,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
         /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties? AnimationProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties>(new("http://schemas.microsoft.com/office/drawing/2018/animation/model3d", "animPr"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2018/animation/model3d", "animPr"));
         }
 
         /// <summary>
@@ -114,8 +114,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
         /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.OfficeArtExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.OfficeArtExtensionList>(new("http://schemas.microsoft.com/office/drawing/2018/animation/model3d", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2018/animation/model3d", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -316,7 +316,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
                 .AddAttribute("end", a => a.End);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2018/animation", "extLst"), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -329,8 +329,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
         /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList>(new("http://schemas.microsoft.com/office/drawing/2018/animation", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2018/animation", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -393,7 +393,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"), 0, 0)
                     }
                 }
             };

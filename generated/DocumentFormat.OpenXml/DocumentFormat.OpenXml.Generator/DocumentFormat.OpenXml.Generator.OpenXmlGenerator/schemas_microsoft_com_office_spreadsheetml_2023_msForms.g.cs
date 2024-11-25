@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2023/msForms", "extLst"), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -97,8 +97,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
         /// </remarks>
         public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList>(new("http://schemas.microsoft.com/office/spreadsheetml/2023/msForms", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2023/msForms", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -207,8 +207,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
                 .AddAttribute("latestEventMarker", a => a.LatestEventMarker);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.SyncedQuestionId), 0, 0, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2023/msForms", "syncedQuestionId"), 0, 0, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2023/msForms", "extLst"), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -310,7 +310,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
                     }
                 }
             };

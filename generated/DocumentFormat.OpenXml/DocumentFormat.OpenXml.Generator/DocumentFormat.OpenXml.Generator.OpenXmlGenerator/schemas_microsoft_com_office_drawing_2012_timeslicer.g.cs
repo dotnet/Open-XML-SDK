@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2012/timeslicer", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -97,8 +97,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.OfficeArtExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.OfficeArtExtensionList>(new("http://schemas.microsoft.com/office/drawing/2012/timeslicer", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2012/timeslicer", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -161,7 +161,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"), 0, 0)
                     }
                 }
             };

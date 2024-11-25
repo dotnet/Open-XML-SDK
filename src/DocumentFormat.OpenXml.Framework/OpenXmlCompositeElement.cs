@@ -200,7 +200,7 @@ namespace DocumentFormat.OpenXml
                 return false;
             }
 
-            var wasAdded = Metadata.Particle.Set(this, newChild, newChild.GetType());
+            var wasAdded = Metadata.Particle.Set(this, newChild, newChild.QName);
 
             if (throwOnError && !wasAdded)
             {
@@ -770,12 +770,11 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        private protected TElement? GetElement<TElement>()
-            where TElement : OpenXmlElement => Metadata.Particle.Get<TElement>(this);
+        private protected TElement? GetElement<TElement>(in OpenXmlQualifiedName qname)
+            where TElement : OpenXmlElement => Metadata.Particle.Get(this, qname) as TElement;
 
-        private protected bool SetElement<TElement>(TElement? value)
-            where TElement : OpenXmlElement
-            => Metadata.Particle.Set(this, value);
+        private protected bool SetElement(OpenXmlElement? value, OpenXmlQualifiedName qname)
+            => Metadata.Particle.Set(this, value, qname);
 
         private void AddANode(OpenXmlElement node)
         {

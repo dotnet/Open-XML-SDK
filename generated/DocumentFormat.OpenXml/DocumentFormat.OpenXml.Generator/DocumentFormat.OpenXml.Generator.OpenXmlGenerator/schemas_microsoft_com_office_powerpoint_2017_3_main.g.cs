@@ -83,7 +83,7 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Presentation.TrackList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2017/3/main", "trackLst"), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -96,8 +96,8 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Presentation.TrackList? TrackList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Presentation.TrackList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2019.Presentation.TrackList>(new("http://schemas.microsoft.com/office/powerpoint/2017/3/main", "trackLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2017/3/main", "trackLst"));
         }
 
         /// <inheritdoc/>
@@ -250,7 +250,7 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Presentation.Track>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Presentation.Track), 0, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2017/3/main", "track"), 0, 0, version: FileFormatVersions.Office2019)
             };
         }
 

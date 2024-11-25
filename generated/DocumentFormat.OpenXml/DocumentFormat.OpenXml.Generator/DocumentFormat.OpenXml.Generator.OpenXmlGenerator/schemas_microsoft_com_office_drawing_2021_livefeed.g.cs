@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "extLst"), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -82,8 +82,8 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>(new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -142,7 +142,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "extLst"), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -155,8 +155,8 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>(new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -215,7 +215,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "extLst"), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -228,8 +228,8 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>(new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -288,7 +288,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "extLst"), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -301,8 +301,8 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>(new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -363,8 +363,8 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties), 0, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "backgroundProps"), 0, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "extLst"), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -377,8 +377,8 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties? LiveFeedBackgroundProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties>(new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "backgroundProps"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "backgroundProps"));
         }
 
         /// <summary>
@@ -390,8 +390,8 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
-            set => SetElement(value);
+            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>(new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "extLst"));
+            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "extLst"));
         }
 
         /// <inheritdoc/>
@@ -454,7 +454,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
+                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"), 0, 0)
                     }
                 }
             };
@@ -528,13 +528,13 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundNormalProperties), 0, 1, version: FileFormatVersions.Office2021),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundRemovedProperties), 0, 1, version: FileFormatVersions.Office2021),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundBlurProperties), 0, 1, version: FileFormatVersions.Office2021),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundCustomProperties), 0, 1, version: FileFormatVersions.Office2021)
+                        new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "Normal"), 0, 1, version: FileFormatVersions.Office2021),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "Removed"), 0, 1, version: FileFormatVersions.Office2021),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "Blur"), 0, 1, version: FileFormatVersions.Office2021),
+                        new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "Custom"), 0, 1, version: FileFormatVersions.Office2021)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "extLst"), 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 

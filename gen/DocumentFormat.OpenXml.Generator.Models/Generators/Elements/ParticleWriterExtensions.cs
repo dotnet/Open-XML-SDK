@@ -96,7 +96,15 @@ internal static class ParticleWriterExtensions
         if (particle.Kind == ParticleType.Element)
         {
             var info = services.FindClassName(particle.Name);
-            writer.WriteObject("ElementParticle", particle, w => w.WriteItem(new TypeOf(info)));
+            writer.WriteObject("ElementParticle", particle, w =>
+            {
+                w.Write("new(");
+                w.WriteString(services.GetNamespaceInfo(particle.Name.QName.Prefix).Uri);
+                w.Write(", ");
+                w.WriteString(particle.Name.QName.Name);
+                w.Write(")");
+            });
+
         }
         else if (particle.Kind == ParticleType.Any)
         {
