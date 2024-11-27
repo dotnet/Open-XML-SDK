@@ -12,9 +12,10 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class AlternateContentChoice : OpenXmlCompositeElement
     {
-        internal static OpenXmlQualifiedName InternalQName => new(AlternateContent.InternalQName.Namespace.Uri, Name);
-
         private const string Name = "Choice";
+
+        internal static readonly OpenXmlQualifiedName ElementQName = new(AlternateContent.ElementQName.Namespace.Uri, Name);
+        internal static readonly OpenXmlSchemaType ElementType = new(ElementQName, default);
 
         /// <summary>
         /// Initializes a new instance of the
@@ -116,7 +117,7 @@ namespace DocumentFormat.OpenXml
         {
             base.ConfigureMetadata(builder);
 
-            builder.SetSchema(new(new(AlternateContent.InternalQName.Namespace.Uri, Name), default));
+            builder.SetSchema(ElementType);
 
             builder.AddElement<AlternateContentChoice>()
                 .AddAttribute("Requires", a => a.Requires);
