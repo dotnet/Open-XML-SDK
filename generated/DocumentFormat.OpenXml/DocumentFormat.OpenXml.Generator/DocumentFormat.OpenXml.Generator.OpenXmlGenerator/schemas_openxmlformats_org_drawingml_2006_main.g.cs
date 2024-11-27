@@ -52,7 +52,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "audioCd");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_AudioCD");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -154,7 +154,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "wavAudioFile");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_EmbeddedWAVAudioFile");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -184,7 +184,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "snd");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_EmbeddedWAVAudioFile");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -214,7 +214,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_EmbeddedWAVAudioFile");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -286,7 +286,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "audioFile");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_AudioFile");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -382,7 +382,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "videoFile");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_VideoFile");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -478,7 +478,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "quickTimeFile");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_QuickTimeFile");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -568,7 +568,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "tint");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_PositiveFixedPercentage");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -598,7 +598,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "shade");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_PositiveFixedPercentage");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -628,7 +628,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "alpha");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_PositiveFixedPercentage");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -658,7 +658,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_PositiveFixedPercentage");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -700,7 +700,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "comp");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ComplementTransform");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -730,7 +730,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "inv");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_InverseTransform");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -760,7 +760,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "gray");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GrayscaleTransform");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -790,7 +790,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "alphaOff");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_FixedPercentage");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -836,7 +836,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "alphaMod");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_PositivePercentage");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -866,7 +866,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "hueMod");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_PositivePercentage");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -896,7 +896,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_PositivePercentage");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -938,7 +938,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "hue");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_PositiveFixedAngle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -984,7 +984,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "hueOff");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Angle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1029,7 +1029,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "sat");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Percentage");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1059,7 +1059,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "satOff");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Percentage");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1089,7 +1089,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "satMod");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Percentage");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1119,7 +1119,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lum");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Percentage");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1150,7 +1150,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lumOff");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Percentage");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1180,7 +1180,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lumMod");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Percentage");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1210,7 +1210,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "red");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Percentage");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1240,7 +1240,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "redOff");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Percentage");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1270,7 +1270,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "redMod");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Percentage");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1300,7 +1300,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "green");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Percentage");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1330,7 +1330,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "greenOff");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Percentage");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1360,7 +1360,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "greenMod");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Percentage");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1390,7 +1390,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "blue");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Percentage");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1420,7 +1420,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "blueOff");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Percentage");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1450,7 +1450,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "blueMod");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Percentage");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1480,7 +1480,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Percentage");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1521,7 +1521,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "gamma");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GammaTransform");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1551,7 +1551,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "invGamma");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_InverseGammaTransform");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1581,7 +1581,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_OfficeArtExtension");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1687,7 +1687,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ScRgbColor");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1882,7 +1882,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_SRgbColor");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2068,7 +2068,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_HslColor");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2264,7 +2264,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_SystemColor");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2446,7 +2446,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_SchemeColor");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2614,7 +2614,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_PresetColor");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2759,7 +2759,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "sp3d");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Shape3D");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2948,7 +2948,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "flatTx");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_FlatText");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2993,7 +2993,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lin");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_LinearShadeProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -3055,7 +3055,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "path");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_PathShadeProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -3142,7 +3142,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "tile");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TileInfoProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -3257,7 +3257,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "stretch");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_StretchInfoProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -3329,7 +3329,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "noFill");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_NoFillProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -3370,7 +3370,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "solidFill");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_SolidColorFillProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -3532,7 +3532,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "gradFill");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GradientFillProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -3651,7 +3651,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "blipFill");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_BlipFillProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -3778,7 +3778,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "pattFill");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_PatternFillProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -3880,7 +3880,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "grpFill");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GroupFillProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -3945,7 +3945,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "cont");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_EffectContainer");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -4070,7 +4070,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectDag");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_EffectContainer");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -4195,7 +4195,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_EffectContainer");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -4304,7 +4304,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "effect");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_EffectReference");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -4349,7 +4349,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "alphaBiLevel");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_AlphaBiLevelEffect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -4395,7 +4395,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "alphaCeiling");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_AlphaCeilingEffect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -4425,7 +4425,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "alphaFloor");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_AlphaFloorEffect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -4466,7 +4466,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "alphaInv");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_AlphaInverseEffect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -4625,7 +4625,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "alphaMod");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_AlphaModulateEffect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -4697,7 +4697,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "alphaModFix");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_AlphaModulateFixedEffect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -4742,7 +4742,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "alphaOutset");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_AlphaOutsetEffect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -4787,7 +4787,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "alphaRepl");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_AlphaReplaceEffect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -4833,7 +4833,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "biLevel");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_BiLevelEffect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -4885,7 +4885,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "blend");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_BlendEffect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -4973,7 +4973,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "blur");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_BlurEffect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -5036,7 +5036,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "clrChange");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ColorChangeEffect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -5146,7 +5146,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "clrRepl");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ColorReplaceEffect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -5310,7 +5310,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "duotone");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_DuotoneEffect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -5396,7 +5396,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "fill");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_FillEffect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -5560,7 +5560,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "fillOverlay");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_FillOverlayEffect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -5740,7 +5740,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "glow");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GlowEffect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -5908,7 +5908,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "grayscl");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GrayscaleEffect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -5938,7 +5938,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "hsl");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_HSLEffect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -6022,7 +6022,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "innerShdw");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_InnerShadowEffect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -6218,7 +6218,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lum");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_LuminanceEffect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -6289,7 +6289,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "outerShdw");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_OuterShadowEffect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -6571,7 +6571,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstShdw");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_PresetShadowEffect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -6768,7 +6768,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "reflection");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ReflectionEffect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -6986,7 +6986,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "relOff");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_RelativeOffsetEffect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -7039,7 +7039,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "softEdge");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_SoftEdgesEffect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -7085,7 +7085,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "tint");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TintEffect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -7144,7 +7144,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "xfrm");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TransformEffect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -7266,7 +7266,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectLst");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_EffectList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -7454,7 +7454,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "custGeom");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_CustomGeometry2D");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -7607,7 +7607,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstGeom");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_PresetGeometry2D");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -7701,7 +7701,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstTxWarp");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_PresetTextShape");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -7789,7 +7789,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "round");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_LineJoinRound");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -7819,7 +7819,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "bevel");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_LineJoinBevel");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -7849,7 +7849,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "miter");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_LineJoinMiterProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -7894,7 +7894,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstDash");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_PresetLineDashProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -7945,7 +7945,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "custDash");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_DashStopList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -8015,7 +8015,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "fill");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_FillProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -8179,7 +8179,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "fillRef");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_StyleMatrixReference");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -8259,7 +8259,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectRef");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_StyleMatrixReference");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -8339,7 +8339,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lnRef");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_StyleMatrixReference");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -8419,7 +8419,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_StyleMatrixReference");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -8575,7 +8575,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "effect");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_EffectProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -8678,7 +8678,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "font");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_FontCollection");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -8750,7 +8750,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "majorFont");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_FontCollection");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -8822,7 +8822,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "minorFont");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_FontCollection");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -8894,7 +8894,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_FontCollection");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -8999,7 +8999,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "fontRef");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_FontReference");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -9168,7 +9168,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "noAutofit");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextNoAutofit");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -9198,7 +9198,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "normAutofit");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextNormalAutofit");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -9257,7 +9257,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "spAutoFit");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextShapeAutofit");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -9287,7 +9287,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "buClrTx");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextBulletColorFollowText");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -9328,7 +9328,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "buClr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Color");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -9408,7 +9408,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "extrusionClr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Color");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -9488,7 +9488,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "contourClr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Color");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -9568,7 +9568,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "clrFrom");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Color");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -9648,7 +9648,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "clrTo");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Color");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -9728,7 +9728,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "fgClr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Color");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -9808,7 +9808,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "bgClr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Color");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -9888,7 +9888,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "highlight");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Color");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -9968,7 +9968,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Color");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -10102,7 +10102,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "buSzTx");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextBulletSizeFollowText");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -10132,7 +10132,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "buSzPct");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextBulletSizePercent");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -10178,7 +10178,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "buSzPts");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextBulletSizePoint");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -10224,7 +10224,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "buFontTx");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextBulletTypefaceFollowText");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -10254,7 +10254,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "buFont");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextFont");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -10284,7 +10284,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "latin");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextFont");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -10314,7 +10314,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "ea");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextFont");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -10344,7 +10344,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "cs");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextFont");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -10374,7 +10374,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "sym");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextFont");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -10404,7 +10404,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextFont");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -10478,7 +10478,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "buNone");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextNoBullet");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -10508,7 +10508,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "buAutoNum");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextAutonumberBullet");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -10568,7 +10568,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "buChar");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextCharBullet");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -10619,7 +10619,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "buBlip");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextBlipBullet");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -10691,7 +10691,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "uLnTx");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextUnderlineLineFollowText");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -10738,7 +10738,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "uLn");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_LineProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -10842,7 +10842,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "ln");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_LineProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -10946,7 +10946,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lnL");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_LineProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -11050,7 +11050,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lnR");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_LineProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -11154,7 +11154,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lnT");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_LineProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -11258,7 +11258,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lnB");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_LineProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -11362,7 +11362,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lnTlToBr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_LineProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -11466,7 +11466,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lnBlToTr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_LineProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -11570,7 +11570,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_LineProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -11689,7 +11689,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "uFillTx");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextUnderlineFillFollowText");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -11730,7 +11730,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "uFill");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextUnderlineFillGroupWrapper");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -11887,7 +11887,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "r");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_RegularTextRun");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -11980,7 +11980,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "br");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextLineBreak");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -12060,7 +12060,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "fld");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextField");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -12195,7 +12195,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "graphic");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GraphicalObject");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -12290,7 +12290,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "blip");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Blip");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -12441,7 +12441,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "theme");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_OfficeStyleSheet");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -12642,7 +12642,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "themeOverride");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_BaseStylesOverride");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -12775,7 +12775,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "themeManager");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_EmptyElement");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -12805,7 +12805,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "masterClrMapping");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_EmptyElement");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -12835,7 +12835,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_EmptyElement");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -12869,7 +12869,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "tbl");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Table");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -12964,7 +12964,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "tblStyleLst");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TableStyleList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -13076,7 +13076,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_OfficeArtExtensionList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -13141,7 +13141,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "st");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_AudioCDTime");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -13171,7 +13171,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "end");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_AudioCDTime");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -13201,7 +13201,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_AudioCDTime");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -13264,7 +13264,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "custClr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_CustomColor");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -13429,7 +13429,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "font");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_SupplementalFont");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -13497,7 +13497,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "scene3d");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Scene3D");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -13623,7 +13623,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectStyle");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_EffectStyleItem");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -13705,7 +13705,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "fillStyleLst");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_FillStyleList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -13786,7 +13786,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lnStyleLst");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_LineStyleList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -13851,7 +13851,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectStyleLst");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_EffectStyleList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -13921,7 +13921,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "bgFillStyleLst");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_BackgroundFillStyleList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -14014,7 +14014,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "clrScheme");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ColorScheme");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -14289,7 +14289,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "fontScheme");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_FontScheme");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -14415,7 +14415,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "fmtScheme");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_StyleMatrix");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -14554,7 +14554,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "dk1");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Color2");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -14626,7 +14626,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lt1");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Color2");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -14698,7 +14698,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "dk2");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Color2");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -14770,7 +14770,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lt2");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Color2");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -14842,7 +14842,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "accent1");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Color2");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -14914,7 +14914,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "accent2");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Color2");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -14986,7 +14986,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "accent3");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Color2");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -15058,7 +15058,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "accent4");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Color2");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -15130,7 +15130,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "accent5");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Color2");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -15202,7 +15202,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "accent6");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Color2");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -15274,7 +15274,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlink");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Color2");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -15346,7 +15346,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "folHlink");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Color2");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -15418,7 +15418,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Color2");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -15538,7 +15538,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "sx");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Ratio");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -15568,7 +15568,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "sy");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Ratio");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -15598,7 +15598,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Ratio");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -15653,7 +15653,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "off");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Point2D");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -15683,7 +15683,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "chOff");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Point2D");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -15713,7 +15713,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Point2D");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -15770,7 +15770,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_PositiveSize2D");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -15800,7 +15800,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "chExt");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_PositiveSize2D");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -15830,7 +15830,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_PositiveSize2D");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -15893,7 +15893,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "spLocks");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ShapeLocking");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -16093,7 +16093,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "cxnSpLocks");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ConnectorLocking");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -16276,7 +16276,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "stCxn");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Connection");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -16306,7 +16306,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "endCxn");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Connection");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -16336,7 +16336,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Connection");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -16397,7 +16397,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "graphicFrameLocks");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GraphicalObjectFrameLocking");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -16890,7 +16890,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "graphicData");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GraphicalObjectData");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -17313,7 +17313,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "dgm");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_AnimationDgmElement");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -17372,7 +17372,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "chart");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_AnimationChartElement");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -17440,7 +17440,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "bldDgm");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_AnimationDgmBuildProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -17500,7 +17500,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "bldChart");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_AnimationChartBuildProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -17568,7 +17568,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "txBody");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextBody");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -17657,7 +17657,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "useSpRect");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GvmlUseShapeRectangle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -17694,7 +17694,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "xfrm");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Transform2D");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -17823,7 +17823,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "cNvPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_NonVisualDrawingProps");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -17994,7 +17994,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "cNvSpPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_NonVisualDrawingShapeProps");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -18100,7 +18100,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "nvSpPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GvmlShapeNonVisual");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -18207,7 +18207,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "spPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ShapeProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -18349,7 +18349,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "txSp");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GvmlTextShape");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -18439,7 +18439,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "style");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ShapeStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -18565,7 +18565,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "cNvCxnSpPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_NonVisualConnectorProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -18689,7 +18689,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "nvCxnSpPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GvmlConnectorNonVisual");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -18783,7 +18783,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "cNvPicPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_NonVisualPictureProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -18889,7 +18889,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "nvPicPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GvmlPictureNonVisual");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -18983,7 +18983,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "cNvGraphicFramePr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_NonVisualGraphicFrameProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -19077,7 +19077,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "nvGraphicFramePr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GvmlGraphicFrameNonVisual");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -19171,7 +19171,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "cNvGrpSpPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_NonVisualGroupDrawingShapeProps");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -19258,7 +19258,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "rot");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_SphereCoords");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -19340,7 +19340,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "camera");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Camera");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -19462,7 +19462,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lightRig");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_LightRig");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -19574,7 +19574,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "backdrop");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Backdrop");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -19691,7 +19691,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "anchor");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Point3D");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -19767,7 +19767,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "norm");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Vector3D");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -19797,7 +19797,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "up");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Vector3D");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -19827,7 +19827,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Vector3D");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -19899,7 +19899,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "bevelT");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Bevel");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -19929,7 +19929,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "bevelB");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Bevel");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -19959,7 +19959,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "bevel");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Bevel");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -19989,7 +19989,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Bevel");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -20058,7 +20058,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "fillToRect");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_RelativeRect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -20088,7 +20088,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "tileRect");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_RelativeRect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -20118,7 +20118,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "fillRect");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_RelativeRect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -20148,7 +20148,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "srcRect");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_RelativeRect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -20178,7 +20178,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_RelativeRect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -20260,7 +20260,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "gs");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GradientStop");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -20435,7 +20435,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "gsLst");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GradientStopList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -20494,7 +20494,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "gd");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GeomGuide");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -20554,7 +20554,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "pos");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_AdjPoint2D");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -20584,7 +20584,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "pt");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_AdjPoint2D");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -20614,7 +20614,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_AdjPoint2D");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -20685,7 +20685,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "ahXY");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_XYAdjustHandle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -20864,7 +20864,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "ahPolar");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_PolarAdjustHandle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -21043,7 +21043,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "cxn");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ConnectionSite");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -21135,7 +21135,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "close");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Path2DClose");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -21171,7 +21171,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "moveTo");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Path2DMoveTo");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -21249,7 +21249,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lnTo");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Path2DLineTo");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -21321,7 +21321,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "arcTo");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Path2DArcTo");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -21434,7 +21434,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "quadBezTo");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Path2DQuadBezierTo");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -21499,7 +21499,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "cubicBezTo");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Path2DCubicBezierTo");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -21569,7 +21569,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "path");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Path2D");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -21709,7 +21709,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "avLst");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GeomGuideList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -21773,7 +21773,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "gdLst");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GeomGuideList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -21837,7 +21837,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GeomGuideList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -21895,7 +21895,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "ahLst");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_AdjustHandleList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -21962,7 +21962,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "cxnLst");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ConnectionSiteList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -22021,7 +22021,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "rect");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GeomRect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -22134,7 +22134,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "pathLst");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Path2DList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -22193,7 +22193,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "ds");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_DashStop");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -22265,7 +22265,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "xfrm");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GroupTransform2D");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -22429,7 +22429,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "bodyPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextBodyProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -22774,7 +22774,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lstStyle");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextListStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -23006,7 +23006,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "spDef");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_DefaultShapeDefinition");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -23078,7 +23078,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lnDef");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_DefaultShapeDefinition");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -23150,7 +23150,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "txDef");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_DefaultShapeDefinition");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -23222,7 +23222,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_DefaultShapeDefinition");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -23348,7 +23348,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "overrideClrMapping");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ColorMapping");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -23412,7 +23412,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "clrMap");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ColorMapping");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -23476,7 +23476,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ColorMapping");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -23728,7 +23728,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "extraClrScheme");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ColorSchemeAndMapping");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -23824,7 +23824,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "themeElements");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_BaseStyles");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -23949,7 +23949,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "cell3D");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Cell3D");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -24085,7 +24085,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "tcPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TableCellProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -24373,7 +24373,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "tc");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TableCell");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -24542,7 +24542,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "tableStyle");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TableStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -24635,7 +24635,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "tblStyle");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TableStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -24728,7 +24728,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TableStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -25018,7 +25018,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "tableStyleId");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "ST_Guid");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -25068,7 +25068,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "gridCol");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TableCol");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -25172,7 +25172,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "tblPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TableProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -25350,7 +25350,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "tblGrid");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TableGrid");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -25416,7 +25416,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "tr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TableRow");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -25500,7 +25500,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "left");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ThemeableLineStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -25566,7 +25566,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "right");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ThemeableLineStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -25632,7 +25632,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "top");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ThemeableLineStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -25698,7 +25698,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "bottom");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ThemeableLineStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -25764,7 +25764,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "insideH");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ThemeableLineStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -25830,7 +25830,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "insideV");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ThemeableLineStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -25896,7 +25896,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "tl2br");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ThemeableLineStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -25962,7 +25962,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "tr2bl");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ThemeableLineStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -26028,7 +26028,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ThemeableLineStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -26120,7 +26120,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "tcBdr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TableCellBorderStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -26326,7 +26326,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "tcTxStyle");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TableStyleTextStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -26451,7 +26451,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "tcStyle");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TableStyleCellStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -26544,7 +26544,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "tblBg");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TableBackgroundStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -26628,7 +26628,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "wholeTbl");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TablePartStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -26694,7 +26694,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "band1H");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TablePartStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -26760,7 +26760,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "band2H");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TablePartStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -26826,7 +26826,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "band1V");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TablePartStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -26892,7 +26892,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "band2V");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TablePartStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -26958,7 +26958,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lastCol");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TablePartStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -27024,7 +27024,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "firstCol");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TablePartStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -27090,7 +27090,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lastRow");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TablePartStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -27156,7 +27156,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "seCell");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TablePartStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -27222,7 +27222,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "swCell");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TablePartStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -27288,7 +27288,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "firstRow");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TablePartStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -27354,7 +27354,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "neCell");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TablePartStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -27420,7 +27420,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "nwCell");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TablePartStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -27486,7 +27486,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TablePartStyle");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -27586,7 +27586,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "pPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextParagraphProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -27706,7 +27706,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "defPPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextParagraphProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -27826,7 +27826,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl1pPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextParagraphProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -27946,7 +27946,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl2pPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextParagraphProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -28066,7 +28066,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl3pPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextParagraphProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -28186,7 +28186,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl4pPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextParagraphProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -28306,7 +28306,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl5pPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextParagraphProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -28426,7 +28426,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl6pPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextParagraphProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -28546,7 +28546,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl7pPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextParagraphProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -28666,7 +28666,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl8pPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextParagraphProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -28786,7 +28786,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lvl9pPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextParagraphProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -28906,7 +28906,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextParagraphProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -29179,7 +29179,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "endParaRPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextCharacterProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -29309,7 +29309,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "rPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextCharacterProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -29439,7 +29439,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "defRPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextCharacterProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -29569,7 +29569,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextCharacterProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -29893,7 +29893,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "p");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextParagraph");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -29981,7 +29981,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "tab");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextTabStop");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -30037,7 +30037,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "spcPct");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextSpacingPercent");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -30083,7 +30083,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "spcPts");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextSpacingPoint");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -30136,7 +30136,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "lnSpc");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextSpacing");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -30202,7 +30202,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "spcBef");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextSpacing");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -30268,7 +30268,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "spcAft");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextSpacing");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -30334,7 +30334,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextSpacing");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -30418,7 +30418,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "tabLst");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextTabStopList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -30477,7 +30477,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "t");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -30531,7 +30531,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ShapePropertiesExtension");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -30623,7 +30623,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GvmlGroupShapeExtension");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -30705,7 +30705,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ShapePropertiesExtensionList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -30771,7 +30771,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "nvGrpSpPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GvmlGroupShapeNonVisual");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -30874,7 +30874,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "grpSpPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GroupShapeProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -31003,7 +31003,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "sp");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GvmlShape");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -31144,7 +31144,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "cxnSp");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GvmlConnector");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -31271,7 +31271,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "pic");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GvmlPicture");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -31412,7 +31412,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "graphicFrame");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GvmlGraphicalObjectFrame");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -31544,7 +31544,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "grpSp");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GvmlGroupShape");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -31656,7 +31656,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GvmlGroupShapeExtensionList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -31721,7 +31721,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_NonVisualGroupDrawingShapePropsExtension");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -31803,7 +31803,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_OfficeStyleSheetExtension");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -31885,7 +31885,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ConnectorLockingExtension");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -31967,7 +31967,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "grpSpLocks");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GroupLocking");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -32123,7 +32123,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_NonVisualGroupDrawingShapePropsExtensionList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -32191,7 +32191,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "objectDefaults");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ObjectStyleDefaults");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -32314,7 +32314,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "extraClrSchemeLst");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ColorSchemeList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -32379,7 +32379,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "custClrLst");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_CustomColorList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -32444,7 +32444,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_OfficeStyleSheetExtensionList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -32510,7 +32510,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkClick");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Hyperlink");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -32578,7 +32578,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkMouseOver");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Hyperlink");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -32646,7 +32646,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkHover");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Hyperlink");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -32713,7 +32713,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Hyperlink");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -32883,7 +32883,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "rtl");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Bool");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -32931,7 +32931,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_NonVisualDrawingPropsExtensionList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -32996,7 +32996,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ConnectorLockingExtensionList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -33062,7 +33062,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_DataModelExtension");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -33146,7 +33146,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_PtExtension");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -33228,7 +33228,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_HyperlinkExtension");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -33310,7 +33310,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_HyperlinkExtensionList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -33375,7 +33375,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_LinePropertiesExtension");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -33451,7 +33451,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "headEnd");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_LineEndProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -33481,7 +33481,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "tailEnd");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_LineEndProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -33511,7 +33511,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_LineEndProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -33586,7 +33586,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_LinePropertiesExtensionList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -33657,7 +33657,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_NonVisualDrawingPropsExtension");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -33751,7 +33751,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "picLocks");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_PictureLocking");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -33951,7 +33951,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_NonVisualPicturePropertiesExtensionList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -34020,7 +34020,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_NonVisualPicturePropertiesExtension");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -34110,7 +34110,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_BlipExtensionList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -34181,7 +34181,7 @@ namespace DocumentFormat.OpenXml.Drawing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_BlipExtension");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>

@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/richvaluerefresh", "refreshIntervals");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/richvaluerefresh", "CT_RichValueRefreshIntervals");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/richvaluerefresh", "refreshInterval");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/richvaluerefresh", "CT_RichValueRefreshInterval");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>

@@ -36,7 +36,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "namedSheetViews");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "CT_NamedSheetViews");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -136,7 +136,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "namedSheetView");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "CT_NamedSheetView");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -234,7 +234,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "extLst");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "CT_ExtensionList");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -308,7 +308,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "nsvFilter");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "CT_NsvFilter");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -418,7 +418,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "columnFilter");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "CT_ColumnFilter");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -531,7 +531,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "sortRules");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "CT_SortRules");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -628,7 +628,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "dxf");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "CT_Dxf");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -805,7 +805,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "filter");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "CT_FilterColumn");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1043,7 +1043,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "sortRule");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "CT_SortRule");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1152,7 +1152,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "sortCondition");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "CT_SortCondition");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1264,7 +1264,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "richSortCondition");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2", "CT_RichSortCondition");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>

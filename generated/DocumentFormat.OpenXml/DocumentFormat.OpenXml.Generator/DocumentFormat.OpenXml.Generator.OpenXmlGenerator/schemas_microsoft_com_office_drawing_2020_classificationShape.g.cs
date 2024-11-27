@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.DocumentClassification
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2020/classificationShape", "classification");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2020/classificationShape", "CT_ClassificationOutcome");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>

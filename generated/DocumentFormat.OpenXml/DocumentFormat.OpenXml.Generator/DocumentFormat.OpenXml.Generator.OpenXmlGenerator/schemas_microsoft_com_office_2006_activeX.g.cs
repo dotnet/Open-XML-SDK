@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/activeX", "ocx");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/activeX", "CT_Ocx");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -161,7 +161,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/activeX", "ocxPr");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/activeX", "CT_OcxPr");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -289,7 +289,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/activeX", "font");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/activeX", "CT_Font");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -377,7 +377,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/activeX", "picture");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/activeX", "CT_Picture");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>

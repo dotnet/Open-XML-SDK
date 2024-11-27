@@ -77,7 +77,7 @@ public static class DataModelWriterExtensions
         writer.WriteQName(services, element.Name.Type);
         writer.WriteLine(";");
 
-        writer.WriteLine("internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);");
+        writer.WriteLine("internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);");
         writer.WriteLine("#pragma warning restore CS0109");
     }
 

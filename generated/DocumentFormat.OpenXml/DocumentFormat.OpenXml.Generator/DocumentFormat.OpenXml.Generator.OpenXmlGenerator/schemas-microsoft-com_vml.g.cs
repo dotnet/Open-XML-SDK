@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml.Vml
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "path");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Path");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -247,7 +247,7 @@ namespace DocumentFormat.OpenXml.Vml
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "formulas");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Formulas");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -312,7 +312,7 @@ namespace DocumentFormat.OpenXml.Vml
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "handles");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Handles");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -377,7 +377,7 @@ namespace DocumentFormat.OpenXml.Vml
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "fill");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Fill");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -771,7 +771,7 @@ namespace DocumentFormat.OpenXml.Vml
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "stroke");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Stroke");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1232,7 +1232,7 @@ namespace DocumentFormat.OpenXml.Vml
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "shadow");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Shadow");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1391,7 +1391,7 @@ namespace DocumentFormat.OpenXml.Vml
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "textbox");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Textbox");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1500,7 +1500,7 @@ namespace DocumentFormat.OpenXml.Vml
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "textpath");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_TextPath");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1620,7 +1620,7 @@ namespace DocumentFormat.OpenXml.Vml
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "imagedata");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_ImageData");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1916,7 +1916,7 @@ namespace DocumentFormat.OpenXml.Vml
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "shape");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Shape");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2786,7 +2786,7 @@ namespace DocumentFormat.OpenXml.Vml
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "shapetype");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Shapetype");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -3625,7 +3625,7 @@ namespace DocumentFormat.OpenXml.Vml
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "group");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Group");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -4167,7 +4167,7 @@ namespace DocumentFormat.OpenXml.Vml
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "background");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Background");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -4361,7 +4361,7 @@ namespace DocumentFormat.OpenXml.Vml
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "arc");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Arc");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -5199,7 +5199,7 @@ namespace DocumentFormat.OpenXml.Vml
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "curve");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Curve");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -6065,7 +6065,7 @@ namespace DocumentFormat.OpenXml.Vml
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "image");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Image");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -6986,7 +6986,7 @@ namespace DocumentFormat.OpenXml.Vml
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "line");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Line");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -7828,7 +7828,7 @@ namespace DocumentFormat.OpenXml.Vml
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "oval");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Oval");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -8651,7 +8651,7 @@ namespace DocumentFormat.OpenXml.Vml
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "polyline");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_PolyLine");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -9485,7 +9485,7 @@ namespace DocumentFormat.OpenXml.Vml
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "rect");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Rect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -10307,7 +10307,7 @@ namespace DocumentFormat.OpenXml.Vml
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "roundrect");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_RoundRect");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -11101,7 +11101,7 @@ namespace DocumentFormat.OpenXml.Vml
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "h");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_H");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -11231,7 +11231,7 @@ namespace DocumentFormat.OpenXml.Vml
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "f");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_F");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>

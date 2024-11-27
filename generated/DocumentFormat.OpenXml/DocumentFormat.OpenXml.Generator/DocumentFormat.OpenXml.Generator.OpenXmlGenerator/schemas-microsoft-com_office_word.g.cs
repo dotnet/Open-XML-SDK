@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:word", "bordertop");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:word", "CT_Border");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:word", "borderleft");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:word", "CT_Border");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:word", "borderright");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:word", "CT_Border");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:word", "borderbottom");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:word", "CT_Border");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -146,7 +146,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:word", "CT_Border");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -209,7 +209,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:word", "wrap");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:word", "CT_Wrap");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -284,7 +284,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:word", "anchorlock");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:word", "CT_AnchorLock");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>

@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.InkML
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "ink");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_Ink");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -126,7 +126,7 @@ namespace DocumentFormat.OpenXml.InkML
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "bind");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_Bind");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -201,7 +201,7 @@ namespace DocumentFormat.OpenXml.InkML
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "table");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_Table");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -281,7 +281,7 @@ namespace DocumentFormat.OpenXml.InkML
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "matrix");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_Matrix");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -348,7 +348,7 @@ namespace DocumentFormat.OpenXml.InkML
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "mapping");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_Mapping");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -468,7 +468,7 @@ namespace DocumentFormat.OpenXml.InkML
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "channel");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_Channel");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -671,7 +671,7 @@ namespace DocumentFormat.OpenXml.InkML
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "intermittentChannels");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_IntermittentChannels");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -730,7 +730,7 @@ namespace DocumentFormat.OpenXml.InkML
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "channelProperty");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_ChannelProperty");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -848,7 +848,7 @@ namespace DocumentFormat.OpenXml.InkML
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "traceFormat");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_TraceFormat");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -924,7 +924,7 @@ namespace DocumentFormat.OpenXml.InkML
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "sampleRate");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_SampleRate");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -980,7 +980,7 @@ namespace DocumentFormat.OpenXml.InkML
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "latency");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_Latency");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1025,7 +1025,7 @@ namespace DocumentFormat.OpenXml.InkML
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "activeArea");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_ActiveArea");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1117,7 +1117,7 @@ namespace DocumentFormat.OpenXml.InkML
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "srcProperty");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_SrcProperty");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1210,7 +1210,7 @@ namespace DocumentFormat.OpenXml.InkML
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "channelProperties");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_ChannelProperties");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1269,7 +1269,7 @@ namespace DocumentFormat.OpenXml.InkML
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "annotation");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_Annotation");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1341,7 +1341,7 @@ namespace DocumentFormat.OpenXml.InkML
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "annotationXML");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_AnnotationXML");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1457,7 +1457,7 @@ namespace DocumentFormat.OpenXml.InkML
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "brushProperty");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_BrushProperty");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1594,7 +1594,7 @@ namespace DocumentFormat.OpenXml.InkML
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "canvas");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_Canvas");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1701,7 +1701,7 @@ namespace DocumentFormat.OpenXml.InkML
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "canvasTransform");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_CanvasTransform");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1797,7 +1797,7 @@ namespace DocumentFormat.OpenXml.InkML
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "inkSource");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_InkSource");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2002,7 +2002,7 @@ namespace DocumentFormat.OpenXml.InkML
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "brush");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_Brush");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2094,7 +2094,7 @@ namespace DocumentFormat.OpenXml.InkML
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "timestamp");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_Timestamp");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2189,7 +2189,7 @@ namespace DocumentFormat.OpenXml.InkML
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "trace");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_Trace");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2342,7 +2342,7 @@ namespace DocumentFormat.OpenXml.InkML
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "traceGroup");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_TraceGroup");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2458,7 +2458,7 @@ namespace DocumentFormat.OpenXml.InkML
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "traceView");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_TraceView");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2597,7 +2597,7 @@ namespace DocumentFormat.OpenXml.InkML
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "context");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_Context");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2873,7 +2873,7 @@ namespace DocumentFormat.OpenXml.InkML
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "definitions");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_Definitions");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>

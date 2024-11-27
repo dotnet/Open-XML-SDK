@@ -44,7 +44,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "shapedefaults");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_ShapeDefaults");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -397,7 +397,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "shapelayout");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_ShapeLayout");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -514,7 +514,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "signatureline");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_SignatureLine");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -707,7 +707,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "ink");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_Ink");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -766,7 +766,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "diagram");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_Diagram");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -952,7 +952,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "skew");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_Skew");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1052,7 +1052,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "extrusion");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_Extrusion");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1431,7 +1431,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "callout");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_Callout");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1620,7 +1620,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "lock");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_Lock");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1794,7 +1794,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "OLEObject");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_OLEObject");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1979,7 +1979,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "complex");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_Complex");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2024,7 +2024,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "left");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_StrokeChild");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2054,7 +2054,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "top");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_StrokeChild");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2084,7 +2084,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "right");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_StrokeChild");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2114,7 +2114,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "bottom");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_StrokeChild");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2146,7 +2146,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "column");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_StrokeChild");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2177,7 +2177,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_StrokeChild");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2516,7 +2516,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "clippath");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_ClipPath");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2564,7 +2564,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "fill");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_Fill");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2620,7 +2620,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "idmap");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_IdMap");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2682,7 +2682,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "regrouptable");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_RegroupTable");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2762,7 +2762,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "rules");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_Rules");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2836,7 +2836,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "entry");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_Entry");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2895,7 +2895,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "r");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_R");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -3011,7 +3011,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "relationtable");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_RelationTable");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -3085,7 +3085,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "rel");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_Relation");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -3172,7 +3172,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "LinkType");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "ST_OLELinkType");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -3216,7 +3216,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "LockedField");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -3260,7 +3260,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "FieldCodes");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -3303,7 +3303,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "proxy");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_Proxy");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -3385,7 +3385,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "colormru");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_ColorMru");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -3441,7 +3441,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:office", "colormenu");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:office", "CT_ColorMenu");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>

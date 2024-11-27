@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:powerpoint", "iscomment");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:powerpoint", "CT_Empty");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:powerpoint", "textdata");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:powerpoint", "CT_Rel");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>

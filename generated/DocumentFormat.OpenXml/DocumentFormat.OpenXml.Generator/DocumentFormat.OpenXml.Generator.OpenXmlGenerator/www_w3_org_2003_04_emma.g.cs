@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.EMMA
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "derived-from");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_DerivedFrom");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace DocumentFormat.OpenXml.EMMA
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "info");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_Info");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -165,7 +165,7 @@ namespace DocumentFormat.OpenXml.EMMA
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "lattice");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_Lattice");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -284,7 +284,7 @@ namespace DocumentFormat.OpenXml.EMMA
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "literal");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_Literal");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -337,7 +337,7 @@ namespace DocumentFormat.OpenXml.EMMA
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "interpretation");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_Interpretation");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -792,7 +792,7 @@ namespace DocumentFormat.OpenXml.EMMA
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "one-of");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_OneOf");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1232,7 +1232,7 @@ namespace DocumentFormat.OpenXml.EMMA
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "group");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_Group");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1661,7 +1661,7 @@ namespace DocumentFormat.OpenXml.EMMA
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "sequence");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_Sequence");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2077,7 +2077,7 @@ namespace DocumentFormat.OpenXml.EMMA
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "group-info");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_GroupInfo");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2159,7 +2159,7 @@ namespace DocumentFormat.OpenXml.EMMA
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "derivation");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_Derivation");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2224,7 +2224,7 @@ namespace DocumentFormat.OpenXml.EMMA
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "grammar");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_Grammar");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2285,7 +2285,7 @@ namespace DocumentFormat.OpenXml.EMMA
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "model");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_Model");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2379,7 +2379,7 @@ namespace DocumentFormat.OpenXml.EMMA
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "endpoint-info");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_EndPointInfo");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2454,7 +2454,7 @@ namespace DocumentFormat.OpenXml.EMMA
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "endpoint");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_EndPoint");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2674,7 +2674,7 @@ namespace DocumentFormat.OpenXml.EMMA
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "node");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_Node");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2789,7 +2789,7 @@ namespace DocumentFormat.OpenXml.EMMA
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "arc");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_Arc");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -3039,7 +3039,7 @@ namespace DocumentFormat.OpenXml.EMMA
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "emma");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_Emma");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>

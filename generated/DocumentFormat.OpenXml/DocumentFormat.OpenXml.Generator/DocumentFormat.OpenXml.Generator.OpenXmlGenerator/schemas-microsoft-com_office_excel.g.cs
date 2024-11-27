@@ -99,7 +99,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "ClientData");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "CT_ClientData");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -307,7 +307,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "MoveWithCells");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -351,7 +351,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "SizeWithCells");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -395,7 +395,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Locked");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -439,7 +439,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "DefaultSize");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -483,7 +483,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "PrintObject");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -527,7 +527,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Disabled");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -571,7 +571,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "AutoFill");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -615,7 +615,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "AutoLine");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -659,7 +659,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "AutoPict");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -703,7 +703,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "LockText");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -747,7 +747,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "JustLastX");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -791,7 +791,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "SecretEdit");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -835,7 +835,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Default");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -879,7 +879,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Help");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -923,7 +923,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Cancel");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -967,7 +967,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Dismiss");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1011,7 +1011,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Visible");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1055,7 +1055,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "RowHidden");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1099,7 +1099,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "ColHidden");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1143,7 +1143,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "MultiLine");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1187,7 +1187,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "VScroll");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1231,7 +1231,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "ValidIds");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1275,7 +1275,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "NoThreeD2");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1319,7 +1319,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Colored");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1363,7 +1363,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "NoThreeD");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1407,7 +1407,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "FirstButton");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1451,7 +1451,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Horiz");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1495,7 +1495,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "MapOCX");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1539,7 +1539,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Camera");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1583,7 +1583,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "RecalcAlways");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1627,7 +1627,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "AutoScale");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1671,7 +1671,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "DDE");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1715,7 +1715,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "UIObj");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1759,7 +1759,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Anchor");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1802,7 +1802,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "TextHAlign");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1845,7 +1845,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "TextVAlign");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1888,7 +1888,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "FmlaRange");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1931,7 +1931,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "SelType");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -1974,7 +1974,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "MultiSel");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2017,7 +2017,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "LCT");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2060,7 +2060,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "ListItem");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2103,7 +2103,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "DropStyle");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2146,7 +2146,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "FmlaLink");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2189,7 +2189,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "FmlaPict");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2232,7 +2232,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "FmlaGroup");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2275,7 +2275,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "ScriptText");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2318,7 +2318,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "ScriptExtended");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2361,7 +2361,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "FmlaTxbx");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2404,7 +2404,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "FmlaMacro");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_Macro");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2448,7 +2448,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Accel");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "unsignedByte");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2492,7 +2492,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Accel2");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "unsignedByte");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2536,7 +2536,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Row");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "integer");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2580,7 +2580,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Column");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "integer");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2624,7 +2624,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "VTEdit");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "integer");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2668,7 +2668,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "WidthMin");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "integer");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2712,7 +2712,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Sel");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "integer");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2756,7 +2756,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "DropLines");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "integer");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2800,7 +2800,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Checked");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "integer");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2844,7 +2844,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Val");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "integer");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2888,7 +2888,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Min");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "integer");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2932,7 +2932,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Max");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "integer");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -2976,7 +2976,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Inc");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "integer");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -3020,7 +3020,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Page");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "integer");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -3064,7 +3064,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Dx");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "integer");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -3108,7 +3108,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "CF");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_CF");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -3152,7 +3152,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "ScriptLanguage");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "nonNegativeInteger");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
@@ -3196,7 +3196,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "ScriptLocation");
         internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "nonNegativeInteger");
-        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
         #pragma warning restore CS0109
 
         /// <summary>
