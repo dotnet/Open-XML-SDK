@@ -93,6 +93,16 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             public void SetSchema(in OpenXmlSchemaType type)
                 => _type = type;
 
+            public void AddChild(in OpenXmlSchemaType type, Func<OpenXmlElement> activator)
+            {
+                if (_children is null)
+                {
+                    _children = new HashSet<IMetadataBuilder<ElementFactory>>();
+                }
+
+                _children.Add(new KnownChild(type, activator));
+            }
+
             public void AddChild<T>()
                 where T : OpenXmlElement, new()
             {
@@ -144,6 +154,11 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 where T : OpenXmlElement, new()
             {
                 public ElementFactory Build() => ElementFactory.Create<T>();
+            }
+
+            private class KnownChild(OpenXmlSchemaType type, Func<OpenXmlElement> factory) : IMetadataBuilder<ElementFactory>
+            {
+                public ElementFactory Build() => new ElementFactory(type, factory);
             }
         }
 

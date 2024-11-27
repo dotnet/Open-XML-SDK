@@ -75,8 +75,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NamedSheetView>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NamedSheetView.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NamedSheetView());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NamedSheetView.ElementType, 0, 0, version: FileFormatVersions.Office2021),
@@ -195,8 +195,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NsvFilter>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NsvFilter.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NsvFilter());
             builder.AddElement<NamedSheetView>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -273,7 +273,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Extension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -377,9 +377,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ColumnFilter>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRules>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ColumnFilter.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ColumnFilter());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRules.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRules());
             builder.AddElement<NsvFilter>()
                 .AddAttribute("filterId", a => a.FilterId, aBuilder =>
                 {
@@ -477,9 +477,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.FilterColumn>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.FilterColumn.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.FilterColumn());
             builder.AddElement<ColumnFilter>()
                 .AddAttribute("colId", a => a.ColId, aBuilder =>
                 {
@@ -590,8 +590,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRule>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRule.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRule());
             builder.AddElement<SortRules>()
                 .AddAttribute("sortMethod", a => a.SortMethod)
                 .AddAttribute("caseSensitive", a => a.CaseSensitive);
@@ -667,13 +667,13 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Border>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Protection>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Font>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Border.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Border());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Alignment.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Alignment());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Protection.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Protection());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Fill.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Fill());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Font.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Font());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.NumberingFormat());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Font.ElementType, 0, 1),
@@ -874,15 +874,15 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColorFilter>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomFilters>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DynamicFilter>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Filters>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.IconFilter>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Top10>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.CustomFilters>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.IconFilter>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ColorFilter.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ColorFilter());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CustomFilters.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CustomFilters());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DynamicFilter.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DynamicFilter());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Filters.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Filters());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.IconFilter.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.IconFilter());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Top10.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Top10());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.CustomFilters.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.CustomFilters());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.IconFilter.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.IconFilter());
             builder.AddElement<FilterColumn>()
                 .AddAttribute("colId", a => a.ColumnId, aBuilder =>
                 {
@@ -1102,9 +1102,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortCondition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.RichSortCondition>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortCondition.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortCondition());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.RichSortCondition.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.RichSortCondition());
             builder.AddElement<SortRule>()
                 .AddAttribute("colId", a => a.ColId, aBuilder =>
                 {

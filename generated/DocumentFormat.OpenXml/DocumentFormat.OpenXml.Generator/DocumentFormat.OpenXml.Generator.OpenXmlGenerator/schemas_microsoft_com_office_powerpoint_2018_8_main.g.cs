@@ -108,9 +108,9 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BodyProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ListStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Paragraph>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BodyProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BodyProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ListStyle.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ListStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Paragraph.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Paragraph());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.BodyProperties.ElementType, 1, 1),
@@ -204,7 +204,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommentPropertiesExtension>();
+            builder.AddChild(DocumentFormat.OpenXml.Presentation.CommentPropertiesExtension.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommentPropertiesExtension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -276,7 +276,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Author>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Author.ElementType, static () => new DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Author());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Author.ElementType, 0, 0, version: FileFormatVersions.Office2021)
@@ -373,7 +373,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Comment>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Comment.ElementType, static () => new DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Comment());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Comment.ElementType, 0, 0, version: FileFormatVersions.Office2021)
@@ -519,7 +519,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Presentation.Extension.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -641,7 +641,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.ExtensionList());
             builder.AddElement<Author>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -800,8 +800,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.TextBodyType>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.TextBodyType.ElementType, static () => new DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.TextBodyType());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtensionList());
             builder.AddElement<CommentReply>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -983,7 +983,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentReply>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentReply.ElementType, static () => new DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentReply());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentReply.ElementType, 0, 0, version: FileFormatVersions.Office2021)
@@ -1182,20 +1182,20 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Point2DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.TextBodyType>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.DeMkLstDrawingElementMonikerList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.TableCellMonikerList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.TableColumnMonikerList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.TableRowMonikerList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.TextBodyMonikerList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.TextCharRangeMonikerList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentReplyList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentUnknownAnchor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Presentation.Command.MainMasterMonikerList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideLayoutMonikerList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Point2DType.ElementType, static () => new DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Point2DType());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.TextBodyType.ElementType, static () => new DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.TextBodyType());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.DeMkLstDrawingElementMonikerList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.DeMkLstDrawingElementMonikerList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.TableCellMonikerList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.TableCellMonikerList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.TableColumnMonikerList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.TableColumnMonikerList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.TableRowMonikerList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.TableRowMonikerList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.TextBodyMonikerList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.TextBodyMonikerList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.TextCharRangeMonikerList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.TextCharRangeMonikerList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentReplyList.ElementType, static () => new DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentReplyList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentUnknownAnchor.ElementType, static () => new DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentUnknownAnchor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Presentation.Command.MainMasterMonikerList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Presentation.Command.MainMasterMonikerList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideLayoutMonikerList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideLayoutMonikerList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList());
             builder.AddElement<Comment>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {

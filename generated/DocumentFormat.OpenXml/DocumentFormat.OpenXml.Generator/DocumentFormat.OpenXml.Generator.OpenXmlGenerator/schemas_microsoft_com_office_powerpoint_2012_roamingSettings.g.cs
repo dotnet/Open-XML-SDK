@@ -160,8 +160,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Key>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Value>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Key.ElementType, static () => new DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Key());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Value.ElementType, static () => new DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Value());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Key.ElementType, 1, 1, version: FileFormatVersions.Office2013),

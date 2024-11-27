@@ -91,15 +91,15 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ToMarker>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.ToMarker.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.ToMarker());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart());
             builder.AddElement<TwoCellAnchor>()
                 .AddAttribute("editAs", a => a.EditAs, aBuilder =>
                 {
@@ -220,15 +220,15 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker.ElementType, 1, 1),
@@ -344,15 +344,15 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Position>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.Position.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.Position());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.Position.ElementType, 1, 1),
@@ -503,10 +503,10 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeProperties());
             builder.AddElement<Shape>()
                 .AddAttribute("macro", a => a.Macro)
                 .AddAttribute("textlink", a => a.TextLink)
@@ -639,14 +639,14 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShapeProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeProperties.ElementType, 1, 1),
@@ -769,9 +769,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Graphic>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Transform>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Graphic.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Graphic());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.Transform.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.Transform());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties());
             builder.AddElement<GraphicFrame>()
                 .AddAttribute("macro", a => a.Macro)
                 .AddAttribute("fPublished", a => a.Published);
@@ -903,9 +903,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties());
             builder.AddElement<ConnectionShape>()
                 .AddAttribute("macro", a => a.Macro)
                 .AddAttribute("fPublished", a => a.Published);
@@ -1038,10 +1038,10 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.BlipFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.BlipFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureProperties());
             builder.AddElement<Picture>()
                 .AddAttribute("macro", a => a.Macro)
                 .AddAttribute("fPublished", a => a.Published);
@@ -1191,10 +1191,10 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties());
             builder.AddElement<ContentPart>()
                 .AddAttribute("r:id", a => a.RelationshipId, aBuilder =>
                 {
@@ -1325,9 +1325,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.AbsoluteAnchor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.OneCellAnchor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.TwoCellAnchor>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.AbsoluteAnchor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.AbsoluteAnchor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.OneCellAnchor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.OneCellAnchor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.TwoCellAnchor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.TwoCellAnchor());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -1432,8 +1432,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeDrawingProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties.ElementType, 1, 1),
@@ -1549,21 +1549,21 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BlipFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BlipFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.CustomGeometry.ElementType, static () => new DocumentFormat.OpenXml.Drawing.CustomGeometry());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectDag());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GradientFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GradientFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GroupFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GroupFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Outline.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Outline());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NoFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NoFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PatternFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PatternFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PresetGeometry.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PresetGeometry());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Scene3DType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Scene3DType());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Shape3DType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Shape3DType());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SolidFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Transform2D.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Transform2D());
             builder.AddElement<ShapeProperties>()
                 .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
                 {
@@ -1681,10 +1681,10 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.FontReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.LineReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.FillReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectReference>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.FontReference.ElementType, static () => new DocumentFormat.OpenXml.Drawing.FontReference());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.LineReference.ElementType, static () => new DocumentFormat.OpenXml.Drawing.LineReference());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.FillReference.ElementType, static () => new DocumentFormat.OpenXml.Drawing.FillReference());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectReference.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectReference());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.LineReference.ElementType, 1, 1),
@@ -1806,9 +1806,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BodyProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ListStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Paragraph>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BodyProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BodyProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ListStyle.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ListStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Paragraph.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Paragraph());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.BodyProperties.ElementType, 1, 1),
@@ -1902,8 +1902,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectorShapeDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectorShapeDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectorShapeDrawingProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties.ElementType, 1, 1),
@@ -1996,8 +1996,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureDrawingProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties.ElementType, 1, 1),
@@ -2102,10 +2102,10 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Blip>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SourceRectangle>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Stretch>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Tile>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Blip.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Blip());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SourceRectangle.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SourceRectangle());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Stretch.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Stretch());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Tile.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Tile());
             builder.AddElement<BlipFill>()
                 .AddAttribute("rotWithShape", a => a.RotateWithShape);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -2208,8 +2208,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameDrawingProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties.ElementType, 1, 1),
@@ -2332,8 +2332,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Offset.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Offset());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Extents.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Extents());
             builder.AddElement<Transform>()
                 .AddAttribute("rot", a => a.Rotation)
                 .AddAttribute("flipH", a => a.HorizontalFlip)
@@ -2747,10 +2747,10 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId());
         }
 
         /// <summary>
@@ -3087,9 +3087,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HyperlinkOnClick());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HyperlinkOnHover());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList());
             builder.AddElement<NonVisualDrawingProperties>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -3219,8 +3219,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapeLocks>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ShapeLocks.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ShapeLocks());
             builder.AddElement<NonVisualShapeDrawingProperties>()
                 .AddAttribute("txBox", a => a.TextBox);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -3317,10 +3317,10 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.StartConnection>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EndConnection>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.StartConnection.ElementType, static () => new DocumentFormat.OpenXml.Drawing.StartConnection());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EndConnection.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EndConnection());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ExtensionList());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks.ElementType, 0, 1),
@@ -3451,8 +3451,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PictureLocks>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PictureLocks.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PictureLocks());
             builder.AddElement<NonVisualPictureDrawingProperties>()
                 .AddAttribute("preferRelativeResize", a => a.PreferRelativeResize);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -3547,8 +3547,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GraphicFrameLocks());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ExtensionList());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks.ElementType, 0, 1),
@@ -3641,8 +3641,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GroupShapeLocks.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GroupShapeLocks());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.GroupShapeLocks.ElementType, 0, 1),
@@ -3735,8 +3735,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeDrawingProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties.ElementType, 1, 1),
@@ -3848,17 +3848,17 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.TransformGroup>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BlipFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BlipFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectDag());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GradientFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GradientFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GroupFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GroupFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.TransformGroup.ElementType, static () => new DocumentFormat.OpenXml.Drawing.TransformGroup());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NoFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NoFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PatternFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PatternFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Scene3DType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Scene3DType());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SolidFill());
             builder.AddElement<GroupShapeProperties>()
                 .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
                 {
