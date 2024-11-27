@@ -31,6 +31,12 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
     /// </remarks>
     public partial class WebImagesSupportingRichData : OpenXmlPartRootElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage", "webImagesSrd");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage", "CT_WebImagesSupportingRichData");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the WebImagesSupportingRichData class.
         /// </summary>
@@ -65,14 +71,14 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlrdwi:webImagesSrd");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.WebImageSupportingRichData>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage", "webImageSrd"), 0, 0, version: FileFormatVersions.Office2021),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage", "extLst"), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.WebImageSupportingRichData.ElementType, 0, 0, version: FileFormatVersions.Office2021),
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -126,6 +132,12 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
     /// </remarks>
     public partial class WebImageSupportingRichData : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage", "webImageSrd");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage", "CT_WebImageSupportingRichData");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the WebImageSupportingRichData class.
         /// </summary>
@@ -160,16 +172,16 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlrdwi:webImageSrd");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.AddressWebImageSupportingRichDataRelationship>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.MoreImagesAddressWebImageSupportingRichDataRelationship>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.BlipWebImageSupportingRichDataRelationship>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage", "address"), 1, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage", "moreImagesAddress"), 0, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage", "blip"), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.AddressWebImageSupportingRichDataRelationship.ElementType, 1, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.MoreImagesAddressWebImageSupportingRichDataRelationship.ElementType, 0, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.BlipWebImageSupportingRichDataRelationship.ElementType, 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -182,8 +194,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.AddressWebImageSupportingRichDataRelationship? AddressWebImageSupportingRichDataRelationship
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.AddressWebImageSupportingRichDataRelationship>(new("http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage", "address"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage", "address"));
+            get => GetElement(DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.AddressWebImageSupportingRichDataRelationship.ElementType) as DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.AddressWebImageSupportingRichDataRelationship;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.AddressWebImageSupportingRichDataRelationship.ElementType);
         }
 
         /// <summary>
@@ -195,8 +207,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.MoreImagesAddressWebImageSupportingRichDataRelationship? MoreImagesAddressWebImageSupportingRichDataRelationship
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.MoreImagesAddressWebImageSupportingRichDataRelationship>(new("http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage", "moreImagesAddress"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage", "moreImagesAddress"));
+            get => GetElement(DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.MoreImagesAddressWebImageSupportingRichDataRelationship.ElementType) as DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.MoreImagesAddressWebImageSupportingRichDataRelationship;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.MoreImagesAddressWebImageSupportingRichDataRelationship.ElementType);
         }
 
         /// <summary>
@@ -208,8 +220,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.BlipWebImageSupportingRichDataRelationship? BlipWebImageSupportingRichDataRelationship
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.BlipWebImageSupportingRichDataRelationship>(new("http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage", "blip"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage", "blip"));
+            get => GetElement(DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.BlipWebImageSupportingRichDataRelationship.ElementType) as DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.BlipWebImageSupportingRichDataRelationship;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.BlipWebImageSupportingRichDataRelationship.ElementType);
         }
 
         /// <inheritdoc/>
@@ -229,6 +241,12 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
     /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "CT_ExtensionList");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
         /// </summary>
@@ -263,7 +281,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlrdwi:extLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -272,7 +290,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
+                        new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Extension.ElementType, 0, 0)
                     }
                 }
             };
@@ -289,6 +307,12 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
     /// </summary>
     public partial class AddressWebImageSupportingRichDataRelationship : OpenXmlWebImageSupportingRichDataRelationshipElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage", "address");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage", "CT_WebImageSupportingRichDataRelationship");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AddressWebImageSupportingRichDataRelationship class.
         /// </summary>
@@ -299,7 +323,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlrdwi:address");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -314,6 +338,12 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
     /// </summary>
     public partial class MoreImagesAddressWebImageSupportingRichDataRelationship : OpenXmlWebImageSupportingRichDataRelationshipElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage", "moreImagesAddress");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage", "CT_WebImageSupportingRichDataRelationship");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MoreImagesAddressWebImageSupportingRichDataRelationship class.
         /// </summary>
@@ -324,7 +354,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlrdwi:moreImagesAddress");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -339,6 +369,12 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
     /// </summary>
     public partial class BlipWebImageSupportingRichDataRelationship : OpenXmlWebImageSupportingRichDataRelationshipElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage", "blip");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage", "CT_WebImageSupportingRichDataRelationship");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BlipWebImageSupportingRichDataRelationship class.
         /// </summary>
@@ -349,7 +385,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlrdwi:blip");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -364,6 +400,12 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
     /// </summary>
     public abstract partial class OpenXmlWebImageSupportingRichDataRelationshipElement : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage", "CT_WebImageSupportingRichDataRelationship");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OpenXmlWebImageSupportingRichDataRelationshipElement class.
         /// </summary>

@@ -23,6 +23,12 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation
     /// </summary>
     public partial class DesignElement : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2015/main", "designElem");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2015/main", "CT_DesignElement");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DesignElement class.
         /// </summary>
@@ -43,7 +49,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p16:designElem");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<DesignElement>()
                 .AddAttribute("val", a => a.Val);

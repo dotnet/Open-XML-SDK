@@ -12,10 +12,10 @@ namespace DocumentFormat.OpenXml.Framework
     /// </summary>
     internal static class ParticleExtensions
     {
-        public static ParticleCollection GetCollection(this CompiledParticle compiled, OpenXmlQualifiedName qname, OpenXmlCompositeElement element)
-            => new(qname, compiled, element);
+        public static ParticleCollection GetCollection(this CompiledParticle compiled, OpenXmlType type, OpenXmlCompositeElement element)
+            => new(type, compiled, element);
 
-        public static OpenXmlElement? Get(this CompiledParticle? compiled, OpenXmlCompositeElement element, OpenXmlQualifiedName qname)
+        public static OpenXmlElement? Get(this CompiledParticle? compiled, OpenXmlCompositeElement element, OpenXmlType type)
         {
             if (compiled is null)
             {
@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Framework
 
             do
             {
-                if (child.QName == qname)
+                if (child.Metadata.Type == type)
                 {
                     return child;
                 }
@@ -44,11 +44,11 @@ namespace DocumentFormat.OpenXml.Framework
         }
 
         public static bool Set(this CompiledParticle? compiled, OpenXmlCompositeElement parent, OpenXmlElement value)
-            => Set(compiled, parent, value, value.QName);
+            => Set(compiled, parent, value, value.Metadata.Type);
 
-        public static bool Set(this CompiledParticle? compiled, OpenXmlCompositeElement parent, OpenXmlElement? value, OpenXmlQualifiedName? qname)
+        public static bool Set(this CompiledParticle? compiled, OpenXmlCompositeElement parent, OpenXmlElement? value, OpenXmlType? type)
         {
-            if (qname is null)
+            if (type is null)
             {
                 return false;
             }
@@ -58,7 +58,7 @@ namespace DocumentFormat.OpenXml.Framework
                 return false;
             }
 
-            var collection = new ParticleCollection(qname.Value, compiled, parent);
+            var collection = new ParticleCollection(type.Value, compiled, parent);
 
             collection.Clear();
 

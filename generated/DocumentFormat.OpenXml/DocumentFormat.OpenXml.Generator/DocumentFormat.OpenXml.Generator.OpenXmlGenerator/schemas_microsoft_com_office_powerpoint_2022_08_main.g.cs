@@ -31,6 +31,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// </remarks>
     public partial class TaskDetails : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "taskDetails");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "CT_TaskDetails");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskDetails class.
         /// </summary>
@@ -85,7 +91,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p228:taskDetails");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistory>();
@@ -94,8 +100,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
                 .AddAttribute("inactive", a => a.Inactive);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "history"), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "extLst"), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistory.ElementType, 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -108,8 +114,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistory? TaskHistory
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistory>(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "history"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "history"));
+            get => GetElement(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistory.ElementType) as DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistory;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistory.ElementType);
         }
 
         /// <summary>
@@ -121,8 +127,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList>(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "extLst"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "extLst"));
+            get => GetElement(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList.ElementType) as DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -136,6 +142,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// </summary>
     public partial class CommentAnchor : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "comment");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "CT_CommentAnchor");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CommentAnchor class.
         /// </summary>
@@ -156,7 +168,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p228:comment");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddElement<CommentAnchor>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
@@ -183,6 +195,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "CT_ExtensionList");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
         /// </summary>
@@ -217,7 +235,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p228:extLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -226,7 +244,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ext"), 0, 0)
+                        new ElementParticle(DocumentFormat.OpenXml.Presentation.Extension.ElementType, 0, 0)
                     }
                 }
             };
@@ -243,6 +261,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// </summary>
     public partial class AtrbtnTaskAssignUnassignUser : OpenXmlTaskAssignUnassignUserElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "atrbtn");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "CT_TaskAssignUnassignUser");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AtrbtnTaskAssignUnassignUser class.
         /// </summary>
@@ -253,7 +277,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p228:atrbtn");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
         }
 
@@ -268,6 +292,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// </summary>
     public partial class AsgnTaskAssignUnassignUser : OpenXmlTaskAssignUnassignUserElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "asgn");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "CT_TaskAssignUnassignUser");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AsgnTaskAssignUnassignUser class.
         /// </summary>
@@ -278,7 +308,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p228:asgn");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
         }
 
@@ -293,6 +323,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// </summary>
     public abstract partial class OpenXmlTaskAssignUnassignUserElement : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "CT_TaskAssignUnassignUser");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OpenXmlTaskAssignUnassignUserElement class.
         /// </summary>
@@ -336,6 +372,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// </remarks>
     public partial class TaskAnchor : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "anchr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "CT_TaskAnchor");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskAnchor class.
         /// </summary>
@@ -370,14 +412,14 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p228:anchr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.CommentAnchor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "comment"), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "extLst"), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.CommentAnchor.ElementType, 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -390,8 +432,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.CommentAnchor? CommentAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.CommentAnchor>(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "comment"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "comment"));
+            get => GetElement(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.CommentAnchor.ElementType) as DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.CommentAnchor;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.CommentAnchor.ElementType);
         }
 
         /// <summary>
@@ -403,8 +445,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList>(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "extLst"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "extLst"));
+            get => GetElement(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList.ElementType) as DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -418,6 +460,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// </summary>
     public partial class AddEmpty : EmptyType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "add");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "CT_Empty");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AddEmpty class.
         /// </summary>
@@ -428,7 +476,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p228:add");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
         }
 
@@ -443,6 +491,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// </summary>
     public partial class UnasgnAllEmpty : EmptyType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "unasgnAll");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "CT_Empty");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the UnasgnAllEmpty class.
         /// </summary>
@@ -453,7 +507,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p228:unasgnAll");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
         }
 
@@ -468,6 +522,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// </summary>
     public abstract partial class EmptyType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "CT_Empty");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the EmptyType class.
         /// </summary>
@@ -488,6 +548,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// </summary>
     public partial class TaskTitleEventInfo : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "title");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "CT_TaskTitleEventInfo");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskTitleEventInfo class.
         /// </summary>
@@ -508,7 +574,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p228:title");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddElement<TaskTitleEventInfo>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
@@ -528,6 +594,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// </summary>
     public partial class TaskScheduleEventInfo : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "date");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "CT_TaskScheduleEventInfo");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskScheduleEventInfo class.
         /// </summary>
@@ -558,7 +630,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p228:date");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddElement<TaskScheduleEventInfo>()
                 .AddAttribute("stDt", a => a.StDt)
@@ -576,6 +648,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// </summary>
     public partial class TaskProgressEventInfo : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "pcntCmplt");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "CT_TaskProgressEventInfo");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskProgressEventInfo class.
         /// </summary>
@@ -596,7 +674,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p228:pcntCmplt");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddElement<TaskProgressEventInfo>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
@@ -617,6 +695,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// </summary>
     public partial class TaskUndo : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "undo");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "CT_TaskUndo");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskUndo class.
         /// </summary>
@@ -637,7 +721,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p228:undo");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddElement<TaskUndo>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
@@ -658,6 +742,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// </summary>
     public partial class TaskUnknownRecord : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "unknown");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "CT_TaskUnknownRecord");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskUnknownRecord class.
         /// </summary>
@@ -668,7 +758,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p228:unknown");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
         }
 
@@ -699,6 +789,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// </remarks>
     public partial class TaskHistoryEvent : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "event");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "CT_TaskHistoryEvent");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskHistoryEvent class.
         /// </summary>
@@ -753,7 +849,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p228:event");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AddEmpty>();
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.UnasgnAllEmpty>();
@@ -778,20 +874,20 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "atrbtn"), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "anchr"), 0, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AtrbtnTaskAssignUnassignUser.ElementType, 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskAnchor.ElementType, 0, 1, version: FileFormatVersions.Microsoft365),
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
-                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "asgn"), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "add"), 0, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "title"), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "date"), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "pcntCmplt"), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "unasgnAll"), 0, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "undo"), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "unknown"), 1, 1, version: FileFormatVersions.Microsoft365)
+                    new ElementParticle(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AsgnTaskAssignUnassignUser.ElementType, 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AddEmpty.ElementType, 0, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskTitleEventInfo.ElementType, 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskScheduleEventInfo.ElementType, 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskProgressEventInfo.ElementType, 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.UnasgnAllEmpty.ElementType, 0, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskUndo.ElementType, 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskUnknownRecord.ElementType, 1, 1, version: FileFormatVersions.Microsoft365)
                 },
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "extLst"), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -804,8 +900,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AtrbtnTaskAssignUnassignUser? AtrbtnTaskAssignUnassignUser
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AtrbtnTaskAssignUnassignUser>(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "atrbtn"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "atrbtn"));
+            get => GetElement(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AtrbtnTaskAssignUnassignUser.ElementType) as DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AtrbtnTaskAssignUnassignUser;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AtrbtnTaskAssignUnassignUser.ElementType);
         }
 
         /// <summary>
@@ -817,8 +913,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskAnchor? TaskAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskAnchor>(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "anchr"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "anchr"));
+            get => GetElement(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskAnchor.ElementType) as DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskAnchor;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskAnchor.ElementType);
         }
 
         /// <inheritdoc/>
@@ -838,6 +934,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// </remarks>
     public partial class TaskHistory : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "history");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "CT_TaskHistory");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskHistory class.
         /// </summary>
@@ -872,12 +974,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p228:history");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistoryEvent>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/08/main", "event"), 0, 0, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistoryEvent.ElementType, 0, 0, version: FileFormatVersions.Microsoft365)
             };
         }
 

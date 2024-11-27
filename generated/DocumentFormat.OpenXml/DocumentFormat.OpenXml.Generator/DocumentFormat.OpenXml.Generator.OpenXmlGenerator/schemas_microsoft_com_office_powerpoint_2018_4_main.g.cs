@@ -23,6 +23,12 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
     /// </summary>
     public partial class ClassificationOutcome : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2018/4/main", "classification");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2018/4/main", "CT_ClassificationOutcome");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ClassificationOutcome class.
         /// </summary>
@@ -43,7 +49,7 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p184:classification");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<ClassificationOutcome>()
                 .AddAttribute("val", a => a.Val, aBuilder =>

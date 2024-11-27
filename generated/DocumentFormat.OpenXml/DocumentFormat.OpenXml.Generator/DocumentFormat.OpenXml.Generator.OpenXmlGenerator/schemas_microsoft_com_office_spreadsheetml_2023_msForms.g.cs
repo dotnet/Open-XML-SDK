@@ -30,6 +30,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
     /// </remarks>
     public partial class Question : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/msForms", "question");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/msForms", "CT_Question");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Question class.
         /// </summary>
@@ -74,7 +80,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlmsforms:question");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList>();
             builder.AddElement<Question>()
@@ -84,7 +90,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2023/msForms", "extLst"), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -97,8 +103,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
         /// </remarks>
         public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList>(new("http://schemas.microsoft.com/office/spreadsheetml/2023/msForms", "extLst"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2023/msForms", "extLst"));
+            get => GetElement(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList.ElementType) as DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -119,6 +125,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
     /// </remarks>
     public partial class MsForm : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/msForms", "msForm");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/msForms", "CT_MsForm");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MsForm class.
         /// </summary>
@@ -193,7 +205,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlmsforms:msForm");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.SyncedQuestionId>();
@@ -207,8 +219,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
                 .AddAttribute("latestEventMarker", a => a.LatestEventMarker);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2023/msForms", "syncedQuestionId"), 0, 0, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2023/msForms", "extLst"), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.SyncedQuestionId.ElementType, 0, 0, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -223,6 +235,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
     /// </summary>
     public partial class SyncedQuestionId : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/msForms", "syncedQuestionId");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ST_Xstring");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SyncedQuestionId class.
         /// </summary>
@@ -246,7 +264,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlmsforms:syncedQuestionId");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
         }
 
@@ -267,6 +285,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
     /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/msForms", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "CT_ExtensionList");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
         /// </summary>
@@ -301,7 +325,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlmsforms:extLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -310,7 +334,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
+                        new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Extension.ElementType, 0, 0)
                     }
                 }
             };

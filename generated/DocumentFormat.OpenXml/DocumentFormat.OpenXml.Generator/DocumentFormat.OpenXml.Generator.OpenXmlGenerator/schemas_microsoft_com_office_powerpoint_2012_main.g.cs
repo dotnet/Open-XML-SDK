@@ -26,6 +26,12 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// </summary>
     public partial class PresetTransition : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2012/main", "prstTrans");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2012/main", "CT_PresetTransition");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PresetTransition class.
         /// </summary>
@@ -66,7 +72,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p15:prstTrans");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<PresetTransition>()
                 .AddAttribute("prst", a => a.Preset)
@@ -85,6 +91,12 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// </summary>
     public partial class PresenceInfo : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2012/main", "presenceInfo");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2012/main", "CT_PresenceInfo");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PresenceInfo class.
         /// </summary>
@@ -115,7 +127,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p15:presenceInfo");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<PresenceInfo>()
                 .AddAttribute("userId", a => a.UserId, aBuilder =>
@@ -147,6 +159,12 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// </remarks>
     public partial class ThreadingInfo : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2012/main", "threadingInfo");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2012/main", "CT_CommentThreading");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ThreadingInfo class.
         /// </summary>
@@ -191,14 +209,14 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p15:threadingInfo");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier>();
             builder.AddElement<ThreadingInfo>()
                 .AddAttribute("timeZoneBias", a => a.TimeZoneBias);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "parentCm"), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier.ElementType, 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -211,8 +229,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier? ParentCommentIdentifier
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier>(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "parentCm"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2012/main", "parentCm"));
+            get => GetElement(DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier.ElementType) as DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier.ElementType);
         }
 
         /// <inheritdoc/>
@@ -233,6 +251,12 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// </remarks>
     public partial class SlideGuideList : ExtendedGuideList
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2012/main", "sldGuideLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2012/main", "CT_ExtendedGuideList");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SlideGuideList class.
         /// </summary>
@@ -267,12 +291,12 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p15:sldGuideLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "guide"), 0, 0, version: FileFormatVersions.Office2013),
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.PowerPoint.ExtendedGuide.ElementType, 0, 0, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -294,6 +318,12 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// </remarks>
     public partial class NotesGuideList : ExtendedGuideList
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2012/main", "notesGuideLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2012/main", "CT_ExtendedGuideList");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NotesGuideList class.
         /// </summary>
@@ -328,12 +358,12 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p15:notesGuideLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "guide"), 0, 0, version: FileFormatVersions.Office2013),
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.PowerPoint.ExtendedGuide.ElementType, 0, 0, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -355,6 +385,12 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// </remarks>
     public abstract partial class ExtendedGuideList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2012/main", "CT_ExtendedGuideList");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ExtendedGuideList class.
         /// </summary>
@@ -401,6 +437,12 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// </summary>
     public partial class ChartTrackingReferenceBased : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2012/main", "chartTrackingRefBased");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2012/main", "CT_ChartTrackingRefBased");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ChartTrackingReferenceBased class.
         /// </summary>
@@ -421,7 +463,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p15:chartTrackingRefBased");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<ChartTrackingReferenceBased>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
@@ -441,6 +483,12 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// </summary>
     public partial class ParentCommentIdentifier : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2012/main", "parentCm");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2012/main", "CT_ParentCommentIdentifier");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ParentCommentIdentifier class.
         /// </summary>
@@ -471,7 +519,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p15:parentCm");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<ParentCommentIdentifier>()
                 .AddAttribute("authorId", a => a.AuthorId)
@@ -500,6 +548,12 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// </remarks>
     public partial class ColorType : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2012/main", "clr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Color");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ColorType class.
         /// </summary>
@@ -534,7 +588,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p15:clr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
@@ -548,12 +602,12 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"), 1, 1),
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"), 1, 1),
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"), 1, 1),
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"), 1, 1),
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"), 1, 1),
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.RgbColorModelHex.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.HslColor.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.SystemColor.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.SchemeColor.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.PresetColor.ElementType, 1, 1)
                     }
                 }
             };
@@ -568,8 +622,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage.ElementType) as DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage.ElementType);
         }
 
         /// <summary>
@@ -581,8 +635,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.RgbColorModelHex.ElementType) as DocumentFormat.OpenXml.Drawing.RgbColorModelHex;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.RgbColorModelHex.ElementType);
         }
 
         /// <summary>
@@ -594,8 +648,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.HslColor.ElementType) as DocumentFormat.OpenXml.Drawing.HslColor;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.HslColor.ElementType);
         }
 
         /// <summary>
@@ -607,8 +661,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.SystemColor.ElementType) as DocumentFormat.OpenXml.Drawing.SystemColor;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.SystemColor.ElementType);
         }
 
         /// <summary>
@@ -620,8 +674,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.SchemeColor.ElementType) as DocumentFormat.OpenXml.Drawing.SchemeColor;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.SchemeColor.ElementType);
         }
 
         /// <summary>
@@ -633,8 +687,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.PresetColor.ElementType) as DocumentFormat.OpenXml.Drawing.PresetColor;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.PresetColor.ElementType);
         }
 
         /// <inheritdoc/>
@@ -654,6 +708,12 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2012/main", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "CT_ExtensionList");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
         /// </summary>
@@ -688,7 +748,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p15:extLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -697,7 +757,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ext"), 0, 0)
+                        new ElementParticle(DocumentFormat.OpenXml.Presentation.Extension.ElementType, 0, 0)
                     }
                 }
             };
@@ -721,6 +781,12 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// </remarks>
     public partial class ExtendedGuide : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2012/main", "guide");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2012/main", "CT_ExtendedGuide");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ExtendedGuide class.
         /// </summary>
@@ -805,7 +871,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p15:guide");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList>();
@@ -823,8 +889,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
                 .AddAttribute("userDrawn", a => a.IsUserDrawn);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "clr"), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "extLst"), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -837,8 +903,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType? ColorType
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType>(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "clr"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2012/main", "clr"));
+            get => GetElement(DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType.ElementType) as DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType.ElementType);
         }
 
         /// <summary>
@@ -850,8 +916,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList>(new("http://schemas.microsoft.com/office/powerpoint/2012/main", "extLst"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2012/main", "extLst"));
+            get => GetElement(DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList.ElementType) as DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>

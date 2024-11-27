@@ -24,6 +24,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// </summary>
     public partial class PercentagePositionHeightOffset : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "pctPosHOffset");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "ST_Percentage");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PercentagePositionHeightOffset class.
         /// </summary>
@@ -48,7 +54,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Int32Value>(NumberValidator.Instance);
-            builder.SetSchema("wp14:pctPosHOffset");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -63,6 +69,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// </summary>
     public partial class PercentagePositionVerticalOffset : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "pctPosVOffset");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "ST_Percentage");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PercentagePositionVerticalOffset class.
         /// </summary>
@@ -87,7 +99,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Int32Value>(NumberValidator.Instance);
-            builder.SetSchema("wp14:pctPosVOffset");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -108,6 +120,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// </remarks>
     public partial class RelativeWidth : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "sizeRelH");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "CT_SizeRelH");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RelativeWidth class.
         /// </summary>
@@ -152,7 +170,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("wp14:sizeRelH");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth>();
             builder.AddElement<RelativeWidth>()
@@ -163,7 +181,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "pctWidth"), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth.ElementType, 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -176,8 +194,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth? PercentageWidth
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth>(new("http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "pctWidth"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "pctWidth"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth.ElementType) as DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth.ElementType);
         }
 
         /// <inheritdoc/>
@@ -197,6 +215,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// </remarks>
     public partial class RelativeHeight : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "sizeRelV");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "CT_SizeRelV");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RelativeHeight class.
         /// </summary>
@@ -241,7 +265,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("wp14:sizeRelV");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight>();
             builder.AddElement<RelativeHeight>()
@@ -252,7 +276,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "pctHeight"), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight.ElementType, 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -265,8 +289,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight? PercentageHeight
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight>(new("http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "pctHeight"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "pctHeight"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight.ElementType) as DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight.ElementType);
         }
 
         /// <inheritdoc/>
@@ -280,6 +304,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// </summary>
     public partial class PercentageWidth : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "pctWidth");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "ST_PositivePercentage");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PercentageWidth class.
         /// </summary>
@@ -304,7 +334,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
-            builder.SetSchema("wp14:pctWidth");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -319,6 +349,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// </summary>
     public partial class PercentageHeight : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing", "pctHeight");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "ST_PositivePercentage");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PercentageHeight class.
         /// </summary>
@@ -343,7 +379,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
-            builder.SetSchema("wp14:pctHeight");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
         }
 

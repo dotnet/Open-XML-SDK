@@ -98,7 +98,7 @@ namespace DocumentFormat.OpenXml
         {
             base.ConfigureMetadata(builder);
 
-            builder.SetSchema(AlternateContent.InternalQName.Namespace.Uri, Name);
+            builder.SetSchema(new(new(AlternateContent.InternalQName.Namespace.Uri, Name), default));
         }
     }
 }

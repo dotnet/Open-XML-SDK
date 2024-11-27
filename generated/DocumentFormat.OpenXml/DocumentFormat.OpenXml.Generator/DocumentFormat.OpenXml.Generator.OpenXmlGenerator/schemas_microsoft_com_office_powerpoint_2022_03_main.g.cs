@@ -30,6 +30,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
     /// </remarks>
     public partial class Reactions : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2022/03/main", "reactions");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2022/03/main", "CT_Reactions");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Reactions class.
         /// </summary>
@@ -64,12 +70,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p223:reactions");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reaction>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/03/main", "rxn"), 0, 0, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reaction.ElementType, 0, 0, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -90,6 +96,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
     /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2022/03/main", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "CT_ExtensionList");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
         /// </summary>
@@ -124,7 +136,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p223:extLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -133,7 +145,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ext"), 0, 0)
+                        new ElementParticle(DocumentFormat.OpenXml.Presentation.Extension.ElementType, 0, 0)
                     }
                 }
             };
@@ -156,6 +168,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
     /// </remarks>
     public partial class ReactionInstance : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2022/03/main", "instance");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2022/03/main", "CT_ReactionInstance");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ReactionInstance class.
         /// </summary>
@@ -210,7 +228,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p223:instance");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ExtensionList>();
             builder.AddElement<ReactionInstance>()
@@ -225,7 +243,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/03/main", "extLst"), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -238,8 +256,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
         /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ExtensionList>(new("http://schemas.microsoft.com/office/powerpoint/2022/03/main", "extLst"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2022/03/main", "extLst"));
+            get => GetElement(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ExtensionList.ElementType) as DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -259,6 +277,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
     /// </remarks>
     public partial class Reaction : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2022/03/main", "rxn");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2022/03/main", "CT_Reaction");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Reaction class.
         /// </summary>
@@ -303,7 +327,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p223:rxn");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ReactionInstance>();
             builder.AddElement<Reaction>()
@@ -313,7 +337,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2022/03/main", "instance"), 0, 0, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ReactionInstance.ElementType, 0, 0, version: FileFormatVersions.Microsoft365)
             };
         }
 

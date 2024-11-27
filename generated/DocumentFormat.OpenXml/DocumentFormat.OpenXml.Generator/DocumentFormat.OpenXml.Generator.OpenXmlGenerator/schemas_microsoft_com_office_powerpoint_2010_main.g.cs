@@ -35,6 +35,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </remarks>
     public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "nvContentPartPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_ContentPartNonVisual");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NonVisualContentPartProperties class.
         /// </summary>
@@ -69,16 +75,16 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:nvContentPartPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualDrawingProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualInkContentPartProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ApplicationNonVisualDrawingProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "cNvPr"), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "cNvContentPartPr"), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "nvPr"), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualDrawingProperties.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualInkContentPartProperties.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.ApplicationNonVisualDrawingProperties.ElementType, 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -91,8 +97,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualDrawingProperties>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "cNvPr"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "cNvPr"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualDrawingProperties.ElementType) as DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualDrawingProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualDrawingProperties.ElementType);
         }
 
         /// <summary>
@@ -104,8 +110,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualInkContentPartProperties? NonVisualInkContentPartProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualInkContentPartProperties>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "cNvContentPartPr"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "cNvContentPartPr"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualInkContentPartProperties.ElementType) as DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualInkContentPartProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualInkContentPartProperties.ElementType);
         }
 
         /// <summary>
@@ -117,8 +123,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ApplicationNonVisualDrawingProperties>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "nvPr"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "nvPr"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.PowerPoint.ApplicationNonVisualDrawingProperties.ElementType) as DocumentFormat.OpenXml.Office2010.PowerPoint.ApplicationNonVisualDrawingProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.PowerPoint.ApplicationNonVisualDrawingProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -139,6 +145,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </remarks>
     public partial class Transform2D : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "xfrm");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Transform2D");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Transform2D class.
         /// </summary>
@@ -203,7 +215,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:xfrm");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
@@ -213,8 +225,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
                 .AddAttribute("flipV", a => a.VerticalFlip);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "off"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Offset.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Extents.ElementType, 0, 1)
             };
         }
 
@@ -227,8 +239,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Offset? Offset
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "off"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "off"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Offset.ElementType) as DocumentFormat.OpenXml.Drawing.Offset;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Offset.ElementType);
         }
 
         /// <summary>
@@ -240,8 +252,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Extents? Extents
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Extents.ElementType) as DocumentFormat.OpenXml.Drawing.Extents;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Extents.ElementType);
         }
 
         /// <inheritdoc/>
@@ -261,6 +273,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </remarks>
     public partial class ExtensionListModify : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "CT_ExtensionListModify");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ExtensionListModify class.
         /// </summary>
@@ -305,7 +323,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:extLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
             builder.AddElement<ExtensionListModify>()
@@ -316,7 +334,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ext"), 0, 0)
+                        new ElementParticle(DocumentFormat.OpenXml.Presentation.Extension.ElementType, 0, 0)
                     }
                 }
             };
@@ -342,6 +360,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </remarks>
     public partial class Media : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "media");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_Media");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Media class.
         /// </summary>
@@ -402,7 +426,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:media");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList>();
@@ -413,10 +437,10 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
                 .AddAttribute("r:link", a => a.Link);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "trim"), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "fade"), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "bmkLst"), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "extLst"), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaTrim.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaFade.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2010)
             };
             builder.AddConstraint(new RelationshipExistConstraint(builder.CreateQName("r:link")) { Version = FileFormatVersions.Office2010 });
             builder.AddConstraint(new RelationshipExistConstraint(builder.CreateQName("r:embed")) { Version = FileFormatVersions.Office2010 });
@@ -431,8 +455,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.MediaTrim? MediaTrim
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaTrim>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "trim"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "trim"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaTrim.ElementType) as DocumentFormat.OpenXml.Office2010.PowerPoint.MediaTrim;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.PowerPoint.MediaTrim.ElementType);
         }
 
         /// <summary>
@@ -444,8 +468,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.MediaFade? MediaFade
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaFade>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "fade"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "fade"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaFade.ElementType) as DocumentFormat.OpenXml.Office2010.PowerPoint.MediaFade;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.PowerPoint.MediaFade.ElementType);
         }
 
         /// <summary>
@@ -457,8 +481,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList? MediaBookmarkList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "bmkLst"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "bmkLst"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList.ElementType) as DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList.ElementType);
         }
 
         /// <summary>
@@ -470,8 +494,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "extLst"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "extLst"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList.ElementType) as DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -485,6 +509,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class VortexTransition : SideDirectionTransitionType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "vortex");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "CT_SideDirectionTransition");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the VortexTransition class.
         /// </summary>
@@ -495,7 +525,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:vortex");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -510,6 +540,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class PanTransition : SideDirectionTransitionType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "pan");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "CT_SideDirectionTransition");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PanTransition class.
         /// </summary>
@@ -520,7 +556,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:pan");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -535,6 +571,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public abstract partial class SideDirectionTransitionType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "CT_SideDirectionTransition");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SideDirectionTransitionType class.
         /// </summary>
@@ -570,6 +612,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class SwitchTransition : LeftRightDirectionTransitionType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "switch");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_LeftRightDirectionTransition");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SwitchTransition class.
         /// </summary>
@@ -580,7 +628,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:switch");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -595,6 +643,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class FlipTransition : LeftRightDirectionTransitionType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "flip");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_LeftRightDirectionTransition");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FlipTransition class.
         /// </summary>
@@ -605,7 +659,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:flip");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -620,6 +674,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class FerrisTransition : LeftRightDirectionTransitionType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "ferris");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_LeftRightDirectionTransition");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FerrisTransition class.
         /// </summary>
@@ -630,7 +690,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:ferris");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -645,6 +705,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class GalleryTransition : LeftRightDirectionTransitionType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "gallery");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_LeftRightDirectionTransition");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the GalleryTransition class.
         /// </summary>
@@ -655,7 +721,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:gallery");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -670,6 +736,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class ConveyorTransition : LeftRightDirectionTransitionType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "conveyor");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_LeftRightDirectionTransition");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ConveyorTransition class.
         /// </summary>
@@ -680,7 +752,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:conveyor");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -695,6 +767,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public abstract partial class LeftRightDirectionTransitionType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_LeftRightDirectionTransition");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LeftRightDirectionTransitionType class.
         /// </summary>
@@ -730,6 +808,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class RippleTransition : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "ripple");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_RippleTransition");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RippleTransition class.
         /// </summary>
@@ -750,7 +834,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:ripple");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<RippleTransition>()
                 .AddAttribute("dir", a => a.Direction, aBuilder =>
@@ -774,6 +858,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class HoneycombTransition : EmptyType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "honeycomb");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "CT_Empty");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the HoneycombTransition class.
         /// </summary>
@@ -784,7 +874,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:honeycomb");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -799,6 +889,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class FlashTransition : EmptyType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "flash");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "CT_Empty");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FlashTransition class.
         /// </summary>
@@ -809,7 +905,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:flash");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -824,6 +920,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public abstract partial class EmptyType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "CT_Empty");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the EmptyType class.
         /// </summary>
@@ -844,6 +946,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class PrismTransition : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "prism");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_PrismTransition");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PrismTransition class.
         /// </summary>
@@ -884,7 +992,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:prism");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<PrismTransition>()
                 .AddAttribute("dir", a => a.Direction, aBuilder =>
@@ -906,6 +1014,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class DoorsTransition : OrientationTransitionType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "doors");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "CT_OrientationTransition");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DoorsTransition class.
         /// </summary>
@@ -916,7 +1030,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:doors");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -931,6 +1045,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class WindowTransition : OrientationTransitionType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "window");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "CT_OrientationTransition");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the WindowTransition class.
         /// </summary>
@@ -941,7 +1061,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:window");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -956,6 +1076,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public abstract partial class OrientationTransitionType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "CT_OrientationTransition");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OrientationTransitionType class.
         /// </summary>
@@ -991,6 +1117,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class GlitterTransition : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "glitter");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_GlitterTransition");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the GlitterTransition class.
         /// </summary>
@@ -1021,7 +1153,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:glitter");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<GlitterTransition>()
                 .AddAttribute("dir", a => a.Direction, aBuilder =>
@@ -1045,6 +1177,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class WarpTransition : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "warp");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "CT_InOutTransition");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the WarpTransition class.
         /// </summary>
@@ -1065,7 +1203,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:warp");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<WarpTransition>()
                 .AddAttribute("dir", a => a.Direction, aBuilder =>
@@ -1085,6 +1223,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class FlythroughTransition : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "flythrough");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_FlyThroughTransition");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FlythroughTransition class.
         /// </summary>
@@ -1115,7 +1259,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:flythrough");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<FlythroughTransition>()
                 .AddAttribute("dir", a => a.Direction, aBuilder =>
@@ -1136,6 +1280,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class ShredTransition : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "shred");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_ShredTransition");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShredTransition class.
         /// </summary>
@@ -1166,7 +1316,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:shred");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ShredTransition>()
                 .AddAttribute("pattern", a => a.Pattern, aBuilder =>
@@ -1190,6 +1340,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class RevealTransition : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "reveal");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_RevealTransition");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RevealTransition class.
         /// </summary>
@@ -1220,7 +1376,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:reveal");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<RevealTransition>()
                 .AddAttribute("thruBlk", a => a.ThroughBlack)
@@ -1241,6 +1397,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class WheelReverseTransition : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "wheelReverse");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "CT_WheelTransition");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the WheelReverseTransition class.
         /// </summary>
@@ -1261,7 +1423,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:wheelReverse");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<WheelReverseTransition>()
                 .AddAttribute("spokes", a => a.Spokes);
@@ -1278,6 +1440,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class BookmarkTarget : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "bmkTgt");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_MediaBookmarkTarget");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BookmarkTarget class.
         /// </summary>
@@ -1308,7 +1476,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:bmkTgt");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<BookmarkTarget>()
                 .AddAttribute("spid", a => a.ShapeId, aBuilder =>
@@ -1338,6 +1506,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </remarks>
     public partial class SectionProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "sectionPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_SectionProperties");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SectionProperties class.
         /// </summary>
@@ -1372,12 +1546,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:sectionPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.SectionOld>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "section"), 1, 0, version: FileFormatVersions.Office2010)
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionOld.ElementType, 1, 0, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -1398,6 +1572,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </remarks>
     public partial class SectionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "sectionLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_SectionList");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SectionList class.
         /// </summary>
@@ -1432,12 +1612,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:sectionLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.Section>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "section"), 1, 0, version: FileFormatVersions.Office2010)
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.Section.ElementType, 1, 0, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -1452,6 +1632,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class BrowseMode : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "browseMode");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_BrowseMode");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BrowseMode class.
         /// </summary>
@@ -1472,7 +1658,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:browseMode");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<BrowseMode>()
                 .AddAttribute("showStatus", a => a.ShowStatus);
@@ -1500,6 +1686,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </remarks>
     public partial class LaserColor : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "laserClr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Color");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LaserColor class.
         /// </summary>
@@ -1534,7 +1726,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:laserClr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
@@ -1548,12 +1740,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"), 1, 1),
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"), 1, 1),
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"), 1, 1),
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"), 1, 1),
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"), 1, 1),
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.RgbColorModelHex.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.HslColor.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.SystemColor.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.SchemeColor.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.PresetColor.ElementType, 1, 1)
                     }
                 }
             };
@@ -1568,8 +1760,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "scrgbClr"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage.ElementType) as DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage.ElementType);
         }
 
         /// <summary>
@@ -1581,8 +1773,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "srgbClr"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.RgbColorModelHex.ElementType) as DocumentFormat.OpenXml.Drawing.RgbColorModelHex;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.RgbColorModelHex.ElementType);
         }
 
         /// <summary>
@@ -1594,8 +1786,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "hslClr"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.HslColor.ElementType) as DocumentFormat.OpenXml.Drawing.HslColor;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.HslColor.ElementType);
         }
 
         /// <summary>
@@ -1607,8 +1799,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "sysClr"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.SystemColor.ElementType) as DocumentFormat.OpenXml.Drawing.SystemColor;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.SystemColor.ElementType);
         }
 
         /// <summary>
@@ -1620,8 +1812,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "schemeClr"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.SchemeColor.ElementType) as DocumentFormat.OpenXml.Drawing.SchemeColor;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.SchemeColor.ElementType);
         }
 
         /// <summary>
@@ -1633,8 +1825,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstClr"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.PresetColor.ElementType) as DocumentFormat.OpenXml.Drawing.PresetColor;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.PresetColor.ElementType);
         }
 
         /// <inheritdoc/>
@@ -1648,6 +1840,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class DefaultImageDpi : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "defaultImageDpi");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_DefaultImageDpi");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DefaultImageDpi class.
         /// </summary>
@@ -1668,7 +1866,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:defaultImageDpi");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<DefaultImageDpi>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
@@ -1688,6 +1886,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class DiscardImageEditData : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "discardImageEditData");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_DiscardImageEditData");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DiscardImageEditData class.
         /// </summary>
@@ -1708,7 +1912,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:discardImageEditData");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<DiscardImageEditData>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
@@ -1728,6 +1932,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class ShowMediaControls : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "showMediaCtrls");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_ShowMediaControls");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShowMediaControls class.
         /// </summary>
@@ -1748,7 +1958,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:showMediaCtrls");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<ShowMediaControls>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
@@ -1774,6 +1984,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </remarks>
     public partial class LaserTraceList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "laserTraceLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_LaserTraceList");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LaserTraceList class.
         /// </summary>
@@ -1808,12 +2024,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:laserTraceLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.TracePointList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "tracePtLst"), 0, 0, version: FileFormatVersions.Office2010)
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.TracePointList.ElementType, 0, 0, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -1828,6 +2044,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class CreationId : RandomIdType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "creationId");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_RandomId");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CreationId class.
         /// </summary>
@@ -1838,7 +2060,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:creationId");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -1853,6 +2075,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class ModificationId : RandomIdType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "modId");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_RandomId");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ModificationId class.
         /// </summary>
@@ -1863,7 +2091,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:modId");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -1878,6 +2106,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public abstract partial class RandomIdType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_RandomId");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RandomIdType class.
         /// </summary>
@@ -1925,6 +2159,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </remarks>
     public partial class ShowEventRecordList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "showEvtLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_ShowEventRecordList");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShowEventRecordList class.
         /// </summary>
@@ -1959,7 +2199,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:showEvtLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.PlayEventRecord>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.StopEventRecord>();
@@ -1972,13 +2212,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
-                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "triggerEvt"), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "playEvt"), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "stopEvt"), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "pauseEvt"), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "resumeEvt"), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "seekEvt"), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "nullEvt"), 1, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.TriggerEventRecord.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.PlayEventRecord.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.StopEventRecord.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.PauseEventRecord.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.ResumeEventRecord.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.SeekEventRecord.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.NullEventRecord.ElementType, 1, 1, version: FileFormatVersions.Office2010)
                 }
             };
         }
@@ -1992,8 +2232,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.TriggerEventRecord? TriggerEventRecord
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.TriggerEventRecord>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "triggerEvt"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "triggerEvt"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.PowerPoint.TriggerEventRecord.ElementType) as DocumentFormat.OpenXml.Office2010.PowerPoint.TriggerEventRecord;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.PowerPoint.TriggerEventRecord.ElementType);
         }
 
         /// <summary>
@@ -2005,8 +2245,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.PlayEventRecord? PlayEventRecord
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.PlayEventRecord>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "playEvt"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "playEvt"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.PowerPoint.PlayEventRecord.ElementType) as DocumentFormat.OpenXml.Office2010.PowerPoint.PlayEventRecord;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.PowerPoint.PlayEventRecord.ElementType);
         }
 
         /// <summary>
@@ -2018,8 +2258,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.StopEventRecord? StopEventRecord
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.StopEventRecord>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "stopEvt"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "stopEvt"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.PowerPoint.StopEventRecord.ElementType) as DocumentFormat.OpenXml.Office2010.PowerPoint.StopEventRecord;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.PowerPoint.StopEventRecord.ElementType);
         }
 
         /// <summary>
@@ -2031,8 +2271,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.PauseEventRecord? PauseEventRecord
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.PauseEventRecord>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "pauseEvt"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "pauseEvt"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.PowerPoint.PauseEventRecord.ElementType) as DocumentFormat.OpenXml.Office2010.PowerPoint.PauseEventRecord;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.PowerPoint.PauseEventRecord.ElementType);
         }
 
         /// <summary>
@@ -2044,8 +2284,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.ResumeEventRecord? ResumeEventRecord
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ResumeEventRecord>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "resumeEvt"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "resumeEvt"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.PowerPoint.ResumeEventRecord.ElementType) as DocumentFormat.OpenXml.Office2010.PowerPoint.ResumeEventRecord;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.PowerPoint.ResumeEventRecord.ElementType);
         }
 
         /// <summary>
@@ -2057,8 +2297,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.SeekEventRecord? SeekEventRecord
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.SeekEventRecord>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "seekEvt"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "seekEvt"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.PowerPoint.SeekEventRecord.ElementType) as DocumentFormat.OpenXml.Office2010.PowerPoint.SeekEventRecord;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.PowerPoint.SeekEventRecord.ElementType);
         }
 
         /// <summary>
@@ -2070,8 +2310,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.NullEventRecord? NullEventRecord
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.NullEventRecord>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "nullEvt"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "nullEvt"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.PowerPoint.NullEventRecord.ElementType) as DocumentFormat.OpenXml.Office2010.PowerPoint.NullEventRecord;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.PowerPoint.NullEventRecord.ElementType);
         }
 
         /// <inheritdoc/>
@@ -2093,6 +2333,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </remarks>
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "cNvPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_NonVisualDrawingProps");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NonVisualDrawingProperties class.
         /// </summary>
@@ -2177,7 +2423,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:cNvPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
@@ -2196,9 +2442,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
                 .AddAttribute("title", a => a.Title);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkClick"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkHover"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -2211,8 +2457,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick? HyperlinkOnClick
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkClick"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkClick"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick.ElementType) as DocumentFormat.OpenXml.Drawing.HyperlinkOnClick;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.HyperlinkOnClick.ElementType);
         }
 
         /// <summary>
@@ -2224,8 +2470,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover? HyperlinkOnHover
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkHover"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkHover"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover.ElementType) as DocumentFormat.OpenXml.Drawing.HyperlinkOnHover;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.HyperlinkOnHover.ElementType);
         }
 
         /// <summary>
@@ -2237,8 +2483,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -2259,6 +2505,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </remarks>
     public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "cNvContentPartPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2010/main", "CT_NonVisualInkContentPartProperties");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NonVisualInkContentPartProperties class.
         /// </summary>
@@ -2303,7 +2555,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:cNvContentPartPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>();
@@ -2311,8 +2563,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
                 .AddAttribute("isComment", a => a.IsComment);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2010/main", "cpLocks"), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2010/main", "extLst"), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -2325,8 +2577,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks? ContentPartLocks
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>(new("http://schemas.microsoft.com/office/drawing/2010/main", "cpLocks"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2010/main", "cpLocks"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks.ElementType) as DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks.ElementType);
         }
 
         /// <summary>
@@ -2338,8 +2590,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>(new("http://schemas.microsoft.com/office/drawing/2010/main", "extLst"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2010/main", "extLst"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList.ElementType) as DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -2366,6 +2618,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </remarks>
     public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "nvPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "CT_ApplicationNonVisualDrawingProps");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ApplicationNonVisualDrawingProperties class.
         /// </summary>
@@ -2420,7 +2678,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:nvPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.AudioFromCD>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.AudioFromFile>();
@@ -2435,20 +2693,20 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
                 .AddAttribute("userDrawn", a => a.UserDrawn);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ph"), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Presentation.PlaceholderShape.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "audioCd"), 1, 1),
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "wavAudioFile"), 1, 1),
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "audioFile"), 1, 1),
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "videoFile"), 1, 1),
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "quickTimeFile"), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.AudioFromCD.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.WaveAudioFile.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.AudioFromFile.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.VideoFromFile.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.QuickTimeFromFile.ElementType, 1, 1)
                     }
                 },
-                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "custDataLst"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "extLst"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Presentation.CustomerDataList.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -2461,8 +2719,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Presentation.PlaceholderShape? PlaceholderShape
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.PlaceholderShape>(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ph"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/presentationml/2006/main", "ph"));
+            get => GetElement(DocumentFormat.OpenXml.Presentation.PlaceholderShape.ElementType) as DocumentFormat.OpenXml.Presentation.PlaceholderShape;
+            set => SetElement(value, DocumentFormat.OpenXml.Presentation.PlaceholderShape.ElementType);
         }
 
         /// <inheritdoc/>
@@ -2476,6 +2734,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class MediaBookmark : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "bmk");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_MediaBookmark");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MediaBookmark class.
         /// </summary>
@@ -2506,7 +2770,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:bmk");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<MediaBookmark>()
                 .AddAttribute("name", a => a.Name)
@@ -2526,6 +2790,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class MediaTrim : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "trim");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_MediaTrim");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MediaTrim class.
         /// </summary>
@@ -2556,7 +2826,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:trim");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<MediaTrim>()
                 .AddAttribute("st", a => a.Start)
@@ -2574,6 +2844,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class MediaFade : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "fade");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_MediaFade");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MediaFade class.
         /// </summary>
@@ -2604,7 +2880,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:fade");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<MediaFade>()
                 .AddAttribute("in", a => a.InDuration)
@@ -2628,6 +2904,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </remarks>
     public partial class MediaBookmarkList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "bmkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_MediaBookmarkList");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MediaBookmarkList class.
         /// </summary>
@@ -2662,12 +2944,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:bmkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmark>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "bmk"), 0, 0, version: FileFormatVersions.Office2010)
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmark.ElementType, 0, 0, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -2688,6 +2970,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "CT_ExtensionList");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
         /// </summary>
@@ -2722,7 +3010,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:extLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -2731,7 +3019,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(new("http://schemas.openxmlformats.org/presentationml/2006/main", "ext"), 0, 0)
+                        new ElementParticle(DocumentFormat.OpenXml.Presentation.Extension.ElementType, 0, 0)
                     }
                 }
             };
@@ -2754,6 +3042,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </remarks>
     public partial class SectionOld : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "section");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_SectionOld");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SectionOld class.
         /// </summary>
@@ -2818,7 +3112,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:section");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList>();
             builder.AddElement<SectionOld>()
@@ -2833,7 +3127,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "extLst"), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -2846,8 +3140,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "extLst"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "extLst"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList.ElementType) as DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -2861,6 +3155,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class SectionSlideIdListEntry : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "sldId");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_SectionSlideIdListEntry");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SectionSlideIdListEntry class.
         /// </summary>
@@ -2881,7 +3181,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:sldId");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<SectionSlideIdListEntry>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
@@ -2908,6 +3208,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </remarks>
     public partial class SectionSlideIdList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "sldIdLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_SectionSlideIdList");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SectionSlideIdList class.
         /// </summary>
@@ -2942,12 +3248,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:sldIdLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdListEntry>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "sldId"), 0, 0, version: FileFormatVersions.Office2010)
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdListEntry.ElementType, 0, 0, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -2969,6 +3275,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </remarks>
     public partial class Section : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "section");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_Section");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Section class.
         /// </summary>
@@ -3023,7 +3335,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:section");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList>();
@@ -3035,8 +3347,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "sldIdLst"), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "extLst"), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -3049,8 +3361,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList? SectionSlideIdList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "sldIdLst"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "sldIdLst"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList.ElementType) as DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList.ElementType);
         }
 
         /// <summary>
@@ -3062,8 +3374,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList>(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "extLst"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/powerpoint/2010/main", "extLst"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList.ElementType) as DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -3077,6 +3389,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class TracePoint : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "tracePt");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_LaserTracePoint");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TracePoint class.
         /// </summary>
@@ -3117,7 +3435,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:tracePt");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<TracePoint>()
                 .AddAttribute("t", a => a.Time, aBuilder =>
@@ -3153,6 +3471,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </remarks>
     public partial class TracePointList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "tracePtLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_LaserTrace");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TracePointList class.
         /// </summary>
@@ -3187,12 +3511,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:tracePtLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.TracePoint>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/powerpoint/2010/main", "tracePt"), 0, 0, version: FileFormatVersions.Office2010)
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.TracePoint.ElementType, 0, 0, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -3207,6 +3531,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class TriggerEventRecord : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "triggerEvt");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_TriggerEventRecord");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TriggerEventRecord class.
         /// </summary>
@@ -3247,7 +3577,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:triggerEvt");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<TriggerEventRecord>()
                 .AddAttribute("type", a => a.Type, aBuilder =>
@@ -3276,6 +3606,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class PlayEventRecord : MediaPlaybackEventRecordType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "playEvt");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_MediaPlaybackEventRecord");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PlayEventRecord class.
         /// </summary>
@@ -3286,7 +3622,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:playEvt");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -3301,6 +3637,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class StopEventRecord : MediaPlaybackEventRecordType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "stopEvt");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_MediaPlaybackEventRecord");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the StopEventRecord class.
         /// </summary>
@@ -3311,7 +3653,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:stopEvt");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -3326,6 +3668,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class PauseEventRecord : MediaPlaybackEventRecordType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "pauseEvt");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_MediaPlaybackEventRecord");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PauseEventRecord class.
         /// </summary>
@@ -3336,7 +3684,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:pauseEvt");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -3351,6 +3699,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class ResumeEventRecord : MediaPlaybackEventRecordType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "resumeEvt");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_MediaPlaybackEventRecord");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ResumeEventRecord class.
         /// </summary>
@@ -3361,7 +3715,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:resumeEvt");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -3376,6 +3730,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public abstract partial class MediaPlaybackEventRecordType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_MediaPlaybackEventRecord");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MediaPlaybackEventRecordType class.
         /// </summary>
@@ -3425,6 +3785,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class SeekEventRecord : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "seekEvt");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_MediaSeekEventRecord");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SeekEventRecord class.
         /// </summary>
@@ -3465,7 +3831,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:seekEvt");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<SeekEventRecord>()
                 .AddAttribute("time", a => a.Time, aBuilder =>
@@ -3493,6 +3859,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// </summary>
     public partial class NullEventRecord : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "nullEvt");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2010/main", "CT_NullEventRecord");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NullEventRecord class.
         /// </summary>
@@ -3523,7 +3895,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p14:nullEvt");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddElement<NullEventRecord>()
                 .AddAttribute("time", a => a.Time, aBuilder =>

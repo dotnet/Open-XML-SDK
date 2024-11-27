@@ -30,6 +30,12 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
     /// </remarks>
     public partial class SchemaLibrary : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/schemaLibrary/2006/main", "schemaLibrary");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/schemaLibrary/2006/main", "CT_SchemaLibrary");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SchemaLibrary class.
         /// </summary>
@@ -64,11 +70,11 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("sl:schemaLibrary");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/schemaLibrary/2006/main", "schema"), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema.ElementType, 0, 0)
             };
         }
 
@@ -83,6 +89,12 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
     /// </summary>
     public partial class Schema : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/schemaLibrary/2006/main", "schema");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/schemaLibrary/2006/main", "CT_Schema");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Schema class.
         /// </summary>
@@ -132,7 +144,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("sl:schema");
+            builder.SetSchema(ElementType);
             builder.AddElement<Schema>()
                 .AddAttribute("sl:uri", a => a.Uri)
                 .AddAttribute("sl:manifestLocation", a => a.ManifestLocation)

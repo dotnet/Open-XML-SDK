@@ -82,14 +82,6 @@ public static class TextWriterExtensions
         }
     }
 
-    public static void WriteExpandedQName(this TextWriter w, OpenXmlGeneratorServices services, QName qname)
-    {
-        w.Write("new(");
-        w.WriteString(services.GetNamespaceInfo(qname.Prefix).Uri);
-        w.Write(", ");
-        w.WriteString(qname.Name);
-        w.Write(")");
-    }
     public static void WriteList<T1, T2>(this TextWriter writer, T1 item1, T2 item2)
     {
         writer.Write("{ ");

@@ -23,6 +23,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
     /// </summary>
     public partial class CreationId : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/main", "creationId");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2014/main", "CT_CreationId");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CreationId class.
         /// </summary>
@@ -43,7 +49,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("a16:creationId");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<CreationId>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
@@ -63,6 +69,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
     /// </summary>
     public partial class PredecessorDrawingElementReference : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/main", "predDERef");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2014/main", "CT_PredecessorDrawingElementReference");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PredecessorDrawingElementReference class.
         /// </summary>
@@ -83,7 +95,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("a16:predDERef");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<PredecessorDrawingElementReference>()
                 .AddAttribute("pred", a => a.Pred, aBuilder =>
@@ -103,6 +115,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
     /// </summary>
     public partial class ConnectableReferences : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/main", "cxnDERefs");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2014/main", "CT_ConnectableReferences");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ConnectableReferences class.
         /// </summary>
@@ -133,7 +151,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("a16:cxnDERefs");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ConnectableReferences>()
                 .AddAttribute("st", a => a.St, aBuilder =>
@@ -157,6 +175,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
     /// </summary>
     public partial class RowIdIdentifier : OpenXmlIdentifierElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/main", "rowId");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2014/main", "CT_Identifier");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RowIdIdentifier class.
         /// </summary>
@@ -167,7 +191,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("a16:rowId");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -182,6 +206,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
     /// </summary>
     public partial class ColIdIdentifier : OpenXmlIdentifierElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/main", "colId");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2014/main", "CT_Identifier");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ColIdIdentifier class.
         /// </summary>
@@ -192,7 +222,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("a16:colId");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -207,6 +237,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
     /// </summary>
     public abstract partial class OpenXmlIdentifierElement : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2014/main", "CT_Identifier");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OpenXmlIdentifierElement class.
         /// </summary>

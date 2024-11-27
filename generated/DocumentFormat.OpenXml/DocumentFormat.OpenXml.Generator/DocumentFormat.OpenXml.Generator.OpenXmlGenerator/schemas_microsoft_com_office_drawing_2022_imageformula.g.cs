@@ -23,6 +23,12 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2022.ImageFormula
     /// </summary>
     public partial class ImageFormula : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2022/imageformula", "imageFormula");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2022/imageformula", "CT_ImageFormula");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ImageFormula class.
         /// </summary>
@@ -43,7 +49,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2022.ImageFormula
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("aif:imageFormula");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddElement<ImageFormula>()
                 .AddAttribute("formula", a => a.Formula);

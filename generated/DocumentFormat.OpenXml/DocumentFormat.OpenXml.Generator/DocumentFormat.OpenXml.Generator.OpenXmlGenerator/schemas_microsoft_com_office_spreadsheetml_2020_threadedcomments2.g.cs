@@ -24,6 +24,12 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
     /// </summary>
     public partial class XsdunsignedInt : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/threadedcomments2", "checksum");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "unsignedInt");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the XsdunsignedInt class.
         /// </summary>
@@ -48,7 +54,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<UInt32Value>(NumberValidator.Instance);
-            builder.SetSchema("xltc2:checksum");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -69,6 +75,12 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
     /// </remarks>
     public partial class CommentHyperlink : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/threadedcomments2", "hyperlink");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/threadedcomments2", "CT_CommentHyperlink");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CommentHyperlink class.
         /// </summary>
@@ -133,7 +145,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xltc2:hyperlink");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList>();
             builder.AddElement<CommentHyperlink>()
@@ -151,7 +163,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2020/threadedcomments2", "extLst"), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -164,8 +176,8 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList>(new("http://schemas.microsoft.com/office/spreadsheetml/2020/threadedcomments2", "extLst"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2020/threadedcomments2", "extLst"));
+            get => GetElement(DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList.ElementType) as DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -185,6 +197,12 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
     /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/threadedcomments2", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "CT_ExtensionList");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
         /// </summary>
@@ -219,7 +237,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xltc2:extLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -228,7 +246,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
+                        new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Extension.ElementType, 0, 0)
                     }
                 }
             };

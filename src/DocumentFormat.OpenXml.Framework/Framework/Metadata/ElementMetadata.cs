@@ -13,17 +13,16 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 {
     internal class ElementMetadata : IElementMetadata
     {
-        public static readonly ElementMetadata None = new(typeof(OpenXmlElement));
+        public static readonly ElementMetadata None = new();
 
         private readonly Lazy<ElementFactoryCollection>? _children;
 
         internal ElementMetadata(
-            Type type,
+            OpenXmlType type,
             ReadOnlyArray<AttributeMetadata> attributes,
             ReadOnlyArray<IValidator> validators,
             ReadOnlyArray<IValidator> constraints,
             FileFormatVersions version,
-            OpenXmlQualifiedName qname,
             CompiledParticle? particle,
             Lazy<ElementFactoryCollection> lookup)
         {
@@ -32,17 +31,15 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             Validators = validators;
             Constraints = constraints;
             Availability = version;
-            QName = qname;
             Particle = particle;
             _children = lookup;
         }
 
-        internal ElementMetadata(Type type)
+        internal ElementMetadata()
         {
-            Type = type;
         }
 
-        public Type Type { get; }
+        public OpenXmlType Type { get; }
 
         public ReadOnlyArray<AttributeMetadata> Attributes { get; }
 
@@ -56,23 +53,19 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public CompiledParticle? Particle { get; }
 
-        public OpenXmlQualifiedName QName { get; }
-
         public class Builder : ValidatorBuilder
         {
             private static readonly Lazy<ElementFactoryCollection> _lazy = new Lazy<ElementFactoryCollection>(() => ElementFactoryCollection.Empty, true);
 
-            private readonly Type _type;
             private readonly IOpenXmlNamespaceResolver _resolver;
 
             private List<IMetadataBuilder<AttributeMetadata>>? _attributes;
             private HashSet<IMetadataBuilder<ElementFactory>>? _children;
             private List<IValidator>? _constraints;
-            private OpenXmlQualifiedName _qname;
+            private OpenXmlType _type;
 
-            public Builder(Type type, IOpenXmlNamespaceResolver resolver)
+            public Builder(IOpenXmlNamespaceResolver resolver)
             {
-                _type = type;
                 _resolver = resolver;
             }
 
@@ -97,14 +90,8 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             public OpenXmlQualifiedName CreateQName(string qname)
                 => _resolver.ParseQName(qname);
 
-            public void SetSchema(string qname)
-                => _qname = _resolver.ParseQName(qname);
-
-            public void SetSchema(string ns, string localName)
-                => _qname = new(ns, localName);
-
-            public void SetSchema(in OpenXmlQualifiedName qname)
-                => _qname = qname;
+            public void SetSchema(in OpenXmlType type)
+                => _type = type;
 
             public void AddChild<T>()
                 where T : OpenXmlElement, new()
@@ -133,7 +120,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             {
                 var lookup = _children is null ? _lazy : new Lazy<ElementFactoryCollection>(() => new ElementFactoryCollection(_children.Select(c => c.Build())), true);
 
-                return new ElementMetadata(_type, BuildAttributes(), GetValidators(), _constraints?.ToArray(), Availability, _qname, Particle.Compile(), lookup);
+                return new ElementMetadata(_type, BuildAttributes(), GetValidators(), _constraints?.ToArray(), Availability, Particle.Compile(), lookup);
             }
 
             private AttributeMetadata[]? BuildAttributes()

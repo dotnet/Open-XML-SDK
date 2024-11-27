@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
@@ -201,24 +202,28 @@ namespace DocumentFormat.OpenXml.Tests
         {
             public ChildElement Child
             {
-                get => GetElement<ChildElement>(new ChildElement().QName);
-                set => SetElement(value, new ChildElement().QName);
+                get => GetElement(ChildElement.ElementType) as ChildElement;
+                set => SetElement(value, ChildElement.ElementType);
             }
 
             internal override void ConfigureMetadata(ElementMetadata.Builder builder)
             {
                 builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new ElementParticle(new ChildElement().QName, 0, 1),
+                    new ElementParticle(ChildElement.ElementType, 0, 1),
                 };
             }
         }
 
         private class ChildElement : OpenXmlLeafElement
         {
-            public override string LocalName => "child";
+            public static OpenXmlType ElementType => new(new("http://testns", "child"), new("http://testns", "child"));
 
-            public override string NamespaceUri => "http://testns";
+            internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+            {
+                base.ConfigureMetadata(builder);
+                builder.SetSchema(ElementType);
+            }
         }
     }
 }

@@ -24,6 +24,12 @@ namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
     /// </summary>
     public partial class LegacyDrawing : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/compatibility", "legacyDrawing");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/compatibility", "CT_Compat");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LegacyDrawing class.
         /// </summary>
@@ -44,7 +50,7 @@ namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("comp:legacyDrawing");
+            builder.SetSchema(ElementType);
             builder.AddElement<LegacyDrawing>()
                 .AddAttribute("spid", a => a.ShapeId, aBuilder =>
                 {

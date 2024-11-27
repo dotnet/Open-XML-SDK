@@ -31,6 +31,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </remarks>
     public partial class RevExHeaders : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "revHdrs");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_RevExHeaders");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RevExHeaders class.
         /// </summary>
@@ -105,7 +111,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:revHdrs");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExHeader>();
             builder.AddElement<RevExHeaders>()
@@ -127,7 +133,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hdr"), 0, 0, version: FileFormatVersions.Office2016)
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevExHeader.ElementType, 0, 0, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -161,6 +167,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </remarks>
     public partial class RevExStream : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "revStream");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_RevExStream");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RevExStream class.
         /// </summary>
@@ -195,7 +207,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:revStream");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExChangeCell>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExChgObj>();
@@ -213,20 +225,20 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevListAutoExpandRw>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrftr"), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrUspt"), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrTrim"), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrrc"), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrm"), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrc"), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrf"), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrDefName"), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrdo"), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrco"), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrSheet"), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrList"), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrListExpR"), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrg"), 0, 0, version: FileFormatVersions.Office2016)
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevExFuture.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevExUnsupported.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevExTrimmed.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevExRowColumn.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevExMove.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevExChangeCell.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevExFormatting.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevExDefinedName.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevExDelObj.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevExChgObj.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevExSheetOp.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevisionList.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevListAutoExpandRw.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevGroup.ElementType, 0, 0, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -253,6 +265,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </remarks>
     public partial class DifferentialFormatType : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "dxf");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "CT_Dxf");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DifferentialFormatType class.
         /// </summary>
@@ -287,7 +305,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:dxf");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Border>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
@@ -298,13 +316,13 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "font"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "numFmt"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fill"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "alignment"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "border"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "protection"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Font.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Fill.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Alignment.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Border.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Protection.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -317,8 +335,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Font? Font
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Font>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "font"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "font"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.Font.ElementType) as DocumentFormat.OpenXml.Spreadsheet.Font;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.Font.ElementType);
         }
 
         /// <summary>
@@ -330,8 +348,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.NumberingFormat? NumberingFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "numFmt"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "numFmt"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat.ElementType) as DocumentFormat.OpenXml.Spreadsheet.NumberingFormat;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.NumberingFormat.ElementType);
         }
 
         /// <summary>
@@ -343,8 +361,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Fill? Fill
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Fill>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fill"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "fill"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.Fill.ElementType) as DocumentFormat.OpenXml.Spreadsheet.Fill;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.Fill.ElementType);
         }
 
         /// <summary>
@@ -356,8 +374,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Alignment? Alignment
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Alignment>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "alignment"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "alignment"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.Alignment.ElementType) as DocumentFormat.OpenXml.Spreadsheet.Alignment;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.Alignment.ElementType);
         }
 
         /// <summary>
@@ -369,8 +387,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Border? Border
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Border>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "border"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "border"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.Border.ElementType) as DocumentFormat.OpenXml.Spreadsheet.Border;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.Border.ElementType);
         }
 
         /// <summary>
@@ -382,8 +400,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Protection? Protection
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Protection>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "protection"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "protection"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.Protection.ElementType) as DocumentFormat.OpenXml.Spreadsheet.Protection;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.Protection.ElementType);
         }
 
         /// <summary>
@@ -395,8 +413,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType) as DocumentFormat.OpenXml.Spreadsheet.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -410,6 +428,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </summary>
     public partial class RevisionPtr : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "revisionPtr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_RevisionPtr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RevisionPtr class.
         /// </summary>
@@ -440,7 +464,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:revisionPtr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevisionPtr>()
                 .AddAttribute("revIDLastSave", a => a.RevIDLastSave, aBuilder =>
@@ -475,6 +499,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </remarks>
     public partial class StateBasedObject : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "objectState");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_StateBasedObject");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the StateBasedObject class.
         /// </summary>
@@ -509,7 +539,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:objectState");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.AutoFilter>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.Comments>();
@@ -519,12 +549,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.SparklineGroup>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "dataValidation"), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hyperlink"), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "sparklineGroup"), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "comments"), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "autoFilter"), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "pivotTableDefinition"), 1, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.DataValidation.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.Hyperlink.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.SparklineGroup.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.Comments.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.AutoFilter.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.pivotTableDefinition.ElementType, 1, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -537,8 +567,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.DataValidation? DataValidation
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.DataValidation>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "dataValidation"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "dataValidation"));
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Excel.DataValidation.ElementType) as DocumentFormat.OpenXml.Office2016.Excel.DataValidation;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Excel.DataValidation.ElementType);
         }
 
         /// <summary>
@@ -550,8 +580,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.Hyperlink? Hyperlink
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.Hyperlink>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hyperlink"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hyperlink"));
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Excel.Hyperlink.ElementType) as DocumentFormat.OpenXml.Office2016.Excel.Hyperlink;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Excel.Hyperlink.ElementType);
         }
 
         /// <summary>
@@ -563,8 +593,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.SparklineGroup? SparklineGroup
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.SparklineGroup>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "sparklineGroup"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "sparklineGroup"));
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Excel.SparklineGroup.ElementType) as DocumentFormat.OpenXml.Office2016.Excel.SparklineGroup;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Excel.SparklineGroup.ElementType);
         }
 
         /// <summary>
@@ -576,8 +606,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.Comments? Comments
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.Comments>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "comments"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "comments"));
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Excel.Comments.ElementType) as DocumentFormat.OpenXml.Office2016.Excel.Comments;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Excel.Comments.ElementType);
         }
 
         /// <summary>
@@ -589,8 +619,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.AutoFilter? AutoFilter
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.AutoFilter>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "autoFilter"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "autoFilter"));
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Excel.AutoFilter.ElementType) as DocumentFormat.OpenXml.Office2016.Excel.AutoFilter;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Excel.AutoFilter.ElementType);
         }
 
         /// <summary>
@@ -602,8 +632,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.pivotTableDefinition? pivotTableDefinition
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.pivotTableDefinition>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "pivotTableDefinition"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "pivotTableDefinition"));
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Excel.pivotTableDefinition.ElementType) as DocumentFormat.OpenXml.Office2016.Excel.pivotTableDefinition;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Excel.pivotTableDefinition.ElementType);
         }
 
         /// <inheritdoc/>
@@ -617,6 +647,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </summary>
     public partial class RevExHeader : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hdr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_RevExHeader");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RevExHeader class.
         /// </summary>
@@ -670,7 +706,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:hdr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevExHeader>()
                 .AddAttribute("r:id", a => a.Id, aBuilder =>
@@ -702,6 +738,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </remarks>
     public partial class RevExFuture : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrftr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_RevExFuture");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RevExFuture class.
         /// </summary>
@@ -796,7 +838,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:xrrftr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExTest>();
             builder.AddElement<RevExFuture>()
@@ -822,7 +864,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 .AddAttribute("sti", a => a.Sti);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrtest"), 0, 0, version: FileFormatVersions.Office2016)
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevExTest.ElementType, 0, 0, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -837,6 +879,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </summary>
     public partial class RevExUnsupported : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrUspt");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_RevExUnsupported");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RevExUnsupported class.
         /// </summary>
@@ -897,7 +945,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:xrrUspt");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevExUnsupported>()
                 .AddAttribute("rev", a => a.Rev, aBuilder =>
@@ -932,6 +980,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </summary>
     public partial class RevExTrimmed : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrTrim");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_RevExTrimmed");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RevExTrimmed class.
         /// </summary>
@@ -992,7 +1046,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:xrrTrim");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevExTrimmed>()
                 .AddAttribute("rev", a => a.Rev, aBuilder =>
@@ -1027,6 +1081,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </summary>
     public partial class RevExRowColumn : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrrc");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_RevExRowColumn");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RevExRowColumn class.
         /// </summary>
@@ -1117,7 +1177,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:xrrrc");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevExRowColumn>()
                 .AddAttribute("rev", a => a.Rev, aBuilder =>
@@ -1161,6 +1221,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </summary>
     public partial class RevExMove : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrm");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_RevExMove");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RevExMove class.
         /// </summary>
@@ -1251,7 +1317,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:xrrm");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevExMove>()
                 .AddAttribute("rev", a => a.Rev, aBuilder =>
@@ -1305,6 +1371,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </remarks>
     public partial class RevExChangeCell : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrc");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_RevExChangeCell");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RevExChangeCell class.
         /// </summary>
@@ -1439,7 +1511,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:xrrc");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.ChangeCellSubEdit>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevCell>();
@@ -1476,8 +1548,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 .AddAttribute("w", a => a.W);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "c"), 1, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "ccse"), 0, 0, version: FileFormatVersions.Office2016)
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevCell.ElementType, 1, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.ChangeCellSubEdit.ElementType, 0, 0, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -1499,6 +1571,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </remarks>
     public partial class RevExFormatting : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrf");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_RevExFormatting");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RevExFormatting class.
         /// </summary>
@@ -1723,7 +1801,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:xrrf");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.ExtensionList>();
@@ -1769,8 +1847,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 .AddAttribute("applyProtection", a => a.ApplyProtection);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "dxf"), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "extLst"), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -1783,8 +1861,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType? DifferentialFormatType
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "dxf"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "dxf"));
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType.ElementType) as DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType.ElementType);
         }
 
         /// <summary>
@@ -1796,8 +1874,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.ExtensionList>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "extLst"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "extLst"));
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Excel.ExtensionList.ElementType) as DocumentFormat.OpenXml.Office2016.Excel.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Excel.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -1818,6 +1896,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </remarks>
     public partial class RevExDefinedName : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrDefName");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_RevExDefinedName");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RevExDefinedName class.
         /// </summary>
@@ -2012,7 +2096,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:xrrDefName");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula>();
@@ -2052,8 +2136,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 .AddAttribute("comment", a => a.Comment);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "formula"), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "extLst"), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -2066,8 +2150,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula? FormulaFormula
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "formula"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "formula"));
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula.ElementType) as DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula.ElementType);
         }
 
         /// <summary>
@@ -2079,8 +2163,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.ExtensionList>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "extLst"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "extLst"));
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Excel.ExtensionList.ElementType) as DocumentFormat.OpenXml.Office2016.Excel.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Excel.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -2100,6 +2184,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </remarks>
     public partial class RevExDelObj : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrdo");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_RevExDelObj");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RevExDelObj class.
         /// </summary>
@@ -2184,7 +2274,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:xrrdo");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader>();
             builder.AddElement<RevExDelObj>()
@@ -2209,7 +2299,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 .AddAttribute("ctx", a => a.Ctx);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hdr"), 1, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader.ElementType, 1, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -2222,8 +2312,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader? StateBasedHeader
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hdr"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hdr"));
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader.ElementType) as DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader.ElementType);
         }
 
         /// <inheritdoc/>
@@ -2245,6 +2335,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </remarks>
     public partial class RevExChgObj : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrco");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_RevExChgObj");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RevExChgObj class.
         /// </summary>
@@ -2329,7 +2425,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:xrrco");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevisionState>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevisionStateLink>();
@@ -2356,11 +2452,11 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 .AddAttribute("ctx", a => a.Ctx);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hdr"), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader.ElementType, 1, 1, version: FileFormatVersions.Office2016),
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "link"), 0, 1, version: FileFormatVersions.Office2016),
-                    new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "body"), 0, 1, version: FileFormatVersions.Office2016)
+                    new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevisionStateLink.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevisionState.ElementType, 0, 1, version: FileFormatVersions.Office2016)
                 }
             };
         }
@@ -2374,8 +2470,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader? StateBasedHeader
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hdr"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hdr"));
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader.ElementType) as DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader.ElementType);
         }
 
         /// <inheritdoc/>
@@ -2389,6 +2485,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </summary>
     public partial class RevExSheetOp : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrSheet");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_RevExSheetOp");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RevExSheetOp class.
         /// </summary>
@@ -2489,7 +2591,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:xrrSheet");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevExSheetOp>()
                 .AddAttribute("rev", a => a.Rev, aBuilder =>
@@ -2531,6 +2633,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </summary>
     public partial class RevisionList : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrList");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_RevisionList");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RevisionList class.
         /// </summary>
@@ -2671,7 +2779,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:xrrList");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevisionList>()
                 .AddAttribute("rev", a => a.Rev, aBuilder =>
@@ -2720,6 +2828,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </summary>
     public partial class RevListAutoExpandRw : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrListExpR");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_RevListAutoExpandRw");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RevListAutoExpandRw class.
         /// </summary>
@@ -2800,7 +2914,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:xrrListExpR");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevListAutoExpandRw>()
                 .AddAttribute("rev", a => a.Rev, aBuilder =>
@@ -2862,6 +2976,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </remarks>
     public partial class RevGroup : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrg");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_RevGroup");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RevGroup class.
         /// </summary>
@@ -2946,7 +3066,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:xrrg");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExChangeCell>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExChgObj>();
@@ -2983,19 +3103,19 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 .AddAttribute("ctx", a => a.Ctx);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrftr"), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrUspt"), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrTrim"), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrrc"), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrm"), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrc"), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrf"), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrDefName"), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrdo"), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrco"), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrSheet"), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrList"), 0, 0, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrListExpR"), 0, 0, version: FileFormatVersions.Office2016)
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevExFuture.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevExUnsupported.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevExTrimmed.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevExRowColumn.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevExMove.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevExChangeCell.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevExFormatting.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevExDefinedName.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevExDelObj.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevExChgObj.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevExSheetOp.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevisionList.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevListAutoExpandRw.ElementType, 0, 0, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -3010,6 +3130,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </summary>
     public partial class RevExTest : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrtest");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_RevExTest");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RevExTest class.
         /// </summary>
@@ -3020,7 +3146,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:xrrtest");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -3043,6 +3169,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </remarks>
     public partial class RevCell : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "c");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_RevCell");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RevCell class.
         /// </summary>
@@ -3117,7 +3249,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:c");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RstType>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.FFormula>();
@@ -3129,9 +3261,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 .AddAttribute("rep", a => a.Rep);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "f"), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "v"), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "is"), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.FFormula.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.Xstring.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RstType.ElementType, 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -3144,8 +3276,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.FFormula? FFormula
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.FFormula>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "f"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "f"));
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Excel.FFormula.ElementType) as DocumentFormat.OpenXml.Office2016.Excel.FFormula;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Excel.FFormula.ElementType);
         }
 
         /// <summary>
@@ -3157,8 +3289,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.Xstring? Xstring
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.Xstring>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "v"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "v"));
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Excel.Xstring.ElementType) as DocumentFormat.OpenXml.Office2016.Excel.Xstring;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Excel.Xstring.ElementType);
         }
 
         /// <summary>
@@ -3170,8 +3302,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.RstType? RstType
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.RstType>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "is"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "is"));
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Excel.RstType.ElementType) as DocumentFormat.OpenXml.Office2016.Excel.RstType;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Excel.RstType.ElementType);
         }
 
         /// <inheritdoc/>
@@ -3191,6 +3323,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </remarks>
     public partial class ChangeCellSubEdit : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "ccse");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_ChangeCellSubEdit");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ChangeCellSubEdit class.
         /// </summary>
@@ -3265,7 +3403,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:ccse");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevCell>();
             builder.AddElement<ChangeCellSubEdit>()
@@ -3278,7 +3416,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 .AddAttribute("w", a => a.W);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "c"), 1, 0, version: FileFormatVersions.Office2016)
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevCell.ElementType, 1, 0, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -3299,6 +3437,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "CT_ExtensionList");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
         /// </summary>
@@ -3333,7 +3477,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:extLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -3342,7 +3486,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
+                        new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Extension.ElementType, 0, 0)
                     }
                 }
             };
@@ -3359,6 +3503,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </summary>
     public partial class FormulaFormula : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "formula");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ST_Formula");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FormulaFormula class.
         /// </summary>
@@ -3382,7 +3532,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:formula");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -3397,6 +3547,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </summary>
     public partial class FFormula : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "f");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ST_Formula");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FFormula class.
         /// </summary>
@@ -3420,7 +3576,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:f");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -3441,6 +3597,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </remarks>
     public partial class StateBasedHeader : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hdr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_StateBasedHeader");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the StateBasedHeader class.
         /// </summary>
@@ -3525,7 +3687,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:hdr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RefMap>();
             builder.AddElement<StateBasedHeader>()
@@ -3543,7 +3705,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 .AddAttribute("seftx", a => a.Seftx);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "refmap"), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RefMap.ElementType, 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -3556,8 +3718,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.RefMap? RefMap
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.RefMap>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "refmap"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "refmap"));
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Excel.RefMap.ElementType) as DocumentFormat.OpenXml.Office2016.Excel.RefMap;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Excel.RefMap.ElementType);
         }
 
         /// <inheritdoc/>
@@ -3571,6 +3733,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </summary>
     public partial class RevisionStateLink : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "link");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_RevisionStateLink");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RevisionStateLink class.
         /// </summary>
@@ -3594,7 +3762,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:link");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RevisionStateLink>()
                 .AddAttribute("r:id", a => a.Id, aBuilder =>
@@ -3624,6 +3792,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </remarks>
     public partial class RevisionState : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "body");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_RevisionState");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RevisionState class.
         /// </summary>
@@ -3658,7 +3832,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:body");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.FreezePanes>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.HideUnhideSheet>();
@@ -3667,11 +3841,11 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.ShowGridlinesHeadings>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "rowColVisualOps"), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hideUnhideSheet"), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "showGridlinesHeadings"), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "freezePanes"), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "outlines"), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOps.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.HideUnhideSheet.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.ShowGridlinesHeadings.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.FreezePanes.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.Outlines.ElementType, 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -3684,8 +3858,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOps? RowColVisualOps
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOps>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "rowColVisualOps"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "rowColVisualOps"));
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOps.ElementType) as DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOps;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOps.ElementType);
         }
 
         /// <summary>
@@ -3697,8 +3871,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.HideUnhideSheet? HideUnhideSheet
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.HideUnhideSheet>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hideUnhideSheet"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hideUnhideSheet"));
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Excel.HideUnhideSheet.ElementType) as DocumentFormat.OpenXml.Office2016.Excel.HideUnhideSheet;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Excel.HideUnhideSheet.ElementType);
         }
 
         /// <summary>
@@ -3710,8 +3884,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.ShowGridlinesHeadings? ShowGridlinesHeadings
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.ShowGridlinesHeadings>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "showGridlinesHeadings"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "showGridlinesHeadings"));
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Excel.ShowGridlinesHeadings.ElementType) as DocumentFormat.OpenXml.Office2016.Excel.ShowGridlinesHeadings;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Excel.ShowGridlinesHeadings.ElementType);
         }
 
         /// <summary>
@@ -3723,8 +3897,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.FreezePanes? FreezePanes
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.FreezePanes>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "freezePanes"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "freezePanes"));
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Excel.FreezePanes.ElementType) as DocumentFormat.OpenXml.Office2016.Excel.FreezePanes;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Excel.FreezePanes.ElementType);
         }
 
         /// <summary>
@@ -3736,8 +3910,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.Outlines? Outlines
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.Outlines>(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "outlines"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "outlines"));
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Excel.Outlines.ElementType) as DocumentFormat.OpenXml.Office2016.Excel.Outlines;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Excel.Outlines.ElementType);
         }
 
         /// <inheritdoc/>
@@ -3761,6 +3935,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </remarks>
     public partial class RefMap : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "refmap");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_RefMap");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RefMap class.
         /// </summary>
@@ -3795,7 +3975,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:refmap");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RefCell>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RefFuture>();
@@ -3804,11 +3984,11 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.SheetXluid>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "ref"), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "sheetUid"), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "oartAnchor"), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "future"), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "test"), 1, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RefCell.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.SheetXluid.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RefOartAnchor.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RefFuture.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RefTest.ElementType, 1, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -3823,6 +4003,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </summary>
     public partial class RowColVisualOps : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "rowColVisualOps");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_RowColVisualOps");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RowColVisualOps class.
         /// </summary>
@@ -3873,7 +4059,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:rowColVisualOps");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RowColVisualOps>()
                 .AddAttribute("action", a => a.Action, aBuilder =>
@@ -3899,6 +4085,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </summary>
     public partial class HideUnhideSheet : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hideUnhideSheet");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_HideUnhideSheet");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the HideUnhideSheet class.
         /// </summary>
@@ -3919,7 +4111,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:hideUnhideSheet");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<HideUnhideSheet>()
                 .AddAttribute("hide", a => a.Hide, aBuilder =>
@@ -3939,6 +4131,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </summary>
     public partial class ShowGridlinesHeadings : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "showGridlinesHeadings");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_ShowGridlinesHeadings");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShowGridlinesHeadings class.
         /// </summary>
@@ -3969,7 +4167,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:showGridlinesHeadings");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ShowGridlinesHeadings>()
                 .AddAttribute("showGridLines", a => a.ShowGridLines, aBuilder =>
@@ -3993,6 +4191,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </summary>
     public partial class FreezePanes : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "freezePanes");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_FreezePanes");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FreezePanes class.
         /// </summary>
@@ -4013,7 +4217,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:freezePanes");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<FreezePanes>()
                 .AddAttribute("sheetViewUid", a => a.SheetViewUid, aBuilder =>
@@ -4039,6 +4243,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </remarks>
     public partial class Outlines : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "outlines");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_Outlines");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Outlines class.
         /// </summary>
@@ -4083,7 +4293,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:outlines");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.Outline>();
             builder.AddElement<Outlines>()
@@ -4093,7 +4303,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "outline"), 0, 0, version: FileFormatVersions.Office2016)
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.Outline.ElementType, 0, 0, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -4108,6 +4318,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </summary>
     public partial class Outline : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "outline");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_Outline");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Outline class.
         /// </summary>
@@ -4138,7 +4354,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:outline");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<Outline>()
                 .AddAttribute("isCollapsed", a => a.IsCollapsed, aBuilder =>
@@ -4162,6 +4378,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </summary>
     public partial class Xstring : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "v");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ST_Xstring");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Xstring class.
         /// </summary>
@@ -4185,7 +4407,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:v");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -4209,6 +4431,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </remarks>
     public partial class RstType : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "is");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "CT_Rst");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RstType class.
         /// </summary>
@@ -4243,7 +4471,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:is");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PhoneticRun>();
@@ -4251,10 +4479,10 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Text>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "t"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "r"), 0, 32767),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rPh"), 0, 32767),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "phoneticPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Text.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Run.ElementType, 0, 32767),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.PhoneticRun.ElementType, 0, 32767),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties.ElementType, 0, 1)
             };
         }
 
@@ -4267,8 +4495,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Text? Text
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Text>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "t"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "t"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.Text.ElementType) as DocumentFormat.OpenXml.Spreadsheet.Text;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.Text.ElementType);
         }
 
         /// <inheritdoc/>
@@ -4282,6 +4510,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </summary>
     public partial class RefCell : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "ref");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_RefCell");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RefCell class.
         /// </summary>
@@ -4362,7 +4596,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:ref");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RefCell>()
                 .AddAttribute("n", a => a.N, aBuilder =>
@@ -4400,6 +4634,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </summary>
     public partial class SheetXluid : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "sheetUid");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_SheetXluid");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SheetXluid class.
         /// </summary>
@@ -4460,7 +4700,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:sheetUid");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<SheetXluid>()
                 .AddAttribute("n", a => a.N, aBuilder =>
@@ -4491,6 +4731,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </summary>
     public partial class RefOartAnchor : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "oartAnchor");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_RefOartAnchor");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RefOartAnchor class.
         /// </summary>
@@ -4641,7 +4887,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:oartAnchor");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RefOartAnchor>()
                 .AddAttribute("n", a => a.N, aBuilder =>
@@ -4704,6 +4950,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </summary>
     public partial class RefFuture : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "future");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_RefFuture");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RefFuture class.
         /// </summary>
@@ -4714,7 +4966,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:future");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -4729,6 +4981,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </summary>
     public partial class RefTest : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "test");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "CT_RefTest");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RefTest class.
         /// </summary>
@@ -4779,7 +5037,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:test");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<RefTest>()
                 .AddAttribute("n", a => a.N, aBuilder =>
@@ -4813,6 +5071,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </remarks>
     public partial class DataValidation : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "dataValidation");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "CT_DataValidation");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DataValidation class.
         /// </summary>
@@ -4977,7 +5241,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:dataValidation");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formula1>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formula2>();
@@ -5001,9 +5265,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2011/1/ac", "list"), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formula1"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formula2"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.ExcelAc.List.ElementType, 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Formula1.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Formula2.ElementType, 0, 1)
             };
         }
 
@@ -5016,8 +5280,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.ExcelAc.List? List
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.ExcelAc.List>(new("http://schemas.microsoft.com/office/spreadsheetml/2011/1/ac", "list"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2011/1/ac", "list"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.ExcelAc.List.ElementType) as DocumentFormat.OpenXml.Office2010.ExcelAc.List;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.ExcelAc.List.ElementType);
         }
 
         /// <summary>
@@ -5029,8 +5293,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Formula1? Formula1
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formula1>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formula1"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formula1"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.Formula1.ElementType) as DocumentFormat.OpenXml.Spreadsheet.Formula1;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.Formula1.ElementType);
         }
 
         /// <summary>
@@ -5042,8 +5306,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Formula2? Formula2
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formula2>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formula2"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formula2"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.Formula2.ElementType) as DocumentFormat.OpenXml.Spreadsheet.Formula2;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.Formula2.ElementType);
         }
 
         /// <inheritdoc/>
@@ -5057,6 +5321,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </summary>
     public partial class Hyperlink : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "hyperlink");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "CT_Hyperlink");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Hyperlink class.
         /// </summary>
@@ -5120,7 +5390,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:hyperlink");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<Hyperlink>()
                 .AddAttribute("ref", a => a.Reference, aBuilder =>
@@ -5159,6 +5429,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </remarks>
     public partial class SparklineGroup : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "sparklineGroup");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "CT_SparklineGroup");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SparklineGroup class.
         /// </summary>
@@ -5363,7 +5639,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:sparklineGroup");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SeriesColor>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.NegativeColor>();
@@ -5395,16 +5671,16 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 .AddAttribute("rightToLeft", a => a.RightToLeft);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorSeries"), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorNegative"), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorAxis"), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorMarkers"), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorFirst"), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorLast"), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorHigh"), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorLow"), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(new("http://schemas.microsoft.com/office/excel/2006/main", "f"), 0, 1),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "sparklines"), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.SeriesColor.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.NegativeColor.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.AxisColor.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.MarkersColor.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office.Excel.Formula.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.Sparklines.ElementType, 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -5417,8 +5693,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.SeriesColor? SeriesColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.SeriesColor>(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorSeries"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorSeries"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.Excel.SeriesColor.ElementType) as DocumentFormat.OpenXml.Office2010.Excel.SeriesColor;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.Excel.SeriesColor.ElementType);
         }
 
         /// <summary>
@@ -5430,8 +5706,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.NegativeColor? NegativeColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.NegativeColor>(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorNegative"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorNegative"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.Excel.NegativeColor.ElementType) as DocumentFormat.OpenXml.Office2010.Excel.NegativeColor;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.Excel.NegativeColor.ElementType);
         }
 
         /// <summary>
@@ -5443,8 +5719,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.AxisColor? AxisColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.AxisColor>(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorAxis"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorAxis"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.Excel.AxisColor.ElementType) as DocumentFormat.OpenXml.Office2010.Excel.AxisColor;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.Excel.AxisColor.ElementType);
         }
 
         /// <summary>
@@ -5456,8 +5732,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.MarkersColor? MarkersColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.MarkersColor>(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorMarkers"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorMarkers"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.Excel.MarkersColor.ElementType) as DocumentFormat.OpenXml.Office2010.Excel.MarkersColor;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.Excel.MarkersColor.ElementType);
         }
 
         /// <summary>
@@ -5469,8 +5745,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor? FirstMarkerColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor>(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorFirst"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorFirst"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor.ElementType) as DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor.ElementType);
         }
 
         /// <summary>
@@ -5482,8 +5758,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor? LastMarkerColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor>(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorLast"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorLast"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor.ElementType) as DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor.ElementType);
         }
 
         /// <summary>
@@ -5495,8 +5771,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor? HighMarkerColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor>(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorHigh"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorHigh"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor.ElementType) as DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor.ElementType);
         }
 
         /// <summary>
@@ -5508,8 +5784,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor? LowMarkerColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor>(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorLow"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "colorLow"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor.ElementType) as DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor.ElementType);
         }
 
         /// <summary>
@@ -5521,8 +5797,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office.Excel.Formula? Formula
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Excel.Formula>(new("http://schemas.microsoft.com/office/excel/2006/main", "f"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/excel/2006/main", "f"));
+            get => GetElement(DocumentFormat.OpenXml.Office.Excel.Formula.ElementType) as DocumentFormat.OpenXml.Office.Excel.Formula;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.Excel.Formula.ElementType);
         }
 
         /// <summary>
@@ -5534,8 +5810,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.Sparklines? Sparklines
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Sparklines>(new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "sparklines"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "sparklines"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.Excel.Sparklines.ElementType) as DocumentFormat.OpenXml.Office2010.Excel.Sparklines;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.Excel.Sparklines.ElementType);
         }
 
         /// <inheritdoc/>
@@ -5557,6 +5833,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </remarks>
     public partial class Comments : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "comments");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "CT_Comments");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Comments class.
         /// </summary>
@@ -5591,16 +5873,16 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:comments");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Authors>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CommentList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "authors"), 1, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "commentList"), 1, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Authors.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.CommentList.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -5613,8 +5895,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Authors? Authors
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Authors>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "authors"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "authors"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.Authors.ElementType) as DocumentFormat.OpenXml.Spreadsheet.Authors;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.Authors.ElementType);
         }
 
         /// <summary>
@@ -5626,8 +5908,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CommentList? CommentList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CommentList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "commentList"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "commentList"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.CommentList.ElementType) as DocumentFormat.OpenXml.Spreadsheet.CommentList;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.CommentList.ElementType);
         }
 
         /// <summary>
@@ -5639,8 +5921,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType) as DocumentFormat.OpenXml.Spreadsheet.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -5662,6 +5944,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </remarks>
     public partial class AutoFilter : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "autoFilter");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "CT_AutoFilter");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AutoFilter class.
         /// </summary>
@@ -5706,7 +5994,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:autoFilter");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FilterColumn>();
@@ -5715,9 +6003,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 .AddAttribute("ref", a => a.Reference);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "filterColumn"), 0, 0),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sortState"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.FilterColumn.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.SortState.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -5754,6 +6042,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// </remarks>
     public partial class pivotTableDefinition : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "pivotTableDefinition");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "CT_pivotTableDefinition");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the pivotTableDefinition class.
         /// </summary>
@@ -6468,7 +6762,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xr:pivotTableDefinition");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ChartFormats>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColumnFields>();
@@ -6567,23 +6861,23 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
                 .AddAttribute("customListSort", a => a.CustomListSort);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "location"), 1, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotFields"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowFields"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowItems"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colFields"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colItems"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageFields"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dataFields"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formats"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "conditionalFormats"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "chartFormats"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotHierarchies"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotTableStyleInfo"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "filters"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowHierarchiesUsage"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colHierarchiesUsage"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Location.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.PivotFields.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.RowFields.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.RowItems.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.ColumnFields.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.ColumnItems.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.PageFields.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.DataFields.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Formats.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.ChartFormats.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.PivotFilters.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -6596,8 +6890,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Location? Location
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Location>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "location"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "location"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.Location.ElementType) as DocumentFormat.OpenXml.Spreadsheet.Location;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.Location.ElementType);
         }
 
         /// <summary>
@@ -6609,8 +6903,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotFields? PivotFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFields>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotFields"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotFields"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.PivotFields.ElementType) as DocumentFormat.OpenXml.Spreadsheet.PivotFields;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.PivotFields.ElementType);
         }
 
         /// <summary>
@@ -6622,8 +6916,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.RowFields? RowFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowFields>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowFields"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowFields"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.RowFields.ElementType) as DocumentFormat.OpenXml.Spreadsheet.RowFields;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.RowFields.ElementType);
         }
 
         /// <summary>
@@ -6635,8 +6929,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.RowItems? RowItems
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowItems>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowItems"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowItems"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.RowItems.ElementType) as DocumentFormat.OpenXml.Spreadsheet.RowItems;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.RowItems.ElementType);
         }
 
         /// <summary>
@@ -6648,8 +6942,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ColumnFields? ColumnFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnFields>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colFields"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colFields"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.ColumnFields.ElementType) as DocumentFormat.OpenXml.Spreadsheet.ColumnFields;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.ColumnFields.ElementType);
         }
 
         /// <summary>
@@ -6661,8 +6955,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ColumnItems? ColumnItems
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnItems>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colItems"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colItems"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.ColumnItems.ElementType) as DocumentFormat.OpenXml.Spreadsheet.ColumnItems;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.ColumnItems.ElementType);
         }
 
         /// <summary>
@@ -6674,8 +6968,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PageFields? PageFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageFields>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageFields"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageFields"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.PageFields.ElementType) as DocumentFormat.OpenXml.Spreadsheet.PageFields;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.PageFields.ElementType);
         }
 
         /// <summary>
@@ -6687,8 +6981,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DataFields? DataFields
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DataFields>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dataFields"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dataFields"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.DataFields.ElementType) as DocumentFormat.OpenXml.Spreadsheet.DataFields;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.DataFields.ElementType);
         }
 
         /// <summary>
@@ -6700,8 +6994,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Formats? Formats
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formats>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formats"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "formats"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.Formats.ElementType) as DocumentFormat.OpenXml.Spreadsheet.Formats;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.Formats.ElementType);
         }
 
         /// <summary>
@@ -6713,8 +7007,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats? ConditionalFormats
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "conditionalFormats"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "conditionalFormats"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats.ElementType) as DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats.ElementType);
         }
 
         /// <summary>
@@ -6726,8 +7020,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ChartFormats? ChartFormats
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartFormats>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "chartFormats"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "chartFormats"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.ChartFormats.ElementType) as DocumentFormat.OpenXml.Spreadsheet.ChartFormats;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.ChartFormats.ElementType);
         }
 
         /// <summary>
@@ -6739,8 +7033,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies? PivotHierarchies
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotHierarchies"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotHierarchies"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies.ElementType) as DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies.ElementType);
         }
 
         /// <summary>
@@ -6752,8 +7046,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle? PivotTableStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotTableStyleInfo"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotTableStyleInfo"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle.ElementType) as DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle.ElementType);
         }
 
         /// <summary>
@@ -6765,8 +7059,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotFilters? PivotFilters
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFilters>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "filters"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "filters"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.PivotFilters.ElementType) as DocumentFormat.OpenXml.Spreadsheet.PivotFilters;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.PivotFilters.ElementType);
         }
 
         /// <summary>
@@ -6778,8 +7072,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage? RowHierarchiesUsage
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowHierarchiesUsage"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rowHierarchiesUsage"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage.ElementType) as DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage.ElementType);
         }
 
         /// <summary>
@@ -6791,8 +7085,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage? ColumnHierarchiesUsage
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colHierarchiesUsage"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "colHierarchiesUsage"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage.ElementType) as DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage.ElementType);
         }
 
         /// <summary>
@@ -6804,8 +7098,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList? PivotTableDefinitionExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList>(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "extLst"));
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList.ElementType) as DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList.ElementType);
         }
 
         /// <inheritdoc/>

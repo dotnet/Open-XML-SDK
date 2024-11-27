@@ -31,6 +31,12 @@ namespace DocumentFormat.OpenXml.Office.Y2022.RichValueRel
     /// </remarks>
     public partial class RichValueRels : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2022/richvaluerel", "richValueRels");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2022/richvaluerel", "CT_RichValueRels");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RichValueRels class.
         /// </summary>
@@ -65,14 +71,14 @@ namespace DocumentFormat.OpenXml.Office.Y2022.RichValueRel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlrvrel:richValueRels");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.RichValueRel.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.RichValueRel.RichValueRelRelationship>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/richvaluerel", "rel"), 0, 0, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2022/richvaluerel", "extLst"), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(DocumentFormat.OpenXml.Office.Y2022.RichValueRel.RichValueRelRelationship.ElementType, 0, 0, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(DocumentFormat.OpenXml.Office.Y2022.RichValueRel.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -87,6 +93,12 @@ namespace DocumentFormat.OpenXml.Office.Y2022.RichValueRel
     /// </summary>
     public partial class RichValueRelRelationship : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2022/richvaluerel", "rel");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2022/richvaluerel", "CT_RichValueRelRelationship");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RichValueRelRelationship class.
         /// </summary>
@@ -110,7 +122,7 @@ namespace DocumentFormat.OpenXml.Office.Y2022.RichValueRel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlrvrel:rel");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddElement<RichValueRelRelationship>()
                 .AddAttribute("r:id", a => a.Id, aBuilder =>
@@ -136,6 +148,12 @@ namespace DocumentFormat.OpenXml.Office.Y2022.RichValueRel
     /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2022/richvaluerel", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "CT_ExtensionList");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
         /// </summary>
@@ -170,7 +188,7 @@ namespace DocumentFormat.OpenXml.Office.Y2022.RichValueRel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlrvrel:extLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -179,7 +197,7 @@ namespace DocumentFormat.OpenXml.Office.Y2022.RichValueRel
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
+                        new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Extension.ElementType, 0, 0)
                     }
                 }
             };

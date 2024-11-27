@@ -6,22 +6,22 @@ using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Framework;
 
-[DebuggerDisplay("[{QName}] - {Path}")]
+[DebuggerDisplay("[{Type}] - {Path}")]
 internal readonly record struct LookupItem
 {
-    public LookupItem(OpenXmlQualifiedName qname, ParticlePath path)
+    public LookupItem(OpenXmlType type, ParticlePath path)
     {
-        QName = qname;
+        Type = type;
         Path = path;
     }
 
-    public OpenXmlQualifiedName QName { get; }
+    public OpenXmlType Type { get; }
 
     public ParticlePath Path { get; }
 
-    public void Deconstruct(out OpenXmlQualifiedName qname, out ParticlePath path)
+    public void Deconstruct(out OpenXmlType type, out ParticlePath path)
     {
-        qname = QName;
+        type = Type;
         path = Path;
     }
 }

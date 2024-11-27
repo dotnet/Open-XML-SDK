@@ -13,17 +13,17 @@ namespace DocumentFormat.OpenXml.Framework.Schema
     /// </summary>
     internal readonly struct ParticleCollection : IEnumerable<OpenXmlElement>
     {
-        private readonly OpenXmlQualifiedName _qname;
+        private readonly OpenXmlType _type;
         private readonly OpenXmlCompositeElement _element;
         private readonly CompiledParticle _compiled;
         private readonly ParticlePath? _elementPath;
 
-        internal ParticleCollection(in OpenXmlQualifiedName qname, CompiledParticle compiled, OpenXmlCompositeElement element)
+        internal ParticleCollection(in OpenXmlType type, CompiledParticle compiled, OpenXmlCompositeElement element)
         {
-            _qname = qname;
+            _type = type;
             _element = element;
             _compiled = compiled;
-            _elementPath = compiled.Find(qname);
+            _elementPath = compiled.Find(type);
         }
 
         /// <summary>
@@ -148,7 +148,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
             return null;
         }
 
-        public Enumerator GetEnumerator() => new(_element, _qname);
+        public Enumerator GetEnumerator() => new(_element, _type);
 
         IEnumerator<OpenXmlElement> IEnumerable<OpenXmlElement>.GetEnumerator() => GetEnumerator();
 
@@ -156,12 +156,12 @@ namespace DocumentFormat.OpenXml.Framework.Schema
 
         public struct Enumerator : IEnumerator<OpenXmlElement>
         {
-            private readonly OpenXmlQualifiedName _qname;
+            private readonly OpenXmlType _type;
             private OpenXmlElement? _child;
 
-            internal Enumerator(OpenXmlElement element, in OpenXmlQualifiedName qname)
+            internal Enumerator(OpenXmlElement element, in OpenXmlType type)
             {
-                _qname = qname;
+                _type = type;
                 _child = element.FirstChild;
                 Current = null!;
             }
@@ -180,7 +180,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
 
                 while (_child is not null)
                 {
-                    if (_child.QName == _qname)
+                    if (_child.Metadata.Type == _type)
                     {
                         Current = _child;
                         _child = _child.NextSibling();

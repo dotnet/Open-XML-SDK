@@ -23,6 +23,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.PivotDefaultLayout
     /// </summary>
     public partial class PivotTableDefinition16 : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2016/pivotdefaultlayout", "pivotTableDefinition16");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2016/pivotdefaultlayout", "CT_PivotTableDefinition16");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PivotTableDefinition16 class.
         /// </summary>
@@ -63,7 +69,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.PivotDefaultLayout
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xpdl:pivotTableDefinition16");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<PivotTableDefinition16>()
                 .AddAttribute("EnabledSubtotalsDefault", a => a.EnabledSubtotalsDefault)

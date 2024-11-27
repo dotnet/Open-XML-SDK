@@ -30,6 +30,12 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
     /// </remarks>
     public partial class NumberDiagramInfoList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2016/11/diagram", "autoBuNodeInfoLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2016/11/diagram", "CT_NumberDiagramInfoList");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NumberDiagramInfoList class.
         /// </summary>
@@ -64,12 +70,12 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("dgm1611:autoBuNodeInfoLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfo>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2016/11/diagram", "autoBuNodeInfo"), 0, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfo.ElementType, 0, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -93,6 +99,12 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
     /// </remarks>
     public partial class DiagramAutoBullet : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2016/11/diagram", "buPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2016/11/diagram", "CT_DiagramAutoBullet");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DiagramAutoBullet class.
         /// </summary>
@@ -147,7 +159,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("dgm1611:buPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.AutoNumberedBullet>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.PictureBullet>();
@@ -160,10 +172,10 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "buNone"), 1, 1),
-                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "buAutoNum"), 1, 1),
-                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "buChar"), 1, 1),
-                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "buBlip"), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.NoBullet.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.AutoNumberedBullet.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.CharacterBullet.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.PictureBullet.ElementType, 1, 1)
                 }
             };
         }
@@ -177,8 +189,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NoBullet? NoBullet
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.NoBullet>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "buNone"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "buNone"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.NoBullet.ElementType) as DocumentFormat.OpenXml.Drawing.NoBullet;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.NoBullet.ElementType);
         }
 
         /// <summary>
@@ -190,8 +202,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.AutoNumberedBullet? AutoNumberedBullet
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.AutoNumberedBullet>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "buAutoNum"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "buAutoNum"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.AutoNumberedBullet.ElementType) as DocumentFormat.OpenXml.Drawing.AutoNumberedBullet;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.AutoNumberedBullet.ElementType);
         }
 
         /// <summary>
@@ -203,8 +215,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.CharacterBullet? CharacterBullet
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.CharacterBullet>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "buChar"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "buChar"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.CharacterBullet.ElementType) as DocumentFormat.OpenXml.Drawing.CharacterBullet;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.CharacterBullet.ElementType);
         }
 
         /// <summary>
@@ -216,8 +228,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PictureBullet? PictureBullet
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.PictureBullet>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "buBlip"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "buBlip"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.PictureBullet.ElementType) as DocumentFormat.OpenXml.Drawing.PictureBullet;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.PictureBullet.ElementType);
         }
 
         /// <inheritdoc/>
@@ -237,6 +249,12 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
     /// </remarks>
     public partial class NumberDiagramInfo : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2016/11/diagram", "autoBuNodeInfo");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2016/11/diagram", "CT_NumberDiagramInfo");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NumberDiagramInfo class.
         /// </summary>
@@ -291,7 +309,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("dgm1611:autoBuNodeInfo");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet>();
             builder.AddElement<NumberDiagramInfo>()
@@ -306,7 +324,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2016/11/diagram", "buPr"), 1, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet.ElementType, 1, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -319,8 +337,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
         /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet? DiagramAutoBullet
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet>(new("http://schemas.microsoft.com/office/drawing/2016/11/diagram", "buPr"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2016/11/diagram", "buPr"));
+            get => GetElement(DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet.ElementType) as DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet.ElementType);
         }
 
         /// <inheritdoc/>

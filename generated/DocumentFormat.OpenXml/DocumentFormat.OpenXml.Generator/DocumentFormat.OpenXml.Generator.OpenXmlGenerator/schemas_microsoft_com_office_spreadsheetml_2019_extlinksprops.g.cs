@@ -23,6 +23,12 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ExternalLinks
     /// </summary>
     public partial class ExternalLinksPr : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2019/extlinksprops", "externalLinksPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2019/extlinksprops", "CT_ExternalLinksPr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ExternalLinksPr class.
         /// </summary>
@@ -43,7 +49,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ExternalLinks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xxlnp:externalLinksPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<ExternalLinksPr>()
                 .AddAttribute("autoRefresh", a => a.AutoRefresh);

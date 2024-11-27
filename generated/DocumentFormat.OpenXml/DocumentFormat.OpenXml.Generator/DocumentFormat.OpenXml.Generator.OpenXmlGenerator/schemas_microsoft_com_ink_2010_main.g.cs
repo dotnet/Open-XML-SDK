@@ -31,6 +31,12 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     /// </remarks>
     public partial class ContextNode : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/ink/2010/main", "context");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/ink/2010/main", "CT_CtxNode");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ContextNode class.
         /// </summary>
@@ -275,7 +281,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("msink:context");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Ink.SourceLink>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Ink.DestinationLink>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Ink.ContextNodeProperty>();
@@ -364,9 +370,9 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/ink/2010/main", "property"), 0, 0),
-                new ElementParticle(new("http://schemas.microsoft.com/ink/2010/main", "sourceLink"), 0, 0),
-                new ElementParticle(new("http://schemas.microsoft.com/ink/2010/main", "destinationLink"), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Ink.ContextNodeProperty.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Ink.SourceLink.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Ink.DestinationLink.ElementType, 0, 0)
             };
         }
 
@@ -381,6 +387,12 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     /// </summary>
     public partial class ContextNodeProperty : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/ink/2010/main", "property");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/ink/2010/main", "CT_Property");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ContextNodeProperty class.
         /// </summary>
@@ -414,7 +426,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("msink:property");
+            builder.SetSchema(ElementType);
             builder.AddElement<ContextNodeProperty>()
                 .AddAttribute("type", a => a.Type, aBuilder =>
                 {
@@ -433,6 +445,12 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     /// </summary>
     public partial class SourceLink : ContextLinkType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/ink/2010/main", "sourceLink");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/ink/2010/main", "CT_CtxLink");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SourceLink class.
         /// </summary>
@@ -443,7 +461,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("msink:sourceLink");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -457,6 +475,12 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     /// </summary>
     public partial class DestinationLink : ContextLinkType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/ink/2010/main", "destinationLink");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/ink/2010/main", "CT_CtxLink");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DestinationLink class.
         /// </summary>
@@ -467,7 +491,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("msink:destinationLink");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -481,6 +505,12 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     /// </summary>
     public abstract partial class ContextLinkType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/ink/2010/main", "CT_CtxLink");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ContextLinkType class.
         /// </summary>

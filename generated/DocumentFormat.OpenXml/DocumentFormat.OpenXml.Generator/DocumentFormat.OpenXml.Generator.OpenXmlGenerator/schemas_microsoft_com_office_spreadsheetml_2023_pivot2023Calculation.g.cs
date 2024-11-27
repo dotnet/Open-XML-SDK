@@ -23,6 +23,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation
     /// </summary>
     public partial class AggregationInfo : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/pivot2023Calculation", "aggregationInfo");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/pivot2023Calculation", "CT_AggregationInfo");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AggregationInfo class.
         /// </summary>
@@ -53,7 +59,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlpcalc:aggregationInfo");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddElement<AggregationInfo>()
                 .AddAttribute("aggregationType", a => a.AggregationType, aBuilder =>
@@ -77,6 +83,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation
     /// </summary>
     public partial class FeatureSupport : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/pivot2023Calculation", "featureSupportInfo");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/pivot2023Calculation", "CT_FeatureSupport");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FeatureSupport class.
         /// </summary>
@@ -97,7 +109,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlpcalc:featureSupportInfo");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddElement<FeatureSupport>()
                 .AddAttribute("featureName", a => a.FeatureName, aBuilder =>

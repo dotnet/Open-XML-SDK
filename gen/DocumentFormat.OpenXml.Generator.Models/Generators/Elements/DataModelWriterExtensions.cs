@@ -5,7 +5,9 @@ using DocumentFormat.OpenXml.Generator.Editor;
 using DocumentFormat.OpenXml.Generator.Models;
 using DocumentFormat.OpenXml.Generator.Schematron;
 using System.CodeDom.Compiler;
+using System.Runtime.CompilerServices;
 using System.Text;
+using System.Xml.Linq;
 
 namespace DocumentFormat.OpenXml.Generator.Generators.Elements;
 
@@ -63,6 +65,22 @@ public static class DataModelWriterExtensions
         return type.BaseClass;
     }
 
+    private static void WriteTypeDetails(this IndentedTextWriter writer, OpenXmlGeneratorServices services, SchemaType element)
+    {
+        // Since some types will not be shadowing an existing static type, it's easier to just disable the warning
+        writer.WriteLine("#pragma warning disable CS0109");
+        writer.Write("internal static readonly new OpenXmlQualifiedName ElementQName = ");
+        writer.WriteQName(services, element.Name.QName);
+        writer.WriteLine(";");
+
+        writer.Write("internal static readonly new OpenXmlQualifiedName ElementTypeName = ");
+        writer.WriteQName(services, element.Name.Type);
+        writer.WriteLine(";");
+
+        writer.WriteLine("internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);");
+        writer.WriteLine("#pragma warning restore CS0109");
+    }
+
     private static void WriteType(this IndentedTextWriter writer, OpenXmlGeneratorServices services, SchemaType element)
     {
         writer.WriteDocumentationComment(BuildTypeComments(services, element));
@@ -85,6 +103,10 @@ public static class DataModelWriterExtensions
             var delimiter = writer.TrackDelimiter(separator: string.Empty, newLineCount: 2);
 
             delimiter.AddDelimiter();
+
+            writer.WriteTypeDetails(services, element);
+            writer.WriteLineNoTabs();
+
             writer.WriteDocumentationComment($"Initializes a new instance of the {className} class.");
             writer.Write(element.GetAccessibility());
             writer.Write(" ");
@@ -187,9 +209,7 @@ public static class DataModelWriterExtensions
 
             if (!containingType.Name.QName.IsEmpty)
             {
-                writer.Write("builder.SetSchema(");
-                writer.WriteItem(containingType.Name.QName);
-                writer.WriteLine(");");
+                writer.WriteLine("builder.SetSchema(ElementType);");
             }
 
             if (!containingType.IsAbstract && containingType.Version > OfficeVersion.Office2007)
@@ -327,20 +347,34 @@ public static class DataModelWriterExtensions
 
         using (writer.AddBlock(new() { IncludeTrailingNewline = false }))
         {
-            writer.Write("get => GetElement<");
+            writer.Write("get => GetElement(");
             writer.Write(className);
-            writer.Write(">(new(");
-            writer.WriteString(services.GetNamespaceInfo(element.Name.QName.Prefix).Uri);
-            writer.Write(", ");
-            writer.WriteString(element.Name.QName.Name);
-            writer.WriteLine("));");
+            writer.Write(".ElementType) as ");
+            writer.Write(className);
+            writer.WriteLine(";");
 
-            writer.Write("set => SetElement(value, new(");
-            writer.WriteString(services.GetNamespaceInfo(element.Name.QName.Prefix).Uri);
-            writer.Write(", ");
-            writer.WriteString(element.Name.QName.Name);
-            writer.WriteLine("));");
+            writer.Write("set => SetElement(value, ");
+            writer.Write(className);
+            writer.WriteLine(".ElementType);");
         }
+    }
+
+    private static void WriteQName(this IndentedTextWriter writer, OpenXmlGeneratorServices services, QName qname)
+    {
+        writer.Write("new(");
+        writer.WriteString(services.GetNamespaceInfo(qname.Prefix).Uri);
+        writer.Write(", ");
+        writer.WriteString(qname.Name);
+        writer.Write(")");
+    }
+
+    internal static void WriteTypedName(this IndentedTextWriter writer, OpenXmlGeneratorServices services, TypedQName typed)
+    {
+        writer.Write("new(");
+        writer.WriteQName(services, typed.Type);
+        writer.Write(", ");
+        writer.WriteQName(services, typed.QName);
+        writer.Write(")");
     }
 
     private static void WriteAttributeProperty(this IndentedTextWriter writer, OpenXmlGeneratorServices services, SchemaAttribute attribute)

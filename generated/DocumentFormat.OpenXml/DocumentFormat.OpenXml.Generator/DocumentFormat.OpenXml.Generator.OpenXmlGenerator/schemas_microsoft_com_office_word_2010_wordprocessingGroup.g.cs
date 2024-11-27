@@ -41,6 +41,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     /// </remarks>
     public partial class WordprocessingGroup : WordprocessingGroupType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "wgp");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "CT_WordprocessingGroup");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the WordprocessingGroup class.
         /// </summary>
@@ -75,22 +81,22 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("wpg:wgp");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "cNvPr"), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "cNvGrpSpPr"), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "grpSpPr"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGroupDrawingShapeProperties.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GroupShapeProperties.ElementType, 1, 1, version: FileFormatVersions.Office2010),
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
-                    new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordprocessingShape", "wsp"), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "grpSp"), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "graphicFrame"), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/picture", "pic"), 1, 1),
-                    new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "contentPart"), 1, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GroupShape.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GraphicFrame.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Pictures.Picture.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.ContentPart.ElementType, 1, 1, version: FileFormatVersions.Office2010)
                 },
-                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "extLst"), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -119,6 +125,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     /// </remarks>
     public partial class GroupShape : WordprocessingGroupType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "grpSp");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "CT_WordprocessingGroup");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the GroupShape class.
         /// </summary>
@@ -153,22 +165,22 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("wpg:grpSp");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "cNvPr"), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "cNvGrpSpPr"), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "grpSpPr"), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGroupDrawingShapeProperties.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GroupShapeProperties.ElementType, 1, 1, version: FileFormatVersions.Office2010),
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
-                    new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordprocessingShape", "wsp"), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "grpSp"), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "graphicFrame"), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/picture", "pic"), 1, 1),
-                    new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "contentPart"), 1, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GroupShape.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GraphicFrame.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Pictures.Picture.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.ContentPart.ElementType, 1, 1, version: FileFormatVersions.Office2010)
                 },
-                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "extLst"), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -197,6 +209,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     /// </remarks>
     public abstract partial class WordprocessingGroupType : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "CT_WordprocessingGroup");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the WordprocessingGroupType class.
         /// </summary>
@@ -251,8 +269,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties>(new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "cNvPr"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "cNvPr"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties.ElementType) as DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties.ElementType);
         }
 
         /// <summary>
@@ -264,8 +282,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGroupDrawingShapeProperties? NonVisualGroupDrawingShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGroupDrawingShapeProperties>(new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "cNvGrpSpPr"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "cNvGrpSpPr"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGroupDrawingShapeProperties.ElementType) as DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGroupDrawingShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGroupDrawingShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -277,8 +295,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GroupShapeProperties? GroupShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GroupShapeProperties>(new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "grpSpPr"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "grpSpPr"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GroupShapeProperties.ElementType) as DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GroupShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.GroupShapeProperties.ElementType);
         }
     }
 
@@ -297,6 +315,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     /// </remarks>
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "cNvPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_NonVisualDrawingProps");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NonVisualDrawingProperties class.
         /// </summary>
@@ -381,7 +405,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("wpg:cNvPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
@@ -400,9 +424,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
                 .AddAttribute("title", a => a.Title);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkClick"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkHover"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -415,8 +439,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick? HyperlinkOnClick
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkClick"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkClick"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick.ElementType) as DocumentFormat.OpenXml.Drawing.HyperlinkOnClick;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.HyperlinkOnClick.ElementType);
         }
 
         /// <summary>
@@ -428,8 +452,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover? HyperlinkOnHover
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkHover"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "hlinkHover"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover.ElementType) as DocumentFormat.OpenXml.Drawing.HyperlinkOnHover;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.HyperlinkOnHover.ElementType);
         }
 
         /// <summary>
@@ -441,8 +465,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -463,6 +487,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     /// </remarks>
     public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "cNvFrPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_NonVisualGraphicFrameProperties");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NonVisualGraphicFrameProperties class.
         /// </summary>
@@ -497,14 +527,14 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("wpg:cNvFrPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "graphicFrameLocks"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -517,8 +547,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.GraphicFrameLocks? GraphicFrameLocks
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "graphicFrameLocks"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "graphicFrameLocks"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks.ElementType) as DocumentFormat.OpenXml.Drawing.GraphicFrameLocks;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.GraphicFrameLocks.ElementType);
         }
 
         /// <summary>
@@ -530,8 +560,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -552,6 +582,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     /// </remarks>
     public partial class Transform2D : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "xfrm");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Transform2D");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Transform2D class.
         /// </summary>
@@ -616,7 +652,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("wpg:xfrm");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
@@ -626,8 +662,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
                 .AddAttribute("flipV", a => a.VerticalFlip);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "off"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Offset.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Extents.ElementType, 0, 1)
             };
         }
 
@@ -640,8 +676,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Offset? Offset
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "off"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "off"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Offset.ElementType) as DocumentFormat.OpenXml.Drawing.Offset;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Offset.ElementType);
         }
 
         /// <summary>
@@ -653,8 +689,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Extents? Extents
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Extents.ElementType) as DocumentFormat.OpenXml.Drawing.Extents;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Extents.ElementType);
         }
 
         /// <inheritdoc/>
@@ -674,6 +710,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     /// </remarks>
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_OfficeArtExtensionList");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OfficeArtExtensionList class.
         /// </summary>
@@ -708,7 +750,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("wpg:extLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -717,7 +759,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"), 0, 0)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Extension.ElementType, 0, 0)
                     }
                 }
             };
@@ -741,6 +783,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     /// </remarks>
     public partial class NonVisualGroupDrawingShapeProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "cNvGrpSpPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_NonVisualGroupDrawingShapeProps");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NonVisualGroupDrawingShapeProperties class.
         /// </summary>
@@ -775,14 +823,14 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("wpg:cNvGrpSpPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "grpSpLocks"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.GroupShapeLocks.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -795,8 +843,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.GroupShapeLocks? GroupShapeLocks
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "grpSpLocks"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "grpSpLocks"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.GroupShapeLocks.ElementType) as DocumentFormat.OpenXml.Drawing.GroupShapeLocks;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.GroupShapeLocks.ElementType);
         }
 
         /// <summary>
@@ -808,8 +856,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList? NonVisualGroupDrawingShapePropsExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -839,6 +887,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     /// </remarks>
     public partial class GroupShapeProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "grpSpPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GroupShapeProperties");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the GroupShapeProperties class.
         /// </summary>
@@ -883,7 +937,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("wpg:grpSpPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
@@ -903,29 +957,29 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "xfrm"), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.TransformGroup.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "noFill"), 1, 1),
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "solidFill"), 1, 1),
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "gradFill"), 1, 1),
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "blipFill"), 1, 1),
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "pattFill"), 1, 1),
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "grpFill"), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.NoFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.GradientFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.BlipFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.PatternFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.GroupFill.ElementType, 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectLst"), 1, 1),
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectDag"), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.EffectList.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, 1, 1)
                     }
                 },
-                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "scene3d"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Scene3DType.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -938,8 +992,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.TransformGroup? TransformGroup
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.TransformGroup>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "xfrm"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "xfrm"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.TransformGroup.ElementType) as DocumentFormat.OpenXml.Drawing.TransformGroup;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.TransformGroup.ElementType);
         }
 
         /// <inheritdoc/>
@@ -963,6 +1017,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
     /// </remarks>
     public partial class GraphicFrame : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "graphicFrame");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "CT_GraphicFrame");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the GraphicFrame class.
         /// </summary>
@@ -997,7 +1057,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("wpg:graphicFrame");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Graphic>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties>();
@@ -1006,11 +1066,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "cNvPr"), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "cNvFrPr"), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "xfrm"), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "graphic"), 1, 1),
-                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "extLst"), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Graphic.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -1023,8 +1083,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties>(new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "cNvPr"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "cNvPr"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties.ElementType) as DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties.ElementType);
         }
 
         /// <summary>
@@ -1036,8 +1096,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties? NonVisualGraphicFrameProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties>(new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "cNvFrPr"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "cNvFrPr"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties.ElementType) as DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties.ElementType);
         }
 
         /// <summary>
@@ -1049,8 +1109,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D? Transform2D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D>(new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "xfrm"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "xfrm"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D.ElementType) as DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D.ElementType);
         }
 
         /// <summary>
@@ -1062,8 +1122,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Graphic? Graphic
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "graphic"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "graphic"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Graphic.ElementType) as DocumentFormat.OpenXml.Drawing.Graphic;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Graphic.ElementType);
         }
 
         /// <summary>
@@ -1075,8 +1135,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList>(new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "extLst"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/word/2010/wordprocessingGroup", "extLst"));
+            get => GetElement(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList.ElementType) as DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList.ElementType);
         }
 
         /// <inheritdoc/>

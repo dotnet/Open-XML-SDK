@@ -30,6 +30,12 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
     /// </remarks>
     public partial class AnimationProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2018/animation", "animPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2018/animation", "CT_AnimationProperties");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AnimationProperties class.
         /// </summary>
@@ -134,7 +140,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("aanim:animPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList>();
             builder.AddElement<AnimationProperties>()
@@ -157,7 +163,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
                 .AddAttribute("end", a => a.End);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2018/animation", "extLst"), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -170,8 +176,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
         /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList>(new("http://schemas.microsoft.com/office/drawing/2018/animation", "extLst"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2018/animation", "extLst"));
+            get => GetElement(DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList.ElementType) as DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -191,6 +197,12 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
     /// </remarks>
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2018/animation", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_OfficeArtExtensionList");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OfficeArtExtensionList class.
         /// </summary>
@@ -225,7 +237,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("aanim:extLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -234,7 +246,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"), 0, 0)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Extension.ElementType, 0, 0)
                     }
                 }
             };

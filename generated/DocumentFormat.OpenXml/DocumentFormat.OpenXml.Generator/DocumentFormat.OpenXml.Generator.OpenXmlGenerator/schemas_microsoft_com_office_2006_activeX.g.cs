@@ -29,6 +29,12 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
     /// </remarks>
     public partial class ActiveXControlData : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/activeX", "ocx");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/activeX", "CT_Ocx");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ActiveXControlData class.
         /// </summary>
@@ -115,7 +121,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("ax:ocx");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty>();
             builder.AddElement<ActiveXControlData>()
                 .AddAttribute("ax:classid", a => a.ActiveXControlClassId, aBuilder =>
@@ -130,7 +136,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/2006/activeX", "ocxPr"), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty.ElementType, 0, 0)
             };
         }
 
@@ -152,6 +158,12 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
     /// </remarks>
     public partial class ActiveXObjectProperty : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/activeX", "ocxPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/activeX", "CT_OcxPr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ActiveXObjectProperty class.
         /// </summary>
@@ -212,7 +224,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("ax:ocxPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.ActiveX.SharedComFont>();
             builder.AddChild<DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture>();
             builder.AddElement<ActiveXObjectProperty>()
@@ -225,8 +237,8 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/activeX", "font"), 0, 1),
-                    new ElementParticle(new("http://schemas.microsoft.com/office/2006/activeX", "picture"), 0, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Office.ActiveX.SharedComFont.ElementType, 0, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture.ElementType, 0, 1)
                 }
             };
         }
@@ -240,8 +252,8 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// </remarks>
         public DocumentFormat.OpenXml.Office.ActiveX.SharedComFont? SharedComFont
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.ActiveX.SharedComFont>(new("http://schemas.microsoft.com/office/2006/activeX", "font"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/2006/activeX", "font"));
+            get => GetElement(DocumentFormat.OpenXml.Office.ActiveX.SharedComFont.ElementType) as DocumentFormat.OpenXml.Office.ActiveX.SharedComFont;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.ActiveX.SharedComFont.ElementType);
         }
 
         /// <summary>
@@ -253,8 +265,8 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// </remarks>
         public DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture? SharedComPicture
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture>(new("http://schemas.microsoft.com/office/2006/activeX", "picture"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/2006/activeX", "picture"));
+            get => GetElement(DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture.ElementType) as DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture.ElementType);
         }
 
         /// <inheritdoc/>
@@ -274,6 +286,12 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
     /// </remarks>
     public partial class SharedComFont : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/activeX", "font");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/activeX", "CT_Font");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SharedComFont class.
         /// </summary>
@@ -334,14 +352,14 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("ax:font");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty>();
             builder.AddElement<SharedComFont>()
                 .AddAttribute("ax:persistence", a => a.Persistence)
                 .AddAttribute("r:id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/2006/activeX", "ocxPr"), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty.ElementType, 0, 0)
             };
         }
 
@@ -356,6 +374,12 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
     /// </summary>
     public partial class SharedComPicture : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/activeX", "picture");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/activeX", "CT_Picture");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SharedComPicture class.
         /// </summary>
@@ -379,7 +403,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("ax:picture");
+            builder.SetSchema(ElementType);
             builder.AddElement<SharedComPicture>()
                 .AddAttribute("r:id", a => a.Id);
         }

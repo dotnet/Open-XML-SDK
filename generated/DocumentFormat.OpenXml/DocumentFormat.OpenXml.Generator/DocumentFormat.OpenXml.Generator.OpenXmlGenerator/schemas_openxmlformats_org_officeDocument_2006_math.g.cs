@@ -24,6 +24,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class Script : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "scr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_Script");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Script class.
         /// </summary>
@@ -47,7 +53,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:scr");
+            builder.SetSchema(ElementType);
             builder.AddElement<Script>()
                 .AddAttribute("m:val", a => a.Val, aBuilder =>
                 {
@@ -66,6 +72,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class Style : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sty");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_Style");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Style class.
         /// </summary>
@@ -89,7 +101,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:sty");
+            builder.SetSchema(ElementType);
             builder.AddElement<Style>()
                 .AddAttribute("m:val", a => a.Val, aBuilder =>
                 {
@@ -148,6 +160,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class Run : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "r");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_R");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Run class.
         /// </summary>
@@ -182,7 +200,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:r");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.RunProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Math.Text>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Break>();
@@ -220,12 +238,12 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedFieldCode>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rPr"), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.RunProperties.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "rPr"), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.RunProperties.ElementType, 0, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
@@ -234,41 +252,41 @@ namespace DocumentFormat.OpenXml.Math
                     {
                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "br"), 1, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "t"), 1, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "delText"), 1, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "instrText"), 1, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "delInstrText"), 1, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "noBreakHyphen"), 1, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "softHyphen"), 0, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "dayShort"), 0, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "monthShort"), 0, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "yearShort"), 0, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "dayLong"), 0, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "monthLong"), 0, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "yearLong"), 0, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "annotationRef"), 0, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "footnoteRef"), 0, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "endnoteRef"), 0, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "separator"), 0, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "continuationSeparator"), 0, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "sym"), 0, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "pgNum"), 0, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "cr"), 0, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "tab"), 0, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "object"), 1, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "pict"), 1, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "fldChar"), 1, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "ruby"), 1, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "footnoteReference"), 1, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "endnoteReference"), 1, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "commentReference"), 1, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "drawing"), 1, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "ptab"), 0, 1),
-                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "lastRenderedPageBreak"), 0, 1)
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.Break.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.Text.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.DeletedText.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.FieldCode.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.DeletedFieldCode.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.NoBreakHyphen.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.SoftHyphen.ElementType, 0, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.DayShort.ElementType, 0, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MonthShort.ElementType, 0, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.YearShort.ElementType, 0, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.DayLong.ElementType, 0, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MonthLong.ElementType, 0, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.YearLong.ElementType, 0, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.AnnotationReferenceMark.ElementType, 0, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.FootnoteReferenceMark.ElementType, 0, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.EndnoteReferenceMark.ElementType, 0, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.SeparatorMark.ElementType, 0, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.ContinuationSeparatorMark.ElementType, 0, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.SymbolChar.ElementType, 0, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.PageNumber.ElementType, 0, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CarriageReturn.ElementType, 0, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.TabChar.ElementType, 0, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.EmbeddedObject.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.Picture.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.FieldChar.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.Ruby.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.FootnoteReference.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.EndnoteReference.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CommentReference.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.Drawing.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.PositionalTab.ElementType, 0, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.LastRenderedPageBreak.ElementType, 0, 1)
                         }
                     },
-                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "t"), 0, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Math.Text.ElementType, 0, 1)
                 }
             };
         }
@@ -282,8 +300,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.RunProperties? MathRunProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.RunProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.RunProperties.ElementType) as DocumentFormat.OpenXml.Math.RunProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.RunProperties.ElementType);
         }
 
         /// <summary>
@@ -295,8 +313,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RunProperties? RunProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunProperties>(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "rPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "rPr"));
+            get => GetElement(DocumentFormat.OpenXml.Wordprocessing.RunProperties.ElementType) as DocumentFormat.OpenXml.Wordprocessing.RunProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Wordprocessing.RunProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -317,6 +335,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class Accent : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "acc");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_Acc");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Accent class.
         /// </summary>
@@ -351,13 +375,13 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:acc");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.AccentProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "accPr"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.AccentProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Base.ElementType, 1, 1)
             };
         }
 
@@ -370,8 +394,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.AccentProperties? AccentProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.AccentProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "accPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "accPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.AccentProperties.ElementType) as DocumentFormat.OpenXml.Math.AccentProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.AccentProperties.ElementType);
         }
 
         /// <summary>
@@ -383,8 +407,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Base>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Base.ElementType) as DocumentFormat.OpenXml.Math.Base;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Base.ElementType);
         }
 
         /// <inheritdoc/>
@@ -405,6 +429,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class Bar : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "bar");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_Bar");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Bar class.
         /// </summary>
@@ -439,13 +469,13 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:bar");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.BarProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "barPr"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.BarProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Base.ElementType, 1, 1)
             };
         }
 
@@ -458,8 +488,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.BarProperties? BarProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.BarProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "barPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "barPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.BarProperties.ElementType) as DocumentFormat.OpenXml.Math.BarProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.BarProperties.ElementType);
         }
 
         /// <summary>
@@ -471,8 +501,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Base>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Base.ElementType) as DocumentFormat.OpenXml.Math.Base;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Base.ElementType);
         }
 
         /// <inheritdoc/>
@@ -493,6 +523,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class Box : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "box");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_Box");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Box class.
         /// </summary>
@@ -527,13 +563,13 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:box");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.BoxProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "boxPr"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.BoxProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Base.ElementType, 1, 1)
             };
         }
 
@@ -546,8 +582,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.BoxProperties? BoxProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.BoxProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "boxPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "boxPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.BoxProperties.ElementType) as DocumentFormat.OpenXml.Math.BoxProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.BoxProperties.ElementType);
         }
 
         /// <summary>
@@ -559,8 +595,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Base>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Base.ElementType) as DocumentFormat.OpenXml.Math.Base;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Base.ElementType);
         }
 
         /// <inheritdoc/>
@@ -581,6 +617,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class BorderBox : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "borderBox");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_BorderBox");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BorderBox class.
         /// </summary>
@@ -615,13 +657,13 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:borderBox");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.BorderBoxProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "borderBoxPr"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.BorderBoxProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Base.ElementType, 1, 1)
             };
         }
 
@@ -634,8 +676,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.BorderBoxProperties? BorderBoxProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.BorderBoxProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "borderBoxPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "borderBoxPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.BorderBoxProperties.ElementType) as DocumentFormat.OpenXml.Math.BorderBoxProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.BorderBoxProperties.ElementType);
         }
 
         /// <summary>
@@ -647,8 +689,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Base>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Base.ElementType) as DocumentFormat.OpenXml.Math.Base;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Base.ElementType);
         }
 
         /// <inheritdoc/>
@@ -669,6 +711,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class Delimiter : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "d");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_D");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Delimiter class.
         /// </summary>
@@ -703,13 +751,13 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:d");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.DelimiterProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "dPr"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"), 1, 64)
+                new ElementParticle(DocumentFormat.OpenXml.Math.DelimiterProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Base.ElementType, 1, 64)
             };
         }
 
@@ -722,8 +770,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.DelimiterProperties? DelimiterProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.DelimiterProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "dPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "dPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.DelimiterProperties.ElementType) as DocumentFormat.OpenXml.Math.DelimiterProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.DelimiterProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -744,6 +792,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class EquationArray : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "eqArr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_EqArr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the EquationArray class.
         /// </summary>
@@ -778,13 +832,13 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:eqArr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.EquationArrayProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "eqArrPr"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"), 1, 64)
+                new ElementParticle(DocumentFormat.OpenXml.Math.EquationArrayProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Base.ElementType, 1, 64)
             };
         }
 
@@ -797,8 +851,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.EquationArrayProperties? EquationArrayProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.EquationArrayProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "eqArrPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "eqArrPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.EquationArrayProperties.ElementType) as DocumentFormat.OpenXml.Math.EquationArrayProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.EquationArrayProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -820,6 +874,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class Fraction : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "f");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_F");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Fraction class.
         /// </summary>
@@ -854,15 +914,15 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:f");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.FractionProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Math.Numerator>();
             builder.AddChild<DocumentFormat.OpenXml.Math.Denominator>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "fPr"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "num"), 1, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "den"), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.FractionProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Numerator.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Denominator.ElementType, 1, 1)
             };
         }
 
@@ -875,8 +935,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.FractionProperties? FractionProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.FractionProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "fPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "fPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.FractionProperties.ElementType) as DocumentFormat.OpenXml.Math.FractionProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.FractionProperties.ElementType);
         }
 
         /// <summary>
@@ -888,8 +948,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Numerator? Numerator
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Numerator>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "num"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "num"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Numerator.ElementType) as DocumentFormat.OpenXml.Math.Numerator;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Numerator.ElementType);
         }
 
         /// <summary>
@@ -901,8 +961,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Denominator? Denominator
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Denominator>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "den"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "den"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Denominator.ElementType) as DocumentFormat.OpenXml.Math.Denominator;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Denominator.ElementType);
         }
 
         /// <inheritdoc/>
@@ -924,6 +984,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class MathFunction : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "func");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_Func");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MathFunction class.
         /// </summary>
@@ -958,15 +1024,15 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:func");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.FunctionProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Math.FunctionName>();
             builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "funcPr"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "fName"), 1, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.FunctionProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.FunctionName.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Base.ElementType, 1, 1)
             };
         }
 
@@ -979,8 +1045,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.FunctionProperties? FunctionProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.FunctionProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "funcPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "funcPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.FunctionProperties.ElementType) as DocumentFormat.OpenXml.Math.FunctionProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.FunctionProperties.ElementType);
         }
 
         /// <summary>
@@ -992,8 +1058,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.FunctionName? FunctionName
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.FunctionName>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "fName"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "fName"));
+            get => GetElement(DocumentFormat.OpenXml.Math.FunctionName.ElementType) as DocumentFormat.OpenXml.Math.FunctionName;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.FunctionName.ElementType);
         }
 
         /// <summary>
@@ -1005,8 +1071,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Base>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Base.ElementType) as DocumentFormat.OpenXml.Math.Base;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Base.ElementType);
         }
 
         /// <inheritdoc/>
@@ -1027,6 +1093,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class GroupChar : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "groupChr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_GroupChr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the GroupChar class.
         /// </summary>
@@ -1061,13 +1133,13 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:groupChr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.GroupCharProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "groupChrPr"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.GroupCharProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Base.ElementType, 1, 1)
             };
         }
 
@@ -1080,8 +1152,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.GroupCharProperties? GroupCharProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.GroupCharProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "groupChrPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "groupChrPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.GroupCharProperties.ElementType) as DocumentFormat.OpenXml.Math.GroupCharProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.GroupCharProperties.ElementType);
         }
 
         /// <summary>
@@ -1093,8 +1165,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Base>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Base.ElementType) as DocumentFormat.OpenXml.Math.Base;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Base.ElementType);
         }
 
         /// <inheritdoc/>
@@ -1116,6 +1188,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class LimitLower : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLow");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_LimLow");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LimitLower class.
         /// </summary>
@@ -1150,15 +1228,15 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:limLow");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.LimitLowerProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
             builder.AddChild<DocumentFormat.OpenXml.Math.Limit>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLowPr"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"), 1, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "lim"), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.LimitLowerProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Base.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Limit.ElementType, 1, 1)
             };
         }
 
@@ -1171,8 +1249,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.LimitLowerProperties? LimitLowerProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.LimitLowerProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLowPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLowPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.LimitLowerProperties.ElementType) as DocumentFormat.OpenXml.Math.LimitLowerProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.LimitLowerProperties.ElementType);
         }
 
         /// <summary>
@@ -1184,8 +1262,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Base>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Base.ElementType) as DocumentFormat.OpenXml.Math.Base;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Base.ElementType);
         }
 
         /// <summary>
@@ -1197,8 +1275,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Limit? Limit
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Limit>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "lim"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "lim"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Limit.ElementType) as DocumentFormat.OpenXml.Math.Limit;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Limit.ElementType);
         }
 
         /// <inheritdoc/>
@@ -1220,6 +1298,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class LimitUpper : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limUpp");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_LimUpp");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LimitUpper class.
         /// </summary>
@@ -1254,15 +1338,15 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:limUpp");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpperProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
             builder.AddChild<DocumentFormat.OpenXml.Math.Limit>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limUppPr"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"), 1, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "lim"), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.LimitUpperProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Base.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Limit.ElementType, 1, 1)
             };
         }
 
@@ -1275,8 +1359,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.LimitUpperProperties? LimitUpperProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.LimitUpperProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limUppPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limUppPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.LimitUpperProperties.ElementType) as DocumentFormat.OpenXml.Math.LimitUpperProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.LimitUpperProperties.ElementType);
         }
 
         /// <summary>
@@ -1288,8 +1372,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Base>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Base.ElementType) as DocumentFormat.OpenXml.Math.Base;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Base.ElementType);
         }
 
         /// <summary>
@@ -1301,8 +1385,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Limit? Limit
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Limit>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "lim"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "lim"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Limit.ElementType) as DocumentFormat.OpenXml.Math.Limit;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Limit.ElementType);
         }
 
         /// <inheritdoc/>
@@ -1323,6 +1407,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class Matrix : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "m");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_M");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Matrix class.
         /// </summary>
@@ -1357,13 +1447,13 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:m");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.MatrixProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Math.MatrixRow>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "mPr"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "mr"), 1, 256)
+                new ElementParticle(DocumentFormat.OpenXml.Math.MatrixProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.MatrixRow.ElementType, 1, 256)
             };
         }
 
@@ -1376,8 +1466,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.MatrixProperties? MatrixProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.MatrixProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "mPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "mPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.MatrixProperties.ElementType) as DocumentFormat.OpenXml.Math.MatrixProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.MatrixProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -1400,6 +1490,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class Nary : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "nary");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_Nary");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Nary class.
         /// </summary>
@@ -1434,17 +1530,17 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:nary");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.NaryProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Math.SubArgument>();
             builder.AddChild<DocumentFormat.OpenXml.Math.SuperArgument>();
             builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "naryPr"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sub"), 1, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sup"), 1, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.NaryProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.SubArgument.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.SuperArgument.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Base.ElementType, 1, 1)
             };
         }
 
@@ -1457,8 +1553,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.NaryProperties? NaryProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.NaryProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "naryPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "naryPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.NaryProperties.ElementType) as DocumentFormat.OpenXml.Math.NaryProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.NaryProperties.ElementType);
         }
 
         /// <summary>
@@ -1470,8 +1566,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.SubArgument? SubArgument
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.SubArgument>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sub"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sub"));
+            get => GetElement(DocumentFormat.OpenXml.Math.SubArgument.ElementType) as DocumentFormat.OpenXml.Math.SubArgument;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.SubArgument.ElementType);
         }
 
         /// <summary>
@@ -1483,8 +1579,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.SuperArgument? SuperArgument
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.SuperArgument>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sup"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sup"));
+            get => GetElement(DocumentFormat.OpenXml.Math.SuperArgument.ElementType) as DocumentFormat.OpenXml.Math.SuperArgument;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.SuperArgument.ElementType);
         }
 
         /// <summary>
@@ -1496,8 +1592,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Base>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Base.ElementType) as DocumentFormat.OpenXml.Math.Base;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Base.ElementType);
         }
 
         /// <inheritdoc/>
@@ -1518,6 +1614,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class Phantom : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "phant");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_Phant");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Phantom class.
         /// </summary>
@@ -1552,13 +1654,13 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:phant");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
             builder.AddChild<DocumentFormat.OpenXml.Math.PhantomProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "phantPr"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.PhantomProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Base.ElementType, 1, 1)
             };
         }
 
@@ -1571,8 +1673,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.PhantomProperties? PhantomProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.PhantomProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "phantPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "phantPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.PhantomProperties.ElementType) as DocumentFormat.OpenXml.Math.PhantomProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.PhantomProperties.ElementType);
         }
 
         /// <summary>
@@ -1584,8 +1686,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Base>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Base.ElementType) as DocumentFormat.OpenXml.Math.Base;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Base.ElementType);
         }
 
         /// <inheritdoc/>
@@ -1607,6 +1709,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class Radical : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rad");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_Rad");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Radical class.
         /// </summary>
@@ -1641,15 +1749,15 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:rad");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.Degree>();
             builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
             builder.AddChild<DocumentFormat.OpenXml.Math.RadicalProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "radPr"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "deg"), 1, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.RadicalProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Degree.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Base.ElementType, 1, 1)
             };
         }
 
@@ -1662,8 +1770,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.RadicalProperties? RadicalProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.RadicalProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "radPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "radPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.RadicalProperties.ElementType) as DocumentFormat.OpenXml.Math.RadicalProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.RadicalProperties.ElementType);
         }
 
         /// <summary>
@@ -1675,8 +1783,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Degree? Degree
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Degree>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "deg"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "deg"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Degree.ElementType) as DocumentFormat.OpenXml.Math.Degree;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Degree.ElementType);
         }
 
         /// <summary>
@@ -1688,8 +1796,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Base>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Base.ElementType) as DocumentFormat.OpenXml.Math.Base;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Base.ElementType);
         }
 
         /// <inheritdoc/>
@@ -1712,6 +1820,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class PreSubSuper : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sPre");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_SPre");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PreSubSuper class.
         /// </summary>
@@ -1746,17 +1860,17 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:sPre");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.SubArgument>();
             builder.AddChild<DocumentFormat.OpenXml.Math.SuperArgument>();
             builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
             builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuperProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sPrePr"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sub"), 1, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sup"), 1, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.PreSubSuperProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.SubArgument.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.SuperArgument.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Base.ElementType, 1, 1)
             };
         }
 
@@ -1769,8 +1883,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.PreSubSuperProperties? PreSubSuperProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.PreSubSuperProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sPrePr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sPrePr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.PreSubSuperProperties.ElementType) as DocumentFormat.OpenXml.Math.PreSubSuperProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.PreSubSuperProperties.ElementType);
         }
 
         /// <summary>
@@ -1782,8 +1896,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.SubArgument? SubArgument
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.SubArgument>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sub"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sub"));
+            get => GetElement(DocumentFormat.OpenXml.Math.SubArgument.ElementType) as DocumentFormat.OpenXml.Math.SubArgument;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.SubArgument.ElementType);
         }
 
         /// <summary>
@@ -1795,8 +1909,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.SuperArgument? SuperArgument
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.SuperArgument>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sup"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sup"));
+            get => GetElement(DocumentFormat.OpenXml.Math.SuperArgument.ElementType) as DocumentFormat.OpenXml.Math.SuperArgument;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.SuperArgument.ElementType);
         }
 
         /// <summary>
@@ -1808,8 +1922,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Base>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Base.ElementType) as DocumentFormat.OpenXml.Math.Base;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Base.ElementType);
         }
 
         /// <inheritdoc/>
@@ -1831,6 +1945,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class Subscript : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSub");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_SSub");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Subscript class.
         /// </summary>
@@ -1865,15 +1985,15 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:sSub");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
             builder.AddChild<DocumentFormat.OpenXml.Math.SubArgument>();
             builder.AddChild<DocumentFormat.OpenXml.Math.SubscriptProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubPr"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"), 1, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sub"), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.SubscriptProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Base.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.SubArgument.ElementType, 1, 1)
             };
         }
 
@@ -1886,8 +2006,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.SubscriptProperties? SubscriptProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.SubscriptProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.SubscriptProperties.ElementType) as DocumentFormat.OpenXml.Math.SubscriptProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.SubscriptProperties.ElementType);
         }
 
         /// <summary>
@@ -1899,8 +2019,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Base>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Base.ElementType) as DocumentFormat.OpenXml.Math.Base;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Base.ElementType);
         }
 
         /// <summary>
@@ -1912,8 +2032,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.SubArgument? SubArgument
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.SubArgument>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sub"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sub"));
+            get => GetElement(DocumentFormat.OpenXml.Math.SubArgument.ElementType) as DocumentFormat.OpenXml.Math.SubArgument;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.SubArgument.ElementType);
         }
 
         /// <inheritdoc/>
@@ -1936,6 +2056,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class SubSuperscript : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubSup");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_SSubSup");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SubSuperscript class.
         /// </summary>
@@ -1970,17 +2096,17 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:sSubSup");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
             builder.AddChild<DocumentFormat.OpenXml.Math.SubArgument>();
             builder.AddChild<DocumentFormat.OpenXml.Math.SuperArgument>();
             builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscriptProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubSupPr"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"), 1, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sub"), 1, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sup"), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.SubSuperscriptProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Base.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.SubArgument.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.SuperArgument.ElementType, 1, 1)
             };
         }
 
@@ -1993,8 +2119,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.SubSuperscriptProperties? SubSuperscriptProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.SubSuperscriptProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubSupPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubSupPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.SubSuperscriptProperties.ElementType) as DocumentFormat.OpenXml.Math.SubSuperscriptProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.SubSuperscriptProperties.ElementType);
         }
 
         /// <summary>
@@ -2006,8 +2132,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Base>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Base.ElementType) as DocumentFormat.OpenXml.Math.Base;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Base.ElementType);
         }
 
         /// <summary>
@@ -2019,8 +2145,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.SubArgument? SubArgument
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.SubArgument>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sub"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sub"));
+            get => GetElement(DocumentFormat.OpenXml.Math.SubArgument.ElementType) as DocumentFormat.OpenXml.Math.SubArgument;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.SubArgument.ElementType);
         }
 
         /// <summary>
@@ -2032,8 +2158,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.SuperArgument? SuperArgument
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.SuperArgument>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sup"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sup"));
+            get => GetElement(DocumentFormat.OpenXml.Math.SuperArgument.ElementType) as DocumentFormat.OpenXml.Math.SuperArgument;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.SuperArgument.ElementType);
         }
 
         /// <inheritdoc/>
@@ -2055,6 +2181,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class Superscript : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSup");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_SSup");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Superscript class.
         /// </summary>
@@ -2089,15 +2221,15 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:sSup");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
             builder.AddChild<DocumentFormat.OpenXml.Math.SuperArgument>();
             builder.AddChild<DocumentFormat.OpenXml.Math.SuperscriptProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSupPr"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"), 1, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sup"), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.SuperscriptProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Base.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.SuperArgument.ElementType, 1, 1)
             };
         }
 
@@ -2110,8 +2242,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.SuperscriptProperties? SuperscriptProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.SuperscriptProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSupPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSupPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.SuperscriptProperties.ElementType) as DocumentFormat.OpenXml.Math.SuperscriptProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.SuperscriptProperties.ElementType);
         }
 
         /// <summary>
@@ -2123,8 +2255,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Base? Base
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Base>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Base.ElementType) as DocumentFormat.OpenXml.Math.Base;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Base.ElementType);
         }
 
         /// <summary>
@@ -2136,8 +2268,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.SuperArgument? SuperArgument
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.SuperArgument>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sup"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sup"));
+            get => GetElement(DocumentFormat.OpenXml.Math.SuperArgument.ElementType) as DocumentFormat.OpenXml.Math.SuperArgument;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.SuperArgument.ElementType);
         }
 
         /// <inheritdoc/>
@@ -2190,6 +2322,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class Paragraph : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMathPara");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OMathPara");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Paragraph class.
         /// </summary>
@@ -2224,7 +2362,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:oMathPara");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
             builder.AddChild<DocumentFormat.OpenXml.Math.ParagraphProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
@@ -2261,10 +2399,10 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMathParaPr"), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ParagraphProperties.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
                 {
-                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMath"), 1, 0),
+                    new ElementParticle(DocumentFormat.OpenXml.Math.OfficeMath.ElementType, 1, 0),
                     new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                     {
                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -2273,7 +2411,7 @@ namespace DocumentFormat.OpenXml.Math
                             {
                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                 {
-                                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "r"), 1, 1)
+                                    new ElementParticle(DocumentFormat.OpenXml.Math.Run.ElementType, 1, 1)
                                 }
                             },
                             new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -2284,9 +2422,9 @@ namespace DocumentFormat.OpenXml.Math
                                     {
                                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                         {
-                                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "proofErr"), 0, 1),
-                                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "permStart"), 0, 1),
-                                            new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "permEnd"), 0, 1)
+                                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, 0, 1),
+                                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, 0, 1),
+                                            new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, 0, 1)
                                         }
                                     },
                                     new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -2297,47 +2435,47 @@ namespace DocumentFormat.OpenXml.Math
                                             {
                                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                 {
-                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "bookmarkStart"), 1, 1),
-                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "bookmarkEnd"), 1, 1),
-                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "commentRangeStart"), 1, 1),
-                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "commentRangeEnd"), 1, 1)
+                                                    new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, 1, 1),
+                                                    new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, 1, 1),
+                                                    new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, 1, 1),
+                                                    new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, 1, 1)
                                                 }
                                             },
                                             new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                             {
                                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                 {
-                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFromRangeStart"), 1, 1),
-                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFromRangeEnd"), 1, 1),
-                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveToRangeStart"), 1, 1),
-                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveToRangeEnd"), 1, 1),
-                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlInsRangeStart"), 1, 1),
-                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlInsRangeEnd"), 1, 1),
-                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlDelRangeStart"), 1, 1),
-                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlDelRangeEnd"), 1, 1),
-                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveFromRangeStart"), 1, 1),
-                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveFromRangeEnd"), 1, 1),
-                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveToRangeStart"), 1, 1),
-                                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveToRangeEnd"), 1, 1)
+                                                    new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, 1, 1),
+                                                    new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, 1, 1),
+                                                    new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, 1, 1),
+                                                    new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, 1, 1),
+                                                    new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, 1, 1),
+                                                    new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, 1, 1),
+                                                    new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, 1, 1),
+                                                    new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, 1, 1),
+                                                    new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, 1, 1),
+                                                    new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, 1, 1),
+                                                    new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, 1, 1),
+                                                    new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, 1, 1)
                                                 }
                                             },
-                                            new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictInsRangeStart"), 0, 1, version: FileFormatVersions.Office2010),
-                                            new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictInsRangeEnd"), 0, 1, version: FileFormatVersions.Office2010),
-                                            new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictDelRangeStart"), 0, 1, version: FileFormatVersions.Office2010),
-                                            new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictDelRangeEnd"), 0, 1, version: FileFormatVersions.Office2010)
+                                            new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                            new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                            new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                            new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, 0, 1, version: FileFormatVersions.Office2010)
                                         }
                                     },
-                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "ins"), 0, 1),
-                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "del"), 0, 1),
-                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFrom"), 1, 1),
-                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveTo"), 1, 1),
-                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "contentPart"), 0, 0, version: FileFormatVersions.Office2010),
+                                    new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, 0, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, 0, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, 1, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, 1, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, 0, 0, version: FileFormatVersions.Office2010),
                                     new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
                                     {
                                         new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                         {
-                                            new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "conflictIns"), 0, 1, version: FileFormatVersions.Office2010),
-                                            new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "conflictDel"), 0, 1, version: FileFormatVersions.Office2010)
+                                            new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                            new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, 0, 1, version: FileFormatVersions.Office2010)
                                         }
                                     }
                                 }
@@ -2346,7 +2484,7 @@ namespace DocumentFormat.OpenXml.Math
                             {
                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                 {
-                                    new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "r"), 1, 1)
+                                    new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.Run.ElementType, 1, 1)
                                 }
                             }
                         }
@@ -2364,8 +2502,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ParagraphProperties? ParagraphProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ParagraphProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMathParaPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMathParaPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ParagraphProperties.ElementType) as DocumentFormat.OpenXml.Math.ParagraphProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ParagraphProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -2440,6 +2578,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class OfficeMath : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMath");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OMath");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OfficeMath class.
         /// </summary>
@@ -2474,7 +2618,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:oMath");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
             builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
             builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
@@ -2541,30 +2685,30 @@ namespace DocumentFormat.OpenXml.Math
                         {
                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "acc"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "bar"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "box"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "borderBox"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "d"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "eqArr"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "f"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "func"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "groupChr"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLow"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limUpp"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "m"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "nary"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "phant"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rad"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sPre"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSub"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubSup"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSup"), 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Accent.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Bar.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Box.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.BorderBox.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Delimiter.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.EquationArray.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Fraction.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.MathFunction.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.GroupChar.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitLower.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Matrix.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Nary.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Phantom.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Radical.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Subscript.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Superscript.ElementType, 1, 1),
                                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                 {
                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "r"), 1, 1)
+                                        new ElementParticle(DocumentFormat.OpenXml.Math.Run.ElementType, 1, 1)
                                     }
                                 }
                             }
@@ -2577,16 +2721,16 @@ namespace DocumentFormat.OpenXml.Math
                                 {
                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXml"), 1, 1),
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "fldSimple"), 0, 0),
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "hyperlink"), 1, 1)
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun.ElementType, 1, 1),
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.SimpleField.ElementType, 0, 0),
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.Hyperlink.ElementType, 1, 1)
                                     }
                                 },
                                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                 {
                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "sdt"), 1, 1),
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.SdtRun.ElementType, 1, 1),
                                         new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                         {
                                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -2599,9 +2743,9 @@ namespace DocumentFormat.OpenXml.Math
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "proofErr"), 0, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "permStart"), 0, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "permEnd"), 0, 1)
+                                                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, 0, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, 0, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, 0, 1)
                                                             }
                                                         },
                                                         new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -2612,47 +2756,47 @@ namespace DocumentFormat.OpenXml.Math
                                                                 {
                                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "bookmarkStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "bookmarkEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "commentRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "commentRangeEnd"), 1, 1)
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, 1, 1)
                                                                     }
                                                                 },
                                                                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                                 {
                                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFromRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFromRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveToRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveToRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlInsRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlInsRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlDelRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlDelRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveFromRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveFromRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveToRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveToRangeEnd"), 1, 1)
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, 1, 1)
                                                                     }
                                                                 },
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictInsRangeStart"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictInsRangeEnd"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictDelRangeStart"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictDelRangeEnd"), 0, 1, version: FileFormatVersions.Office2010)
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, 0, 1, version: FileFormatVersions.Office2010)
                                                             }
                                                         },
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "ins"), 0, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "del"), 0, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFrom"), 1, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveTo"), 1, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "contentPart"), 0, 0, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, 0, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, 0, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, 0, 0, version: FileFormatVersions.Office2010),
                                                         new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                             {
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "conflictIns"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "conflictDel"), 0, 1, version: FileFormatVersions.Office2010)
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, 0, 1, version: FileFormatVersions.Office2010)
                                                             }
                                                         }
                                                     }
@@ -2661,36 +2805,36 @@ namespace DocumentFormat.OpenXml.Math
                                                 {
                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                     {
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMathPara"), 1, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMath"), 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Math.Paragraph.ElementType, 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Math.OfficeMath.ElementType, 1, 1),
                                                         new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "acc"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "bar"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "box"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "borderBox"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "d"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "eqArr"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "f"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "func"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "groupChr"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLow"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limUpp"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "m"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "nary"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "phant"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rad"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sPre"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSub"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubSup"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSup"), 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Accent.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Bar.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Box.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.BorderBox.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Delimiter.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.EquationArray.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Fraction.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.MathFunction.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.GroupChar.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitLower.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Matrix.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Nary.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Phantom.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Radical.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Subscript.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Superscript.ElementType, 1, 1),
                                                                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                                 {
                                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "r"), 1, 1)
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Math.Run.ElementType, 1, 1)
                                                                     }
                                                                 }
                                                             }
@@ -2740,6 +2884,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class MathProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "mathPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_MathPr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MathProperties class.
         /// </summary>
@@ -2774,7 +2924,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:mathPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.BreakBinary>();
             builder.AddChild<DocumentFormat.OpenXml.Math.BreakBinarySubtraction>();
             builder.AddChild<DocumentFormat.OpenXml.Math.MathFont>();
@@ -2793,25 +2943,25 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<DocumentFormat.OpenXml.Math.WrapIndent>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "mathFont"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "brkBin"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "brkBinSub"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "smallFrac"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "dispDef"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "lMargin"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rMargin"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "defJc"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "preSp"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "postSp"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "interSp"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "intraSp"), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.MathFont.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.BreakBinary.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.BreakBinarySubtraction.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.SmallFraction.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.DisplayDefaults.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.LeftMargin.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.RightMargin.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.DefaultJustification.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.PreSpacing.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.PostSpacing.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.InterSpacing.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.IntraSpacing.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
-                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "wrapIndent"), 1, 1),
-                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "wrapRight"), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Math.WrapIndent.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Math.WrapRight.ElementType, 1, 1)
                 },
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "intLim"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "naryLim"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.IntegralLimitLocation.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.NaryLimitLocation.ElementType, 0, 1)
             };
         }
 
@@ -2824,8 +2974,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.MathFont? MathFont
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.MathFont>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "mathFont"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "mathFont"));
+            get => GetElement(DocumentFormat.OpenXml.Math.MathFont.ElementType) as DocumentFormat.OpenXml.Math.MathFont;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.MathFont.ElementType);
         }
 
         /// <summary>
@@ -2837,8 +2987,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.BreakBinary? BreakBinary
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.BreakBinary>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "brkBin"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "brkBin"));
+            get => GetElement(DocumentFormat.OpenXml.Math.BreakBinary.ElementType) as DocumentFormat.OpenXml.Math.BreakBinary;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.BreakBinary.ElementType);
         }
 
         /// <summary>
@@ -2850,8 +3000,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.BreakBinarySubtraction? BreakBinarySubtraction
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.BreakBinarySubtraction>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "brkBinSub"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "brkBinSub"));
+            get => GetElement(DocumentFormat.OpenXml.Math.BreakBinarySubtraction.ElementType) as DocumentFormat.OpenXml.Math.BreakBinarySubtraction;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.BreakBinarySubtraction.ElementType);
         }
 
         /// <summary>
@@ -2863,8 +3013,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.SmallFraction? SmallFraction
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.SmallFraction>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "smallFrac"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "smallFrac"));
+            get => GetElement(DocumentFormat.OpenXml.Math.SmallFraction.ElementType) as DocumentFormat.OpenXml.Math.SmallFraction;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.SmallFraction.ElementType);
         }
 
         /// <summary>
@@ -2876,8 +3026,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.DisplayDefaults? DisplayDefaults
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.DisplayDefaults>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "dispDef"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "dispDef"));
+            get => GetElement(DocumentFormat.OpenXml.Math.DisplayDefaults.ElementType) as DocumentFormat.OpenXml.Math.DisplayDefaults;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.DisplayDefaults.ElementType);
         }
 
         /// <summary>
@@ -2889,8 +3039,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.LeftMargin? LeftMargin
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.LeftMargin>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "lMargin"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "lMargin"));
+            get => GetElement(DocumentFormat.OpenXml.Math.LeftMargin.ElementType) as DocumentFormat.OpenXml.Math.LeftMargin;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.LeftMargin.ElementType);
         }
 
         /// <summary>
@@ -2902,8 +3052,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.RightMargin? RightMargin
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.RightMargin>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rMargin"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rMargin"));
+            get => GetElement(DocumentFormat.OpenXml.Math.RightMargin.ElementType) as DocumentFormat.OpenXml.Math.RightMargin;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.RightMargin.ElementType);
         }
 
         /// <summary>
@@ -2915,8 +3065,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.DefaultJustification? DefaultJustification
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.DefaultJustification>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "defJc"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "defJc"));
+            get => GetElement(DocumentFormat.OpenXml.Math.DefaultJustification.ElementType) as DocumentFormat.OpenXml.Math.DefaultJustification;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.DefaultJustification.ElementType);
         }
 
         /// <summary>
@@ -2928,8 +3078,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.PreSpacing? PreSpacing
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.PreSpacing>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "preSp"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "preSp"));
+            get => GetElement(DocumentFormat.OpenXml.Math.PreSpacing.ElementType) as DocumentFormat.OpenXml.Math.PreSpacing;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.PreSpacing.ElementType);
         }
 
         /// <summary>
@@ -2941,8 +3091,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.PostSpacing? PostSpacing
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.PostSpacing>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "postSp"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "postSp"));
+            get => GetElement(DocumentFormat.OpenXml.Math.PostSpacing.ElementType) as DocumentFormat.OpenXml.Math.PostSpacing;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.PostSpacing.ElementType);
         }
 
         /// <summary>
@@ -2954,8 +3104,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.InterSpacing? InterSpacing
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.InterSpacing>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "interSp"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "interSp"));
+            get => GetElement(DocumentFormat.OpenXml.Math.InterSpacing.ElementType) as DocumentFormat.OpenXml.Math.InterSpacing;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.InterSpacing.ElementType);
         }
 
         /// <summary>
@@ -2967,8 +3117,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.IntraSpacing? IntraSpacing
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.IntraSpacing>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "intraSp"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "intraSp"));
+            get => GetElement(DocumentFormat.OpenXml.Math.IntraSpacing.ElementType) as DocumentFormat.OpenXml.Math.IntraSpacing;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.IntraSpacing.ElementType);
         }
 
         /// <inheritdoc/>
@@ -2982,6 +3132,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class Literal : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "lit");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Literal class.
         /// </summary>
@@ -2992,7 +3148,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:lit");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3006,6 +3162,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class NormalText : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "nor");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NormalText class.
         /// </summary>
@@ -3016,7 +3178,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:nor");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3030,6 +3192,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class Alignment : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "aln");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Alignment class.
         /// </summary>
@@ -3040,7 +3208,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:aln");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3054,6 +3222,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class OperatorEmulator : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "opEmu");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OperatorEmulator class.
         /// </summary>
@@ -3064,7 +3238,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:opEmu");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3078,6 +3252,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class NoBreak : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "noBreak");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NoBreak class.
         /// </summary>
@@ -3088,7 +3268,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:noBreak");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3102,6 +3282,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class Differential : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "diff");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Differential class.
         /// </summary>
@@ -3112,7 +3298,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:diff");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3126,6 +3312,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class HideTop : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "hideTop");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the HideTop class.
         /// </summary>
@@ -3136,7 +3328,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:hideTop");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3150,6 +3342,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class HideBottom : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "hideBot");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the HideBottom class.
         /// </summary>
@@ -3160,7 +3358,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:hideBot");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3174,6 +3372,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class HideLeft : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "hideLeft");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the HideLeft class.
         /// </summary>
@@ -3184,7 +3388,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:hideLeft");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3198,6 +3402,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class HideRight : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "hideRight");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the HideRight class.
         /// </summary>
@@ -3208,7 +3418,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:hideRight");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3222,6 +3432,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class StrikeHorizontal : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "strikeH");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the StrikeHorizontal class.
         /// </summary>
@@ -3232,7 +3448,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:strikeH");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3246,6 +3462,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class StrikeVertical : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "strikeV");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the StrikeVertical class.
         /// </summary>
@@ -3256,7 +3478,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:strikeV");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3270,6 +3492,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class StrikeBottomLeftToTopRight : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "strikeBLTR");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the StrikeBottomLeftToTopRight class.
         /// </summary>
@@ -3280,7 +3508,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:strikeBLTR");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3294,6 +3522,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class StrikeTopLeftToBottomRight : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "strikeTLBR");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the StrikeTopLeftToBottomRight class.
         /// </summary>
@@ -3304,7 +3538,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:strikeTLBR");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3318,6 +3552,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class GrowOperators : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "grow");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the GrowOperators class.
         /// </summary>
@@ -3328,7 +3568,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:grow");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3342,6 +3582,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class MaxDistribution : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "maxDist");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MaxDistribution class.
         /// </summary>
@@ -3352,7 +3598,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:maxDist");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3366,6 +3612,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class ObjectDistribution : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "objDist");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ObjectDistribution class.
         /// </summary>
@@ -3376,7 +3628,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:objDist");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3390,6 +3642,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class HidePlaceholder : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "plcHide");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the HidePlaceholder class.
         /// </summary>
@@ -3400,7 +3658,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:plcHide");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3414,6 +3672,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class HideSubArgument : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "subHide");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the HideSubArgument class.
         /// </summary>
@@ -3424,7 +3688,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:subHide");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3438,6 +3702,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class HideSuperArgument : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "supHide");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the HideSuperArgument class.
         /// </summary>
@@ -3448,7 +3718,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:supHide");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3462,6 +3732,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class ShowPhantom : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "show");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShowPhantom class.
         /// </summary>
@@ -3472,7 +3748,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:show");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3486,6 +3762,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class ZeroWidth : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "zeroWid");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ZeroWidth class.
         /// </summary>
@@ -3496,7 +3778,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:zeroWid");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3510,6 +3792,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class ZeroAscent : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "zeroAsc");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ZeroAscent class.
         /// </summary>
@@ -3520,7 +3808,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:zeroAsc");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3534,6 +3822,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class ZeroDescent : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "zeroDesc");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ZeroDescent class.
         /// </summary>
@@ -3544,7 +3838,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:zeroDesc");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3558,6 +3852,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class Transparent : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "transp");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Transparent class.
         /// </summary>
@@ -3568,7 +3868,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:transp");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3582,6 +3882,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class HideDegree : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "degHide");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the HideDegree class.
         /// </summary>
@@ -3592,7 +3898,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:degHide");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3606,6 +3912,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class AlignScripts : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "alnScr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AlignScripts class.
         /// </summary>
@@ -3616,7 +3928,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:alnScr");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3630,6 +3942,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class SmallFraction : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "smallFrac");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SmallFraction class.
         /// </summary>
@@ -3640,7 +3958,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:smallFrac");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3654,6 +3972,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class DisplayDefaults : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "dispDef");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DisplayDefaults class.
         /// </summary>
@@ -3664,7 +3988,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:dispDef");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3678,6 +4002,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class WrapRight : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "wrapRight");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the WrapRight class.
         /// </summary>
@@ -3688,7 +4018,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:wrapRight");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3702,6 +4032,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public abstract partial class OnOffType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OnOff");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OnOffType class.
         /// </summary>
@@ -3737,6 +4073,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class Break : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "brk");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_ManualBreak");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Break class.
         /// </summary>
@@ -3773,7 +4115,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:brk");
+            builder.SetSchema(ElementType);
             builder.AddElement<Break>()
                 .AddAttribute("m:alnAt", a => a.AlignAt, aBuilder =>
                 {
@@ -3807,6 +4149,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class RunProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_RPR");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RunProperties class.
         /// </summary>
@@ -3841,7 +4189,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:rPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.Break>();
             builder.AddChild<DocumentFormat.OpenXml.Math.Literal>();
             builder.AddChild<DocumentFormat.OpenXml.Math.NormalText>();
@@ -3850,24 +4198,24 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<DocumentFormat.OpenXml.Math.Style>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "lit"), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Literal.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "nor"), 0, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Math.NormalText.ElementType, 0, 1),
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
                         new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
                             new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                             {
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "scr"), 0, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sty"), 0, 1)
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Script.ElementType, 0, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Style.ElementType, 0, 1)
                             }
                         }
                     }
                 },
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "brk"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "aln"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.Break.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Alignment.ElementType, 0, 1)
             };
         }
 
@@ -3880,8 +4228,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Literal? Literal
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Literal>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "lit"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "lit"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Literal.ElementType) as DocumentFormat.OpenXml.Math.Literal;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Literal.ElementType);
         }
 
         /// <inheritdoc/>
@@ -3895,6 +4243,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class Text : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "t");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_Text");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Text class.
         /// </summary>
@@ -3931,7 +4285,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:t");
+            builder.SetSchema(ElementType);
             builder.AddElement<Text>()
                 .AddAttribute("xml:space", a => a.Space);
         }
@@ -3947,6 +4301,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class AccentChar : CharType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "chr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_Char");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AccentChar class.
         /// </summary>
@@ -3957,7 +4317,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:chr");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3971,6 +4331,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class BeginChar : CharType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "begChr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_Char");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BeginChar class.
         /// </summary>
@@ -3981,7 +4347,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:begChr");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3995,6 +4361,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class SeparatorChar : CharType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sepChr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_Char");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SeparatorChar class.
         /// </summary>
@@ -4005,7 +4377,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:sepChr");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -4019,6 +4391,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class EndChar : CharType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "endChr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_Char");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the EndChar class.
         /// </summary>
@@ -4029,7 +4407,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:endChr");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -4043,6 +4421,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public abstract partial class CharType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_Char");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CharType class.
         /// </summary>
@@ -4092,6 +4476,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class ControlProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_CtrlPr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ControlProperties class.
         /// </summary>
@@ -4126,7 +4516,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:ctrlPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedMathControl>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedMathControl>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromMathControl>();
@@ -4142,25 +4532,25 @@ namespace DocumentFormat.OpenXml.Math
                         {
                             new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                             {
-                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "rPr"), 0, 1)
+                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.RunProperties.ElementType, 0, 1)
                             }
                         },
                         new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "ins"), 1, 1)
+                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.InsertedMathControl.ElementType, 1, 1)
                             }
                         },
                         new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "del"), 1, 1)
+                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.DeletedMathControl.ElementType, 1, 1)
                             }
                         },
-                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFrom"), 1, 1),
-                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveTo"), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromMathControl.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToMathControl.ElementType, 1, 1)
                     }
                 }
             };
@@ -4184,6 +4574,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class AccentProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "accPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_AccPr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AccentProperties class.
         /// </summary>
@@ -4218,13 +4614,13 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:accPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.AccentChar>();
             builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "chr"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.AccentChar.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
             };
         }
 
@@ -4237,8 +4633,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.AccentChar? AccentChar
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.AccentChar>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "chr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "chr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.AccentChar.ElementType) as DocumentFormat.OpenXml.Math.AccentChar;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.AccentChar.ElementType);
         }
 
         /// <summary>
@@ -4250,8 +4646,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ControlProperties.ElementType) as DocumentFormat.OpenXml.Math.ControlProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ControlProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -4328,6 +4724,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class Base : OfficeMathArgumentType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OMathArg");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Base class.
         /// </summary>
@@ -4362,10 +4764,10 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:e");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "argPr"), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ArgumentProperties.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -4374,30 +4776,30 @@ namespace DocumentFormat.OpenXml.Math
                         {
                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "acc"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "bar"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "box"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "borderBox"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "d"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "eqArr"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "f"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "func"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "groupChr"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLow"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limUpp"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "m"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "nary"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "phant"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rad"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sPre"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSub"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubSup"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSup"), 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Accent.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Bar.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Box.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.BorderBox.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Delimiter.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.EquationArray.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Fraction.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.MathFunction.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.GroupChar.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitLower.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Matrix.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Nary.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Phantom.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Radical.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Subscript.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Superscript.ElementType, 1, 1),
                                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                 {
                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "r"), 1, 1)
+                                        new ElementParticle(DocumentFormat.OpenXml.Math.Run.ElementType, 1, 1)
                                     }
                                 }
                             }
@@ -4410,16 +4812,16 @@ namespace DocumentFormat.OpenXml.Math
                                 {
                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXml"), 1, 1),
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "fldSimple"), 0, 0),
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "hyperlink"), 1, 1)
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun.ElementType, 1, 1),
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.SimpleField.ElementType, 0, 0),
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.Hyperlink.ElementType, 1, 1)
                                     }
                                 },
                                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                 {
                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "sdt"), 1, 1),
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.SdtRun.ElementType, 1, 1),
                                         new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                         {
                                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -4432,9 +4834,9 @@ namespace DocumentFormat.OpenXml.Math
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "proofErr"), 0, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "permStart"), 0, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "permEnd"), 0, 1)
+                                                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, 0, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, 0, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, 0, 1)
                                                             }
                                                         },
                                                         new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -4445,47 +4847,47 @@ namespace DocumentFormat.OpenXml.Math
                                                                 {
                                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "bookmarkStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "bookmarkEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "commentRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "commentRangeEnd"), 1, 1)
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, 1, 1)
                                                                     }
                                                                 },
                                                                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                                 {
                                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFromRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFromRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveToRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveToRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlInsRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlInsRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlDelRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlDelRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveFromRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveFromRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveToRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveToRangeEnd"), 1, 1)
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, 1, 1)
                                                                     }
                                                                 },
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictInsRangeStart"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictInsRangeEnd"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictDelRangeStart"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictDelRangeEnd"), 0, 1, version: FileFormatVersions.Office2010)
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, 0, 1, version: FileFormatVersions.Office2010)
                                                             }
                                                         },
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "ins"), 0, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "del"), 0, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFrom"), 1, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveTo"), 1, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "contentPart"), 0, 0, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, 0, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, 0, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, 0, 0, version: FileFormatVersions.Office2010),
                                                         new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                             {
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "conflictIns"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "conflictDel"), 0, 1, version: FileFormatVersions.Office2010)
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, 0, 1, version: FileFormatVersions.Office2010)
                                                             }
                                                         }
                                                     }
@@ -4494,36 +4896,36 @@ namespace DocumentFormat.OpenXml.Math
                                                 {
                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                     {
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMathPara"), 1, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMath"), 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Math.Paragraph.ElementType, 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Math.OfficeMath.ElementType, 1, 1),
                                                         new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "acc"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "bar"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "box"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "borderBox"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "d"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "eqArr"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "f"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "func"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "groupChr"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLow"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limUpp"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "m"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "nary"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "phant"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rad"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sPre"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSub"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubSup"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSup"), 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Accent.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Bar.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Box.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.BorderBox.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Delimiter.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.EquationArray.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Fraction.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.MathFunction.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.GroupChar.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitLower.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Matrix.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Nary.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Phantom.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Radical.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Subscript.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Superscript.ElementType, 1, 1),
                                                                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                                 {
                                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "r"), 1, 1)
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Math.Run.ElementType, 1, 1)
                                                                     }
                                                                 }
                                                             }
@@ -4538,7 +4940,7 @@ namespace DocumentFormat.OpenXml.Math
                         }
                     }
                 },
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
             };
         }
 
@@ -4616,6 +5018,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class Numerator : OfficeMathArgumentType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "num");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OMathArg");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Numerator class.
         /// </summary>
@@ -4650,10 +5058,10 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:num");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "argPr"), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ArgumentProperties.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -4662,30 +5070,30 @@ namespace DocumentFormat.OpenXml.Math
                         {
                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "acc"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "bar"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "box"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "borderBox"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "d"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "eqArr"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "f"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "func"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "groupChr"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLow"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limUpp"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "m"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "nary"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "phant"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rad"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sPre"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSub"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubSup"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSup"), 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Accent.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Bar.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Box.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.BorderBox.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Delimiter.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.EquationArray.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Fraction.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.MathFunction.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.GroupChar.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitLower.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Matrix.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Nary.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Phantom.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Radical.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Subscript.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Superscript.ElementType, 1, 1),
                                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                 {
                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "r"), 1, 1)
+                                        new ElementParticle(DocumentFormat.OpenXml.Math.Run.ElementType, 1, 1)
                                     }
                                 }
                             }
@@ -4698,16 +5106,16 @@ namespace DocumentFormat.OpenXml.Math
                                 {
                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXml"), 1, 1),
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "fldSimple"), 0, 0),
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "hyperlink"), 1, 1)
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun.ElementType, 1, 1),
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.SimpleField.ElementType, 0, 0),
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.Hyperlink.ElementType, 1, 1)
                                     }
                                 },
                                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                 {
                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "sdt"), 1, 1),
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.SdtRun.ElementType, 1, 1),
                                         new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                         {
                                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -4720,9 +5128,9 @@ namespace DocumentFormat.OpenXml.Math
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "proofErr"), 0, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "permStart"), 0, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "permEnd"), 0, 1)
+                                                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, 0, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, 0, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, 0, 1)
                                                             }
                                                         },
                                                         new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -4733,47 +5141,47 @@ namespace DocumentFormat.OpenXml.Math
                                                                 {
                                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "bookmarkStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "bookmarkEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "commentRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "commentRangeEnd"), 1, 1)
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, 1, 1)
                                                                     }
                                                                 },
                                                                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                                 {
                                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFromRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFromRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveToRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveToRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlInsRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlInsRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlDelRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlDelRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveFromRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveFromRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveToRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveToRangeEnd"), 1, 1)
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, 1, 1)
                                                                     }
                                                                 },
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictInsRangeStart"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictInsRangeEnd"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictDelRangeStart"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictDelRangeEnd"), 0, 1, version: FileFormatVersions.Office2010)
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, 0, 1, version: FileFormatVersions.Office2010)
                                                             }
                                                         },
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "ins"), 0, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "del"), 0, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFrom"), 1, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveTo"), 1, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "contentPart"), 0, 0, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, 0, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, 0, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, 0, 0, version: FileFormatVersions.Office2010),
                                                         new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                             {
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "conflictIns"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "conflictDel"), 0, 1, version: FileFormatVersions.Office2010)
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, 0, 1, version: FileFormatVersions.Office2010)
                                                             }
                                                         }
                                                     }
@@ -4782,36 +5190,36 @@ namespace DocumentFormat.OpenXml.Math
                                                 {
                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                     {
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMathPara"), 1, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMath"), 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Math.Paragraph.ElementType, 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Math.OfficeMath.ElementType, 1, 1),
                                                         new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "acc"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "bar"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "box"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "borderBox"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "d"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "eqArr"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "f"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "func"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "groupChr"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLow"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limUpp"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "m"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "nary"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "phant"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rad"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sPre"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSub"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubSup"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSup"), 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Accent.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Bar.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Box.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.BorderBox.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Delimiter.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.EquationArray.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Fraction.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.MathFunction.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.GroupChar.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitLower.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Matrix.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Nary.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Phantom.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Radical.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Subscript.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Superscript.ElementType, 1, 1),
                                                                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                                 {
                                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "r"), 1, 1)
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Math.Run.ElementType, 1, 1)
                                                                     }
                                                                 }
                                                             }
@@ -4826,7 +5234,7 @@ namespace DocumentFormat.OpenXml.Math
                         }
                     }
                 },
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
             };
         }
 
@@ -4904,6 +5312,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class Denominator : OfficeMathArgumentType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "den");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OMathArg");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Denominator class.
         /// </summary>
@@ -4938,10 +5352,10 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:den");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "argPr"), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ArgumentProperties.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -4950,30 +5364,30 @@ namespace DocumentFormat.OpenXml.Math
                         {
                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "acc"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "bar"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "box"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "borderBox"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "d"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "eqArr"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "f"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "func"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "groupChr"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLow"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limUpp"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "m"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "nary"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "phant"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rad"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sPre"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSub"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubSup"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSup"), 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Accent.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Bar.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Box.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.BorderBox.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Delimiter.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.EquationArray.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Fraction.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.MathFunction.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.GroupChar.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitLower.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Matrix.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Nary.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Phantom.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Radical.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Subscript.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Superscript.ElementType, 1, 1),
                                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                 {
                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "r"), 1, 1)
+                                        new ElementParticle(DocumentFormat.OpenXml.Math.Run.ElementType, 1, 1)
                                     }
                                 }
                             }
@@ -4986,16 +5400,16 @@ namespace DocumentFormat.OpenXml.Math
                                 {
                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXml"), 1, 1),
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "fldSimple"), 0, 0),
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "hyperlink"), 1, 1)
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun.ElementType, 1, 1),
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.SimpleField.ElementType, 0, 0),
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.Hyperlink.ElementType, 1, 1)
                                     }
                                 },
                                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                 {
                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "sdt"), 1, 1),
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.SdtRun.ElementType, 1, 1),
                                         new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                         {
                                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -5008,9 +5422,9 @@ namespace DocumentFormat.OpenXml.Math
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "proofErr"), 0, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "permStart"), 0, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "permEnd"), 0, 1)
+                                                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, 0, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, 0, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, 0, 1)
                                                             }
                                                         },
                                                         new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -5021,47 +5435,47 @@ namespace DocumentFormat.OpenXml.Math
                                                                 {
                                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "bookmarkStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "bookmarkEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "commentRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "commentRangeEnd"), 1, 1)
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, 1, 1)
                                                                     }
                                                                 },
                                                                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                                 {
                                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFromRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFromRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveToRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveToRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlInsRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlInsRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlDelRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlDelRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveFromRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveFromRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveToRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveToRangeEnd"), 1, 1)
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, 1, 1)
                                                                     }
                                                                 },
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictInsRangeStart"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictInsRangeEnd"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictDelRangeStart"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictDelRangeEnd"), 0, 1, version: FileFormatVersions.Office2010)
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, 0, 1, version: FileFormatVersions.Office2010)
                                                             }
                                                         },
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "ins"), 0, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "del"), 0, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFrom"), 1, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveTo"), 1, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "contentPart"), 0, 0, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, 0, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, 0, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, 0, 0, version: FileFormatVersions.Office2010),
                                                         new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                             {
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "conflictIns"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "conflictDel"), 0, 1, version: FileFormatVersions.Office2010)
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, 0, 1, version: FileFormatVersions.Office2010)
                                                             }
                                                         }
                                                     }
@@ -5070,36 +5484,36 @@ namespace DocumentFormat.OpenXml.Math
                                                 {
                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                     {
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMathPara"), 1, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMath"), 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Math.Paragraph.ElementType, 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Math.OfficeMath.ElementType, 1, 1),
                                                         new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "acc"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "bar"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "box"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "borderBox"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "d"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "eqArr"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "f"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "func"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "groupChr"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLow"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limUpp"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "m"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "nary"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "phant"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rad"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sPre"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSub"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubSup"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSup"), 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Accent.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Bar.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Box.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.BorderBox.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Delimiter.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.EquationArray.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Fraction.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.MathFunction.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.GroupChar.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitLower.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Matrix.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Nary.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Phantom.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Radical.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Subscript.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Superscript.ElementType, 1, 1),
                                                                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                                 {
                                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "r"), 1, 1)
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Math.Run.ElementType, 1, 1)
                                                                     }
                                                                 }
                                                             }
@@ -5114,7 +5528,7 @@ namespace DocumentFormat.OpenXml.Math
                         }
                     }
                 },
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
             };
         }
 
@@ -5192,6 +5606,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class FunctionName : OfficeMathArgumentType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "fName");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OMathArg");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FunctionName class.
         /// </summary>
@@ -5226,10 +5646,10 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:fName");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "argPr"), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ArgumentProperties.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -5238,30 +5658,30 @@ namespace DocumentFormat.OpenXml.Math
                         {
                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "acc"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "bar"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "box"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "borderBox"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "d"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "eqArr"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "f"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "func"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "groupChr"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLow"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limUpp"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "m"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "nary"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "phant"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rad"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sPre"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSub"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubSup"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSup"), 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Accent.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Bar.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Box.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.BorderBox.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Delimiter.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.EquationArray.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Fraction.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.MathFunction.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.GroupChar.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitLower.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Matrix.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Nary.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Phantom.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Radical.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Subscript.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Superscript.ElementType, 1, 1),
                                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                 {
                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "r"), 1, 1)
+                                        new ElementParticle(DocumentFormat.OpenXml.Math.Run.ElementType, 1, 1)
                                     }
                                 }
                             }
@@ -5274,16 +5694,16 @@ namespace DocumentFormat.OpenXml.Math
                                 {
                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXml"), 1, 1),
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "fldSimple"), 0, 0),
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "hyperlink"), 1, 1)
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun.ElementType, 1, 1),
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.SimpleField.ElementType, 0, 0),
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.Hyperlink.ElementType, 1, 1)
                                     }
                                 },
                                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                 {
                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "sdt"), 1, 1),
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.SdtRun.ElementType, 1, 1),
                                         new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                         {
                                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -5296,9 +5716,9 @@ namespace DocumentFormat.OpenXml.Math
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "proofErr"), 0, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "permStart"), 0, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "permEnd"), 0, 1)
+                                                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, 0, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, 0, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, 0, 1)
                                                             }
                                                         },
                                                         new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -5309,47 +5729,47 @@ namespace DocumentFormat.OpenXml.Math
                                                                 {
                                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "bookmarkStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "bookmarkEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "commentRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "commentRangeEnd"), 1, 1)
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, 1, 1)
                                                                     }
                                                                 },
                                                                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                                 {
                                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFromRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFromRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveToRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveToRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlInsRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlInsRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlDelRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlDelRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveFromRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveFromRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveToRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveToRangeEnd"), 1, 1)
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, 1, 1)
                                                                     }
                                                                 },
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictInsRangeStart"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictInsRangeEnd"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictDelRangeStart"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictDelRangeEnd"), 0, 1, version: FileFormatVersions.Office2010)
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, 0, 1, version: FileFormatVersions.Office2010)
                                                             }
                                                         },
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "ins"), 0, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "del"), 0, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFrom"), 1, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveTo"), 1, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "contentPart"), 0, 0, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, 0, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, 0, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, 0, 0, version: FileFormatVersions.Office2010),
                                                         new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                             {
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "conflictIns"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "conflictDel"), 0, 1, version: FileFormatVersions.Office2010)
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, 0, 1, version: FileFormatVersions.Office2010)
                                                             }
                                                         }
                                                     }
@@ -5358,36 +5778,36 @@ namespace DocumentFormat.OpenXml.Math
                                                 {
                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                     {
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMathPara"), 1, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMath"), 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Math.Paragraph.ElementType, 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Math.OfficeMath.ElementType, 1, 1),
                                                         new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "acc"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "bar"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "box"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "borderBox"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "d"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "eqArr"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "f"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "func"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "groupChr"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLow"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limUpp"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "m"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "nary"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "phant"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rad"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sPre"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSub"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubSup"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSup"), 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Accent.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Bar.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Box.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.BorderBox.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Delimiter.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.EquationArray.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Fraction.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.MathFunction.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.GroupChar.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitLower.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Matrix.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Nary.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Phantom.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Radical.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Subscript.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Superscript.ElementType, 1, 1),
                                                                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                                 {
                                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "r"), 1, 1)
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Math.Run.ElementType, 1, 1)
                                                                     }
                                                                 }
                                                             }
@@ -5402,7 +5822,7 @@ namespace DocumentFormat.OpenXml.Math
                         }
                     }
                 },
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
             };
         }
 
@@ -5480,6 +5900,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class Limit : OfficeMathArgumentType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "lim");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OMathArg");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Limit class.
         /// </summary>
@@ -5514,10 +5940,10 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:lim");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "argPr"), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ArgumentProperties.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -5526,30 +5952,30 @@ namespace DocumentFormat.OpenXml.Math
                         {
                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "acc"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "bar"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "box"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "borderBox"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "d"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "eqArr"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "f"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "func"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "groupChr"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLow"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limUpp"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "m"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "nary"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "phant"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rad"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sPre"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSub"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubSup"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSup"), 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Accent.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Bar.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Box.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.BorderBox.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Delimiter.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.EquationArray.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Fraction.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.MathFunction.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.GroupChar.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitLower.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Matrix.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Nary.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Phantom.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Radical.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Subscript.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Superscript.ElementType, 1, 1),
                                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                 {
                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "r"), 1, 1)
+                                        new ElementParticle(DocumentFormat.OpenXml.Math.Run.ElementType, 1, 1)
                                     }
                                 }
                             }
@@ -5562,16 +5988,16 @@ namespace DocumentFormat.OpenXml.Math
                                 {
                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXml"), 1, 1),
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "fldSimple"), 0, 0),
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "hyperlink"), 1, 1)
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun.ElementType, 1, 1),
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.SimpleField.ElementType, 0, 0),
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.Hyperlink.ElementType, 1, 1)
                                     }
                                 },
                                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                 {
                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "sdt"), 1, 1),
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.SdtRun.ElementType, 1, 1),
                                         new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                         {
                                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -5584,9 +6010,9 @@ namespace DocumentFormat.OpenXml.Math
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "proofErr"), 0, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "permStart"), 0, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "permEnd"), 0, 1)
+                                                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, 0, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, 0, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, 0, 1)
                                                             }
                                                         },
                                                         new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -5597,47 +6023,47 @@ namespace DocumentFormat.OpenXml.Math
                                                                 {
                                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "bookmarkStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "bookmarkEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "commentRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "commentRangeEnd"), 1, 1)
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, 1, 1)
                                                                     }
                                                                 },
                                                                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                                 {
                                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFromRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFromRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveToRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveToRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlInsRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlInsRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlDelRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlDelRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveFromRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveFromRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveToRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveToRangeEnd"), 1, 1)
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, 1, 1)
                                                                     }
                                                                 },
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictInsRangeStart"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictInsRangeEnd"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictDelRangeStart"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictDelRangeEnd"), 0, 1, version: FileFormatVersions.Office2010)
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, 0, 1, version: FileFormatVersions.Office2010)
                                                             }
                                                         },
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "ins"), 0, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "del"), 0, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFrom"), 1, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveTo"), 1, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "contentPart"), 0, 0, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, 0, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, 0, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, 0, 0, version: FileFormatVersions.Office2010),
                                                         new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                             {
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "conflictIns"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "conflictDel"), 0, 1, version: FileFormatVersions.Office2010)
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, 0, 1, version: FileFormatVersions.Office2010)
                                                             }
                                                         }
                                                     }
@@ -5646,36 +6072,36 @@ namespace DocumentFormat.OpenXml.Math
                                                 {
                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                     {
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMathPara"), 1, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMath"), 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Math.Paragraph.ElementType, 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Math.OfficeMath.ElementType, 1, 1),
                                                         new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "acc"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "bar"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "box"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "borderBox"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "d"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "eqArr"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "f"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "func"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "groupChr"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLow"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limUpp"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "m"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "nary"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "phant"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rad"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sPre"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSub"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubSup"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSup"), 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Accent.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Bar.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Box.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.BorderBox.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Delimiter.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.EquationArray.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Fraction.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.MathFunction.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.GroupChar.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitLower.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Matrix.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Nary.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Phantom.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Radical.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Subscript.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Superscript.ElementType, 1, 1),
                                                                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                                 {
                                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "r"), 1, 1)
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Math.Run.ElementType, 1, 1)
                                                                     }
                                                                 }
                                                             }
@@ -5690,7 +6116,7 @@ namespace DocumentFormat.OpenXml.Math
                         }
                     }
                 },
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
             };
         }
 
@@ -5768,6 +6194,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class SubArgument : OfficeMathArgumentType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sub");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OMathArg");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SubArgument class.
         /// </summary>
@@ -5802,10 +6234,10 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:sub");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "argPr"), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ArgumentProperties.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -5814,30 +6246,30 @@ namespace DocumentFormat.OpenXml.Math
                         {
                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "acc"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "bar"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "box"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "borderBox"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "d"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "eqArr"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "f"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "func"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "groupChr"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLow"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limUpp"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "m"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "nary"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "phant"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rad"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sPre"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSub"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubSup"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSup"), 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Accent.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Bar.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Box.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.BorderBox.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Delimiter.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.EquationArray.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Fraction.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.MathFunction.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.GroupChar.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitLower.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Matrix.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Nary.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Phantom.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Radical.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Subscript.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Superscript.ElementType, 1, 1),
                                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                 {
                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "r"), 1, 1)
+                                        new ElementParticle(DocumentFormat.OpenXml.Math.Run.ElementType, 1, 1)
                                     }
                                 }
                             }
@@ -5850,16 +6282,16 @@ namespace DocumentFormat.OpenXml.Math
                                 {
                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXml"), 1, 1),
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "fldSimple"), 0, 0),
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "hyperlink"), 1, 1)
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun.ElementType, 1, 1),
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.SimpleField.ElementType, 0, 0),
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.Hyperlink.ElementType, 1, 1)
                                     }
                                 },
                                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                 {
                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "sdt"), 1, 1),
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.SdtRun.ElementType, 1, 1),
                                         new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                         {
                                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -5872,9 +6304,9 @@ namespace DocumentFormat.OpenXml.Math
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "proofErr"), 0, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "permStart"), 0, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "permEnd"), 0, 1)
+                                                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, 0, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, 0, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, 0, 1)
                                                             }
                                                         },
                                                         new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -5885,47 +6317,47 @@ namespace DocumentFormat.OpenXml.Math
                                                                 {
                                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "bookmarkStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "bookmarkEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "commentRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "commentRangeEnd"), 1, 1)
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, 1, 1)
                                                                     }
                                                                 },
                                                                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                                 {
                                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFromRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFromRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveToRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveToRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlInsRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlInsRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlDelRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlDelRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveFromRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveFromRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveToRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveToRangeEnd"), 1, 1)
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, 1, 1)
                                                                     }
                                                                 },
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictInsRangeStart"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictInsRangeEnd"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictDelRangeStart"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictDelRangeEnd"), 0, 1, version: FileFormatVersions.Office2010)
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, 0, 1, version: FileFormatVersions.Office2010)
                                                             }
                                                         },
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "ins"), 0, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "del"), 0, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFrom"), 1, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveTo"), 1, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "contentPart"), 0, 0, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, 0, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, 0, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, 0, 0, version: FileFormatVersions.Office2010),
                                                         new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                             {
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "conflictIns"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "conflictDel"), 0, 1, version: FileFormatVersions.Office2010)
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, 0, 1, version: FileFormatVersions.Office2010)
                                                             }
                                                         }
                                                     }
@@ -5934,36 +6366,36 @@ namespace DocumentFormat.OpenXml.Math
                                                 {
                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                     {
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMathPara"), 1, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMath"), 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Math.Paragraph.ElementType, 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Math.OfficeMath.ElementType, 1, 1),
                                                         new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "acc"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "bar"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "box"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "borderBox"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "d"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "eqArr"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "f"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "func"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "groupChr"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLow"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limUpp"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "m"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "nary"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "phant"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rad"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sPre"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSub"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubSup"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSup"), 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Accent.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Bar.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Box.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.BorderBox.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Delimiter.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.EquationArray.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Fraction.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.MathFunction.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.GroupChar.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitLower.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Matrix.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Nary.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Phantom.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Radical.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Subscript.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Superscript.ElementType, 1, 1),
                                                                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                                 {
                                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "r"), 1, 1)
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Math.Run.ElementType, 1, 1)
                                                                     }
                                                                 }
                                                             }
@@ -5978,7 +6410,7 @@ namespace DocumentFormat.OpenXml.Math
                         }
                     }
                 },
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
             };
         }
 
@@ -6056,6 +6488,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class SuperArgument : OfficeMathArgumentType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sup");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OMathArg");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SuperArgument class.
         /// </summary>
@@ -6090,10 +6528,10 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:sup");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "argPr"), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ArgumentProperties.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -6102,30 +6540,30 @@ namespace DocumentFormat.OpenXml.Math
                         {
                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "acc"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "bar"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "box"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "borderBox"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "d"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "eqArr"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "f"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "func"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "groupChr"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLow"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limUpp"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "m"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "nary"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "phant"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rad"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sPre"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSub"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubSup"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSup"), 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Accent.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Bar.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Box.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.BorderBox.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Delimiter.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.EquationArray.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Fraction.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.MathFunction.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.GroupChar.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitLower.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Matrix.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Nary.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Phantom.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Radical.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Subscript.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Superscript.ElementType, 1, 1),
                                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                 {
                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "r"), 1, 1)
+                                        new ElementParticle(DocumentFormat.OpenXml.Math.Run.ElementType, 1, 1)
                                     }
                                 }
                             }
@@ -6138,16 +6576,16 @@ namespace DocumentFormat.OpenXml.Math
                                 {
                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXml"), 1, 1),
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "fldSimple"), 0, 0),
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "hyperlink"), 1, 1)
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun.ElementType, 1, 1),
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.SimpleField.ElementType, 0, 0),
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.Hyperlink.ElementType, 1, 1)
                                     }
                                 },
                                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                 {
                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "sdt"), 1, 1),
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.SdtRun.ElementType, 1, 1),
                                         new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                         {
                                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -6160,9 +6598,9 @@ namespace DocumentFormat.OpenXml.Math
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "proofErr"), 0, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "permStart"), 0, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "permEnd"), 0, 1)
+                                                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, 0, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, 0, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, 0, 1)
                                                             }
                                                         },
                                                         new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -6173,47 +6611,47 @@ namespace DocumentFormat.OpenXml.Math
                                                                 {
                                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "bookmarkStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "bookmarkEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "commentRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "commentRangeEnd"), 1, 1)
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, 1, 1)
                                                                     }
                                                                 },
                                                                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                                 {
                                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFromRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFromRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveToRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveToRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlInsRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlInsRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlDelRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlDelRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveFromRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveFromRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveToRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveToRangeEnd"), 1, 1)
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, 1, 1)
                                                                     }
                                                                 },
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictInsRangeStart"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictInsRangeEnd"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictDelRangeStart"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictDelRangeEnd"), 0, 1, version: FileFormatVersions.Office2010)
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, 0, 1, version: FileFormatVersions.Office2010)
                                                             }
                                                         },
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "ins"), 0, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "del"), 0, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFrom"), 1, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveTo"), 1, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "contentPart"), 0, 0, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, 0, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, 0, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, 0, 0, version: FileFormatVersions.Office2010),
                                                         new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                             {
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "conflictIns"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "conflictDel"), 0, 1, version: FileFormatVersions.Office2010)
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, 0, 1, version: FileFormatVersions.Office2010)
                                                             }
                                                         }
                                                     }
@@ -6222,36 +6660,36 @@ namespace DocumentFormat.OpenXml.Math
                                                 {
                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                     {
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMathPara"), 1, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMath"), 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Math.Paragraph.ElementType, 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Math.OfficeMath.ElementType, 1, 1),
                                                         new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "acc"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "bar"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "box"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "borderBox"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "d"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "eqArr"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "f"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "func"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "groupChr"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLow"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limUpp"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "m"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "nary"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "phant"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rad"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sPre"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSub"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubSup"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSup"), 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Accent.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Bar.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Box.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.BorderBox.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Delimiter.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.EquationArray.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Fraction.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.MathFunction.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.GroupChar.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitLower.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Matrix.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Nary.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Phantom.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Radical.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Subscript.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Superscript.ElementType, 1, 1),
                                                                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                                 {
                                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "r"), 1, 1)
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Math.Run.ElementType, 1, 1)
                                                                     }
                                                                 }
                                                             }
@@ -6266,7 +6704,7 @@ namespace DocumentFormat.OpenXml.Math
                         }
                     }
                 },
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
             };
         }
 
@@ -6344,6 +6782,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class Degree : OfficeMathArgumentType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "deg");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OMathArg");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Degree class.
         /// </summary>
@@ -6378,10 +6822,10 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:deg");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "argPr"), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ArgumentProperties.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -6390,30 +6834,30 @@ namespace DocumentFormat.OpenXml.Math
                         {
                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "acc"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "bar"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "box"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "borderBox"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "d"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "eqArr"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "f"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "func"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "groupChr"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLow"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limUpp"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "m"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "nary"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "phant"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rad"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sPre"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSub"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubSup"), 1, 1),
-                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSup"), 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Accent.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Bar.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Box.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.BorderBox.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Delimiter.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.EquationArray.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Fraction.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.MathFunction.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.GroupChar.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitLower.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Matrix.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Nary.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Phantom.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Radical.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Subscript.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Math.Superscript.ElementType, 1, 1),
                                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                 {
                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "r"), 1, 1)
+                                        new ElementParticle(DocumentFormat.OpenXml.Math.Run.ElementType, 1, 1)
                                     }
                                 }
                             }
@@ -6426,16 +6870,16 @@ namespace DocumentFormat.OpenXml.Math
                                 {
                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXml"), 1, 1),
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "fldSimple"), 0, 0),
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "hyperlink"), 1, 1)
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun.ElementType, 1, 1),
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.SimpleField.ElementType, 0, 0),
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.Hyperlink.ElementType, 1, 1)
                                     }
                                 },
                                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                 {
                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                     {
-                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "sdt"), 1, 1),
+                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.SdtRun.ElementType, 1, 1),
                                         new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                         {
                                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -6448,9 +6892,9 @@ namespace DocumentFormat.OpenXml.Math
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "proofErr"), 0, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "permStart"), 0, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "permEnd"), 0, 1)
+                                                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, 0, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, 0, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, 0, 1)
                                                             }
                                                         },
                                                         new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -6461,47 +6905,47 @@ namespace DocumentFormat.OpenXml.Math
                                                                 {
                                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "bookmarkStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "bookmarkEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "commentRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "commentRangeEnd"), 1, 1)
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, 1, 1)
                                                                     }
                                                                 },
                                                                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                                 {
                                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFromRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFromRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveToRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveToRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlInsRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlInsRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlDelRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlDelRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveFromRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveFromRangeEnd"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveToRangeStart"), 1, 1),
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "customXmlMoveToRangeEnd"), 1, 1)
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, 1, 1),
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, 1, 1)
                                                                     }
                                                                 },
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictInsRangeStart"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictInsRangeEnd"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictDelRangeStart"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "customXmlConflictDelRangeEnd"), 0, 1, version: FileFormatVersions.Office2010)
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, 0, 1, version: FileFormatVersions.Office2010)
                                                             }
                                                         },
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "ins"), 0, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "del"), 0, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveFrom"), 1, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "moveTo"), 1, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "contentPart"), 0, 0, version: FileFormatVersions.Office2010),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, 0, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, 0, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, 0, 0, version: FileFormatVersions.Office2010),
                                                         new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                                             {
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "conflictIns"), 0, 1, version: FileFormatVersions.Office2010),
-                                                                new ElementParticle(new("http://schemas.microsoft.com/office/word/2010/wordml", "conflictDel"), 0, 1, version: FileFormatVersions.Office2010)
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, 0, 1, version: FileFormatVersions.Office2010)
                                                             }
                                                         }
                                                     }
@@ -6510,36 +6954,36 @@ namespace DocumentFormat.OpenXml.Math
                                                 {
                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                     {
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMathPara"), 1, 1),
-                                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMath"), 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Math.Paragraph.ElementType, 1, 1),
+                                                        new ElementParticle(DocumentFormat.OpenXml.Math.OfficeMath.ElementType, 1, 1),
                                                         new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                         {
                                                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                             {
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "acc"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "bar"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "box"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "borderBox"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "d"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "eqArr"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "f"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "func"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "groupChr"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLow"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limUpp"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "m"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "nary"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "phant"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rad"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sPre"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSub"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubSup"), 1, 1),
-                                                                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSup"), 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Accent.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Bar.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Box.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.BorderBox.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Delimiter.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.EquationArray.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Fraction.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.MathFunction.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.GroupChar.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitLower.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Matrix.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Nary.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Phantom.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Radical.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Subscript.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, 1, 1),
+                                                                new ElementParticle(DocumentFormat.OpenXml.Math.Superscript.ElementType, 1, 1),
                                                                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                                 {
                                                                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                     {
-                                                                        new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "r"), 1, 1)
+                                                                        new ElementParticle(DocumentFormat.OpenXml.Math.Run.ElementType, 1, 1)
                                                                     }
                                                                 }
                                                             }
@@ -6554,7 +6998,7 @@ namespace DocumentFormat.OpenXml.Math
                         }
                     }
                 },
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
             };
         }
 
@@ -6632,6 +7076,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public abstract partial class OfficeMathArgumentType : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OMathArg");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OfficeMathArgumentType class.
         /// </summary>
@@ -6735,8 +7185,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ArgumentProperties? ArgumentProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ArgumentProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "argPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "argPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ArgumentProperties.ElementType) as DocumentFormat.OpenXml.Math.ArgumentProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ArgumentProperties.ElementType);
         }
     }
 
@@ -6747,6 +7197,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class Position : TopBottomType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "pos");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_TopBot");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Position class.
         /// </summary>
@@ -6757,7 +7213,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:pos");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -6771,6 +7227,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class VerticalJustification : TopBottomType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "vertJc");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_TopBot");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the VerticalJustification class.
         /// </summary>
@@ -6781,7 +7243,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:vertJc");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -6795,6 +7257,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public abstract partial class TopBottomType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_TopBot");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TopBottomType class.
         /// </summary>
@@ -6840,6 +7308,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class BarProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "barPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_BarPr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BarProperties class.
         /// </summary>
@@ -6874,13 +7348,13 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:barPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Math.Position>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "pos"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.Position.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
             };
         }
 
@@ -6893,8 +7367,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Position? Position
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Position>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "pos"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "pos"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Position.ElementType) as DocumentFormat.OpenXml.Math.Position;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Position.ElementType);
         }
 
         /// <summary>
@@ -6906,8 +7380,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ControlProperties.ElementType) as DocumentFormat.OpenXml.Math.ControlProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ControlProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -6932,6 +7406,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class BoxProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "boxPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_BoxPr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BoxProperties class.
         /// </summary>
@@ -6966,7 +7446,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:boxPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Math.Break>();
             builder.AddChild<DocumentFormat.OpenXml.Math.OperatorEmulator>();
@@ -6975,12 +7455,12 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<DocumentFormat.OpenXml.Math.Alignment>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "opEmu"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "noBreak"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "diff"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "brk"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "aln"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.OperatorEmulator.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.NoBreak.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Differential.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Break.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Alignment.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
             };
         }
 
@@ -6993,8 +7473,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.OperatorEmulator? OperatorEmulator
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.OperatorEmulator>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "opEmu"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "opEmu"));
+            get => GetElement(DocumentFormat.OpenXml.Math.OperatorEmulator.ElementType) as DocumentFormat.OpenXml.Math.OperatorEmulator;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.OperatorEmulator.ElementType);
         }
 
         /// <summary>
@@ -7006,8 +7486,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.NoBreak? NoBreak
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.NoBreak>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "noBreak"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "noBreak"));
+            get => GetElement(DocumentFormat.OpenXml.Math.NoBreak.ElementType) as DocumentFormat.OpenXml.Math.NoBreak;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.NoBreak.ElementType);
         }
 
         /// <summary>
@@ -7019,8 +7499,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Differential? Differential
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Differential>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "diff"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "diff"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Differential.ElementType) as DocumentFormat.OpenXml.Math.Differential;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Differential.ElementType);
         }
 
         /// <summary>
@@ -7032,8 +7512,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Break? Break
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Break>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "brk"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "brk"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Break.ElementType) as DocumentFormat.OpenXml.Math.Break;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Break.ElementType);
         }
 
         /// <summary>
@@ -7045,8 +7525,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Alignment? Alignment
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Alignment>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "aln"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "aln"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Alignment.ElementType) as DocumentFormat.OpenXml.Math.Alignment;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Alignment.ElementType);
         }
 
         /// <summary>
@@ -7058,8 +7538,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ControlProperties.ElementType) as DocumentFormat.OpenXml.Math.ControlProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ControlProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -7087,6 +7567,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class BorderBoxProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "borderBoxPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_BorderBoxPr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BorderBoxProperties class.
         /// </summary>
@@ -7121,7 +7607,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:borderBoxPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Math.HideTop>();
             builder.AddChild<DocumentFormat.OpenXml.Math.HideBottom>();
@@ -7133,15 +7619,15 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<DocumentFormat.OpenXml.Math.StrikeTopLeftToBottomRight>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "hideTop"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "hideBot"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "hideLeft"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "hideRight"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "strikeH"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "strikeV"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "strikeBLTR"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "strikeTLBR"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.HideTop.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.HideBottom.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.HideLeft.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.HideRight.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.StrikeHorizontal.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.StrikeVertical.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.StrikeBottomLeftToTopRight.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.StrikeTopLeftToBottomRight.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
             };
         }
 
@@ -7154,8 +7640,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.HideTop? HideTop
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.HideTop>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "hideTop"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "hideTop"));
+            get => GetElement(DocumentFormat.OpenXml.Math.HideTop.ElementType) as DocumentFormat.OpenXml.Math.HideTop;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.HideTop.ElementType);
         }
 
         /// <summary>
@@ -7167,8 +7653,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.HideBottom? HideBottom
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.HideBottom>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "hideBot"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "hideBot"));
+            get => GetElement(DocumentFormat.OpenXml.Math.HideBottom.ElementType) as DocumentFormat.OpenXml.Math.HideBottom;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.HideBottom.ElementType);
         }
 
         /// <summary>
@@ -7180,8 +7666,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.HideLeft? HideLeft
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.HideLeft>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "hideLeft"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "hideLeft"));
+            get => GetElement(DocumentFormat.OpenXml.Math.HideLeft.ElementType) as DocumentFormat.OpenXml.Math.HideLeft;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.HideLeft.ElementType);
         }
 
         /// <summary>
@@ -7193,8 +7679,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.HideRight? HideRight
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.HideRight>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "hideRight"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "hideRight"));
+            get => GetElement(DocumentFormat.OpenXml.Math.HideRight.ElementType) as DocumentFormat.OpenXml.Math.HideRight;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.HideRight.ElementType);
         }
 
         /// <summary>
@@ -7206,8 +7692,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.StrikeHorizontal? StrikeHorizontal
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.StrikeHorizontal>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "strikeH"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "strikeH"));
+            get => GetElement(DocumentFormat.OpenXml.Math.StrikeHorizontal.ElementType) as DocumentFormat.OpenXml.Math.StrikeHorizontal;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.StrikeHorizontal.ElementType);
         }
 
         /// <summary>
@@ -7219,8 +7705,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.StrikeVertical? StrikeVertical
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.StrikeVertical>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "strikeV"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "strikeV"));
+            get => GetElement(DocumentFormat.OpenXml.Math.StrikeVertical.ElementType) as DocumentFormat.OpenXml.Math.StrikeVertical;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.StrikeVertical.ElementType);
         }
 
         /// <summary>
@@ -7232,8 +7718,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.StrikeBottomLeftToTopRight? StrikeBottomLeftToTopRight
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.StrikeBottomLeftToTopRight>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "strikeBLTR"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "strikeBLTR"));
+            get => GetElement(DocumentFormat.OpenXml.Math.StrikeBottomLeftToTopRight.ElementType) as DocumentFormat.OpenXml.Math.StrikeBottomLeftToTopRight;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.StrikeBottomLeftToTopRight.ElementType);
         }
 
         /// <summary>
@@ -7245,8 +7731,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.StrikeTopLeftToBottomRight? StrikeTopLeftToBottomRight
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.StrikeTopLeftToBottomRight>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "strikeTLBR"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "strikeTLBR"));
+            get => GetElement(DocumentFormat.OpenXml.Math.StrikeTopLeftToBottomRight.ElementType) as DocumentFormat.OpenXml.Math.StrikeTopLeftToBottomRight;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.StrikeTopLeftToBottomRight.ElementType);
         }
 
         /// <summary>
@@ -7258,8 +7744,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ControlProperties.ElementType) as DocumentFormat.OpenXml.Math.ControlProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ControlProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -7273,6 +7759,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class Shape : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "shp");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_Shp");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Shape class.
         /// </summary>
@@ -7296,7 +7788,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:shp");
+            builder.SetSchema(ElementType);
             builder.AddElement<Shape>()
                 .AddAttribute("m:val", a => a.Val, aBuilder =>
                 {
@@ -7326,6 +7818,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class DelimiterProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "dPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_DPr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DelimiterProperties class.
         /// </summary>
@@ -7360,7 +7858,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:dPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.BeginChar>();
             builder.AddChild<DocumentFormat.OpenXml.Math.SeparatorChar>();
             builder.AddChild<DocumentFormat.OpenXml.Math.EndChar>();
@@ -7369,12 +7867,12 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<DocumentFormat.OpenXml.Math.Shape>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "begChr"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sepChr"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "endChr"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "grow"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "shp"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.BeginChar.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.SeparatorChar.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.EndChar.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.GrowOperators.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Shape.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
             };
         }
 
@@ -7387,8 +7885,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.BeginChar? BeginChar
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.BeginChar>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "begChr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "begChr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.BeginChar.ElementType) as DocumentFormat.OpenXml.Math.BeginChar;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.BeginChar.ElementType);
         }
 
         /// <summary>
@@ -7400,8 +7898,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.SeparatorChar? SeparatorChar
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.SeparatorChar>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sepChr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sepChr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.SeparatorChar.ElementType) as DocumentFormat.OpenXml.Math.SeparatorChar;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.SeparatorChar.ElementType);
         }
 
         /// <summary>
@@ -7413,8 +7911,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.EndChar? EndChar
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.EndChar>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "endChr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "endChr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.EndChar.ElementType) as DocumentFormat.OpenXml.Math.EndChar;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.EndChar.ElementType);
         }
 
         /// <summary>
@@ -7426,8 +7924,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.GrowOperators? GrowOperators
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.GrowOperators>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "grow"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "grow"));
+            get => GetElement(DocumentFormat.OpenXml.Math.GrowOperators.ElementType) as DocumentFormat.OpenXml.Math.GrowOperators;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.GrowOperators.ElementType);
         }
 
         /// <summary>
@@ -7439,8 +7937,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Shape? Shape
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Shape>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "shp"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "shp"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Shape.ElementType) as DocumentFormat.OpenXml.Math.Shape;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Shape.ElementType);
         }
 
         /// <summary>
@@ -7452,8 +7950,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ControlProperties.ElementType) as DocumentFormat.OpenXml.Math.ControlProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ControlProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -7467,6 +7965,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class BaseJustification : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "baseJc");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_YAlign");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BaseJustification class.
         /// </summary>
@@ -7490,7 +7994,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:baseJc");
+            builder.SetSchema(ElementType);
             builder.AddElement<BaseJustification>()
                 .AddAttribute("m:val", a => a.Val, aBuilder =>
                 {
@@ -7509,6 +8013,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class RowSpacingRule : SpacingRuleType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rSpRule");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_SpacingRule");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RowSpacingRule class.
         /// </summary>
@@ -7519,7 +8029,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:rSpRule");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -7533,6 +8043,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class ColumnGapRule : SpacingRuleType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "cGpRule");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_SpacingRule");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ColumnGapRule class.
         /// </summary>
@@ -7543,7 +8059,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:cGpRule");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -7557,6 +8073,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public abstract partial class SpacingRuleType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_SpacingRule");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SpacingRuleType class.
         /// </summary>
@@ -7596,6 +8118,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class RowSpacing : UnsignedShortType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rSp");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_UnSignedShort");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RowSpacing class.
         /// </summary>
@@ -7606,7 +8134,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:rSp");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -7620,6 +8148,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class ColumnGap : UnsignedShortType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "cGp");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_UnSignedShort");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ColumnGap class.
         /// </summary>
@@ -7630,7 +8164,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:cGp");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -7644,6 +8178,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public abstract partial class UnsignedShortType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_UnSignedShort");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the UnsignedShortType class.
         /// </summary>
@@ -7693,6 +8233,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class EquationArrayProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "eqArrPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_EqArrPr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the EquationArrayProperties class.
         /// </summary>
@@ -7727,7 +8273,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:eqArrPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Math.MaxDistribution>();
             builder.AddChild<DocumentFormat.OpenXml.Math.ObjectDistribution>();
@@ -7736,12 +8282,12 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<DocumentFormat.OpenXml.Math.BaseJustification>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "baseJc"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "maxDist"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "objDist"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rSpRule"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rSp"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.BaseJustification.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.MaxDistribution.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ObjectDistribution.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.RowSpacingRule.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.RowSpacing.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
             };
         }
 
@@ -7754,8 +8300,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.BaseJustification? BaseJustification
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.BaseJustification>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "baseJc"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "baseJc"));
+            get => GetElement(DocumentFormat.OpenXml.Math.BaseJustification.ElementType) as DocumentFormat.OpenXml.Math.BaseJustification;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.BaseJustification.ElementType);
         }
 
         /// <summary>
@@ -7767,8 +8313,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.MaxDistribution? MaxDistribution
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.MaxDistribution>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "maxDist"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "maxDist"));
+            get => GetElement(DocumentFormat.OpenXml.Math.MaxDistribution.ElementType) as DocumentFormat.OpenXml.Math.MaxDistribution;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.MaxDistribution.ElementType);
         }
 
         /// <summary>
@@ -7780,8 +8326,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ObjectDistribution? ObjectDistribution
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ObjectDistribution>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "objDist"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "objDist"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ObjectDistribution.ElementType) as DocumentFormat.OpenXml.Math.ObjectDistribution;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ObjectDistribution.ElementType);
         }
 
         /// <summary>
@@ -7793,8 +8339,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.RowSpacingRule? RowSpacingRule
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.RowSpacingRule>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rSpRule"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rSpRule"));
+            get => GetElement(DocumentFormat.OpenXml.Math.RowSpacingRule.ElementType) as DocumentFormat.OpenXml.Math.RowSpacingRule;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.RowSpacingRule.ElementType);
         }
 
         /// <summary>
@@ -7806,8 +8352,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.RowSpacing? RowSpacing
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.RowSpacing>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rSp"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rSp"));
+            get => GetElement(DocumentFormat.OpenXml.Math.RowSpacing.ElementType) as DocumentFormat.OpenXml.Math.RowSpacing;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.RowSpacing.ElementType);
         }
 
         /// <summary>
@@ -7819,8 +8365,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ControlProperties.ElementType) as DocumentFormat.OpenXml.Math.ControlProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ControlProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -7834,6 +8380,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class FractionType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "type");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_FType");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FractionType class.
         /// </summary>
@@ -7857,7 +8409,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:type");
+            builder.SetSchema(ElementType);
             builder.AddElement<FractionType>()
                 .AddAttribute("m:val", a => a.Val, aBuilder =>
                 {
@@ -7883,6 +8435,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class FractionProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "fPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_FPr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FractionProperties class.
         /// </summary>
@@ -7917,13 +8475,13 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:fPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Math.FractionType>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "type"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.FractionType.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
             };
         }
 
@@ -7936,8 +8494,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.FractionType? FractionType
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.FractionType>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "type"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "type"));
+            get => GetElement(DocumentFormat.OpenXml.Math.FractionType.ElementType) as DocumentFormat.OpenXml.Math.FractionType;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.FractionType.ElementType);
         }
 
         /// <summary>
@@ -7949,8 +8507,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ControlProperties.ElementType) as DocumentFormat.OpenXml.Math.ControlProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ControlProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -7970,6 +8528,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class FunctionProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "funcPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_FuncPr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FunctionProperties class.
         /// </summary>
@@ -8004,11 +8568,11 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:funcPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
             };
         }
 
@@ -8021,8 +8585,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ControlProperties.ElementType) as DocumentFormat.OpenXml.Math.ControlProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ControlProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -8045,6 +8609,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class GroupCharProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "groupChrPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_GroupChrPr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the GroupCharProperties class.
         /// </summary>
@@ -8079,17 +8649,17 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:groupChrPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.AccentChar>();
             builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Math.Position>();
             builder.AddChild<DocumentFormat.OpenXml.Math.VerticalJustification>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "chr"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "pos"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "vertJc"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.AccentChar.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Position.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.VerticalJustification.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
             };
         }
 
@@ -8102,8 +8672,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.AccentChar? AccentChar
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.AccentChar>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "chr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "chr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.AccentChar.ElementType) as DocumentFormat.OpenXml.Math.AccentChar;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.AccentChar.ElementType);
         }
 
         /// <summary>
@@ -8115,8 +8685,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Position? Position
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Position>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "pos"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "pos"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Position.ElementType) as DocumentFormat.OpenXml.Math.Position;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Position.ElementType);
         }
 
         /// <summary>
@@ -8128,8 +8698,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.VerticalJustification? VerticalJustification
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.VerticalJustification>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "vertJc"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "vertJc"));
+            get => GetElement(DocumentFormat.OpenXml.Math.VerticalJustification.ElementType) as DocumentFormat.OpenXml.Math.VerticalJustification;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.VerticalJustification.ElementType);
         }
 
         /// <summary>
@@ -8141,8 +8711,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ControlProperties.ElementType) as DocumentFormat.OpenXml.Math.ControlProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ControlProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -8162,6 +8732,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class LimitLowerProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLowPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_LimLowPr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LimitLowerProperties class.
         /// </summary>
@@ -8196,11 +8772,11 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:limLowPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
             };
         }
 
@@ -8213,8 +8789,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ControlProperties.ElementType) as DocumentFormat.OpenXml.Math.ControlProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ControlProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -8234,6 +8810,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class LimitUpperProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limUppPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_LimUppPr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LimitUpperProperties class.
         /// </summary>
@@ -8268,11 +8850,11 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:limUppPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
             };
         }
 
@@ -8285,8 +8867,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ControlProperties.ElementType) as DocumentFormat.OpenXml.Math.ControlProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ControlProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -8300,6 +8882,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class MatrixColumnCount : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "count");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_Integer64");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MatrixColumnCount class.
         /// </summary>
@@ -8323,7 +8911,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:count");
+            builder.SetSchema(ElementType);
             builder.AddElement<MatrixColumnCount>()
                 .AddAttribute("m:val", a => a.Val, aBuilder =>
                 {
@@ -8343,6 +8931,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class MatrixColumnJustification : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "mcJc");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_XAlign");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MatrixColumnJustification class.
         /// </summary>
@@ -8366,7 +8960,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:mcJc");
+            builder.SetSchema(ElementType);
             builder.AddElement<MatrixColumnJustification>()
                 .AddAttribute("m:val", a => a.Val, aBuilder =>
                 {
@@ -8392,6 +8986,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class MatrixColumnProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "mcPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_MCPr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MatrixColumnProperties class.
         /// </summary>
@@ -8426,13 +9026,13 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:mcPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.MatrixColumnCount>();
             builder.AddChild<DocumentFormat.OpenXml.Math.MatrixColumnJustification>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "count"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "mcJc"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.MatrixColumnCount.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.MatrixColumnJustification.ElementType, 0, 1)
             };
         }
 
@@ -8445,8 +9045,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.MatrixColumnCount? MatrixColumnCount
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.MatrixColumnCount>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "count"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "count"));
+            get => GetElement(DocumentFormat.OpenXml.Math.MatrixColumnCount.ElementType) as DocumentFormat.OpenXml.Math.MatrixColumnCount;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.MatrixColumnCount.ElementType);
         }
 
         /// <summary>
@@ -8458,8 +9058,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.MatrixColumnJustification? MatrixColumnJustification
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.MatrixColumnJustification>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "mcJc"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "mcJc"));
+            get => GetElement(DocumentFormat.OpenXml.Math.MatrixColumnJustification.ElementType) as DocumentFormat.OpenXml.Math.MatrixColumnJustification;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.MatrixColumnJustification.ElementType);
         }
 
         /// <inheritdoc/>
@@ -8479,6 +9079,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class MatrixColumn : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "mc");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_MC");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MatrixColumn class.
         /// </summary>
@@ -8513,11 +9119,11 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:mc");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.MatrixColumnProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "mcPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.MatrixColumnProperties.ElementType, 0, 1)
             };
         }
 
@@ -8530,8 +9136,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.MatrixColumnProperties? MatrixColumnProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.MatrixColumnProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "mcPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "mcPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.MatrixColumnProperties.ElementType) as DocumentFormat.OpenXml.Math.MatrixColumnProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.MatrixColumnProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -8545,6 +9151,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class ColumnSpacing : TwipsMeasureType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "cSp");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_TwipsMeasure");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ColumnSpacing class.
         /// </summary>
@@ -8555,7 +9167,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:cSp");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -8569,6 +9181,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class LeftMargin : TwipsMeasureType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "lMargin");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_TwipsMeasure");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LeftMargin class.
         /// </summary>
@@ -8579,7 +9197,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:lMargin");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -8593,6 +9211,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class RightMargin : TwipsMeasureType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rMargin");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_TwipsMeasure");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RightMargin class.
         /// </summary>
@@ -8603,7 +9227,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:rMargin");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -8617,6 +9241,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class PreSpacing : TwipsMeasureType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "preSp");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_TwipsMeasure");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PreSpacing class.
         /// </summary>
@@ -8627,7 +9257,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:preSp");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -8641,6 +9271,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class PostSpacing : TwipsMeasureType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "postSp");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_TwipsMeasure");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PostSpacing class.
         /// </summary>
@@ -8651,7 +9287,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:postSp");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -8665,6 +9301,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class InterSpacing : TwipsMeasureType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "interSp");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_TwipsMeasure");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the InterSpacing class.
         /// </summary>
@@ -8675,7 +9317,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:interSp");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -8689,6 +9331,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class IntraSpacing : TwipsMeasureType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "intraSp");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_TwipsMeasure");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the IntraSpacing class.
         /// </summary>
@@ -8699,7 +9347,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:intraSp");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -8713,6 +9361,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class WrapIndent : TwipsMeasureType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "wrapIndent");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_TwipsMeasure");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the WrapIndent class.
         /// </summary>
@@ -8723,7 +9377,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:wrapIndent");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -8737,6 +9391,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public abstract partial class TwipsMeasureType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_TwipsMeasure");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TwipsMeasureType class.
         /// </summary>
@@ -8782,6 +9442,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class MatrixColumns : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "mcs");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_MCS");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MatrixColumns class.
         /// </summary>
@@ -8816,11 +9482,11 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:mcs");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.MatrixColumn>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "mc"), 1, 64)
+                new ElementParticle(DocumentFormat.OpenXml.Math.MatrixColumn.ElementType, 1, 64)
             };
         }
 
@@ -8849,6 +9515,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class MatrixProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "mPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_MPr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MatrixProperties class.
         /// </summary>
@@ -8883,7 +9555,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:mPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Math.MatrixColumns>();
             builder.AddChild<DocumentFormat.OpenXml.Math.HidePlaceholder>();
@@ -8895,15 +9567,15 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<DocumentFormat.OpenXml.Math.BaseJustification>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "baseJc"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "plcHide"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rSpRule"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "cGpRule"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rSp"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "cSp"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "cGp"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "mcs"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.BaseJustification.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.HidePlaceholder.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.RowSpacingRule.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ColumnGapRule.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.RowSpacing.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ColumnSpacing.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ColumnGap.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.MatrixColumns.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
             };
         }
 
@@ -8916,8 +9588,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.BaseJustification? BaseJustification
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.BaseJustification>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "baseJc"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "baseJc"));
+            get => GetElement(DocumentFormat.OpenXml.Math.BaseJustification.ElementType) as DocumentFormat.OpenXml.Math.BaseJustification;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.BaseJustification.ElementType);
         }
 
         /// <summary>
@@ -8929,8 +9601,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.HidePlaceholder? HidePlaceholder
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.HidePlaceholder>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "plcHide"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "plcHide"));
+            get => GetElement(DocumentFormat.OpenXml.Math.HidePlaceholder.ElementType) as DocumentFormat.OpenXml.Math.HidePlaceholder;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.HidePlaceholder.ElementType);
         }
 
         /// <summary>
@@ -8942,8 +9614,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.RowSpacingRule? RowSpacingRule
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.RowSpacingRule>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rSpRule"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rSpRule"));
+            get => GetElement(DocumentFormat.OpenXml.Math.RowSpacingRule.ElementType) as DocumentFormat.OpenXml.Math.RowSpacingRule;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.RowSpacingRule.ElementType);
         }
 
         /// <summary>
@@ -8955,8 +9627,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ColumnGapRule? ColumnGapRule
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ColumnGapRule>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "cGpRule"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "cGpRule"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ColumnGapRule.ElementType) as DocumentFormat.OpenXml.Math.ColumnGapRule;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ColumnGapRule.ElementType);
         }
 
         /// <summary>
@@ -8968,8 +9640,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.RowSpacing? RowSpacing
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.RowSpacing>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rSp"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "rSp"));
+            get => GetElement(DocumentFormat.OpenXml.Math.RowSpacing.ElementType) as DocumentFormat.OpenXml.Math.RowSpacing;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.RowSpacing.ElementType);
         }
 
         /// <summary>
@@ -8981,8 +9653,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ColumnSpacing? ColumnSpacing
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ColumnSpacing>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "cSp"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "cSp"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ColumnSpacing.ElementType) as DocumentFormat.OpenXml.Math.ColumnSpacing;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ColumnSpacing.ElementType);
         }
 
         /// <summary>
@@ -8994,8 +9666,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ColumnGap? ColumnGap
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ColumnGap>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "cGp"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "cGp"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ColumnGap.ElementType) as DocumentFormat.OpenXml.Math.ColumnGap;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ColumnGap.ElementType);
         }
 
         /// <summary>
@@ -9007,8 +9679,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.MatrixColumns? MatrixColumns
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.MatrixColumns>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "mcs"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "mcs"));
+            get => GetElement(DocumentFormat.OpenXml.Math.MatrixColumns.ElementType) as DocumentFormat.OpenXml.Math.MatrixColumns;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.MatrixColumns.ElementType);
         }
 
         /// <summary>
@@ -9020,8 +9692,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ControlProperties.ElementType) as DocumentFormat.OpenXml.Math.ControlProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ControlProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -9041,6 +9713,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class MatrixRow : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "mr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_MR");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MatrixRow class.
         /// </summary>
@@ -9075,11 +9753,11 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:mr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "e"), 1, 64)
+                new ElementParticle(DocumentFormat.OpenXml.Math.Base.ElementType, 1, 64)
             };
         }
 
@@ -9094,6 +9772,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class LimitLocation : LimitLocationType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLoc");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_LimLoc");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LimitLocation class.
         /// </summary>
@@ -9104,7 +9788,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:limLoc");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -9118,6 +9802,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class IntegralLimitLocation : LimitLocationType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "intLim");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_LimLoc");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the IntegralLimitLocation class.
         /// </summary>
@@ -9128,7 +9818,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:intLim");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -9142,6 +9832,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class NaryLimitLocation : LimitLocationType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "naryLim");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_LimLoc");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NaryLimitLocation class.
         /// </summary>
@@ -9152,7 +9848,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:naryLim");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -9166,6 +9862,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public abstract partial class LimitLocationType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_LimLoc");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LimitLocationType class.
         /// </summary>
@@ -9215,6 +9917,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class NaryProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "naryPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_NaryPr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NaryProperties class.
         /// </summary>
@@ -9249,7 +9957,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:naryPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.AccentChar>();
             builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Math.LimitLocation>();
@@ -9258,12 +9966,12 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<DocumentFormat.OpenXml.Math.HideSuperArgument>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "chr"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLoc"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "grow"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "subHide"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "supHide"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.AccentChar.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.LimitLocation.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.GrowOperators.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.HideSubArgument.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.HideSuperArgument.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
             };
         }
 
@@ -9276,8 +9984,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.AccentChar? AccentChar
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.AccentChar>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "chr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "chr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.AccentChar.ElementType) as DocumentFormat.OpenXml.Math.AccentChar;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.AccentChar.ElementType);
         }
 
         /// <summary>
@@ -9289,8 +9997,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.LimitLocation? LimitLocation
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.LimitLocation>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLoc"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "limLoc"));
+            get => GetElement(DocumentFormat.OpenXml.Math.LimitLocation.ElementType) as DocumentFormat.OpenXml.Math.LimitLocation;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.LimitLocation.ElementType);
         }
 
         /// <summary>
@@ -9302,8 +10010,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.GrowOperators? GrowOperators
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.GrowOperators>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "grow"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "grow"));
+            get => GetElement(DocumentFormat.OpenXml.Math.GrowOperators.ElementType) as DocumentFormat.OpenXml.Math.GrowOperators;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.GrowOperators.ElementType);
         }
 
         /// <summary>
@@ -9315,8 +10023,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.HideSubArgument? HideSubArgument
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.HideSubArgument>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "subHide"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "subHide"));
+            get => GetElement(DocumentFormat.OpenXml.Math.HideSubArgument.ElementType) as DocumentFormat.OpenXml.Math.HideSubArgument;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.HideSubArgument.ElementType);
         }
 
         /// <summary>
@@ -9328,8 +10036,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.HideSuperArgument? HideSuperArgument
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.HideSuperArgument>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "supHide"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "supHide"));
+            get => GetElement(DocumentFormat.OpenXml.Math.HideSuperArgument.ElementType) as DocumentFormat.OpenXml.Math.HideSuperArgument;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.HideSuperArgument.ElementType);
         }
 
         /// <summary>
@@ -9341,8 +10049,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ControlProperties.ElementType) as DocumentFormat.OpenXml.Math.ControlProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ControlProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -9367,6 +10075,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class PhantomProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "phantPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_PhantPr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PhantomProperties class.
         /// </summary>
@@ -9401,7 +10115,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:phantPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Math.ShowPhantom>();
             builder.AddChild<DocumentFormat.OpenXml.Math.ZeroWidth>();
@@ -9410,12 +10124,12 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild<DocumentFormat.OpenXml.Math.Transparent>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "show"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "zeroWid"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "zeroAsc"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "zeroDesc"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "transp"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.ShowPhantom.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ZeroWidth.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ZeroAscent.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ZeroDescent.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.Transparent.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
             };
         }
 
@@ -9428,8 +10142,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ShowPhantom? ShowPhantom
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ShowPhantom>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "show"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "show"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ShowPhantom.ElementType) as DocumentFormat.OpenXml.Math.ShowPhantom;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ShowPhantom.ElementType);
         }
 
         /// <summary>
@@ -9441,8 +10155,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ZeroWidth? ZeroWidth
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ZeroWidth>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "zeroWid"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "zeroWid"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ZeroWidth.ElementType) as DocumentFormat.OpenXml.Math.ZeroWidth;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ZeroWidth.ElementType);
         }
 
         /// <summary>
@@ -9454,8 +10168,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ZeroAscent? ZeroAscent
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ZeroAscent>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "zeroAsc"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "zeroAsc"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ZeroAscent.ElementType) as DocumentFormat.OpenXml.Math.ZeroAscent;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ZeroAscent.ElementType);
         }
 
         /// <summary>
@@ -9467,8 +10181,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ZeroDescent? ZeroDescent
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ZeroDescent>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "zeroDesc"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "zeroDesc"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ZeroDescent.ElementType) as DocumentFormat.OpenXml.Math.ZeroDescent;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ZeroDescent.ElementType);
         }
 
         /// <summary>
@@ -9480,8 +10194,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Transparent? Transparent
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Transparent>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "transp"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "transp"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Transparent.ElementType) as DocumentFormat.OpenXml.Math.Transparent;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Transparent.ElementType);
         }
 
         /// <summary>
@@ -9493,8 +10207,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ControlProperties.ElementType) as DocumentFormat.OpenXml.Math.ControlProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ControlProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -9515,6 +10229,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class RadicalProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "radPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_RadPr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RadicalProperties class.
         /// </summary>
@@ -9549,13 +10269,13 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:radPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Math.HideDegree>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "degHide"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.HideDegree.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
             };
         }
 
@@ -9568,8 +10288,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.HideDegree? HideDegree
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.HideDegree>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "degHide"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "degHide"));
+            get => GetElement(DocumentFormat.OpenXml.Math.HideDegree.ElementType) as DocumentFormat.OpenXml.Math.HideDegree;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.HideDegree.ElementType);
         }
 
         /// <summary>
@@ -9581,8 +10301,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ControlProperties.ElementType) as DocumentFormat.OpenXml.Math.ControlProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ControlProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -9602,6 +10322,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class PreSubSuperProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sPrePr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_SPrePr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PreSubSuperProperties class.
         /// </summary>
@@ -9636,11 +10362,11 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:sPrePr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
             };
         }
 
@@ -9653,8 +10379,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ControlProperties.ElementType) as DocumentFormat.OpenXml.Math.ControlProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ControlProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -9674,6 +10400,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class SubscriptProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_SSubPr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SubscriptProperties class.
         /// </summary>
@@ -9708,11 +10440,11 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:sSubPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
             };
         }
 
@@ -9725,8 +10457,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ControlProperties.ElementType) as DocumentFormat.OpenXml.Math.ControlProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ControlProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -9747,6 +10479,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class SubSuperscriptProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSubSupPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_SSubSupPr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SubSuperscriptProperties class.
         /// </summary>
@@ -9781,13 +10519,13 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:sSubSupPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Math.AlignScripts>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "alnScr"), 0, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.AlignScripts.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
             };
         }
 
@@ -9800,8 +10538,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.AlignScripts? AlignScripts
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.AlignScripts>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "alnScr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "alnScr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.AlignScripts.ElementType) as DocumentFormat.OpenXml.Math.AlignScripts;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.AlignScripts.ElementType);
         }
 
         /// <summary>
@@ -9813,8 +10551,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ControlProperties.ElementType) as DocumentFormat.OpenXml.Math.ControlProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ControlProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -9834,6 +10572,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class SuperscriptProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "sSupPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_SSupPr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SuperscriptProperties class.
         /// </summary>
@@ -9868,11 +10612,11 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:sSupPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
             };
         }
 
@@ -9885,8 +10629,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ControlProperties? ControlProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ControlProperties>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "ctrlPr"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ControlProperties.ElementType) as DocumentFormat.OpenXml.Math.ControlProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ControlProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -9900,6 +10644,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class ArgumentSize : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "argSz");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_Integer2");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ArgumentSize class.
         /// </summary>
@@ -9923,7 +10673,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:argSz");
+            builder.SetSchema(ElementType);
             builder.AddElement<ArgumentSize>()
                 .AddAttribute("m:val", a => a.Val, aBuilder =>
                 {
@@ -9949,6 +10699,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class ArgumentProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "argPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OMathArgPr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ArgumentProperties class.
         /// </summary>
@@ -9983,11 +10739,11 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:argPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.ArgumentSize>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "argSz"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.ArgumentSize.ElementType, 0, 1)
             };
         }
 
@@ -10000,8 +10756,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.ArgumentSize? ArgumentSize
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.ArgumentSize>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "argSz"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "argSz"));
+            get => GetElement(DocumentFormat.OpenXml.Math.ArgumentSize.ElementType) as DocumentFormat.OpenXml.Math.ArgumentSize;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.ArgumentSize.ElementType);
         }
 
         /// <inheritdoc/>
@@ -10015,6 +10771,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class Justification : OfficeMathJustificationType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "jc");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OMathJc");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Justification class.
         /// </summary>
@@ -10025,7 +10787,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:jc");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -10039,6 +10801,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class DefaultJustification : OfficeMathJustificationType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "defJc");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OMathJc");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DefaultJustification class.
         /// </summary>
@@ -10049,7 +10817,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:defJc");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -10063,6 +10831,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public abstract partial class OfficeMathJustificationType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OMathJc");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OfficeMathJustificationType class.
         /// </summary>
@@ -10101,6 +10875,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class MathFont : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "mathFont");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_FontFace");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MathFont class.
         /// </summary>
@@ -10124,7 +10904,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:mathFont");
+            builder.SetSchema(ElementType);
             builder.AddElement<MathFont>()
                 .AddAttribute("m:val", a => a.Val, aBuilder =>
                 {
@@ -10144,6 +10924,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class BreakBinary : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "brkBin");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_BreakBin");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BreakBinary class.
         /// </summary>
@@ -10167,7 +10953,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:brkBin");
+            builder.SetSchema(ElementType);
             builder.AddElement<BreakBinary>()
                 .AddAttribute("m:val", a => a.Val);
         }
@@ -10183,6 +10969,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </summary>
     public partial class BreakBinarySubtraction : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "brkBinSub");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_BreakBinSub");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BreakBinarySubtraction class.
         /// </summary>
@@ -10206,7 +10998,7 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:brkBinSub");
+            builder.SetSchema(ElementType);
             builder.AddElement<BreakBinarySubtraction>()
                 .AddAttribute("m:val", a => a.Val, aBuilder =>
                 {
@@ -10232,6 +11024,12 @@ namespace DocumentFormat.OpenXml.Math
     /// </remarks>
     public partial class ParagraphProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "oMathParaPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/math", "CT_OMathParaPr");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ParagraphProperties class.
         /// </summary>
@@ -10266,11 +11064,11 @@ namespace DocumentFormat.OpenXml.Math
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("m:oMathParaPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Math.Justification>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "jc"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Math.Justification.ElementType, 0, 1)
             };
         }
 
@@ -10283,8 +11081,8 @@ namespace DocumentFormat.OpenXml.Math
         /// </remarks>
         public DocumentFormat.OpenXml.Math.Justification? Justification
         {
-            get => GetElement<DocumentFormat.OpenXml.Math.Justification>(new("http://schemas.openxmlformats.org/officeDocument/2006/math", "jc"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/officeDocument/2006/math", "jc"));
+            get => GetElement(DocumentFormat.OpenXml.Math.Justification.ElementType) as DocumentFormat.OpenXml.Math.Justification;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.Justification.ElementType);
         }
 
         /// <inheritdoc/>

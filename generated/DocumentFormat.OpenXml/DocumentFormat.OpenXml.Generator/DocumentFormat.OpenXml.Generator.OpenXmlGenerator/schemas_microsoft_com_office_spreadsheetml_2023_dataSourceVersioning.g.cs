@@ -31,6 +31,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning
     /// </remarks>
     public partial class VersionInfo : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/dataSourceVersioning", "versionInfo");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/dataSourceVersioning", "CT_VersionInfo");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the VersionInfo class.
         /// </summary>
@@ -65,16 +71,16 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xxdsv:versionInfo");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.RequiredFeatureXsdstring>();
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.LastRefreshFeatureXsdstring>();
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.LastEditFeatureXsdstring>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2023/dataSourceVersioning", "requiredFeature"), 0, 0, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2023/dataSourceVersioning", "lastRefreshFeature"), 0, 0, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2023/dataSourceVersioning", "lastEditFeature"), 0, 0, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.RequiredFeatureXsdstring.ElementType, 0, 0, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.LastRefreshFeatureXsdstring.ElementType, 0, 0, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.LastEditFeatureXsdstring.ElementType, 0, 0, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -89,6 +95,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning
     /// </summary>
     public partial class RequiredFeatureXsdstring : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/dataSourceVersioning", "requiredFeature");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RequiredFeatureXsdstring class.
         /// </summary>
@@ -112,7 +124,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xxdsv:requiredFeature");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
         }
 
@@ -127,6 +139,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning
     /// </summary>
     public partial class LastRefreshFeatureXsdstring : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/dataSourceVersioning", "lastRefreshFeature");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LastRefreshFeatureXsdstring class.
         /// </summary>
@@ -150,7 +168,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xxdsv:lastRefreshFeature");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
         }
 
@@ -165,6 +183,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning
     /// </summary>
     public partial class LastEditFeatureXsdstring : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/dataSourceVersioning", "lastEditFeature");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LastEditFeatureXsdstring class.
         /// </summary>
@@ -188,7 +212,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xxdsv:lastEditFeature");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
         }
 

@@ -13,14 +13,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     internal class ExpectedChildren
     {
-        private List<OpenXmlQualifiedName>? _elements;
+        private List<OpenXmlType>? _elements;
         private List<string>? _xsdanyNamespaces;
 
         /// <summary>
         /// Add a known element of the child.
         /// </summary>
-        /// <param name="qname"></param>
-        public void Add(OpenXmlQualifiedName qname)
+        /// <param name="type"></param>
+        public void Add(OpenXmlType type)
         {
             // No lock, not safe for multi-thread
             if (_elements is null)
@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 _elements = [];
             }
 
-            _elements.Add(qname);
+            _elements.Add(type);
         }
 
         /// <summary>
@@ -123,10 +123,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 {
                     foreach (var child in parent.Metadata.Children.Elements)
                     {
-                        if (_elements.Contains(child.QName))
+                        if (_elements.Contains(child.Type))
                         {
                             // <namespace:localname>, use InvariantCulture
-                            childrenNames.Add(SR.Format(ValidationResources.Fmt_ElementName, child.QName.Namespace.Uri, child.QName.Name));
+                            childrenNames.Add(SR.Format(ValidationResources.Fmt_ElementName, child.Type.Name.Namespace.Uri, child.Type.Name.Name));
                         }
                     }
                 }

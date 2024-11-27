@@ -24,6 +24,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     /// </summary>
     public partial class RichValueBlock : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "rvb");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "CT_RichValueBlock");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RichValueBlock class.
         /// </summary>
@@ -44,7 +50,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlrd:rvb");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<RichValueBlock>()
                 .AddAttribute("i", a => a.I, aBuilder =>
@@ -71,6 +77,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     /// </remarks>
     public partial class RichValueData : OpenXmlPartRootElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "rvData");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "CT_RichValueData");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RichValueData class.
         /// </summary>
@@ -115,7 +127,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlrd:rvData");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValue>();
@@ -126,8 +138,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "rv"), 0, 0, version: FileFormatVersions.Office2019),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "extLst"), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValue.ElementType, 0, 0, version: FileFormatVersions.Office2019),
+                new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.RichData.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -180,6 +192,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     /// </remarks>
     public partial class RichValueStructures : OpenXmlPartRootElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "rvStructures");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "CT_RichValueStructures");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RichValueStructures class.
         /// </summary>
@@ -224,7 +242,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlrd:rvStructures");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueStructure>();
@@ -235,8 +253,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "s"), 0, 0, version: FileFormatVersions.Office2019),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "extLst"), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueStructure.ElementType, 0, 0, version: FileFormatVersions.Office2019),
+                new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.RichData.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -289,6 +307,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     /// </remarks>
     public partial class RichValue : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "rv");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "CT_RichValue");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RichValue class.
         /// </summary>
@@ -333,7 +357,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlrd:rv");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueFallback>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData.Value>();
@@ -344,8 +368,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "fb"), 0, 1, version: FileFormatVersions.Office2019),
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "v"), 1, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueFallback.ElementType, 0, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.RichData.Value.ElementType, 1, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -358,8 +382,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
         /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueFallback? RichValueFallback
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueFallback>(new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "fb"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "fb"));
+            get => GetElement(DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueFallback.ElementType) as DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueFallback;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueFallback.ElementType);
         }
 
         /// <inheritdoc/>
@@ -379,6 +403,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "CT_ExtensionList");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
         /// </summary>
@@ -413,7 +443,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlrd:extLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -422,7 +452,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ext"), 0, 0)
+                        new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Extension.ElementType, 0, 0)
                     }
                 }
             };
@@ -439,6 +469,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     /// </summary>
     public partial class RichValueFallback : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "fb");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "CT_RichValueFallback");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RichValueFallback class.
         /// </summary>
@@ -472,7 +508,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlrd:fb");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<RichValueFallback>()
                 .AddAttribute("t", a => a.T);
@@ -489,6 +525,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     /// </summary>
     public partial class Value : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "v");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "CT_Value");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Value class.
         /// </summary>
@@ -512,7 +554,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlrd:v");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
         }
 
@@ -533,6 +575,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     /// </remarks>
     public partial class RichValueStructure : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "s");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "CT_RichValueStructure");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RichValueStructure class.
         /// </summary>
@@ -577,7 +625,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlrd:s");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData.Key>();
             builder.AddElement<RichValueStructure>()
@@ -587,7 +635,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "k"), 1, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.RichData.Key.ElementType, 1, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -602,6 +650,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     /// </summary>
     public partial class Key : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "k");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "CT_Key");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Key class.
         /// </summary>
@@ -632,7 +686,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlrd:k");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<Key>()
                 .AddAttribute("n", a => a.N, aBuilder =>

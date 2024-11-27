@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 {
     public class ParticleTests
     {
-        private readonly OpenXmlQualifiedName _qname = new OpenXmlQualifiedName("Test", "http://test.com");
+        private readonly OpenXmlType _type = new(new OpenXmlQualifiedName("Test", "http://test.com"), new OpenXmlQualifiedName("Test", "http://test.com"));
         private readonly ITestOutputHelper _output;
 
         public ParticleTests(ITestOutputHelper output)
@@ -63,7 +63,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         {
             var particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(_qname, 1, 1),
+                new ElementParticle(_type, 1, 1),
                 new AnyParticle(1, 1, version: FileFormatVersions.Office2010),
                 new AnyParticle(0, 1, 1),
             }.Build();
@@ -93,8 +93,8 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         {
             var particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(_qname, 1, 1),
-                new ElementParticle(_qname, 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(_type, 1, 1),
+                new ElementParticle(_type, 1, 1, version: FileFormatVersions.Office2010),
                 new AnyParticle(0, 1, 1),
             }.Build();
 
@@ -123,7 +123,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         {
             var particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(_qname, 1, 1),
+                new ElementParticle(_type, 1, 1),
                 new AnyParticle(1, 1),
                 new AnyParticle(0, 1, 1),
             }.Build();
@@ -143,7 +143,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         [Theory]
         public void ElementParticleBuildSame(FileFormatVersions version)
         {
-            var particle = new ElementParticle(_qname, 1, 1);
+            var particle = new ElementParticle(_type, 1, 1);
 
             Assert.Same(particle, particle.Build(version));
         }

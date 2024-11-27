@@ -29,6 +29,12 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals
     /// </remarks>
     public partial class RichValueRefreshIntervals : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/richvaluerefresh", "refreshIntervals");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/richvaluerefresh", "CT_RichValueRefreshIntervals");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RichValueRefreshIntervals class.
         /// </summary>
@@ -63,12 +69,12 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlrvr:refreshIntervals");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals.RichValueRefreshInterval>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2020/richvaluerefresh", "refreshInterval"), 1, 0, version: FileFormatVersions.Office2021)
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals.RichValueRefreshInterval.ElementType, 1, 0, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -83,6 +89,12 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals
     /// </summary>
     public partial class RichValueRefreshInterval : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/richvaluerefresh", "refreshInterval");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/richvaluerefresh", "CT_RichValueRefreshInterval");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RichValueRefreshInterval class.
         /// </summary>
@@ -123,7 +135,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlrvr:refreshInterval");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<RichValueRefreshInterval>()
                 .AddAttribute("resourceIdInt", a => a.ResourceIdInt)

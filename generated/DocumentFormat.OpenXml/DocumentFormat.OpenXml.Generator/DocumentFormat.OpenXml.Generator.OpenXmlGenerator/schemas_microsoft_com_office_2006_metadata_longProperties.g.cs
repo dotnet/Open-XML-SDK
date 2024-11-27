@@ -29,6 +29,12 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
     /// </remarks>
     public partial class LongProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/metadata/longProperties", "LongProperties");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/metadata/longProperties", "CT_LongProperties");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LongProperties class.
         /// </summary>
@@ -63,11 +69,11 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("lp:LongProperties");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.LongProperties.LongProperty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/2006/metadata/longProperties", "LongProp"), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Office.LongProperties.LongProperty.ElementType, 0, 0)
             };
         }
 
@@ -82,6 +88,12 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
     /// </summary>
     public partial class LongProperty : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/metadata/longProperties", "LongProp");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/metadata/longProperties", "CT_LongProp");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LongProperty class.
         /// </summary>
@@ -115,7 +127,7 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("lp:LongProp");
+            builder.SetSchema(ElementType);
             builder.AddElement<LongProperty>()
                 .AddAttribute("name", a => a.Name);
         }

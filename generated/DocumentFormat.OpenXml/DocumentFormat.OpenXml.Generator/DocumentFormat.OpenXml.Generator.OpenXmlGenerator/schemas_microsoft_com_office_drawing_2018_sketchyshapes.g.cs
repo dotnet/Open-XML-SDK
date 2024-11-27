@@ -24,6 +24,12 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// </summary>
     public partial class LineSketchNoneEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "lineSketchNone");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "CT_Empty");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LineSketchNoneEmpty class.
         /// </summary>
@@ -34,7 +40,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("ask:lineSketchNone");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -49,6 +55,12 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// </summary>
     public partial class LineSketchCurvedEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "lineSketchCurved");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "CT_Empty");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LineSketchCurvedEmpty class.
         /// </summary>
@@ -59,7 +71,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("ask:lineSketchCurved");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -74,6 +86,12 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// </summary>
     public partial class LineSketchFreehandEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "lineSketchFreehand");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "CT_Empty");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LineSketchFreehandEmpty class.
         /// </summary>
@@ -84,7 +102,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("ask:lineSketchFreehand");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -99,6 +117,12 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// </summary>
     public partial class LineSketchScribbleEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "lineSketchScribble");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "CT_Empty");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LineSketchScribbleEmpty class.
         /// </summary>
@@ -109,7 +133,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("ask:lineSketchScribble");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -124,6 +148,12 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// </summary>
     public abstract partial class OpenXmlEmptyElement : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "CT_Empty");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OpenXmlEmptyElement class.
         /// </summary>
@@ -154,6 +184,12 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// </remarks>
     public partial class LineSketchStyleProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "lineSketchStyleProps");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "CT_LineSketchStyleProperties");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LineSketchStyleProperties class.
         /// </summary>
@@ -198,7 +234,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("ask:lineSketchStyleProps");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.OfficeArtExtensionList>();
@@ -213,13 +249,13 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "custGeom"), 1, 1),
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "prstGeom"), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.CustomGeometry.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.PresetGeometry.ElementType, 1, 1)
                     }
                 },
-                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "type"), 0, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "seed"), 0, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "extLst"), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchTypeProperties.ElementType, 0, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchSeed.ElementType, 0, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.OfficeArtExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -243,6 +279,12 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// </remarks>
     public partial class LineSketchTypeProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "type");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "CT_LineSketchTypeProperties");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LineSketchTypeProperties class.
         /// </summary>
@@ -277,7 +319,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("ask:type");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchNoneEmpty>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchCurvedEmpty>();
@@ -289,10 +331,10 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "lineSketchNone"), 1, 1, version: FileFormatVersions.Office2021),
-                        new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "lineSketchCurved"), 1, 1, version: FileFormatVersions.Office2021),
-                        new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "lineSketchFreehand"), 1, 1, version: FileFormatVersions.Office2021),
-                        new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "lineSketchScribble"), 1, 1, version: FileFormatVersions.Office2021)
+                        new ElementParticle(DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchNoneEmpty.ElementType, 1, 1, version: FileFormatVersions.Office2021),
+                        new ElementParticle(DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchCurvedEmpty.ElementType, 1, 1, version: FileFormatVersions.Office2021),
+                        new ElementParticle(DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchFreehandEmpty.ElementType, 1, 1, version: FileFormatVersions.Office2021),
+                        new ElementParticle(DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchScribbleEmpty.ElementType, 1, 1, version: FileFormatVersions.Office2021)
                     }
                 }
             };
@@ -307,8 +349,8 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchNoneEmpty? LineSketchNoneEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchNoneEmpty>(new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "lineSketchNone"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "lineSketchNone"));
+            get => GetElement(DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchNoneEmpty.ElementType) as DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchNoneEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchNoneEmpty.ElementType);
         }
 
         /// <summary>
@@ -320,8 +362,8 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchCurvedEmpty? LineSketchCurvedEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchCurvedEmpty>(new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "lineSketchCurved"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "lineSketchCurved"));
+            get => GetElement(DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchCurvedEmpty.ElementType) as DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchCurvedEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchCurvedEmpty.ElementType);
         }
 
         /// <summary>
@@ -333,8 +375,8 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchFreehandEmpty? LineSketchFreehandEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchFreehandEmpty>(new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "lineSketchFreehand"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "lineSketchFreehand"));
+            get => GetElement(DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchFreehandEmpty.ElementType) as DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchFreehandEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchFreehandEmpty.ElementType);
         }
 
         /// <summary>
@@ -346,8 +388,8 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchScribbleEmpty? LineSketchScribbleEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchScribbleEmpty>(new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "lineSketchScribble"));
-            set => SetElement(value, new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "lineSketchScribble"));
+            get => GetElement(DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchScribbleEmpty.ElementType) as DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchScribbleEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchScribbleEmpty.ElementType);
         }
 
         /// <inheritdoc/>
@@ -361,6 +403,12 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// </summary>
     public partial class LineSketchSeed : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "seed");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "ST_LineSketchSeed");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LineSketchSeed class.
         /// </summary>
@@ -385,7 +433,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<UInt32Value>(NumberValidator.Instance);
-            builder.SetSchema("ask:seed");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -406,6 +454,12 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// </remarks>
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_OfficeArtExtensionList");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OfficeArtExtensionList class.
         /// </summary>
@@ -440,7 +494,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("ask:extLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -449,7 +503,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"), 0, 0)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Extension.ElementType, 0, 0)
                     }
                 }
             };

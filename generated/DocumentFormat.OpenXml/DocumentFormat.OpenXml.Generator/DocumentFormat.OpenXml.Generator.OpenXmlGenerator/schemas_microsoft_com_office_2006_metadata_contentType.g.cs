@@ -23,6 +23,12 @@ namespace DocumentFormat.OpenXml.Office.ContentType
     /// </summary>
     public partial class ContentTypeSchema : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/metadata/contentType", "contentTypeSchema");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/metadata/contentType", "CT_ContentTypeSchema");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ContentTypeSchema class.
         /// </summary>
@@ -161,7 +167,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("ct:contentTypeSchema");
+            builder.SetSchema(ElementType);
             builder.AddElement<ContentTypeSchema>()
                 .AddAttribute("ct:_", a => a.UnderScore)
                 .AddAttribute("ma:_", a => a.ReservedAttributeString)

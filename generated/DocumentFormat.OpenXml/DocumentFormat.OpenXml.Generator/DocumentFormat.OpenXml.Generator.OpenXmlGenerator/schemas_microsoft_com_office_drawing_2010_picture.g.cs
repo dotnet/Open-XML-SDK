@@ -33,6 +33,12 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
     /// </remarks>
     public partial class ShapeStyle : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2010/picture", "style");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ShapeStyle");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShapeStyle class.
         /// </summary>
@@ -67,7 +73,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("pic14:style");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.FontReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.LineReference>();
@@ -75,10 +81,10 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectReference>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lnRef"), 1, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "fillRef"), 1, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectRef"), 1, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "fontRef"), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.LineReference.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.FillReference.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.EffectReference.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.FontReference.ElementType, 1, 1)
             };
         }
 
@@ -91,8 +97,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.LineReference? LineReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.LineReference>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "lnRef"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "lnRef"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.LineReference.ElementType) as DocumentFormat.OpenXml.Drawing.LineReference;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.LineReference.ElementType);
         }
 
         /// <summary>
@@ -104,8 +110,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.FillReference? FillReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.FillReference>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "fillRef"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "fillRef"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.FillReference.ElementType) as DocumentFormat.OpenXml.Drawing.FillReference;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.FillReference.ElementType);
         }
 
         /// <summary>
@@ -117,8 +123,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.EffectReference? EffectReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectRef"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "effectRef"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.EffectReference.ElementType) as DocumentFormat.OpenXml.Drawing.EffectReference;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.EffectReference.ElementType);
         }
 
         /// <summary>
@@ -130,8 +136,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.FontReference? FontReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.FontReference>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "fontRef"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "fontRef"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.FontReference.ElementType) as DocumentFormat.OpenXml.Drawing.FontReference;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.FontReference.ElementType);
         }
 
         /// <inheritdoc/>
@@ -151,6 +157,12 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
     /// </remarks>
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2010/picture", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_OfficeArtExtensionList");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OfficeArtExtensionList class.
         /// </summary>
@@ -185,7 +197,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("pic14:extLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -194,7 +206,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "ext"), 0, 0)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Extension.ElementType, 0, 0)
                     }
                 }
             };

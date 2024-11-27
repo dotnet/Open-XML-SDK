@@ -40,6 +40,12 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
     /// </remarks>
     public partial class LockedCanvas : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas", "lockedCanvas");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GvmlGroupShape");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LockedCanvas class.
         /// </summary>
@@ -74,7 +80,7 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("lc:lockedCanvas");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ConnectionShape>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GraphicFrame>();
@@ -87,19 +93,19 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "nvGrpSpPr"), 1, 1),
-                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "grpSpPr"), 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties.ElementType, 1, 1),
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
-                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "txSp"), 1, 1),
-                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "sp"), 1, 1),
-                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "cxnSp"), 1, 1),
-                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "pic"), 1, 1),
-                    new ElementParticle(new("http://schemas.microsoft.com/office/drawing/2010/main", "contentPart"), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "graphicFrame"), 1, 1),
-                    new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "grpSp"), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.TextShape.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Shape.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.ConnectionShape.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Picture.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.GraphicFrame.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.GroupShape.ElementType, 1, 1)
                 },
-                new ElementParticle(new("http://schemas.openxmlformats.org/drawingml/2006/main", "extLst"), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.GvmlGroupShapeExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -112,8 +118,8 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties? NonVisualGroupShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "nvGrpSpPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "nvGrpSpPr"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -125,8 +131,8 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties? VisualGroupShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties>(new("http://schemas.openxmlformats.org/drawingml/2006/main", "grpSpPr"));
-            set => SetElement(value, new("http://schemas.openxmlformats.org/drawingml/2006/main", "grpSpPr"));
+            get => GetElement(DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties.ElementType);
         }
 
         /// <inheritdoc/>

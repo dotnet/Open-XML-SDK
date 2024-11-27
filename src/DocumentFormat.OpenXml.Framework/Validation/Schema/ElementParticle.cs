@@ -16,18 +16,18 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Initializes a new instance of the ElementParticle.
         /// </summary>
-        public ElementParticle(OpenXmlQualifiedName qname, int minOccurs, int maxOccurs, FileFormatVersions version = FileFormatVersions.Office2007)
+        public ElementParticle(OpenXmlType type, int minOccurs, int maxOccurs, FileFormatVersions version = FileFormatVersions.Office2007)
             : base(ParticleType.Element, minOccurs, maxOccurs, version)
         {
-            if (qname == default)
+            if (type == default)
             {
-                throw new ArgumentNullException(nameof(qname));
+                throw new ArgumentNullException(nameof(type));
             }
 
-            QName = qname;
+            Type = type;
         }
 
-        public OpenXmlQualifiedName QName { get; }
+        public OpenXmlType Type { get; }
 
         /// <inheritdoc/>
         internal override IParticleValidator ParticleValidator => this;
@@ -35,7 +35,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <inheritdoc/>
         public void TryMatchOnce(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)
         {
-            if (particleMatchInfo.StartElement?.QName != QName)
+            if (particleMatchInfo.StartElement?.Metadata.Type != Type)
             {
                 particleMatchInfo.Match = ParticleMatch.Matched;
                 particleMatchInfo.LastMatchedElement = particleMatchInfo.StartElement;
@@ -51,7 +51,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <inheritdoc/>
         public void TryMatch(ParticleMatchInfo particleMatchInfo, ValidationContext validationContext)
         {
-            if (particleMatchInfo.StartElement?.QName != QName)
+            if (particleMatchInfo.StartElement?.Metadata.Type != Type)
             {
                 particleMatchInfo.Match = ParticleMatch.Nomatch;
             }
@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 var element = particleMatchInfo.StartElement;
                 int count = 0;
 
-                while (element is not null && MaxOccursGreaterThan(count) && element.QName == QName)
+                while (element is not null && MaxOccursGreaterThan(count) && element.Metadata.Type == Type)
                 {
                     count++;
                     particleMatchInfo.LastMatchedElement = element;
@@ -83,7 +83,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     particleMatchInfo.Match = ParticleMatch.Partial;
                     if (validationContext.CollectExpectedChildren)
                     {
-                        particleMatchInfo.ExpectedChildren.Add(QName);
+                        particleMatchInfo.ExpectedChildren.Add(Type);
                     }
                 }
             }
@@ -98,7 +98,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 if (result is not null)
                 {
-                    result.Add(QName);
+                    result.Add(Type);
                 }
 
                 return true;
@@ -114,7 +114,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             if (MinOccurs > 0)
             {
-                requiredElements.Add(QName);
+                requiredElements.Add(Type);
             }
 
             return requiredElements;
@@ -123,7 +123,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <inheritdoc/>
         public bool GetExpectedElements(ExpectedChildren result)
         {
-            result.Add(QName);
+            result.Add(Type);
             return true;
         }
 
@@ -132,7 +132,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             var expectedElements = new ExpectedChildren();
 
-            expectedElements.Add(QName);
+            expectedElements.Add(Type);
 
             return expectedElements;
         }
@@ -146,13 +146,13 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             if (obj is ElementParticle element)
             {
-                return QName == element.QName
+                return Type == element.Type
                     && base.Equals(element);
             }
 
             return false;
         }
 
-        public override int GetHashCode() => HashCode.Combine(base.GetHashCode(), QName);
+        public override int GetHashCode() => HashCode.Combine(base.GetHashCode(), Type);
     }
 }

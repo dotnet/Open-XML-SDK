@@ -29,6 +29,12 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
     /// </remarks>
     public partial class CommentsIds : OpenXmlPartRootElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2016/wordml/cid", "commentsIds");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/word/2016/wordml/cid", "CT_CommentsIds");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CommentsIds class.
         /// </summary>
@@ -63,12 +69,12 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("w16cid:commentsIds");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Word.Cid.CommentId>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/word/2016/wordml/cid", "commentId"), 0, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(DocumentFormat.OpenXml.Office2019.Word.Cid.CommentId.ElementType, 0, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -114,6 +120,12 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
     /// </summary>
     public partial class CommentId : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2016/wordml/cid", "commentId");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/word/2016/wordml/cid", "CT_CommentId");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CommentId class.
         /// </summary>
@@ -150,7 +162,7 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("w16cid:commentId");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<CommentId>()
                 .AddAttribute("w16cid:paraId", a => a.ParaId, aBuilder =>

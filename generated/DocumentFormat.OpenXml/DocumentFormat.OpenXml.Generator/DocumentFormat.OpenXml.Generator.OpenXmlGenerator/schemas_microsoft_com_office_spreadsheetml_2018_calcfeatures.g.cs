@@ -29,6 +29,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures
     /// </remarks>
     public partial class CalcFeatures : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2018/calcfeatures", "calcFeatures");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2018/calcfeatures", "CT_CalcFeatures");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CalcFeatures class.
         /// </summary>
@@ -63,12 +69,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xcalcf:calcFeatures");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures.CalcFeature>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(new("http://schemas.microsoft.com/office/spreadsheetml/2018/calcfeatures", "feature"), 1, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures.CalcFeature.ElementType, 1, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -83,6 +89,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures
     /// </summary>
     public partial class CalcFeature : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2018/calcfeatures", "feature");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2018/calcfeatures", "CT_CalcFeature");
+        internal static readonly new OpenXmlType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CalcFeature class.
         /// </summary>
@@ -103,7 +115,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xcalcf:feature");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<CalcFeature>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
