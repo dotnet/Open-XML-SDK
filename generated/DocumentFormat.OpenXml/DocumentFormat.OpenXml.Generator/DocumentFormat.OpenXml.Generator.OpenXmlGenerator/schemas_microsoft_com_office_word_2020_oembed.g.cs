@@ -23,6 +23,12 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2020.OEmbed
     /// </summary>
     public partial class OEmbed : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2020/oembed", "oembed");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/word/2020/oembed", "CT_OEmbed");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OEmbed class.
         /// </summary>
@@ -63,7 +69,7 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2020.OEmbed
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("woe:oembed");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddElement<OEmbed>()
                 .AddAttribute("oEmbedUrl", a => a.OEmbedUrl, aBuilder =>

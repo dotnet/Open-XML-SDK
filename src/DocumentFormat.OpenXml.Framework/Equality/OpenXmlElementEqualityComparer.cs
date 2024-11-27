@@ -215,8 +215,8 @@ namespace DocumentFormat.OpenXml
 
         private static bool PrefixAndQNameEqual(OpenXmlElement x, OpenXmlElement y, OpenXmlElementEqualityOptions options)
         {
-            OpenXmlQualifiedName tQName = x.ParsedState.Metadata.QName;
-            OpenXmlQualifiedName oQName = y.ParsedState.Metadata.QName;
+            OpenXmlQualifiedName tQName = x.ParsedState.Metadata.Type.Name;
+            OpenXmlQualifiedName oQName = y.ParsedState.Metadata.Type.Name;
 
             if (!tQName.Equals(oQName))
             {

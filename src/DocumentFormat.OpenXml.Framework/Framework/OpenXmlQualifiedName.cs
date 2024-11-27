@@ -13,10 +13,12 @@ namespace DocumentFormat.OpenXml.Framework;
 [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.Framework, UrlFormat = ExperimentalApis.UrlFormat)]
 internal readonly struct OpenXmlQualifiedName : IComparable<OpenXmlQualifiedName>, IEquatable<OpenXmlQualifiedName>
 {
+    private readonly string? _name;
+
     internal OpenXmlQualifiedName(in OpenXmlNamespace ns, string name)
     {
         Namespace = ns;
-        Name = name;
+        _name = name;
     }
 
     /// <summary>
@@ -27,7 +29,7 @@ internal readonly struct OpenXmlQualifiedName : IComparable<OpenXmlQualifiedName
     /// <summary>
     /// Gets the name of the qualified name.
     /// </summary>
-    public string Name { get; }
+    public string Name => _name ?? string.Empty;
 
     /// <inheritdoc/>
     public override bool Equals(object? obj) => obj is OpenXmlQualifiedName qname && Equals(qname);

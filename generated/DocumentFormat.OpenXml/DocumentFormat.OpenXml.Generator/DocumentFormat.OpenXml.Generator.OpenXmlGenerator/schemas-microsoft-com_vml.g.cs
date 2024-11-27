@@ -29,6 +29,12 @@ namespace DocumentFormat.OpenXml.Vml
     /// </summary>
     public partial class Path : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "path");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Path");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Path class.
         /// </summary>
@@ -201,7 +207,7 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("v:path");
+            builder.SetSchema(ElementType);
             builder.AddElement<Path>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("v", a => a.Value)
@@ -238,6 +244,12 @@ namespace DocumentFormat.OpenXml.Vml
     /// </remarks>
     public partial class Formulas : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "formulas");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Formulas");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Formulas class.
         /// </summary>
@@ -272,11 +284,11 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("v:formulas");
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Formula>();
+            builder.SetSchema(ElementType);
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Formula.ElementType, static () => new DocumentFormat.OpenXml.Vml.Formula());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formula), 0, 128)
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Formula.ElementType, 0, 128)
             };
         }
 
@@ -297,6 +309,12 @@ namespace DocumentFormat.OpenXml.Vml
     /// </remarks>
     public partial class ShapeHandles : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "handles");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Handles");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShapeHandles class.
         /// </summary>
@@ -331,11 +349,11 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("v:handles");
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandle>();
+            builder.SetSchema(ElementType);
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ShapeHandle.ElementType, static () => new DocumentFormat.OpenXml.Vml.ShapeHandle());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandle), 0, 4)
+                new ElementParticle(DocumentFormat.OpenXml.Vml.ShapeHandle.ElementType, 0, 4)
             };
         }
 
@@ -356,6 +374,12 @@ namespace DocumentFormat.OpenXml.Vml
     /// </remarks>
     public partial class Fill : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "fill");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Fill");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Fill class.
         /// </summary>
@@ -668,8 +692,8 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("v:fill");
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties>();
+            builder.SetSchema(ElementType);
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties());
             builder.AddElement<Fill>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("type", a => a.Type)
@@ -699,7 +723,7 @@ namespace DocumentFormat.OpenXml.Vml
                 .AddAttribute("r:id", a => a.RelationshipId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties.ElementType, 0, 1)
             };
             builder.AddConstraint(new RelationshipTypeConstraint(builder.CreateQName("r:id"), "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"));
             builder.AddConstraint(new AttributeValuePatternConstraint(builder.CreateQName("v:focus"), @"-?(\d{1,2}|100)%"));
@@ -719,8 +743,8 @@ namespace DocumentFormat.OpenXml.Vml
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties? FillExtendedProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties.ElementType) as DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -744,6 +768,12 @@ namespace DocumentFormat.OpenXml.Vml
     /// </remarks>
     public partial class Stroke : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "stroke");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Stroke");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Stroke class.
         /// </summary>
@@ -1073,12 +1103,12 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("v:stroke");
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.LeftStroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.TopStroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.RightStroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.BottomStroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ColumnStroke>();
+            builder.SetSchema(ElementType);
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.LeftStroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.LeftStroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.TopStroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.TopStroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.RightStroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.RightStroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.BottomStroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.BottomStroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ColumnStroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ColumnStroke());
             builder.AddElement<Stroke>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("on", a => a.On)
@@ -1110,11 +1140,11 @@ namespace DocumentFormat.OpenXml.Vml
                 .AddAttribute("insetpen", a => a.Insetpen);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.LeftStroke), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.TopStroke), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.RightStroke), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.BottomStroke), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ColumnStroke), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Office.LeftStroke.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Office.TopStroke.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Office.RightStroke.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Office.BottomStroke.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Office.ColumnStroke.ElementType, 0, 1)
             };
             builder.AddConstraint(new RelationshipTypeConstraint(builder.CreateQName("r:id"), "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image"));
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName(":id"), false, null));
@@ -1132,8 +1162,8 @@ namespace DocumentFormat.OpenXml.Vml
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.LeftStroke? LeftStroke
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.LeftStroke>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Vml.Office.LeftStroke.ElementType) as DocumentFormat.OpenXml.Vml.Office.LeftStroke;
+            set => SetElement(value, DocumentFormat.OpenXml.Vml.Office.LeftStroke.ElementType);
         }
 
         /// <summary>
@@ -1145,8 +1175,8 @@ namespace DocumentFormat.OpenXml.Vml
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.TopStroke? TopStroke
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.TopStroke>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Vml.Office.TopStroke.ElementType) as DocumentFormat.OpenXml.Vml.Office.TopStroke;
+            set => SetElement(value, DocumentFormat.OpenXml.Vml.Office.TopStroke.ElementType);
         }
 
         /// <summary>
@@ -1158,8 +1188,8 @@ namespace DocumentFormat.OpenXml.Vml
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.RightStroke? RightStroke
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.RightStroke>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Vml.Office.RightStroke.ElementType) as DocumentFormat.OpenXml.Vml.Office.RightStroke;
+            set => SetElement(value, DocumentFormat.OpenXml.Vml.Office.RightStroke.ElementType);
         }
 
         /// <summary>
@@ -1171,8 +1201,8 @@ namespace DocumentFormat.OpenXml.Vml
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.BottomStroke? BottomStroke
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.BottomStroke>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Vml.Office.BottomStroke.ElementType) as DocumentFormat.OpenXml.Vml.Office.BottomStroke;
+            set => SetElement(value, DocumentFormat.OpenXml.Vml.Office.BottomStroke.ElementType);
         }
 
         /// <summary>
@@ -1184,8 +1214,8 @@ namespace DocumentFormat.OpenXml.Vml
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.ColumnStroke? ColumnStroke
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.ColumnStroke>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Vml.Office.ColumnStroke.ElementType) as DocumentFormat.OpenXml.Vml.Office.ColumnStroke;
+            set => SetElement(value, DocumentFormat.OpenXml.Vml.Office.ColumnStroke.ElementType);
         }
 
         /// <inheritdoc/>
@@ -1199,6 +1229,12 @@ namespace DocumentFormat.OpenXml.Vml
     /// </summary>
     public partial class Shadow : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "shadow");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Shadow");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Shadow class.
         /// </summary>
@@ -1319,7 +1355,7 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("v:shadow");
+            builder.SetSchema(ElementType);
             builder.AddElement<Shadow>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("on", a => a.On)
@@ -1352,6 +1388,12 @@ namespace DocumentFormat.OpenXml.Vml
     /// </remarks>
     public partial class TextBox : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "textbox");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Textbox");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TextBox class.
         /// </summary>
@@ -1429,8 +1471,8 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("v:textbox");
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextBoxContent>();
+            builder.SetSchema(ElementType);
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextBoxContent());
             builder.AddElement<TextBox>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("style", a => a.Style)
@@ -1438,7 +1480,7 @@ namespace DocumentFormat.OpenXml.Vml
                 .AddAttribute("o:singleclick", a => a.SingleClick);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent.ElementType, 0, 1),
                 new AnyParticle(XsdAny.Local, 1, 1)
             };
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName("v:id"), true, null));
@@ -1455,6 +1497,12 @@ namespace DocumentFormat.OpenXml.Vml
     /// </summary>
     public partial class TextPath : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "textpath");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_TextPath");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TextPath class.
         /// </summary>
@@ -1545,7 +1593,7 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("v:textpath");
+            builder.SetSchema(ElementType);
             builder.AddElement<TextPath>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("style", a => a.Style)
@@ -1569,6 +1617,12 @@ namespace DocumentFormat.OpenXml.Vml
     /// </summary>
     public partial class ImageData : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "imagedata");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_ImageData");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ImageData class.
         /// </summary>
@@ -1787,7 +1841,7 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("v:imagedata");
+            builder.SetSchema(ElementType);
             builder.AddElement<ImageData>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("chromakey", a => a.ChromAKey)
@@ -1859,6 +1913,12 @@ namespace DocumentFormat.OpenXml.Vml
     /// </remarks>
     public partial class Shape : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "shape");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Shape");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Shape class.
         /// </summary>
@@ -2558,32 +2618,32 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("v:shape");
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Ink>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.SetSchema(ElementType);
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Callout());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ClipPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Extrusion());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Ink.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Ink());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Lock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.SignatureLine());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Skew());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag.ElementType, static () => new DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Presentation.TextData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Fill.ElementType, static () => new DocumentFormat.OpenXml.Vml.Fill());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Formulas.ElementType, static () => new DocumentFormat.OpenXml.Vml.Formulas());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, static () => new DocumentFormat.OpenXml.Vml.ShapeHandles());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ImageData.ElementType, static () => new DocumentFormat.OpenXml.Vml.ImageData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Path.ElementType, static () => new DocumentFormat.OpenXml.Vml.Path());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Stroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Stroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextBox.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextBox());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData());
             builder.AddElement<Shape>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("style", a => a.Style)
@@ -2650,33 +2710,33 @@ namespace DocumentFormat.OpenXml.Vml
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Path.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Formulas.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Fill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Stroke.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Shadow.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.TextBox.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.TextPath.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.ImageData.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Ink), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Ink.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag.ElementType, 1, 1)
             };
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("v:dgmlayout"), true, new string[] { "0", "1", "2", "3" }));
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("v:dgmlayoutmru"), true, new string[] { "0", "1", "2", "3" }));
@@ -2723,6 +2783,12 @@ namespace DocumentFormat.OpenXml.Vml
     /// </remarks>
     public partial class Shapetype : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "shapetype");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Shapetype");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Shapetype class.
         /// </summary>
@@ -3402,31 +3468,31 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("v:shapetype");
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Complex>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.SetSchema(ElementType);
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Callout());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ClipPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Complex.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Complex());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Extrusion());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Lock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.SignatureLine());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Skew());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Presentation.TextData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Fill.ElementType, static () => new DocumentFormat.OpenXml.Vml.Fill());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Formulas.ElementType, static () => new DocumentFormat.OpenXml.Vml.Formulas());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, static () => new DocumentFormat.OpenXml.Vml.ShapeHandles());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ImageData.ElementType, static () => new DocumentFormat.OpenXml.Vml.ImageData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Path.ElementType, static () => new DocumentFormat.OpenXml.Vml.Path());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Stroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Stroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextBox.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextBox());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData());
             builder.AddElement<Shapetype>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("style", a => a.Style)
@@ -3491,32 +3557,32 @@ namespace DocumentFormat.OpenXml.Vml
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Path.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Formulas.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Fill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Stroke.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Shadow.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.TextBox.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.TextPath.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.ImageData.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Complex), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Complex.ElementType, 0, 1)
             };
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("v:dgmlayout"), true, new string[] { "0", "1", "2", "3" }));
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("v:dgmlayoutmru"), true, new string[] { "0", "1", "2", "3" }));
@@ -3556,6 +3622,12 @@ namespace DocumentFormat.OpenXml.Vml
     /// </remarks>
     public partial class Group : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "group");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Group");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Group class.
         /// </summary>
@@ -3996,24 +4068,24 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("v:group");
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Diagram>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Arc>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Curve>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Group>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageFile>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Line>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Oval>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.PolyLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Rectangle>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.RoundRectangle>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shape>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shapetype>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.SetSchema(ElementType);
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ClipPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Diagram.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Diagram());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Lock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Arc.ElementType, static () => new DocumentFormat.OpenXml.Vml.Arc());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Curve.ElementType, static () => new DocumentFormat.OpenXml.Vml.Curve());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Group.ElementType, static () => new DocumentFormat.OpenXml.Vml.Group());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ImageFile.ElementType, static () => new DocumentFormat.OpenXml.Vml.ImageFile());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Line.ElementType, static () => new DocumentFormat.OpenXml.Vml.Line());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Oval.ElementType, static () => new DocumentFormat.OpenXml.Vml.Oval());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.PolyLine.ElementType, static () => new DocumentFormat.OpenXml.Vml.PolyLine());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Rectangle.ElementType, static () => new DocumentFormat.OpenXml.Vml.Rectangle());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.RoundRectangle.ElementType, static () => new DocumentFormat.OpenXml.Vml.RoundRectangle());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shape.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shape());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shapetype.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shapetype());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData());
             builder.AddElement<Group>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("style", a => a.Style)
@@ -4051,23 +4123,23 @@ namespace DocumentFormat.OpenXml.Vml
                 .AddAttribute("o:tablelimits", a => a.TableLimits);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Group), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shape), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shapetype), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Arc), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Curve), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageFile), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Line), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Oval), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.PolyLine), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Rectangle), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.RoundRectangle), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Diagram), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Group.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Shape.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Shapetype.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Arc.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Curve.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.ImageFile.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Line.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Oval.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.PolyLine.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Rectangle.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.RoundRectangle.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Diagram.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, 0, 1)
             };
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("v:tableproperties"), true, new string[] { "1", "2", "3" }));
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("v:dgmlayout"), true, new string[] { "0", "1", "2", "3" }));
@@ -4092,6 +4164,12 @@ namespace DocumentFormat.OpenXml.Vml
     /// </remarks>
     public partial class Background : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "background");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Background");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Background class.
         /// </summary>
@@ -4208,8 +4286,8 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("v:background");
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
+            builder.SetSchema(ElementType);
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Fill.ElementType, static () => new DocumentFormat.OpenXml.Vml.Fill());
             builder.AddElement<Background>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -4223,7 +4301,7 @@ namespace DocumentFormat.OpenXml.Vml
                 .AddAttribute("o:targetscreensize", a => a.TargetScreenSize);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Fill.ElementType, 0, 1)
             };
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName("v:id"), true, null));
         }
@@ -4237,8 +4315,8 @@ namespace DocumentFormat.OpenXml.Vml
         /// </remarks>
         public DocumentFormat.OpenXml.Vml.Fill? Fill
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Fill>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Vml.Fill.ElementType) as DocumentFormat.OpenXml.Vml.Fill;
+            set => SetElement(value, DocumentFormat.OpenXml.Vml.Fill.ElementType);
         }
 
         /// <inheritdoc/>
@@ -4280,6 +4358,12 @@ namespace DocumentFormat.OpenXml.Vml
     /// </remarks>
     public partial class Arc : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "arc");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Arc");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Arc class.
         /// </summary>
@@ -4949,30 +5033,30 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("v:arc");
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.SetSchema(ElementType);
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Callout());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ClipPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Extrusion());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Lock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.SignatureLine());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Skew());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Presentation.TextData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Fill.ElementType, static () => new DocumentFormat.OpenXml.Vml.Fill());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Formulas.ElementType, static () => new DocumentFormat.OpenXml.Vml.Formulas());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, static () => new DocumentFormat.OpenXml.Vml.ShapeHandles());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ImageData.ElementType, static () => new DocumentFormat.OpenXml.Vml.ImageData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Path.ElementType, static () => new DocumentFormat.OpenXml.Vml.Path());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Stroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Stroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextBox.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextBox());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData());
             builder.AddElement<Arc>()
                 .AddAttribute("o:spid", a => a.OptionalString)
                 .AddAttribute("o:oned", a => a.Oned)
@@ -5039,29 +5123,29 @@ namespace DocumentFormat.OpenXml.Vml
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Path.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Formulas.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Fill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Stroke.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Shadow.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.TextBox.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.TextPath.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.ImageData.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, 0, 1)
                     }
                 }
             };
@@ -5112,6 +5196,12 @@ namespace DocumentFormat.OpenXml.Vml
     /// </remarks>
     public partial class Curve : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "curve");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Curve");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Curve class.
         /// </summary>
@@ -5811,30 +5901,30 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("v:curve");
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.SetSchema(ElementType);
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Callout());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ClipPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Extrusion());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Lock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.SignatureLine());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Skew());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Presentation.TextData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Fill.ElementType, static () => new DocumentFormat.OpenXml.Vml.Fill());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Formulas.ElementType, static () => new DocumentFormat.OpenXml.Vml.Formulas());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, static () => new DocumentFormat.OpenXml.Vml.ShapeHandles());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ImageData.ElementType, static () => new DocumentFormat.OpenXml.Vml.ImageData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Path.ElementType, static () => new DocumentFormat.OpenXml.Vml.Path());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Stroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Stroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextBox.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextBox());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData());
             builder.AddElement<Curve>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("style", a => a.Style)
@@ -5901,29 +5991,29 @@ namespace DocumentFormat.OpenXml.Vml
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Path.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Formulas.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Fill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Stroke.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Shadow.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.TextBox.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.TextPath.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.ImageData.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, 0, 1)
                     }
                 }
             };
@@ -5972,6 +6062,12 @@ namespace DocumentFormat.OpenXml.Vml
     /// </remarks>
     public partial class ImageFile : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "image");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Image");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ImageFile class.
         /// </summary>
@@ -6721,30 +6817,30 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("v:image");
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.SetSchema(ElementType);
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Callout());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ClipPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Extrusion());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Lock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.SignatureLine());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Skew());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Presentation.TextData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Fill.ElementType, static () => new DocumentFormat.OpenXml.Vml.Fill());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Formulas.ElementType, static () => new DocumentFormat.OpenXml.Vml.Formulas());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, static () => new DocumentFormat.OpenXml.Vml.ShapeHandles());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ImageData.ElementType, static () => new DocumentFormat.OpenXml.Vml.ImageData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Path.ElementType, static () => new DocumentFormat.OpenXml.Vml.Path());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Stroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Stroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextBox.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextBox());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData());
             builder.AddElement<ImageFile>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("style", a => a.Style)
@@ -6816,29 +6912,29 @@ namespace DocumentFormat.OpenXml.Vml
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Path.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Formulas.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Fill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Stroke.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Shadow.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.TextBox.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.TextPath.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.ImageData.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, 0, 1)
                     }
                 }
             };
@@ -6887,6 +6983,12 @@ namespace DocumentFormat.OpenXml.Vml
     /// </remarks>
     public partial class Line : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "line");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Line");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Line class.
         /// </summary>
@@ -7566,30 +7668,30 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("v:line");
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.SetSchema(ElementType);
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Callout());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ClipPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Extrusion());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Lock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.SignatureLine());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Skew());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Presentation.TextData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Fill.ElementType, static () => new DocumentFormat.OpenXml.Vml.Fill());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Formulas.ElementType, static () => new DocumentFormat.OpenXml.Vml.Formulas());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, static () => new DocumentFormat.OpenXml.Vml.ShapeHandles());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ImageData.ElementType, static () => new DocumentFormat.OpenXml.Vml.ImageData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Path.ElementType, static () => new DocumentFormat.OpenXml.Vml.Path());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Stroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Stroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextBox.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextBox());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData());
             builder.AddElement<Line>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("style", a => a.Style)
@@ -7654,29 +7756,29 @@ namespace DocumentFormat.OpenXml.Vml
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Path.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Formulas.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Fill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Stroke.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Shadow.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.TextBox.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.TextPath.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.ImageData.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, 0, 1)
                     }
                 }
             };
@@ -7723,6 +7825,12 @@ namespace DocumentFormat.OpenXml.Vml
     /// </remarks>
     public partial class Oval : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "oval");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Oval");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Oval class.
         /// </summary>
@@ -8382,30 +8490,30 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("v:oval");
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.SetSchema(ElementType);
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Callout());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ClipPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Extrusion());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Lock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.SignatureLine());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Skew());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Presentation.TextData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Fill.ElementType, static () => new DocumentFormat.OpenXml.Vml.Fill());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Formulas.ElementType, static () => new DocumentFormat.OpenXml.Vml.Formulas());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, static () => new DocumentFormat.OpenXml.Vml.ShapeHandles());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ImageData.ElementType, static () => new DocumentFormat.OpenXml.Vml.ImageData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Path.ElementType, static () => new DocumentFormat.OpenXml.Vml.Path());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Stroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Stroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextBox.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextBox());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData());
             builder.AddElement<Oval>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("style", a => a.Style)
@@ -8468,29 +8576,29 @@ namespace DocumentFormat.OpenXml.Vml
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Path.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Formulas.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Fill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Stroke.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Shadow.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.TextBox.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.TextPath.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.ImageData.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, 0, 1)
                     }
                 }
             };
@@ -8540,6 +8648,12 @@ namespace DocumentFormat.OpenXml.Vml
     /// </remarks>
     public partial class PolyLine : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "polyline");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_PolyLine");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PolyLine class.
         /// </summary>
@@ -9209,31 +9323,31 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("v:polyline");
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Ink>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.SetSchema(ElementType);
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Callout());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ClipPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Extrusion());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Ink.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Ink());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Lock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.SignatureLine());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Skew());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Presentation.TextData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Fill.ElementType, static () => new DocumentFormat.OpenXml.Vml.Fill());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Formulas.ElementType, static () => new DocumentFormat.OpenXml.Vml.Formulas());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, static () => new DocumentFormat.OpenXml.Vml.ShapeHandles());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ImageData.ElementType, static () => new DocumentFormat.OpenXml.Vml.ImageData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Path.ElementType, static () => new DocumentFormat.OpenXml.Vml.Path());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Stroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Stroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextBox.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextBox());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData());
             builder.AddElement<PolyLine>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("style", a => a.Style)
@@ -9297,32 +9411,32 @@ namespace DocumentFormat.OpenXml.Vml
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Path.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Formulas.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Fill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Stroke.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Shadow.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.TextBox.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.TextPath.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.ImageData.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Ink), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Ink.ElementType, 1, 1)
             };
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("v:dgmlayout"), true, new string[] { "0", "1", "2", "3" }));
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("v:dgmlayoutmru"), true, new string[] { "0", "1", "2", "3" }));
@@ -9368,6 +9482,12 @@ namespace DocumentFormat.OpenXml.Vml
     /// </remarks>
     public partial class Rectangle : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "rect");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_Rect");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Rectangle class.
         /// </summary>
@@ -10027,30 +10147,30 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("v:rect");
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.SetSchema(ElementType);
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Callout());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ClipPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Extrusion());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Lock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.SignatureLine());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Skew());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Presentation.TextData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Fill.ElementType, static () => new DocumentFormat.OpenXml.Vml.Fill());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Formulas.ElementType, static () => new DocumentFormat.OpenXml.Vml.Formulas());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, static () => new DocumentFormat.OpenXml.Vml.ShapeHandles());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ImageData.ElementType, static () => new DocumentFormat.OpenXml.Vml.ImageData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Path.ElementType, static () => new DocumentFormat.OpenXml.Vml.Path());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Stroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Stroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextBox.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextBox());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData());
             builder.AddElement<Rectangle>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("style", a => a.Style)
@@ -10113,29 +10233,29 @@ namespace DocumentFormat.OpenXml.Vml
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Path.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Formulas.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Fill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Stroke.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Shadow.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.TextBox.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.TextPath.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.ImageData.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, 0, 1)
                     }
                 }
             };
@@ -10184,6 +10304,12 @@ namespace DocumentFormat.OpenXml.Vml
     /// </remarks>
     public partial class RoundRectangle : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "roundrect");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_RoundRect");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RoundRectangle class.
         /// </summary>
@@ -10843,30 +10969,30 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("v:roundrect");
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.SetSchema(ElementType);
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Callout());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ClipPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Extrusion());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Lock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.SignatureLine());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Skew());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Presentation.TextData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Fill.ElementType, static () => new DocumentFormat.OpenXml.Vml.Fill());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Formulas.ElementType, static () => new DocumentFormat.OpenXml.Vml.Formulas());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, static () => new DocumentFormat.OpenXml.Vml.ShapeHandles());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ImageData.ElementType, static () => new DocumentFormat.OpenXml.Vml.ImageData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Path.ElementType, static () => new DocumentFormat.OpenXml.Vml.Path());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Stroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Stroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextBox.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextBox());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData());
             builder.AddElement<RoundRectangle>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("style", a => a.Style)
@@ -10929,29 +11055,29 @@ namespace DocumentFormat.OpenXml.Vml
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Path), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Formulas), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ShapeHandles), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Fill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.ImageData), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ClipPath), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.SignatureLine), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Path.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Formulas.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Fill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Stroke.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Shadow.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.TextBox.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.TextPath.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.ImageData.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, 0, 1)
                     }
                 }
             };
@@ -10972,6 +11098,12 @@ namespace DocumentFormat.OpenXml.Vml
     /// </summary>
     public partial class ShapeHandle : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "h");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_H");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShapeHandle class.
         /// </summary>
@@ -11072,7 +11204,7 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("v:h");
+            builder.SetSchema(ElementType);
             builder.AddElement<ShapeHandle>()
                 .AddAttribute("position", a => a.Position)
                 .AddAttribute("polar", a => a.Polar)
@@ -11096,6 +11228,12 @@ namespace DocumentFormat.OpenXml.Vml
     /// </summary>
     public partial class Formula : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:vml", "f");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:vml", "CT_F");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Formula class.
         /// </summary>
@@ -11116,7 +11254,7 @@ namespace DocumentFormat.OpenXml.Vml
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("v:f");
+            builder.SetSchema(ElementType);
             builder.AddElement<Formula>()
                 .AddAttribute("eqn", a => a.Equation);
         }
