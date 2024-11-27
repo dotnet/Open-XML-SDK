@@ -56,6 +56,12 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// </remarks>
     public partial class Macrosheet : OpenXmlPartRootElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/excel/2006/main", "macrosheet");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "CT_Macrosheet");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Macrosheet class.
         /// </summary>
@@ -90,7 +96,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xne:macrosheet");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.AutoFilter>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Columns>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatting>();
@@ -120,33 +126,33 @@ namespace DocumentFormat.OpenXml.Office.Excel
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortState>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetDimension), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetViews), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Columns), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetData), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetProtection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.AutoFilter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SortState), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataConsolidate), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatting), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PrintOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageMargins), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageSetup), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.HeaderFooter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowBreaks), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Drawing), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Picture), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleObjects), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.SheetProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.SheetDimension.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.SheetViews.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Columns.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.SheetData.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.SheetProtection.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.AutoFilter.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.SortState.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.DataConsolidate.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatting.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.PrintOptions.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.PageMargins.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.PageSetup.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.HeaderFooter.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.RowBreaks.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.CustomProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Drawing.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Picture.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.OleObjects.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -159,8 +165,8 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetProperties? SheetProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.SheetProperties.ElementType) as DocumentFormat.OpenXml.Spreadsheet.SheetProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.SheetProperties.ElementType);
         }
 
         /// <summary>
@@ -172,8 +178,8 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetDimension? SheetDimension
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetDimension>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.SheetDimension.ElementType) as DocumentFormat.OpenXml.Spreadsheet.SheetDimension;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.SheetDimension.ElementType);
         }
 
         /// <summary>
@@ -185,8 +191,8 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetViews? SheetViews
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetViews>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.SheetViews.ElementType) as DocumentFormat.OpenXml.Spreadsheet.SheetViews;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.SheetViews.ElementType);
         }
 
         /// <summary>
@@ -198,8 +204,8 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties? SheetFormatProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties.ElementType) as DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -251,6 +257,12 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// </remarks>
     public partial class WorksheetSortMap : OpenXmlPartRootElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/excel/2006/main", "worksheetSortMap");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/excel/2006/main", "CT_WorksheetSortMap");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the WorksheetSortMap class.
         /// </summary>
@@ -285,13 +297,13 @@ namespace DocumentFormat.OpenXml.Office.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xne:worksheetSortMap");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ColumnSortMap>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.RowSortMap>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.RowSortMap), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.ColumnSortMap), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Office.Excel.RowSortMap.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Office.Excel.ColumnSortMap.ElementType, 0, 1)
             };
         }
 
@@ -304,8 +316,8 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office.Excel.RowSortMap? RowSortMap
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Excel.RowSortMap>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office.Excel.RowSortMap.ElementType) as DocumentFormat.OpenXml.Office.Excel.RowSortMap;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.Excel.RowSortMap.ElementType);
         }
 
         /// <summary>
@@ -317,8 +329,8 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// </remarks>
         public DocumentFormat.OpenXml.Office.Excel.ColumnSortMap? ColumnSortMap
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Excel.ColumnSortMap>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office.Excel.ColumnSortMap.ElementType) as DocumentFormat.OpenXml.Office.Excel.ColumnSortMap;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.Excel.ColumnSortMap.ElementType);
         }
 
         /// <inheritdoc/>
@@ -363,6 +375,12 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// </summary>
     public partial class ReferenceSequence : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/excel/2006/main", "sqref");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/excel/2006/main", "ST_Sqref");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ReferenceSequence class.
         /// </summary>
@@ -387,7 +405,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<ListValue<StringValue>>(NumberValidator.Instance);
-            builder.SetSchema("xne:sqref");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -402,6 +420,12 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// </summary>
     public partial class Formula : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/excel/2006/main", "f");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ST_Formula");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Formula class.
         /// </summary>
@@ -425,7 +449,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xne:f");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
         }
 
@@ -446,6 +470,12 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// </remarks>
     public partial class RowSortMap : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/excel/2006/main", "rowSortMap");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/excel/2006/main", "CT_RowSortMap");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RowSortMap class.
         /// </summary>
@@ -500,7 +530,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xne:rowSortMap");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.RowSortMapItem>();
             builder.AddElement<RowSortMap>()
                 .AddAttribute("ref", a => a.Ref, aBuilder =>
@@ -513,7 +543,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.RowSortMapItem), 1, 536870910)
+                new ElementParticle(DocumentFormat.OpenXml.Office.Excel.RowSortMapItem.ElementType, 1, 536870910)
             };
         }
 
@@ -534,6 +564,12 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// </remarks>
     public partial class ColumnSortMap : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/excel/2006/main", "colSortMap");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/excel/2006/main", "CT_ColSortMap");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ColumnSortMap class.
         /// </summary>
@@ -588,7 +624,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xne:colSortMap");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ColumnSortMapItem>();
             builder.AddElement<ColumnSortMap>()
                 .AddAttribute("ref", a => a.Ref, aBuilder =>
@@ -601,7 +637,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.ColumnSortMapItem), 1, 536870910)
+                new ElementParticle(DocumentFormat.OpenXml.Office.Excel.ColumnSortMapItem.ElementType, 1, 536870910)
             };
         }
 
@@ -616,6 +652,12 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// </summary>
     public partial class RowSortMapItem : SortMapItemType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/excel/2006/main", "row");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/excel/2006/main", "CT_SortMapItem");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RowSortMapItem class.
         /// </summary>
@@ -626,7 +668,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xne:row");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -640,6 +682,12 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// </summary>
     public partial class ColumnSortMapItem : SortMapItemType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/excel/2006/main", "col");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/excel/2006/main", "CT_SortMapItem");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ColumnSortMapItem class.
         /// </summary>
@@ -650,7 +698,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xne:col");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -664,6 +712,12 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// </summary>
     public abstract partial class SortMapItemType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/excel/2006/main", "CT_SortMapItem");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SortMapItemType class.
         /// </summary>

@@ -113,7 +113,7 @@ namespace DocumentFormat.OpenXml
         {
             base.ConfigureMetadata(builder);
 
-            builder.SetSchema(InternalQName);
+            builder.SetSchema(new(InternalQName, default));
 
             builder.AddChild<AlternateContentChoice>();
             builder.AddChild<AlternateContentFallback>();
