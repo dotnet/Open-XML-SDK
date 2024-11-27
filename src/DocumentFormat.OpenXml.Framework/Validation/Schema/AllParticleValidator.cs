@@ -13,7 +13,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     internal class AllParticleValidator : CompositeParticleValidator
     {
-        private readonly Dictionary<OpenXmlType, bool> _childrenParticles;
+        private readonly Dictionary<OpenXmlSchemaType, bool> _childrenParticles;
 
         /// <summary>
         /// Initializes a new instance of the AllParticleValidator.
@@ -35,7 +35,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
 #endif
 
-            _childrenParticles = new Dictionary<OpenXmlType, bool>(ParticleConstraint.ChildrenParticles.Length);
+            _childrenParticles = new Dictionary<OpenXmlSchemaType, bool>(ParticleConstraint.ChildrenParticles.Length);
 
             foreach (var childParticle in ParticleConstraint.ChildrenParticles)
             {

@@ -7,7 +7,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata;
 
 internal interface IElementMetadata
 {
-    OpenXmlType Type { get; }
+    OpenXmlSchemaType Type { get; }
 
     ReadOnlyArray<AttributeMetadata> Attributes { get; }
 

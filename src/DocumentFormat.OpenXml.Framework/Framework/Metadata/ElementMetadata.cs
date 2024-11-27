@@ -18,7 +18,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
         private readonly Lazy<ElementFactoryCollection>? _children;
 
         internal ElementMetadata(
-            OpenXmlType type,
+            OpenXmlSchemaType type,
             ReadOnlyArray<AttributeMetadata> attributes,
             ReadOnlyArray<IValidator> validators,
             ReadOnlyArray<IValidator> constraints,
@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
         {
         }
 
-        public OpenXmlType Type { get; }
+        public OpenXmlSchemaType Type { get; }
 
         public ReadOnlyArray<AttributeMetadata> Attributes { get; }
 
@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             private List<IMetadataBuilder<AttributeMetadata>>? _attributes;
             private HashSet<IMetadataBuilder<ElementFactory>>? _children;
             private List<IValidator>? _constraints;
-            private OpenXmlType _type;
+            private OpenXmlSchemaType _type;
 
             public Builder(IOpenXmlNamespaceResolver resolver)
             {
@@ -90,7 +90,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             public OpenXmlQualifiedName CreateQName(string qname)
                 => _resolver.ParseQName(qname);
 
-            public void SetSchema(in OpenXmlType type)
+            public void SetSchema(in OpenXmlSchemaType type)
                 => _type = type;
 
             public void AddChild<T>()

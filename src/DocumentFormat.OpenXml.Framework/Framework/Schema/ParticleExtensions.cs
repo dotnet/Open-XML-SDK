@@ -12,10 +12,10 @@ namespace DocumentFormat.OpenXml.Framework
     /// </summary>
     internal static class ParticleExtensions
     {
-        public static ParticleCollection GetCollection(this CompiledParticle compiled, OpenXmlType type, OpenXmlCompositeElement element)
+        public static ParticleCollection GetCollection(this CompiledParticle compiled, OpenXmlSchemaType type, OpenXmlCompositeElement element)
             => new(type, compiled, element);
 
-        public static OpenXmlElement? Get(this CompiledParticle? compiled, OpenXmlCompositeElement element, OpenXmlType type)
+        public static OpenXmlElement? Get(this CompiledParticle? compiled, OpenXmlCompositeElement element, OpenXmlSchemaType type)
         {
             if (compiled is null)
             {
@@ -46,7 +46,7 @@ namespace DocumentFormat.OpenXml.Framework
         public static bool Set(this CompiledParticle? compiled, OpenXmlCompositeElement parent, OpenXmlElement value)
             => Set(compiled, parent, value, value.Metadata.Type);
 
-        public static bool Set(this CompiledParticle? compiled, OpenXmlCompositeElement parent, OpenXmlElement? value, OpenXmlType? type)
+        public static bool Set(this CompiledParticle? compiled, OpenXmlCompositeElement parent, OpenXmlElement? value, OpenXmlSchemaType? type)
         {
             if (type is null)
             {

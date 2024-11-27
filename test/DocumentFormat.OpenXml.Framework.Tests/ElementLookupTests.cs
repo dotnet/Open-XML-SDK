@@ -177,7 +177,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             {
             }
 
-            public OpenXmlTypeProxy(OpenXmlType type)
+            public OpenXmlTypeProxy(OpenXmlSchemaType type)
             {
                 Name = type.Name;
                 Type = type.Type;

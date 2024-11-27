@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 {
     public class ParticleTests
     {
-        private readonly OpenXmlType _type = new(new OpenXmlQualifiedName("Test", "http://test.com"), new OpenXmlQualifiedName("Test", "http://test.com"));
+        private readonly OpenXmlSchemaType _type = new(new OpenXmlQualifiedName("Test", "http://test.com"), new OpenXmlQualifiedName("Test", "http://test.com"));
         private readonly ITestOutputHelper _output;
 
         public ParticleTests(ITestOutputHelper output)

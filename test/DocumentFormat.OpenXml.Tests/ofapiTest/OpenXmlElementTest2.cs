@@ -217,7 +217,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         private class ChildElement : OpenXmlLeafElement
         {
-            public static OpenXmlType ElementType => new(new("http://testns", "child"), new("http://testns", "child"));
+            public static OpenXmlSchemaType ElementType => new(new("http://testns", "child"), new("http://testns", "child"));
 
             internal override void ConfigureMetadata(ElementMetadata.Builder builder)
             {

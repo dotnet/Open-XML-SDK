@@ -33,7 +33,7 @@ namespace DocumentFormat.OpenXml.Framework
         public ParticlePath? Find(OpenXmlElement? obj)
             => Find(obj?.Metadata.Type);
 
-        public ParticlePath? Find(OpenXmlType? type)
+        public ParticlePath? Find(OpenXmlSchemaType? type)
         {
             if (type is null)
             {

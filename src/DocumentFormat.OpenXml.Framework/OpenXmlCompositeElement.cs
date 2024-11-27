@@ -770,10 +770,10 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        private protected OpenXmlElement? GetElement(in OpenXmlType type)
+        private protected OpenXmlElement? GetElement(in OpenXmlSchemaType type)
             => Metadata.Particle.Get(this, type);
 
-        private protected bool SetElement(OpenXmlElement? value, OpenXmlType type)
+        private protected bool SetElement(OpenXmlElement? value, OpenXmlSchemaType type)
             => Metadata.Particle.Set(this, value, type);
 
         private void AddANode(OpenXmlElement node)

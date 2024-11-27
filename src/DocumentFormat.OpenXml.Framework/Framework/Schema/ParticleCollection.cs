@@ -13,12 +13,12 @@ namespace DocumentFormat.OpenXml.Framework.Schema
     /// </summary>
     internal readonly struct ParticleCollection : IEnumerable<OpenXmlElement>
     {
-        private readonly OpenXmlType _type;
+        private readonly OpenXmlSchemaType _type;
         private readonly OpenXmlCompositeElement _element;
         private readonly CompiledParticle _compiled;
         private readonly ParticlePath? _elementPath;
 
-        internal ParticleCollection(in OpenXmlType type, CompiledParticle compiled, OpenXmlCompositeElement element)
+        internal ParticleCollection(in OpenXmlSchemaType type, CompiledParticle compiled, OpenXmlCompositeElement element)
         {
             _type = type;
             _element = element;
@@ -156,10 +156,10 @@ namespace DocumentFormat.OpenXml.Framework.Schema
 
         public struct Enumerator : IEnumerator<OpenXmlElement>
         {
-            private readonly OpenXmlType _type;
+            private readonly OpenXmlSchemaType _type;
             private OpenXmlElement? _child;
 
-            internal Enumerator(OpenXmlElement element, in OpenXmlType type)
+            internal Enumerator(OpenXmlElement element, in OpenXmlSchemaType type)
             {
                 _type = type;
                 _child = element.FirstChild;

@@ -482,35 +482,35 @@ namespace DocumentFormat.OpenXml.Framework.Tests
 
         private class T1() : TestOpenXmlElement(ElementType)
         {
-            internal static OpenXmlType ElementType { get; } = new(new("ns", "name1"), new("ns", $"CT_name1"));
+            internal static OpenXmlSchemaType ElementType { get; } = new(new("ns", "name1"), new("ns", $"CT_name1"));
         }
 
         private class T2() : TestOpenXmlElement(ElementType)
         {
-            internal static OpenXmlType ElementType { get; } = new(new("ns", "name2"), new("ns", $"CT_name2"));
+            internal static OpenXmlSchemaType ElementType { get; } = new(new("ns", "name2"), new("ns", $"CT_name2"));
         }
 
         private class T3() : TestOpenXmlElement(ElementType)
         {
-            internal static OpenXmlType ElementType { get; } = new(new("ns", "name3"), new("ns", $"CT_name3"));
+            internal static OpenXmlSchemaType ElementType { get; } = new(new("ns", "name3"), new("ns", $"CT_name3"));
         }
 
         private class T4() : TestOpenXmlElement(ElementType)
         {
-            internal static OpenXmlType ElementType { get; } = new(new("ns", "name4"), new("ns", $"CT_name4"));
+            internal static OpenXmlSchemaType ElementType { get; } = new(new("ns", "name4"), new("ns", $"CT_name4"));
         }
 
         private class T5() : TestOpenXmlElement(ElementType)
         {
-            internal static OpenXmlType ElementType { get; } = new(new("ns", "name5"), new("ns", $"CT_name5"));
+            internal static OpenXmlSchemaType ElementType { get; } = new(new("ns", "name5"), new("ns", $"CT_name5"));
         }
 
         private class T6() : TestOpenXmlElement(ElementType)
         {
-            internal static OpenXmlType ElementType { get; } = new(new("ns", "name6"), new("ns", $"CT_name6"));
+            internal static OpenXmlSchemaType ElementType { get; } = new(new("ns", "name6"), new("ns", $"CT_name6"));
         }
 
-        private abstract class TestOpenXmlElement(OpenXmlType type) : OpenXmlElement
+        private abstract class TestOpenXmlElement(OpenXmlSchemaType type) : OpenXmlElement
         {
             public override bool HasChildren => false;
 

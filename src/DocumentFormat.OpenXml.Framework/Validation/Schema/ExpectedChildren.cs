@@ -13,14 +13,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     internal class ExpectedChildren
     {
-        private List<OpenXmlType>? _elements;
+        private List<OpenXmlSchemaType>? _elements;
         private List<string>? _xsdanyNamespaces;
 
         /// <summary>
         /// Add a known element of the child.
         /// </summary>
         /// <param name="type"></param>
-        public void Add(OpenXmlType type)
+        public void Add(OpenXmlSchemaType type)
         {
             // No lock, not safe for multi-thread
             if (_elements is null)

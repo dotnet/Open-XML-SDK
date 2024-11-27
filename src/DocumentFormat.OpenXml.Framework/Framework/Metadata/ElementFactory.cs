@@ -11,13 +11,13 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
     {
         private readonly Func<OpenXmlElement> _factory;
 
-        public ElementFactory(in OpenXmlType type, Func<OpenXmlElement> factory)
+        public ElementFactory(in OpenXmlSchemaType type, Func<OpenXmlElement> factory)
         {
             Type = type;
             _factory = factory;
         }
 
-        public OpenXmlType Type { get; }
+        public OpenXmlSchemaType Type { get; }
 
         public OpenXmlElement Create() => _factory();
 

@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <summary>
         /// Initializes a new instance of the ElementParticle.
         /// </summary>
-        public ElementParticle(OpenXmlType type, int minOccurs, int maxOccurs, FileFormatVersions version = FileFormatVersions.Office2007)
+        public ElementParticle(OpenXmlSchemaType type, int minOccurs, int maxOccurs, FileFormatVersions version = FileFormatVersions.Office2007)
             : base(ParticleType.Element, minOccurs, maxOccurs, version)
         {
             if (type == default)
@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             Type = type;
         }
 
-        public OpenXmlType Type { get; }
+        public OpenXmlSchemaType Type { get; }
 
         /// <inheritdoc/>
         internal override IParticleValidator ParticleValidator => this;

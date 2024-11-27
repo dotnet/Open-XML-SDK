@@ -9,17 +9,17 @@ namespace DocumentFormat.OpenXml.Framework;
 [DebuggerDisplay("[{Type}] - {Path}")]
 internal readonly record struct LookupItem
 {
-    public LookupItem(OpenXmlType type, ParticlePath path)
+    public LookupItem(OpenXmlSchemaType type, ParticlePath path)
     {
         Type = type;
         Path = path;
     }
 
-    public OpenXmlType Type { get; }
+    public OpenXmlSchemaType Type { get; }
 
     public ParticlePath Path { get; }
 
-    public void Deconstruct(out OpenXmlType type, out ParticlePath path)
+    public void Deconstruct(out OpenXmlSchemaType type, out ParticlePath path)
     {
         type = Type;
         path = Path;
