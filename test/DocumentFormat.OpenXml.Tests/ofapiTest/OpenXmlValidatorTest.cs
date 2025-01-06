@@ -45,53 +45,53 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
             element.Val = true;
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = false;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val.InnerText = "false";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val.InnerText = "true";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val.InnerText = "0";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val.InnerText = "1";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.Val.InnerText = string.Empty;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The attribute value cannot be empty.", actual.First().Description);
 
             element.Val.InnerText = "FALSE";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'val' has invalid value 'FALSE'. The string 'FALSE' is not a valid 'Boolean' value.", actual.First().Description);
 
             element.Val.InnerText = "off";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'val' has invalid value 'off'. The string 'off' is not a valid 'Boolean' value.", actual.First().Description);
 
             element.Val.InnerText = "00";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -118,24 +118,24 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
             element.Val = 0;
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = -10;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = -90;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = 90;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.Val.InnerText = "abc";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -143,7 +143,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // sbyte overflow
             element.Val.InnerText = "128";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -151,21 +151,21 @@ namespace DocumentFormat.OpenXml.Tests
 
             // sbyte overflow
             element.Val.InnerText = "-129";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'val' has invalid value '-129'. The string '-129' is not a valid 'SByte' value.", actual.First().Description);
 
             element.Val = -91;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The MinInclusive constraint failed. The value must be greater than or equal to -90.", actual.First().Description);
 
             element.Val = 91;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -192,20 +192,20 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
             element.Val = 2;
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = 1;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = 90;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.Val.InnerText = "abc";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -213,7 +213,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // byte overflow
             element.Val.InnerText = "256";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -221,14 +221,14 @@ namespace DocumentFormat.OpenXml.Tests
 
             // byte overflow
             element.Val.InnerText = "-1";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'val' has invalid value '-1'. The string '-1' is not a valid 'Byte' value.", actual.First().Description);
 
             element.Val = 0;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -241,7 +241,7 @@ namespace DocumentFormat.OpenXml.Tests
             // Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             // Assert.True(actual.First().Description.EndsWith(" The MinInclusive constraint failed."));
             element.Val = 91;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -260,28 +260,28 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
             element.Text = "20";
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Text = "+20";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Text = "-20";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Text = short.MinValue.ToString();
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Text = short.MaxValue.ToString();
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.Text = "abc";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_ElementValueDataTypeDetailed", actual.First().Id);
@@ -289,7 +289,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // Int16 overflow
             element.Text = "65536";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_ElementValueDataTypeDetailed", actual.First().Id);
@@ -297,7 +297,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // Int16 overflow
             element.Text = "-65536";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_ElementValueDataTypeDetailed", actual.First().Id);
@@ -323,20 +323,20 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
             element.Val = 20;
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = 5;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = 500;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.Val.InnerText = "abc";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -344,7 +344,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // UInt16 overflow
             element.Val.InnerText = "65536";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -352,28 +352,28 @@ namespace DocumentFormat.OpenXml.Tests
 
             // UInt16 overflow
             element.Val.InnerText = "-1";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'val' has invalid value '-1'. The string '-1' is not a valid 'UInt16' value.", actual.First().Description);
 
             element.Val = 0;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The MinInclusive constraint failed. The value must be greater than or equal to 5.", actual.First().Description);
 
             element.Val = 4;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The MinInclusive constraint failed. The value must be greater than or equal to 5.", actual.First().Description);
 
             element.Val = 501;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -402,62 +402,62 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
             element.Val = 0;
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = 100;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = 21600000 - 1;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val.InnerText = "0";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val.InnerText = "+0";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val.InnerText = "-0";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val.InnerText = "100";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val.InnerText = "+100";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.Val = new Int32Value();
             element.Val.InnerText = "abc";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'val' has invalid value 'abc'. The string 'abc' is not a valid 'Int32' value.", actual.First().Description);
 
             element.Val = -1;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The MinInclusive constraint failed. The value must be greater than or equal to 0.", actual.First().Description);
 
             element.Val = 21600000;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The MaxExclusive constraint failed. The value must be less than 21600000.", actual.First().Description);
 
             element.Val = 21600000 * 2;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -489,42 +489,42 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
             outerShadow.HorizontalSkew = 0;
-            actual = O12Validator.Validate(outerShadow);
+            actual = O12Validator.Validate(outerShadow, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             outerShadow.HorizontalSkew = -5400000 + 1;
-            actual = O12Validator.Validate(outerShadow);
+            actual = O12Validator.Validate(outerShadow, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             outerShadow.HorizontalSkew = 5400000 - 1;
-            actual = O12Validator.Validate(outerShadow);
+            actual = O12Validator.Validate(outerShadow, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             outerShadow.HorizontalSkew = new Int32Value();
             outerShadow.HorizontalSkew.InnerText = "abc";
-            actual = O12Validator.Validate(outerShadow);
+            actual = O12Validator.Validate(outerShadow, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'kx' has invalid value 'abc'. The string 'abc' is not a valid 'Int32' value.", actual.First().Description);
 
             outerShadow.HorizontalSkew = -5400000;
-            actual = O12Validator.Validate(outerShadow);
+            actual = O12Validator.Validate(outerShadow, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The MinExclusive constraint failed. The value must be greater than -5400000.", actual.First().Description);
 
             outerShadow.HorizontalSkew = 5400000;
-            actual = O12Validator.Validate(outerShadow);
+            actual = O12Validator.Validate(outerShadow, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The MaxExclusive constraint failed. The value must be less than 5400000.", actual.First().Description);
 
             outerShadow.HorizontalSkew = 5400000 * 2;
-            actual = O12Validator.Validate(outerShadow);
+            actual = O12Validator.Validate(outerShadow, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -546,49 +546,49 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
             autoNum.StartAt = 1;
-            actual = O12Validator.Validate(autoNum);
+            actual = O12Validator.Validate(autoNum, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             autoNum.StartAt = 100;
-            actual = O12Validator.Validate(autoNum);
+            actual = O12Validator.Validate(autoNum, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             autoNum.StartAt = 32767;
-            actual = O12Validator.Validate(autoNum);
+            actual = O12Validator.Validate(autoNum, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             autoNum.StartAt = new Int32Value();
             autoNum.StartAt.InnerText = "abc";
-            actual = O12Validator.Validate(autoNum);
+            actual = O12Validator.Validate(autoNum, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'startAt' has invalid value 'abc'. The string 'abc' is not a valid 'Int32' value.", actual.First().Description);
 
             autoNum.StartAt = -1;
-            actual = O12Validator.Validate(autoNum);
+            actual = O12Validator.Validate(autoNum, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The MinInclusive constraint failed. The value must be greater than or equal to 1.", actual.First().Description);
 
             autoNum.StartAt = 0;
-            actual = O12Validator.Validate(autoNum);
+            actual = O12Validator.Validate(autoNum, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The MinInclusive constraint failed. The value must be greater than or equal to 1.", actual.First().Description);
 
             autoNum.StartAt = 32767 + 1;
-            actual = O12Validator.Validate(autoNum);
+            actual = O12Validator.Validate(autoNum, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The MaxInclusive constraint failed. The value must be less than or equal to 32767.", actual.First().Description);
 
             autoNum.StartAt = 32767 * 2;
-            actual = O12Validator.Validate(autoNum);
+            actual = O12Validator.Validate(autoNum, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -624,28 +624,28 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
             element.Text = "0";
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Text = "-00";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Text = "20";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Text = "+0020";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Text = int.MaxValue.ToString();
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.Text = "abc";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_ElementValueDataTypeDetailed", actual.First().Id);
@@ -653,14 +653,14 @@ namespace DocumentFormat.OpenXml.Tests
 
             // Int32 overflow
             element.Text = "2147483648";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_ElementValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The element 'http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing:col' has invalid value '2147483648'. The string '2147483648' is not a valid 'Int32' value.", actual.First().Description);
 
             element.Text = "-1";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_ElementValueDataTypeDetailed", actual.First().Id);
@@ -686,35 +686,35 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
             element.Val = 0;
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = 100;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = 300;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.Val = new UInt32Value();
             element.Val.InnerText = "abc";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'val' has invalid value 'abc'. The string 'abc' is not a valid 'UInt32' value.", actual.First().Description);
 
             element.Val = 300 + 1;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The MaxInclusive constraint failed. The value must be less than or equal to 300.", actual.First().Description);
 
             element.Val = 300 * 2;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -754,28 +754,28 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
             element.Cx = 914400 + 914400;
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Cx = 914400;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Cx.InnerText = "914400";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Cx.InnerText = "+914400";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Cx = 51206400;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.Cx.InnerText = "abc";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -783,7 +783,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // Int64 overflow
             element.Cx.InnerText = "9223372036854775808";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -791,28 +791,28 @@ namespace DocumentFormat.OpenXml.Tests
 
             // INt64 overflow
             element.Cx.InnerText = "-9223372036854775808";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'cx' has invalid value '-9223372036854775808'. The string '-9223372036854775808' is not a valid 'Int32' value.", actual.First().Description);
 
             element.Cx = -1;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The MinInclusive constraint failed. The value must be greater than or equal to 914400.", actual.First().Description);
 
             element.Cx = 914400 - 1;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The MinInclusive constraint failed. The value must be greater than or equal to 914400.", actual.First().Description);
 
             element.Cx = 51206400 + 1;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -856,28 +856,28 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
             element.Cx = 914400 + 914400;
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Cx = 914400;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Cx.InnerText = "914400";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Cx.InnerText = "+914400";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Cx = 51206400;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.Cx.InnerText = "abc";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -885,7 +885,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // Int64 overflow
             element.Cx.InnerText = "9223372036854775808";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -893,28 +893,28 @@ namespace DocumentFormat.OpenXml.Tests
 
             // INt64 overflow
             element.Cx.InnerText = "-9223372036854775809";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'cx' has invalid value '-9223372036854775809'. The string '-9223372036854775809' is not a valid 'Int64' value.", actual.First().Description);
 
             element.Cx = -2147483647L;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The MinInclusive constraint failed. The value must be greater than or equal to 0.", actual.First().Description);
 
             element.Cx = 0 - 1;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The MinInclusive constraint failed. The value must be greater than or equal to 0.", actual.First().Description);
 
             element.Cx = 2147483647L + 1;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -932,24 +932,24 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
             element.Text = "20";
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Text = ulong.MinValue.ToString();
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Text = uint.MaxValue.ToString();
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Text = ulong.MaxValue.ToString();
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.Text = "abc";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_ElementValueDataTypeDetailed", actual.First().Id);
@@ -957,7 +957,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // UInt64 overflow
             element.Text = "18446744073709551616";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_ElementValueDataTypeDetailed", actual.First().Id);
@@ -965,7 +965,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // UInt64 overflow
             element.Text = "-1";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_ElementValueDataTypeDetailed", actual.First().Id);
@@ -973,7 +973,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // unsigned int64 can not have "+"
             element.Text = "+20";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_ElementValueDataTypeDetailed", actual.First().Id);
@@ -993,41 +993,41 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
             element.Val = float.MinValue;
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = 10000.001F;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = 10.23e4F;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = float.MaxValue;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = float.Epsilon;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = float.NegativeInfinity;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = float.PositiveInfinity;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // NaN (not a number)
             element.Val = float.NaN;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.Val.InnerText = "abc";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1036,7 +1036,7 @@ namespace DocumentFormat.OpenXml.Tests
 #if !NETCOREAPP3_1 && !NET5_0_OR_GREATER // Fails due to https://github.com/dotnet/coreclr/issues/27898
             // float overflow
             element.Val.InnerText = "-3.402823e39";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1044,7 +1044,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // float overflow
             element.Val.InnerText = "3.402823e39";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1071,28 +1071,28 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
             element.Val = 10000.001;
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = 10.23e4;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = double.MaxValue;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = double.Epsilon;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = double.PositiveInfinity;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.Val.InnerText = "abc";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1101,7 +1101,7 @@ namespace DocumentFormat.OpenXml.Tests
 #if !NETCOREAPP3_1 && !NET5_0_OR_GREATER // Fails due to https://github.com/dotnet/coreclr/issues/27898
             // double overflow
             element.Val.InnerText = "-1.79769313486232e309";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1109,7 +1109,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // double overflow
             element.Val.InnerText = "1.79769313486232e309";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1117,21 +1117,21 @@ namespace DocumentFormat.OpenXml.Tests
 #endif
 
             element.Val = 0;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The MinExclusive constraint failed. The value must be greater than 0.", actual.First().Description);
 
             element.Val = 0 - double.Epsilon;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The MinExclusive constraint failed. The value must be greater than 0.", actual.First().Description);
 
             element.Val = double.NegativeInfinity;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1139,7 +1139,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // NaN (not a number)
             element.Val = double.NaN;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1158,27 +1158,27 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
             logBase.Val = 2.0;
-            actual = O12Validator.Validate(logBase);
+            actual = O12Validator.Validate(logBase, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             logBase.Val = 200;
-            actual = O12Validator.Validate(logBase);
+            actual = O12Validator.Validate(logBase, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             logBase.Val = 1000.0;
-            actual = O12Validator.Validate(logBase);
+            actual = O12Validator.Validate(logBase, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             logBase.Val.InnerText = "abc";
-            actual = O12Validator.Validate(logBase);
+            actual = O12Validator.Validate(logBase, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'val' has invalid value 'abc'. The string 'abc' is not a valid 'Double' value.", actual.First().Description);
 
             logBase.Val = -1;
-            actual = O12Validator.Validate(logBase);
+            actual = O12Validator.Validate(logBase, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1186,14 +1186,14 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ******************** double.Epsilon is too small so ((double)2.0) - double.Epsilon == 2.0
             logBase.Val = 2.0 - 0.1;
-            actual = O12Validator.Validate(logBase);
+            actual = O12Validator.Validate(logBase, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The MinInclusive constraint failed. The value must be greater than or equal to 2.", actual.First().Description);
 
             logBase.Val = 1000.0 + 0.1;
-            actual = O12Validator.Validate(logBase);
+            actual = O12Validator.Validate(logBase, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1219,40 +1219,40 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
             element.StartAngle = decimal.MaxValue;
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.StartAngle = 100000.002M;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.StartAngle.InnerText = "+100000.002";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.StartAngle.InnerText = "-100000.002";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.StartAngle = decimal.MinusOne;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.StartAngle = decimal.MinValue;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.StartAngle = decimal.One;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.StartAngle = decimal.Zero;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.StartAngle.InnerText = "abc";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1260,7 +1260,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // decimal overflow
             element.StartAngle.InnerText = "-79228162514264337593543950336";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1268,7 +1268,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // decimal overflow
             element.StartAngle.InnerText = "79228162514264337593543950336";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1294,34 +1294,34 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
             element.Val = -2;
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = 2;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = 0;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.Val.InnerText = "abc";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'http://schemas.openxmlformats.org/officeDocument/2006/math:val' has invalid value 'abc'. The string 'abc' is not a valid 'http://www.w3.org/2001/XMLSchema:integer' value.", actual.First().Description);
 
             element.Val = -3;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The MinInclusive constraint failed. The value must be greater than or equal to -2.", actual.First().Description);
 
             element.Val = 3;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1339,28 +1339,28 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
             element.Text = "20";
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Text = "+20";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Text = "0";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Text = "-0";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Text = uint.MaxValue.ToString();
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.Text = "abc";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_ElementValueDataTypeDetailed", actual.First().Id);
@@ -1368,7 +1368,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // negative integer is error.
             element.Text = "-1";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_ElementValueDataTypeDetailed", actual.First().Id);
@@ -1391,34 +1391,34 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
             element.Width = 1;
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Width = 2;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Width = 1000;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.Width.InnerText = "abc";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'width' has invalid value 'abc'. The string 'abc' is not a valid 'http://www.w3.org/2001/XMLSchema:positiveInteger' value.", actual.First().Description);
 
             element.Width = 0;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'width' has invalid value '0'. The string '0' is not a valid 'http://www.w3.org/2001/XMLSchema:positiveInteger' value.", actual.First().Description);
 
             element.Width = -3;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1441,47 +1441,47 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
             element.FullDate = DateTime.MinValue;
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.FullDate = DateTime.MaxValue;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.FullDate = DateTime.Now;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.FullDate = DateTime.Today;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.FullDate = DateTime.UtcNow;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.FullDate.InnerText = XmlConvert.ToString(DateTime.Now, XmlDateTimeSerializationMode.Local);
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.FullDate.InnerText = XmlConvert.ToString(DateTime.Today, XmlDateTimeSerializationMode.RoundtripKind);
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.FullDate.InnerText = XmlConvert.ToString(DateTime.UtcNow, XmlDateTimeSerializationMode.Utc);
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.FullDate.InnerText = "abc";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:fullDate' has invalid value 'abc'. The string 'abc' is not a valid 'DateTime' value.", actual.First().Description);
 
             element.FullDate.InnerText = "123";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1511,32 +1511,32 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
             element.Val = FontFamilyValues.Auto;
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = FontFamilyValues.Decorative;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = FontFamilyValues.Modern;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = FontFamilyValues.Roman;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = FontFamilyValues.Script;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = FontFamilyValues.Swiss;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.Val.InnerText = string.Empty;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1544,7 +1544,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.EndsWith(" The Enumeration constraint failed.", actual.First().Description);
 
             element.Val.InnerText = "Noo";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1553,7 +1553,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // Invalid character case.
             element.Val.InnerText = "Auto";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1592,31 +1592,31 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
             element.Text = "ArticleInAPeriodical";
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Text = "Art";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Text = "Interview";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Text = "Misc";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.Text = string.Empty;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_ElementValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The Enumeration constraint failed.", actual.First().Description);
 
             element.Text = "abc";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_ElementValueDataTypeDetailed", actual.First().Id);
@@ -1644,32 +1644,32 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
             element.Val = "010101010101";
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.Val = null;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_MissRequiredAttribute", actual.First().Id);
 
             element.Val = string.Empty;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The attribute value cannot be empty.", actual.First().Description);
 
             element.Val.InnerText = "0101";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The actual length according to data type 'string' is not equal to the specified length. The expected length is 12.", actual.First().Description);
 
             element.Val = "0101010101010";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1677,7 +1677,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // pattern invalid
             element.Val = "010101010102";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1685,7 +1685,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // pattern invalid
             element.Val = "invalid";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
 
             Assert.Collection(
                 actual.OrderBy(e => e.Description, StringComparer.Ordinal),
@@ -1722,24 +1722,24 @@ namespace DocumentFormat.OpenXml.Tests
             // ***** good case ******
             var sources = new Sources();
             sources.StyleName = string.Empty;
-            actual = O12Validator.Validate(sources);
+            actual = O12Validator.Validate(sources, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             sources.StyleName = "Style1";
-            actual = O12Validator.Validate(sources);
+            actual = O12Validator.Validate(sources, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             sources.StyleName = "1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890" +
                                 "1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890" +
                                 "1234567890123456789012345678901234567890123456789012345";
-            actual = O12Validator.Validate(sources);
+            actual = O12Validator.Validate(sources, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             sources.StyleName = "1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890" +
                                 "1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890" +
                                 "12345678901234567890123456789012345678901234567890123456";
-            actual = O12Validator.Validate(sources);
+            actual = O12Validator.Validate(sources, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1764,71 +1764,71 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
             element.Text = ".1234";
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Text = ".1234 ";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Text = " .1234";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Text = "456.1234";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Text = "    0.1234    ";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
 
             // pattern invalid
             element.Text = string.Empty;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_ElementValueDataTypeDetailed", actual.First().Id);
 
             element.Text = "12";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_ElementValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The Pattern constraint failed. The expected pattern is \\s*[0-9]*\\.[0-9]{4}\\s*.", actual.First().Description);
 
             element.Text = "12.345";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_ElementValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The Pattern constraint failed. The expected pattern is \\s*[0-9]*\\.[0-9]{4}\\s*.", actual.First().Description);
 
             element.Text = "12.34567";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_ElementValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The Pattern constraint failed. The expected pattern is \\s*[0-9]*\\.[0-9]{4}\\s*.", actual.First().Description);
 
             element.Text = "12. 345";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_ElementValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The Pattern constraint failed. The expected pattern is \\s*[0-9]*\\.[0-9]{4}\\s*.", actual.First().Description);
 
             element.Text = "1 2.345";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_ElementValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The Pattern constraint failed. The expected pattern is \\s*[0-9]*\\.[0-9]{4}\\s*.", actual.First().Description);
 
             element.Text = "ABCD";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_ElementValueDataTypeDetailed", actual.First().Id);
@@ -1855,20 +1855,20 @@ namespace DocumentFormat.OpenXml.Tests
             // ***** good case ******
             var element = new CustomXmlRun();
             element.Element = "a";
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Element = "_b";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Element = "_b-a";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.Element = "a:b";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1881,7 +1881,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
 
             element.Element = strBuilder.ToString();
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1906,12 +1906,12 @@ namespace DocumentFormat.OpenXml.Tests
             // ***** good case ******
             var element = new DocPartId();
             element.Val = "{6A9B8B6F-5BD2-4BC8-9F70-7020E1357FB2}";
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.Val = string.Empty;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1919,7 +1919,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // should have no internal sequences of two or more spaces
             element.Val = "{6A9B8B6F-    -4BC8-9F70-7020E1357FB2}";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1927,7 +1927,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // should have no leading or trailing spaces (#x20)
             element.Val = " 6A9B8B6F-5BD2-4BC8-9F70-7020E1357FB2}";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1935,7 +1935,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // should not contain the carriage return (#xD), line feed (#xA) nor tab (#x9) characters
             element.Val = "{6A9B8B6F-5BD\x9-4BC8-9F70-7020E1357FB2}";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1943,14 +1943,14 @@ namespace DocumentFormat.OpenXml.Tests
 
             // pattern invalid
             element.Val.InnerText = "1234";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The Pattern constraint failed. The expected pattern is \\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}.", actual.First().Description);
 
             element.Val = "{*A9B8B6F-5BD2-4BC8-9F70-7020E1357FB2}";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1975,23 +1975,23 @@ namespace DocumentFormat.OpenXml.Tests
             // ***** good case ******
             var element = new Panose1Number();
             element.Val = "1234567890ABCDEFabcd";
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = "ABCDEFabcdef12345678";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.Val = string.Empty;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The attribute value cannot be empty.", actual.First().Description);
 
             element.Val.InnerText = "1234";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -1999,7 +1999,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // hexBinary must contain an even number of characters. See bug #648390
             element.Val = "ABCDEFabcdef123456789";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -2007,7 +2007,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // too long
             element.Val = "ABCDEFabcdef1234567890";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -2015,7 +2015,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // invalid 'X'
             element.Val.InnerText = "ABCDEFabcdef1234567X";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -2023,7 +2023,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // invalid 'X'
             element.Val.InnerText = "ABCDEFabcdefX1234567";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -2039,34 +2039,34 @@ namespace DocumentFormat.OpenXml.Tests
             // ***** good case ******
             var element = new DocumentProtection();
             element.Hash = string.Empty;
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Hash = "fUmpYmCMpTxTA4pfvlhKSAgB848=";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Hash = "R3k/CLjN768ujxMXkKZOuw==";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             //// ***** error case ******
             element.Hash = "0";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:hash' has invalid value '0'. The string '0' is not a valid 'http://www.w3.org/2001/XMLSchema:base64Binary' value.", actual.First().Description);
 
             element.Hash = "R3k/CLjN768ujxMXkKZOuw==$";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:hash' has invalid value 'R3k/CLjN768ujxMXkKZOuw==$'. The string 'R3k/CLjN768ujxMXkKZOuw==$' is not a valid 'http://www.w3.org/2001/XMLSchema:base64Binary' value.", actual.First().Description);
 
             element.Hash = "*R3k/fUmpYmCMpTxTA4pfvlhKSAgB848=";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -2082,34 +2082,34 @@ namespace DocumentFormat.OpenXml.Tests
             // ***** good case ******
             var element = new UniqueTag();
             element.Val = string.Empty;
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = "fUmpYmCMpTxTA4pfvlhKSAgB848=";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = "R3k/CLjN768ujxMXkKZOuw==";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             //// ***** error case ******
             element.Val = "0";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:val' has invalid value '0'. The string '0' is not a valid 'http://www.w3.org/2001/XMLSchema:base64Binary' value.", actual.First().Description);
 
             element.Val = "R3k/CLjN768ujxMXkKZOuw==$";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:val' has invalid value 'R3k/CLjN768ujxMXkKZOuw==$'. The string 'R3k/CLjN768ujxMXkKZOuw==$' is not a valid 'http://www.w3.org/2001/XMLSchema:base64Binary' value.", actual.First().Description);
 
             element.Val = "*R3k/fUmpYmCMpTxTA4pfvlhKSAgB848=";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -2132,47 +2132,47 @@ namespace DocumentFormat.OpenXml.Tests
             element.Priority = 1;
 
             element.Type = string.Empty;
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Type = "http://temp";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Type = "http://microsoft.com";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Type = "http://a/b/c/d;p?q";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Type = "http://a/b/c/g;x?y#s";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Type = "<>";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Type = "http://a/../../g";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Type = "urn:schemas-microsoft-com:office:office";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.Type = "http://temp##s";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'type' has invalid value 'http://temp##s'. The string 'http://temp##s' is not a valid 'Uri' value.", actual.First().Description);
 
             element.Type = "http:///temp";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -2207,53 +2207,53 @@ namespace DocumentFormat.OpenXml.Tests
             var element = new DocumentFormat.OpenXml.Office.CustomUI.Item();
 
             element.Id = "A";
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Id = "\x4E00";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Id = "A1";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Id = "_";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Id = "ABCD";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Id = "ABCD_1234-XY.00";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.Id = string.Empty;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'id' has invalid value ''. The attribute value cannot be empty.", actual.First().Description);
 
             element.Id = "1A";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'id' has invalid value '1A'. The string '1A' is not a valid 'http://www.w3.org/2001/XMLSchema:ID' value.", actual.First().Description);
 
             element.Id = ".B";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'id' has invalid value '.B'. The string '.B' is not a valid 'http://www.w3.org/2001/XMLSchema:ID' value.", actual.First().Description);
 
             element.Id = "http:///temp";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -2292,74 +2292,74 @@ namespace DocumentFormat.OpenXml.Tests
             element.AddNamespaceDeclaration("A", "http://test");
 
             element.IdQ = "A";
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.IdQ = "A:b";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.IdQ = "A1";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.IdQ = "_";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.IdQ = "ABCD";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.IdQ = "ABCD_1234-XY.00";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.IdQ = string.Empty;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The attribute value cannot be empty.", actual.First().Description);
 
             element.IdQ = ":";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'idQ' has invalid value ':'. The string ':' is not a valid 'http://www.w3.org/2001/XMLSchema:QName' value.", actual.First().Description);
 
             element.IdQ = ":A";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'idQ' has invalid value ':A'. The string ':A' is not a valid 'http://www.w3.org/2001/XMLSchema:QName' value.", actual.First().Description);
 
             element.IdQ = "A:";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'idQ' has invalid value 'A:'. The string 'A:' is not a valid 'http://www.w3.org/2001/XMLSchema:QName' value.", actual.First().Description);
 
             element.IdQ = "1A";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'idQ' has invalid value '1A'. The string '1A' is not a valid 'http://www.w3.org/2001/XMLSchema:QName' value.", actual.First().Description);
 
             element.IdQ = ".B";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'idQ' has invalid value '.B'. The string '.B' is not a valid 'http://www.w3.org/2001/XMLSchema:QName' value.", actual.First().Description);
 
             element.IdQ = "http:///temp";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -2394,35 +2394,35 @@ namespace DocumentFormat.OpenXml.Tests
             // ***** good case ******
             row.Spans = new ListValue<StringValue>();
             row.Spans.InnerText = "a";
-            var actual = O12Validator.Validate(row);
+            var actual = O12Validator.Validate(row, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             row.Spans.InnerText = "a a";
-            actual = O12Validator.Validate(row);
+            actual = O12Validator.Validate(row, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             row.Spans.InnerText = "abc";
-            actual = O12Validator.Validate(row);
+            actual = O12Validator.Validate(row, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             row.Spans.InnerText = "abc 123";
-            actual = O12Validator.Validate(row);
+            actual = O12Validator.Validate(row, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             row.Spans.InnerText = "abc a  123";
-            actual = O12Validator.Validate(row);
+            actual = O12Validator.Validate(row, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             row.Spans.InnerText = string.Empty;
-            actual = O12Validator.Validate(row);
+            actual = O12Validator.Validate(row, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The attribute value cannot be empty.", actual.First().Description);
 
             row.Spans.InnerText = " ";
-            actual = O12Validator.Validate(row);
+            actual = O12Validator.Validate(row, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -2434,56 +2434,56 @@ namespace DocumentFormat.OpenXml.Tests
             // ***** good case ******
             element.Start = new ListValue<Int32Value>();
             element.Start.InnerText = "1";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Start.InnerText = "1 -2";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Start.InnerText = "123";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Start.InnerText = "+123 456";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Start.InnerText = "123 -4  56";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.Start.InnerText = string.Empty;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.EndsWith(" The attribute value cannot be empty.", actual.First().Description);
 
             element.Start.InnerText = "a";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'st' has invalid value 'a'.", actual.First().Description);
 
             element.Start.InnerText = "a 1";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'st' has invalid value 'a 1'.", actual.First().Description);
 
             element.Start.InnerText = "1 a";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("The attribute 'st' has invalid value '1 a'.", actual.First().Description);
 
             element.Start.InnerText = "1 23 4a";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -2521,41 +2521,41 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
             element.Val.InnerText = "auto";
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val.InnerText = "123456";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val.InnerText = "FF12AB";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.Val.InnerText = string.Empty;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeUnionFailedEx", actual.First().Id);
             Assert.EndsWith("is not valid according to any of the memberTypes of the union.", actual.First().Description);
 
             element.Val.InnerText = "auto1";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeUnionFailedEx", actual.First().Id);
             Assert.EndsWith("is not valid according to any of the memberTypes of the union.", actual.First().Description);
 
             element.Val.InnerText = "1234567";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeUnionFailedEx", actual.First().Id);
             Assert.EndsWith("is not valid according to any of the memberTypes of the union.", actual.First().Description);
 
             element.Val.InnerText = "1234";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeUnionFailedEx", actual.First().Id);
@@ -2589,45 +2589,45 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
             element.Val.InnerText = "1";
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val.InnerText = int.MaxValue.ToString();
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val.InnerText = int.MinValue.ToString();
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val.InnerText = "-1";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.Val.InnerText = string.Empty;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeUnionFailedEx", actual.First().Id);
             Assert.EndsWith("is not valid according to any of the memberTypes of the union.", actual.First().Description);
 
             element.Val.InnerText = "0";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeUnionFailedEx", actual.First().Id);
             Assert.EndsWith("is not valid according to any of the memberTypes of the union.", actual.First().Description);
 
             element.Val.InnerText = "-0";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeUnionFailedEx", actual.First().Id);
             Assert.EndsWith("is not valid according to any of the memberTypes of the union.", actual.First().Description);
 
             element.Val.InnerText = "ABC";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeUnionFailedEx", actual.First().Id);
@@ -2643,44 +2643,44 @@ namespace DocumentFormat.OpenXml.Tests
             Bold element = new Bold();
 
             // ***** good case ******
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = true;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = false;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val.InnerText = "true";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val.InnerText = "false";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val.InnerText = "on";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val.InnerText = "off";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val.InnerText = "1";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val.InnerText = "0";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.Val.InnerText = string.Empty;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -2688,7 +2688,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.EndsWith(" The attribute value cannot be empty.", actual.First().Description);
 
             element.Val.InnerText = "Noo";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -2697,7 +2697,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("The attribute 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:val' has invalid value 'Noo'. The Enumeration constraint failed.", actual.First().Description);
 
             element.Val.InnerText = "On";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -2706,7 +2706,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("The attribute 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:val' has invalid value 'On'. The Enumeration constraint failed.", actual.First().Description);
 
             element.Val.InnerText = "False";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -2741,40 +2741,40 @@ namespace DocumentFormat.OpenXml.Tests
             var element = new DocumentFormat.OpenXml.Vml.ShapeHandle();
 
             // ***** good case ******
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.InvertX = true;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.InvertX = false;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.InvertX.InnerText = "true";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.InvertX.InnerText = "false";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.InvertX.InnerText = "t";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.InvertX.InnerText = "f";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.InvertX.InnerText = string.Empty;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
             element.InvertX.InnerText = "Noo";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -2783,7 +2783,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("The attribute 'invx' has invalid value 'Noo'. The Enumeration constraint failed.", actual.First().Description);
 
             element.InvertX.InnerText = "True";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -2792,7 +2792,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("The attribute 'invx' has invalid value 'True'. The Enumeration constraint failed.", actual.First().Description);
 
             element.InvertX.InnerText = "F";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -2814,11 +2814,11 @@ namespace DocumentFormat.OpenXml.Tests
             using (var stream = GetStream(TestFiles.Basicspreadsheet))
             using (var sdoc = SpreadsheetDocument.Open(stream, false))
             {
-                var o12actual = O12Validator.Validate(sdoc);
+                var o12actual = O12Validator.Validate(sdoc, TestContext.Current.CancellationToken);
                 Assert.Empty(o12actual);
 
                 // Office2010
-                var o14actual = O14Validator.Validate(sdoc);
+                var o14actual = O14Validator.Validate(sdoc, TestContext.Current.CancellationToken);
                 Assert.Empty(o14actual);
             }
         }
@@ -2833,11 +2833,11 @@ namespace DocumentFormat.OpenXml.Tests
             using (WordprocessingDocument wordTestDocument = WordprocessingDocument.Open(stream, false))
             {
                 // TODO: Abstract for version
-                var o12actual = O12Validator.Validate(wordTestDocument);
+                var o12actual = O12Validator.Validate(wordTestDocument, TestContext.Current.CancellationToken);
                 Assert.Single(o12actual); // The value 'actual' should contain one validation error for 'doNotEmbedSmartTags' in the test document.
 
                 // Office2010
-                var o14actual = O14Validator.Validate(wordTestDocument);
+                var o14actual = O14Validator.Validate(wordTestDocument, TestContext.Current.CancellationToken);
                 Assert.Single(o14actual); // The value 'actual' should contain one validation error for 'doNotEmbedSmartTags' in the test document.
             }
         }
@@ -2854,13 +2854,13 @@ namespace DocumentFormat.OpenXml.Tests
                 using (WordprocessingDocument wordTestDocument = WordprocessingDocument.Open(stream, false))
                 {
                     IEnumerable<ValidationErrorInfo> actual;
-                    actual = O12Validator.Validate(wordTestDocument);
+                    actual = O12Validator.Validate(wordTestDocument, TestContext.Current.CancellationToken);
 
                     // There are Office2010 elements and attributes in the document, so there are should validation errors.
                     Assert.Equal(34, actual.Count()); // The value 'actual' should contain 34 validation error including 'doNotEmbedSmartTags' in the test document.
 
                     // Office2010
-                    actual = O14Validator.Validate(wordTestDocument);
+                    actual = O14Validator.Validate(wordTestDocument, TestContext.Current.CancellationToken);
                     Assert.Single(actual); // The value 'actual' should contain one validation error for 'doNotEmbedSmartTags' in the test document.
                 }
             }
@@ -2876,8 +2876,8 @@ namespace DocumentFormat.OpenXml.Tests
             using (var pDoc = PresentationDocument.Open(stream, false))
             {
                 // use stream
-                Assert.Empty(O12Validator.Validate(pDoc));
-                Assert.Empty(O14Validator.Validate(pDoc));
+                Assert.Empty(O12Validator.Validate(pDoc, TestContext.Current.CancellationToken));
+                Assert.Empty(O14Validator.Validate(pDoc, TestContext.Current.CancellationToken));
             }
         }
 
@@ -2891,11 +2891,11 @@ namespace DocumentFormat.OpenXml.Tests
             using (var testDocument = SpreadsheetDocument.Open(stream, false))
             {
                 // validate the workbook part only.
-                var o12actual = O12Validator.Validate(testDocument.WorkbookPart);
+                var o12actual = O12Validator.Validate(testDocument.WorkbookPart, TestContext.Current.CancellationToken);
                 Assert.Empty(o12actual);
 
                 // Office2010
-                var o14actual = O14Validator.Validate(testDocument.WorkbookPart);
+                var o14actual = O14Validator.Validate(testDocument.WorkbookPart, TestContext.Current.CancellationToken);
                 Assert.Empty(o14actual);
             }
         }
@@ -2910,11 +2910,11 @@ namespace DocumentFormat.OpenXml.Tests
             using (var testDocument = WordprocessingDocument.Open(stream, false))
             {
                 // validate the main document part only
-                var o12actual = O12Validator.Validate(testDocument.MainDocumentPart);
+                var o12actual = O12Validator.Validate(testDocument.MainDocumentPart, TestContext.Current.CancellationToken);
                 Assert.Empty(o12actual);
 
                 // Office2010
-                var o14actual = O14Validator.Validate(testDocument.MainDocumentPart);
+                var o14actual = O14Validator.Validate(testDocument.MainDocumentPart, TestContext.Current.CancellationToken);
                 Assert.Empty(o14actual);
             }
         }
@@ -2929,11 +2929,11 @@ namespace DocumentFormat.OpenXml.Tests
             using (var testDocument = WordprocessingDocument.Open(stream, false))
             {
                 // validate the StyleDefinitionsPart
-                var o12actual = O12Validator.Validate(testDocument.MainDocumentPart.StyleDefinitionsPart);
+                var o12actual = O12Validator.Validate(testDocument.MainDocumentPart.StyleDefinitionsPart, TestContext.Current.CancellationToken);
                 Assert.Empty(o12actual);
 
                 // Office2010
-                var o14actual = O14Validator.Validate(testDocument.MainDocumentPart.StyleDefinitionsPart);
+                var o14actual = O14Validator.Validate(testDocument.MainDocumentPart.StyleDefinitionsPart, TestContext.Current.CancellationToken);
                 Assert.Empty(o14actual);
 
                 // can not validate the StylesWithEffectsPart against Office2007
@@ -2941,7 +2941,7 @@ namespace DocumentFormat.OpenXml.Tests
                 // Assert.Equal(0, actual.Count());
 
                 // Office2010
-                var o14effectsActual = O14Validator.Validate(testDocument.MainDocumentPart.StylesWithEffectsPart);
+                var o14effectsActual = O14Validator.Validate(testDocument.MainDocumentPart.StylesWithEffectsPart, TestContext.Current.CancellationToken);
                 Assert.Empty(o14effectsActual);
             }
         }
@@ -2956,11 +2956,11 @@ namespace DocumentFormat.OpenXml.Tests
             using (var testDocument = PresentationDocument.Open(stream, false))
             {
                 // validate one Slide part only
-                var o12actual = O12Validator.Validate(testDocument.PresentationPart.SlideParts.First());
+                var o12actual = O12Validator.Validate(testDocument.PresentationPart.SlideParts.First(), TestContext.Current.CancellationToken);
                 Assert.Empty(o12actual);
 
                 // Office2010
-                var o14actual = O14Validator.Validate(testDocument.PresentationPart.SlideParts.First());
+                var o14actual = O14Validator.Validate(testDocument.PresentationPart.SlideParts.First(), TestContext.Current.CancellationToken);
                 Assert.Empty(o14actual);
             }
         }
@@ -2975,11 +2975,11 @@ namespace DocumentFormat.OpenXml.Tests
             using (var testDocument = SpreadsheetDocument.Open(stream, false))
             {
                 // validate the workbook part only.
-                var o12actual = O12Validator.Validate(testDocument.WorkbookPart.Workbook);
+                var o12actual = O12Validator.Validate(testDocument.WorkbookPart.Workbook, TestContext.Current.CancellationToken);
                 Assert.Empty(o12actual);
 
                 // Office2010
-                var o14actual = O14Validator.Validate(testDocument.WorkbookPart.Workbook);
+                var o14actual = O14Validator.Validate(testDocument.WorkbookPart.Workbook, TestContext.Current.CancellationToken);
                 Assert.Empty(o14actual);
             }
         }
@@ -2994,11 +2994,11 @@ namespace DocumentFormat.OpenXml.Tests
             using (var testDocument = WordprocessingDocument.Open(stream, false))
             {
                 // validate the main document part only
-                var o12actual = O12Validator.Validate(testDocument.MainDocumentPart.Document);
+                var o12actual = O12Validator.Validate(testDocument.MainDocumentPart.Document, TestContext.Current.CancellationToken);
                 Assert.Empty(o12actual);
 
                 // Office2010
-                var o14actual = O14Validator.Validate(testDocument.MainDocumentPart.Document);
+                var o14actual = O14Validator.Validate(testDocument.MainDocumentPart.Document, TestContext.Current.CancellationToken);
                 Assert.Empty(o14actual);
             }
         }
@@ -3013,11 +3013,11 @@ namespace DocumentFormat.OpenXml.Tests
             using (var testDocument = PresentationDocument.Open(stream, false))
             {
                 // validate the Slide element
-                var o12actual = O12Validator.Validate(testDocument.PresentationPart.SlideParts.First().Slide);
+                var o12actual = O12Validator.Validate(testDocument.PresentationPart.SlideParts.First().Slide, TestContext.Current.CancellationToken);
                 Assert.Empty(o12actual);
 
                 // Office2010
-                var o14actual = O14Validator.Validate(testDocument.PresentationPart.SlideParts.First().Slide);
+                var o14actual = O14Validator.Validate(testDocument.PresentationPart.SlideParts.First().Slide, TestContext.Current.CancellationToken);
                 Assert.Empty(o14actual);
             }
         }
@@ -3039,14 +3039,14 @@ namespace DocumentFormat.OpenXml.Tests
                     IEnumerable<ValidationErrorInfo> actual;
 
                     // validate the element
-                    actual = O12Validator.Validate(paragraph);
+                    actual = O12Validator.Validate(paragraph, TestContext.Current.CancellationToken);
                     Assert.Single(actual);
                     var error = actual.First();
                     Assert.Null(error.Part);
                     Assert.Same(paragraph, error.Node);
 
                     mainDocPart.Document = document;
-                    actual = O12Validator.Validate(paragraph);
+                    actual = O12Validator.Validate(paragraph, TestContext.Current.CancellationToken);
                     Assert.Single(actual);
                     error = actual.First();
                     Assert.Same(mainDocPart, error.Part); // should return the part.
@@ -3085,7 +3085,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 using (WordprocessingDocument loadedDoc = WordprocessingDocument.Open(stream, false))
                 {
-                    var errors = validator.Validate(loadedDoc);
+                    var errors = validator.Validate(loadedDoc, TestContext.Current.CancellationToken);
                     Assert.Equal(2, errors.Count());
 
                     Assert.Collection(
@@ -3117,7 +3117,7 @@ namespace DocumentFormat.OpenXml.Tests
                     presettationPart.Presentation.Save();
 
                     // must have a SlideMasterPart.
-                    var errors = validator.Validate(pptdoc);
+                    var errors = validator.Validate(pptdoc, TestContext.Current.CancellationToken);
                     Assert.Equal(2, errors.Count());
                     var first = errors.First();
 
@@ -3153,7 +3153,7 @@ namespace DocumentFormat.OpenXml.Tests
                     }
 
                     OpenXmlValidator validator = new OpenXmlValidator();
-                    var errors = validator.Validate(commentsPart);
+                    var errors = validator.Validate(commentsPart, TestContext.Current.CancellationToken);
                     Assert.Equal(2, errors.Count());
 
                     commentsPart.UnloadRootElement();
@@ -3163,7 +3163,7 @@ namespace DocumentFormat.OpenXml.Tests
                         sw.WriteLine("<w:comments xmlns:w=\"{0}\" ><w:commentX><invalid></w:comment></w:comments>", comments.NamespaceUri);
                     }
 
-                    errors = validator.Validate(commentsPart);
+                    errors = validator.Validate(commentsPart, TestContext.Current.CancellationToken);
                     Assert.Single(errors);
                     Assert.Same(commentsPart, errors.First().Part);
                     Assert.Equal("ExceptionError", errors.First().Id);
@@ -3184,37 +3184,37 @@ namespace DocumentFormat.OpenXml.Tests
                 IEnumerable<ValidationErrorInfo> actual;
 
                 // validate the main document part only
-                actual = O12Validator.Validate(testDocument);
+                actual = O12Validator.Validate(testDocument, TestContext.Current.CancellationToken);
                 Assert.Equal(5, actual.Count());
-                actual = O12Validator.Validate(testDocument.MainDocumentPart);
+                actual = O12Validator.Validate(testDocument.MainDocumentPart, TestContext.Current.CancellationToken);
                 Assert.Equal(2, actual.Count());
-                actual = O12Validator.Validate(testDocument.MainDocumentPart.Document);
+                actual = O12Validator.Validate(testDocument.MainDocumentPart.Document, TestContext.Current.CancellationToken);
                 Assert.Equal(2, actual.Count());
 
                 int savedMaxErrors = O12Validator.MaxNumberOfErrors;
 
                 O12Validator.MaxNumberOfErrors = 4;
-                actual = O12Validator.Validate(testDocument);
+                actual = O12Validator.Validate(testDocument, TestContext.Current.CancellationToken);
                 Assert.Equal(4, actual.Count());
-                actual = O12Validator.Validate(testDocument.MainDocumentPart);
+                actual = O12Validator.Validate(testDocument.MainDocumentPart, TestContext.Current.CancellationToken);
                 Assert.Equal(2, actual.Count());
-                actual = O12Validator.Validate(testDocument.MainDocumentPart.Document);
+                actual = O12Validator.Validate(testDocument.MainDocumentPart.Document, TestContext.Current.CancellationToken);
                 Assert.Equal(2, actual.Count());
 
                 O12Validator.MaxNumberOfErrors = 3;
-                actual = O12Validator.Validate(testDocument);
+                actual = O12Validator.Validate(testDocument, TestContext.Current.CancellationToken);
                 Assert.Equal(3, actual.Count());
-                actual = O12Validator.Validate(testDocument.MainDocumentPart);
+                actual = O12Validator.Validate(testDocument.MainDocumentPart, TestContext.Current.CancellationToken);
                 Assert.Equal(2, actual.Count());
-                actual = O12Validator.Validate(testDocument.MainDocumentPart.Document);
+                actual = O12Validator.Validate(testDocument.MainDocumentPart.Document, TestContext.Current.CancellationToken);
                 Assert.Equal(2, actual.Count());
 
                 O12Validator.MaxNumberOfErrors = 1;
-                actual = O12Validator.Validate(testDocument);
+                actual = O12Validator.Validate(testDocument, TestContext.Current.CancellationToken);
                 Assert.Single(actual);
-                actual = O12Validator.Validate(testDocument.MainDocumentPart);
+                actual = O12Validator.Validate(testDocument.MainDocumentPart, TestContext.Current.CancellationToken);
                 Assert.Single(actual);
-                actual = O12Validator.Validate(testDocument.MainDocumentPart.Document);
+                actual = O12Validator.Validate(testDocument.MainDocumentPart.Document, TestContext.Current.CancellationToken);
                 Assert.Single(actual);
 
                 O12Validator.MaxNumberOfErrors = savedMaxErrors;
@@ -3239,7 +3239,7 @@ namespace DocumentFormat.OpenXml.Tests
                                                 new DocumentFormat.OpenXml.Office.Drawing.GroupShapeProperties());
 
             // ***** good case ******
-            var actual = O14Validator.Validate(element);
+            var actual = O14Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
         }
 
@@ -3258,7 +3258,7 @@ namespace DocumentFormat.OpenXml.Tests
                         wordDoc.AddMainDocumentPart();
                         wordDoc.MainDocumentPart.AddNewPart<StylesWithEffectsPart>();
 
-                        var actual = O12Validator.Validate(wordDoc.MainDocumentPart.StylesWithEffectsPart);
+                        var actual = O12Validator.Validate(wordDoc.MainDocumentPart.StylesWithEffectsPart, TestContext.Current.CancellationToken);
                     }
                 }
             });
@@ -3273,7 +3273,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Throws<System.InvalidOperationException>(() =>
             {
                 var o14Element = new DocumentFormat.OpenXml.Wordprocessing.StartBorder();
-                var actual = O12Validator.Validate(o14Element);
+                var actual = O12Validator.Validate(o14Element, TestContext.Current.CancellationToken);
             });
         }
 
@@ -3301,12 +3301,12 @@ namespace DocumentFormat.OpenXml.Tests
             var borders = new DocumentFormat.OpenXml.Wordprocessing.TableBorders();
             borders.TopBorder = new DocumentFormat.OpenXml.Wordprocessing.TopBorder() { Val = BorderValues.Apples };
 
-            var actual = O12Validator.Validate(borders);
+            var actual = O12Validator.Validate(borders, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // add an O14 child
             borders.StartBorder = new StartBorder() { Val = BorderValues.ArchedScallops };
-            actual = O12Validator.Validate(borders);
+            actual = O12Validator.Validate(borders, TestContext.Current.CancellationToken);
 
             // should report error in O12
             Assert.Single(actual);
@@ -3317,12 +3317,12 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, actual.First().Description);
 
             // should not report error in O14
-            actual = O14Validator.Validate(borders);
+            actual = O14Validator.Validate(borders, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             borders.RightBorder = new DocumentFormat.OpenXml.Wordprocessing.RightBorder() { Val = BorderValues.BabyPacifier };
 
-            actual = O12Validator.Validate(borders);
+            actual = O12Validator.Validate(borders, TestContext.Current.CancellationToken);
 
             // should report error in O12
             Assert.Single(actual);
@@ -3333,12 +3333,12 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, actual.First().Description);
 
             // should not report error in O14
-            actual = O14Validator.Validate(borders);
+            actual = O14Validator.Validate(borders, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             borders.EndBorder = new EndBorder() { Val = BorderValues.Cabins };
 
-            actual = O12Validator.Validate(borders);
+            actual = O12Validator.Validate(borders, TestContext.Current.CancellationToken);
 
             // should report error in O12
             Assert.Single(actual);
@@ -3349,14 +3349,14 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, actual.First().Description);
 
             // should not report error in O14
-            actual = O14Validator.Validate(borders);
+            actual = O14Validator.Validate(borders, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // remove a required attribute from the O14 element.
             borders.EndBorder.Val = null;
 
             // should report attribute error in O14
-            actual = O14Validator.Validate(borders);
+            actual = O14Validator.Validate(borders, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Same(borders.EndBorder, actual.First().Node);
             Assert.Null(actual.First().RelatedNode);
@@ -3376,59 +3376,59 @@ namespace DocumentFormat.OpenXml.Tests
 
             // the following values are valid in both Office2007 and Office2010.
             element.Val = BorderValues.Apples;
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
-            actual = O14Validator.Validate(element);
+            actual = O14Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = BorderValues.BabyPacifier;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
-            actual = O14Validator.Validate(element);
+            actual = O14Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = BorderValues.Cabins;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
-            actual = O14Validator.Validate(element);
+            actual = O14Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = BorderValues.DashDotStroked;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
-            actual = O14Validator.Validate(element);
+            actual = O14Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = BorderValues.Earth1;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
-            actual = O14Validator.Validate(element);
+            actual = O14Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Val = BorderValues.Fans;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
-            actual = O14Validator.Validate(element);
+            actual = O14Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
 
             // following are invalid for both Office2007 and Office2010
             element.Val.InnerText = string.Empty;
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("/w:left[1]", actual.First().Path.XPath);
             Assert.EndsWith(" The Enumeration constraint failed.", actual.First().Description);
 
-            actual = O14Validator.Validate(element);
+            actual = O14Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -3436,14 +3436,14 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.EndsWith(" The Enumeration constraint failed.", actual.First().Description);
 
             element.Val.InnerText = "Noo";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("/w:left[1]", actual.First().Path.XPath);
             Assert.EndsWith(" The Enumeration constraint failed.", actual.First().Description);
 
-            actual = O14Validator.Validate(element);
+            actual = O14Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -3452,14 +3452,14 @@ namespace DocumentFormat.OpenXml.Tests
 
             // Invalid character case.
             element.Val.InnerText = "Dashed"; // the correct value is "dashed"
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("/w:left[1]", actual.First().Path.XPath);
             Assert.EndsWith(" The Enumeration constraint failed.", actual.First().Description);
 
-            actual = O14Validator.Validate(element);
+            actual = O14Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
@@ -3471,7 +3471,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // should report error in O12 validator.
             // In M5, the enum is also available in O12
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
@@ -3480,7 +3480,7 @@ namespace DocumentFormat.OpenXml.Tests
             // Assert.True(actual.First().Description.EndsWith(" The Enumeration constraint failed."));
 
             // should not report error in O14 validator.
-            actual = O14Validator.Validate(element);
+            actual = O14Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
         }
 
@@ -3496,30 +3496,30 @@ namespace DocumentFormat.OpenXml.Tests
 
             // the following attributes are valid in both Office2007 and Office2010.
             element.Left = "10";
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
-            actual = O14Validator.Validate(element);
+            actual = O14Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             element.Right = "20";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
-            actual = O14Validator.Validate(element);
+            actual = O14Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
 
             // following are invalid for both Office2007 and Office2010
             element.SetAttribute(new OpenXmlAttribute("foo", "bar", "http://foo", "egg"));
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_UndeclaredAttribute", actual.First().Id);
             Assert.Equal("/w:ind[1]", actual.First().Path.XPath);
 
-            actual = O14Validator.Validate(element);
+            actual = O14Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_UndeclaredAttribute", actual.First().Id);
@@ -3530,7 +3530,7 @@ namespace DocumentFormat.OpenXml.Tests
             element.Start = "10";
 
             // should report error in Office2007 validator.
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_UndeclaredAttribute", actual.First().Id);
@@ -3538,7 +3538,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("The 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:start' attribute is not declared.", actual.First().Description);
 
             // should NOT report error in Office2010 validator.
-            actual = O14Validator.Validate(element);
+            actual = O14Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // The w:start only valid in Office2010.
@@ -3546,7 +3546,7 @@ namespace DocumentFormat.OpenXml.Tests
             element.Start.InnerText = "Foo";
 
             // should report Sch_UndeclaredAttribute error in Office2007 validator.
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_UndeclaredAttribute", actual.First().Id);
@@ -3554,7 +3554,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("The 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:start' attribute is not declared.", actual.First().Description);
 
             // should report Sch_AttributeUnionFailedEx error in Office2010 validator.
-            actual = O14Validator.Validate(element);
+            actual = O14Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeUnionFailedEx", actual.First().Id);
@@ -3582,23 +3582,23 @@ namespace DocumentFormat.OpenXml.Tests
 
             // the following attributes are valid in both Office2007 and Office2010.
             element.Percent = "10";
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
-            actual = O14Validator.Validate(element);
+            actual = O14Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** error case ******
 
             // following are invalid for both Office2007 and Office2010
             element.Percent = "foo";
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("/w:zoom[1]", actual.First().Path.XPath);
 
-            actual = O14Validator.Validate(element);
+            actual = O14Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeUnionFailedEx", actual.First().Id);
@@ -3608,14 +3608,14 @@ namespace DocumentFormat.OpenXml.Tests
             element.Percent = "10%";
 
             // should report error in Office2007 validator.
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", actual.First().Id);
             Assert.Equal("/w:zoom[1]", actual.First().Path.XPath);
 
             // should NOT report error in Office2010 validator.
-            actual = O14Validator.Validate(element);
+            actual = O14Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
         }
 
@@ -3632,23 +3632,23 @@ namespace DocumentFormat.OpenXml.Tests
 
             // the following attributes are valid in both Office2007 and Office2010.
             element.Val = "FF00";
-            var actual = O12Validator.Validate(tblPr);
+            var actual = O12Validator.Validate(tblPr, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
-            actual = O14Validator.Validate(tblPr);
+            actual = O14Validator.Validate(tblPr, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             //// ***** error case ******
 
             //// following are invalid for both Office2007 and Office2010
             element.SetAttribute(new OpenXmlAttribute("foo", "bar", "http://foo", "egg"));
-            actual = O12Validator.Validate(tblPr);
+            actual = O12Validator.Validate(tblPr, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_UndeclaredAttribute", actual.First().Id);
             Assert.Equal("/w:tblPr[1]/w:tblLook[1]", actual.First().Path.XPath);
 
-            actual = O14Validator.Validate(tblPr);
+            actual = O14Validator.Validate(tblPr, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_UndeclaredAttribute", actual.First().Id);
@@ -3659,7 +3659,7 @@ namespace DocumentFormat.OpenXml.Tests
             element.FirstRow = true;
 
             // should report error in Office2007 validator.
-            actual = O12Validator.Validate(tblPr);
+            actual = O12Validator.Validate(tblPr, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Equal(ValidationErrorType.Schema, actual.First().ErrorType);
             Assert.Equal("Sch_UndeclaredAttribute", actual.First().Id);
@@ -3667,24 +3667,24 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("The 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:firstRow' attribute is not declared.", actual.First().Description);
 
             // should NOT report error in Office2010 validator.
-            actual = O14Validator.Validate(element);
+            actual = O14Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // ***** good case ******
             var compat = new Compatibility();
 
             compat.AdjustLineHeightInTable = new AdjustLineHeightInTable();
-            actual = O12Validator.Validate(compat);
+            actual = O12Validator.Validate(compat, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
-            actual = O14Validator.Validate(compat);
+            actual = O14Validator.Validate(compat, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             //// ***** error case ******
 
             // The CompatibilitySetting only valid in Office2010.
             var o14element = compat.AppendChild(new CompatibilitySetting() { Name = CompatSettingNameValues.CompatibilityMode, Uri = "foo", Val = "12" });
-            actual = O12Validator.Validate(compat);
+            actual = O12Validator.Validate(compat, TestContext.Current.CancellationToken);
 
             // should report error in O12
             // In M5, it is also avalilabe in O12, so disable this block
@@ -3696,13 +3696,13 @@ namespace DocumentFormat.OpenXml.Tests
             // Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", actual.First().Id);
 
             // should not report error in O14
-            actual = O14Validator.Validate(compat);
+            actual = O14Validator.Validate(compat, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             // append
             var errorElement = compat.AppendChild(new CachedColumnBalance());
 
-            actual = O12Validator.Validate(compat);
+            actual = O12Validator.Validate(compat, TestContext.Current.CancellationToken);
 
             // should report error in O12
             Assert.Single(actual);
@@ -3713,7 +3713,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.DoesNotContain(ValidationErrorStrings.FmtListOfPossibleElements, actual.First().Description);
 
             // should report error in O14 because the last element is our of order.
-            actual = O14Validator.Validate(compat);
+            actual = O14Validator.Validate(compat, TestContext.Current.CancellationToken);
             Assert.Single(actual);
             Assert.Same(compat, actual.First().Node);
             Assert.Same(errorElement, actual.First().RelatedNode);
@@ -3734,10 +3734,10 @@ namespace DocumentFormat.OpenXml.Tests
 
             var element = new Document(xml);
 
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
-            actual = O14Validator.Validate(element);
+            actual = O14Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
         }
 
@@ -3761,7 +3761,7 @@ namespace DocumentFormat.OpenXml.Tests
             p.ParagraphId = "0000FFFF";
             Assert.NotNull(p.ParagraphId);
 
-            var actual = O12Validator.Validate(element);
+            var actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
 
             Assert.Collection(actual, e =>
             {
@@ -3772,7 +3772,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Equal("/w:document[1]/w:body[1]/w:p[1]", e.Path.XPath);
             });
 
-            actual = O14Validator.Validate(element);
+            actual = O14Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
 
             string outerxml = element.OuterXml;
@@ -3781,10 +3781,10 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Null(p.TextId);
             Assert.NotNull(p.ParagraphId);
 
-            actual = O12Validator.Validate(element);
+            actual = O12Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(actual);
 
-            actual = O14Validator.Validate(element);
+            actual = O14Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Empty(actual);
         }
 
@@ -3804,13 +3804,13 @@ namespace DocumentFormat.OpenXml.Tests
                     IEnumerable<ValidationErrorInfo> actual;
 
                     // Office2010
-                    actual = O14Validator.Validate(wordTestDocument);
+                    actual = O14Validator.Validate(wordTestDocument, TestContext.Current.CancellationToken);
                     Assert.Single(actual); // The value 'actual' should contain one validation error for 'doNotEmbedSmartTags' in the test document.
 
                     // the following line should throw exception.
                     Assert.Throws<System.InvalidOperationException>(() =>
                     {
-                        actual = O12Validator.Validate(wordTestDocument);
+                        actual = O12Validator.Validate(wordTestDocument, TestContext.Current.CancellationToken);
                     });
                 }
             }
@@ -3825,10 +3825,10 @@ namespace DocumentFormat.OpenXml.Tests
             using (Stream stream = GetStream(TestFiles.Complex0docx))
             using (WordprocessingDocument wordTestDocument = WordprocessingDocument.Open(stream, false, new OpenSettings() { MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007) }))
             {
-                var actual = O12Validator.Validate(wordTestDocument.MainDocumentPart);
+                var actual = O12Validator.Validate(wordTestDocument.MainDocumentPart, TestContext.Current.CancellationToken);
                 Assert.Empty(actual);
 
-                Assert.Throws<System.InvalidOperationException>(() => O14Validator.Validate(wordTestDocument.MainDocumentPart));
+                Assert.Throws<System.InvalidOperationException>(() => O14Validator.Validate(wordTestDocument.MainDocumentPart, TestContext.Current.CancellationToken));
             }
         }
     }

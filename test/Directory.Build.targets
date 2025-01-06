@@ -12,21 +12,6 @@
           <Link>Common/$([MSBuild]::MakeRelative($(CommonFilesDirectory), %(FullPath)))</Link>
         </Compile>
       </ItemGroup>
-      <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" />
-        <PackageReference Include="System.ValueTuple" />
-        <PackageReference Include="Microsoft.NET.Test.Sdk" />
-        <PackageReference Include="NSubstitute" />
-        <PackageReference Include="xunit" />
-        <PackageReference Include="xunit.runner.visualstudio">
-          <PrivateAssets>all</PrivateAssets>
-          <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-        </PackageReference>
-        <PackageReference Include="coverlet.collector">
-          <PrivateAssets>all</PrivateAssets>
-          <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-        </PackageReference>
-      </ItemGroup>
     </When>
   </Choose>
   <Target Name="PublishProjectIfFrameworkSet" DependsOnTargets="Publish" Condition=" '$(TargetFramework)' != '' " />

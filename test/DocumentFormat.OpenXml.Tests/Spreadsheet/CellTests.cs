@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml.Tests
             };
 
             var validator = new OpenXmlValidator();
-            var results = validator.Validate(cell);
+            var results = validator.Validate(cell, TestContext.Current.CancellationToken);
 
             if (isValid)
             {
@@ -82,7 +82,7 @@ namespace DocumentFormat.OpenXml.Tests
             };
 
             var validator = new OpenXmlValidator();
-            var results = validator.Validate(cell);
+            var results = validator.Validate(cell, TestContext.Current.CancellationToken);
 
             if (isValid)
             {

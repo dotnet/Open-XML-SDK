@@ -4,7 +4,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.IO;
-using Xunit.Abstractions;
+using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
 {

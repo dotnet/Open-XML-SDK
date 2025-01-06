@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using (var doc = SpreadsheetDocument.Open(package, openSettings))
                 {
                     var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                    var errs = v.Validate(doc);
+                    var errs = v.Validate(doc, TestContext.Current.CancellationToken);
                     var cnt = errs.Count();
 
                     Assert.True(cnt == 1 || cnt == 0);
@@ -50,7 +50,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var doc = SpreadsheetDocument.Open(stream, false))
             {
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
                 var cnt = errs.Count();
 
                 Assert.True(cnt == 1 || cnt == 0);
@@ -77,7 +77,7 @@ namespace DocumentFormat.OpenXml.Tests
                 tnPart = doc.AddThumbnailPart("image/jpg");
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
                 var cnt = errs.Count();
 
                 Assert.True(cnt == 1 || cnt == 0);
@@ -97,7 +97,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var doc = SpreadsheetDocument.Open(package, openSettings))
             {
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
                 var cnt = errs.Count();
 
                 Assert.True(cnt == 1 || cnt == 0);
@@ -116,7 +116,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var doc = SpreadsheetDocument.Open(stream, true, openSettings))
             {
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
                 var cnt = errs.Count();
 
                 Assert.True(cnt == 1 || cnt == 0);
@@ -147,7 +147,7 @@ namespace DocumentFormat.OpenXml.Tests
                 workbookpart.Workbook.Save();
 
                 OpenXmlValidator v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
                 Assert.Empty(errs);
             }
         }
@@ -178,7 +178,7 @@ namespace DocumentFormat.OpenXml.Tests
                 workbookpart.Workbook.Save();
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Empty(errs);
             }
