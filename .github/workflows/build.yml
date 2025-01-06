@@ -96,7 +96,7 @@ jobs:
     - name: Build
       run: dotnet build --no-restore --verbosity normal
     - name: Test
-      run: dotnet test --no-restore --verbosity normal --logger trx --results-directory test-results/
+      run: dotnet test --no-restore -- --results-directory test-results/ --report-xunit-trx
     - name: Upload Test Results
       if: always()
       uses: actions/upload-artifact@v4
