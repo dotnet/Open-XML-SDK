@@ -45,6 +45,7 @@
         <AssetsTargetFrameworks>net472</AssetsTargetFrameworks>
         <LatestTargetFramework>net472</LatestTargetFramework>
         <SamplesFrameworks>net472</SamplesFrameworks>
+        <DefineConstants>$(DefineConstants);FEATURE_NO_VALIDATOR_CANCELLATIONTOKEN</DefineConstants>
       </PropertyGroup>
     </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'net40' ">
