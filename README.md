@@ -4,9 +4,7 @@ Open XML SDK
 
 > [!NOTE]
 >  
-> [v3.0.0](https://www.nuget.org/packages/DocumentFormat.OpenXml/3.0.0) refactors and addresses some technical debt while retaining source compatibility as much as possible. You should be able to update your package and recompile with limited changes. However, binary compatibility was not a goal and will break that for some changes which are documented. PRs that introduced such changes are marked with a `breaking-change` label and were added to a list to help migrating to v3.0.0.
->
-> Please see the [v3.0.0 milestone](https://github.com/OfficeDev/Open-XML-SDK/milestone/1) for issues and PRs that are included. For discussions, please join us at [this issue](https://github.com/OfficeDev/Open-XML-SDK/issues/1270).
+> 3.0.0 introduced breaking changes and you should be able to update your package and recompile with limited changes. Please see the [v3.0.0 milestone](https://github.com/OfficeDev/Open-XML-SDK/milestone/1) for issues and PRs that were included.
 
 
 > [!IMPORTANT]
@@ -16,13 +14,19 @@ Open XML SDK
 [![Build Status](https://office.visualstudio.com/OC/_apis/build/status/OpenXmlSdk/OfficeDev.Open-XML-SDK?branchName=main)](https://office.visualstudio.com/OC/_build/latest?definitionId=7420&branchName=main)
 [![Backend Status](https://ointprotocol.visualstudio.com/OInteropTools/_apis/build/status/OpenXML-Schemas?branchName=main)](https://ointprotocol.visualstudio.com/OInteropTools/_build/latest?definitionId=21&branchName=main)
 
-The Open XML SDK provides tools for working with Office Word, Excel, and PowerPoint documents. It supports scenarios such as:
+The Open XML SDK is a framework for working with Microsoft Office Word, Excel, and PowerPoint documents. It includes APIs for low-level operations related to OPC packages, Flat OPC files, and Open XML markup in two forms (i.e., strongly-typed classes and LINQ to XML). It is designed to closely follow the Microsoft Office implementation of the ISO 29500 standard, but was not intended to directly provide higher-level abstractions or productivity tools.
+
+These APIs enable scenarios such as:
 
 - High-performance generation of word-processing documents, spreadsheets, and presentations.
 - Document modification, such as adding, updating, and removing content and metadata.
-- Search and replace content using regular expressions.
+- Searching and replacing content using regular expressions.
 - Splitting up (shredding) a file into multiple files, and combining multiple files into a single file.
 - Updating cached data and embedded spreadsheets for charts in Word/PowerPoint.
+
+
+Prerequisite for using the Open XML SDK: detailed knowledge of the relevant formats and standards
+
 
 <!-- omit in toc -->
 # Table of Contents
