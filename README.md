@@ -25,7 +25,7 @@ These APIs enable scenarios such as:
 - Updating cached data and embedded spreadsheets for charts in Word/PowerPoint.
 
 
-Prerequisite for using the Open XML SDK: detailed knowledge of the relevant formats and standards
+Prerequisite for using the Open XML SDK: detailed knowledge of the relevant formats (https://learn.microsoft.com/en-us/openspecs/office_standards/ms-offstandlp) and standards (https://standards.iso.org/ittf/PubliclyAvailableStandards/index.html - search for 29500)
 
 
 <!-- omit in toc -->
