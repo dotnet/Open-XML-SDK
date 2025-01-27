@@ -30,6 +30,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
     /// </remarks>
     public partial class DynamicArrayProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/dynamicarray", "dynamicArrayProperties");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/dynamicarray", "CT_DynamicArrayProperties");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DynamicArrayProperties class.
         /// </summary>
@@ -84,15 +90,15 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xda:dynamicArrayProperties");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList());
             builder.AddElement<DynamicArrayProperties>()
                 .AddAttribute("fDynamic", a => a.FDynamic)
                 .AddAttribute("fCollapsed", a => a.FCollapsed);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -105,8 +111,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
         /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList.ElementType) as DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -126,6 +132,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
     /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/dynamicarray", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "CT_ExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
         /// </summary>
@@ -160,16 +172,16 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xda:extLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Extension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Extension), 0, 0)
+                        new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Extension.ElementType, 0, 0)
                     }
                 }
             };

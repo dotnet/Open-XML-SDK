@@ -1,8 +1,10 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System.Linq;
+using System.Xml;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Framework.Tests
@@ -12,12 +14,14 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void InvalidElementTest()
         {
-            var particle = new ElementParticle(typeof(T1), 0, 1)
+            var t1 = new T1();
+            var t2 = new T2();
+            var particle = new ElementParticle(T1.ElementType, 0, 1)
                 .Compile();
             var data = new TestOpenXmlCompositeElement();
 
-            Assert.False(particle.Set(data, new T2()));
-            Assert.Null(particle.Get<T2>(data));
+            Assert.False(particle.Set(data, t2));
+            Assert.Null(particle.Get(data, T2.ElementType));
         }
 
         [Fact]
@@ -25,8 +29,8 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         {
             var particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
-                new ElementParticle(typeof(T1), 0, 1),
-                new ElementParticle(typeof(T2), 0, 1),
+                new ElementParticle(T1.ElementType, 0, 1),
+                new ElementParticle(T2.ElementType, 0, 1),
             }.Compile();
             var data = new TestOpenXmlCompositeElement();
             var t1a = new T1();
@@ -38,7 +42,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             data.AppendChild(t1b);
 
             Assert.Collection(
-                particle.GetCollection<T1>(data),
+                particle.GetCollection(T1.ElementType, data),
                 e => Assert.Same(t1a, e),
                 e => Assert.Same(t1b, e));
         }
@@ -48,12 +52,12 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         {
             var particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
-                new ElementParticle(typeof(T1), 0, 1),
-                new ElementParticle(typeof(T2), 0, 1),
-                new ElementParticle(typeof(T3), 0, 1),
-                new ElementParticle(typeof(T4), 0, 1),
-                new ElementParticle(typeof(T5), 0, 1),
-                new ElementParticle(typeof(T6), 0, 1),
+                new ElementParticle(T1.ElementType, 0, 1),
+                new ElementParticle(T2.ElementType, 0, 1),
+                new ElementParticle(T3.ElementType, 0, 1),
+                new ElementParticle(T4.ElementType, 0, 1),
+                new ElementParticle(T5.ElementType, 0, 1),
+                new ElementParticle(T6.ElementType, 0, 1),
             }.Compile();
 
             var data = new TestOpenXmlCompositeElement();
@@ -63,18 +67,18 @@ namespace DocumentFormat.OpenXml.Framework.Tests
 
             Assert.Empty(data);
 
-            particle.GetCollection<T1>(data).Add(t1);
+            particle.GetCollection(T1.ElementType, data).Add(t1);
             Assert.Collection(
                 data,
                 e => Assert.Same(e, t1));
 
-            particle.GetCollection<T3>(data).Add(t3);
+            particle.GetCollection(T3.ElementType, data).Add(t3);
             Assert.Collection(
                 data,
                 e => Assert.Same(e, t1),
                 e => Assert.Same(e, t3));
 
-            particle.GetCollection<T5>(data).Add(t5);
+            particle.GetCollection(T5.ElementType, data).Add(t5);
             Assert.Collection(
                 data,
                 e => Assert.Same(e, t1),
@@ -85,13 +89,12 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         [Fact]
         public void ElementTest()
         {
-            var particle = new ElementParticle(typeof(T1), 0, 1)
+            var particle = new ElementParticle(T1.ElementType, 0, 1)
                 .Compile();
             var data = new TestOpenXmlCompositeElement();
-            var instance = new T1();
 
-            Assert.True(particle.Set(data, instance));
-            Assert.Equal(instance, particle.Get<T1>(data));
+            Assert.True(particle.Set(data, new T1()));
+            Assert.Equal(new T1(), particle.Get(data, T1.ElementType));
         }
 
         [Fact]
@@ -99,8 +102,8 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         {
             var particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
-                new ElementParticle(typeof(T1), 0, 1),
-                new ElementParticle(typeof(T2), 0, 1),
+                new ElementParticle(T1.ElementType, 0, 1),
+                new ElementParticle(T2.ElementType, 0, 1),
             }.Compile();
             var data = new TestOpenXmlCompositeElement();
 
@@ -121,8 +124,8 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         {
             var particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
-                new ElementParticle(typeof(T1), 0, 1),
-                new ElementParticle(typeof(T2), 0, 1),
+                new ElementParticle(T1.ElementType, 0, 1),
+                new ElementParticle(T2.ElementType, 0, 1),
             }.Compile();
             var data = new TestOpenXmlCompositeElement();
 
@@ -143,8 +146,8 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         {
             var particle = new CompositeParticle.Builder(ParticleType.All, 0, 1)
             {
-                new ElementParticle(typeof(T1), 0, 1),
-                new ElementParticle(typeof(T2), 0, 1),
+                new ElementParticle(T1.ElementType, 0, 1),
+                new ElementParticle(T2.ElementType, 0, 1),
             }.Compile();
             var data = new TestOpenXmlCompositeElement();
 
@@ -165,8 +168,8 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         {
             var particle = new CompositeParticle.Builder(ParticleType.All, 0, 1)
             {
-                new ElementParticle(typeof(T1), 0, 1),
-                new ElementParticle(typeof(T2), 0, 1),
+                new ElementParticle(T1.ElementType, 0, 1),
+                new ElementParticle(T2.ElementType, 0, 1),
             }.Compile();
             var data = new TestOpenXmlCompositeElement();
 
@@ -181,7 +184,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             data.PrependChild(t1c);
 
             Assert.Collection(
-                particle.GetCollection<T1>(data),
+                particle.GetCollection(T1.ElementType, data),
                 e => Assert.Same(t1c, e),
                 e => Assert.Same(t1b, e),
                 e => Assert.Same(t1a, e));
@@ -192,9 +195,9 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         {
             var particle = new CompositeParticle.Builder(ParticleType.All, 0, 1)
             {
-                new ElementParticle(typeof(T1), 0, 1),
-                new ElementParticle(typeof(T2), 0, 10),
-                new ElementParticle(typeof(T3), 0, 1),
+                new ElementParticle(T1.ElementType, 0, 1),
+                new ElementParticle(T2.ElementType, 0, 10),
+                new ElementParticle(T3.ElementType, 0, 1),
             }.Compile();
             var data = new TestOpenXmlCompositeElement();
 
@@ -220,7 +223,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                 e => Assert.Same(t1, e),
                 e => Assert.Same(t2b, e));
 
-            Assert.True(particle.GetCollection<T2>(data).Add(t2c));
+            Assert.True(particle.GetCollection(T2.ElementType, data).Add(t2c));
             Assert.Collection(
                 data,
                 e => Assert.Same(t1, e),
@@ -239,8 +242,8 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         {
             var particle = new CompositeParticle.Builder(ParticleType.All, 0, 1)
             {
-                new ElementParticle(typeof(T1), 0, 1),
-                new ElementParticle(typeof(T2), 0, 1),
+                new ElementParticle(T1.ElementType, 0, 1),
+                new ElementParticle(T2.ElementType, 0, 1),
             }.Compile();
             var data = new TestOpenXmlCompositeElement();
 
@@ -261,9 +264,9 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         {
             var particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
-                new ElementParticle(typeof(T1), 0, 1),
-                new ElementParticle(typeof(T2), 1, 10),
-                new ElementParticle(typeof(T3), 0, 1),
+                new ElementParticle(T1.ElementType, 0, 1),
+                new ElementParticle(T2.ElementType, 1, 10),
+                new ElementParticle(T3.ElementType, 0, 1),
             }.Compile();
             var data = new TestOpenXmlCompositeElement();
 
@@ -273,9 +276,9 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             var t3 = new T3();
 
             Assert.True(particle.Set(data, t3));
-            Assert.True(particle.GetCollection<T2>(data).Add(t2a));
+            Assert.True(particle.GetCollection(T2.ElementType, data).Add(t2a));
             Assert.True(particle.Set(data, t1));
-            Assert.True(particle.GetCollection<T2>(data).Add(t2b));
+            Assert.True(particle.GetCollection(T2.ElementType, data).Add(t2b));
 
             Assert.Collection(
                 data,
@@ -290,12 +293,12 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         {
             var particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
-                new ElementParticle(typeof(T1), 0, 1),
+                new ElementParticle(T1.ElementType, 0, 1),
             }.Compile();
             var data = new TestOpenXmlCompositeElement();
 
             Assert.False(particle.Set(data, new T2()));
-            Assert.Null(particle.Get<T2>(data));
+            Assert.Null(particle.Get(data, T2.ElementType));
         }
 
         [Fact]
@@ -303,13 +306,13 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         {
             var particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
-                new ElementParticle(typeof(T1), 0, 10),
+                new ElementParticle(T1.ElementType, 0, 10),
             }.Compile();
             var data = new TestOpenXmlCompositeElement();
             var instance = new T1();
 
-            Assert.True(particle.GetCollection<T1>(data).Add(instance));
-            var single = Assert.Single(particle.GetCollection<T1>(data));
+            Assert.True(particle.GetCollection(T1.ElementType, data).Add(instance));
+            var single = Assert.Single(particle.GetCollection(T1.ElementType, data));
             Assert.Equal(instance, single);
         }
 
@@ -318,7 +321,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         {
             var particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
-                new ElementParticle(typeof(T1), 0, 1),
+                new ElementParticle(T1.ElementType, 0, 1),
             }.Compile();
             var data = new TestOpenXmlCompositeElement();
 
@@ -336,8 +339,8 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         {
             var particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
-                new ElementParticle(typeof(T1), 0, 1),
-                new ElementParticle(typeof(T2), 0, 1),
+                new ElementParticle(T1.ElementType, 0, 1),
+                new ElementParticle(T2.ElementType, 0, 1),
             }.Compile();
             var data = new TestOpenXmlCompositeElement();
 
@@ -357,13 +360,13 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         {
             var particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
-                new ElementParticle(typeof(T1), 0, 1),
+                new ElementParticle(T1.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
                 {
-                    new ElementParticle(typeof(T2), 0, 1),
-                    new ElementParticle(typeof(T3), 0, 1),
+                    new ElementParticle(T2.ElementType, 0, 1),
+                    new ElementParticle(T3.ElementType, 0, 1),
                 },
-                new ElementParticle(typeof(T4), 0, 1),
+                new ElementParticle(T4.ElementType, 0, 1),
             }.Compile();
             var data = new TestOpenXmlCompositeElement();
 
@@ -411,17 +414,17 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         {
             var particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
-                new ElementParticle(typeof(T1), 0, 1),
+                new ElementParticle(T1.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
                 {
-                    new ElementParticle(typeof(T2), 0, 1),
-                    new ElementParticle(typeof(T3), 0, 1),
+                    new ElementParticle(T2.ElementType, 0, 1),
+                    new ElementParticle(T3.ElementType, 0, 1),
                 },
-                new ElementParticle(typeof(T4), 0, 1),
+                new ElementParticle(T4.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
                 {
-                    new ElementParticle(typeof(T5), 0, 1),
-                    new ElementParticle(typeof(T6), 0, 1),
+                    new ElementParticle(T5.ElementType, 0, 1),
+                    new ElementParticle(T6.ElementType, 0, 1),
                 },
             }.Compile();
             var data = new TestOpenXmlCompositeElement();
@@ -477,28 +480,59 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                 e => Assert.Same(t3, e));
         }
 
-        private class T1 : TestOpenXmlElement
+        private class T1() : TestOpenXmlElement(ElementType)
         {
+            internal static OpenXmlSchemaType ElementType { get; } = new(new("ns", "name1"), new("ns", $"CT_name1"));
         }
 
-        private class T2 : TestOpenXmlElement
+        private class T2() : TestOpenXmlElement(ElementType)
         {
+            internal static OpenXmlSchemaType ElementType { get; } = new(new("ns", "name2"), new("ns", $"CT_name2"));
         }
 
-        private class T3 : TestOpenXmlElement
+        private class T3() : TestOpenXmlElement(ElementType)
         {
+            internal static OpenXmlSchemaType ElementType { get; } = new(new("ns", "name3"), new("ns", $"CT_name3"));
         }
 
-        private class T4 : TestOpenXmlElement
+        private class T4() : TestOpenXmlElement(ElementType)
         {
+            internal static OpenXmlSchemaType ElementType { get; } = new(new("ns", "name4"), new("ns", $"CT_name4"));
         }
 
-        private class T5 : TestOpenXmlElement
+        private class T5() : TestOpenXmlElement(ElementType)
         {
+            internal static OpenXmlSchemaType ElementType { get; } = new(new("ns", "name5"), new("ns", $"CT_name5"));
         }
 
-        private class T6 : TestOpenXmlElement
+        private class T6() : TestOpenXmlElement(ElementType)
         {
+            internal static OpenXmlSchemaType ElementType { get; } = new(new("ns", "name6"), new("ns", $"CT_name6"));
+        }
+
+        private abstract class TestOpenXmlElement(OpenXmlSchemaType type) : OpenXmlElement
+        {
+            public override bool HasChildren => false;
+
+            public override void RemoveAllChildren()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            internal override void WriteContentTo(XmlWriter w)
+            {
+                throw new System.NotImplementedException();
+            }
+
+            private protected override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode)
+            {
+                throw new System.NotImplementedException();
+            }
+
+            internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+            {
+                builder.SetSchema(type);
+            }
         }
     }
 }

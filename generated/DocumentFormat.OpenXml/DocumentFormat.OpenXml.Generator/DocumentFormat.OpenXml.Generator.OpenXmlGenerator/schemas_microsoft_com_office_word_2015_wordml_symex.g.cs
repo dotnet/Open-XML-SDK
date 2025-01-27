@@ -23,6 +23,12 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
     /// </summary>
     public partial class SymEx : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2015/wordml/symex", "symEx");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/word/2015/wordml/symex", "CT_SymEx");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SymEx class.
         /// </summary>
@@ -59,7 +65,7 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("w16se:symEx");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<SymEx>()
                 .AddAttribute("w16se:font", a => a.Font, aBuilder =>
