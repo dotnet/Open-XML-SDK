@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var v = new OpenXmlValidator(FileFormatVersions.Office2013);
 
-                    Assert.Empty(v.Validate(doc));
+                    Assert.Empty(v.Validate(doc, TestContext.Current.CancellationToken));
                 }
             }
         }
@@ -50,7 +50,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
 
-                Assert.Empty(v.Validate(doc));
+                Assert.Empty(v.Validate(doc, TestContext.Current.CancellationToken));
             }
         }
 
@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var v = new OpenXmlValidator(FileFormatVersions.Office2013);
 
-                    Assert.Empty(v.Validate(doc));
+                    Assert.Empty(v.Validate(doc, TestContext.Current.CancellationToken));
                 }
             }
         }
@@ -87,7 +87,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
 
-                Assert.Empty(v.Validate(doc));
+                Assert.Empty(v.Validate(doc, TestContext.Current.CancellationToken));
             }
         }
 
@@ -100,7 +100,7 @@ namespace DocumentFormat.OpenXml.Tests
                 CreatePresentation(doc);
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Empty(errs);
             }
@@ -411,7 +411,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
 
-                Assert.Empty(v.Validate(doc));
+                Assert.Empty(v.Validate(doc, TestContext.Current.CancellationToken));
             }
         }
 
@@ -423,13 +423,13 @@ namespace DocumentFormat.OpenXml.Tests
             using (var doc = PresentationDocument.Open(stream, false))
             {
                 var validator = new OpenXmlValidator(FileFormatVersions.Office2007);
-                var cnt = validator.Validate(doc).Count();
+                var cnt = validator.Validate(doc, TestContext.Current.CancellationToken).Count();
 
                 validator = new OpenXmlValidator(FileFormatVersions.Office2010);
-                cnt += validator.Validate(doc).Count();
+                cnt += validator.Validate(doc, TestContext.Current.CancellationToken).Count();
 
                 validator = new OpenXmlValidator(FileFormatVersions.Office2013);
-                cnt += validator.Validate(doc).Count();
+                cnt += validator.Validate(doc, TestContext.Current.CancellationToken).Count();
 
                 Assert.Equal(expectedErrorCount, cnt);
             }

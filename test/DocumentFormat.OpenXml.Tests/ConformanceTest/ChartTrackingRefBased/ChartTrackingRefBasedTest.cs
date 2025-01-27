@@ -4,7 +4,6 @@
 using DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass;
 using System.IO;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBased
 {

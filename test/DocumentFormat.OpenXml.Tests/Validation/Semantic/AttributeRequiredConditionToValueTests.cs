@@ -35,7 +35,7 @@ namespace DocumentFormat.OpenXml.Tests.Validation.Semantic
                 element.Condition = condition;
             }
 
-            var results = validator.Validate(element);
+            var results = validator.Validate(element, TestContext.Current.CancellationToken);
 
             Assert.Empty(results);
         }
@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml.Tests.Validation.Semantic
                 Condition = ExpectedConditionValue,
             };
 
-            var error = Assert.Single(validator.Validate(element));
+            var error = Assert.Single(validator.Validate(element, TestContext.Current.CancellationToken));
 
             Assert.Equal("Sem_AttributeRequiredConditionToValue", error.Id);
             Assert.Equal(ValidationErrorType.Semantic, error.ErrorType);

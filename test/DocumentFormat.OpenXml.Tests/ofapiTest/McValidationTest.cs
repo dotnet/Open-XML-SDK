@@ -296,16 +296,16 @@ namespace DocumentFormat.OpenXml.Tests
             p.InsertAfter(acb, pPr);
 
             var validator = new OpenXmlValidator();
-            var errors = validator.Validate(p);
+            var errors = validator.Validate(p, TestContext.Current.CancellationToken);
             Assert.Empty(errors);
 
             p.AppendChild(new OpenXmlUnknownElement("w15test", "art", "http://w15.com"));
-            errors = validator.Validate(p);
+            errors = validator.Validate(p, TestContext.Current.CancellationToken);
             Assert.Single(errors);
             p.RemoveChild(p.LastChild);
 
             acb.LastChild.Append(new OpenXmlUnknownElement("w15test", "art", "http://w15.com"));
-            errors = validator.Validate(p);
+            errors = validator.Validate(p, TestContext.Current.CancellationToken);
             Assert.Single(errors);
         }
 
@@ -329,7 +329,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // Should report error in "Fallback" branch.
             var validator = new OpenXmlValidator(FileFormatVersions.Office2007);
-            var errors = validator.Validate(p);
+            var errors = validator.Validate(p, TestContext.Current.CancellationToken);
             var error = Assert.Single(errors);
 
             Assert.Same(acb.LastChild.FirstChild, error.Node);
@@ -355,7 +355,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // Should report error in the "Choice" branch.
             var validator = new OpenXmlValidator(FileFormatVersions.Office2010);
-            var errors = validator.Validate(p);
+            var errors = validator.Validate(p, TestContext.Current.CancellationToken);
             var error = Assert.Single(errors);
 
             Assert.Same(acb.FirstChild.FirstChild, error.Node);
