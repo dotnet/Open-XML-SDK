@@ -29,6 +29,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </remarks>
     public partial class Sources : OpenXmlPartRootElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Sources");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CT_Sources");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Sources class.
         /// </summary>
@@ -93,7 +99,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("b:Sources");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Bibliography.Source>();
             builder.AddElement<Sources>()
                 .AddAttribute("SelectedStyle", a => a.SelectedStyle, aBuilder =>
@@ -110,7 +116,7 @@ namespace DocumentFormat.OpenXml.Bibliography
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Source), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Bibliography.Source.ElementType, 0, 0)
             };
         }
 
@@ -133,6 +139,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </remarks>
     public partial class Person : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Person");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CT_PersonType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Person class.
         /// </summary>
@@ -167,15 +179,15 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("b:Person");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Bibliography.Last>();
             builder.AddChild<DocumentFormat.OpenXml.Bibliography.First>();
             builder.AddChild<DocumentFormat.OpenXml.Bibliography.Middle>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Last), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.First), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Middle), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Bibliography.Last.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Bibliography.First.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Bibliography.Middle.ElementType, 0, 0)
             };
         }
 
@@ -190,6 +202,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class Last : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Last");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Last class.
         /// </summary>
@@ -214,7 +232,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:Last");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -228,6 +246,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class First : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "First");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the First class.
         /// </summary>
@@ -252,7 +276,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:First");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -266,6 +290,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class Middle : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Middle");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Middle class.
         /// </summary>
@@ -290,7 +320,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:Middle");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -304,6 +334,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class Corporate : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Corporate");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Corporate class.
         /// </summary>
@@ -328,7 +364,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:Corporate");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -342,6 +378,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class AbbreviatedCaseNumber : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "AbbreviatedCaseNumber");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AbbreviatedCaseNumber class.
         /// </summary>
@@ -366,7 +408,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:AbbreviatedCaseNumber");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -380,6 +422,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class AlbumTitle : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "AlbumTitle");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AlbumTitle class.
         /// </summary>
@@ -404,7 +452,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:AlbumTitle");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -418,6 +466,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class BookTitle : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "BookTitle");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BookTitle class.
         /// </summary>
@@ -442,7 +496,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:BookTitle");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -456,6 +510,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class Broadcaster : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Broadcaster");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Broadcaster class.
         /// </summary>
@@ -480,7 +540,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:Broadcaster");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -494,6 +554,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class BroadcastTitle : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "BroadcastTitle");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BroadcastTitle class.
         /// </summary>
@@ -518,7 +584,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:BroadcastTitle");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -532,6 +598,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class CaseNumber : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CaseNumber");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CaseNumber class.
         /// </summary>
@@ -556,7 +628,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:CaseNumber");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -570,6 +642,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class ChapterNumber : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ChapterNumber");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ChapterNumber class.
         /// </summary>
@@ -594,7 +672,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:ChapterNumber");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -608,6 +686,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class City : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "City");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the City class.
         /// </summary>
@@ -632,7 +716,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:City");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -646,6 +730,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class Comments : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Comments");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Comments class.
         /// </summary>
@@ -670,7 +760,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:Comments");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -684,6 +774,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class ConferenceName : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ConferenceName");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ConferenceName class.
         /// </summary>
@@ -708,7 +804,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:ConferenceName");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -722,6 +818,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class CountryRegion : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CountryRegion");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CountryRegion class.
         /// </summary>
@@ -746,7 +848,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:CountryRegion");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -760,6 +862,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class Court : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Court");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Court class.
         /// </summary>
@@ -784,7 +892,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:Court");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -798,6 +906,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class Day : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Day");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Day class.
         /// </summary>
@@ -822,7 +936,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:Day");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -836,6 +950,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class DayAccessed : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "DayAccessed");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DayAccessed class.
         /// </summary>
@@ -860,7 +980,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:DayAccessed");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -874,6 +994,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class Department : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Department");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Department class.
         /// </summary>
@@ -898,7 +1024,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:Department");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -912,6 +1038,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class Distributor : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Distributor");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Distributor class.
         /// </summary>
@@ -936,7 +1068,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:Distributor");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -950,6 +1082,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class Edition : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Edition");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Edition class.
         /// </summary>
@@ -974,7 +1112,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:Edition");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -988,6 +1126,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class GuidString : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Guid");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the GuidString class.
         /// </summary>
@@ -1012,7 +1156,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:Guid");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1026,6 +1170,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class Institution : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Institution");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Institution class.
         /// </summary>
@@ -1050,7 +1200,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:Institution");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1064,6 +1214,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class InternetSiteTitle : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "InternetSiteTitle");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the InternetSiteTitle class.
         /// </summary>
@@ -1088,7 +1244,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:InternetSiteTitle");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1102,6 +1258,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class Issue : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Issue");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Issue class.
         /// </summary>
@@ -1126,7 +1288,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:Issue");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1140,6 +1302,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class JournalName : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "JournalName");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the JournalName class.
         /// </summary>
@@ -1164,7 +1332,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:JournalName");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1178,6 +1346,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class LcId : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "LCID");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LcId class.
         /// </summary>
@@ -1202,7 +1376,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:LCID");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1216,6 +1390,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class Medium : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Medium");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Medium class.
         /// </summary>
@@ -1240,7 +1420,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:Medium");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1254,6 +1434,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class Month : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Month");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Month class.
         /// </summary>
@@ -1278,7 +1464,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:Month");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1292,6 +1478,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class MonthAccessed : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "MonthAccessed");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MonthAccessed class.
         /// </summary>
@@ -1316,7 +1508,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:MonthAccessed");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1330,6 +1522,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class NumberVolumes : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "NumberVolumes");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NumberVolumes class.
         /// </summary>
@@ -1354,7 +1552,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:NumberVolumes");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1368,6 +1566,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class Pages : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Pages");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Pages class.
         /// </summary>
@@ -1392,7 +1596,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:Pages");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1406,6 +1610,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class PatentNumber : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "PatentNumber");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PatentNumber class.
         /// </summary>
@@ -1430,7 +1640,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:PatentNumber");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1444,6 +1654,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class PeriodicalTitle : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "PeriodicalTitle");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PeriodicalTitle class.
         /// </summary>
@@ -1468,7 +1684,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:PeriodicalTitle");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1482,6 +1698,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class ProductionCompany : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ProductionCompany");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ProductionCompany class.
         /// </summary>
@@ -1506,7 +1728,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:ProductionCompany");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1520,6 +1742,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class PublicationTitle : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "PublicationTitle");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PublicationTitle class.
         /// </summary>
@@ -1544,7 +1772,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:PublicationTitle");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1558,6 +1786,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class Publisher : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Publisher");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Publisher class.
         /// </summary>
@@ -1582,7 +1816,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:Publisher");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1596,6 +1830,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class RecordingNumber : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "RecordingNumber");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RecordingNumber class.
         /// </summary>
@@ -1620,7 +1860,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:RecordingNumber");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1634,6 +1874,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class ReferenceOrder : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "RefOrder");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ReferenceOrder class.
         /// </summary>
@@ -1658,7 +1904,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:RefOrder");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1672,6 +1918,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class Reporter : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Reporter");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Reporter class.
         /// </summary>
@@ -1696,7 +1948,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:Reporter");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1710,6 +1962,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class ShortTitle : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ShortTitle");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShortTitle class.
         /// </summary>
@@ -1734,7 +1992,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:ShortTitle");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1748,6 +2006,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class StandardNumber : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "StandardNumber");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the StandardNumber class.
         /// </summary>
@@ -1772,7 +2036,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:StandardNumber");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1786,6 +2050,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class StateProvince : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "StateProvince");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the StateProvince class.
         /// </summary>
@@ -1810,7 +2080,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:StateProvince");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1824,6 +2094,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class Station : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Station");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Station class.
         /// </summary>
@@ -1848,7 +2124,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:Station");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1862,6 +2138,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class Tag : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Tag");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Tag class.
         /// </summary>
@@ -1886,7 +2168,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:Tag");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1900,6 +2182,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class Theater : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Theater");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Theater class.
         /// </summary>
@@ -1924,7 +2212,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:Theater");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1938,6 +2226,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class ThesisType : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ThesisType");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ThesisType class.
         /// </summary>
@@ -1962,7 +2256,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:ThesisType");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1976,6 +2270,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class Title : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Title");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Title class.
         /// </summary>
@@ -2000,7 +2300,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:Title");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2014,6 +2314,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class PatentType : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Type");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PatentType class.
         /// </summary>
@@ -2038,7 +2344,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:Type");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2052,6 +2358,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class UrlString : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "URL");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the UrlString class.
         /// </summary>
@@ -2076,7 +2388,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:URL");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2090,6 +2402,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class Version : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Version");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Version class.
         /// </summary>
@@ -2114,7 +2432,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:Version");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2128,6 +2446,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class Volume : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Volume");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Volume class.
         /// </summary>
@@ -2152,7 +2476,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:Volume");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2166,6 +2490,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class Year : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Year");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Year class.
         /// </summary>
@@ -2190,7 +2520,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:Year");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2204,6 +2534,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class YearAccessed : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "YearAccessed");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_String255");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the YearAccessed class.
         /// </summary>
@@ -2228,7 +2564,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (255L) });
-            builder.SetSchema("b:YearAccessed");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2248,6 +2584,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </remarks>
     public partial class NameList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "NameList");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CT_NameListType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NameList class.
         /// </summary>
@@ -2282,11 +2624,11 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("b:NameList");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Bibliography.Person>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Person), 1, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Bibliography.Person.ElementType, 1, 0)
             };
         }
 
@@ -2307,6 +2649,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </remarks>
     public partial class Artist : NameType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Artist");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CT_NameType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Artist class.
         /// </summary>
@@ -2341,10 +2689,10 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("b:Artist");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Bibliography.NameList.ElementType, 1, 1)
             };
         }
 
@@ -2365,6 +2713,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </remarks>
     public partial class BookAuthor : NameType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "BookAuthor");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CT_NameType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BookAuthor class.
         /// </summary>
@@ -2399,10 +2753,10 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("b:BookAuthor");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Bibliography.NameList.ElementType, 1, 1)
             };
         }
 
@@ -2423,6 +2777,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </remarks>
     public partial class Compiler : NameType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Compiler");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CT_NameType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Compiler class.
         /// </summary>
@@ -2457,10 +2817,10 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("b:Compiler");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Bibliography.NameList.ElementType, 1, 1)
             };
         }
 
@@ -2481,6 +2841,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </remarks>
     public partial class Composer : NameType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Composer");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CT_NameType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Composer class.
         /// </summary>
@@ -2515,10 +2881,10 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("b:Composer");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Bibliography.NameList.ElementType, 1, 1)
             };
         }
 
@@ -2539,6 +2905,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </remarks>
     public partial class Conductor : NameType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Conductor");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CT_NameType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Conductor class.
         /// </summary>
@@ -2573,10 +2945,10 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("b:Conductor");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Bibliography.NameList.ElementType, 1, 1)
             };
         }
 
@@ -2597,6 +2969,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </remarks>
     public partial class Counsel : NameType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Counsel");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CT_NameType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Counsel class.
         /// </summary>
@@ -2631,10 +3009,10 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("b:Counsel");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Bibliography.NameList.ElementType, 1, 1)
             };
         }
 
@@ -2655,6 +3033,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </remarks>
     public partial class Director : NameType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Director");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CT_NameType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Director class.
         /// </summary>
@@ -2689,10 +3073,10 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("b:Director");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Bibliography.NameList.ElementType, 1, 1)
             };
         }
 
@@ -2713,6 +3097,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </remarks>
     public partial class Editor : NameType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Editor");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CT_NameType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Editor class.
         /// </summary>
@@ -2747,10 +3137,10 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("b:Editor");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Bibliography.NameList.ElementType, 1, 1)
             };
         }
 
@@ -2771,6 +3161,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </remarks>
     public partial class Interviewee : NameType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Interviewee");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CT_NameType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Interviewee class.
         /// </summary>
@@ -2805,10 +3201,10 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("b:Interviewee");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Bibliography.NameList.ElementType, 1, 1)
             };
         }
 
@@ -2829,6 +3225,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </remarks>
     public partial class Interviewer : NameType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Interviewer");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CT_NameType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Interviewer class.
         /// </summary>
@@ -2863,10 +3265,10 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("b:Interviewer");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Bibliography.NameList.ElementType, 1, 1)
             };
         }
 
@@ -2887,6 +3289,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </remarks>
     public partial class Inventor : NameType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Inventor");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CT_NameType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Inventor class.
         /// </summary>
@@ -2921,10 +3329,10 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("b:Inventor");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Bibliography.NameList.ElementType, 1, 1)
             };
         }
 
@@ -2945,6 +3353,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </remarks>
     public partial class ProducerName : NameType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ProducerName");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CT_NameType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ProducerName class.
         /// </summary>
@@ -2979,10 +3393,10 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("b:ProducerName");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Bibliography.NameList.ElementType, 1, 1)
             };
         }
 
@@ -3003,6 +3417,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </remarks>
     public partial class Translator : NameType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Translator");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CT_NameType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Translator class.
         /// </summary>
@@ -3037,10 +3457,10 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("b:Translator");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Bibliography.NameList.ElementType, 1, 1)
             };
         }
 
@@ -3061,6 +3481,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </remarks>
     public partial class Writer : NameType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Writer");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CT_NameType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Writer class.
         /// </summary>
@@ -3095,10 +3521,10 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("b:Writer");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Bibliography.NameList.ElementType, 1, 1)
             };
         }
 
@@ -3119,6 +3545,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </remarks>
     public abstract partial class NameType : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CT_NameType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NameType class.
         /// </summary>
@@ -3165,8 +3597,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.NameList? NameList
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.NameList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.NameList.ElementType) as DocumentFormat.OpenXml.Bibliography.NameList;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.NameList.ElementType);
         }
     }
 
@@ -3184,6 +3616,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </remarks>
     public partial class Author : NameOrCorporateType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Author");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CT_NameOrCorporateType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Author class.
         /// </summary>
@@ -3218,13 +3656,13 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("b:Author");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Corporate), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.NameList.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Corporate.ElementType, 1, 1)
                 }
             };
         }
@@ -3247,6 +3685,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </remarks>
     public partial class Performer : NameOrCorporateType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Performer");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CT_NameOrCorporateType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Performer class.
         /// </summary>
@@ -3281,13 +3725,13 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("b:Performer");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Corporate), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.NameList.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Corporate.ElementType, 1, 1)
                 }
             };
         }
@@ -3310,6 +3754,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </remarks>
     public abstract partial class NameOrCorporateType : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CT_NameOrCorporateType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NameOrCorporateType class.
         /// </summary>
@@ -3357,8 +3807,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.NameList? NameList
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.NameList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.NameList.ElementType) as DocumentFormat.OpenXml.Bibliography.NameList;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.NameList.ElementType);
         }
 
         /// <summary>
@@ -3370,8 +3820,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Corporate? Corporate
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Corporate>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Corporate.ElementType) as DocumentFormat.OpenXml.Bibliography.Corporate;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Corporate.ElementType);
         }
     }
 
@@ -3403,6 +3853,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </remarks>
     public partial class AuthorList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Author");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CT_AuthorType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AuthorList class.
         /// </summary>
@@ -3437,7 +3893,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("b:Author");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Bibliography.Author>();
             builder.AddChild<DocumentFormat.OpenXml.Bibliography.Performer>();
             builder.AddChild<DocumentFormat.OpenXml.Bibliography.Artist>();
@@ -3458,22 +3914,22 @@ namespace DocumentFormat.OpenXml.Bibliography
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Artist), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Author), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.BookAuthor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Compiler), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Composer), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Conductor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Counsel), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Director), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Editor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Interviewee), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Interviewer), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Inventor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Performer), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ProducerName), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Translator), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Writer), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Artist.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Author.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.BookAuthor.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Compiler.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Composer.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Conductor.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Counsel.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Director.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Editor.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Interviewee.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Interviewer.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Inventor.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Performer.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.ProducerName.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Translator.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Writer.ElementType, 1, 1)
                 }
             };
         }
@@ -3487,8 +3943,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Artist? Artist
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Artist>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Artist.ElementType) as DocumentFormat.OpenXml.Bibliography.Artist;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Artist.ElementType);
         }
 
         /// <summary>
@@ -3500,8 +3956,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Author? Author
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Author>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Author.ElementType) as DocumentFormat.OpenXml.Bibliography.Author;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Author.ElementType);
         }
 
         /// <summary>
@@ -3513,8 +3969,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.BookAuthor? BookAuthor
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.BookAuthor>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.BookAuthor.ElementType) as DocumentFormat.OpenXml.Bibliography.BookAuthor;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.BookAuthor.ElementType);
         }
 
         /// <summary>
@@ -3526,8 +3982,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Compiler? Compiler
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Compiler>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Compiler.ElementType) as DocumentFormat.OpenXml.Bibliography.Compiler;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Compiler.ElementType);
         }
 
         /// <summary>
@@ -3539,8 +3995,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Composer? Composer
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Composer>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Composer.ElementType) as DocumentFormat.OpenXml.Bibliography.Composer;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Composer.ElementType);
         }
 
         /// <summary>
@@ -3552,8 +4008,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Conductor? Conductor
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Conductor>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Conductor.ElementType) as DocumentFormat.OpenXml.Bibliography.Conductor;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Conductor.ElementType);
         }
 
         /// <summary>
@@ -3565,8 +4021,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Counsel? Counsel
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Counsel>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Counsel.ElementType) as DocumentFormat.OpenXml.Bibliography.Counsel;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Counsel.ElementType);
         }
 
         /// <summary>
@@ -3578,8 +4034,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Director? Director
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Director>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Director.ElementType) as DocumentFormat.OpenXml.Bibliography.Director;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Director.ElementType);
         }
 
         /// <summary>
@@ -3591,8 +4047,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Editor? Editor
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Editor>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Editor.ElementType) as DocumentFormat.OpenXml.Bibliography.Editor;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Editor.ElementType);
         }
 
         /// <summary>
@@ -3604,8 +4060,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Interviewee? Interviewee
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Interviewee>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Interviewee.ElementType) as DocumentFormat.OpenXml.Bibliography.Interviewee;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Interviewee.ElementType);
         }
 
         /// <summary>
@@ -3617,8 +4073,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Interviewer? Interviewer
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Interviewer>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Interviewer.ElementType) as DocumentFormat.OpenXml.Bibliography.Interviewer;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Interviewer.ElementType);
         }
 
         /// <summary>
@@ -3630,8 +4086,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Inventor? Inventor
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Inventor>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Inventor.ElementType) as DocumentFormat.OpenXml.Bibliography.Inventor;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Inventor.ElementType);
         }
 
         /// <summary>
@@ -3643,8 +4099,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Performer? Performer
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Performer>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Performer.ElementType) as DocumentFormat.OpenXml.Bibliography.Performer;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Performer.ElementType);
         }
 
         /// <summary>
@@ -3656,8 +4112,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.ProducerName? ProducerName
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.ProducerName>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.ProducerName.ElementType) as DocumentFormat.OpenXml.Bibliography.ProducerName;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.ProducerName.ElementType);
         }
 
         /// <summary>
@@ -3669,8 +4125,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Translator? Translator
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Translator>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Translator.ElementType) as DocumentFormat.OpenXml.Bibliography.Translator;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Translator.ElementType);
         }
 
         /// <summary>
@@ -3682,8 +4138,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Writer? Writer
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Writer>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Writer.ElementType) as DocumentFormat.OpenXml.Bibliography.Writer;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Writer.ElementType);
         }
 
         /// <inheritdoc/>
@@ -3697,6 +4153,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </summary>
     public partial class SourceType : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "SourceType");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "ST_SourceType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SourceType class.
         /// </summary>
@@ -3721,7 +4183,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Bibliography.DataSourceValues>>(EnumValidator.Instance);
-            builder.SetSchema("b:SourceType");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -3792,6 +4254,12 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// </remarks>
     public partial class Source : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "Source");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/bibliography", "CT_SourceType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Source class.
         /// </summary>
@@ -3826,7 +4294,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("b:Source");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Bibliography.AuthorList>();
             builder.AddChild<DocumentFormat.OpenXml.Bibliography.SourceType>();
             builder.AddChild<DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber>();
@@ -3883,58 +4351,58 @@ namespace DocumentFormat.OpenXml.Bibliography
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AlbumTitle), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AuthorList), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.BookTitle), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Broadcaster), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.BroadcastTitle), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.CaseNumber), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ChapterNumber), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.City), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Comments), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ConferenceName), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.CountryRegion), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Court), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Day), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.DayAccessed), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Department), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Distributor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Edition), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.GuidString), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Institution), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.InternetSiteTitle), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Issue), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.JournalName), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.LcId), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Medium), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Month), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.MonthAccessed), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NumberVolumes), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Pages), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PatentNumber), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PeriodicalTitle), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ProductionCompany), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PublicationTitle), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Publisher), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.RecordingNumber), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ReferenceOrder), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Reporter), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.SourceType), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ShortTitle), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.StandardNumber), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.StateProvince), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Station), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Tag), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Theater), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ThesisType), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Title), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PatentType), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.UrlString), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Version), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Volume), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Year), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.YearAccessed), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.AlbumTitle.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.AuthorList.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.BookTitle.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Broadcaster.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.BroadcastTitle.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.CaseNumber.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.ChapterNumber.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.City.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Comments.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.ConferenceName.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.CountryRegion.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Court.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Day.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.DayAccessed.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Department.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Distributor.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Edition.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.GuidString.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Institution.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.InternetSiteTitle.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Issue.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.JournalName.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.LcId.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Medium.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Month.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.MonthAccessed.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.NumberVolumes.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Pages.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.PatentNumber.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.PeriodicalTitle.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.ProductionCompany.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.PublicationTitle.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Publisher.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.RecordingNumber.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.ReferenceOrder.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Reporter.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.SourceType.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.ShortTitle.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.StandardNumber.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.StateProvince.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Station.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Tag.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Theater.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.ThesisType.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Title.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.PatentType.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.UrlString.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Version.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Volume.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.Year.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Bibliography.YearAccessed.ElementType, 1, 1)
                 }
             };
         }
@@ -3948,8 +4416,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber? AbbreviatedCaseNumber
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber.ElementType) as DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber.ElementType);
         }
 
         /// <summary>
@@ -3961,8 +4429,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.AlbumTitle? AlbumTitle
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.AlbumTitle>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.AlbumTitle.ElementType) as DocumentFormat.OpenXml.Bibliography.AlbumTitle;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.AlbumTitle.ElementType);
         }
 
         /// <summary>
@@ -3974,8 +4442,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.AuthorList? AuthorList
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.AuthorList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.AuthorList.ElementType) as DocumentFormat.OpenXml.Bibliography.AuthorList;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.AuthorList.ElementType);
         }
 
         /// <summary>
@@ -3987,8 +4455,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.BookTitle? BookTitle
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.BookTitle>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.BookTitle.ElementType) as DocumentFormat.OpenXml.Bibliography.BookTitle;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.BookTitle.ElementType);
         }
 
         /// <summary>
@@ -4000,8 +4468,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Broadcaster? Broadcaster
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Broadcaster>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Broadcaster.ElementType) as DocumentFormat.OpenXml.Bibliography.Broadcaster;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Broadcaster.ElementType);
         }
 
         /// <summary>
@@ -4013,8 +4481,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.BroadcastTitle? BroadcastTitle
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.BroadcastTitle>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.BroadcastTitle.ElementType) as DocumentFormat.OpenXml.Bibliography.BroadcastTitle;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.BroadcastTitle.ElementType);
         }
 
         /// <summary>
@@ -4026,8 +4494,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.CaseNumber? CaseNumber
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.CaseNumber>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.CaseNumber.ElementType) as DocumentFormat.OpenXml.Bibliography.CaseNumber;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.CaseNumber.ElementType);
         }
 
         /// <summary>
@@ -4039,8 +4507,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.ChapterNumber? ChapterNumber
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.ChapterNumber>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.ChapterNumber.ElementType) as DocumentFormat.OpenXml.Bibliography.ChapterNumber;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.ChapterNumber.ElementType);
         }
 
         /// <summary>
@@ -4052,8 +4520,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.City? City
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.City>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.City.ElementType) as DocumentFormat.OpenXml.Bibliography.City;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.City.ElementType);
         }
 
         /// <summary>
@@ -4065,8 +4533,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Comments? Comments
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Comments>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Comments.ElementType) as DocumentFormat.OpenXml.Bibliography.Comments;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Comments.ElementType);
         }
 
         /// <summary>
@@ -4078,8 +4546,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.ConferenceName? ConferenceName
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.ConferenceName>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.ConferenceName.ElementType) as DocumentFormat.OpenXml.Bibliography.ConferenceName;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.ConferenceName.ElementType);
         }
 
         /// <summary>
@@ -4091,8 +4559,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.CountryRegion? CountryRegion
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.CountryRegion>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.CountryRegion.ElementType) as DocumentFormat.OpenXml.Bibliography.CountryRegion;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.CountryRegion.ElementType);
         }
 
         /// <summary>
@@ -4104,8 +4572,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Court? Court
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Court>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Court.ElementType) as DocumentFormat.OpenXml.Bibliography.Court;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Court.ElementType);
         }
 
         /// <summary>
@@ -4117,8 +4585,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Day? Day
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Day>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Day.ElementType) as DocumentFormat.OpenXml.Bibliography.Day;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Day.ElementType);
         }
 
         /// <summary>
@@ -4130,8 +4598,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.DayAccessed? DayAccessed
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.DayAccessed>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.DayAccessed.ElementType) as DocumentFormat.OpenXml.Bibliography.DayAccessed;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.DayAccessed.ElementType);
         }
 
         /// <summary>
@@ -4143,8 +4611,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Department? Department
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Department>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Department.ElementType) as DocumentFormat.OpenXml.Bibliography.Department;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Department.ElementType);
         }
 
         /// <summary>
@@ -4156,8 +4624,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Distributor? Distributor
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Distributor>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Distributor.ElementType) as DocumentFormat.OpenXml.Bibliography.Distributor;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Distributor.ElementType);
         }
 
         /// <summary>
@@ -4169,8 +4637,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Edition? Edition
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Edition>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Edition.ElementType) as DocumentFormat.OpenXml.Bibliography.Edition;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Edition.ElementType);
         }
 
         /// <summary>
@@ -4182,8 +4650,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.GuidString? GuidString
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.GuidString>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.GuidString.ElementType) as DocumentFormat.OpenXml.Bibliography.GuidString;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.GuidString.ElementType);
         }
 
         /// <summary>
@@ -4195,8 +4663,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Institution? Institution
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Institution>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Institution.ElementType) as DocumentFormat.OpenXml.Bibliography.Institution;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Institution.ElementType);
         }
 
         /// <summary>
@@ -4208,8 +4676,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.InternetSiteTitle? InternetSiteTitle
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.InternetSiteTitle>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.InternetSiteTitle.ElementType) as DocumentFormat.OpenXml.Bibliography.InternetSiteTitle;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.InternetSiteTitle.ElementType);
         }
 
         /// <summary>
@@ -4221,8 +4689,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Issue? Issue
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Issue>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Issue.ElementType) as DocumentFormat.OpenXml.Bibliography.Issue;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Issue.ElementType);
         }
 
         /// <summary>
@@ -4234,8 +4702,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.JournalName? JournalName
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.JournalName>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.JournalName.ElementType) as DocumentFormat.OpenXml.Bibliography.JournalName;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.JournalName.ElementType);
         }
 
         /// <summary>
@@ -4247,8 +4715,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.LcId? LcId
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.LcId>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.LcId.ElementType) as DocumentFormat.OpenXml.Bibliography.LcId;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.LcId.ElementType);
         }
 
         /// <summary>
@@ -4260,8 +4728,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Medium? Medium
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Medium>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Medium.ElementType) as DocumentFormat.OpenXml.Bibliography.Medium;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Medium.ElementType);
         }
 
         /// <summary>
@@ -4273,8 +4741,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Month? Month
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Month>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Month.ElementType) as DocumentFormat.OpenXml.Bibliography.Month;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Month.ElementType);
         }
 
         /// <summary>
@@ -4286,8 +4754,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.MonthAccessed? MonthAccessed
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.MonthAccessed>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.MonthAccessed.ElementType) as DocumentFormat.OpenXml.Bibliography.MonthAccessed;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.MonthAccessed.ElementType);
         }
 
         /// <summary>
@@ -4299,8 +4767,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.NumberVolumes? NumberVolumes
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.NumberVolumes>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.NumberVolumes.ElementType) as DocumentFormat.OpenXml.Bibliography.NumberVolumes;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.NumberVolumes.ElementType);
         }
 
         /// <summary>
@@ -4312,8 +4780,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Pages? Pages
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Pages>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Pages.ElementType) as DocumentFormat.OpenXml.Bibliography.Pages;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Pages.ElementType);
         }
 
         /// <summary>
@@ -4325,8 +4793,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.PatentNumber? PatentNumber
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.PatentNumber>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.PatentNumber.ElementType) as DocumentFormat.OpenXml.Bibliography.PatentNumber;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.PatentNumber.ElementType);
         }
 
         /// <summary>
@@ -4338,8 +4806,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.PeriodicalTitle? PeriodicalTitle
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.PeriodicalTitle>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.PeriodicalTitle.ElementType) as DocumentFormat.OpenXml.Bibliography.PeriodicalTitle;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.PeriodicalTitle.ElementType);
         }
 
         /// <summary>
@@ -4351,8 +4819,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.ProductionCompany? ProductionCompany
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.ProductionCompany>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.ProductionCompany.ElementType) as DocumentFormat.OpenXml.Bibliography.ProductionCompany;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.ProductionCompany.ElementType);
         }
 
         /// <summary>
@@ -4364,8 +4832,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.PublicationTitle? PublicationTitle
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.PublicationTitle>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.PublicationTitle.ElementType) as DocumentFormat.OpenXml.Bibliography.PublicationTitle;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.PublicationTitle.ElementType);
         }
 
         /// <summary>
@@ -4377,8 +4845,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Publisher? Publisher
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Publisher>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Publisher.ElementType) as DocumentFormat.OpenXml.Bibliography.Publisher;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Publisher.ElementType);
         }
 
         /// <summary>
@@ -4390,8 +4858,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.RecordingNumber? RecordingNumber
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.RecordingNumber>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.RecordingNumber.ElementType) as DocumentFormat.OpenXml.Bibliography.RecordingNumber;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.RecordingNumber.ElementType);
         }
 
         /// <summary>
@@ -4403,8 +4871,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.ReferenceOrder? ReferenceOrder
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.ReferenceOrder>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.ReferenceOrder.ElementType) as DocumentFormat.OpenXml.Bibliography.ReferenceOrder;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.ReferenceOrder.ElementType);
         }
 
         /// <summary>
@@ -4416,8 +4884,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Reporter? Reporter
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Reporter>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Reporter.ElementType) as DocumentFormat.OpenXml.Bibliography.Reporter;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Reporter.ElementType);
         }
 
         /// <summary>
@@ -4429,8 +4897,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.SourceType? SourceType
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.SourceType>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.SourceType.ElementType) as DocumentFormat.OpenXml.Bibliography.SourceType;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.SourceType.ElementType);
         }
 
         /// <summary>
@@ -4442,8 +4910,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.ShortTitle? ShortTitle
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.ShortTitle>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.ShortTitle.ElementType) as DocumentFormat.OpenXml.Bibliography.ShortTitle;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.ShortTitle.ElementType);
         }
 
         /// <summary>
@@ -4455,8 +4923,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.StandardNumber? StandardNumber
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.StandardNumber>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.StandardNumber.ElementType) as DocumentFormat.OpenXml.Bibliography.StandardNumber;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.StandardNumber.ElementType);
         }
 
         /// <summary>
@@ -4468,8 +4936,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.StateProvince? StateProvince
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.StateProvince>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.StateProvince.ElementType) as DocumentFormat.OpenXml.Bibliography.StateProvince;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.StateProvince.ElementType);
         }
 
         /// <summary>
@@ -4481,8 +4949,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Station? Station
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Station>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Station.ElementType) as DocumentFormat.OpenXml.Bibliography.Station;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Station.ElementType);
         }
 
         /// <summary>
@@ -4494,8 +4962,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Tag? Tag
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Tag>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Tag.ElementType) as DocumentFormat.OpenXml.Bibliography.Tag;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Tag.ElementType);
         }
 
         /// <summary>
@@ -4507,8 +4975,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Theater? Theater
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Theater>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Theater.ElementType) as DocumentFormat.OpenXml.Bibliography.Theater;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Theater.ElementType);
         }
 
         /// <summary>
@@ -4520,8 +4988,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.ThesisType? ThesisType
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.ThesisType>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.ThesisType.ElementType) as DocumentFormat.OpenXml.Bibliography.ThesisType;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.ThesisType.ElementType);
         }
 
         /// <summary>
@@ -4533,8 +5001,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Title? Title
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Title>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Title.ElementType) as DocumentFormat.OpenXml.Bibliography.Title;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Title.ElementType);
         }
 
         /// <summary>
@@ -4546,8 +5014,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.PatentType? PatentType
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.PatentType>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.PatentType.ElementType) as DocumentFormat.OpenXml.Bibliography.PatentType;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.PatentType.ElementType);
         }
 
         /// <summary>
@@ -4559,8 +5027,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.UrlString? UrlString
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.UrlString>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.UrlString.ElementType) as DocumentFormat.OpenXml.Bibliography.UrlString;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.UrlString.ElementType);
         }
 
         /// <summary>
@@ -4572,8 +5040,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Version? Version
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Version>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Version.ElementType) as DocumentFormat.OpenXml.Bibliography.Version;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Version.ElementType);
         }
 
         /// <summary>
@@ -4585,8 +5053,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Volume? Volume
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Volume>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Volume.ElementType) as DocumentFormat.OpenXml.Bibliography.Volume;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Volume.ElementType);
         }
 
         /// <summary>
@@ -4598,8 +5066,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.Year? Year
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Year>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.Year.ElementType) as DocumentFormat.OpenXml.Bibliography.Year;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.Year.ElementType);
         }
 
         /// <summary>
@@ -4611,8 +5079,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// </remarks>
         public DocumentFormat.OpenXml.Bibliography.YearAccessed? YearAccessed
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.YearAccessed>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Bibliography.YearAccessed.ElementType) as DocumentFormat.OpenXml.Bibliography.YearAccessed;
+            set => SetElement(value, DocumentFormat.OpenXml.Bibliography.YearAccessed.ElementType);
         }
 
         /// <inheritdoc/>

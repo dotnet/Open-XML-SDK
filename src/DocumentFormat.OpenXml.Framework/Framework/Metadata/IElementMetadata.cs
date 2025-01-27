@@ -7,7 +7,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata;
 
 internal interface IElementMetadata
 {
-    Type Type { get; }
+    OpenXmlSchemaType Type { get; }
 
     ReadOnlyArray<AttributeMetadata> Attributes { get; }
 
@@ -18,8 +18,6 @@ internal interface IElementMetadata
     ReadOnlyArray<IValidator> Constraints { get; }
 
     CompiledParticle? Particle { get; }
-
-    OpenXmlQualifiedName QName { get; }
 
     ReadOnlyArray<IValidator> Validators { get; }
 }

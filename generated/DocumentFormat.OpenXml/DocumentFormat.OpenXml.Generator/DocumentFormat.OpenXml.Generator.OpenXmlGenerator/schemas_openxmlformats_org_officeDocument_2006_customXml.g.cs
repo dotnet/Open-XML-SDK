@@ -29,6 +29,12 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
     /// </remarks>
     public partial class DataStoreItem : OpenXmlPartRootElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/customXml", "datastoreItem");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/customXml", "CT_DatastoreItem");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DataStoreItem class.
         /// </summary>
@@ -76,7 +82,7 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("ds:datastoreItem");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences>();
             builder.AddElement<DataStoreItem>()
                 .AddAttribute("ds:itemID", a => a.ItemId, aBuilder =>
@@ -86,7 +92,7 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences.ElementType, 0, 1)
             };
         }
 
@@ -99,8 +105,8 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         /// </remarks>
         public DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences? SchemaReferences
         {
-            get => GetElement<DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences.ElementType) as DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences;
+            set => SetElement(value, DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences.ElementType);
         }
 
         /// <inheritdoc/>
@@ -145,6 +151,12 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
     /// </summary>
     public partial class SchemaReference : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/customXml", "schemaRef");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/customXml", "CT_DatastoreSchemaRef");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SchemaReference class.
         /// </summary>
@@ -168,7 +180,7 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("ds:schemaRef");
+            builder.SetSchema(ElementType);
             builder.AddElement<SchemaReference>()
                 .AddAttribute("ds:uri", a => a.Uri, aBuilder =>
                 {
@@ -193,6 +205,12 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
     /// </remarks>
     public partial class SchemaReferences : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/officeDocument/2006/customXml", "schemaRefs");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/officeDocument/2006/customXml", "CT_DatastoreSchemaRefs");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SchemaReferences class.
         /// </summary>
@@ -227,11 +245,11 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("ds:schemaRefs");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReference>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReference), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReference.ElementType, 0, 0)
             };
         }
 

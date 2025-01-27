@@ -30,6 +30,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class NumberingFormat : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "numFmt");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_NumFmt");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NumberingFormat class.
         /// </summary>
@@ -60,7 +66,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:numFmt");
+            builder.SetSchema(ElementType);
             builder.AddElement<NumberingFormat>()
                 .AddAttribute("formatCode", a => a.FormatCode, aBuilder =>
                 {
@@ -99,6 +105,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class ChartShapeProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "spPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ChartShapeProperties");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ChartShapeProperties class.
         /// </summary>
@@ -143,7 +155,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:spPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
@@ -165,35 +177,35 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Transform2D.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.CustomGeometry.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.PresetGeometry.ElementType, 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.NoFill.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.GradientFill.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.BlipFill.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.PatternFill.ElementType, 1, 1)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Outline.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.EffectList.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Scene3DType.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Shape3DType.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -206,8 +218,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Transform2D.ElementType) as DocumentFormat.OpenXml.Drawing.Transform2D;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Transform2D.ElementType);
         }
 
         /// <inheritdoc/>
@@ -229,6 +241,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class TextProperties : TextBodyType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "txPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextBody");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TextProperties class.
         /// </summary>
@@ -263,12 +281,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:txPr");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ListStyle), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Paragraph), 1, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.BodyProperties.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ListStyle.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Paragraph.ElementType, 1, 0)
             };
         }
 
@@ -291,6 +309,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class RichText : TextBodyType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "rich");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextBody");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RichText class.
         /// </summary>
@@ -325,12 +349,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:rich");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ListStyle), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Paragraph), 1, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.BodyProperties.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ListStyle.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Paragraph.ElementType, 1, 0)
             };
         }
 
@@ -353,6 +377,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public abstract partial class TextBodyType : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextBody");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TextBodyType class.
         /// </summary>
@@ -401,8 +431,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.BodyProperties? BodyProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.BodyProperties.ElementType) as DocumentFormat.OpenXml.Drawing.BodyProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.BodyProperties.ElementType);
         }
 
         /// <summary>
@@ -414,8 +444,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ListStyle? ListStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.ListStyle.ElementType) as DocumentFormat.OpenXml.Drawing.ListStyle;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.ListStyle.ElementType);
         }
     }
 
@@ -426,6 +456,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class DataLabelPosition : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "dLblPos");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_DLblPos");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DataLabelPosition class.
         /// </summary>
@@ -446,7 +482,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:dLblPos");
+            builder.SetSchema(ElementType);
             builder.AddElement<DataLabelPosition>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -465,6 +501,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class ShowLegendKey : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "showLegendKey");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShowLegendKey class.
         /// </summary>
@@ -475,7 +517,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:showLegendKey");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -489,6 +531,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class ShowValue : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "showVal");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShowValue class.
         /// </summary>
@@ -499,7 +547,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:showVal");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -513,6 +561,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class ShowCategoryName : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "showCatName");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShowCategoryName class.
         /// </summary>
@@ -523,7 +577,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:showCatName");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -537,6 +591,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class ShowSeriesName : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "showSerName");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShowSeriesName class.
         /// </summary>
@@ -547,7 +607,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:showSerName");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -561,6 +621,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class ShowPercent : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "showPercent");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShowPercent class.
         /// </summary>
@@ -571,7 +637,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:showPercent");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -585,6 +651,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class ShowBubbleSize : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "showBubbleSize");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShowBubbleSize class.
         /// </summary>
@@ -595,7 +667,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:showBubbleSize");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -609,6 +681,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class ShowLeaderLines : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "showLeaderLines");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShowLeaderLines class.
         /// </summary>
@@ -619,7 +697,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:showLeaderLines");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -633,6 +711,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class VaryColors : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "varyColors");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the VaryColors class.
         /// </summary>
@@ -643,7 +727,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:varyColors");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -657,6 +741,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Wireframe : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "wireframe");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Wireframe class.
         /// </summary>
@@ -667,7 +757,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:wireframe");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -681,6 +771,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Delete : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "delete");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Delete class.
         /// </summary>
@@ -691,7 +787,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:delete");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -705,6 +801,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Overlay : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "overlay");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Overlay class.
         /// </summary>
@@ -715,7 +817,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:overlay");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -729,6 +831,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class RightAngleAxes : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "rAngAx");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RightAngleAxes class.
         /// </summary>
@@ -739,7 +847,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:rAngAx");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -753,6 +861,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class ShowHorizontalBorder : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "showHorzBorder");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShowHorizontalBorder class.
         /// </summary>
@@ -763,7 +877,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:showHorzBorder");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -777,6 +891,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class ShowVerticalBorder : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "showVertBorder");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShowVerticalBorder class.
         /// </summary>
@@ -787,7 +907,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:showVertBorder");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -801,6 +921,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class ShowOutlineBorder : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "showOutline");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShowOutlineBorder class.
         /// </summary>
@@ -811,7 +937,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:showOutline");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -825,6 +951,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class ShowKeys : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "showKeys");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShowKeys class.
         /// </summary>
@@ -835,7 +967,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:showKeys");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -849,6 +981,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class InvertIfNegative : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "invertIfNegative");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the InvertIfNegative class.
         /// </summary>
@@ -859,7 +997,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:invertIfNegative");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -873,6 +1011,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Bubble3D : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "bubble3D");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Bubble3D class.
         /// </summary>
@@ -883,7 +1027,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:bubble3D");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -897,6 +1041,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class DisplayRSquaredValue : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "dispRSqr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DisplayRSquaredValue class.
         /// </summary>
@@ -907,7 +1057,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:dispRSqr");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -921,6 +1071,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class DisplayEquation : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "dispEq");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DisplayEquation class.
         /// </summary>
@@ -931,7 +1087,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:dispEq");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -945,6 +1101,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class NoEndCap : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "noEndCap");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NoEndCap class.
         /// </summary>
@@ -955,7 +1117,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:noEndCap");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -969,6 +1131,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class ApplyToFront : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "applyToFront");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ApplyToFront class.
         /// </summary>
@@ -979,7 +1147,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:applyToFront");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -993,6 +1161,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class ApplyToSides : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "applyToSides");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ApplyToSides class.
         /// </summary>
@@ -1003,7 +1177,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:applyToSides");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1017,6 +1191,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class ApplyToEnd : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "applyToEnd");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ApplyToEnd class.
         /// </summary>
@@ -1027,7 +1207,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:applyToEnd");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1041,6 +1221,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class ChartObject : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "chartObject");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ChartObject class.
         /// </summary>
@@ -1051,7 +1237,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:chartObject");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1065,6 +1251,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Data : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "data");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Data class.
         /// </summary>
@@ -1075,7 +1267,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:data");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1089,6 +1281,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Formatting : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "formatting");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Formatting class.
         /// </summary>
@@ -1099,7 +1297,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:formatting");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1113,6 +1311,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Selection : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "selection");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Selection class.
         /// </summary>
@@ -1123,7 +1327,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:selection");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1137,6 +1341,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class UserInterface : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "userInterface");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the UserInterface class.
         /// </summary>
@@ -1147,7 +1357,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:userInterface");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1161,6 +1371,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class AutoUpdate : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "autoUpdate");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AutoUpdate class.
         /// </summary>
@@ -1171,7 +1387,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:autoUpdate");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1185,6 +1401,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class ShowMarker : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "marker");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShowMarker class.
         /// </summary>
@@ -1195,7 +1417,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:marker");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1209,6 +1431,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Smooth : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "smooth");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Smooth class.
         /// </summary>
@@ -1219,7 +1447,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:smooth");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1233,6 +1461,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class ShowNegativeBubbles : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "showNegBubbles");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShowNegativeBubbles class.
         /// </summary>
@@ -1243,7 +1477,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:showNegBubbles");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1257,6 +1491,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class AutoLabeled : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "auto");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AutoLabeled class.
         /// </summary>
@@ -1267,7 +1507,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:auto");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1281,6 +1521,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class NoMultiLevelLabels : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "noMultiLvlLbl");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NoMultiLevelLabels class.
         /// </summary>
@@ -1291,7 +1537,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:noMultiLvlLbl");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1305,6 +1551,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Date1904 : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "date1904");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Date1904 class.
         /// </summary>
@@ -1315,7 +1567,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:date1904");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1329,6 +1581,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class RoundedCorners : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "roundedCorners");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RoundedCorners class.
         /// </summary>
@@ -1339,7 +1597,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:roundedCorners");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1353,6 +1611,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class AutoTitleDeleted : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "autoTitleDeleted");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AutoTitleDeleted class.
         /// </summary>
@@ -1363,7 +1627,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:autoTitleDeleted");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1377,6 +1641,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class PlotVisibleOnly : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "plotVisOnly");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PlotVisibleOnly class.
         /// </summary>
@@ -1387,7 +1657,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:plotVisOnly");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1401,6 +1671,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class ShowDataLabelsOverMaximum : BooleanType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "showDLblsOverMax");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShowDataLabelsOverMaximum class.
         /// </summary>
@@ -1411,7 +1687,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:showDLblsOverMax");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1425,6 +1701,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public abstract partial class BooleanType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BooleanType class.
         /// </summary>
@@ -1457,6 +1739,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Separator : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "separator");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Separator class.
         /// </summary>
@@ -1480,7 +1768,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:separator");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1494,6 +1782,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class TrendlineName : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "name");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TrendlineName class.
         /// </summary>
@@ -1517,7 +1811,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:name");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1531,6 +1825,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Formula : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "f");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Formula class.
         /// </summary>
@@ -1554,7 +1854,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:f");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1575,6 +1875,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class Layout : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "layout");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Layout");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Layout class.
         /// </summary>
@@ -1609,13 +1915,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:layout");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ManualLayout>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ManualLayout), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ManualLayout.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -1628,8 +1934,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ManualLayout? ManualLayout
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ManualLayout>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ManualLayout.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ManualLayout;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ManualLayout.ElementType);
         }
 
         /// <summary>
@@ -1641,8 +1947,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -1664,6 +1970,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class ChartText : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "tx");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Tx");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ChartText class.
         /// </summary>
@@ -1698,7 +2010,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:tx");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RichText>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringLiteral>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringReference>();
@@ -1706,9 +2018,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RichText), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringLiteral), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.StringReference.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.RichText.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.StringLiteral.ElementType, 1, 1)
                 }
             };
         }
@@ -1722,8 +2034,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.StringReference? StringReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringReference>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.StringReference.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.StringReference;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.StringReference.ElementType);
         }
 
         /// <summary>
@@ -1735,8 +2047,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.RichText? RichText
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.RichText>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.RichText.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.RichText;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.RichText.ElementType);
         }
 
         /// <summary>
@@ -1748,8 +2060,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.StringLiteral? StringLiteral
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringLiteral>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.StringLiteral.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.StringLiteral;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.StringLiteral.ElementType);
         }
 
         /// <inheritdoc/>
@@ -1769,6 +2081,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class LeaderLines : ChartLinesType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "leaderLines");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ChartLines");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LeaderLines class.
         /// </summary>
@@ -1803,10 +2121,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:leaderLines");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1)
             };
         }
 
@@ -1827,6 +2145,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class DropLines : ChartLinesType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "dropLines");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ChartLines");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DropLines class.
         /// </summary>
@@ -1861,10 +2185,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:dropLines");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1)
             };
         }
 
@@ -1885,6 +2209,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class MajorGridlines : ChartLinesType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "majorGridlines");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ChartLines");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MajorGridlines class.
         /// </summary>
@@ -1919,10 +2249,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:majorGridlines");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1)
             };
         }
 
@@ -1943,6 +2273,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class MinorGridlines : ChartLinesType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "minorGridlines");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ChartLines");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MinorGridlines class.
         /// </summary>
@@ -1977,10 +2313,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:minorGridlines");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1)
             };
         }
 
@@ -2001,6 +2337,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class SeriesLines : ChartLinesType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "serLines");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ChartLines");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SeriesLines class.
         /// </summary>
@@ -2035,10 +2377,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:serLines");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1)
             };
         }
 
@@ -2059,6 +2401,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class HighLowLines : ChartLinesType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "hiLowLines");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ChartLines");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the HighLowLines class.
         /// </summary>
@@ -2093,10 +2441,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:hiLowLines");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1)
             };
         }
 
@@ -2117,6 +2465,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public abstract partial class ChartLinesType : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ChartLines");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ChartLinesType class.
         /// </summary>
@@ -2163,8 +2517,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType);
         }
     }
 
@@ -2175,6 +2529,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Index : UnsignedIntegerType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "idx");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_UnsignedInt");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Index class.
         /// </summary>
@@ -2185,7 +2545,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:idx");
+            builder.SetSchema(ElementType);
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("c:val"), true, double.NegativeInfinity, true, 2147483647, true));
         }
 
@@ -2200,6 +2560,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Order : UnsignedIntegerType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "order");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_UnsignedInt");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Order class.
         /// </summary>
@@ -2210,7 +2576,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:order");
+            builder.SetSchema(ElementType);
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("c:val"), true, double.NegativeInfinity, true, 2147483647, true));
         }
 
@@ -2225,6 +2591,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class AxisId : UnsignedIntegerType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "axId");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_UnsignedInt");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AxisId class.
         /// </summary>
@@ -2235,7 +2607,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:axId");
+            builder.SetSchema(ElementType);
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("c:val"), true, double.NegativeInfinity, true, 2147483647, true));
         }
 
@@ -2250,6 +2622,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class CrossingAxis : UnsignedIntegerType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "crossAx");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_UnsignedInt");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CrossingAxis class.
         /// </summary>
@@ -2260,7 +2638,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:crossAx");
+            builder.SetSchema(ElementType);
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("c:val"), true, double.NegativeInfinity, true, 2147483647, true));
         }
 
@@ -2275,6 +2653,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class PointCount : UnsignedIntegerType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ptCount");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_UnsignedInt");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PointCount class.
         /// </summary>
@@ -2285,7 +2669,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ptCount");
+            builder.SetSchema(ElementType);
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("c:val"), true, double.NegativeInfinity, true, 2147483647, true));
         }
 
@@ -2300,6 +2684,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class SecondPiePoint : UnsignedIntegerType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "secondPiePt");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_UnsignedInt");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SecondPiePoint class.
         /// </summary>
@@ -2310,7 +2700,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:secondPiePt");
+            builder.SetSchema(ElementType);
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("c:val"), true, double.NegativeInfinity, true, 2147483647, true));
         }
 
@@ -2325,6 +2715,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Explosion : UnsignedIntegerType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "explosion");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_UnsignedInt");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Explosion class.
         /// </summary>
@@ -2335,7 +2731,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:explosion");
+            builder.SetSchema(ElementType);
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("c:val"), true, double.NegativeInfinity, true, 2147483647, true));
         }
 
@@ -2350,6 +2746,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class FormatId : UnsignedIntegerType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "fmtId");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_UnsignedInt");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FormatId class.
         /// </summary>
@@ -2360,7 +2762,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:fmtId");
+            builder.SetSchema(ElementType);
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("c:val"), true, double.NegativeInfinity, true, 2147483647, true));
         }
 
@@ -2375,6 +2777,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public abstract partial class UnsignedIntegerType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_UnsignedInt");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the UnsignedIntegerType class.
         /// </summary>
@@ -2417,6 +2825,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class SeriesText : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "tx");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_SerTx");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SeriesText class.
         /// </summary>
@@ -2451,15 +2865,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:tx");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumericValue>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumericValue), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.StringReference.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumericValue.ElementType, 1, 1)
                 }
             };
         }
@@ -2473,8 +2887,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.StringReference? StringReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringReference>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.StringReference.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.StringReference;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.StringReference.ElementType);
         }
 
         /// <summary>
@@ -2486,8 +2900,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NumericValue? NumericValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumericValue>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.NumericValue.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.NumericValue;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.NumericValue.ElementType);
         }
 
         /// <inheritdoc/>
@@ -2501,6 +2915,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Grouping : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "grouping");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Grouping");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Grouping class.
         /// </summary>
@@ -2521,7 +2941,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:grouping");
+            builder.SetSchema(ElementType);
             builder.AddElement<Grouping>()
                 .AddAttribute("val", a => a.Val);
         }
@@ -2556,6 +2976,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class LineChartSeries : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ser");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_LineSer");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LineChartSeries class.
         /// </summary>
@@ -2590,7 +3016,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ser");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Smooth>();
@@ -2611,22 +3037,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SeriesText.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Marker), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataPoint), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Trendline), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorBars), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Smooth), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LineSerExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Marker.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataPoint.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Trendline.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ErrorBars.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Values.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Smooth.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.LineSerExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -2639,8 +3065,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Index;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType);
         }
 
         /// <summary>
@@ -2652,8 +3078,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Order;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType);
         }
 
         /// <summary>
@@ -2665,8 +3091,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.SeriesText.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.SeriesText;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.SeriesText.ElementType);
         }
 
         /// <summary>
@@ -2678,8 +3104,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -2691,8 +3117,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Marker? Marker
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Marker.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Marker;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Marker.ElementType);
         }
 
         /// <summary>
@@ -2704,8 +3130,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PictureOptions;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType);
         }
 
         /// <inheritdoc/>
@@ -2740,6 +3166,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class DataLabels : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "dLbls");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_DLbls");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DataLabels class.
         /// </summary>
@@ -2774,7 +3206,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:dLbls");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
@@ -2793,10 +3225,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Separator>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabel), 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataLabel.ElementType, 0, 0),
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Delete), 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Delete.ElementType, 1, 1),
                     new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                     {
                         new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -2805,25 +3237,25 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                             {
                                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                 {
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabelPosition), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowLegendKey), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowValue), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowCategoryName), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowSeriesName), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowPercent), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowBubbleSize), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Separator), 0, 1)
+                                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat.ElementType, 0, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType, 0, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataLabelPosition.ElementType, 0, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShowLegendKey.ElementType, 0, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShowValue.ElementType, 0, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShowCategoryName.ElementType, 0, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShowSeriesName.ElementType, 0, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShowPercent.ElementType, 0, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShowBubbleSize.ElementType, 0, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Separator.ElementType, 0, 1)
                                 }
                             },
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowLeaderLines), 0, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LeaderLines), 0, 1)
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShowLeaderLines.ElementType, 0, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.LeaderLines.ElementType, 0, 1)
                         }
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DLblsExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DLblsExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -2838,6 +3270,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class BarDirection : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "barDir");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_BarDir");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BarDirection class.
         /// </summary>
@@ -2858,7 +3296,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:barDir");
+            builder.SetSchema(ElementType);
             builder.AddElement<BarDirection>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -2877,6 +3315,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class BarGrouping : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "grouping");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_BarGrouping");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BarGrouping class.
         /// </summary>
@@ -2897,7 +3341,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:grouping");
+            builder.SetSchema(ElementType);
             builder.AddElement<BarGrouping>()
                 .AddAttribute("val", a => a.Val);
         }
@@ -2932,6 +3376,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class BarChartSeries : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ser");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_BarSer");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BarChartSeries class.
         /// </summary>
@@ -2966,7 +3416,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ser");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarSerExtensionList>();
@@ -2987,22 +3437,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SeriesText.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataPoint), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Trendline), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorBars), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Shape), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarSerExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataPoint.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Trendline.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ErrorBars.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Values.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Shape.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BarSerExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -3015,8 +3465,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Index;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType);
         }
 
         /// <summary>
@@ -3028,8 +3478,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Order;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType);
         }
 
         /// <summary>
@@ -3041,8 +3491,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.SeriesText.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.SeriesText;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.SeriesText.ElementType);
         }
 
         /// <summary>
@@ -3054,8 +3504,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -3067,8 +3517,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative? InvertIfNegative
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative.ElementType);
         }
 
         /// <summary>
@@ -3080,8 +3530,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PictureOptions;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType);
         }
 
         /// <inheritdoc/>
@@ -3112,6 +3562,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class AreaChartSeries : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ser");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_AreaSer");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AreaChartSeries class.
         /// </summary>
@@ -3146,7 +3602,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ser");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
@@ -3165,20 +3621,20 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SeriesText.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataPoint), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Trendline), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorBars), 0, 2),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataPoint.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Trendline.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ErrorBars.ElementType, 0, 2),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Values.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -3191,8 +3647,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Index;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType);
         }
 
         /// <summary>
@@ -3204,8 +3660,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Order;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType);
         }
 
         /// <summary>
@@ -3217,8 +3673,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.SeriesText.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.SeriesText;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.SeriesText.ElementType);
         }
 
         /// <summary>
@@ -3230,8 +3686,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -3243,8 +3699,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PictureOptions;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType);
         }
 
         /// <inheritdoc/>
@@ -3274,6 +3730,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class PieChartSeries : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ser");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_PieSer");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PieChartSeries class.
         /// </summary>
@@ -3308,7 +3770,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ser");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
@@ -3326,19 +3788,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SeriesText.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Explosion), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataPoint), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PieSerExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Explosion.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataPoint.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Values.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PieSerExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -3351,8 +3813,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Index;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType);
         }
 
         /// <summary>
@@ -3364,8 +3826,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Order;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType);
         }
 
         /// <summary>
@@ -3377,8 +3839,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.SeriesText.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.SeriesText;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.SeriesText.ElementType);
         }
 
         /// <summary>
@@ -3390,8 +3852,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -3403,8 +3865,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PictureOptions;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType);
         }
 
         /// <summary>
@@ -3416,8 +3878,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Explosion? Explosion
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Explosion>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Explosion.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Explosion;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Explosion.ElementType);
         }
 
         /// <inheritdoc/>
@@ -3445,6 +3907,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class SurfaceChartSeries : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ser");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_SurfaceSer");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SurfaceChartSeries class.
         /// </summary>
@@ -3479,7 +3947,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ser");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
@@ -3495,17 +3963,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SeriesText.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Bubble3D), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Values.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Bubble3D.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -3518,8 +3986,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Index;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType);
         }
 
         /// <summary>
@@ -3531,8 +3999,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Order;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType);
         }
 
         /// <summary>
@@ -3544,8 +4012,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.SeriesText.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.SeriesText;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.SeriesText.ElementType);
         }
 
         /// <summary>
@@ -3557,8 +4025,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -3570,8 +4038,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PictureOptions;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType);
         }
 
         /// <summary>
@@ -3583,8 +4051,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData? CategoryAxisData
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData.ElementType);
         }
 
         /// <summary>
@@ -3596,8 +4064,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Values? Values
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Values>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Values.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Values;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Values.ElementType);
         }
 
         /// <summary>
@@ -3609,8 +4077,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Bubble3D? Bubble3D
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Bubble3D.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Bubble3D;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Bubble3D.ElementType);
         }
 
         /// <summary>
@@ -3622,8 +4090,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList? SurfaceSerExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -3643,6 +4111,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class BandFormats : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "bandFmts");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_BandFmts");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BandFormats class.
         /// </summary>
@@ -3677,11 +4151,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:bandFmts");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BandFormat>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BandFormat), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BandFormat.ElementType, 0, 0)
             };
         }
 
@@ -3706,6 +4180,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class Scaling : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "scaling");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Scaling");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Scaling class.
         /// </summary>
@@ -3740,7 +4220,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:scaling");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MaxAxisValue>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MinAxisValue>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
@@ -3748,11 +4228,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Orientation>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LogBase), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Orientation), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MaxAxisValue), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MinAxisValue), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.LogBase.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Orientation.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MaxAxisValue.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MinAxisValue.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -3765,8 +4245,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.LogBase? LogBase
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.LogBase>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.LogBase.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.LogBase;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.LogBase.ElementType);
         }
 
         /// <summary>
@@ -3778,8 +4258,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Orientation? Orientation
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Orientation>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Orientation.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Orientation;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Orientation.ElementType);
         }
 
         /// <summary>
@@ -3791,8 +4271,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MaxAxisValue? MaxAxisValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MaxAxisValue>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.MaxAxisValue.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.MaxAxisValue;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.MaxAxisValue.ElementType);
         }
 
         /// <summary>
@@ -3804,8 +4284,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MinAxisValue? MinAxisValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinAxisValue>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.MinAxisValue.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.MinAxisValue;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.MinAxisValue.ElementType);
         }
 
         /// <summary>
@@ -3817,8 +4297,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -3832,6 +4312,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class AxisPosition : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "axPos");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_AxPos");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AxisPosition class.
         /// </summary>
@@ -3852,7 +4338,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:axPos");
+            builder.SetSchema(ElementType);
             builder.AddElement<AxisPosition>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -3882,6 +4368,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class Title : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "title");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Title");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Title class.
         /// </summary>
@@ -3916,7 +4408,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:title");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Overlay>();
@@ -3925,12 +4417,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartText>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartText), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Layout), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Overlay), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartText.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Layout.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Overlay.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -3943,8 +4435,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartText? ChartText
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartText>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartText.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartText;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartText.ElementType);
         }
 
         /// <summary>
@@ -3956,8 +4448,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Layout? Layout
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Layout.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Layout;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Layout.ElementType);
         }
 
         /// <summary>
@@ -3969,8 +4461,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Overlay? Overlay
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Overlay>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Overlay.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Overlay;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Overlay.ElementType);
         }
 
         /// <summary>
@@ -3982,8 +4474,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -3995,8 +4487,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.TextProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType);
         }
 
         /// <summary>
@@ -4008,8 +4500,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -4023,6 +4515,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class MajorTickMark : TickMarkType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "majorTickMark");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_TickMark");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MajorTickMark class.
         /// </summary>
@@ -4033,7 +4531,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:majorTickMark");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -4047,6 +4545,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class MinorTickMark : TickMarkType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "minorTickMark");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_TickMark");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MinorTickMark class.
         /// </summary>
@@ -4057,7 +4561,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:minorTickMark");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -4071,6 +4575,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public abstract partial class TickMarkType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_TickMark");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TickMarkType class.
         /// </summary>
@@ -4103,6 +4613,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class TickLabelPosition : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "tickLblPos");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_TickLblPos");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TickLabelPosition class.
         /// </summary>
@@ -4123,7 +4639,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:tickLblPos");
+            builder.SetSchema(ElementType);
             builder.AddElement<TickLabelPosition>()
                 .AddAttribute("val", a => a.Val);
         }
@@ -4139,6 +4655,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Crosses : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "crosses");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Crosses");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Crosses class.
         /// </summary>
@@ -4159,7 +4681,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:crosses");
+            builder.SetSchema(ElementType);
             builder.AddElement<Crosses>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -4178,6 +4700,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class CrossesAt : DoubleType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "crossesAt");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Double");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CrossesAt class.
         /// </summary>
@@ -4188,7 +4716,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:crossesAt");
+            builder.SetSchema(ElementType);
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("c:val"), false, new string[] { "INF", "-INF", "NaN" }));
         }
 
@@ -4203,6 +4731,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Left : DoubleType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "x");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Double");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Left class.
         /// </summary>
@@ -4213,7 +4747,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:x");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -4227,6 +4761,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Top : DoubleType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "y");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Double");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Top class.
         /// </summary>
@@ -4237,7 +4777,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:y");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -4251,6 +4791,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Width : DoubleType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "w");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Double");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Width class.
         /// </summary>
@@ -4261,7 +4807,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:w");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -4275,6 +4821,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Height : DoubleType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "h");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Double");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Height class.
         /// </summary>
@@ -4285,7 +4837,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:h");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -4299,6 +4851,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Forward : DoubleType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "forward");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Double");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Forward class.
         /// </summary>
@@ -4309,7 +4867,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:forward");
+            builder.SetSchema(ElementType);
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("c:val"), false, new string[] { "INF", "-INF", "NaN" }));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("c:val"), true, 0, true, double.PositiveInfinity, true));
         }
@@ -4325,6 +4883,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Backward : DoubleType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "backward");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Double");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Backward class.
         /// </summary>
@@ -4335,7 +4899,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:backward");
+            builder.SetSchema(ElementType);
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("c:val"), true, 0, true, double.PositiveInfinity, true));
         }
 
@@ -4350,6 +4914,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Intercept : DoubleType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "intercept");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Double");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Intercept class.
         /// </summary>
@@ -4360,7 +4930,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:intercept");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -4374,6 +4944,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class ErrorBarValue : DoubleType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "val");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Double");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ErrorBarValue class.
         /// </summary>
@@ -4384,7 +4960,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:val");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -4398,6 +4974,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class SplitPosition : DoubleType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "splitPos");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Double");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SplitPosition class.
         /// </summary>
@@ -4408,7 +4990,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:splitPos");
+            builder.SetSchema(ElementType);
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("c:val"), false, new string[] { "INF", "-INF", "NaN" }));
         }
 
@@ -4423,6 +5005,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class CustomDisplayUnit : DoubleType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "custUnit");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Double");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CustomDisplayUnit class.
         /// </summary>
@@ -4433,7 +5021,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:custUnit");
+            builder.SetSchema(ElementType);
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("c:val"), false, new string[] { "INF", "-INF", "NaN" }));
         }
 
@@ -4448,6 +5036,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class MaxAxisValue : DoubleType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "max");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Double");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MaxAxisValue class.
         /// </summary>
@@ -4458,7 +5052,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:max");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -4472,6 +5066,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class MinAxisValue : DoubleType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "min");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Double");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MinAxisValue class.
         /// </summary>
@@ -4482,7 +5082,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:min");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -4496,6 +5096,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public abstract partial class DoubleType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Double");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DoubleType class.
         /// </summary>
@@ -4551,6 +5157,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class ChartSpace : OpenXmlPartRootElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "chartSpace");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ChartSpace");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ChartSpace class.
         /// </summary>
@@ -4585,7 +5197,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:chartSpace");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ColorMapOverride>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
@@ -4603,24 +5215,24 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.Style>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Date1904), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.EditingLanguage), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RoundedCorners), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Date1904.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.EditingLanguage.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.RoundedCorners.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.Style), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Style), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Office2010.Drawing.Charts.Style.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Style.ElementType, 1, 1)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ColorMapOverride), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PivotSource), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Protection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Chart), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExternalData), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PrintSettings), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.UserShapesReference), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ColorMapOverride.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PivotSource.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Protection.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Chart.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExternalData.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PrintSettings.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.UserShapesReference.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -4633,8 +5245,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Date1904? Date1904
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Date1904>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Date1904.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Date1904;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Date1904.ElementType);
         }
 
         /// <summary>
@@ -4646,8 +5258,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.EditingLanguage? EditingLanguage
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.EditingLanguage>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.EditingLanguage.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.EditingLanguage;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.EditingLanguage.ElementType);
         }
 
         /// <summary>
@@ -4659,8 +5271,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.RoundedCorners? RoundedCorners
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.RoundedCorners>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.RoundedCorners.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.RoundedCorners;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.RoundedCorners.ElementType);
         }
 
         /// <inheritdoc/>
@@ -4712,6 +5324,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class UserShapes : OpenXmlPartRootElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "userShapes");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chartDrawing", "CT_Drawing");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the UserShapes class.
         /// </summary>
@@ -4746,7 +5364,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:userShapes");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ChartDrawing.AbsoluteAnchorSize>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ChartDrawing.RelativeAnchorSize>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -4755,8 +5373,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.RelativeAnchorSize), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.AbsoluteAnchorSize), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.ChartDrawing.RelativeAnchorSize.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.ChartDrawing.AbsoluteAnchorSize.ElementType, 1, 1)
                     }
                 }
             };
@@ -4804,6 +5422,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class ChartReference : RelationshipIdType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "chart");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_RelId");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ChartReference class.
         /// </summary>
@@ -4814,7 +5438,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:chart");
+            builder.SetSchema(ElementType);
             builder.AddConstraint(new RelationshipExistConstraint(builder.CreateQName("r:id")));
         }
 
@@ -4829,6 +5453,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class LegacyDrawingHeaderFooter : RelationshipIdType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "legacyDrawingHF");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_RelId");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LegacyDrawingHeaderFooter class.
         /// </summary>
@@ -4839,7 +5469,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:legacyDrawingHF");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -4853,6 +5483,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class UserShapesReference : RelationshipIdType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "userShapes");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_RelId");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the UserShapesReference class.
         /// </summary>
@@ -4863,7 +5499,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:userShapes");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -4877,6 +5513,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public abstract partial class RelationshipIdType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_RelId");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RelationshipIdType class.
         /// </summary>
@@ -4915,6 +5557,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Extension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Extension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Extension class.
         /// </summary>
@@ -4959,7 +5607,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddElement<Extension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -4982,6 +5630,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class NumericValue : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "v");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ST_Xstring");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NumericValue class.
         /// </summary>
@@ -5005,7 +5659,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:v");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -5019,6 +5673,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class FormatCode : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "formatCode");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ST_Xstring");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FormatCode class.
         /// </summary>
@@ -5042,7 +5702,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:formatCode");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -5056,6 +5716,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class OddHeader : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "oddHeader");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ST_Xstring");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OddHeader class.
         /// </summary>
@@ -5079,7 +5745,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:oddHeader");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -5093,6 +5759,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class OddFooter : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "oddFooter");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ST_Xstring");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OddFooter class.
         /// </summary>
@@ -5116,7 +5788,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:oddFooter");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -5130,6 +5802,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class EvenHeader : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "evenHeader");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ST_Xstring");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the EvenHeader class.
         /// </summary>
@@ -5153,7 +5831,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:evenHeader");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -5167,6 +5845,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class EvenFooter : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "evenFooter");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ST_Xstring");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the EvenFooter class.
         /// </summary>
@@ -5190,7 +5874,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:evenFooter");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -5204,6 +5888,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class FirstHeader : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "firstHeader");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ST_Xstring");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FirstHeader class.
         /// </summary>
@@ -5227,7 +5917,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:firstHeader");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -5241,6 +5931,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class FirstFooter : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "firstFooter");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ST_Xstring");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FirstFooter class.
         /// </summary>
@@ -5264,7 +5960,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:firstFooter");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -5278,6 +5974,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class PivotTableName : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "name");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ST_Xstring");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PivotTableName class.
         /// </summary>
@@ -5301,7 +6003,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:name");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -5321,6 +6023,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class NumericPoint : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "pt");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_NumVal");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NumericPoint class.
         /// </summary>
@@ -5375,7 +6083,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:pt");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumericValue>();
             builder.AddElement<NumericPoint>()
                 .AddAttribute("idx", a => a.Index, aBuilder =>
@@ -5385,7 +6093,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 .AddAttribute("formatCode", a => a.FormatCode);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumericValue), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumericValue.ElementType, 1, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("c:idx"), true, double.NegativeInfinity, true, 2147483647, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("c:idx"), true, 0, true, 2147483647, true));
@@ -5400,8 +6108,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NumericValue? NumericValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumericValue>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.NumericValue.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.NumericValue;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.NumericValue.ElementType);
         }
 
         /// <inheritdoc/>
@@ -5421,6 +6129,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
         /// </summary>
@@ -5455,11 +6169,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Extension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Extension.ElementType, 0, 0)
             };
         }
 
@@ -5482,6 +6196,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class NumberReference : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "numRef");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_NumRef");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NumberReference class.
         /// </summary>
@@ -5516,15 +6236,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:numRef");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberingCache>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumRefExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Formula>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Formula), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberingCache), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumRefExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Formula.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumberingCache.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumRefExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -5537,8 +6257,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Formula? Formula
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Formula>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Formula.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Formula;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Formula.ElementType);
         }
 
         /// <summary>
@@ -5550,8 +6270,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NumberingCache? NumberingCache
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberingCache>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.NumberingCache.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.NumberingCache;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.NumberingCache.ElementType);
         }
 
         /// <summary>
@@ -5563,8 +6283,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NumRefExtensionList? NumRefExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumRefExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.NumRefExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.NumRefExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.NumRefExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -5587,6 +6307,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class NumberLiteral : NumberDataType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "numLit");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_NumData");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NumberLiteral class.
         /// </summary>
@@ -5621,13 +6347,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:numLit");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.FormatCode), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumericPoint), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.FormatCode.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PointCount.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumericPoint.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -5651,6 +6377,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class NumberingCache : NumberDataType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "numCache");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_NumData");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NumberingCache class.
         /// </summary>
@@ -5685,13 +6417,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:numCache");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.FormatCode), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumericPoint), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.FormatCode.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PointCount.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumericPoint.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -5715,6 +6447,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public abstract partial class NumberDataType : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_NumData");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NumberDataType class.
         /// </summary>
@@ -5764,8 +6502,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.FormatCode? FormatCode
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.FormatCode>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.FormatCode.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.FormatCode;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.FormatCode.ElementType);
         }
 
         /// <summary>
@@ -5777,8 +6515,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PointCount? PointCount
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PointCount.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PointCount;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PointCount.ElementType);
         }
     }
 
@@ -5795,6 +6533,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class Level : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "lvl");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Lvl");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Level class.
         /// </summary>
@@ -5829,11 +6573,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:lvl");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringPoint>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringPoint), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.StringPoint.ElementType, 0, 0)
             };
         }
 
@@ -5856,6 +6600,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class MultiLevelStringReference : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "multiLvlStrRef");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_MultiLvlStrRef");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MultiLevelStringReference class.
         /// </summary>
@@ -5890,15 +6640,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:multiLvlStrRef");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringCache>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Formula>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Formula), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringCache), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Formula.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringCache.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -5911,8 +6661,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Formula? Formula
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Formula>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Formula.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Formula;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Formula.ElementType);
         }
 
         /// <summary>
@@ -5924,8 +6674,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringCache? MultiLevelStringCache
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringCache>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringCache.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringCache;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringCache.ElementType);
         }
 
         /// <summary>
@@ -5937,8 +6687,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtensionList? MultiLvlStrRefExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -5960,6 +6710,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class StringReference : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "strRef");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_StrRef");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the StringReference class.
         /// </summary>
@@ -5994,15 +6750,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:strRef");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringCache>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StrRefExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Formula>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Formula), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringCache), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StrRefExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Formula.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.StringCache.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.StrRefExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -6015,8 +6771,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Formula? Formula
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Formula>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Formula.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Formula;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Formula.ElementType);
         }
 
         /// <summary>
@@ -6028,8 +6784,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.StringCache? StringCache
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringCache>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.StringCache.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.StringCache;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.StringCache.ElementType);
         }
 
         /// <summary>
@@ -6041,8 +6797,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.StrRefExtensionList? StrRefExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StrRefExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.StrRefExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.StrRefExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.StrRefExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -6064,6 +6820,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class StringLiteral : StringDataType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "strLit");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_StrData");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the StringLiteral class.
         /// </summary>
@@ -6098,12 +6860,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:strLit");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringPoint), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PointCount.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.StringPoint.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -6126,6 +6888,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class StringCache : StringDataType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "strCache");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_StrData");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the StringCache class.
         /// </summary>
@@ -6160,12 +6928,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:strCache");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringPoint), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PointCount.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.StringPoint.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -6188,6 +6956,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public abstract partial class StringDataType : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_StrData");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the StringDataType class.
         /// </summary>
@@ -6236,8 +7010,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PointCount? PointCount
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PointCount.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PointCount;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PointCount.ElementType);
         }
     }
 
@@ -6248,6 +7022,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class LayoutTarget : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "layoutTarget");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_LayoutTarget");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LayoutTarget class.
         /// </summary>
@@ -6268,7 +7048,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:layoutTarget");
+            builder.SetSchema(ElementType);
             builder.AddElement<LayoutTarget>()
                 .AddAttribute("val", a => a.Val);
         }
@@ -6284,6 +7064,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class LeftMode : LayoutModeType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "xMode");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_LayoutMode");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LeftMode class.
         /// </summary>
@@ -6294,7 +7080,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:xMode");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -6308,6 +7094,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class TopMode : LayoutModeType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "yMode");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_LayoutMode");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TopMode class.
         /// </summary>
@@ -6318,7 +7110,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:yMode");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -6332,6 +7124,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class WidthMode : LayoutModeType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "wMode");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_LayoutMode");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the WidthMode class.
         /// </summary>
@@ -6342,7 +7140,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:wMode");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -6356,6 +7154,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class HeightMode : LayoutModeType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "hMode");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_LayoutMode");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the HeightMode class.
         /// </summary>
@@ -6366,7 +7170,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:hMode");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -6380,6 +7184,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public abstract partial class LayoutModeType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_LayoutMode");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LayoutModeType class.
         /// </summary>
@@ -6427,6 +7237,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class ManualLayout : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "manualLayout");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ManualLayout");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ManualLayout class.
         /// </summary>
@@ -6461,7 +7277,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:manualLayout");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Left>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Top>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Width>();
@@ -6474,16 +7290,16 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LayoutTarget>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LayoutTarget), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LeftMode), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TopMode), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.WidthMode), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.HeightMode), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Left), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Top), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Width), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Height), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.LayoutTarget.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.LeftMode.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.TopMode.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.WidthMode.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.HeightMode.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Left.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Top.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Width.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Height.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -6496,8 +7312,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.LayoutTarget? LayoutTarget
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.LayoutTarget>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.LayoutTarget.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.LayoutTarget;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.LayoutTarget.ElementType);
         }
 
         /// <summary>
@@ -6509,8 +7325,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.LeftMode? LeftMode
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.LeftMode>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.LeftMode.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.LeftMode;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.LeftMode.ElementType);
         }
 
         /// <summary>
@@ -6522,8 +7338,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TopMode? TopMode
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TopMode>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.TopMode.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.TopMode;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.TopMode.ElementType);
         }
 
         /// <summary>
@@ -6535,8 +7351,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.WidthMode? WidthMode
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.WidthMode>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.WidthMode.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.WidthMode;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.WidthMode.ElementType);
         }
 
         /// <summary>
@@ -6548,8 +7364,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.HeightMode? HeightMode
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.HeightMode>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.HeightMode.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.HeightMode;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.HeightMode.ElementType);
         }
 
         /// <summary>
@@ -6561,8 +7377,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Left? Left
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Left>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Left.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Left;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Left.ElementType);
         }
 
         /// <summary>
@@ -6574,8 +7390,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Top? Top
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Top>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Top.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Top;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Top.ElementType);
         }
 
         /// <summary>
@@ -6587,8 +7403,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Width? Width
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Width>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Width.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Width;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Width.ElementType);
         }
 
         /// <summary>
@@ -6600,8 +7416,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Height? Height
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Height>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Height.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Height;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Height.ElementType);
         }
 
         /// <summary>
@@ -6613,8 +7429,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -6628,6 +7444,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class RotateX : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "rotX");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_RotX");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RotateX class.
         /// </summary>
@@ -6648,7 +7470,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:rotX");
+            builder.SetSchema(ElementType);
             builder.AddElement<RotateX>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -6667,6 +7489,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class HeightPercent : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "hPercent");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_HPercent");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the HeightPercent class.
         /// </summary>
@@ -6687,7 +7515,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:hPercent");
+            builder.SetSchema(ElementType);
             builder.AddElement<HeightPercent>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -6706,6 +7534,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class RotateY : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "rotY");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_RotY");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RotateY class.
         /// </summary>
@@ -6726,7 +7560,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:rotY");
+            builder.SetSchema(ElementType);
             builder.AddElement<RotateY>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -6745,6 +7579,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class DepthPercent : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "depthPercent");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_DepthPercent");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DepthPercent class.
         /// </summary>
@@ -6765,7 +7605,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:depthPercent");
+            builder.SetSchema(ElementType);
             builder.AddElement<DepthPercent>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -6784,6 +7624,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Perspective : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "perspective");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Perspective");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Perspective class.
         /// </summary>
@@ -6804,7 +7650,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:perspective");
+            builder.SetSchema(ElementType);
             builder.AddElement<Perspective>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -6823,6 +7669,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Symbol : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "symbol");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_MarkerStyle");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Symbol class.
         /// </summary>
@@ -6843,7 +7695,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:symbol");
+            builder.SetSchema(ElementType);
             builder.AddElement<Symbol>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -6862,6 +7714,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Size : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "size");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_MarkerSize");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Size class.
         /// </summary>
@@ -6882,7 +7740,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:size");
+            builder.SetSchema(ElementType);
             builder.AddElement<Size>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -6910,6 +7768,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class Marker : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "marker");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Marker");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Marker class.
         /// </summary>
@@ -6944,17 +7808,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:marker");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Size>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Symbol>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Symbol), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Size), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Symbol.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Size.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -6967,8 +7831,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Symbol? Symbol
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Symbol>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Symbol.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Symbol;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Symbol.ElementType);
         }
 
         /// <summary>
@@ -6980,8 +7844,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Size? Size
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Size>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Size.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Size;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Size.ElementType);
         }
 
         /// <summary>
@@ -6993,8 +7857,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -7006,8 +7870,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -7031,6 +7895,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class PictureOptions : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "pictureOptions");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_PictureOptions");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PictureOptions class.
         /// </summary>
@@ -7065,7 +7935,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:pictureOptions");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ApplyToFront>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ApplyToSides>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ApplyToEnd>();
@@ -7073,11 +7943,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureStackUnit>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ApplyToFront), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ApplyToSides), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ApplyToEnd), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureFormat), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureStackUnit), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ApplyToFront.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ApplyToSides.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ApplyToEnd.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PictureFormat.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PictureStackUnit.ElementType, 0, 1)
             };
         }
 
@@ -7090,8 +7960,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ApplyToFront? ApplyToFront
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ApplyToFront>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ApplyToFront.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ApplyToFront;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ApplyToFront.ElementType);
         }
 
         /// <summary>
@@ -7103,8 +7973,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ApplyToSides? ApplyToSides
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ApplyToSides>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ApplyToSides.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ApplyToSides;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ApplyToSides.ElementType);
         }
 
         /// <summary>
@@ -7116,8 +7986,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ApplyToEnd? ApplyToEnd
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ApplyToEnd>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ApplyToEnd.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ApplyToEnd;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ApplyToEnd.ElementType);
         }
 
         /// <summary>
@@ -7129,8 +7999,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PictureFormat? PictureFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureFormat>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PictureFormat.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PictureFormat;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PictureFormat.ElementType);
         }
 
         /// <summary>
@@ -7142,8 +8012,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PictureStackUnit? PictureStackUnit
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureStackUnit>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PictureStackUnit.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PictureStackUnit;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PictureStackUnit.ElementType);
         }
 
         /// <inheritdoc/>
@@ -7157,6 +8027,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class TrendlineType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "trendlineType");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_TrendlineType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TrendlineType class.
         /// </summary>
@@ -7177,7 +8053,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:trendlineType");
+            builder.SetSchema(ElementType);
             builder.AddElement<TrendlineType>()
                 .AddAttribute("val", a => a.Val);
         }
@@ -7193,6 +8069,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class PolynomialOrder : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "order");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Order");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PolynomialOrder class.
         /// </summary>
@@ -7213,7 +8095,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:order");
+            builder.SetSchema(ElementType);
             builder.AddElement<PolynomialOrder>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -7234,6 +8116,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Period : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "period");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Period");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Period class.
         /// </summary>
@@ -7254,7 +8142,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:period");
+            builder.SetSchema(ElementType);
             builder.AddElement<Period>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -7285,6 +8173,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class TrendlineLabel : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "trendlineLbl");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_TrendlineLbl");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TrendlineLabel class.
         /// </summary>
@@ -7319,7 +8213,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:trendlineLbl");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
@@ -7328,12 +8222,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartText>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Layout), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartText), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Layout.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartText.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -7346,8 +8240,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Layout? Layout
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Layout.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Layout;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Layout.ElementType);
         }
 
         /// <summary>
@@ -7359,8 +8253,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartText? ChartText
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartText>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartText.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartText;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartText.ElementType);
         }
 
         /// <summary>
@@ -7372,8 +8266,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat? NumberingFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat.ElementType);
         }
 
         /// <summary>
@@ -7385,8 +8279,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -7398,8 +8292,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.TextProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType);
         }
 
         /// <summary>
@@ -7411,8 +8305,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -7426,6 +8320,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class ErrorDirection : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "errDir");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ErrDir");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ErrorDirection class.
         /// </summary>
@@ -7446,7 +8346,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:errDir");
+            builder.SetSchema(ElementType);
             builder.AddElement<ErrorDirection>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -7465,6 +8365,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class ErrorBarType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "errBarType");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ErrBarType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ErrorBarType class.
         /// </summary>
@@ -7485,7 +8391,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:errBarType");
+            builder.SetSchema(ElementType);
             builder.AddElement<ErrorBarType>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -7504,6 +8410,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class ErrorBarValueType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "errValType");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ErrValType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ErrorBarValueType class.
         /// </summary>
@@ -7524,7 +8436,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:errValType");
+            builder.SetSchema(ElementType);
             builder.AddElement<ErrorBarValueType>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -7550,6 +8462,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class Plus : NumberDataSourceType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "plus");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_NumDataSource");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Plus class.
         /// </summary>
@@ -7584,13 +8502,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:plus");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumberReference.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral.ElementType, 1, 1)
                 }
             };
         }
@@ -7613,6 +8531,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class Minus : NumberDataSourceType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "minus");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_NumDataSource");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Minus class.
         /// </summary>
@@ -7647,13 +8571,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:minus");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumberReference.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral.ElementType, 1, 1)
                 }
             };
         }
@@ -7676,6 +8600,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class Values : NumberDataSourceType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "val");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_NumDataSource");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Values class.
         /// </summary>
@@ -7710,13 +8640,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:val");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumberReference.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral.ElementType, 1, 1)
                 }
             };
         }
@@ -7739,6 +8669,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class YValues : NumberDataSourceType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "yVal");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_NumDataSource");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the YValues class.
         /// </summary>
@@ -7773,13 +8709,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:yVal");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumberReference.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral.ElementType, 1, 1)
                 }
             };
         }
@@ -7802,6 +8738,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class BubbleSize : NumberDataSourceType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "bubbleSize");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_NumDataSource");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BubbleSize class.
         /// </summary>
@@ -7836,13 +8778,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:bubbleSize");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumberReference.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral.ElementType, 1, 1)
                 }
             };
         }
@@ -7865,6 +8807,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public abstract partial class NumberDataSourceType : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_NumDataSource");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NumberDataSourceType class.
         /// </summary>
@@ -7912,8 +8860,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NumberReference? NumberReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberReference>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.NumberReference.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.NumberReference;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.NumberReference.ElementType);
         }
 
         /// <summary>
@@ -7925,8 +8873,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral? NumberLiteral
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral.ElementType);
         }
     }
 
@@ -7937,6 +8885,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class GapWidth : GapAmountType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "gapWidth");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_GapAmount");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the GapWidth class.
         /// </summary>
@@ -7947,7 +8901,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:gapWidth");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -7961,6 +8915,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class GapDepth : GapAmountType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "gapDepth");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_GapAmount");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the GapDepth class.
         /// </summary>
@@ -7971,7 +8931,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:gapDepth");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -7985,6 +8945,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public abstract partial class GapAmountType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_GapAmount");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the GapAmountType class.
         /// </summary>
@@ -8026,6 +8992,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class UpBars : UpDownBarType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "upBars");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_UpDownBar");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the UpBars class.
         /// </summary>
@@ -8060,10 +9032,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:upBars");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1)
             };
         }
 
@@ -8084,6 +9056,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class DownBars : UpDownBarType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "downBars");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_UpDownBar");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DownBars class.
         /// </summary>
@@ -8118,10 +9096,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:downBars");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1)
             };
         }
 
@@ -8142,6 +9120,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public abstract partial class UpDownBarType : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_UpDownBar");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the UpDownBarType class.
         /// </summary>
@@ -8188,8 +9172,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType);
         }
     }
 
@@ -8200,6 +9184,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class OfPieType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ofPieType");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_OfPieType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OfPieType class.
         /// </summary>
@@ -8220,7 +9210,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ofPieType");
+            builder.SetSchema(ElementType);
             builder.AddElement<OfPieType>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -8239,6 +9229,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class SplitType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "splitType");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_SplitType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SplitType class.
         /// </summary>
@@ -8259,7 +9255,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:splitType");
+            builder.SetSchema(ElementType);
             builder.AddElement<SplitType>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -8284,6 +9280,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class CustomSplit : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "custSplit");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_CustSplit");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CustomSplit class.
         /// </summary>
@@ -8318,11 +9320,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:custSplit");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SecondPiePoint>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SecondPiePoint), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SecondPiePoint.ElementType, 0, 0)
             };
         }
 
@@ -8337,6 +9339,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class SecondPieSize : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "secondPieSize");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_SecondPieSize");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SecondPieSize class.
         /// </summary>
@@ -8357,7 +9365,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:secondPieSize");
+            builder.SetSchema(ElementType);
             builder.AddElement<SecondPieSize>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -8383,6 +9391,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class BandFormat : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "bandFmt");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_BandFmt");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BandFormat class.
         /// </summary>
@@ -8417,13 +9431,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:bandFmt");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1)
             };
         }
 
@@ -8436,8 +9450,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Index;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType);
         }
 
         /// <summary>
@@ -8449,8 +9463,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -8464,6 +9478,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class PictureFormat : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "pictureFormat");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_PictureFormat");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PictureFormat class.
         /// </summary>
@@ -8484,7 +9504,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:pictureFormat");
+            builder.SetSchema(ElementType);
             builder.AddElement<PictureFormat>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -8503,6 +9523,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class PictureStackUnit : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "pictureStackUnit");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_PictureStackUnit");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PictureStackUnit class.
         /// </summary>
@@ -8523,7 +9549,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:pictureStackUnit");
+            builder.SetSchema(ElementType);
             builder.AddElement<PictureStackUnit>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -8543,6 +9569,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class BuiltInUnit : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "builtInUnit");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_BuiltInUnit");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BuiltInUnit class.
         /// </summary>
@@ -8563,7 +9595,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:builtInUnit");
+            builder.SetSchema(ElementType);
             builder.AddElement<BuiltInUnit>()
                 .AddAttribute("val", a => a.Val);
         }
@@ -8588,6 +9620,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class DisplayUnitsLabel : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "dispUnitsLbl");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_DispUnitsLbl");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DisplayUnitsLabel class.
         /// </summary>
@@ -8622,17 +9660,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:dispUnitsLbl");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartText>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Layout), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartText), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Layout.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartText.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType, 0, 1)
             };
         }
 
@@ -8645,8 +9683,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Layout? Layout
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Layout.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Layout;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Layout.ElementType);
         }
 
         /// <summary>
@@ -8658,8 +9696,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartText? ChartText
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartText>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartText.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartText;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartText.ElementType);
         }
 
         /// <summary>
@@ -8671,8 +9709,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -8684,8 +9722,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.TextProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -8699,6 +9737,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class LogBase : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "logBase");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_LogBase");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LogBase class.
         /// </summary>
@@ -8719,7 +9763,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:logBase");
+            builder.SetSchema(ElementType);
             builder.AddElement<LogBase>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -8739,6 +9783,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Orientation : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "orientation");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Orientation");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Orientation class.
         /// </summary>
@@ -8759,7 +9809,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:orientation");
+            builder.SetSchema(ElementType);
             builder.AddElement<Orientation>()
                 .AddAttribute("val", a => a.Val);
         }
@@ -8785,6 +9835,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class PivotFormat : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "pivotFmt");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_PivotFmt");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PivotFormat class.
         /// </summary>
@@ -8819,7 +9875,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:pivotFmt");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabel>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
@@ -8827,11 +9883,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Marker), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabel), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Marker.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataLabel.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -8844,8 +9900,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Index;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType);
         }
 
         /// <summary>
@@ -8857,8 +9913,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties? ShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -8870,8 +9926,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Marker? Marker
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Marker.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Marker;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Marker.ElementType);
         }
 
         /// <summary>
@@ -8883,8 +9939,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.DataLabel? DataLabel
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.DataLabel>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.DataLabel.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.DataLabel;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.DataLabel.ElementType);
         }
 
         /// <summary>
@@ -8896,8 +9952,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -8911,6 +9967,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class LegendPosition : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "legendPos");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_LegendPos");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LegendPosition class.
         /// </summary>
@@ -8931,7 +9993,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:legendPos");
+            builder.SetSchema(ElementType);
             builder.AddElement<LegendPosition>()
                 .AddAttribute("val", a => a.Val);
         }
@@ -8956,6 +10018,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class LegendEntry : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "legendEntry");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_LegendEntry");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LegendEntry class.
         /// </summary>
@@ -8990,26 +10058,26 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:legendEntry");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, 1, 1),
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Delete), 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Delete.ElementType, 1, 1),
                     new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                     {
                         new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1)
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType, 0, 1)
                         }
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -9022,8 +10090,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Index;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType);
         }
 
         /// <inheritdoc/>
@@ -9048,6 +10116,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class HeaderFooter : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "headerFooter");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_HeaderFooter");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the HeaderFooter class.
         /// </summary>
@@ -9112,7 +10186,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:headerFooter");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.OddHeader>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.OddFooter>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.EvenHeader>();
@@ -9125,12 +10199,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 .AddAttribute("differentFirst", a => a.DifferentFirst);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.OddHeader), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.OddFooter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.EvenHeader), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.EvenFooter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.FirstHeader), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.FirstFooter), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.OddHeader.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.OddFooter.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.EvenHeader.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.EvenFooter.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.FirstHeader.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.FirstFooter.ElementType, 0, 1)
             };
         }
 
@@ -9143,8 +10217,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.OddHeader? OddHeader
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.OddHeader>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.OddHeader.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.OddHeader;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.OddHeader.ElementType);
         }
 
         /// <summary>
@@ -9156,8 +10230,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.OddFooter? OddFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.OddFooter>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.OddFooter.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.OddFooter;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.OddFooter.ElementType);
         }
 
         /// <summary>
@@ -9169,8 +10243,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.EvenHeader? EvenHeader
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.EvenHeader>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.EvenHeader.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.EvenHeader;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.EvenHeader.ElementType);
         }
 
         /// <summary>
@@ -9182,8 +10256,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.EvenFooter? EvenFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.EvenFooter>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.EvenFooter.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.EvenFooter;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.EvenFooter.ElementType);
         }
 
         /// <summary>
@@ -9195,8 +10269,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.FirstHeader? FirstHeader
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.FirstHeader>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.FirstHeader.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.FirstHeader;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.FirstHeader.ElementType);
         }
 
         /// <summary>
@@ -9208,8 +10282,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.FirstFooter? FirstFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.FirstFooter>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.FirstFooter.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.FirstFooter;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.FirstFooter.ElementType);
         }
 
         /// <inheritdoc/>
@@ -9223,6 +10297,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class PageMargins : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "pageMargins");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_PageMargins");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PageMargins class.
         /// </summary>
@@ -9293,7 +10373,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:pageMargins");
+            builder.SetSchema(ElementType);
             builder.AddElement<PageMargins>()
                 .AddAttribute("l", a => a.Left, aBuilder =>
                 {
@@ -9338,6 +10418,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class PageSetup : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "pageSetup");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_PageSetup");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PageSetup class.
         /// </summary>
@@ -9438,7 +10524,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:pageSetup");
+            builder.SetSchema(ElementType);
             builder.AddElement<PageSetup>()
                 .AddAttribute("paperSize", a => a.PaperSize)
                 .AddAttribute("firstPageNumber", a => a.FirstPageNumber)
@@ -9484,6 +10570,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "spPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ShapeProperties");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShapeProperties class.
         /// </summary>
@@ -9528,7 +10620,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:spPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
@@ -9551,39 +10643,39 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Transform2D.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.CustomGeometry.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.PresetGeometry.ElementType, 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.NoFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.GradientFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.BlipFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.PatternFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.GroupFill.ElementType, 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Outline.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.EffectList.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Scene3DType.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Shape3DType.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -9596,8 +10688,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Transform2D.ElementType) as DocumentFormat.OpenXml.Drawing.Transform2D;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Transform2D.ElementType);
         }
 
         /// <inheritdoc/>
@@ -9632,6 +10724,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class DataLabel : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "dLbl");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_DLbl");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DataLabel class.
         /// </summary>
@@ -9666,7 +10764,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:dLbl");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
@@ -9685,37 +10783,37 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Separator>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, 1, 1),
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Delete), 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Delete.ElementType, 1, 1),
                     new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                     {
                         new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Layout), 0, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartText), 0, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Layout.ElementType, 0, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartText.ElementType, 0, 1),
                             new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                             {
                                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                 {
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabelPosition), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowLegendKey), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowValue), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowCategoryName), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowSeriesName), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowPercent), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowBubbleSize), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Separator), 0, 1)
+                                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat.ElementType, 0, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType, 0, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataLabelPosition.ElementType, 0, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShowLegendKey.ElementType, 0, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShowValue.ElementType, 0, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShowCategoryName.ElementType, 0, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShowSeriesName.ElementType, 0, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShowPercent.ElementType, 0, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShowBubbleSize.ElementType, 0, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Separator.ElementType, 0, 1)
                                 }
                             }
                         }
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DLblExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DLblExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -9728,8 +10826,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Index;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType);
         }
 
         /// <inheritdoc/>
@@ -9755,6 +10853,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class AreaChart : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "areaChart");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_AreaChart");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AreaChart class.
         /// </summary>
@@ -9789,7 +10893,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:areaChart");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AreaChartExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AreaChartSeries>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
@@ -9803,15 +10907,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Grouping), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.VaryColors), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AreaChartSeries), 0, 0),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DropLines), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Grouping.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AreaChartSeries.ElementType, 0, 0),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DropLines.ElementType, 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 2, 2),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AreaChartExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, 2, 2),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AreaChartExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -9824,8 +10928,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Grouping? Grouping
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Grouping>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Grouping.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Grouping;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Grouping.ElementType);
         }
 
         /// <summary>
@@ -9837,8 +10941,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.VaryColors;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType);
         }
 
         /// <inheritdoc/>
@@ -9865,6 +10969,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class Area3DChart : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "area3DChart");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Area3DChart");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Area3DChart class.
         /// </summary>
@@ -9899,7 +11009,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:area3DChart");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Area3DChartExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AreaChartSeries>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
@@ -9914,16 +11024,16 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Grouping), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.VaryColors), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AreaChartSeries), 0, 0),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DropLines), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Grouping.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AreaChartSeries.ElementType, 0, 0),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DropLines.ElementType, 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.GapDepth), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 2, 3),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Area3DChartExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.GapDepth.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, 2, 3),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Area3DChartExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -9936,8 +11046,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Grouping? Grouping
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Grouping>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Grouping.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Grouping;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Grouping.ElementType);
         }
 
         /// <summary>
@@ -9949,8 +11059,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.VaryColors;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType);
         }
 
         /// <inheritdoc/>
@@ -9980,6 +11090,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class LineChart : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "lineChart");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_LineChart");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LineChart class.
         /// </summary>
@@ -10014,7 +11130,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:lineChart");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowMarker>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Smooth>();
@@ -10032,19 +11148,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Grouping), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.VaryColors), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LineChartSeries), 0, 0),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DropLines), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Grouping.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.LineChartSeries.ElementType, 0, 0),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DropLines.ElementType, 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.HighLowLines), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.UpDownBars), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowMarker), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Smooth), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 2, 2),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LineChartExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.HighLowLines.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.UpDownBars.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShowMarker.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Smooth.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, 2, 2),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.LineChartExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -10057,8 +11173,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Grouping? Grouping
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Grouping>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Grouping.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Grouping;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Grouping.ElementType);
         }
 
         /// <summary>
@@ -10070,8 +11186,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.VaryColors;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType);
         }
 
         /// <inheritdoc/>
@@ -10098,6 +11214,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class Line3DChart : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "line3DChart");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Line3DChart");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Line3DChart class.
         /// </summary>
@@ -10132,7 +11254,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:line3DChart");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DropLines>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
@@ -10147,16 +11269,16 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Grouping), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.VaryColors), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LineChartSeries), 0, 0),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DropLines), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Grouping.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.LineChartSeries.ElementType, 0, 0),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DropLines.ElementType, 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.GapDepth), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 3, 3),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Line3DChartExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.GapDepth.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, 3, 3),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Line3DChartExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -10169,8 +11291,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Grouping? Grouping
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Grouping>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Grouping.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Grouping;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Grouping.ElementType);
         }
 
         /// <summary>
@@ -10182,8 +11304,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.VaryColors;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType);
         }
 
         /// <inheritdoc/>
@@ -10209,6 +11331,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class StockChart : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "stockChart");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_StockChart");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the StockChart class.
         /// </summary>
@@ -10243,7 +11371,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:stockChart");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DropLines>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.HighLowLines>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
@@ -10253,13 +11381,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.UpDownBars>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LineChartSeries), 3, 4),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DropLines), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.HighLowLines), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.UpDownBars), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 2, 2),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StockChartExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.LineChartSeries.ElementType, 3, 4),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DropLines.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.HighLowLines.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.UpDownBars.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, 2, 2),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.StockChartExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -10285,6 +11413,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class RadarChart : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "radarChart");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_RadarChart");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RadarChart class.
         /// </summary>
@@ -10319,7 +11453,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:radarChart");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RadarChartExtensionList>();
@@ -10328,12 +11462,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RadarStyle), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.VaryColors), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RadarChartSeries), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 2, 2),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RadarChartExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.RadarStyle.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.RadarChartSeries.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, 2, 2),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.RadarChartExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -10346,8 +11480,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.RadarStyle? RadarStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.RadarStyle>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.RadarStyle.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.RadarStyle;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.RadarStyle.ElementType);
         }
 
         /// <summary>
@@ -10359,8 +11493,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.VaryColors;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType);
         }
 
         /// <inheritdoc/>
@@ -10385,6 +11519,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class ScatterChart : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "scatterChart");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ScatterChart");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ScatterChart class.
         /// </summary>
@@ -10419,7 +11559,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:scatterChart");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ScatterChartExtensionList>();
@@ -10428,12 +11568,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ScatterStyle), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.VaryColors), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ScatterChartSeries), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 2, 2),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ScatterChartExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ScatterStyle.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ScatterChartSeries.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, 2, 2),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ScatterChartExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -10446,8 +11586,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ScatterStyle? ScatterStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ScatterStyle>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ScatterStyle.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ScatterStyle;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ScatterStyle.ElementType);
         }
 
         /// <summary>
@@ -10459,8 +11599,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.VaryColors;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType);
         }
 
         /// <inheritdoc/>
@@ -10484,6 +11624,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class PieChart : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "pieChart");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_PieChart");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PieChart class.
         /// </summary>
@@ -10518,7 +11664,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:pieChart");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.FirstSliceAngle>();
@@ -10530,13 +11676,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.VaryColors), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries), 0, 0),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries.ElementType, 0, 0),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.FirstSliceAngle), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PieChartExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.FirstSliceAngle.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PieChartExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -10549,8 +11695,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.VaryColors;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType);
         }
 
         /// <inheritdoc/>
@@ -10573,6 +11719,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class Pie3DChart : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "pie3DChart");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Pie3DChart");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Pie3DChart class.
         /// </summary>
@@ -10607,7 +11759,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:pie3DChart");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Pie3DChartExtensionList>();
@@ -10618,12 +11770,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.VaryColors), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries), 0, 0),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries.ElementType, 0, 0),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Pie3DChartExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Pie3DChartExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -10636,8 +11788,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.VaryColors;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType);
         }
 
         /// <inheritdoc/>
@@ -10662,6 +11814,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class DoughnutChart : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "doughnutChart");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_DoughnutChart");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DoughnutChart class.
         /// </summary>
@@ -10696,7 +11854,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:doughnutChart");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
@@ -10709,14 +11867,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.VaryColors), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries), 0, 0),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries.ElementType, 0, 0),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.FirstSliceAngle), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.HoleSize), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.FirstSliceAngle.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.HoleSize.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -10729,8 +11887,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.VaryColors;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType);
         }
 
         /// <inheritdoc/>
@@ -10759,6 +11917,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class BarChart : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "barChart");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_BarChart");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BarChart class.
         /// </summary>
@@ -10793,7 +11957,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:barChart");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarChartExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarDirection>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarGrouping>();
@@ -10810,18 +11974,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarDirection), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarGrouping), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.VaryColors), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarChartSeries), 0, 0),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BarDirection.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BarGrouping.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BarChartSeries.ElementType, 0, 0),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.GapWidth), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Overlap), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesLines), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 2, 2),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarChartExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.GapWidth.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Overlap.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SeriesLines.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, 2, 2),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BarChartExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -10834,8 +11998,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.BarDirection? BarDirection
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.BarDirection>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.BarDirection.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.BarDirection;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.BarDirection.ElementType);
         }
 
         /// <summary>
@@ -10847,8 +12011,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.BarGrouping? BarGrouping
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.BarGrouping>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.BarGrouping.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.BarGrouping;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.BarGrouping.ElementType);
         }
 
         /// <summary>
@@ -10860,8 +12024,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.VaryColors;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType);
         }
 
         /// <inheritdoc/>
@@ -10890,6 +12054,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class Bar3DChart : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "bar3DChart");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Bar3DChart");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Bar3DChart class.
         /// </summary>
@@ -10924,7 +12094,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:bar3DChart");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Bar3DChartExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarDirection>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarGrouping>();
@@ -10941,18 +12111,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarDirection), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarGrouping), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.VaryColors), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarChartSeries), 0, 0),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BarDirection.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BarGrouping.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BarChartSeries.ElementType, 0, 0),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.GapWidth), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.GapDepth), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Shape), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 2, 3),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Bar3DChartExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.GapWidth.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.GapDepth.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Shape.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, 2, 3),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Bar3DChartExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -10965,8 +12135,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.BarDirection? BarDirection
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.BarDirection>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.BarDirection.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.BarDirection;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.BarDirection.ElementType);
         }
 
         /// <summary>
@@ -10978,8 +12148,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.BarGrouping? BarGrouping
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.BarGrouping>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.BarGrouping.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.BarGrouping;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.BarGrouping.ElementType);
         }
 
         /// <summary>
@@ -10991,8 +12161,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.VaryColors;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType);
         }
 
         /// <inheritdoc/>
@@ -11022,6 +12192,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class OfPieChart : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ofPieChart");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_OfPieChart");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OfPieChart class.
         /// </summary>
@@ -11056,7 +12232,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ofPieChart");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesLines>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CustomSplit>();
@@ -11070,23 +12246,23 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SplitType>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.OfPieType), 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.OfPieType.ElementType, 1, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.VaryColors), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries), 0, 0),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries.ElementType, 0, 0),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.GapWidth), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SplitType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SplitPosition), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CustomSplit), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SecondPieSize), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesLines), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.GapWidth.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SplitType.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SplitPosition.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.CustomSplit.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SecondPieSize.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SeriesLines.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -11099,8 +12275,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.OfPieType? OfPieType
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.OfPieType>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.OfPieType.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.OfPieType;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.OfPieType.ElementType);
         }
 
         /// <summary>
@@ -11112,8 +12288,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.VaryColors;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType);
         }
 
         /// <inheritdoc/>
@@ -11137,6 +12313,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class SurfaceChart : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "surfaceChart");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_SurfaceChart");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SurfaceChart class.
         /// </summary>
@@ -11171,7 +12353,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:surfaceChart");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BandFormats>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Wireframe>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartExtensionList>();
@@ -11183,13 +12365,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Wireframe), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartSeries), 0, 0),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BandFormats), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Wireframe.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartSeries.ElementType, 0, 0),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BandFormats.ElementType, 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 2, 3),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, 2, 3),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -11202,8 +12384,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Wireframe? Wireframe
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Wireframe>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Wireframe.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Wireframe;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Wireframe.ElementType);
         }
 
         /// <inheritdoc/>
@@ -11228,6 +12410,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class Surface3DChart : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "surface3DChart");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Surface3DChart");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Surface3DChart class.
         /// </summary>
@@ -11262,7 +12450,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:surface3DChart");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BandFormats>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Wireframe>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
@@ -11271,12 +12459,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Wireframe), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.VaryColors), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartSeries), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BandFormats), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 3, 3),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Surface3DChartExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Wireframe.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartSeries.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BandFormats.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, 3, 3),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Surface3DChartExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -11289,8 +12477,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Wireframe? Wireframe
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Wireframe>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Wireframe.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Wireframe;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Wireframe.ElementType);
         }
 
         /// <summary>
@@ -11302,8 +12490,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.VaryColors;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType);
         }
 
         /// <inheritdoc/>
@@ -11331,6 +12519,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class BubbleChart : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "bubbleChart");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_BubbleChart");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BubbleChart class.
         /// </summary>
@@ -11365,7 +12559,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:bubbleChart");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowNegativeBubbles>();
@@ -11377,15 +12571,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.VaryColors), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BubbleChartSeries), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Bubble3D), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BubbleScale), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowNegativeBubbles), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SizeRepresents), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 2, 2),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BubbleChartExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BubbleChartSeries.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Bubble3D.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BubbleScale.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShowNegativeBubbles.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SizeRepresents.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, 2, 2),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BubbleChartExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -11398,8 +12592,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.VaryColors;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType);
         }
 
         /// <inheritdoc/>
@@ -11439,6 +12633,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class ValueAxis : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "valAx");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ValAx");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ValueAxis class.
         /// </summary>
@@ -11473,7 +12673,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:valAx");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MajorUnit>();
@@ -11501,32 +12701,32 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Scaling), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Delete), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisPosition), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Title), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis), 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Scaling.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Delete.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AxisPosition.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Title.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis.ElementType, 1, 1),
                         new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Crosses), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CrossesAt), 1, 1)
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Crosses.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.CrossesAt.ElementType, 1, 1)
                         }
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CrossBetween), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MajorUnit), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MinorUnit), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DisplayUnits), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ValAxExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.CrossBetween.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MajorUnit.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MinorUnit.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DisplayUnits.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ValAxExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -11539,8 +12739,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.AxisId? AxisId
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.AxisId;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType);
         }
 
         /// <summary>
@@ -11552,8 +12752,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Scaling? Scaling
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Scaling>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Scaling.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Scaling;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Scaling.ElementType);
         }
 
         /// <summary>
@@ -11565,8 +12765,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Delete? Delete
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Delete.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Delete;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Delete.ElementType);
         }
 
         /// <summary>
@@ -11578,8 +12778,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.AxisPosition? AxisPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisPosition>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.AxisPosition.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.AxisPosition;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.AxisPosition.ElementType);
         }
 
         /// <summary>
@@ -11591,8 +12791,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines? MajorGridlines
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines.ElementType);
         }
 
         /// <summary>
@@ -11604,8 +12804,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines? MinorGridlines
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines.ElementType);
         }
 
         /// <summary>
@@ -11617,8 +12817,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Title? Title
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Title>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Title.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Title;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Title.ElementType);
         }
 
         /// <summary>
@@ -11630,8 +12830,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat? NumberingFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat.ElementType);
         }
 
         /// <summary>
@@ -11643,8 +12843,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark? MajorTickMark
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark.ElementType);
         }
 
         /// <summary>
@@ -11656,8 +12856,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark? MinorTickMark
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark.ElementType);
         }
 
         /// <summary>
@@ -11669,8 +12869,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition? TickLabelPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition.ElementType);
         }
 
         /// <summary>
@@ -11682,8 +12882,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -11695,8 +12895,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.TextProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType);
         }
 
         /// <summary>
@@ -11708,8 +12908,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis? CrossingAxis
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis.ElementType);
         }
 
         /// <inheritdoc/>
@@ -11751,6 +12951,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class CategoryAxis : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "catAx");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_CatAx");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CategoryAxis class.
         /// </summary>
@@ -11785,7 +12991,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:catAx");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisPosition>();
@@ -11815,34 +13021,34 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Scaling), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Delete), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisPosition), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Title), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis), 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Scaling.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Delete.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AxisPosition.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Title.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis.ElementType, 1, 1),
                         new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Crosses), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CrossesAt), 1, 1)
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Crosses.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.CrossesAt.ElementType, 1, 1)
                         }
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AutoLabeled), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LabelAlignment), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LabelOffset), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TickLabelSkip), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TickMarkSkip), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NoMultiLevelLabels), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CatAxExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AutoLabeled.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.LabelAlignment.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.LabelOffset.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.TickLabelSkip.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.TickMarkSkip.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NoMultiLevelLabels.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.CatAxExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -11855,8 +13061,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.AxisId? AxisId
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.AxisId;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType);
         }
 
         /// <summary>
@@ -11868,8 +13074,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Scaling? Scaling
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Scaling>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Scaling.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Scaling;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Scaling.ElementType);
         }
 
         /// <summary>
@@ -11881,8 +13087,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Delete? Delete
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Delete.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Delete;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Delete.ElementType);
         }
 
         /// <summary>
@@ -11894,8 +13100,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.AxisPosition? AxisPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisPosition>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.AxisPosition.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.AxisPosition;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.AxisPosition.ElementType);
         }
 
         /// <summary>
@@ -11907,8 +13113,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines? MajorGridlines
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines.ElementType);
         }
 
         /// <summary>
@@ -11920,8 +13126,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines? MinorGridlines
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines.ElementType);
         }
 
         /// <summary>
@@ -11933,8 +13139,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Title? Title
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Title>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Title.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Title;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Title.ElementType);
         }
 
         /// <summary>
@@ -11946,8 +13152,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat? NumberingFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat.ElementType);
         }
 
         /// <summary>
@@ -11959,8 +13165,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark? MajorTickMark
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark.ElementType);
         }
 
         /// <summary>
@@ -11972,8 +13178,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark? MinorTickMark
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark.ElementType);
         }
 
         /// <summary>
@@ -11985,8 +13191,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition? TickLabelPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition.ElementType);
         }
 
         /// <summary>
@@ -11998,8 +13204,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -12011,8 +13217,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.TextProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType);
         }
 
         /// <summary>
@@ -12024,8 +13230,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis? CrossingAxis
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis.ElementType);
         }
 
         /// <inheritdoc/>
@@ -12068,6 +13274,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class DateAxis : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "dateAx");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_DateAx");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DateAxis class.
         /// </summary>
@@ -12102,7 +13314,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:dateAx");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MajorUnit>();
@@ -12133,35 +13345,35 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Scaling), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Delete), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisPosition), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Title), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis), 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Scaling.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Delete.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AxisPosition.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Title.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis.ElementType, 1, 1),
                         new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Crosses), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CrossesAt), 1, 1)
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Crosses.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.CrossesAt.ElementType, 1, 1)
                         }
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AutoLabeled), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LabelOffset), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BaseTimeUnit), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MajorUnit), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MajorTimeUnit), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MinorUnit), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MinorTimeUnit), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DateAxExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AutoLabeled.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.LabelOffset.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BaseTimeUnit.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MajorUnit.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MajorTimeUnit.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MinorUnit.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MinorTimeUnit.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DateAxExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -12174,8 +13386,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.AxisId? AxisId
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.AxisId;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType);
         }
 
         /// <summary>
@@ -12187,8 +13399,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Scaling? Scaling
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Scaling>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Scaling.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Scaling;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Scaling.ElementType);
         }
 
         /// <summary>
@@ -12200,8 +13412,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Delete? Delete
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Delete.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Delete;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Delete.ElementType);
         }
 
         /// <summary>
@@ -12213,8 +13425,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.AxisPosition? AxisPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisPosition>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.AxisPosition.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.AxisPosition;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.AxisPosition.ElementType);
         }
 
         /// <summary>
@@ -12226,8 +13438,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines? MajorGridlines
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines.ElementType);
         }
 
         /// <summary>
@@ -12239,8 +13451,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines? MinorGridlines
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines.ElementType);
         }
 
         /// <summary>
@@ -12252,8 +13464,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Title? Title
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Title>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Title.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Title;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Title.ElementType);
         }
 
         /// <summary>
@@ -12265,8 +13477,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat? NumberingFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat.ElementType);
         }
 
         /// <summary>
@@ -12278,8 +13490,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark? MajorTickMark
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark.ElementType);
         }
 
         /// <summary>
@@ -12291,8 +13503,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark? MinorTickMark
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark.ElementType);
         }
 
         /// <summary>
@@ -12304,8 +13516,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition? TickLabelPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition.ElementType);
         }
 
         /// <summary>
@@ -12317,8 +13529,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -12330,8 +13542,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.TextProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType);
         }
 
         /// <summary>
@@ -12343,8 +13555,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis? CrossingAxis
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis.ElementType);
         }
 
         /// <inheritdoc/>
@@ -12382,6 +13594,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class SeriesAxis : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "serAx");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_SerAx");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SeriesAxis class.
         /// </summary>
@@ -12416,7 +13634,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:serAx");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisPosition>();
@@ -12442,30 +13660,30 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Scaling), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Delete), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisPosition), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Title), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis), 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Scaling.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Delete.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AxisPosition.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Title.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis.ElementType, 1, 1),
                         new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Crosses), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CrossesAt), 1, 1)
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Crosses.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.CrossesAt.ElementType, 1, 1)
                         }
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TickLabelSkip), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TickMarkSkip), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SerAxExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.TickLabelSkip.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.TickMarkSkip.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SerAxExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -12478,8 +13696,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.AxisId? AxisId
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.AxisId;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType);
         }
 
         /// <summary>
@@ -12491,8 +13709,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Scaling? Scaling
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Scaling>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Scaling.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Scaling;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Scaling.ElementType);
         }
 
         /// <summary>
@@ -12504,8 +13722,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Delete? Delete
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Delete.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Delete;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Delete.ElementType);
         }
 
         /// <summary>
@@ -12517,8 +13735,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.AxisPosition? AxisPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisPosition>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.AxisPosition.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.AxisPosition;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.AxisPosition.ElementType);
         }
 
         /// <summary>
@@ -12530,8 +13748,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines? MajorGridlines
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines.ElementType);
         }
 
         /// <summary>
@@ -12543,8 +13761,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines? MinorGridlines
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines.ElementType);
         }
 
         /// <summary>
@@ -12556,8 +13774,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Title? Title
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Title>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Title.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Title;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Title.ElementType);
         }
 
         /// <summary>
@@ -12569,8 +13787,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat? NumberingFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat.ElementType);
         }
 
         /// <summary>
@@ -12582,8 +13800,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark? MajorTickMark
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark.ElementType);
         }
 
         /// <summary>
@@ -12595,8 +13813,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark? MinorTickMark
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark.ElementType);
         }
 
         /// <summary>
@@ -12608,8 +13826,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition? TickLabelPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition.ElementType);
         }
 
         /// <summary>
@@ -12621,8 +13839,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -12634,8 +13852,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.TextProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType);
         }
 
         /// <summary>
@@ -12647,8 +13865,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis? CrossingAxis
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis.ElementType);
         }
 
         /// <inheritdoc/>
@@ -12674,6 +13892,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class DataTable : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "dTable");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_DTable");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DataTable class.
         /// </summary>
@@ -12708,7 +13932,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:dTable");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowHorizontalBorder>();
@@ -12718,13 +13942,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowHorizontalBorder), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowVerticalBorder), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowOutlineBorder), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowKeys), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShowHorizontalBorder.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShowVerticalBorder.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShowOutlineBorder.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShowKeys.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -12737,8 +13961,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ShowHorizontalBorder? ShowHorizontalBorder
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ShowHorizontalBorder>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ShowHorizontalBorder.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ShowHorizontalBorder;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ShowHorizontalBorder.ElementType);
         }
 
         /// <summary>
@@ -12750,8 +13974,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ShowVerticalBorder? ShowVerticalBorder
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ShowVerticalBorder>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ShowVerticalBorder.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ShowVerticalBorder;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ShowVerticalBorder.ElementType);
         }
 
         /// <summary>
@@ -12763,8 +13987,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ShowOutlineBorder? ShowOutlineBorder
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ShowOutlineBorder>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ShowOutlineBorder.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ShowOutlineBorder;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ShowOutlineBorder.ElementType);
         }
 
         /// <summary>
@@ -12776,8 +14000,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ShowKeys? ShowKeys
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ShowKeys>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ShowKeys.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ShowKeys;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ShowKeys.ElementType);
         }
 
         /// <summary>
@@ -12789,8 +14013,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -12802,8 +14026,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.TextProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType);
         }
 
         /// <summary>
@@ -12815,8 +14039,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -12830,6 +14054,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class FirstSliceAngle : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "firstSliceAng");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_FirstSliceAng");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FirstSliceAngle class.
         /// </summary>
@@ -12850,7 +14080,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:firstSliceAng");
+            builder.SetSchema(ElementType);
             builder.AddElement<FirstSliceAngle>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -12869,6 +14099,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class HoleSize : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "holeSize");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_HoleSize");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the HoleSize class.
         /// </summary>
@@ -12889,7 +14125,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:holeSize");
+            builder.SetSchema(ElementType);
             builder.AddElement<HoleSize>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -12915,6 +14151,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class StringPoint : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "pt");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_StrVal");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the StringPoint class.
         /// </summary>
@@ -12959,7 +14201,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:pt");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumericValue>();
             builder.AddElement<StringPoint>()
                 .AddAttribute("idx", a => a.Index, aBuilder =>
@@ -12968,7 +14210,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumericValue), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumericValue.ElementType, 1, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("c:idx"), true, double.NegativeInfinity, true, 2147483647, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("c:idx"), true, 0, true, 2147483647, true));
@@ -12983,8 +14225,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NumericValue? NumericValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumericValue>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.NumericValue.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.NumericValue;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.NumericValue.ElementType);
         }
 
         /// <inheritdoc/>
@@ -12998,6 +14240,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Thickness : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "thickness");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_WallThickness");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Thickness class.
         /// </summary>
@@ -13018,7 +14266,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:thickness");
+            builder.SetSchema(ElementType);
             builder.AddElement<Thickness>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -13043,6 +14291,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class StockChartExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_StockChartExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the StockChartExtension class.
         /// </summary>
@@ -13087,7 +14341,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension>();
             builder.AddElement<StockChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
@@ -13097,7 +14351,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -13119,6 +14373,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class PieChartExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_PieChartExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PieChartExtension class.
         /// </summary>
@@ -13163,7 +14423,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries>();
             builder.AddElement<PieChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
@@ -13173,7 +14433,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -13195,6 +14455,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class Pie3DChartExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Pie3DChartExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Pie3DChartExtension class.
         /// </summary>
@@ -13239,7 +14505,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries>();
             builder.AddElement<Pie3DChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
@@ -13249,7 +14515,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -13273,6 +14539,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class NumRefExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_NumRefExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NumRefExtension class.
         /// </summary>
@@ -13317,7 +14589,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference>();
@@ -13329,9 +14601,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -13353,6 +14625,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class StrDataExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_StrDataExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the StrDataExtension class.
         /// </summary>
@@ -13397,7 +14675,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.AutoGeneneratedCategories>();
             builder.AddElement<StrDataExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
@@ -13407,7 +14685,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.AutoGeneneratedCategories), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.AutoGeneneratedCategories.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -13431,6 +14709,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class StrRefExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_StrRefExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the StrRefExtension class.
         /// </summary>
@@ -13475,7 +14759,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference>();
@@ -13487,9 +14771,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -13513,6 +14797,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class MultiLvlStrRefExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_MultiLvlStrRefExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MultiLvlStrRefExtension class.
         /// </summary>
@@ -13557,7 +14847,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference>();
@@ -13569,9 +14859,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -13599,6 +14889,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class DLblsExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_DLblsExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DLblsExtension class.
         /// </summary>
@@ -13643,7 +14939,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowLeaderLines>();
@@ -13659,13 +14955,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ChartText), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowLeaderLines), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LeaderLines), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ChartText.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowLeaderLines.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LeaderLines.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -13687,6 +14983,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class LineChartExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_LineChartExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LineChartExtension class.
         /// </summary>
@@ -13731,7 +15033,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension>();
             builder.AddElement<LineChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
@@ -13741,7 +15043,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -13763,6 +15065,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class Line3DChartExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Line3DChartExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Line3DChartExtension class.
         /// </summary>
@@ -13807,7 +15115,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension>();
             builder.AddElement<Line3DChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
@@ -13817,7 +15125,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -13839,6 +15147,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class ScatterChartExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ScatterChartExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ScatterChartExtension class.
         /// </summary>
@@ -13883,7 +15197,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredScatterSeries>();
             builder.AddElement<ScatterChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
@@ -13893,7 +15207,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredScatterSeries), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredScatterSeries.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -13915,6 +15229,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class RadarChartExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_RadarChartExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RadarChartExtension class.
         /// </summary>
@@ -13959,7 +15279,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredRadarSeries>();
             builder.AddElement<RadarChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
@@ -13969,7 +15289,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredRadarSeries), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredRadarSeries.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -13991,6 +15311,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class BarChartExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_BarChartExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BarChartExtension class.
         /// </summary>
@@ -14035,7 +15361,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries>();
             builder.AddElement<BarChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
@@ -14045,7 +15371,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -14067,6 +15393,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class Bar3DChartExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Bar3DChartExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Bar3DChartExtension class.
         /// </summary>
@@ -14111,7 +15443,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries>();
             builder.AddElement<Bar3DChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
@@ -14121,7 +15453,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -14143,6 +15475,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class AreaChartExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_AreaChartExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AreaChartExtension class.
         /// </summary>
@@ -14187,7 +15525,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries>();
             builder.AddElement<AreaChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
@@ -14197,7 +15535,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -14219,6 +15557,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class Area3DChartExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Area3DChartExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Area3DChartExtension class.
         /// </summary>
@@ -14263,7 +15607,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries>();
             builder.AddElement<Area3DChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
@@ -14273,7 +15617,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -14295,6 +15639,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class BubbleChartExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_BubbleChartExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BubbleChartExtension class.
         /// </summary>
@@ -14339,7 +15689,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBubbleSeries>();
             builder.AddElement<BubbleChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
@@ -14349,7 +15699,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBubbleSeries), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBubbleSeries.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -14371,6 +15721,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class SurfaceChartExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_SurfaceChartExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SurfaceChartExtension class.
         /// </summary>
@@ -14415,7 +15771,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries>();
             builder.AddElement<SurfaceChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
@@ -14425,7 +15781,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -14447,6 +15803,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class Surface3DChartExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Surface3DChartExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Surface3DChartExtension class.
         /// </summary>
@@ -14491,7 +15853,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries>();
             builder.AddElement<Surface3DChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
@@ -14501,7 +15863,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -14523,6 +15885,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class CatAxExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_CatAxExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CatAxExtension class.
         /// </summary>
@@ -14567,7 +15935,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat>();
             builder.AddElement<CatAxExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
@@ -14577,7 +15945,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -14599,6 +15967,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class DateAxExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_DateAxExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DateAxExtension class.
         /// </summary>
@@ -14643,7 +16017,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat>();
             builder.AddElement<DateAxExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
@@ -14653,7 +16027,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -14675,6 +16049,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class SerAxExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_SerAxExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SerAxExtension class.
         /// </summary>
@@ -14719,7 +16099,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat>();
             builder.AddElement<SerAxExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
@@ -14729,7 +16109,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -14751,6 +16131,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class ValAxExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ValAxExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ValAxExtension class.
         /// </summary>
@@ -14795,7 +16181,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat>();
             builder.AddElement<ValAxExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
@@ -14805,7 +16191,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -14830,6 +16216,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class UpDownBars : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "upDownBars");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_UpDownBars");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the UpDownBars class.
         /// </summary>
@@ -14864,17 +16256,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:upDownBars");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.GapWidth>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.UpBars>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DownBars>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.GapWidth), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.UpBars), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DownBars), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.GapWidth.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.UpBars.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DownBars.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -14887,8 +16279,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.GapWidth? GapWidth
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.GapWidth>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.GapWidth.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.GapWidth;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.GapWidth.ElementType);
         }
 
         /// <summary>
@@ -14900,8 +16292,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.UpBars? UpBars
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.UpBars>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.UpBars.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.UpBars;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.UpBars.ElementType);
         }
 
         /// <summary>
@@ -14913,8 +16305,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.DownBars? DownBars
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.DownBars>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.DownBars.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.DownBars;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.DownBars.ElementType);
         }
 
         /// <summary>
@@ -14926,8 +16318,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -14947,6 +16339,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class StockChartExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_StockChartExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the StockChartExtensionList class.
         /// </summary>
@@ -14981,11 +16379,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StockChartExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StockChartExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.StockChartExtension.ElementType, 0, 0)
             };
         }
 
@@ -15006,6 +16404,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class PieChartExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_PieChartExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PieChartExtensionList class.
         /// </summary>
@@ -15040,11 +16444,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PieChartExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PieChartExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PieChartExtension.ElementType, 0, 0)
             };
         }
 
@@ -15065,6 +16469,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class Pie3DChartExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Pie3DChartExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Pie3DChartExtensionList class.
         /// </summary>
@@ -15099,11 +16509,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Pie3DChartExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Pie3DChartExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Pie3DChartExtension.ElementType, 0, 0)
             };
         }
 
@@ -15124,6 +16534,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class NumRefExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_NumRefExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NumRefExtensionList class.
         /// </summary>
@@ -15158,11 +16574,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumRefExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumRefExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumRefExtension.ElementType, 0, 0)
             };
         }
 
@@ -15183,6 +16599,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class StrDataExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_StrDataExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the StrDataExtensionList class.
         /// </summary>
@@ -15217,11 +16639,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StrDataExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StrDataExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.StrDataExtension.ElementType, 0, 0)
             };
         }
 
@@ -15242,6 +16664,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class StrRefExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_StrRefExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the StrRefExtensionList class.
         /// </summary>
@@ -15276,11 +16704,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StrRefExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StrRefExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.StrRefExtension.ElementType, 0, 0)
             };
         }
 
@@ -15303,6 +16731,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class MultiLevelStringCache : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "multiLvlStrCache");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_MultiLvlStrData");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MultiLevelStringCache class.
         /// </summary>
@@ -15337,15 +16771,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:multiLvlStrCache");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Level>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Level), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PointCount.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Level.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -15358,8 +16792,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PointCount? PointCount
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PointCount.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PointCount;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PointCount.ElementType);
         }
 
         /// <inheritdoc/>
@@ -15379,6 +16813,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class MultiLvlStrRefExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_MultiLvlStrRefExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MultiLvlStrRefExtensionList class.
         /// </summary>
@@ -15413,11 +16853,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtension.ElementType, 0, 0)
             };
         }
 
@@ -15438,6 +16878,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class DLblsExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_DLblsExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DLblsExtensionList class.
         /// </summary>
@@ -15472,11 +16918,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DLblsExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DLblsExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DLblsExtension.ElementType, 0, 0)
             };
         }
 
@@ -15497,6 +16943,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class LineChartExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_LineChartExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LineChartExtensionList class.
         /// </summary>
@@ -15531,11 +16983,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LineChartExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LineChartExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.LineChartExtension.ElementType, 0, 0)
             };
         }
 
@@ -15556,6 +17008,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class Line3DChartExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Line3DChartExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Line3DChartExtensionList class.
         /// </summary>
@@ -15590,11 +17048,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Line3DChartExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Line3DChartExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Line3DChartExtension.ElementType, 0, 0)
             };
         }
 
@@ -15609,6 +17067,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class ScatterStyle : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "scatterStyle");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ScatterStyle");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ScatterStyle class.
         /// </summary>
@@ -15629,7 +17093,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:scatterStyle");
+            builder.SetSchema(ElementType);
             builder.AddElement<ScatterStyle>()
                 .AddAttribute("val", a => a.Val);
         }
@@ -15663,6 +17127,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class ScatterChartSeries : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ser");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ScatterSer");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ScatterChartSeries class.
         /// </summary>
@@ -15697,7 +17167,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ser");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.XValues>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Smooth>();
@@ -15717,21 +17187,21 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SeriesText.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Marker), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataPoint), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Trendline), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorBars), 0, 2),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.XValues), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.YValues), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Smooth), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Marker.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataPoint.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Trendline.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ErrorBars.ElementType, 0, 2),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.XValues.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.YValues.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Smooth.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -15744,8 +17214,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Index;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType);
         }
 
         /// <summary>
@@ -15757,8 +17227,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Order;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType);
         }
 
         /// <summary>
@@ -15770,8 +17240,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.SeriesText.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.SeriesText;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.SeriesText.ElementType);
         }
 
         /// <summary>
@@ -15783,8 +17253,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -15796,8 +17266,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Marker? Marker
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Marker.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Marker;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Marker.ElementType);
         }
 
         /// <inheritdoc/>
@@ -15817,6 +17287,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class ScatterChartExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ScatterChartExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ScatterChartExtensionList class.
         /// </summary>
@@ -15851,11 +17327,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ScatterChartExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ScatterChartExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ScatterChartExtension.ElementType, 0, 0)
             };
         }
 
@@ -15870,6 +17346,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class RadarStyle : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "radarStyle");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_RadarStyle");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RadarStyle class.
         /// </summary>
@@ -15890,7 +17372,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:radarStyle");
+            builder.SetSchema(ElementType);
             builder.AddElement<RadarStyle>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -15925,6 +17407,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class RadarChartSeries : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ser");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_RadarSer");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RadarChartSeries class.
         /// </summary>
@@ -15959,7 +17447,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ser");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
@@ -15977,19 +17465,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SeriesText.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Marker), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataPoint), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Marker.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataPoint.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Values.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -16002,8 +17490,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Index;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType);
         }
 
         /// <summary>
@@ -16015,8 +17503,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Order;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType);
         }
 
         /// <summary>
@@ -16028,8 +17516,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.SeriesText.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.SeriesText;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.SeriesText.ElementType);
         }
 
         /// <summary>
@@ -16041,8 +17529,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -16054,8 +17542,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PictureOptions;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType);
         }
 
         /// <summary>
@@ -16067,8 +17555,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Marker? Marker
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Marker.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Marker;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Marker.ElementType);
         }
 
         /// <inheritdoc/>
@@ -16088,6 +17576,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class RadarChartExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_RadarChartExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RadarChartExtensionList class.
         /// </summary>
@@ -16122,11 +17616,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RadarChartExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RadarChartExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.RadarChartExtension.ElementType, 0, 0)
             };
         }
 
@@ -16141,6 +17635,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Overlap : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "overlap");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Overlap");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Overlap class.
         /// </summary>
@@ -16161,7 +17661,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:overlap");
+            builder.SetSchema(ElementType);
             builder.AddElement<Overlap>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -16186,6 +17686,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class BarChartExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_BarChartExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BarChartExtensionList class.
         /// </summary>
@@ -16220,11 +17726,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarChartExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarChartExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BarChartExtension.ElementType, 0, 0)
             };
         }
 
@@ -16239,6 +17745,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Shape : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "shape");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Shape");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Shape class.
         /// </summary>
@@ -16259,7 +17771,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:shape");
+            builder.SetSchema(ElementType);
             builder.AddElement<Shape>()
                 .AddAttribute("val", a => a.Val);
         }
@@ -16281,6 +17793,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class Bar3DChartExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Bar3DChartExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Bar3DChartExtensionList class.
         /// </summary>
@@ -16315,11 +17833,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Bar3DChartExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Bar3DChartExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Bar3DChartExtension.ElementType, 0, 0)
             };
         }
 
@@ -16340,6 +17858,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class AreaChartExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_AreaChartExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AreaChartExtensionList class.
         /// </summary>
@@ -16374,11 +17898,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AreaChartExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AreaChartExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AreaChartExtension.ElementType, 0, 0)
             };
         }
 
@@ -16399,6 +17923,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class Area3DChartExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Area3DChartExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Area3DChartExtensionList class.
         /// </summary>
@@ -16433,11 +17963,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Area3DChartExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Area3DChartExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Area3DChartExtension.ElementType, 0, 0)
             };
         }
 
@@ -16472,6 +18002,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class BubbleChartSeries : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ser");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_BubbleSer");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BubbleChartSeries class.
         /// </summary>
@@ -16506,7 +18042,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ser");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.XValues>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>();
@@ -16528,23 +18064,23 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SeriesText.ElementType, 0, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataPoint), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Trendline), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorBars), 0, 2),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.XValues), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.YValues), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BubbleSize), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Bubble3D), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataPoint.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Trendline.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ErrorBars.ElementType, 0, 2),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.XValues.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.YValues.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BubbleSize.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Bubble3D.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -16557,8 +18093,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Index;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType);
         }
 
         /// <summary>
@@ -16570,8 +18106,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Order;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType);
         }
 
         /// <summary>
@@ -16583,8 +18119,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.SeriesText.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.SeriesText;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.SeriesText.ElementType);
         }
 
         /// <summary>
@@ -16596,8 +18132,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -16609,8 +18145,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PictureOptions;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType);
         }
 
         /// <summary>
@@ -16622,8 +18158,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative? InvertIfNegative
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative.ElementType);
         }
 
         /// <inheritdoc/>
@@ -16637,6 +18173,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class BubbleScale : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "bubbleScale");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_BubbleScale");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BubbleScale class.
         /// </summary>
@@ -16657,7 +18199,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:bubbleScale");
+            builder.SetSchema(ElementType);
             builder.AddElement<BubbleScale>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -16676,6 +18218,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class SizeRepresents : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "sizeRepresents");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_SizeRepresents");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SizeRepresents class.
         /// </summary>
@@ -16696,7 +18244,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:sizeRepresents");
+            builder.SetSchema(ElementType);
             builder.AddElement<SizeRepresents>()
                 .AddAttribute("val", a => a.Val);
         }
@@ -16718,6 +18266,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class BubbleChartExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_BubbleChartExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BubbleChartExtensionList class.
         /// </summary>
@@ -16752,11 +18306,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BubbleChartExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BubbleChartExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BubbleChartExtension.ElementType, 0, 0)
             };
         }
 
@@ -16777,6 +18331,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class SurfaceChartExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_SurfaceChartExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SurfaceChartExtensionList class.
         /// </summary>
@@ -16811,11 +18371,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartExtension.ElementType, 0, 0)
             };
         }
 
@@ -16836,6 +18396,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class Surface3DChartExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Surface3DChartExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Surface3DChartExtensionList class.
         /// </summary>
@@ -16870,11 +18436,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Surface3DChartExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Surface3DChartExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Surface3DChartExtension.ElementType, 0, 0)
             };
         }
 
@@ -16889,6 +18455,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class LabelAlignment : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "lblAlgn");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_LblAlgn");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LabelAlignment class.
         /// </summary>
@@ -16909,7 +18481,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:lblAlgn");
+            builder.SetSchema(ElementType);
             builder.AddElement<LabelAlignment>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -16928,6 +18500,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class LabelOffset : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "lblOffset");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_LblOffset");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LabelOffset class.
         /// </summary>
@@ -16948,7 +18526,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:lblOffset");
+            builder.SetSchema(ElementType);
             builder.AddElement<LabelOffset>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -16967,6 +18545,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class TickLabelSkip : SkipType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "tickLblSkip");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Skip");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TickLabelSkip class.
         /// </summary>
@@ -16977,7 +18561,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:tickLblSkip");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -16991,6 +18575,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class TickMarkSkip : SkipType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "tickMarkSkip");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Skip");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TickMarkSkip class.
         /// </summary>
@@ -17001,7 +18591,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:tickMarkSkip");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -17015,6 +18605,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public abstract partial class SkipType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Skip");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SkipType class.
         /// </summary>
@@ -17057,6 +18653,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class CatAxExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_CatAxExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CatAxExtensionList class.
         /// </summary>
@@ -17091,11 +18693,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CatAxExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CatAxExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.CatAxExtension.ElementType, 0, 0)
             };
         }
 
@@ -17110,6 +18712,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class BaseTimeUnit : TimeUnitType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "baseTimeUnit");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_TimeUnit");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BaseTimeUnit class.
         /// </summary>
@@ -17120,7 +18728,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:baseTimeUnit");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -17134,6 +18742,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class MajorTimeUnit : TimeUnitType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "majorTimeUnit");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_TimeUnit");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MajorTimeUnit class.
         /// </summary>
@@ -17144,7 +18758,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:majorTimeUnit");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -17158,6 +18772,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class MinorTimeUnit : TimeUnitType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "minorTimeUnit");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_TimeUnit");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MinorTimeUnit class.
         /// </summary>
@@ -17168,7 +18788,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:minorTimeUnit");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -17182,6 +18802,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public abstract partial class TimeUnitType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_TimeUnit");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TimeUnitType class.
         /// </summary>
@@ -17214,6 +18840,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class MajorUnit : AxisUnitType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "majorUnit");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_AxisUnit");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MajorUnit class.
         /// </summary>
@@ -17224,7 +18856,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:majorUnit");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -17238,6 +18870,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class MinorUnit : AxisUnitType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "minorUnit");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_AxisUnit");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MinorUnit class.
         /// </summary>
@@ -17248,7 +18886,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:minorUnit");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -17262,6 +18900,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public abstract partial class AxisUnitType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_AxisUnit");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AxisUnitType class.
         /// </summary>
@@ -17304,6 +18948,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class DateAxExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_DateAxExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DateAxExtensionList class.
         /// </summary>
@@ -17338,11 +18988,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DateAxExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DateAxExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DateAxExtension.ElementType, 0, 0)
             };
         }
 
@@ -17363,6 +19013,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class SerAxExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_SerAxExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SerAxExtensionList class.
         /// </summary>
@@ -17397,11 +19053,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SerAxExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SerAxExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SerAxExtension.ElementType, 0, 0)
             };
         }
 
@@ -17416,6 +19072,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class CrossBetween : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "crossBetween");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_CrossBetween");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CrossBetween class.
         /// </summary>
@@ -17436,7 +19098,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:crossBetween");
+            builder.SetSchema(ElementType);
             builder.AddElement<CrossBetween>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -17464,6 +19126,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class DisplayUnits : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "dispUnits");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_DispUnits");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DisplayUnits class.
         /// </summary>
@@ -17498,7 +19166,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:dispUnits");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BuiltInUnit>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DisplayUnitsLabel>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CustomDisplayUnit>();
@@ -17507,11 +19175,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CustomDisplayUnit), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BuiltInUnit), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.CustomDisplayUnit.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BuiltInUnit.ElementType, 1, 1)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DisplayUnitsLabel), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DisplayUnitsLabel.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -17532,6 +19200,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class ValAxExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ValAxExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ValAxExtensionList class.
         /// </summary>
@@ -17566,11 +19240,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ValAxExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ValAxExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ValAxExtension.ElementType, 0, 0)
             };
         }
 
@@ -17585,6 +19259,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class EditingLanguage : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "lang");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_TextLanguageID");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the EditingLanguage class.
         /// </summary>
@@ -17605,7 +19285,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:lang");
+            builder.SetSchema(ElementType);
             builder.AddElement<EditingLanguage>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -17624,6 +19304,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class Style : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "style");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Style");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Style class.
         /// </summary>
@@ -17644,7 +19330,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:style");
+            builder.SetSchema(ElementType);
             builder.AddElement<Style>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -17669,6 +19355,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class ColorMapOverride : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "clrMapOvr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ColorMapping");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ColorMapOverride class.
         /// </summary>
@@ -17823,7 +19515,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:clrMapOvr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.AddElement<ColorMapOverride>()
                 .AddAttribute("bg1", a => a.Background1, aBuilder =>
@@ -17888,7 +19580,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -17901,8 +19593,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -17924,6 +19616,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class PivotSource : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "pivotSource");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_PivotSource");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PivotSource class.
         /// </summary>
@@ -17958,15 +19656,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:pivotSource");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.FormatId>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PivotTableName>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PivotTableName), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.FormatId), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PivotTableName.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.FormatId.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -17979,8 +19677,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PivotTableName? PivotTableName
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PivotTableName>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PivotTableName.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PivotTableName;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PivotTableName.ElementType);
         }
 
         /// <summary>
@@ -17992,8 +19690,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.FormatId? FormatId
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.FormatId>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.FormatId.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.FormatId;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.FormatId.ElementType);
         }
 
         /// <summary>
@@ -18005,8 +19703,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -18030,6 +19728,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class Protection : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "protection");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Protection");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Protection class.
         /// </summary>
@@ -18064,7 +19768,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:protection");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartObject>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Data>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Formatting>();
@@ -18072,11 +19776,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.UserInterface>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartObject), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Data), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Formatting), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Selection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.UserInterface), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartObject.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Data.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Formatting.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Selection.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.UserInterface.ElementType, 0, 1)
             };
         }
 
@@ -18089,8 +19793,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartObject? ChartObject
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartObject>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartObject.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartObject;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartObject.ElementType);
         }
 
         /// <summary>
@@ -18102,8 +19806,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Data? Data
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Data>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Data.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Data;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Data.ElementType);
         }
 
         /// <summary>
@@ -18115,8 +19819,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Formatting? Formatting
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Formatting>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Formatting.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Formatting;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Formatting.ElementType);
         }
 
         /// <summary>
@@ -18128,8 +19832,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Selection? Selection
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Selection>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Selection.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Selection;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Selection.ElementType);
         }
 
         /// <summary>
@@ -18141,8 +19845,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.UserInterface? UserInterface
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.UserInterface>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.UserInterface.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.UserInterface;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.UserInterface.ElementType);
         }
 
         /// <inheritdoc/>
@@ -18174,6 +19878,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class Chart : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "chart");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Chart");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Chart class.
         /// </summary>
@@ -18208,7 +19918,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:chart");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum>();
@@ -18224,19 +19934,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.View3D>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Title), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PivotFormats), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.View3D), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Floor), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SideWall), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BackWall), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PlotArea), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Legend), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Title.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PivotFormats.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.View3D.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Floor.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SideWall.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BackWall.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PlotArea.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Legend.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList.ElementType, 0, 1)
             };
             builder.AddConstraint(new RelationshipExistConstraint(builder.CreateQName("r:id")));
         }
@@ -18250,8 +19960,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Title? Title
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Title>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Title.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Title;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Title.ElementType);
         }
 
         /// <summary>
@@ -18263,8 +19973,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted? AutoTitleDeleted
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted.ElementType);
         }
 
         /// <summary>
@@ -18276,8 +19986,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PivotFormats? PivotFormats
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PivotFormats>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PivotFormats.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PivotFormats;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PivotFormats.ElementType);
         }
 
         /// <summary>
@@ -18289,8 +19999,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.View3D? View3D
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.View3D>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.View3D.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.View3D;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.View3D.ElementType);
         }
 
         /// <summary>
@@ -18302,8 +20012,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Floor? Floor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Floor>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Floor.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Floor;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Floor.ElementType);
         }
 
         /// <summary>
@@ -18315,8 +20025,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.SideWall? SideWall
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SideWall>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.SideWall.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.SideWall;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.SideWall.ElementType);
         }
 
         /// <summary>
@@ -18328,8 +20038,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.BackWall? BackWall
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.BackWall>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.BackWall.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.BackWall;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.BackWall.ElementType);
         }
 
         /// <summary>
@@ -18341,8 +20051,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PlotArea? PlotArea
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PlotArea>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PlotArea.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PlotArea;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PlotArea.ElementType);
         }
 
         /// <summary>
@@ -18354,8 +20064,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Legend? Legend
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Legend>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Legend.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Legend;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Legend.ElementType);
         }
 
         /// <summary>
@@ -18367,8 +20077,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly? PlotVisibleOnly
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly.ElementType);
         }
 
         /// <summary>
@@ -18380,8 +20090,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs? DisplayBlanksAs
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs.ElementType);
         }
 
         /// <summary>
@@ -18393,8 +20103,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum? ShowDataLabelsOverMaximum
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum.ElementType);
         }
 
         /// <summary>
@@ -18406,8 +20116,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList? ChartExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -18427,6 +20137,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class ExternalData : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "externalData");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ExternalData");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ExternalData class.
         /// </summary>
@@ -18474,7 +20190,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:externalData");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate>();
             builder.AddElement<ExternalData>()
                 .AddAttribute("r:id", a => a.Id, aBuilder =>
@@ -18483,7 +20199,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate.ElementType, 0, 1)
             };
             builder.AddConstraint(new RelationshipExistConstraint(builder.CreateQName("r:id")));
         }
@@ -18497,8 +20213,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate? AutoUpdate
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate.ElementType);
         }
 
         /// <inheritdoc/>
@@ -18521,6 +20237,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class PrintSettings : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "printSettings");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_PrintSettings");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PrintSettings class.
         /// </summary>
@@ -18555,17 +20277,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:printSettings");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PageMargins>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PageSetup>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PageMargins), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PageSetup), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PageMargins.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PageSetup.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter.ElementType, 0, 1)
             };
         }
 
@@ -18578,8 +20300,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter? HeaderFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter.ElementType);
         }
 
         /// <summary>
@@ -18591,8 +20313,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PageMargins? PageMargins
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PageMargins>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PageMargins.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PageMargins;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PageMargins.ElementType);
         }
 
         /// <summary>
@@ -18604,8 +20326,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PageSetup? PageSetup
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PageSetup>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PageSetup.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PageSetup;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PageSetup.ElementType);
         }
 
         /// <summary>
@@ -18617,8 +20339,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter? LegacyDrawingHeaderFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter.ElementType);
         }
 
         /// <inheritdoc/>
@@ -18638,6 +20360,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class ChartSpaceExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ChartSpaceExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ChartSpaceExtensionList class.
         /// </summary>
@@ -18672,11 +20400,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtension.ElementType, 0, 0)
             };
         }
 
@@ -18699,6 +20427,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class ChartSpaceExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ChartSpaceExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ChartSpaceExtension class.
         /// </summary>
@@ -18743,7 +20477,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.PivotOptions>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.SketchOptions>();
@@ -18755,9 +20489,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.PivotOptions), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.SketchOptions), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Drawing.Charts.PivotOptions.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Drawing.Charts.SketchOptions.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new AnyParticle(0, 1)
             };
         }
@@ -18779,6 +20513,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class DLblExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_DLblExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DLblExtensionList class.
         /// </summary>
@@ -18813,11 +20553,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DLblExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DLblExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DLblExtension.ElementType, 0, 0)
             };
         }
 
@@ -18843,6 +20583,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class DLblExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_DLblExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DLblExtension class.
         /// </summary>
@@ -18887,7 +20633,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ExceptionForSave>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange>();
@@ -18902,12 +20648,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ExceptionForSave), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ExceptionForSave.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID.ElementType, 1, 1, version: FileFormatVersions.Office2016),
                 new AnyParticle(0, 1)
             };
         }
@@ -18936,6 +20682,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class DataPoint : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "dPt");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_DPt");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DataPoint class.
         /// </summary>
@@ -18970,7 +20722,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:dPt");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
@@ -18981,14 +20733,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Explosion>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Marker), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Bubble3D), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Explosion), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Marker.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Bubble3D.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Explosion.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -19001,8 +20753,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Index;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType);
         }
 
         /// <summary>
@@ -19014,8 +20766,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative? InvertIfNegative
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative.ElementType);
         }
 
         /// <summary>
@@ -19027,8 +20779,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Marker? Marker
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Marker.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Marker;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Marker.ElementType);
         }
 
         /// <summary>
@@ -19040,8 +20792,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Bubble3D? Bubble3D
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Bubble3D.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Bubble3D;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Bubble3D.ElementType);
         }
 
         /// <summary>
@@ -19053,8 +20805,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Explosion? Explosion
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Explosion>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Explosion.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Explosion;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Explosion.ElementType);
         }
 
         /// <summary>
@@ -19066,8 +20818,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -19079,8 +20831,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PictureOptions;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType);
         }
 
         /// <summary>
@@ -19092,8 +20844,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -19124,6 +20876,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class Trendline : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "trendline");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Trendline");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Trendline class.
         /// </summary>
@@ -19158,7 +20916,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:trendline");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation>();
@@ -19173,18 +20931,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TrendlineName>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TrendlineName), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TrendlineType), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PolynomialOrder), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Period), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Forward), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Backward), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Intercept), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.TrendlineName.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.TrendlineType.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PolynomialOrder.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Period.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Forward.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Backward.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Intercept.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -19197,8 +20955,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TrendlineName? TrendlineName
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TrendlineName>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.TrendlineName.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.TrendlineName;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.TrendlineName.ElementType);
         }
 
         /// <summary>
@@ -19210,8 +20968,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -19223,8 +20981,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TrendlineType? TrendlineType
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TrendlineType>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.TrendlineType.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.TrendlineType;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.TrendlineType.ElementType);
         }
 
         /// <summary>
@@ -19236,8 +20994,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PolynomialOrder? PolynomialOrder
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PolynomialOrder>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PolynomialOrder.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PolynomialOrder;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PolynomialOrder.ElementType);
         }
 
         /// <summary>
@@ -19249,8 +21007,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Period? Period
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Period>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Period.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Period;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Period.ElementType);
         }
 
         /// <summary>
@@ -19262,8 +21020,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Forward? Forward
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Forward>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Forward.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Forward;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Forward.ElementType);
         }
 
         /// <summary>
@@ -19275,8 +21033,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Backward? Backward
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Backward>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Backward.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Backward;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Backward.ElementType);
         }
 
         /// <summary>
@@ -19288,8 +21046,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Intercept? Intercept
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Intercept>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Intercept.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Intercept;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Intercept.ElementType);
         }
 
         /// <summary>
@@ -19301,8 +21059,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue? DisplayRSquaredValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue.ElementType);
         }
 
         /// <summary>
@@ -19314,8 +21072,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation? DisplayEquation
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation.ElementType);
         }
 
         /// <summary>
@@ -19327,8 +21085,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel? TrendlineLabel
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel.ElementType);
         }
 
         /// <summary>
@@ -19340,8 +21098,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -19369,6 +21127,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class ErrorBars : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "errBars");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ErrBars");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ErrorBars class.
         /// </summary>
@@ -19403,7 +21167,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:errBars");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NoEndCap>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue>();
@@ -19415,15 +21179,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Minus>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorDirection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorBarType), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValueType), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NoEndCap), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Plus), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Minus), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ErrorDirection.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ErrorBarType.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValueType.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NoEndCap.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Plus.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Minus.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -19436,8 +21200,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ErrorDirection? ErrorDirection
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ErrorDirection>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ErrorDirection.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ErrorDirection;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ErrorDirection.ElementType);
         }
 
         /// <summary>
@@ -19449,8 +21213,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ErrorBarType? ErrorBarType
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarType>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ErrorBarType.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ErrorBarType;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ErrorBarType.ElementType);
         }
 
         /// <summary>
@@ -19462,8 +21226,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValueType? ErrorBarValueType
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValueType>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValueType.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValueType;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValueType.ElementType);
         }
 
         /// <summary>
@@ -19475,8 +21239,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NoEndCap? NoEndCap
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NoEndCap>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.NoEndCap.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.NoEndCap;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.NoEndCap.ElementType);
         }
 
         /// <summary>
@@ -19488,8 +21252,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Plus? Plus
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Plus>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Plus.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Plus;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Plus.ElementType);
         }
 
         /// <summary>
@@ -19501,8 +21265,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Minus? Minus
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Minus>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Minus.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Minus;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Minus.ElementType);
         }
 
         /// <summary>
@@ -19514,8 +21278,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue? ErrorBarValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue.ElementType);
         }
 
         /// <summary>
@@ -19527,8 +21291,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -19540,8 +21304,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -19565,6 +21329,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class CategoryAxisData : AxisDataSourceType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "cat");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_AxDataSource");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CategoryAxisData class.
         /// </summary>
@@ -19599,16 +21369,16 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:cat");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringLiteral), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumberReference.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.StringReference.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.StringLiteral.ElementType, 1, 1)
                 }
             };
         }
@@ -19634,6 +21404,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class XValues : AxisDataSourceType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "xVal");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_AxDataSource");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the XValues class.
         /// </summary>
@@ -19668,16 +21444,16 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:xVal");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringLiteral), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumberReference.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.StringReference.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.StringLiteral.ElementType, 1, 1)
                 }
             };
         }
@@ -19703,6 +21479,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public abstract partial class AxisDataSourceType : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_AxDataSource");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AxisDataSourceType class.
         /// </summary>
@@ -19753,8 +21535,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference? MultiLevelStringReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference.ElementType);
         }
 
         /// <summary>
@@ -19766,8 +21548,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NumberReference? NumberReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberReference>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.NumberReference.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.NumberReference;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.NumberReference.ElementType);
         }
 
         /// <summary>
@@ -19779,8 +21561,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral? NumberLiteral
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral.ElementType);
         }
 
         /// <summary>
@@ -19792,8 +21574,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.StringReference? StringReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringReference>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.StringReference.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.StringReference;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.StringReference.ElementType);
         }
 
         /// <summary>
@@ -19805,8 +21587,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.StringLiteral? StringLiteral
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringLiteral>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.StringLiteral.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.StringLiteral;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.StringLiteral.ElementType);
         }
     }
 
@@ -19823,6 +21605,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class LineSerExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_LineSerExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LineSerExtensionList class.
         /// </summary>
@@ -19857,11 +21645,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LineSerExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LineSerExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.LineSerExtension.ElementType, 0, 0)
             };
         }
 
@@ -19888,6 +21676,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class LineSerExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_LineSerExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LineSerExtension class.
         /// </summary>
@@ -19932,7 +21726,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
@@ -19948,13 +21742,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID.ElementType, 1, 1, version: FileFormatVersions.Office2016),
                 new AnyParticle(0, 1)
             };
         }
@@ -19976,6 +21770,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class ScatterSerExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ScatterSerExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ScatterSerExtensionList class.
         /// </summary>
@@ -20010,11 +21810,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtension.ElementType, 0, 0)
             };
         }
 
@@ -20041,6 +21841,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class ScatterSerExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ScatterSerExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ScatterSerExtension class.
         /// </summary>
@@ -20085,7 +21891,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
@@ -20101,13 +21907,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID.ElementType, 1, 1, version: FileFormatVersions.Office2016),
                 new AnyParticle(0, 1)
             };
         }
@@ -20129,6 +21935,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class RadarSerExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_RadarSerExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RadarSerExtensionList class.
         /// </summary>
@@ -20163,11 +21975,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtension.ElementType, 0, 0)
             };
         }
 
@@ -20194,6 +22006,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class RadarSerExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_RadarSerExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RadarSerExtension class.
         /// </summary>
@@ -20238,7 +22056,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
@@ -20254,13 +22072,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID.ElementType, 1, 1, version: FileFormatVersions.Office2016),
                 new AnyParticle(0, 1)
             };
         }
@@ -20282,6 +22100,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class BarSerExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_BarSerExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BarSerExtensionList class.
         /// </summary>
@@ -20316,11 +22140,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarSerExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarSerExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BarSerExtension.ElementType, 0, 0)
             };
         }
 
@@ -20348,6 +22172,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class BarSerExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_BarSerExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BarSerExtension class.
         /// </summary>
@@ -20392,7 +22222,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
@@ -20409,14 +22239,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID.ElementType, 1, 1, version: FileFormatVersions.Office2016),
                 new AnyParticle(0, 1)
             };
         }
@@ -20438,6 +22268,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class AreaSerExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_AreaSerExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AreaSerExtensionList class.
         /// </summary>
@@ -20472,11 +22308,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtension.ElementType, 0, 0)
             };
         }
 
@@ -20503,6 +22339,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class AreaSerExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_AreaSerExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AreaSerExtension class.
         /// </summary>
@@ -20547,7 +22389,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
@@ -20563,13 +22405,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID.ElementType, 1, 1, version: FileFormatVersions.Office2016),
                 new AnyParticle(0, 1)
             };
         }
@@ -20591,6 +22433,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class PieSerExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_PieSerExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PieSerExtensionList class.
         /// </summary>
@@ -20625,11 +22473,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PieSerExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PieSerExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PieSerExtension.ElementType, 0, 0)
             };
         }
 
@@ -20656,6 +22504,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class PieSerExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_PieSerExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PieSerExtension class.
         /// </summary>
@@ -20700,7 +22554,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
@@ -20716,13 +22570,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID.ElementType, 1, 1, version: FileFormatVersions.Office2016),
                 new AnyParticle(0, 1)
             };
         }
@@ -20744,6 +22598,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class BubbleSerExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_BubbleSerExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BubbleSerExtensionList class.
         /// </summary>
@@ -20778,11 +22638,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtension.ElementType, 0, 0)
             };
         }
 
@@ -20809,6 +22669,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class BubbleSerExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_BubbleSerExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BubbleSerExtension class.
         /// </summary>
@@ -20853,7 +22719,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
@@ -20869,13 +22735,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID.ElementType, 1, 1, version: FileFormatVersions.Office2016),
                 new AnyParticle(0, 1)
             };
         }
@@ -20897,6 +22763,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class SurfaceSerExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_SurfaceSerExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SurfaceSerExtensionList class.
         /// </summary>
@@ -20931,11 +22803,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtension), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtension.ElementType, 0, 0)
             };
         }
 
@@ -20961,6 +22833,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class SurfaceSerExtension : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_SurfaceSerExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SurfaceSerExtension class.
         /// </summary>
@@ -21005,7 +22883,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
@@ -21020,12 +22898,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID.ElementType, 1, 1, version: FileFormatVersions.Office2016),
                 new AnyParticle(0, 1)
             };
         }
@@ -21047,6 +22925,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class DataDisplayOptions16 : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2017/03/chart", "CT_DataDisplayOptions16");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DataDisplayOptions16 class.
         /// </summary>
@@ -21081,12 +22965,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse.ElementType, 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -21099,8 +22983,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse? BooleanFalse
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse.ElementType) as DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse.ElementType);
         }
 
         /// <inheritdoc/>
@@ -21120,6 +23004,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class PivotFormats : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "pivotFmts");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_PivotFmts");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PivotFormats class.
         /// </summary>
@@ -21154,11 +23044,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:pivotFmts");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PivotFormat>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PivotFormat), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PivotFormat.ElementType, 0, 0)
             };
         }
 
@@ -21185,6 +23075,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class View3D : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "view3D");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_View3D");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the View3D class.
         /// </summary>
@@ -21219,7 +23115,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:view3D");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RightAngleAxes>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DepthPercent>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
@@ -21229,13 +23125,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RotateY>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RotateX), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.HeightPercent), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RotateY), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DepthPercent), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RightAngleAxes), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Perspective), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.RotateX.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.HeightPercent.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.RotateY.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DepthPercent.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.RightAngleAxes.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Perspective.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -21248,8 +23144,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.RotateX? RotateX
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.RotateX>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.RotateX.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.RotateX;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.RotateX.ElementType);
         }
 
         /// <summary>
@@ -21261,8 +23157,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.HeightPercent? HeightPercent
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.HeightPercent>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.HeightPercent.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.HeightPercent;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.HeightPercent.ElementType);
         }
 
         /// <summary>
@@ -21274,8 +23170,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.RotateY? RotateY
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.RotateY>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.RotateY.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.RotateY;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.RotateY.ElementType);
         }
 
         /// <summary>
@@ -21287,8 +23183,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.DepthPercent? DepthPercent
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.DepthPercent>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.DepthPercent.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.DepthPercent;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.DepthPercent.ElementType);
         }
 
         /// <summary>
@@ -21300,8 +23196,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.RightAngleAxes? RightAngleAxes
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.RightAngleAxes>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.RightAngleAxes.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.RightAngleAxes;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.RightAngleAxes.ElementType);
         }
 
         /// <summary>
@@ -21313,8 +23209,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Perspective? Perspective
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Perspective>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Perspective.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Perspective;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Perspective.ElementType);
         }
 
         /// <summary>
@@ -21326,8 +23222,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -21350,6 +23246,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class Floor : SurfaceType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "floor");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Surface");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Floor class.
         /// </summary>
@@ -21384,13 +23286,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:floor");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Thickness), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Thickness.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -21414,6 +23316,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class SideWall : SurfaceType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "sideWall");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Surface");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SideWall class.
         /// </summary>
@@ -21448,13 +23356,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:sideWall");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Thickness), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Thickness.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -21478,6 +23386,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class BackWall : SurfaceType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "backWall");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Surface");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BackWall class.
         /// </summary>
@@ -21512,13 +23426,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:backWall");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Thickness), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Thickness.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -21542,6 +23456,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public abstract partial class SurfaceType : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Surface");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SurfaceType class.
         /// </summary>
@@ -21591,8 +23511,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Thickness? Thickness
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Thickness>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Thickness.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Thickness;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Thickness.ElementType);
         }
 
         /// <summary>
@@ -21604,8 +23524,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties? ShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -21617,8 +23537,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PictureOptions;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType);
         }
 
         /// <summary>
@@ -21630,8 +23550,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType);
         }
     }
 
@@ -21671,6 +23591,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class PlotArea : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "plotArea");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_PlotArea");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PlotArea class.
         /// </summary>
@@ -21705,7 +23631,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:plotArea");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Area3DChart>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AreaChart>();
@@ -21732,36 +23658,36 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ValueAxis>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Layout), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Layout.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AreaChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Area3DChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LineChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Line3DChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StockChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RadarChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ScatterChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PieChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Pie3DChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DoughnutChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Bar3DChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.OfPieChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SurfaceChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Surface3DChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BubbleChart), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AreaChart.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Area3DChart.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.LineChart.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Line3DChart.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.StockChart.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.RadarChart.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ScatterChart.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PieChart.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Pie3DChart.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DoughnutChart.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BarChart.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Bar3DChart.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.OfPieChart.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SurfaceChart.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Surface3DChart.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BubbleChart.ElementType, 1, 1)
                 },
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 4)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ValueAxis), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxis), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DateAxis), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesAxis), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ValueAxis.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxis.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DateAxis.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SeriesAxis.ElementType, 1, 1)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataTable), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataTable.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -21774,8 +23700,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Layout? Layout
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Layout.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Layout;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Layout.ElementType);
         }
 
         /// <inheritdoc/>
@@ -21801,6 +23727,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class Legend : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "legend");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Legend");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Legend class.
         /// </summary>
@@ -21835,7 +23767,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:legend");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Overlay>();
@@ -21845,13 +23777,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LegendPosition>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LegendPosition), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LegendEntry), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Layout), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Overlay), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.LegendPosition.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.LegendEntry.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Layout.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Overlay.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -21864,8 +23796,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.LegendPosition? LegendPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.LegendPosition>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.LegendPosition.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.LegendPosition;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.LegendPosition.ElementType);
         }
 
         /// <inheritdoc/>
@@ -21879,6 +23811,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </summary>
     public partial class DisplayBlanksAs : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "dispBlanksAs");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_DispBlanksAs");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DisplayBlanksAs class.
         /// </summary>
@@ -21899,7 +23837,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:dispBlanksAs");
+            builder.SetSchema(ElementType);
             builder.AddElement<DisplayBlanksAs>()
                 .AddAttribute("val", a => a.Val);
         }
@@ -21921,6 +23859,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// </remarks>
     public partial class ChartExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ChartExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ChartExtensionList class.
         /// </summary>
@@ -21955,11 +23899,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataDisplayOptions16>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataDisplayOptions16), 0, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataDisplayOptions16.ElementType, 0, 0, version: FileFormatVersions.Office2019)
             };
         }
 
