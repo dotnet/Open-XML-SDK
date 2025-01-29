@@ -498,6 +498,7 @@ DocumentFormat.OpenXml.Packaging.MediaDataPartType.Asx = 8 -> DocumentFormat.Ope
 DocumentFormat.OpenXml.Packaging.MediaDataPartType.Avi = 9 -> DocumentFormat.OpenXml.Packaging.MediaDataPartType
 DocumentFormat.OpenXml.Packaging.MediaDataPartType.Midi = 1 -> DocumentFormat.OpenXml.Packaging.MediaDataPartType
 DocumentFormat.OpenXml.Packaging.MediaDataPartType.Mp3 = 2 -> DocumentFormat.OpenXml.Packaging.MediaDataPartType
+DocumentFormat.OpenXml.Packaging.MediaDataPartType.Mp4 = 18 -> DocumentFormat.OpenXml.Packaging.MediaDataPartType
 DocumentFormat.OpenXml.Packaging.MediaDataPartType.MpegAudio = 6 -> DocumentFormat.OpenXml.Packaging.MediaDataPartType
 DocumentFormat.OpenXml.Packaging.MediaDataPartType.MpegUrl = 3 -> DocumentFormat.OpenXml.Packaging.MediaDataPartType
 DocumentFormat.OpenXml.Packaging.MediaDataPartType.MpegVideo = 11 -> DocumentFormat.OpenXml.Packaging.MediaDataPartType
