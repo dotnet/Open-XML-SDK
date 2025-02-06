@@ -10,7 +10,6 @@ using System.Text;
 using System.Xml;
 using System.Xml.Linq;
 using Xunit;
-using Xunit.Abstractions;
 
 #pragma warning disable 162
 

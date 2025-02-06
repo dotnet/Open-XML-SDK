@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Xunit.Abstractions;
+using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
 {

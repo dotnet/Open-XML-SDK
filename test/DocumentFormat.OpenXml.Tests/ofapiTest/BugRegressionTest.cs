@@ -8,7 +8,6 @@ using DocumentFormat.OpenXml.Wordprocessing;
 using System;
 using System.Linq;
 using Xunit;
-using Xunit.Abstractions;
 
 using static DocumentFormat.OpenXml.Tests.TestAssets;
 
@@ -41,28 +40,28 @@ namespace DocumentFormat.OpenXml.Tests
 "    <x:color theme=\"6\" />" +
 "</x:colorScale>");
 
-            var results = validator.Validate(colorScale);
+            var results = validator.Validate(colorScale, TestContext.Current.CancellationToken);
             Assert.Single(results);
             Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", results.First().Id);
             Assert.EndsWith(":cfvo>.", results.First().Description);
 
             colorScale.PrependChild(new DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject() { Type = DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObjectValues.Min });
-            results = validator.Validate(colorScale);
+            results = validator.Validate(colorScale, TestContext.Current.CancellationToken);
             Assert.Empty(results);
 
             colorScale.PrependChild(new DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject() { Type = DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObjectValues.Max });
-            results = validator.Validate(colorScale);
+            results = validator.Validate(colorScale, TestContext.Current.CancellationToken);
             Assert.Empty(results);
 
             colorScale.LastChild.Remove();
-            results = validator.Validate(colorScale);
+            results = validator.Validate(colorScale, TestContext.Current.CancellationToken);
             Assert.Single(results);
             Assert.Equal("Sch_IncompleteContentExpectingComplex", results.First().Id);
             Assert.EndsWith(":color>.", results.First().Description);
 
             colorScale.Append(new DocumentFormat.OpenXml.Spreadsheet.Color());
             colorScale.Append(new DocumentFormat.OpenXml.Spreadsheet.Color());
-            results = validator.Validate(colorScale);
+            results = validator.Validate(colorScale, TestContext.Current.CancellationToken);
             Assert.Empty(results);
         }
 
@@ -91,7 +90,7 @@ namespace DocumentFormat.OpenXml.Tests
                 new RunProperties(new RunFonts() { Hint = FontTypeHintValues.EastAsia })));
 
             // an empty "AlternateContent"
-            var errors = validator.Validate(p); // should no hang, no OOM
+            var errors = validator.Validate(p, TestContext.Current.CancellationToken); // should no hang, no OOM
 
             Assert.Collection(
                 errors.OrderBy(e => e.Id),
@@ -109,13 +108,13 @@ namespace DocumentFormat.OpenXml.Tests
             // append an empty "Choice"
             p.AddNamespaceDeclaration("w14", "http://w14");
             acb.AppendChild(new AlternateContentChoice() { Requires = "w14" });
-            errors = validator.Validate(p); // should no hang, no OOM
+            errors = validator.Validate(p, TestContext.Current.CancellationToken); // should no hang, no OOM
             Assert.Single(errors);
             Assert.Same(p.FirstChild.NextSibling().FirstChild.NextSibling(), errors.ElementAt(0).RelatedNode);
 
             // append an empty "Fallback"
             acb.AppendChild(new AlternateContentFallback());
-            errors = validator.Validate(p); // should no hang, no OOM
+            errors = validator.Validate(p, TestContext.Current.CancellationToken); // should no hang, no OOM
             Assert.Single(errors);
             Assert.Same(p.FirstChild.NextSibling().FirstChild.NextSibling(), errors.ElementAt(0).RelatedNode);
         }
@@ -131,7 +130,7 @@ namespace DocumentFormat.OpenXml.Tests
             var element = new DocumentFormat.OpenXml.Presentation.ModificationVerifier();
             element.SaltData = "8fkqu/A/6B1OQrRX1Vb3oQ";
 
-            var errors = validator.Validate(element);
+            var errors = validator.Validate(element, TestContext.Current.CancellationToken);
 
             Assert.Collection(errors.OrderBy(t => t.Description), e =>
             {
@@ -153,7 +152,7 @@ namespace DocumentFormat.OpenXml.Tests
             var element = new DocumentFormat.OpenXml.Presentation.ModificationVerifier();
             element.SaltData = "8fkqu/A/6B1OQrRX1Vb3oQ";
 
-            var errors = validator.Validate(element);
+            var errors = validator.Validate(element, TestContext.Current.CancellationToken);
 
             Assert.Collection(
                 errors.OrderBy(t => t.Description),
@@ -232,7 +231,7 @@ namespace DocumentFormat.OpenXml.Tests
             var framePr = new FrameProperties();
             framePr.Height = 32767;
 
-            var errors = validator.Validate(framePr);
+            var errors = validator.Validate(framePr, TestContext.Current.CancellationToken);
             Assert.Single(errors);
             Assert.Equal(ValidationErrorType.Schema, errors.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", errors.First().Id);
@@ -247,7 +246,7 @@ namespace DocumentFormat.OpenXml.Tests
             DocumentFormat.OpenXml.Wordprocessing.StatusText st = new StatusText();
             st.Val = "111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111";
 
-            var errors = validator.Validate(st);
+            var errors = validator.Validate(st, TestContext.Current.CancellationToken);
 
             Assert.Collection(errors, e =>
             {
@@ -272,7 +271,7 @@ namespace DocumentFormat.OpenXml.Tests
             cn.RotatedBoundingBox.Items.Add("aaa");
             cn.RotatedBoundingBox.Items.Add("bbb");
 
-            var errors = validator.Validate(cn);
+            var errors = validator.Validate(cn, TestContext.Current.CancellationToken);
 
             Assert.Collection(errors, e =>
             {
@@ -295,7 +294,7 @@ namespace DocumentFormat.OpenXml.Tests
             spsm.Val = new StringValue();
             spsm.Val.Value = "aaaaaa";
 
-            var errors = validator.Validate(spsm);
+            var errors = validator.Validate(spsm, TestContext.Current.CancellationToken);
 
             Assert.Collection(errors, e =>
             {
@@ -320,7 +319,7 @@ namespace DocumentFormat.OpenXml.Tests
             spsm.Val = new StringValue();
             spsm.Val.Value = "aaaaaa";
 
-            var errors = validator.Validate(spsm);
+            var errors = validator.Validate(spsm, TestContext.Current.CancellationToken);
 
             Assert.Collection(errors, e =>
             {
@@ -341,11 +340,11 @@ namespace DocumentFormat.OpenXml.Tests
 
             DocumentFormat.OpenXml.Office2010.Excel.FormControlProperties fp = new DocumentFormat.OpenXml.Office2010.Excel.FormControlProperties();
 
-            var errors = validator.Validate(fp);
+            var errors = validator.Validate(fp, TestContext.Current.CancellationToken);
             Assert.Empty(errors);
 
             fp.AppendChild(new DocumentFormat.OpenXml.Office2010.Excel.BorderColor());
-            errors = validator.Validate(fp);
+            errors = validator.Validate(fp, TestContext.Current.CancellationToken);
             Assert.Single(errors);
             Assert.Equal(ValidationErrorType.Schema, errors.First().ErrorType);
             Assert.Equal("Sch_InvalidElementContentExpectingComplex", errors.First().Id);
@@ -363,7 +362,7 @@ namespace DocumentFormat.OpenXml.Tests
             element.EmbeddedObjectProperties = new DocumentFormat.OpenXml.Spreadsheet.EmbeddedObjectProperties();
 
             // In Office2007, the OleObject has no children.
-            var errors = validator.Validate(element);
+            var errors = validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(errors);
             Assert.Same(element, errors.First().Node);
             Assert.Equal(ValidationErrorType.Schema, errors.First().ErrorType);
@@ -371,7 +370,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // Office2010, no error on OleObject, but an error on EmbeddedObjectProperties.
             var o14Validator = new OpenXmlValidator(FileFormatVersions.Office2010);
-            errors = o14Validator.Validate(element);
+            errors = o14Validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(errors);
             Assert.Same(element.EmbeddedObjectProperties, errors.First().Node);
             Assert.Equal(ValidationErrorType.Schema, errors.First().ErrorType);
@@ -390,7 +389,7 @@ namespace DocumentFormat.OpenXml.Tests
             element.DistanceFromLeft = new UInt32Value();
             element.DistanceFromLeft.InnerText = "Foo";
 
-            var errors = validator.Validate(element);
+            var errors = validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(errors);
             Assert.Same(element, errors.First().Node);
             Assert.Equal(ValidationErrorType.Schema, errors.First().ErrorType);
@@ -408,7 +407,7 @@ namespace DocumentFormat.OpenXml.Tests
             tcmd.AppendChild(new TopMargin());
             var errorChild = tcmd.AppendChild(new LeftMargin()); // LeftMargin is wrong element, it should be TableCellLeftMargin, but the two element has same element tag.
 
-            var errors = validator.Validate(tcmd);
+            var errors = validator.Validate(tcmd, TestContext.Current.CancellationToken);
             Assert.Single(errors);
             Assert.Same(tcmd, errors.First().Node);
             Assert.Same(errorChild, errors.First().RelatedNode);
@@ -428,7 +427,7 @@ namespace DocumentFormat.OpenXml.Tests
             OpenXmlAttribute rsidR = paragraph.GetAttribute("rsidR", paragraph.NamespaceUri);
             OpenXmlAttribute newattr = new OpenXmlAttribute(rsidR.LocalName, rsidR.NamespaceUri, "0102");
             paragraph.SetAttribute(newattr);
-            var errors = new OpenXmlValidator().Validate(paragraph);
+            var errors = new OpenXmlValidator().Validate(paragraph, TestContext.Current.CancellationToken);
             Assert.Single(errors);
             Assert.Equal(ValidationErrorType.Schema, errors.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", errors.First().Id);
@@ -443,7 +442,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             var shape = new DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape();
             shape.TextBody = new DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody();
-            var errors = validator.Validate(shape);
+            var errors = validator.Validate(shape, TestContext.Current.CancellationToken);
 
             Assert.Collection(
                 errors.OrderBy(t => t.Id),
@@ -473,7 +472,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             DocumentFormat.OpenXml.ExtendedProperties.DocumentSecurity docsecurity = new DocumentFormat.OpenXml.ExtendedProperties.DocumentSecurity();
 
-            var errors = validator.Validate(docsecurity);
+            var errors = validator.Validate(docsecurity, TestContext.Current.CancellationToken);
 
             Assert.Collection(errors, e =>
             {
@@ -493,7 +492,7 @@ namespace DocumentFormat.OpenXml.Tests
             var validator = new OpenXmlValidator(version);
 
             var element = new Shading() { Color = "invalid union value", Val = ShadingPatternValues.Percent10 };
-            var errors = validator.Validate(element);
+            var errors = validator.Validate(element, TestContext.Current.CancellationToken);
 
             Assert.Collection(errors, e =>
             {
@@ -514,7 +513,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             DocumentFormat.OpenXml.Drawing.Charts.Trendline tl = new DocumentFormat.OpenXml.Drawing.Charts.Trendline();
             tl.AppendChild(new DocumentFormat.OpenXml.Drawing.Diagrams.ShapeProperties());
-            var errors = validator.Validate(tl);
+            var errors = validator.Validate(tl, TestContext.Current.CancellationToken);
             Assert.Single(errors);
             Assert.Same(tl, errors.First().Node);
         }
@@ -526,7 +525,7 @@ namespace DocumentFormat.OpenXml.Tests
             var validator = new OpenXmlValidator(version);
 
             var p = new Paragraph(new DocumentFormat.OpenXml.Wordprocessing.SectionProperties());
-            var errors = validator.Validate(p);
+            var errors = validator.Validate(p, TestContext.Current.CancellationToken);
             Assert.Single(errors);
             Assert.Same(p, errors.First().Node);
             Assert.EndsWith("List of possible elements expected: <http://schemas.openxmlformats.org/wordprocessingml/2006/main:pPr>.", errors.First().Description);
@@ -542,7 +541,7 @@ namespace DocumentFormat.OpenXml.Tests
             lvl.AppendChild(new StartNumberingValue() { Val = 1 });
             lvl.AddNamespaceDeclaration("O15", "http://O15.com");
             var ac = lvl.AppendChild(new AlternateContent(new AlternateContentChoice() { Requires = "O15" }, new AlternateContentFallback()));
-            var errors = validator.Validate(lvl);
+            var errors = validator.Validate(lvl, TestContext.Current.CancellationToken);
             Assert.Empty(errors);
         }
 
@@ -554,13 +553,13 @@ namespace DocumentFormat.OpenXml.Tests
 
             // change <xsd:any > to <xsd:any minOccurs=0 in CT_OfficeArtExtension"
             DocumentFormat.OpenXml.Drawing.Extension ext = new DocumentFormat.OpenXml.Drawing.Extension() { Uri = "test" };
-            var errors = validator.Validate(ext);
+            var errors = validator.Validate(ext, TestContext.Current.CancellationToken);
             Assert.Empty(errors);
 
             // CT_Extension in PPT, <xsd:any > without minOccurs
             var pext = new DocumentFormat.OpenXml.Presentation.Extension();
             pext.Uri = "http://www.live.com";
-            errors = validator.Validate(pext);
+            errors = validator.Validate(pext, TestContext.Current.CancellationToken);
             Assert.Single(errors);
             Assert.EndsWith("any element in namespace '##any'.", errors.First().Description);
         }
@@ -572,7 +571,7 @@ namespace DocumentFormat.OpenXml.Tests
             var validator = new OpenXmlValidator(version);
 
             var element = new DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape();
-            var errors = validator.Validate(element);
+            var errors = validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(errors);
             Assert.Equal("The element has incomplete content.".Length, errors.First().Description.LastIndexOf(" List of possible elements expected:"));
         }
@@ -584,12 +583,12 @@ namespace DocumentFormat.OpenXml.Tests
             var validator = new OpenXmlValidator(version);
 
             var element = new DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape();
-            var errors = validator.Validate(element);
+            var errors = validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Single(errors);
             Assert.Equal("The element has incomplete content.".Length, errors.First().Description.LastIndexOf(" List of possible elements expected:"));
 
             element.AppendChild(new DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody());
-            var errors2 = validator.Validate(element);
+            var errors2 = validator.Validate(element, TestContext.Current.CancellationToken);
             Assert.Equal(2, errors2.Count());
 
             var message1 = errors.First().Description;
