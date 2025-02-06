@@ -245,7 +245,6 @@ public static class FlatOpcExtensions
             return Cached.Array<byte>();
         }
 
-        var base64CharArray = chunkedBase64String.Where(c => c is not '\r' and not '\n').ToArray();
-        return Convert.FromBase64CharArray(base64CharArray, 0, base64CharArray.Length);
+        return Convert.FromBase64String(chunkedBase64String);
     }
 }
