@@ -24,6 +24,12 @@ namespace DocumentFormat.OpenXml.Office2013.ExcelAc
     /// </summary>
     public partial class AbsolutePath : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/ac", "absPath");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/ac", "CT_AbsolutePath");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AbsolutePath class.
         /// </summary>
@@ -44,7 +50,7 @@ namespace DocumentFormat.OpenXml.Office2013.ExcelAc
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("x15ac:absPath");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<AbsolutePath>()
                 .AddAttribute("url", a => a.Url, aBuilder =>

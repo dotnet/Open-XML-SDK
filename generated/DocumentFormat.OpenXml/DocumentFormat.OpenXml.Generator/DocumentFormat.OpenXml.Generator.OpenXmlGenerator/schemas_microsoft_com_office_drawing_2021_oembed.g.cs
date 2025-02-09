@@ -30,6 +30,12 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed
     /// </remarks>
     public partial class OEmbedShared : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2021/oembed", "oembedShared");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2021/oembed", "CT_OEmbedShared");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OEmbedShared class.
         /// </summary>
@@ -84,9 +90,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("aoe:oembedShared");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed.OfficeArtExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed.OfficeArtExtensionList());
             builder.AddElement<OEmbedShared>()
                 .AddAttribute("srcUrl", a => a.SrcUrl, aBuilder =>
                 {
@@ -98,7 +104,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed.OfficeArtExtensionList.ElementType, 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -111,8 +117,8 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed
         /// </remarks>
         public DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed.OfficeArtExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed.OfficeArtExtensionList.ElementType) as DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed.OfficeArtExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed.OfficeArtExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -132,6 +138,12 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed
     /// </remarks>
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2021/oembed", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_OfficeArtExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OfficeArtExtensionList class.
         /// </summary>
@@ -166,16 +178,16 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("aoe:extLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Extension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Extension.ElementType, 0, 0)
                     }
                 }
             };

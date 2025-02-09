@@ -13,12 +13,12 @@ namespace DocumentFormat.OpenXml.Framework.Schema
     /// </summary>
     internal readonly struct ParticleCollection : IEnumerable<OpenXmlElement>
     {
-        private readonly Type _type;
+        private readonly OpenXmlSchemaType _type;
         private readonly OpenXmlCompositeElement _element;
         private readonly CompiledParticle _compiled;
         private readonly ParticlePath? _elementPath;
 
-        internal ParticleCollection(Type type, CompiledParticle compiled, OpenXmlCompositeElement element)
+        internal ParticleCollection(in OpenXmlSchemaType type, CompiledParticle compiled, OpenXmlCompositeElement element)
         {
             _type = type;
             _element = element;
@@ -148,7 +148,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
             return null;
         }
 
-        public Enumerator GetEnumerator() => new Enumerator(_element, _type);
+        public Enumerator GetEnumerator() => new(_element, _type);
 
         IEnumerator<OpenXmlElement> IEnumerable<OpenXmlElement>.GetEnumerator() => GetEnumerator();
 
@@ -156,10 +156,10 @@ namespace DocumentFormat.OpenXml.Framework.Schema
 
         public struct Enumerator : IEnumerator<OpenXmlElement>
         {
-            private readonly Type _type;
+            private readonly OpenXmlSchemaType _type;
             private OpenXmlElement? _child;
 
-            internal Enumerator(OpenXmlElement element, Type type)
+            internal Enumerator(OpenXmlElement element, in OpenXmlSchemaType type)
             {
                 _type = type;
                 _child = element.FirstChild;
@@ -180,7 +180,7 @@ namespace DocumentFormat.OpenXml.Framework.Schema
 
                 while (_child is not null)
                 {
-                    if (_child.GetType() == _type)
+                    if (_child.Metadata.Type == _type)
                     {
                         Current = _child;
                         _child = _child.NextSibling();
