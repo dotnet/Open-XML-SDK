@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
             // This is on a hot-path and using a dictionary adds substantial time to the lookup. Most child lists are small, so using a sorted
             // list to store them with a binary search improves overall performance.
-            var idx = Array.BinarySearch(_data, new ElementFactory(null, qname, null!), ElementChildNameComparer.Instance);
+            var idx = Array.BinarySearch(_data, new ElementFactory(new(qname, default), null!), ElementChildNameComparer.Instance);
 
             if (idx < 0)
             {
@@ -74,7 +74,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                     return 1;
                 }
 
-                return x.QName.CompareTo(y.QName);
+                return x.Type.Name.CompareTo(y.Type.Name);
             }
         }
     }

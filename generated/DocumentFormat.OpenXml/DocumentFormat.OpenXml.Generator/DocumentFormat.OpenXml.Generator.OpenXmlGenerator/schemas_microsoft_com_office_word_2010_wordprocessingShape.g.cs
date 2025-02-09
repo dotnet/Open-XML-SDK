@@ -39,6 +39,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     /// </remarks>
     public partial class WordprocessingShape : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingShape", "wsp");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingShape", "CT_WordprocessingShape");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the WordprocessingShape class.
         /// </summary>
@@ -83,7 +89,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("wps:wsp");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualConnectorProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingProperties>();
@@ -98,21 +104,21 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
                 .AddAttribute("normalEastAsianFlow", a => a.NormalEastAsianFlow);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingProperties), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingProperties.ElementType, 0, 1, version: FileFormatVersions.Office2010),
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingShapeProperties), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualConnectorProperties), 1, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingShapeProperties.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualConnectorProperties.ElementType, 1, 1, version: FileFormatVersions.Office2010)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.ShapeProperties), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.ShapeStyle), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.ShapeProperties.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.ShapeStyle.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2010),
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.TextBoxInfo2), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.LinkedTextBox), 1, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.TextBoxInfo2.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.LinkedTextBox.ElementType, 1, 1, version: FileFormatVersions.Office2010)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.TextBodyProperties), 1, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.TextBodyProperties.ElementType, 1, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -125,8 +131,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingProperties.ElementType) as DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -146,6 +152,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     /// </remarks>
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingShape", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_OfficeArtExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OfficeArtExtensionList class.
         /// </summary>
@@ -180,7 +192,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("wps:extLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -189,7 +201,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Extension.ElementType, 0, 0)
                     }
                 }
             };
@@ -214,6 +226,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     /// </remarks>
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingShape", "cNvPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_NonVisualDrawingProps");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NonVisualDrawingProperties class.
         /// </summary>
@@ -298,7 +316,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("wps:cNvPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
@@ -317,9 +335,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
                 .AddAttribute("title", a => a.Title);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -332,8 +350,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick? HyperlinkOnClick
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick.ElementType) as DocumentFormat.OpenXml.Drawing.HyperlinkOnClick;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.HyperlinkOnClick.ElementType);
         }
 
         /// <summary>
@@ -345,8 +363,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover? HyperlinkOnHover
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover.ElementType) as DocumentFormat.OpenXml.Drawing.HyperlinkOnHover;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.HyperlinkOnHover.ElementType);
         }
 
         /// <summary>
@@ -358,8 +376,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -380,6 +398,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     /// </remarks>
     public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingShape", "cNvSpPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_NonVisualDrawingShapeProps");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NonVisualDrawingShapeProperties class.
         /// </summary>
@@ -424,7 +448,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("wps:cNvSpPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapeLocks>();
@@ -432,8 +456,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
                 .AddAttribute("txBox", a => a.TextBox);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeLocks), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ShapeLocks.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -446,8 +470,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ShapeLocks? ShapeLocks
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ShapeLocks>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.ShapeLocks.ElementType) as DocumentFormat.OpenXml.Drawing.ShapeLocks;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.ShapeLocks.ElementType);
         }
 
         /// <summary>
@@ -459,8 +483,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -483,6 +507,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     /// </remarks>
     public partial class NonVisualConnectorProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingShape", "cNvCnPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_NonVisualConnectorProperties");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NonVisualConnectorProperties class.
         /// </summary>
@@ -517,7 +547,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("wps:cNvCnPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.StartConnection>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EndConnection>();
@@ -525,10 +555,10 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.StartConnection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EndConnection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.StartConnection.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.EndConnection.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -541,8 +571,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks? ConnectionShapeLocks
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks.ElementType) as DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks.ElementType);
         }
 
         /// <summary>
@@ -554,8 +584,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.StartConnection? StartConnection
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.StartConnection>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.StartConnection.ElementType) as DocumentFormat.OpenXml.Drawing.StartConnection;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.StartConnection.ElementType);
         }
 
         /// <summary>
@@ -567,8 +597,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.EndConnection? EndConnection
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.EndConnection>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.EndConnection.ElementType) as DocumentFormat.OpenXml.Drawing.EndConnection;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.EndConnection.ElementType);
         }
 
         /// <summary>
@@ -580,8 +610,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -615,6 +645,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     /// </remarks>
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingShape", "spPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ShapeProperties");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShapeProperties class.
         /// </summary>
@@ -659,7 +695,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("wps:spPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
@@ -683,39 +719,39 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Transform2D.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.CustomGeometry.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.PresetGeometry.ElementType, 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.NoFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.GradientFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.BlipFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.PatternFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.GroupFill.ElementType, 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Outline.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.EffectList.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Scene3DType.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Shape3DType.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -728,8 +764,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Transform2D.ElementType) as DocumentFormat.OpenXml.Drawing.Transform2D;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Transform2D.ElementType);
         }
 
         /// <inheritdoc/>
@@ -752,6 +788,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     /// </remarks>
     public partial class ShapeStyle : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingShape", "style");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ShapeStyle");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShapeStyle class.
         /// </summary>
@@ -786,7 +828,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("wps:style");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.FontReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.LineReference>();
@@ -794,10 +836,10 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectReference>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineReference), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FillReference), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectReference), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FontReference), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.LineReference.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.FillReference.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.EffectReference.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.FontReference.ElementType, 1, 1)
             };
         }
 
@@ -810,8 +852,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.LineReference? LineReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.LineReference>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.LineReference.ElementType) as DocumentFormat.OpenXml.Drawing.LineReference;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.LineReference.ElementType);
         }
 
         /// <summary>
@@ -823,8 +865,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.FillReference? FillReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.FillReference>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.FillReference.ElementType) as DocumentFormat.OpenXml.Drawing.FillReference;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.FillReference.ElementType);
         }
 
         /// <summary>
@@ -836,8 +878,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.EffectReference? EffectReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.EffectReference.ElementType) as DocumentFormat.OpenXml.Drawing.EffectReference;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.EffectReference.ElementType);
         }
 
         /// <summary>
@@ -849,8 +891,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.FontReference? FontReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.FontReference>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.FontReference.ElementType) as DocumentFormat.OpenXml.Drawing.FontReference;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.FontReference.ElementType);
         }
 
         /// <inheritdoc/>
@@ -871,6 +913,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     /// </remarks>
     public partial class TextBoxInfo2 : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingShape", "txbx");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingShape", "CT_TextboxInfo");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TextBoxInfo2 class.
         /// </summary>
@@ -915,7 +963,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("wps:txbx");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextBoxContent>();
@@ -923,8 +971,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
                 .AddAttribute("id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -937,8 +985,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TextBoxContent? TextBoxContent
         {
-            get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextBoxContent>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent.ElementType) as DocumentFormat.OpenXml.Wordprocessing.TextBoxContent;
+            set => SetElement(value, DocumentFormat.OpenXml.Wordprocessing.TextBoxContent.ElementType);
         }
 
         /// <summary>
@@ -950,8 +998,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList.ElementType) as DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -971,6 +1019,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     /// </remarks>
     public partial class LinkedTextBox : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingShape", "linkedTxbx");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingShape", "CT_LinkedTextboxInformation");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LinkedTextBox class.
         /// </summary>
@@ -1025,7 +1079,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("wps:linkedTxbx");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList>();
             builder.AddElement<LinkedTextBox>()
@@ -1039,7 +1093,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -1052,8 +1106,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList.ElementType) as DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -1080,6 +1134,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     /// </remarks>
     public partial class TextBodyProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingShape", "bodyPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextBodyProperties");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TextBodyProperties class.
         /// </summary>
@@ -1304,7 +1364,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("wps:bodyPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.FlatText>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
@@ -1357,26 +1417,26 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
                 .AddAttribute("compatLnSpc", a => a.CompatibleLineSpacing);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetTextWarp), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.PresetTextWarp.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoAutoFit), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NormalAutoFit), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeAutoFit), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.NoAutoFit.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.NormalAutoFit.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.ShapeAutoFit.ElementType, 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Scene3DType.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FlatText), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Shape3DType.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.FlatText.ElementType, 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -1389,8 +1449,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PresetTextWarp? PresetTextWarp
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetTextWarp>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.PresetTextWarp.ElementType) as DocumentFormat.OpenXml.Drawing.PresetTextWarp;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.PresetTextWarp.ElementType);
         }
 
         /// <inheritdoc/>

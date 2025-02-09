@@ -23,6 +23,12 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor
     /// </summary>
     public partial class HyperlinkColor : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor", "hlinkClr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2018/hyperlinkcolor", "CT_HyperlinkColor");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the HyperlinkColor class.
         /// </summary>
@@ -43,7 +49,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("ahyp:hlinkClr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<HyperlinkColor>()
                 .AddAttribute("val", a => a.Val, aBuilder =>

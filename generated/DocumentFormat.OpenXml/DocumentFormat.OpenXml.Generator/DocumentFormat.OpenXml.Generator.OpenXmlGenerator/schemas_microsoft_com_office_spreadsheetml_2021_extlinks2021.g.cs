@@ -30,6 +30,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
     /// </remarks>
     public partial class ExternalBookAlternateUrls : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2021/extlinks2021", "alternateUrls");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2021/extlinks2021", "CT_ExternalBookAlternateUrls");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ExternalBookAlternateUrls class.
         /// </summary>
@@ -84,7 +90,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xxl21:alternateUrls");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl>();
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl>();
@@ -93,8 +99,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
                 .AddAttribute("itemId", a => a.ItemId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl), 0, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl.ElementType, 0, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl.ElementType, 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -107,8 +113,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
         /// </remarks>
         public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl? AbsoluteUrlAlternateUrl
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl.ElementType) as DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl.ElementType);
         }
 
         /// <summary>
@@ -120,8 +126,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
         /// </remarks>
         public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl? RelativeUrlAlternateUrl
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl.ElementType) as DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl.ElementType);
         }
 
         /// <inheritdoc/>
@@ -135,6 +141,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
     /// </summary>
     public partial class AbsoluteUrlAlternateUrl : OpenXmlAlternateUrlElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2021/extlinks2021", "absoluteUrl");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2021/extlinks2021", "CT_AlternateUrl");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AbsoluteUrlAlternateUrl class.
         /// </summary>
@@ -145,7 +157,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xxl21:absoluteUrl");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
         }
 
@@ -160,6 +172,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
     /// </summary>
     public partial class RelativeUrlAlternateUrl : OpenXmlAlternateUrlElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2021/extlinks2021", "relativeUrl");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2021/extlinks2021", "CT_AlternateUrl");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RelativeUrlAlternateUrl class.
         /// </summary>
@@ -170,7 +188,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xxl21:relativeUrl");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
         }
 
@@ -185,6 +203,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
     /// </summary>
     public abstract partial class OpenXmlAlternateUrlElement : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2021/extlinks2021", "CT_AlternateUrl");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OpenXmlAlternateUrlElement class.
         /// </summary>

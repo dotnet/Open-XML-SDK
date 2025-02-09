@@ -25,6 +25,12 @@ namespace DocumentFormat.OpenXml.EMMA
     /// </summary>
     public partial class DerivedFrom : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "derived-from");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_DerivedFrom");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DerivedFrom class.
         /// </summary>
@@ -55,7 +61,7 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("emma:derived-from");
+            builder.SetSchema(ElementType);
             builder.AddElement<DerivedFrom>()
                 .AddAttribute("resource", a => a.Resource, aBuilder =>
                 {
@@ -76,6 +82,12 @@ namespace DocumentFormat.OpenXml.EMMA
     /// </summary>
     public partial class Info : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "info");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_Info");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Info class.
         /// </summary>
@@ -120,7 +132,7 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("emma:info");
+            builder.SetSchema(ElementType);
             builder.AddElement<Info>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -150,6 +162,12 @@ namespace DocumentFormat.OpenXml.EMMA
     /// </remarks>
     public partial class Lattice : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "lattice");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_Lattice");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Lattice class.
         /// </summary>
@@ -230,7 +248,7 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("emma:lattice");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Arc>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Node>();
             builder.AddElement<Lattice>()
@@ -247,8 +265,8 @@ namespace DocumentFormat.OpenXml.EMMA
                 .AddAttribute("emma:time-ref-anchor-point", a => a.TimeReferenceAnchorPoint);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Arc), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Node), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.EMMA.Arc.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.EMMA.Node.ElementType, 1, 1)
             };
         }
 
@@ -263,6 +281,12 @@ namespace DocumentFormat.OpenXml.EMMA
     /// </summary>
     public partial class Literal : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "literal");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_Literal");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Literal class.
         /// </summary>
@@ -286,7 +310,7 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("emma:literal");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -310,6 +334,12 @@ namespace DocumentFormat.OpenXml.EMMA
     /// </remarks>
     public partial class Interpretation : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "interpretation");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_Interpretation");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Interpretation class.
         /// </summary>
@@ -679,7 +709,7 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("emma:interpretation");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.EMMA.DerivedFrom>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Info>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Lattice>();
@@ -726,11 +756,11 @@ namespace DocumentFormat.OpenXml.EMMA
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.DerivedFrom), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Lattice), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Literal), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Ink.ContextNode), 0, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.DerivedFrom.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.Info.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.Lattice.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.Literal.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2010.Ink.ContextNode.ElementType, 0, 1)
                 }
             };
             builder.AddConstraint(new AttributeValuePatternConstraint(builder.CreateQName("emma:id"), @"[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}") { Version = FileFormatVersions.Office2010 });
@@ -759,6 +789,12 @@ namespace DocumentFormat.OpenXml.EMMA
     /// </remarks>
     public partial class OneOf : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "one-of");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_OneOf");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OneOf class.
         /// </summary>
@@ -1112,7 +1148,7 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("emma:one-of");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.EMMA.DerivedFrom>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Group>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Info>();
@@ -1159,12 +1195,12 @@ namespace DocumentFormat.OpenXml.EMMA
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.DerivedFrom), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.DerivedFrom.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.Info.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.Interpretation.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.OneOf.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.Group.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.Sequence.ElementType, 1, 1)
                 }
             };
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("emma:disjunction-type"), true, new string[] { "recognition" }) { Version = FileFormatVersions.Office2010 });
@@ -1193,6 +1229,12 @@ namespace DocumentFormat.OpenXml.EMMA
     /// </remarks>
     public partial class Group : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "group");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_Group");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Group class.
         /// </summary>
@@ -1536,7 +1578,7 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("emma:group");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.EMMA.DerivedFrom>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Group>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.GroupInfo>();
@@ -1583,13 +1625,13 @@ namespace DocumentFormat.OpenXml.EMMA
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.DerivedFrom), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.GroupInfo), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.DerivedFrom.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.GroupInfo.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.Info.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.Interpretation.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.OneOf.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.Group.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.Sequence.ElementType, 1, 1)
                 }
             };
         }
@@ -1616,6 +1658,12 @@ namespace DocumentFormat.OpenXml.EMMA
     /// </remarks>
     public partial class Sequence : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "sequence");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_Sequence");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Sequence class.
         /// </summary>
@@ -1959,7 +2007,7 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("emma:sequence");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.EMMA.DerivedFrom>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Group>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Info>();
@@ -2005,12 +2053,12 @@ namespace DocumentFormat.OpenXml.EMMA
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.DerivedFrom), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.DerivedFrom.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.Info.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.Interpretation.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.OneOf.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.Group.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.Sequence.ElementType, 1, 1)
                 }
             };
         }
@@ -2026,6 +2074,12 @@ namespace DocumentFormat.OpenXml.EMMA
     /// </summary>
     public partial class GroupInfo : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "group-info");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_GroupInfo");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the GroupInfo class.
         /// </summary>
@@ -2070,7 +2124,7 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("emma:group-info");
+            builder.SetSchema(ElementType);
             builder.AddElement<GroupInfo>()
                 .AddAttribute("ref", a => a.Reference, aBuilder =>
                 {
@@ -2102,6 +2156,12 @@ namespace DocumentFormat.OpenXml.EMMA
     /// </remarks>
     public partial class Derivation : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "derivation");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_Derivation");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Derivation class.
         /// </summary>
@@ -2136,17 +2196,17 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("emma:derivation");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Group>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Interpretation>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.OneOf>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Sequence>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.EMMA.Interpretation.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.EMMA.OneOf.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.EMMA.Sequence.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.EMMA.Group.ElementType, 1, 1)
             };
         }
 
@@ -2161,6 +2221,12 @@ namespace DocumentFormat.OpenXml.EMMA
     /// </summary>
     public partial class Grammar : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "grammar");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_Grammar");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Grammar class.
         /// </summary>
@@ -2191,7 +2257,7 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("emma:grammar");
+            builder.SetSchema(ElementType);
             builder.AddElement<Grammar>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -2216,6 +2282,12 @@ namespace DocumentFormat.OpenXml.EMMA
     /// </summary>
     public partial class Model : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "model");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_Model");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Model class.
         /// </summary>
@@ -2270,7 +2342,7 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("emma:model");
+            builder.SetSchema(ElementType);
             builder.AddElement<Model>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -2304,6 +2376,12 @@ namespace DocumentFormat.OpenXml.EMMA
     /// </remarks>
     public partial class EndPointInfo : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "endpoint-info");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_EndPointInfo");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the EndPointInfo class.
         /// </summary>
@@ -2348,7 +2426,7 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("emma:endpoint-info");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.EMMA.EndPoint>();
             builder.AddElement<EndPointInfo>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
@@ -2358,7 +2436,7 @@ namespace DocumentFormat.OpenXml.EMMA
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.EndPoint), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.EMMA.EndPoint.ElementType, 1, 1)
             };
         }
 
@@ -2373,6 +2451,12 @@ namespace DocumentFormat.OpenXml.EMMA
     /// </summary>
     public partial class EndPoint : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "endpoint");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_EndPoint");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the EndPoint class.
         /// </summary>
@@ -2547,7 +2631,7 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("emma:endpoint");
+            builder.SetSchema(ElementType);
             builder.AddElement<EndPoint>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -2587,6 +2671,12 @@ namespace DocumentFormat.OpenXml.EMMA
     /// </remarks>
     public partial class Node : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "node");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_Node");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Node class.
         /// </summary>
@@ -2657,7 +2747,7 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("emma:node");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Info>();
             builder.AddElement<Node>()
                 .AddAttribute("node-number", a => a.NodeNumber, aBuilder =>
@@ -2675,7 +2765,7 @@ namespace DocumentFormat.OpenXml.EMMA
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.EMMA.Info.ElementType, 1, 1)
             };
         }
 
@@ -2696,6 +2786,12 @@ namespace DocumentFormat.OpenXml.EMMA
     /// </remarks>
     public partial class Arc : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "arc");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_Arc");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Arc class.
         /// </summary>
@@ -2880,7 +2976,7 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("emma:arc");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Info>();
             builder.AddElement<Arc>()
                 .AddAttribute("from", a => a.From, aBuilder =>
@@ -2911,7 +3007,7 @@ namespace DocumentFormat.OpenXml.EMMA
                 .AddAttribute("emma:source", a => a.Source);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.EMMA.Info.ElementType, 1, 1)
             };
         }
 
@@ -2940,6 +3036,12 @@ namespace DocumentFormat.OpenXml.EMMA
     /// </remarks>
     public partial class Emma : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/04/emma", "emma");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/04/emma", "CT_Emma");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Emma class.
         /// </summary>
@@ -2984,7 +3086,7 @@ namespace DocumentFormat.OpenXml.EMMA
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("emma:emma");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Derivation>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.EndPointInfo>();
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Grammar>();
@@ -3003,15 +3105,15 @@ namespace DocumentFormat.OpenXml.EMMA
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Derivation), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Grammar), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Model), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.EndPointInfo), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Info), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Interpretation), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.OneOf), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Group), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Sequence), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.Derivation.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.Grammar.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.Model.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.EndPointInfo.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.Info.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.Interpretation.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.OneOf.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.Group.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.EMMA.Sequence.ElementType, 1, 1)
                 }
             };
         }

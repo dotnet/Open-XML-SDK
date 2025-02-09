@@ -37,6 +37,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// </remarks>
     public partial class Ink : OpenXmlPartRootElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "ink");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_Ink");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Ink class.
         /// </summary>
@@ -81,7 +87,7 @@ namespace DocumentFormat.OpenXml.InkML
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("inkml:ink");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.InkML.Annotation>();
             builder.AddChild<DocumentFormat.OpenXml.InkML.AnnotationXml>();
             builder.AddChild<DocumentFormat.OpenXml.InkML.Context>();
@@ -96,13 +102,13 @@ namespace DocumentFormat.OpenXml.InkML
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Definitions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Context), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Trace), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceGroup), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceView), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.InkML.Annotation.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.AnnotationXml.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.Definitions.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.Context.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.Trace.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.TraceGroup.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.TraceView.ElementType, 0, 1)
             };
         }
 
@@ -117,6 +123,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// </summary>
     public partial class Bind : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "bind");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_Bind");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Bind class.
         /// </summary>
@@ -167,7 +179,7 @@ namespace DocumentFormat.OpenXml.InkML
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("inkml:bind");
+            builder.SetSchema(ElementType);
             builder.AddElement<Bind>()
                 .AddAttribute("source", a => a.Source)
                 .AddAttribute("target", a => a.Target)
@@ -186,6 +198,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// </summary>
     public partial class Table : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "table");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_Table");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Table class.
         /// </summary>
@@ -242,7 +260,7 @@ namespace DocumentFormat.OpenXml.InkML
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("inkml:table");
+            builder.SetSchema(ElementType);
             builder.AddElement<Table>()
                 .AddAttribute("xml:id", a => a.Id)
                 .AddAttribute("apply", a => a.Apply)
@@ -260,6 +278,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// </summary>
     public partial class Matrix : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "matrix");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_Matrix");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Matrix class.
         /// </summary>
@@ -296,7 +320,7 @@ namespace DocumentFormat.OpenXml.InkML
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("inkml:matrix");
+            builder.SetSchema(ElementType);
             builder.AddElement<Matrix>()
                 .AddAttribute("xml:id", a => a.Id);
         }
@@ -321,6 +345,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// </remarks>
     public partial class Mapping : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "mapping");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_Mapping");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Mapping class.
         /// </summary>
@@ -388,7 +418,7 @@ namespace DocumentFormat.OpenXml.InkML
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("inkml:mapping");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.InkML.Bind>();
             builder.AddChild<DocumentFormat.OpenXml.InkML.Mapping>();
             builder.AddChild<DocumentFormat.OpenXml.InkML.Matrix>();
@@ -404,16 +434,16 @@ namespace DocumentFormat.OpenXml.InkML
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Bind), 0, 0),
+                    new ElementParticle(DocumentFormat.OpenXml.InkML.Bind.ElementType, 0, 0),
                     new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Table), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Matrix), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.InkML.Table.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.InkML.Matrix.ElementType, 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, 0)
+                    new ElementParticle(DocumentFormat.OpenXml.InkML.Mapping.ElementType, 0, 0)
                 }
             };
         }
@@ -435,6 +465,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// </remarks>
     public partial class Channel : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "channel");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_Channel");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Channel class.
         /// </summary>
@@ -562,7 +598,7 @@ namespace DocumentFormat.OpenXml.InkML
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("inkml:channel");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.InkML.Mapping>();
             builder.AddElement<Channel>()
                 .AddAttribute("xml:id", a => a.Id)
@@ -610,7 +646,7 @@ namespace DocumentFormat.OpenXml.InkML
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.InkML.Mapping.ElementType, 0, 0)
             };
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("inkml:units"), true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 });
         }
@@ -632,6 +668,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// </remarks>
     public partial class IntermittentChannels : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "intermittentChannels");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_IntermittentChannels");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the IntermittentChannels class.
         /// </summary>
@@ -666,11 +708,11 @@ namespace DocumentFormat.OpenXml.InkML
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("inkml:intermittentChannels");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.InkML.Channel>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Channel), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.InkML.Channel.ElementType, 0, 0)
             };
         }
 
@@ -685,6 +727,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// </summary>
     public partial class ChannelProperty : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "channelProperty");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_ChannelProperty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ChannelProperty class.
         /// </summary>
@@ -735,7 +783,7 @@ namespace DocumentFormat.OpenXml.InkML
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("inkml:channelProperty");
+            builder.SetSchema(ElementType);
             builder.AddElement<ChannelProperty>()
                 .AddAttribute("channel", a => a.Channel, aBuilder =>
                 {
@@ -797,6 +845,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// </remarks>
     public partial class TraceFormat : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "traceFormat");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_TraceFormat");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TraceFormat class.
         /// </summary>
@@ -844,15 +898,15 @@ namespace DocumentFormat.OpenXml.InkML
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("inkml:traceFormat");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.InkML.Channel>();
             builder.AddChild<DocumentFormat.OpenXml.InkML.IntermittentChannels>();
             builder.AddElement<TraceFormat>()
                 .AddAttribute("xml:id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Channel), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.IntermittentChannels), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.InkML.Channel.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.IntermittentChannels.ElementType, 0, 1)
             };
         }
 
@@ -867,6 +921,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// </summary>
     public partial class SampleRate : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "sampleRate");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_SampleRate");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SampleRate class.
         /// </summary>
@@ -897,7 +957,7 @@ namespace DocumentFormat.OpenXml.InkML
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("inkml:sampleRate");
+            builder.SetSchema(ElementType);
             builder.AddElement<SampleRate>()
                 .AddAttribute("uniform", a => a.Uniform)
                 .AddAttribute("value", a => a.Value, aBuilder =>
@@ -917,6 +977,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// </summary>
     public partial class Latency : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "latency");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_Latency");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Latency class.
         /// </summary>
@@ -937,7 +1003,7 @@ namespace DocumentFormat.OpenXml.InkML
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("inkml:latency");
+            builder.SetSchema(ElementType);
             builder.AddElement<Latency>()
                 .AddAttribute("value", a => a.Value, aBuilder =>
                 {
@@ -956,6 +1022,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// </summary>
     public partial class ActiveArea : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "activeArea");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_ActiveArea");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ActiveArea class.
         /// </summary>
@@ -1006,7 +1078,7 @@ namespace DocumentFormat.OpenXml.InkML
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("inkml:activeArea");
+            builder.SetSchema(ElementType);
             builder.AddElement<ActiveArea>()
                 .AddAttribute("size", a => a.Size)
                 .AddAttribute("height", a => a.Height)
@@ -1042,6 +1114,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// </summary>
     public partial class SourceProperty : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "srcProperty");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_SrcProperty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SourceProperty class.
         /// </summary>
@@ -1082,7 +1160,7 @@ namespace DocumentFormat.OpenXml.InkML
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("inkml:srcProperty");
+            builder.SetSchema(ElementType);
             builder.AddElement<SourceProperty>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -1129,6 +1207,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// </remarks>
     public partial class ChannelProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "channelProperties");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_ChannelProperties");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ChannelProperties class.
         /// </summary>
@@ -1163,11 +1247,11 @@ namespace DocumentFormat.OpenXml.InkML
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("inkml:channelProperties");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.InkML.ChannelProperty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.ChannelProperty), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.InkML.ChannelProperty.ElementType, 0, 0)
             };
         }
 
@@ -1182,6 +1266,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// </summary>
     public partial class Annotation : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "annotation");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_Annotation");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Annotation class.
         /// </summary>
@@ -1225,7 +1315,7 @@ namespace DocumentFormat.OpenXml.InkML
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("inkml:annotation");
+            builder.SetSchema(ElementType);
             builder.AddElement<Annotation>()
                 .AddAttribute("type", a => a.Type)
                 .AddAttribute("encoding", a => a.Encoding);
@@ -1248,6 +1338,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// </remarks>
     public partial class AnnotationXml : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "annotationXML");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_AnnotationXML");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AnnotationXml class.
         /// </summary>
@@ -1312,7 +1408,7 @@ namespace DocumentFormat.OpenXml.InkML
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("inkml:annotationXML");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.EMMA.Emma>();
             builder.AddElement<AnnotationXml>()
                 .AddAttribute("type", a => a.Type)
@@ -1323,7 +1419,7 @@ namespace DocumentFormat.OpenXml.InkML
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.EMMA.Emma), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.EMMA.Emma.ElementType, 0, 1)
             };
         }
 
@@ -1336,8 +1432,8 @@ namespace DocumentFormat.OpenXml.InkML
         /// </remarks>
         public DocumentFormat.OpenXml.EMMA.Emma? Emma
         {
-            get => GetElement<DocumentFormat.OpenXml.EMMA.Emma>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.EMMA.Emma.ElementType) as DocumentFormat.OpenXml.EMMA.Emma;
+            set => SetElement(value, DocumentFormat.OpenXml.EMMA.Emma.ElementType);
         }
 
         /// <inheritdoc/>
@@ -1358,6 +1454,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// </remarks>
     public partial class BrushProperty : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "brushProperty");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_BrushProperty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BrushProperty class.
         /// </summary>
@@ -1422,7 +1524,7 @@ namespace DocumentFormat.OpenXml.InkML
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("inkml:brushProperty");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.InkML.Annotation>();
             builder.AddChild<DocumentFormat.OpenXml.InkML.AnnotationXml>();
             builder.AddElement<BrushProperty>()
@@ -1466,8 +1568,8 @@ namespace DocumentFormat.OpenXml.InkML
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.InkML.Annotation.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.AnnotationXml.ElementType, 0, 0)
             };
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("inkml:units"), true, new string[] { "dev", "in", "cm", "deg", "rad", "s", "lb", "g" }) { Version = FileFormatVersions.Office2010 });
         }
@@ -1489,6 +1591,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// </remarks>
     public partial class Canvas : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "canvas");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_Canvas");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Canvas class.
         /// </summary>
@@ -1546,7 +1654,7 @@ namespace DocumentFormat.OpenXml.InkML
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("inkml:canvas");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.InkML.TraceFormat>();
             builder.AddElement<Canvas>()
                 .AddAttribute("xml:id", a => a.Id)
@@ -1556,7 +1664,7 @@ namespace DocumentFormat.OpenXml.InkML
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.InkML.TraceFormat.ElementType, 0, 1)
             };
         }
 
@@ -1569,8 +1677,8 @@ namespace DocumentFormat.OpenXml.InkML
         /// </remarks>
         public DocumentFormat.OpenXml.InkML.TraceFormat? TraceFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.TraceFormat>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.InkML.TraceFormat.ElementType) as DocumentFormat.OpenXml.InkML.TraceFormat;
+            set => SetElement(value, DocumentFormat.OpenXml.InkML.TraceFormat.ElementType);
         }
 
         /// <inheritdoc/>
@@ -1590,6 +1698,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// </remarks>
     public partial class CanvasTransform : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "canvasTransform");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_CanvasTransform");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CanvasTransform class.
         /// </summary>
@@ -1647,14 +1761,14 @@ namespace DocumentFormat.OpenXml.InkML
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("inkml:canvasTransform");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.InkML.Mapping>();
             builder.AddElement<CanvasTransform>()
                 .AddAttribute("xml:id", a => a.Id)
                 .AddAttribute("invertible", a => a.Invertible);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 1, 2)
+                new ElementParticle(DocumentFormat.OpenXml.InkML.Mapping.ElementType, 1, 2)
             };
         }
 
@@ -1680,6 +1794,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// </remarks>
     public partial class InkSource : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "inkSource");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_InkSource");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the InkSource class.
         /// </summary>
@@ -1777,7 +1897,7 @@ namespace DocumentFormat.OpenXml.InkML
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("inkml:inkSource");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.InkML.ActiveArea>();
             builder.AddChild<DocumentFormat.OpenXml.InkML.ChannelProperties>();
             builder.AddChild<DocumentFormat.OpenXml.InkML.Latency>();
@@ -1799,12 +1919,12 @@ namespace DocumentFormat.OpenXml.InkML
                 .AddAttribute("description", a => a.Description);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.SampleRate), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Latency), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.ActiveArea), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.SourceProperty), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.ChannelProperties), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.InkML.TraceFormat.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.SampleRate.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.Latency.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.ActiveArea.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.SourceProperty.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.ChannelProperties.ElementType, 0, 1)
             };
         }
 
@@ -1817,8 +1937,8 @@ namespace DocumentFormat.OpenXml.InkML
         /// </remarks>
         public DocumentFormat.OpenXml.InkML.TraceFormat? TraceFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.TraceFormat>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.InkML.TraceFormat.ElementType) as DocumentFormat.OpenXml.InkML.TraceFormat;
+            set => SetElement(value, DocumentFormat.OpenXml.InkML.TraceFormat.ElementType);
         }
 
         /// <summary>
@@ -1830,8 +1950,8 @@ namespace DocumentFormat.OpenXml.InkML
         /// </remarks>
         public DocumentFormat.OpenXml.InkML.SampleRate? SampleRate
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.SampleRate>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.InkML.SampleRate.ElementType) as DocumentFormat.OpenXml.InkML.SampleRate;
+            set => SetElement(value, DocumentFormat.OpenXml.InkML.SampleRate.ElementType);
         }
 
         /// <summary>
@@ -1843,8 +1963,8 @@ namespace DocumentFormat.OpenXml.InkML
         /// </remarks>
         public DocumentFormat.OpenXml.InkML.Latency? Latency
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.Latency>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.InkML.Latency.ElementType) as DocumentFormat.OpenXml.InkML.Latency;
+            set => SetElement(value, DocumentFormat.OpenXml.InkML.Latency.ElementType);
         }
 
         /// <summary>
@@ -1856,8 +1976,8 @@ namespace DocumentFormat.OpenXml.InkML
         /// </remarks>
         public DocumentFormat.OpenXml.InkML.ActiveArea? ActiveArea
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.ActiveArea>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.InkML.ActiveArea.ElementType) as DocumentFormat.OpenXml.InkML.ActiveArea;
+            set => SetElement(value, DocumentFormat.OpenXml.InkML.ActiveArea.ElementType);
         }
 
         /// <inheritdoc/>
@@ -1879,6 +1999,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// </remarks>
     public partial class Brush : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "brush");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_Brush");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Brush class.
         /// </summary>
@@ -1936,7 +2062,7 @@ namespace DocumentFormat.OpenXml.InkML
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("inkml:brush");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.InkML.Annotation>();
             builder.AddChild<DocumentFormat.OpenXml.InkML.AnnotationXml>();
             builder.AddChild<DocumentFormat.OpenXml.InkML.BrushProperty>();
@@ -1948,9 +2074,9 @@ namespace DocumentFormat.OpenXml.InkML
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.BrushProperty), 0, 0)
+                new ElementParticle(DocumentFormat.OpenXml.InkML.Annotation.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.AnnotationXml.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.BrushProperty.ElementType, 0, 0)
             };
         }
 
@@ -1965,6 +2091,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// </summary>
     public partial class Timestamp : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "timestamp");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_Timestamp");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Timestamp class.
         /// </summary>
@@ -2028,7 +2160,7 @@ namespace DocumentFormat.OpenXml.InkML
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("inkml:timestamp");
+            builder.SetSchema(ElementType);
             builder.AddElement<Timestamp>()
                 .AddAttribute("xml:id", a => a.Id, aBuilder =>
                 {
@@ -2054,6 +2186,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// </summary>
     public partial class Trace : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "trace");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_Trace");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Trace class.
         /// </summary>
@@ -2160,7 +2298,7 @@ namespace DocumentFormat.OpenXml.InkML
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("inkml:trace");
+            builder.SetSchema(ElementType);
             builder.AddElement<Trace>()
                 .AddAttribute("xml:id", a => a.Id)
                 .AddAttribute("type", a => a.Type)
@@ -2201,6 +2339,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// </remarks>
     public partial class TraceGroup : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "traceGroup");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_TraceGroup");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TraceGroup class.
         /// </summary>
@@ -2268,7 +2412,7 @@ namespace DocumentFormat.OpenXml.InkML
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("inkml:traceGroup");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.InkML.Annotation>();
             builder.AddChild<DocumentFormat.OpenXml.InkML.AnnotationXml>();
             builder.AddChild<DocumentFormat.OpenXml.InkML.Trace>();
@@ -2285,10 +2429,10 @@ namespace DocumentFormat.OpenXml.InkML
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Trace), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceGroup), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.InkML.Annotation.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.AnnotationXml.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.Trace.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.TraceGroup.ElementType, 0, 1)
             };
         }
 
@@ -2311,6 +2455,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// </remarks>
     public partial class TraceView : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "traceView");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_TraceView");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TraceView class.
         /// </summary>
@@ -2398,7 +2548,7 @@ namespace DocumentFormat.OpenXml.InkML
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("inkml:traceView");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.InkML.Annotation>();
             builder.AddChild<DocumentFormat.OpenXml.InkML.AnnotationXml>();
             builder.AddChild<DocumentFormat.OpenXml.InkML.TraceView>();
@@ -2416,9 +2566,9 @@ namespace DocumentFormat.OpenXml.InkML
                 .AddAttribute("to", a => a.To);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Annotation), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.AnnotationXml), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceView), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.InkML.Annotation.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.AnnotationXml.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.TraceView.ElementType, 0, 1)
             };
         }
 
@@ -2444,6 +2594,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// </remarks>
     public partial class Context : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "context");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_Context");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Context class.
         /// </summary>
@@ -2561,7 +2717,7 @@ namespace DocumentFormat.OpenXml.InkML
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("inkml:context");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.InkML.Brush>();
             builder.AddChild<DocumentFormat.OpenXml.InkML.Canvas>();
             builder.AddChild<DocumentFormat.OpenXml.InkML.CanvasTransform>();
@@ -2600,12 +2756,12 @@ namespace DocumentFormat.OpenXml.InkML
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Canvas), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.CanvasTransform), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.InkSource), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Brush), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Timestamp), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.InkML.Canvas.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.CanvasTransform.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.TraceFormat.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.InkSource.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.Brush.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.Timestamp.ElementType, 0, 1)
             };
         }
 
@@ -2618,8 +2774,8 @@ namespace DocumentFormat.OpenXml.InkML
         /// </remarks>
         public DocumentFormat.OpenXml.InkML.Canvas? Canvas
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.Canvas>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.InkML.Canvas.ElementType) as DocumentFormat.OpenXml.InkML.Canvas;
+            set => SetElement(value, DocumentFormat.OpenXml.InkML.Canvas.ElementType);
         }
 
         /// <summary>
@@ -2631,8 +2787,8 @@ namespace DocumentFormat.OpenXml.InkML
         /// </remarks>
         public DocumentFormat.OpenXml.InkML.CanvasTransform? CanvasTransform
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.CanvasTransform>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.InkML.CanvasTransform.ElementType) as DocumentFormat.OpenXml.InkML.CanvasTransform;
+            set => SetElement(value, DocumentFormat.OpenXml.InkML.CanvasTransform.ElementType);
         }
 
         /// <summary>
@@ -2644,8 +2800,8 @@ namespace DocumentFormat.OpenXml.InkML
         /// </remarks>
         public DocumentFormat.OpenXml.InkML.TraceFormat? TraceFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.TraceFormat>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.InkML.TraceFormat.ElementType) as DocumentFormat.OpenXml.InkML.TraceFormat;
+            set => SetElement(value, DocumentFormat.OpenXml.InkML.TraceFormat.ElementType);
         }
 
         /// <summary>
@@ -2657,8 +2813,8 @@ namespace DocumentFormat.OpenXml.InkML
         /// </remarks>
         public DocumentFormat.OpenXml.InkML.InkSource? InkSource
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.InkSource>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.InkML.InkSource.ElementType) as DocumentFormat.OpenXml.InkML.InkSource;
+            set => SetElement(value, DocumentFormat.OpenXml.InkML.InkSource.ElementType);
         }
 
         /// <summary>
@@ -2670,8 +2826,8 @@ namespace DocumentFormat.OpenXml.InkML
         /// </remarks>
         public DocumentFormat.OpenXml.InkML.Brush? Brush
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.Brush>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.InkML.Brush.ElementType) as DocumentFormat.OpenXml.InkML.Brush;
+            set => SetElement(value, DocumentFormat.OpenXml.InkML.Brush.ElementType);
         }
 
         /// <summary>
@@ -2683,8 +2839,8 @@ namespace DocumentFormat.OpenXml.InkML
         /// </remarks>
         public DocumentFormat.OpenXml.InkML.Timestamp? Timestamp
         {
-            get => GetElement<DocumentFormat.OpenXml.InkML.Timestamp>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.InkML.Timestamp.ElementType) as DocumentFormat.OpenXml.InkML.Timestamp;
+            set => SetElement(value, DocumentFormat.OpenXml.InkML.Timestamp.ElementType);
         }
 
         /// <inheritdoc/>
@@ -2714,6 +2870,12 @@ namespace DocumentFormat.OpenXml.InkML
     /// </remarks>
     public partial class Definitions : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://www.w3.org/2003/InkML", "definitions");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2003/InkML", "CT_Definitions");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Definitions class.
         /// </summary>
@@ -2748,7 +2910,7 @@ namespace DocumentFormat.OpenXml.InkML
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("inkml:definitions");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.InkML.Brush>();
             builder.AddChild<DocumentFormat.OpenXml.InkML.Canvas>();
             builder.AddChild<DocumentFormat.OpenXml.InkML.CanvasTransform>();
@@ -2762,17 +2924,17 @@ namespace DocumentFormat.OpenXml.InkML
             builder.AddChild<DocumentFormat.OpenXml.InkML.TraceView>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Brush), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Canvas), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.CanvasTransform), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Context), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.InkSource), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Mapping), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Timestamp), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.Trace), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceFormat), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceGroup), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.InkML.TraceView), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.InkML.Brush.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.Canvas.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.CanvasTransform.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.Context.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.InkSource.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.Mapping.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.Timestamp.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.Trace.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.TraceFormat.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.TraceGroup.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.InkML.TraceView.ElementType, 0, 1)
             };
         }
 
