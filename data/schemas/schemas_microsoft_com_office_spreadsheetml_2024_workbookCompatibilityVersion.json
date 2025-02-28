@@ -1,0 +1,27 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2024/workbookCompatibilityVersion",
+  "Types": [
+    {
+      "Name": "xlwcv:CT_Version/xlwcv:version",
+      "ClassName": "Version",
+      "Summary": "Defines the Version Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":warnBelowVersion",
+          "Type": "UInt32Value",
+          "Version": "Microsoft365",
+          "PropertyComments": "warnBelowVersion"
+        },
+        {
+          "QName": ":setVersion",
+          "Type": "UInt32Value",
+          "Version": "Microsoft365",
+          "PropertyComments": "setVersion"
+        }
+      ]
+    }
+  ]
+}

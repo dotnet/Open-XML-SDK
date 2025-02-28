@@ -145,6 +145,15 @@
       "Version": "Microsoft365"
     },
     {
+      "Name": "p228:CT_TaskAssignUnassignUser/p228:unAsgn",
+      "ClassName": "UnAsgnTaskAssignUnassignUser",
+      "Summary": "Defines the UnAsgnTaskAssignUnassignUser Class.",
+      "BaseClass": "OpenXmlTaskAssignUnassignUserElement",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Microsoft365"
+    },
+    {
       "Name": "p228:CT_TaskAssignUnassignUser/",
       "ClassName": "OpenXmlTaskAssignUnassignUserElement",
       "Summary": "Defines the OpenXmlTaskAssignUnassignUserElement Class.",
@@ -424,6 +433,9 @@
           "Name": "p228:CT_TaskAssignUnassignUser/p228:asgn"
         },
         {
+          "Name": "p228:CT_TaskAssignUnassignUser/p228:unAsgn"
+        },
+        {
           "Name": "p:CT_Empty/p228:add"
         },
         {
@@ -474,6 +486,10 @@
             "Items": [
               {
                 "Name": "p228:CT_TaskAssignUnassignUser/p228:asgn",
+                "InitialVersion": "Microsoft365"
+              },
+              {
+                "Name": "p228:CT_TaskAssignUnassignUser/p228:unAsgn",
                 "InitialVersion": "Microsoft365"
               },
               {
