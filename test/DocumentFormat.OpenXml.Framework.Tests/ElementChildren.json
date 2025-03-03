@@ -22381,6 +22381,155 @@
     ]
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.AddEmpty",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.AsgnTaskAssignUnassignUser",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.AtrbtnTaskAssignUnassignUser",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.CommentAnchor",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.ExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.openxmlformats.org/presentationml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskAnchor",
+    "Children": [
+      {
+        "Name": "comment",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskHistory",
+    "Children": [
+      {
+        "Name": "event",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskHistoryDetails",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      },
+      {
+        "Name": "history",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskHistoryEvent",
+    "Children": [
+      {
+        "Name": "add",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      },
+      {
+        "Name": "anchr",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      },
+      {
+        "Name": "asgn",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      },
+      {
+        "Name": "atrbtn",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      },
+      {
+        "Name": "date",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      },
+      {
+        "Name": "pcntCmplt",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      },
+      {
+        "Name": "pri",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      },
+      {
+        "Name": "title",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      },
+      {
+        "Name": "unAsgn",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      },
+      {
+        "Name": "unasgnAll",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      },
+      {
+        "Name": "undo",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      },
+      {
+        "Name": "unknown",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskPriorityRecord",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskProgressEventInfo",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskScheduleEventInfo",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskTitleEventInfo",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskUndo",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskUnknownRecord",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.UnAsgnTaskAssignUnassignUser",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.UnasgnAllEmpty",
+    "Children": []
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ExtensionList",
     "Children": [
       {
