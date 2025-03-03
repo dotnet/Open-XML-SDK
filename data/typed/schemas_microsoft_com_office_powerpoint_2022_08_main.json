@@ -52,10 +52,6 @@
     "ClassName": "TaskTitleEventInfo"
   },
   {
-    "Name": "p228:CT_TaskAssignUnassignUser/p228:unAsgn",
-    "ClassName": "UnAsgnTaskAssignUnassignUser"
-  },
-  {
     "Name": "p:CT_Empty/p228:unasgnAll",
     "ClassName": "UnasgnAllEmpty"
   },

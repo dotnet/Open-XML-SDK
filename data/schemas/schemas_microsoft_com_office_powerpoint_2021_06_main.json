@@ -1,34 +1,49 @@
 {
-  "TargetNamespace": "http://schemas.microsoft.com/office/powerpoint/2022/08/main",
+  "TargetNamespace": "http://schemas.microsoft.com/office/powerpoint/2021/06/main",
   "Types": [
     {
-      "Name": "p228:CT_TaskDetails/p228:taskDetails",
-      "ClassName": "TaskDetails",
-      "Summary": "Defines the TaskDetails Class.",
+      "Name": "p216:CT_TaskHistoryDetails/p216:taskHistoryDetails",
+      "ClassName": "TaskHistoryDetails",
+      "Summary": "Defines the TaskHistoryDetails Class.",
       "CompositeType": "OneSequence",
       "BaseClass": "OpenXmlCompositeElement",
       "Version": "Microsoft365",
       "Attributes": [
         {
-          "QName": ":deleted",
-          "Type": "BooleanValue",
+          "QName": ":id",
+          "Type": "StringValue",
           "Version": "Microsoft365",
-          "PropertyComments": "deleted"
-        },
-        {
-          "QName": ":inactive",
-          "Type": "BooleanValue",
-          "Version": "Microsoft365",
-          "PropertyComments": "inactive"
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                },
+                {
+                  "Type": "String",
+                  "Name": "Pattern",
+                  "Value": "\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
         }
       ],
       "Children": [
         {
-          "Name": "p228:CT_TaskHistory/p228:history",
+          "Name": "p216:CT_TaskHistory/p216:history",
           "PropertyName": "TaskHistory"
         },
         {
-          "Name": "p:CT_ExtensionList/p228:extLst",
+          "Name": "p:CT_ExtensionList/p216:extLst",
           "PropertyName": "ExtensionList"
         }
       ],
@@ -36,11 +51,11 @@
         "Kind": "Sequence",
         "Items": [
           {
-            "Name": "p228:CT_TaskHistory/p228:history",
+            "Name": "p216:CT_TaskHistory/p216:history",
             "InitialVersion": "Microsoft365"
           },
           {
-            "Name": "p:CT_ExtensionList/p228:extLst",
+            "Name": "p:CT_ExtensionList/p216:extLst",
             "Occurs": [
               {
                 "Max": 1
@@ -52,7 +67,7 @@
       }
     },
     {
-      "Name": "p228:CT_CommentAnchor/p228:comment",
+      "Name": "p216:CT_CommentAnchor/p216:comment",
       "ClassName": "CommentAnchor",
       "Summary": "Defines the CommentAnchor Class.",
       "BaseClass": "OpenXmlLeafElement",
@@ -89,7 +104,7 @@
       ]
     },
     {
-      "Name": "p:CT_ExtensionList/p228:extLst",
+      "Name": "p:CT_ExtensionList/p216:extLst",
       "ClassName": "ExtensionList",
       "Summary": "Defines the ExtensionList Class.",
       "BaseClass": "OpenXmlCompositeElement",
@@ -127,7 +142,7 @@
       }
     },
     {
-      "Name": "p228:CT_TaskAssignUnassignUser/p228:atrbtn",
+      "Name": "p216:CT_TaskAssignUnassignUser/p216:atrbtn",
       "ClassName": "AtrbtnTaskAssignUnassignUser",
       "Summary": "Defines the AtrbtnTaskAssignUnassignUser Class.",
       "BaseClass": "OpenXmlTaskAssignUnassignUserElement",
@@ -136,7 +151,7 @@
       "Version": "Microsoft365"
     },
     {
-      "Name": "p228:CT_TaskAssignUnassignUser/p228:asgn",
+      "Name": "p216:CT_TaskAssignUnassignUser/p216:asgn",
       "ClassName": "AsgnTaskAssignUnassignUser",
       "Summary": "Defines the AsgnTaskAssignUnassignUser Class.",
       "BaseClass": "OpenXmlTaskAssignUnassignUserElement",
@@ -145,7 +160,16 @@
       "Version": "Microsoft365"
     },
     {
-      "Name": "p228:CT_TaskAssignUnassignUser/",
+      "Name": "p216:CT_TaskAssignUnassignUser/p216:unAsgn",
+      "ClassName": "UnAsgnTaskAssignUnassignUser",
+      "Summary": "Defines the UnAsgnTaskAssignUnassignUser Class.",
+      "BaseClass": "OpenXmlTaskAssignUnassignUserElement",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Microsoft365"
+    },
+    {
+      "Name": "p216:CT_TaskAssignUnassignUser/",
       "ClassName": "OpenXmlTaskAssignUnassignUserElement",
       "Summary": "Defines the OpenXmlTaskAssignUnassignUserElement Class.",
       "BaseClass": "OpenXmlLeafElement",
@@ -178,7 +202,7 @@
       ]
     },
     {
-      "Name": "p228:CT_TaskAnchor/p228:anchr",
+      "Name": "p216:CT_TaskAnchor/p216:anchr",
       "ClassName": "TaskAnchor",
       "Summary": "Defines the TaskAnchor Class.",
       "CompositeType": "OneSequence",
@@ -186,11 +210,11 @@
       "Version": "Microsoft365",
       "Children": [
         {
-          "Name": "p228:CT_CommentAnchor/p228:comment",
+          "Name": "p216:CT_CommentAnchor/p216:comment",
           "PropertyName": "CommentAnchor"
         },
         {
-          "Name": "p:CT_ExtensionList/p228:extLst",
+          "Name": "p:CT_ExtensionList/p216:extLst",
           "PropertyName": "ExtensionList"
         }
       ],
@@ -198,11 +222,11 @@
         "Kind": "Sequence",
         "Items": [
           {
-            "Name": "p228:CT_CommentAnchor/p228:comment",
+            "Name": "p216:CT_CommentAnchor/p216:comment",
             "InitialVersion": "Microsoft365"
           },
           {
-            "Name": "p:CT_ExtensionList/p228:extLst",
+            "Name": "p:CT_ExtensionList/p216:extLst",
             "Occurs": [
               {
                 "Max": 1
@@ -214,7 +238,7 @@
       }
     },
     {
-      "Name": "p:CT_Empty/p228:add",
+      "Name": "p:CT_Empty/p216:add",
       "ClassName": "AddEmpty",
       "Summary": "Defines the AddEmpty Class.",
       "BaseClass": "EmptyType",
@@ -223,7 +247,7 @@
       "Version": "Microsoft365"
     },
     {
-      "Name": "p:CT_Empty/p228:unasgnAll",
+      "Name": "p:CT_Empty/p216:unasgnAll",
       "ClassName": "UnasgnAllEmpty",
       "Summary": "Defines the UnasgnAllEmpty Class.",
       "BaseClass": "EmptyType",
@@ -240,7 +264,7 @@
       "IsLeafElement": true
     },
     {
-      "Name": "p228:CT_TaskTitleEventInfo/p228:title",
+      "Name": "p216:CT_TaskTitleEventInfo/p216:title",
       "ClassName": "TaskTitleEventInfo",
       "Summary": "Defines the TaskTitleEventInfo Class.",
       "BaseClass": "OpenXmlLeafElement",
@@ -261,7 +285,7 @@
       ]
     },
     {
-      "Name": "p228:CT_TaskScheduleEventInfo/p228:date",
+      "Name": "p216:CT_TaskScheduleEventInfo/p216:date",
       "ClassName": "TaskScheduleEventInfo",
       "Summary": "Defines the TaskScheduleEventInfo Class.",
       "BaseClass": "OpenXmlLeafElement",
@@ -283,7 +307,7 @@
       ]
     },
     {
-      "Name": "p228:CT_TaskProgressEventInfo/p228:pcntCmplt",
+      "Name": "p216:CT_TaskProgressEventInfo/p216:pcntCmplt",
       "ClassName": "TaskProgressEventInfo",
       "Summary": "Defines the TaskProgressEventInfo Class.",
       "BaseClass": "OpenXmlLeafElement",
@@ -320,7 +344,44 @@
       ]
     },
     {
-      "Name": "p228:CT_TaskUndo/p228:undo",
+      "Name": "p216:CT_TaskPriorityRecord/p216:pri",
+      "ClassName": "TaskPriorityRecord",
+      "Summary": "Defines the TaskPriorityRecord Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":val",
+          "Type": "Int32Value",
+          "Version": "Microsoft365",
+          "PropertyComments": "val",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "0"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "10"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "p216:CT_TaskUndo/p216:undo",
       "ClassName": "TaskUndo",
       "Summary": "Defines the TaskUndo Class.",
       "BaseClass": "OpenXmlLeafElement",
@@ -357,7 +418,7 @@
       ]
     },
     {
-      "Name": "p228:CT_TaskUnknownRecord/p228:unknown",
+      "Name": "p216:CT_TaskUnknownRecord/p216:unknown",
       "ClassName": "TaskUnknownRecord",
       "Summary": "Defines the TaskUnknownRecord Class.",
       "BaseClass": "OpenXmlLeafElement",
@@ -365,7 +426,7 @@
       "Version": "Microsoft365"
     },
     {
-      "Name": "p228:CT_TaskHistoryEvent/p228:event",
+      "Name": "p216:CT_TaskHistoryEvent/p216:event",
       "ClassName": "TaskHistoryEvent",
       "Summary": "Defines the TaskHistoryEvent Class.",
       "CompositeType": "OneSequence",
@@ -413,50 +474,56 @@
       ],
       "Children": [
         {
-          "Name": "p228:CT_TaskAssignUnassignUser/p228:atrbtn",
+          "Name": "p216:CT_TaskAssignUnassignUser/p216:atrbtn",
           "PropertyName": "AtrbtnTaskAssignUnassignUser"
         },
         {
-          "Name": "p228:CT_TaskAnchor/p228:anchr",
+          "Name": "p216:CT_TaskAnchor/p216:anchr",
           "PropertyName": "TaskAnchor"
         },
         {
-          "Name": "p228:CT_TaskAssignUnassignUser/p228:asgn"
+          "Name": "p216:CT_TaskAssignUnassignUser/p216:asgn"
         },
         {
-          "Name": "p:CT_Empty/p228:add"
+          "Name": "p216:CT_TaskAssignUnassignUser/p216:unAsgn"
         },
         {
-          "Name": "p228:CT_TaskTitleEventInfo/p228:title"
+          "Name": "p:CT_Empty/p216:add"
         },
         {
-          "Name": "p228:CT_TaskScheduleEventInfo/p228:date"
+          "Name": "p216:CT_TaskTitleEventInfo/p216:title"
         },
         {
-          "Name": "p228:CT_TaskProgressEventInfo/p228:pcntCmplt"
+          "Name": "p216:CT_TaskScheduleEventInfo/p216:date"
         },
         {
-          "Name": "p:CT_Empty/p228:unasgnAll"
+          "Name": "p216:CT_TaskProgressEventInfo/p216:pcntCmplt"
         },
         {
-          "Name": "p228:CT_TaskUndo/p228:undo"
+          "Name": "p216:CT_TaskPriorityRecord/p216:pri"
         },
         {
-          "Name": "p228:CT_TaskUnknownRecord/p228:unknown"
+          "Name": "p:CT_Empty/p216:unasgnAll"
         },
         {
-          "Name": "p:CT_ExtensionList/p228:extLst"
+          "Name": "p216:CT_TaskUndo/p216:undo"
+        },
+        {
+          "Name": "p216:CT_TaskUnknownRecord/p216:unknown"
+        },
+        {
+          "Name": "p:CT_ExtensionList/p216:extLst"
         }
       ],
       "Particle": {
         "Kind": "Sequence",
         "Items": [
           {
-            "Name": "p228:CT_TaskAssignUnassignUser/p228:atrbtn",
+            "Name": "p216:CT_TaskAssignUnassignUser/p216:atrbtn",
             "InitialVersion": "Microsoft365"
           },
           {
-            "Name": "p228:CT_TaskAnchor/p228:anchr",
+            "Name": "p216:CT_TaskAnchor/p216:anchr",
             "Occurs": [
               {
                 "Max": 1
@@ -473,11 +540,15 @@
             ],
             "Items": [
               {
-                "Name": "p228:CT_TaskAssignUnassignUser/p228:asgn",
+                "Name": "p216:CT_TaskAssignUnassignUser/p216:asgn",
                 "InitialVersion": "Microsoft365"
               },
               {
-                "Name": "p:CT_Empty/p228:add",
+                "Name": "p216:CT_TaskAssignUnassignUser/p216:unAsgn",
+                "InitialVersion": "Microsoft365"
+              },
+              {
+                "Name": "p:CT_Empty/p216:add",
                 "Occurs": [
                   {
                     "Max": 1
@@ -486,19 +557,23 @@
                 "InitialVersion": "Microsoft365"
               },
               {
-                "Name": "p228:CT_TaskTitleEventInfo/p228:title",
+                "Name": "p216:CT_TaskTitleEventInfo/p216:title",
                 "InitialVersion": "Microsoft365"
               },
               {
-                "Name": "p228:CT_TaskScheduleEventInfo/p228:date",
+                "Name": "p216:CT_TaskScheduleEventInfo/p216:date",
                 "InitialVersion": "Microsoft365"
               },
               {
-                "Name": "p228:CT_TaskProgressEventInfo/p228:pcntCmplt",
+                "Name": "p216:CT_TaskProgressEventInfo/p216:pcntCmplt",
                 "InitialVersion": "Microsoft365"
               },
               {
-                "Name": "p:CT_Empty/p228:unasgnAll",
+                "Name": "p216:CT_TaskPriorityRecord/p216:pri",
+                "InitialVersion": "Microsoft365"
+              },
+              {
+                "Name": "p:CT_Empty/p216:unasgnAll",
                 "Occurs": [
                   {
                     "Max": 1
@@ -507,17 +582,17 @@
                 "InitialVersion": "Microsoft365"
               },
               {
-                "Name": "p228:CT_TaskUndo/p228:undo",
+                "Name": "p216:CT_TaskUndo/p216:undo",
                 "InitialVersion": "Microsoft365"
               },
               {
-                "Name": "p228:CT_TaskUnknownRecord/p228:unknown",
+                "Name": "p216:CT_TaskUnknownRecord/p216:unknown",
                 "InitialVersion": "Microsoft365"
               }
             ]
           },
           {
-            "Name": "p:CT_ExtensionList/p228:extLst",
+            "Name": "p:CT_ExtensionList/p216:extLst",
             "Occurs": [
               {
                 "Max": 1
@@ -529,21 +604,21 @@
       }
     },
     {
-      "Name": "p228:CT_TaskHistory/p228:history",
+      "Name": "p216:CT_TaskHistory/p216:history",
       "ClassName": "TaskHistory",
       "Summary": "Defines the TaskHistory Class.",
       "BaseClass": "OpenXmlCompositeElement",
       "Version": "Microsoft365",
       "Children": [
         {
-          "Name": "p228:CT_TaskHistoryEvent/p228:event"
+          "Name": "p216:CT_TaskHistoryEvent/p216:event"
         }
       ],
       "Particle": {
         "Kind": "Sequence",
         "Items": [
           {
-            "Name": "p228:CT_TaskHistoryEvent/p228:event",
+            "Name": "p216:CT_TaskHistoryEvent/p216:event",
             "Occurs": [
               {}
             ],
