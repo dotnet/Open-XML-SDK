@@ -132,10 +132,6 @@
     "Namespace": "DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command"
   },
   {
-    "Prefix": "p216",
-    "Namespace": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main"
-  },
-  {
     "Prefix": "p223",
     "Namespace": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main"
   },
@@ -182,6 +178,10 @@
   {
     "Prefix": "xlpda",
     "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays"
+  },
+  {
+    "Prefix": "xlwcv",
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.WorkbookCompatibilityVersion"
   },
   {
     "Prefix": "wne",
