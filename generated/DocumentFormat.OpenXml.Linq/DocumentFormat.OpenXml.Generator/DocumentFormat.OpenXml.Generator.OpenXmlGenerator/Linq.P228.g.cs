@@ -97,7 +97,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="history" />.</description></item>
-        /// <item><description>has the following child XML elements: <see cref="add" />, <see cref="anchr" />, <see cref="asgn" />, <see cref="atrbtn" />, <see cref="date" />, <see cref="extLst" />, <see cref="pcntCmplt" />, <see cref="title" />, <see cref="unasgnAll" />, <see cref="undo" />, <see cref="unknown" />.</description></item>
+        /// <item><description>has the following child XML elements: <see cref="add" />, <see cref="anchr" />, <see cref="asgn" />, <see cref="atrbtn" />, <see cref="date" />, <see cref="extLst" />, <see cref="pcntCmplt" />, <see cref="title" />, <see cref="unAsgn" />, <see cref="unasgnAll" />, <see cref="undo" />, <see cref="unknown" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.id" />, <see cref="NoNamespace.time" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TaskHistoryEvent.</description></item>
         /// </list>
@@ -169,6 +169,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName title = p228 + "title";
+
+        /// <summary>
+        /// Represents the p228:unAsgn XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="@event" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: UnAsgnTaskAssignUnassignUser.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName unAsgn = p228 + "unAsgn";
 
         /// <summary>
         /// Represents the p228:unasgnAll XML element.

@@ -287,6 +287,31 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     }
 
     /// <summary>
+    /// <para>Defines the UnAsgnTaskAssignUnassignUser Class.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is p228:unAsgn.</para>
+    /// </summary>
+    public partial class UnAsgnTaskAssignUnassignUser : OpenXmlTaskAssignUnassignUserElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the UnAsgnTaskAssignUnassignUser class.
+        /// </summary>
+        public UnAsgnTaskAssignUnassignUser() : base()
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("p228:unAsgn");
+            builder.Availability = FileFormatVersions.Microsoft365;
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnAsgnTaskAssignUnassignUser>(deep);
+    }
+
+    /// <summary>
     /// <para>Defines the OpenXmlTaskAssignUnassignUserElement Class.</para>
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
@@ -690,6 +715,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskAnchor" /> <c>&lt;p228:anchr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AtrbtnTaskAssignUnassignUser" /> <c>&lt;p228:atrbtn></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AsgnTaskAssignUnassignUser" /> <c>&lt;p228:asgn></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.UnAsgnTaskAssignUnassignUser" /> <c>&lt;p228:unAsgn></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskProgressEventInfo" /> <c>&lt;p228:pcntCmplt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskScheduleEventInfo" /> <c>&lt;p228:date></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskTitleEventInfo" /> <c>&lt;p228:title></c></description></item>
@@ -761,6 +787,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskAnchor>();
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AtrbtnTaskAssignUnassignUser>();
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AsgnTaskAssignUnassignUser>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.UnAsgnTaskAssignUnassignUser>();
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskProgressEventInfo>();
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskScheduleEventInfo>();
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskTitleEventInfo>();
@@ -783,6 +810,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AsgnTaskAssignUnassignUser), 1, 1, version: FileFormatVersions.Microsoft365),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.UnAsgnTaskAssignUnassignUser), 1, 1, version: FileFormatVersions.Microsoft365),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AddEmpty), 0, 1, version: FileFormatVersions.Microsoft365),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskTitleEventInfo), 1, 1, version: FileFormatVersions.Microsoft365),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskScheduleEventInfo), 1, 1, version: FileFormatVersions.Microsoft365),
