@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [3.3.0] - 2025-03-06
 
+### Added
+
+- Added `DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.WorkbookCompatibilityVersion` namespace
+
 ### Fixed
 - Performance of `.ToFlatOpc(...)` has been greatly improved for large parts (#1863)
 
