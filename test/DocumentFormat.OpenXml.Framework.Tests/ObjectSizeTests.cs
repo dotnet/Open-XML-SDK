@@ -9,7 +9,6 @@ using System;
 using System.Collections.Generic;
 using System.Xml;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Framework.Tests;
 

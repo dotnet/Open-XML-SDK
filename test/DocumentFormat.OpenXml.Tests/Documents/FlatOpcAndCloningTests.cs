@@ -8,7 +8,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests.Documents
 {

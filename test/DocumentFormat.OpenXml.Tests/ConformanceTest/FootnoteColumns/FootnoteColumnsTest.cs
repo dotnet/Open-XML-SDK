@@ -4,7 +4,6 @@
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Tests.FootnoteColumnsClass;
 using Xunit;
-using Xunit.Abstractions;
 
 using W15 = DocumentFormat.OpenXml.Office2013.Word;
 

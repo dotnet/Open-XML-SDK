@@ -4,7 +4,6 @@
 using DocumentFormat.OpenXml.Tests.GuideClass;
 using System.IO;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests.GuideTest
 {
