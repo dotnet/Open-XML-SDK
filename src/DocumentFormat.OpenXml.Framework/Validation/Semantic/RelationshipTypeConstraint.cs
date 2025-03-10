@@ -21,7 +21,6 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             _type = type;
         }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Performance", "CA1851:Possible multiple enumerations of 'IEnumerable' collection", Justification = "https://github.com/dotnet/Open-XML-SDK/issues/1325")]
         public override ValidationErrorInfo? ValidateCore(ValidationContext context)
         {
             var current = context.Stack.Current;
@@ -57,20 +56,21 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             var rels = current.Part.ExternalRelationships.Where(r => r.Id == attribute.Value.InnerText);
 
-            if (!rels.Any())
+            if (rels.FirstOrDefault() is { } rel)
             {
-                var pairs = current.Part.Parts.Where(p => p.RelationshipId == attribute.Value.InnerText);
+                actualType = rel.RelationshipType;
 
-                if (pairs.Any())
-                {
-                    Debug.Assert(pairs.Count() == 1);
-                    actualType = pairs.First().OpenXmlPart.RelationshipType;
-                }
             }
             else
             {
-                Debug.Assert(rels.Count() == 1);
-                actualType = rels.First().RelationshipType;
+                var pair = current.Part.Parts
+                    .Where(p => p.RelationshipId == attribute.Value.InnerText)
+                    .FirstOrDefaultAndMaxOne();
+
+                if (pair is { })
+                {
+                    actualType = pair.OpenXmlPart.RelationshipType;
+                }
             }
 
             if (actualType == _type)
