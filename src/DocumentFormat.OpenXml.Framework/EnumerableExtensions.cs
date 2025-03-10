@@ -12,7 +12,7 @@ internal static class EnumerableExtensions
     /// <summary>
     /// Similar to <see cref="Enumerable.FirstOrDefault{TSource}(IEnumerable{TSource})"/> but will also verify that at most there is one.
     /// </summary>
-    public static T? FirstOrDefaultAndMaxOne<T>(this IEnumerable<T> enumerable, Func<Exception>? exThrow = null)
+    public static T? FirstOrDefaultAndMaxOne<T>(this IEnumerable<T> enumerable, Func<Exception>? exceptionFactory = null)
     {
         using var e = enumerable.GetEnumerator();
 
@@ -22,7 +22,7 @@ internal static class EnumerableExtensions
 
             if (e.MoveNext())
             {
-                throw exThrow?.Invoke() ?? throw new InvalidOperationException("Max of a single item should be in the enumerable");
+                throw exceptionFactory?.Invoke() ?? throw new InvalidOperationException(ExceptionMessages.FirstOrDefaultMaxOne);
             }
 
             return first;
