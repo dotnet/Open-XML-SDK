@@ -20,6 +20,7 @@ on:
   
 jobs:
   build_and_test:
+    if: false # Disable for now while getting XUnit v3 working
     name: Run
 
     env:

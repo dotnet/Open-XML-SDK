@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var wDoc = WordprocessingDocument.Open(stream, false))
             {
                 var v = new OpenXmlValidator(FileFormatVersions.Office2016);
-                var errors = v.Validate(wDoc);
+                var errors = v.Validate(wDoc, TestContext.Current.CancellationToken);
 
                 Assert.Empty(errors);
             }
@@ -88,7 +88,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var pDoc = PresentationDocument.Open(stream, false))
             {
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errors = v.Validate(pDoc);
+                var errors = v.Validate(pDoc, TestContext.Current.CancellationToken);
 
                 Assert.Empty(errors);
             }
@@ -110,7 +110,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var wDoc = WordprocessingDocument.Open(stream, false))
             {
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errors = v.Validate(wDoc);
+                var errors = v.Validate(wDoc, TestContext.Current.CancellationToken);
 
                 Assert.Empty(errors);
             }
@@ -127,7 +127,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var pDoc = PresentationDocument.Open(stream, false))
             {
                 var v = new OpenXmlValidator(FileFormatVersions.Office2016);
-                var errors = v.Validate(pDoc);
+                var errors = v.Validate(pDoc, TestContext.Current.CancellationToken);
 
                 Assert.Empty(errors);
             }
@@ -149,7 +149,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var wDoc = WordprocessingDocument.Open(stream, false))
             {
                 var v = new OpenXmlValidator(FileFormatVersions.Office2016);
-                var errors = v.Validate(wDoc);
+                var errors = v.Validate(wDoc, TestContext.Current.CancellationToken);
 
                 Assert.Empty(errors);
             }

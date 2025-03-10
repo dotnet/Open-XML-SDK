@@ -183,7 +183,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var document = file.Open(false))
             {
                 var isoValidator = new OpenXmlValidator(FileFormatVersions.Office2010);
-                var errorList = isoValidator.Validate(document);
+                var errorList = isoValidator.Validate(document, TestContext.Current.CancellationToken);
 
                 Assert.NotNull(errorList);
             }

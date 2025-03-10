@@ -2,12 +2,8 @@
   <PropertyGroup>
     <TargetFrameworks>$(AssetsTargetFrameworks)</TargetFrameworks>
     <NoWarn>$(NoWarn);CA1822;CA1034</NoWarn>
-    <IsTestProject>false</IsTestProject>
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="assets\**\*" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="xunit" />
   </ItemGroup>
 </Project>

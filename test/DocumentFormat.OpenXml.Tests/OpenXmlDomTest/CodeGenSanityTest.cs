@@ -5,7 +5,6 @@ using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System.Linq;
 using Xunit;
-using Xunit.Abstractions;
 
 using static DocumentFormat.OpenXml.Tests.TestAssets;
 

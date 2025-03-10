@@ -7,7 +7,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Xunit;
-using Xunit.Abstractions;
 
 using static DocumentFormat.OpenXml.Tests.TestAssets;
 
@@ -190,7 +189,7 @@ namespace DocumentFormat.OpenXml.Tests
                     MaxNumberOfErrors = maxErrorCount,
                 };
 
-                var errors = validator.Validate(package);
+                var errors = validator.Validate(package, TestContext.Current.CancellationToken);
 
                 Assert.Equal(expectedErrorCount, errors.Count());
             }

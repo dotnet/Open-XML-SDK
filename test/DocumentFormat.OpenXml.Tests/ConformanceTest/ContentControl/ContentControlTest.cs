@@ -7,7 +7,6 @@ using DocumentFormat.OpenXml.Wordprocessing;
 using System.IO;
 using System.Linq;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests.ContentControl
 {
