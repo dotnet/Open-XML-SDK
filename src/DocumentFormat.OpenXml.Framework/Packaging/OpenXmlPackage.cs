@@ -262,7 +262,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Flushes the content, closes the document, and releases all resources. If the <see cref="OpenXmlPackage.AutoSave"> property is <c>true</c>, the content will be saved before closing.
+        /// Flushes the content, closes the document, and releases all resources. If the <see cref="OpenXmlPackage.AutoSave" /> property is <c>true</c>, the content will be saved before closing.
         /// </summary>
         /// <param name="disposing">Specify true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
         protected virtual void Dispose(bool disposing)
