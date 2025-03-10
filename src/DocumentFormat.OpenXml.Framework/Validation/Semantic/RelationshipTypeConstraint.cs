@@ -59,7 +59,6 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             if (rels.FirstOrDefault() is { } rel)
             {
                 actualType = rel.RelationshipType;
-
             }
             else
             {

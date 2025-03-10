@@ -31,4 +31,3 @@ internal static class EnumerableExtensions
         return default;
     }
 }
-
