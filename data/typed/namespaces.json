@@ -184,6 +184,10 @@
     "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays"
   },
   {
+    "Prefix": "xlwcv",
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.WorkbookCompatibilityVersion"
+  },
+  {
     "Prefix": "wne",
     "Namespace": "DocumentFormat.OpenXml.Office.Word"
   },

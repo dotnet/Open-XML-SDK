@@ -68100,6 +68100,9 @@
        "ElementType": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService.ExternalCodeService"
       },
       {
+       "ElementType": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.WorkbookCompatibilityVersion.Version"
+      },
+      {
        "MinOccurs": 0,
        "ParticleType": "Any"
       }
