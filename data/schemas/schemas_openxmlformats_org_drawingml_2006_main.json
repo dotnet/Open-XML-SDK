@@ -11819,6 +11819,9 @@
           "Name": "adec:CT_Decorative/adec:decorative"
         },
         {
+          "Name": "ahyp:CT_HyperlinkColor/ahyp:hlinkClr"
+        },
+        {
           "Name": "a16:CT_CreationId/a16:creationId"
         },
         {
@@ -11832,9 +11835,6 @@
         },
         {
           "Name": "a16:CT_Identifier/a16:colId"
-        },
-        {
-          "Name": "ahyp:CT_HyperlinkColor/ahyp:hlinkClr"
         },
         {
           "Name": "wp15:CT_WebVideoPr/wp15:webVideoPr"
@@ -17382,84 +17382,6 @@
       }
     },
     {
-      "Name": "a:CT_TableCell/a:tc",
-      "ClassName": "TableCell",
-      "Summary": "Table Cell.",
-      "CompositeType": "OneSequence",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":rowSpan",
-          "PropertyName": "RowSpan",
-          "Type": "Int32Value",
-          "PropertyComments": "Row Span"
-        },
-        {
-          "QName": ":gridSpan",
-          "PropertyName": "GridSpan",
-          "Type": "Int32Value",
-          "PropertyComments": "Grid Span"
-        },
-        {
-          "QName": ":hMerge",
-          "PropertyName": "HorizontalMerge",
-          "Type": "BooleanValue",
-          "PropertyComments": "Horizontal Merge"
-        },
-        {
-          "QName": ":vMerge",
-          "PropertyName": "VerticalMerge",
-          "Type": "BooleanValue",
-          "PropertyComments": "Vertical Merge"
-        }
-      ],
-      "Children": [
-        {
-          "Name": "a:CT_TextBody/a:txBody",
-          "PropertyName": "TextBody",
-          "PropertyComments": "Text Body"
-        },
-        {
-          "Name": "a:CT_TableCellProperties/a:tcPr",
-          "PropertyName": "TableCellProperties",
-          "PropertyComments": "Table Cell Properties"
-        },
-        {
-          "Name": "a:CT_OfficeArtExtensionList/a:extLst",
-          "PropertyName": "ExtensionList"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "a:CT_TextBody/a:txBody",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "a:CT_TableCellProperties/a:tcPr",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "a:CT_OfficeArtExtensionList/a:extLst",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
       "Name": "a:CT_TableStyle/a:tableStyle",
       "ClassName": "TableStyle",
       "Summary": "Table Style.",
@@ -18054,7 +17976,7 @@
           "QName": ":w",
           "PropertyName": "Width",
           "Type": "Int64Value",
-          "PropertyComments": "Width",
+          "PropertyComments": "w",
           "Validators": [
             {
               "Name": "RequiredValidator"
@@ -18080,15 +18002,15 @@
       ],
       "Children": [
         {
-          "Name": "a:CT_OfficeArtExtensionList/a:extLst",
-          "PropertyName": "ExtensionList"
+          "Name": "a:CT_TableColExtensionList/a:extLst",
+          "PropertyName": "TableColExtensionList"
         }
       ],
       "Particle": {
         "Kind": "Sequence",
         "Items": [
           {
-            "Name": "a:CT_OfficeArtExtensionList/a:extLst",
+            "Name": "a:CT_TableColExtensionList/a:extLst",
             "Occurs": [
               {
                 "Max": 1
@@ -18301,7 +18223,7 @@
           "QName": ":h",
           "PropertyName": "Height",
           "Type": "Int64Value",
-          "PropertyComments": "Height",
+          "PropertyComments": "h",
           "Validators": [
             {
               "Name": "RequiredValidator"
@@ -18330,7 +18252,7 @@
           "Name": "a:CT_TableCell/a:tc"
         },
         {
-          "Name": "a:CT_OfficeArtExtensionList/a:extLst"
+          "Name": "a:CT_TableRowExtensionList/a:extLst"
         }
       ],
       "Particle": {
@@ -18343,7 +18265,7 @@
             ]
           },
           {
-            "Name": "a:CT_OfficeArtExtensionList/a:extLst",
+            "Name": "a:CT_TableRowExtensionList/a:extLst",
             "Occurs": [
               {
                 "Max": 1
@@ -25032,6 +24954,186 @@
               {
                 "Max": 1
               }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_TableColExtension/a:ext",
+      "ClassName": "TableColExtension",
+      "Summary": "Defines the TableColExtension Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "a16:CT_Identifier/a16:colId",
+          "PropertyName": "ColIdIdentifier"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Items": [
+          {
+            "Name": "a16:CT_Identifier/a16:colId",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_TableRowExtension/a:ext",
+      "ClassName": "TableRowExtension",
+      "Summary": "Defines the TableRowExtension Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "a16:CT_Identifier/a16:rowId",
+          "PropertyName": "RowIdIdentifier"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Items": [
+          {
+            "Name": "a16:CT_Identifier/a16:rowId",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_TableColExtensionList/a:extLst",
+      "ClassName": "TableColExtensionList",
+      "Summary": "Defines the TableColExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "a:CT_TableColExtension/a:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_TableColExtension/a:ext",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_TableCell/a:tc",
+      "ClassName": "TableCell",
+      "Summary": "Defines the TableCell Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":rowSpan",
+          "PropertyName": "RowSpan",
+          "Type": "Int32Value",
+          "PropertyComments": "Row Span"
+        },
+        {
+          "QName": ":gridSpan",
+          "PropertyName": "GridSpan",
+          "Type": "Int32Value",
+          "PropertyComments": "Grid Span"
+        },
+        {
+          "QName": ":hMerge",
+          "PropertyName": "HorizontalMerge",
+          "Type": "BooleanValue",
+          "PropertyComments": "Horizontal Merge"
+        },
+        {
+          "QName": ":vMerge",
+          "PropertyName": "VerticalMerge",
+          "Type": "BooleanValue",
+          "PropertyComments": "Vertical Merge"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_TextBody/a:txBody",
+          "PropertyName": "TextBody",
+          "PropertyComments": "Text Body"
+        },
+        {
+          "Name": "a:CT_TableCellProperties/a:tcPr",
+          "PropertyName": "TableCellProperties",
+          "PropertyComments": "Table Cell Properties"
+        },
+        {
+          "Name": "a:CT_OfficeArtExtensionList/a:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_TextBody/a:txBody",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_TableCellProperties/a:tcPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_OfficeArtExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "a:CT_TableRowExtensionList/a:extLst",
+      "ClassName": "TableRowExtensionList",
+      "Summary": "Defines the TableRowExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "a:CT_TableRowExtension/a:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_TableRowExtension/a:ext",
+            "Occurs": [
+              {}
             ]
           }
         ]
