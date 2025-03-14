@@ -6,6 +6,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+#if !NET35 && !NET40 && !NET46
+using System.Threading.Tasks;
+#endif
 using System.Xml;
 
 namespace DocumentFormat.OpenXml
@@ -91,6 +94,36 @@ namespace DocumentFormat.OpenXml
             _xmlWriter = XmlWriter.Create(partStream, settings);
         }
 
+        /// <summary>
+        /// Initializes a new instance of the OpenXmlPartWriter.
+        /// </summary>
+        /// <param name="partStream">The given part stream.</param>
+        /// <param name="encoding">The encoding for the XML stream.</param>
+        /// <param name="useAsync">Whether the writer should be initialized using async</param>
+        public OpenXmlPartWriter(Stream partStream, Encoding encoding, bool useAsync)
+        {
+            if (partStream is null)
+            {
+                throw new ArgumentNullException(nameof(partStream));
+            }
+
+            if (encoding is null)
+            {
+                throw new ArgumentNullException(nameof(encoding));
+            }
+
+            var settings = new XmlWriterSettings
+            {
+                CloseOutput = false,
+                Encoding = encoding,
+#if !NET35 && !NET40 && !NET46
+                Async = useAsync,
+#endif
+            };
+
+            _xmlWriter = XmlWriter.Create(partStream, settings);
+        }
+
         #region public OpenXmlWriter methods
 
         /// <summary>
@@ -102,6 +135,20 @@ namespace DocumentFormat.OpenXml
 
             _xmlWriter.WriteStartDocument();
         }
+
+#if !NET35 && !NET40 && !NET46
+        /// <summary>
+        /// Asynchronously writes the XML declaration with the version "1.0".
+        /// </summary>
+        public async override Task WriteStartDocumentAsync()
+        {
+            ThrowIfObjectDisposed();
+
+            await _xmlWriter.WriteStartDocumentAsync().ConfigureAwait(true);
+
+            return;
+        }
+#endif
 
         /// <summary>
         /// Writes the XML declaration with the version "1.0" and the standalone attribute.

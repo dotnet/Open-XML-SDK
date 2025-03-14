@@ -6,6 +6,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+#if !NET35 && !NET40 && !NET46
+using System.Threading.Tasks;
+#endif
 
 namespace DocumentFormat.OpenXml
 {
@@ -57,6 +60,13 @@ namespace DocumentFormat.OpenXml
         /// Writes the XML declaration with the version "1.0".
         /// </summary>
         public abstract void WriteStartDocument();
+
+#if !NET35 && !NET40 && !NET46
+        /// <summary>
+        /// Asynchronously writes the XML declaration with the version "1.0".
+        /// </summary>
+        public abstract Task WriteStartDocumentAsync();
+#endif
 
         /// <summary>
         /// Writes the XML declaration with the version "1.0" and the standalone attribute.
