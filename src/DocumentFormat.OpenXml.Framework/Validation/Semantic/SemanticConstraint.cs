@@ -241,6 +241,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 CultureInfo.InvariantCulture, out value);
         }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Performance", "CA1851:Possible multiple enumerations of 'IEnumerable' collection", Justification = "We're resetting the parts variable, but the analyzer doesn't realize that")]
         private static OpenXmlPart? GetPartThroughPartPath(IEnumerable<IdPartPair> pairs, string[] path)
         {
             var foundPart = default(OpenXmlPart);
@@ -251,7 +252,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 foundPart = parts
                     .Where(p => p.OpenXmlPart.GetType().Name == path[i])
                     .Select(t => t.OpenXmlPart)
-                    .FirstOrDefaultAndMaxOne(static () => new System.IO.FileFormatException(ValidationResources.MoreThanOnePartForOneUri));
+                    .SingleOrDefault();
 
                 if (foundPart is not { })
                 {
