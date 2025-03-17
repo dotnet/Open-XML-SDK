@@ -211,23 +211,8 @@ namespace DocumentFormat.OpenXml
         public override void WriteStartDocument()
         {
             ThrowIfObjectDisposed();
-
             _xmlWriter.WriteStartDocument();
         }
-
-#if FEATURE_ASYNC_SAX_XML
-        /// <summary>
-        /// Asynchronously writes the XML declaration with the version "1.0".
-        /// </summary>
-        public async override Task WriteStartDocumentAsync()
-        {
-            ThrowIfObjectDisposed();
-
-            await _xmlWriter.WriteStartDocumentAsync().ConfigureAwait(true);
-
-            return;
-        }
-#endif
 
         /// <summary>
         /// Writes the XML declaration with the version "1.0" and the standalone attribute.
@@ -236,24 +221,8 @@ namespace DocumentFormat.OpenXml
         public override void WriteStartDocument(bool standalone)
         {
             ThrowIfObjectDisposed();
-
             _xmlWriter.WriteStartDocument(standalone);
         }
-
-#if FEATURE_ASYNC_SAX_XML
-        /// <summary>
-        /// Asynchronously writes the XML declaration with the version "1.0".
-        /// </summary>
-        /// <param name="standalone">If true, it writes "standalone=yes"; if false, it writes "standalone=no". </param>
-        public async override Task WriteStartDocumentAsync(bool standalone)
-        {
-            ThrowIfObjectDisposed();
-
-            await _xmlWriter.WriteStartDocumentAsync(standalone).ConfigureAwait(true);
-
-            return;
-        }
-#endif
 
         /// <summary>
         /// Writes out a start element tag of the current element of the OpenXmlReader. And write all the attributes of the element.
@@ -448,9 +417,7 @@ namespace DocumentFormat.OpenXml
         public override void WriteEndElement()
         {
             ThrowIfObjectDisposed();
-
             _xmlWriter.WriteEndElement();
-
             _isLeafTextElementStart = false;
         }
 
@@ -486,9 +453,7 @@ namespace DocumentFormat.OpenXml
             }
 
             ThrowIfObjectDisposed();
-
             elementObject.WriteTo(_xmlWriter);
-
             _isLeafTextElementStart = false;
         }
 
@@ -506,5 +471,39 @@ namespace DocumentFormat.OpenXml
         }
 
         #endregion
+
+        // Async Methods
+#if FEATURE_ASYNC_SAX_XML
+        /// <summary>
+        /// Asynchronously writes the XML declaration with the version "1.0".
+        /// </summary>
+        public async override Task WriteStartDocumentAsync()
+        {
+            ThrowIfObjectDisposed();
+            await _xmlWriter.WriteStartDocumentAsync().ConfigureAwait(true);
+            return;
+        }
+
+        /// <summary>
+        /// Asynchronously writes the XML declaration with the version "1.0".
+        /// </summary>
+        /// <param name="standalone">If true, it writes "standalone=yes"; if false, it writes "standalone=no". </param>
+        public async override Task WriteStartDocumentAsync(bool standalone)
+        {
+            ThrowIfObjectDisposed();
+            await _xmlWriter.WriteStartDocumentAsync(standalone).ConfigureAwait(true);
+            return;
+        }
+
+        public override Task WriteStartElementAsync(OpenXmlReader elementReader) => throw new NotImplementedException();
+        public override Task WriteStartElementAsync(OpenXmlReader elementReader, IEnumerable<OpenXmlAttribute> attributes) => throw new NotImplementedException();
+        public override Task WriteStartElementAsync(OpenXmlReader elementReader, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations) => throw new NotImplementedException();
+        public override Task WriteStartElementAsync(OpenXmlElement elementObject) => throw new NotImplementedException();
+        public override Task WriteStartElementAsync(OpenXmlElement elementObject, IEnumerable<OpenXmlAttribute> attributes) => throw new NotImplementedException();
+        public override Task WriteStartElementAsync(OpenXmlElement elementObject, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations) => throw new NotImplementedException();
+        public override Task WriteEndElementAsync() => throw new NotImplementedException();
+        public override Task WriteElementAsync(OpenXmlElement elementObject) => throw new NotImplementedException();
+        public override Task WriteStringAsync(string text) => throw new NotImplementedException();
+#endif
     }
 }
