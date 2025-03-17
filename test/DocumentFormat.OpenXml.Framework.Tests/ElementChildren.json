@@ -22876,6 +22876,10 @@
     "Children": []
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.WorkbookCompatibilityVersion.Version",
+    "Children": []
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office.Word.AllocatedCommand",
     "Children": []
   },
@@ -46898,8 +46902,17 @@
         "Type": "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main*CT_WorkbookPr"
       },
       {
+<<<<<<< HEAD
         "Name": "http://schemas.microsoft.com/office/spreadsheetml/2023/externalCodeService*externalCodeService",
         "Type": "http://schemas.microsoft.com/office/spreadsheetml/2023/externalCodeService*CT_ExternalCodeService"
+=======
+        "Name": "externalCodeService",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2023/externalCodeService"
+      },
+      {
+        "Name": "version",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2024/workbookCompatibilityVersion"
+>>>>>>> main
       }
     ]
   },
