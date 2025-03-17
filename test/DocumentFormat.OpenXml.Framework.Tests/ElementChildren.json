@@ -22876,6 +22876,10 @@
     "Children": []
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.WorkbookCompatibilityVersion.Version",
+    "Children": []
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office.Word.AllocatedCommand",
     "Children": []
   },
@@ -46900,6 +46904,10 @@
       {
         "Name": "externalCodeService",
         "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2023/externalCodeService"
+      },
+      {
+        "Name": "version",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2024/workbookCompatibilityVersion"
       }
     ]
   },

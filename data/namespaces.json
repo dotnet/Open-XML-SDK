@@ -682,6 +682,11 @@
     "Version": "Office2021"
   },
   {
+    "Prefix": "xlwcv",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2024/workbookCompatibilityVersion",
+    "Version": "Microsoft365"
+  },
+  {
     "Prefix": "xml",
     "Uri": "http://www.w3.org/XML/1998/namespace"
   },

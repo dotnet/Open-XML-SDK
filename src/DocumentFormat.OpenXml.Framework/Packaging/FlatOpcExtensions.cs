@@ -141,25 +141,7 @@ public static class FlatOpcExtensions
     }
 
     private static string ToChunkedBase64String(byte[] byteArray)
-    {
-        // The MIME specification defines a maximum line length of 76 characters
-        // for a Base64-encoded string. Therefore, we need to break down the
-        // Base64 string into chunks of up to 76 characters each.
-        const int maxLineLength = 76;
-
-        return Convert.ToBase64String(byteArray)
-            .Select((@char, index) => new { Character = @char, Chunk = index / maxLineLength })
-            .GroupBy(charAndChunk => charAndChunk.Chunk)
-            .Aggregate(
-                new StringBuilder(),
-                (sb, grouping) => sb
-                    .Append(grouping.Aggregate(
-                        new StringBuilder(),
-                        (chunkSb, charAndChunk) => chunkSb.Append(charAndChunk.Character),
-                        chunkSb => chunkSb.ToString()))
-                    .Append(Environment.NewLine),
-                sb => sb.ToString());
-    }
+        => Convert.ToBase64String(byteArray, Base64FormattingOptions.InsertLineBreaks);
 
     internal static IPackageFactory<TPackage> WithFlatOpcTemplate<TPackage>(this IPackageFactory<TPackage> builder, string text, bool? isEditable = default)
         where TPackage : OpenXmlPackage
@@ -263,7 +245,6 @@ public static class FlatOpcExtensions
             return Cached.Array<byte>();
         }
 
-        var base64CharArray = chunkedBase64String.Where(c => c is not '\r' and not '\n').ToArray();
-        return Convert.FromBase64CharArray(base64CharArray, 0, base64CharArray.Length);
+        return Convert.FromBase64String(chunkedBase64String);
     }
 }

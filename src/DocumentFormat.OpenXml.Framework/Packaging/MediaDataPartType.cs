@@ -125,6 +125,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         VC1,
 
+        /// <summary>
+        /// MP4 Stream (.mp4)
+        /// </summary>
+        Mp4,
+
         #endregion
     }
 }
