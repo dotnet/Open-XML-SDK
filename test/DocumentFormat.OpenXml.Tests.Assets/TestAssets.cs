@@ -5,7 +5,6 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -51,7 +50,10 @@ namespace DocumentFormat.OpenXml.Tests
             var stream = assembly.GetManifestResourceStream($"DocumentFormat.OpenXml.Tests.Assets.assets.{name}");
             var names = assembly.GetManifestResourceNames().OrderBy(t => t).ToList();
 
-            Assert.NotNull(stream);
+            if (stream is null)
+            {
+                throw new InvalidOperationException($"Could not find stream '{name}' for test");
+            }
 
             return stream;
         }

@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var doc = SpreadsheetDocument.Open(stream, false))
             {
                 var validator = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var validateResults = validator.Validate(doc);
+                var validateResults = validator.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Empty(validateResults);
             }
