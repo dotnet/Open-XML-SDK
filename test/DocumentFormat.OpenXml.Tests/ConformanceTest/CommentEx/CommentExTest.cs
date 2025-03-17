@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
                 var validator = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var validateResults = validator.Validate(doc);
+                var validateResults = validator.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Empty(validateResults);
             }

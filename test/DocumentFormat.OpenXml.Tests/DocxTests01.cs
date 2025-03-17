@@ -35,7 +35,7 @@ namespace DocumentFormat.OpenXml.Tests
                 para.InsertBeforeSelf(newPara);
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Empty(errs);
             }
@@ -124,7 +124,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var mdp = doc.MainDocumentPart;
                 var cnt = mdp.Document.Descendants().Count();
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Single(errs);
             }
@@ -139,7 +139,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var pkg = (OpenXmlPackage)doc;
                 var wpcp = pkg.AddNewPart<RibbonExtensibilityPart>("application/xml", "rid1232131");
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Empty(errs);
             }
@@ -167,7 +167,7 @@ namespace DocumentFormat.OpenXml.Tests
                 tnPart = doc.AddThumbnailPart("image/jpg");
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Empty(errs);
             }
@@ -181,7 +181,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var wpcp = doc.AddNewPart<RibbonExtensibilityPart>("application/xml", "rid1232131");
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Empty(errs);
             }
@@ -208,7 +208,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var wpcp = doc.AddNewPart<RibbonExtensibilityPart>("rid123123");
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Empty(errs);
             }
@@ -226,7 +226,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var wpcp = doc.AddNewPart<RibbonExtensibilityPart>();
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Single(errs);
             }
@@ -240,7 +240,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var wpcp = doc.MainDocumentPart.AddNewPart<WordprocessingCommentsPart>("application/vnd.openxmlformats-officedocument.wordprocessingml.comments+xml", "rid1232131");
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Empty(errs);
             }
@@ -267,7 +267,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var wpcp = doc.MainDocumentPart.AddNewPart<WordprocessingCommentsPart>("rid123123");
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Empty(errs);
             }
@@ -281,7 +281,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var wpcp = doc.MainDocumentPart.AddNewPart<WordprocessingCommentsPart>();
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Empty(errs);
             }
@@ -296,7 +296,7 @@ namespace DocumentFormat.OpenXml.Tests
                 doc.MainDocumentPart.AddAlternativeFormatImportPart(AlternativeFormatImportPartType.Html);
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Empty(errs);
             }
@@ -322,7 +322,7 @@ namespace DocumentFormat.OpenXml.Tests
                     new Uri(@"c:/resources/image1.jpg", UriKind.Absolute));
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Empty(errs);
             }
@@ -339,7 +339,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
 
-                Assert.Single(v.Validate(doc));
+                Assert.Single(v.Validate(doc, TestContext.Current.CancellationToken));
             }
         }
 
@@ -353,7 +353,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var cnt = doc.MainDocumentPart.Document.Descendants().Count();
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
 
-                Assert.Single(v.Validate(doc));
+                Assert.Single(v.Validate(doc, TestContext.Current.CancellationToken));
             }
         }
 
@@ -375,7 +375,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                     var v = new OpenXmlValidator(FileFormatVersions.Office2013);
 
-                    Assert.Equal(35, v.Validate(doc).Count());
+                    Assert.Equal(35, v.Validate(doc, TestContext.Current.CancellationToken).Count());
                 }
             }
         }
@@ -417,7 +417,7 @@ namespace DocumentFormat.OpenXml.Tests
                 doc.MainDocumentPart.Document.Save();
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Empty(errs);
             }
@@ -439,7 +439,7 @@ namespace DocumentFormat.OpenXml.Tests
                 doc.MainDocumentPart.Document.Save();
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Empty(errs);
             }
@@ -461,7 +461,7 @@ namespace DocumentFormat.OpenXml.Tests
                 doc.MainDocumentPart.Document.Save();
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Empty(errs);
             }
@@ -488,7 +488,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
 
-                Assert.Single(v.Validate(doc));
+                Assert.Single(v.Validate(doc, TestContext.Current.CancellationToken));
             }
         }
 
@@ -511,7 +511,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
 
-                Assert.Single(v.Validate(doc));
+                Assert.Single(v.Validate(doc, TestContext.Current.CancellationToken));
             }
         }
 
@@ -528,7 +528,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
 
-                Assert.Equal(2, v.Validate(doc).Count());
+                Assert.Equal(2, v.Validate(doc, TestContext.Current.CancellationToken).Count());
             }
         }
 
@@ -591,7 +591,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
 
-                Assert.Single(v.Validate(doc));
+                Assert.Single(v.Validate(doc, TestContext.Current.CancellationToken));
             }
         }
 
@@ -608,7 +608,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
 
-                Assert.Single(v.Validate(doc));
+                Assert.Single(v.Validate(doc, TestContext.Current.CancellationToken));
             }
         }
 
@@ -623,7 +623,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var p = firstPara.LookupPrefix("http://schemas.openxmlformats.org/wordprocessingml/2006/main");
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
 
-                Assert.Single(v.Validate(doc));
+                Assert.Single(v.Validate(doc, TestContext.Current.CancellationToken));
             }
         }
 
@@ -638,7 +638,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var ns = firstPara.NamespaceDeclarations;
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
 
-                Assert.Single(v.Validate(doc));
+                Assert.Single(v.Validate(doc, TestContext.Current.CancellationToken));
             }
         }
 
@@ -654,7 +654,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var s2 = firstPara.InnerText;
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
 
-                Assert.Single(v.Validate(doc));
+                Assert.Single(v.Validate(doc, TestContext.Current.CancellationToken));
             }
         }
 
@@ -669,7 +669,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var s = firstPara.OuterXml;
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
 
-                Assert.Single(v.Validate(doc));
+                Assert.Single(v.Validate(doc, TestContext.Current.CancellationToken));
             }
         }
 
@@ -688,7 +688,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
 
-                Assert.Single(v.Validate(doc));
+                Assert.Single(v.Validate(doc, TestContext.Current.CancellationToken));
             }
         }
 
@@ -711,7 +711,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
 
-                Assert.Single(v.Validate(doc));
+                Assert.Single(v.Validate(doc, TestContext.Current.CancellationToken));
             }
         }
 
@@ -727,7 +727,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
 
-                Assert.Single(v.Validate(doc));
+                Assert.Single(v.Validate(doc, TestContext.Current.CancellationToken));
             }
         }
 
@@ -749,7 +749,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
 
-                Assert.Single(v.Validate(doc));
+                Assert.Single(v.Validate(doc, TestContext.Current.CancellationToken));
             }
         }
 
@@ -769,7 +769,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
 
-                Assert.Single(v.Validate(doc));
+                Assert.Single(v.Validate(doc, TestContext.Current.CancellationToken));
             }
         }
 
@@ -790,7 +790,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
 
                 Assert.Collection(
-                    v.Validate(doc),
+                    v.Validate(doc, TestContext.Current.CancellationToken),
                     e =>
                     {
                         Assert.Equal("Sem_UniqueAttributeValue", e.Id);
@@ -812,7 +812,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using (var doc = WordprocessingDocument.Open(stream, false, openSettings))
                 {
                     var validator = new OpenXmlValidator(FileFormatVersions.Office2013);
-                    var cnt = validator.Validate(doc).Count();
+                    var cnt = validator.Validate(doc, TestContext.Current.CancellationToken).Count();
 
                     Assert.Equal(5, cnt);
                 }
@@ -832,7 +832,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using (var doc = WordprocessingDocument.Open(stream, false, openSettings))
                 {
                     var validator = new OpenXmlValidator(FileFormatVersions.Office2013);
-                    var results = validator.Validate(doc);
+                    var results = validator.Validate(doc, TestContext.Current.CancellationToken);
 
                     Assert.Empty(results);
                 }
@@ -851,7 +851,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var doc = WordprocessingDocument.Open(stream, false, openSettings))
             {
                 var validator = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var cnt = validator.Validate(doc).Count();
+                var cnt = validator.Validate(doc, TestContext.Current.CancellationToken).Count();
 
                 Assert.Equal(0, cnt);
             }
@@ -871,13 +871,13 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Throws<InvalidOperationException>(() =>
                 {
                     var validator = new OpenXmlValidator(FileFormatVersions.Office2007);
-                    var cnt = validator.Validate(doc).Count();
+                    var cnt = validator.Validate(doc, TestContext.Current.CancellationToken).Count();
 
                     validator = new OpenXmlValidator(FileFormatVersions.Office2010);
-                    cnt += validator.Validate(doc).Count();
+                    cnt += validator.Validate(doc, TestContext.Current.CancellationToken).Count();
 
                     validator = new OpenXmlValidator(FileFormatVersions.Office2013);
-                    cnt += validator.Validate(doc).Count();
+                    cnt += validator.Validate(doc, TestContext.Current.CancellationToken).Count();
 
                     Assert.Equal(0, cnt);
                 });
@@ -894,7 +894,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var extRels = mdp.HyperlinkRelationships;
                 var hyperlinkRel = extRels.First();
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Empty(errs);
             }
@@ -929,7 +929,7 @@ namespace DocumentFormat.OpenXml.Tests
                 AddImageToBody(doc, mainPart.GetIdOfPart(imagePart));
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Single(errs);
             }
@@ -952,7 +952,7 @@ namespace DocumentFormat.OpenXml.Tests
                 AddImageToBody(doc, mainPart.GetIdOfPart(imagePart));
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Single(errs);
             }
@@ -975,7 +975,7 @@ namespace DocumentFormat.OpenXml.Tests
                 AddImageToBody(doc, mainPart.GetIdOfPart(imagePart));
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Single(errs);
             }
@@ -998,7 +998,7 @@ namespace DocumentFormat.OpenXml.Tests
                 AddImageToBody(doc, mainPart.GetIdOfPart(imagePart));
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Single(errs);
             }
@@ -1021,7 +1021,7 @@ namespace DocumentFormat.OpenXml.Tests
                 AddImageToBody(doc, mainPart.GetIdOfPart(imagePart));
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Single(errs);
             }
@@ -1101,7 +1101,7 @@ namespace DocumentFormat.OpenXml.Tests
                 doc.MainDocumentPart.DeleteParts(partList);
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Empty(errs);
             }
@@ -1117,7 +1117,7 @@ namespace DocumentFormat.OpenXml.Tests
                 doc.MainDocumentPart.DeletePart(commentsPart);
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Equal(3, errs.Count());
             }
@@ -1166,7 +1166,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 firstParagraph.InsertAfter(new W.Run(new W.CommentReference() { Id = id }), cmtEnd);
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Empty(errs);
             }
@@ -1193,7 +1193,7 @@ namespace DocumentFormat.OpenXml.Tests
                 doc.MainDocumentPart.Document.Save();
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+                var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
                 Assert.Empty(errs);
             }
@@ -1210,7 +1210,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var validator = new OpenXmlValidator(version);
 
-                Assert.Equal(count, validator.Validate(doc).Count());
+                Assert.Equal(count, validator.Validate(doc, TestContext.Current.CancellationToken).Count());
             }
         }
 
@@ -1225,7 +1225,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var validator = new OpenXmlValidator(version);
 
-                Assert.Empty(validator.Validate(doc));
+                Assert.Empty(validator.Validate(doc, TestContext.Current.CancellationToken));
             }
         }
 

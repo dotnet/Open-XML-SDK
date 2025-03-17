@@ -39,6 +39,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 MediaDataPartType.Quicktime => "video/quicktime",
                 MediaDataPartType.OggVideo => "video/ogg",
                 MediaDataPartType.VC1 => "video/vc1",
+                MediaDataPartType.Mp4 => "video/mp4",
                 _ => throw new ArgumentOutOfRangeException(nameof(mediaDataPartType)),
             };
 
@@ -74,6 +75,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 MediaDataPartType.Quicktime => ".mov",
                 MediaDataPartType.OggVideo => ".ogg",
                 MediaDataPartType.VC1 => ".wmv",
+                MediaDataPartType.Mp4 => ".mp4",
                 _ => ".media",
             };
     }
