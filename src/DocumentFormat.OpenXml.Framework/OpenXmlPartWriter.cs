@@ -240,6 +240,21 @@ namespace DocumentFormat.OpenXml
             _xmlWriter.WriteStartDocument(standalone);
         }
 
+#if FEATURE_ASYNC_SAX_XML
+        /// <summary>
+        /// Asynchronously writes the XML declaration with the version "1.0".
+        /// </summary>
+        /// <param name="standalone">If true, it writes "standalone=yes"; if false, it writes "standalone=no". </param>
+        public async override Task WriteStartDocumentAsync(bool standalone)
+        {
+            ThrowIfObjectDisposed();
+
+            await _xmlWriter.WriteStartDocumentAsync(standalone).ConfigureAwait(true);
+
+            return;
+        }
+#endif
+
         /// <summary>
         /// Writes out a start element tag of the current element of the OpenXmlReader. And write all the attributes of the element.
         /// </summary>
