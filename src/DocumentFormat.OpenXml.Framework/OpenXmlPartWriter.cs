@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-#if !NET35 && !NET40 && !NET46
+#if FEATURE_ASYNC_SAX_XML
 using System.Threading.Tasks;
 #endif
 using System.Xml;
@@ -30,6 +30,30 @@ namespace DocumentFormat.OpenXml
         public OpenXmlPartWriter(OpenXmlPart openXmlPart)
             : this(openXmlPart, Encoding.UTF8)
         {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the OpenXmlPartWriter.
+        /// </summary>
+        /// <param name="openXmlPart">The OpenXmlPart to be written to.</param>
+        /// <param name="useAsync">Whether the writer should be initialized using async</param>
+        public OpenXmlPartWriter(OpenXmlPart openXmlPart, bool useAsync)
+        {
+            if (openXmlPart is null)
+            {
+                throw new ArgumentNullException(nameof(openXmlPart));
+            }
+
+            var partStream = openXmlPart.GetStream(FileMode.Create);
+            var settings = new XmlWriterSettings
+            {
+                CloseOutput = true,
+#if FEATURE_ASYNC_SAX_XML
+                Async = useAsync,
+#endif
+            };
+
+            _xmlWriter = XmlWriter.Create(partStream, settings);
         }
 
         /// <summary>
@@ -62,10 +86,65 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Initializes a new instance of the OpenXmlPartWriter.
         /// </summary>
+        /// <param name="openXmlPart">The OpenXmlPart to be written to.</param>
+        /// <param name="encoding">The encoding for the XML stream.</param>
+        /// <param name="useAsync">Whether the writer should be initialized using async</param>
+        public OpenXmlPartWriter(OpenXmlPart openXmlPart, Encoding encoding, bool useAsync)
+        {
+            if (openXmlPart is null)
+            {
+                throw new ArgumentNullException(nameof(openXmlPart));
+            }
+
+            if (encoding is null)
+            {
+                throw new ArgumentNullException(nameof(encoding));
+            }
+
+            var partStream = openXmlPart.GetStream(FileMode.Create);
+            var settings = new XmlWriterSettings
+            {
+                CloseOutput = true,
+                Encoding = encoding,
+#if FEATURE_ASYNC_SAX_XML
+                Async = useAsync,
+#endif
+            };
+
+            _xmlWriter = XmlWriter.Create(partStream, settings);
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the OpenXmlPartWriter.
+        /// </summary>
         /// <param name="partStream">The given part stream.</param>
         public OpenXmlPartWriter(Stream partStream)
             : this(partStream, Encoding.UTF8)
         {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the OpenXmlPartWriter.
+        /// </summary>
+        /// <param name="partStream">The given part stream.</param>
+        /// <param name="useAsync">Whether the writer should be initialized using async</param>
+        public OpenXmlPartWriter(Stream partStream, bool useAsync)
+        {
+            if (partStream is null)
+            {
+                throw new ArgumentNullException(nameof(partStream));
+            }
+
+            var settings = new XmlWriterSettings
+            {
+                CloseOutput = false,
+                Encoding = Encoding.UTF8,
+#if FEATURE_ASYNC_SAX_XML
+                Async = useAsync,
+#endif
+            };
+
+            _xmlWriter = XmlWriter.Create(partStream, settings);
         }
 
         /// <summary>
@@ -116,7 +195,7 @@ namespace DocumentFormat.OpenXml
             {
                 CloseOutput = false,
                 Encoding = encoding,
-#if !NET35 && !NET40 && !NET46
+#if FEATURE_ASYNC_SAX_XML
                 Async = useAsync,
 #endif
             };
@@ -136,7 +215,7 @@ namespace DocumentFormat.OpenXml
             _xmlWriter.WriteStartDocument();
         }
 
-#if !NET35 && !NET40 && !NET46
+#if FEATURE_ASYNC_SAX_XML
         /// <summary>
         /// Asynchronously writes the XML declaration with the version "1.0".
         /// </summary>

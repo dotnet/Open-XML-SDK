@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-#if !NET35 && !NET40 && !NET46
+#if FEATURE_ASYNC_SAX_XML
 using System.Threading.Tasks;
 #endif
 
@@ -61,7 +61,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public abstract void WriteStartDocument();
 
-#if !NET35 && !NET40 && !NET46
+#if FEATURE_ASYNC_SAX_XML
         /// <summary>
         /// Asynchronously writes the XML declaration with the version "1.0".
         /// </summary>
