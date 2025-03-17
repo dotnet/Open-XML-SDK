@@ -1,4 +1,8 @@
 ﻿#nullable enable
+~override DocumentFormat.OpenXml.OpenXmlElementList.Equals(object obj) -> bool
+~override DocumentFormat.OpenXml.OpenXmlElementList.ToString() -> string
+~override DocumentFormat.OpenXml.Packaging.PartTypeInfo.Equals(object obj) -> bool
+~override DocumentFormat.OpenXml.Packaging.PartTypeInfo.ToString() -> string
 abstract DocumentFormat.OpenXml.OpenXmlComparableSimpleReference<T>.Value.get -> T?
 abstract DocumentFormat.OpenXml.OpenXmlComparableSimpleReference<T>.Value.set -> void
 abstract DocumentFormat.OpenXml.OpenXmlElement.HasChildren.get -> bool
@@ -23,26 +27,26 @@ abstract DocumentFormat.OpenXml.OpenXmlReader.ReadNextSibling() -> bool
 abstract DocumentFormat.OpenXml.OpenXmlReader.Skip() -> void
 abstract DocumentFormat.OpenXml.OpenXmlWriter.Close() -> void
 abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteElement(DocumentFormat.OpenXml.OpenXmlElement! elementObject) -> void
-abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteEndElement() -> void
-abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartDocument() -> void
-abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartDocumentAsync() -> System.Threading.Tasks.Task!
-abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartDocument(bool standalone) -> void
-abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartDocumentAsync(bool standalone) -> System.Threading.Tasks.Task!
-abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElement(DocumentFormat.OpenXml.OpenXmlElement! elementObject) -> void
-abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElement(DocumentFormat.OpenXml.OpenXmlElement! elementObject, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes) -> void
-abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElement(DocumentFormat.OpenXml.OpenXmlElement! elementObject, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string!, string!>>! namespaceDeclarations) -> void
-abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElement(DocumentFormat.OpenXml.OpenXmlReader! elementReader) -> void
-abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElement(DocumentFormat.OpenXml.OpenXmlReader! elementReader, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes) -> void
-abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElement(DocumentFormat.OpenXml.OpenXmlReader! elementReader, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string!, string!>>! namespaceDeclarations) -> void
-abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteString(string! text) -> void
 abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteElementAsync(DocumentFormat.OpenXml.OpenXmlElement! elementObject) -> System.Threading.Tasks.Task!
+abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteEndElement() -> void
 abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteEndElementAsync() -> System.Threading.Tasks.Task!
-abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlElement! elementObject) -> System.Threading.Tasks.Task!
+abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartDocument() -> void
+abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartDocument(bool standalone) -> void
+abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartDocumentAsync() -> System.Threading.Tasks.Task!
+abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartDocumentAsync(bool standalone) -> System.Threading.Tasks.Task!
+abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElement(DocumentFormat.OpenXml.OpenXmlElement! elementObject, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string!, string!>>! namespaceDeclarations) -> void
+abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElement(DocumentFormat.OpenXml.OpenXmlElement! elementObject, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes) -> void
+abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElement(DocumentFormat.OpenXml.OpenXmlElement! elementObject) -> void
+abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElement(DocumentFormat.OpenXml.OpenXmlReader! elementReader, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string!, string!>>! namespaceDeclarations) -> void
+abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElement(DocumentFormat.OpenXml.OpenXmlReader! elementReader, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes) -> void
+abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElement(DocumentFormat.OpenXml.OpenXmlReader! elementReader) -> void
+abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlElement! elementObject, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string!, string!>>! namespaceDeclarations) -> System.Threading.Tasks.Task!
 abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlElement! elementObject, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes) -> System.Threading.Tasks.Task!
-abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlElement! elementObject, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string!, string!>>! namespaceDeclarations) -> void
-abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlReader! elementReader) -> System.Threading.Tasks.Task!
-abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlReader! elementReader, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes) -> System.Threading.Tasks.Task!
+abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlElement! elementObject) -> System.Threading.Tasks.Task!
 abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlReader! elementReader, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string!, string!>>! namespaceDeclarations) -> System.Threading.Tasks.Task!
+abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlReader! elementReader, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes) -> System.Threading.Tasks.Task!
+abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlReader! elementReader) -> System.Threading.Tasks.Task!
+abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteString(string! text) -> void
 abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStringAsync(string! text) -> System.Threading.Tasks.Task!
 abstract DocumentFormat.OpenXml.Packaging.OpenXmlPart.RelationshipType.get -> string!
 DocumentFormat.OpenXml.AlternateContent
@@ -197,8 +201,8 @@ DocumentFormat.OpenXml.IntegerValue.IntegerValue(DocumentFormat.OpenXml.IntegerV
 DocumentFormat.OpenXml.IntegerValue.IntegerValue(long value) -> void
 DocumentFormat.OpenXml.InvalidMCContentException
 DocumentFormat.OpenXml.InvalidMCContentException.InvalidMCContentException() -> void
-DocumentFormat.OpenXml.InvalidMCContentException.InvalidMCContentException(string! message) -> void
 DocumentFormat.OpenXml.InvalidMCContentException.InvalidMCContentException(string! message, System.Exception! innerException) -> void
+DocumentFormat.OpenXml.InvalidMCContentException.InvalidMCContentException(string! message) -> void
 DocumentFormat.OpenXml.ListValue<T>
 DocumentFormat.OpenXml.ListValue<T>.GetEnumerator() -> System.Collections.Generic.IEnumerator<T!>!
 DocumentFormat.OpenXml.ListValue<T>.Items.get -> System.Collections.Generic.ICollection<T!>!
@@ -220,8 +224,8 @@ DocumentFormat.OpenXml.MarkupCompatibilityAttributes.ProcessContent.get -> Docum
 DocumentFormat.OpenXml.MarkupCompatibilityAttributes.ProcessContent.set -> void
 DocumentFormat.OpenXml.NamespaceNotUnderstandException
 DocumentFormat.OpenXml.NamespaceNotUnderstandException.NamespaceNotUnderstandException() -> void
-DocumentFormat.OpenXml.NamespaceNotUnderstandException.NamespaceNotUnderstandException(string! message) -> void
 DocumentFormat.OpenXml.NamespaceNotUnderstandException.NamespaceNotUnderstandException(string! message, System.Exception! innerException) -> void
+DocumentFormat.OpenXml.NamespaceNotUnderstandException.NamespaceNotUnderstandException(string! message) -> void
 DocumentFormat.OpenXml.OnOffValue
 DocumentFormat.OpenXml.OnOffValue.OnOffValue() -> void
 DocumentFormat.OpenXml.OnOffValue.OnOffValue(bool value) -> void
@@ -254,8 +258,8 @@ DocumentFormat.OpenXml.OpenXmlCompositeElement.OpenXmlCompositeElement(params Do
 DocumentFormat.OpenXml.OpenXmlCompositeElement.OpenXmlCompositeElement(string! outerXml) -> void
 DocumentFormat.OpenXml.OpenXmlCompositeElement.OpenXmlCompositeElement(System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlElement!>! childrenElements) -> void
 DocumentFormat.OpenXml.OpenXmlDomReader
-DocumentFormat.OpenXml.OpenXmlDomReader.OpenXmlDomReader(DocumentFormat.OpenXml.OpenXmlElement! openXmlElement) -> void
 DocumentFormat.OpenXml.OpenXmlDomReader.OpenXmlDomReader(DocumentFormat.OpenXml.OpenXmlElement! openXmlElement, bool readMiscNodes) -> void
+DocumentFormat.OpenXml.OpenXmlDomReader.OpenXmlDomReader(DocumentFormat.OpenXml.OpenXmlElement! openXmlElement) -> void
 DocumentFormat.OpenXml.OpenXmlElement
 DocumentFormat.OpenXml.OpenXmlElement.AddAnnotation(object! annotation) -> void
 DocumentFormat.OpenXml.OpenXmlElement.AddNamespaceDeclaration(string! prefix, string! uri) -> void
@@ -343,14 +347,14 @@ DocumentFormat.OpenXml.OpenXmlLeafTextElement
 DocumentFormat.OpenXml.OpenXmlLeafTextElement.OpenXmlLeafTextElement() -> void
 DocumentFormat.OpenXml.OpenXmlLeafTextElement.OpenXmlLeafTextElement(string! text) -> void
 DocumentFormat.OpenXml.OpenXmlMiscNode
-DocumentFormat.OpenXml.OpenXmlMiscNode.OpenXmlMiscNode(System.Xml.XmlNodeType nodeType) -> void
 DocumentFormat.OpenXml.OpenXmlMiscNode.OpenXmlMiscNode(System.Xml.XmlNodeType nodeType, string! outerXml) -> void
+DocumentFormat.OpenXml.OpenXmlMiscNode.OpenXmlMiscNode(System.Xml.XmlNodeType nodeType) -> void
 DocumentFormat.OpenXml.OpenXmlMiscNode.XmlNodeType.get -> System.Xml.XmlNodeType
 DocumentFormat.OpenXml.OpenXmlPartReader
-DocumentFormat.OpenXml.OpenXmlPartReader.OpenXmlPartReader(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart) -> void
-DocumentFormat.OpenXml.OpenXmlPartReader.OpenXmlPartReader(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart, bool readMiscNodes) -> void
 DocumentFormat.OpenXml.OpenXmlPartReader.OpenXmlPartReader(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart, bool readMiscNodes, bool ignoreWhitespace) -> void
+DocumentFormat.OpenXml.OpenXmlPartReader.OpenXmlPartReader(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart, bool readMiscNodes) -> void
 DocumentFormat.OpenXml.OpenXmlPartReader.OpenXmlPartReader(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart, DocumentFormat.OpenXml.OpenXmlPartReaderOptions options) -> void
+DocumentFormat.OpenXml.OpenXmlPartReader.OpenXmlPartReader(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart) -> void
 DocumentFormat.OpenXml.OpenXmlPartReader.OpenXmlPartReader(System.IO.Stream! partStream, DocumentFormat.OpenXml.Features.IFeatureCollection! features, DocumentFormat.OpenXml.OpenXmlPartReaderOptions options) -> void
 DocumentFormat.OpenXml.OpenXmlPartReaderOptions
 DocumentFormat.OpenXml.OpenXmlPartReaderOptions.CloseStream.get -> bool
@@ -373,14 +377,14 @@ DocumentFormat.OpenXml.OpenXmlPartRootElement.Reload() -> void
 DocumentFormat.OpenXml.OpenXmlPartRootElement.Save() -> void
 DocumentFormat.OpenXml.OpenXmlPartRootElement.Save(System.IO.Stream! stream) -> void
 DocumentFormat.OpenXml.OpenXmlPartWriter
-DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart) -> void
 DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart, bool useAsync) -> void
-DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart, System.Text.Encoding! encoding) -> void
 DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart, System.Text.Encoding! encoding, bool useAsync) -> void
-DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(System.IO.Stream! partStream) -> void
+DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart, System.Text.Encoding! encoding) -> void
+DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart) -> void
 DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(System.IO.Stream! partStream, bool useAsync) -> void
-DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(System.IO.Stream! partStream, System.Text.Encoding! encoding) -> void
 DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(System.IO.Stream! partStream, System.Text.Encoding! encoding, bool useAsync) -> void
+DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(System.IO.Stream! partStream, System.Text.Encoding! encoding) -> void
+DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(System.IO.Stream! partStream) -> void
 DocumentFormat.OpenXml.OpenXmlReader
 DocumentFormat.OpenXml.OpenXmlReader.Dispose() -> void
 DocumentFormat.OpenXml.OpenXmlReader.OpenXmlReader() -> void
@@ -417,8 +421,8 @@ DocumentFormat.OpenXml.Packaging.DataPart
 DocumentFormat.OpenXml.Packaging.DataPart.FeedData(System.IO.Stream! sourceStream) -> void
 DocumentFormat.OpenXml.Packaging.DataPart.GetDataPartReferenceRelationships() -> System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.Packaging.DataPartReferenceRelationship!>!
 DocumentFormat.OpenXml.Packaging.DataPart.GetStream() -> System.IO.Stream!
-DocumentFormat.OpenXml.Packaging.DataPart.GetStream(System.IO.FileMode mode) -> System.IO.Stream!
 DocumentFormat.OpenXml.Packaging.DataPart.GetStream(System.IO.FileMode mode, System.IO.FileAccess access) -> System.IO.Stream!
+DocumentFormat.OpenXml.Packaging.DataPart.GetStream(System.IO.FileMode mode) -> System.IO.Stream!
 DocumentFormat.OpenXml.Packaging.DataPart.OpenXmlPackage.get -> DocumentFormat.OpenXml.Packaging.OpenXmlPackage!
 DocumentFormat.OpenXml.Packaging.DataPart.Uri.get -> System.Uri!
 DocumentFormat.OpenXml.Packaging.DataPartReferenceRelationship
@@ -545,8 +549,8 @@ DocumentFormat.OpenXml.Packaging.OpenXmlPackage.CanSave.get -> bool
 DocumentFormat.OpenXml.Packaging.OpenXmlPackage.CompressionOption.get -> System.IO.Packaging.CompressionOption
 DocumentFormat.OpenXml.Packaging.OpenXmlPackage.CompressionOption.set -> void
 DocumentFormat.OpenXml.Packaging.OpenXmlPackage.CreateMediaDataPart(DocumentFormat.OpenXml.Packaging.MediaDataPartType mediaDataPartType) -> DocumentFormat.OpenXml.Packaging.MediaDataPart!
-DocumentFormat.OpenXml.Packaging.OpenXmlPackage.CreateMediaDataPart(string! contentType) -> DocumentFormat.OpenXml.Packaging.MediaDataPart!
 DocumentFormat.OpenXml.Packaging.OpenXmlPackage.CreateMediaDataPart(string! contentType, string! extension) -> DocumentFormat.OpenXml.Packaging.MediaDataPart!
+DocumentFormat.OpenXml.Packaging.OpenXmlPackage.CreateMediaDataPart(string! contentType) -> DocumentFormat.OpenXml.Packaging.MediaDataPart!
 DocumentFormat.OpenXml.Packaging.OpenXmlPackage.DataParts.get -> System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.Packaging.DataPart!>!
 DocumentFormat.OpenXml.Packaging.OpenXmlPackage.DeletePart(DocumentFormat.OpenXml.Packaging.DataPart! dataPart) -> bool
 DocumentFormat.OpenXml.Packaging.OpenXmlPackage.DeletePartsRecursivelyOfType<T>() -> void
@@ -559,15 +563,15 @@ DocumentFormat.OpenXml.Packaging.OpenXmlPackage.Save() -> void
 DocumentFormat.OpenXml.Packaging.OpenXmlPackage.StrictRelationshipFound.get -> bool
 DocumentFormat.OpenXml.Packaging.OpenXmlPackageException
 DocumentFormat.OpenXml.Packaging.OpenXmlPackageException.OpenXmlPackageException() -> void
-DocumentFormat.OpenXml.Packaging.OpenXmlPackageException.OpenXmlPackageException(string! message) -> void
 DocumentFormat.OpenXml.Packaging.OpenXmlPackageException.OpenXmlPackageException(string! message, System.Exception! innerException) -> void
+DocumentFormat.OpenXml.Packaging.OpenXmlPackageException.OpenXmlPackageException(string! message) -> void
 DocumentFormat.OpenXml.Packaging.OpenXmlPackageExtensions
 DocumentFormat.OpenXml.Packaging.OpenXmlPart
 DocumentFormat.OpenXml.Packaging.OpenXmlPart.FeedData(System.IO.Stream! sourceStream) -> void
 DocumentFormat.OpenXml.Packaging.OpenXmlPart.GetParentParts() -> System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.Packaging.OpenXmlPart!>!
 DocumentFormat.OpenXml.Packaging.OpenXmlPart.GetStream() -> System.IO.Stream!
-DocumentFormat.OpenXml.Packaging.OpenXmlPart.GetStream(System.IO.FileMode mode) -> System.IO.Stream!
 DocumentFormat.OpenXml.Packaging.OpenXmlPart.GetStream(System.IO.FileMode mode, System.IO.FileAccess access) -> System.IO.Stream!
+DocumentFormat.OpenXml.Packaging.OpenXmlPart.GetStream(System.IO.FileMode mode) -> System.IO.Stream!
 DocumentFormat.OpenXml.Packaging.OpenXmlPart.IsRootElementLoaded.get -> bool
 DocumentFormat.OpenXml.Packaging.OpenXmlPart.OpenXmlPackage.get -> DocumentFormat.OpenXml.Packaging.OpenXmlPackage!
 DocumentFormat.OpenXml.Packaging.OpenXmlPart.RootElement.get -> DocumentFormat.OpenXml.OpenXmlPartRootElement?
@@ -575,12 +579,12 @@ DocumentFormat.OpenXml.Packaging.OpenXmlPart.UnloadRootElement() -> DocumentForm
 DocumentFormat.OpenXml.Packaging.OpenXmlPart.Uri.get -> System.Uri!
 DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer
 DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.AddAnnotation(object! annotation) -> void
-DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.AddExtendedPart(string! relationshipType, string! contentType, string! targetExt) -> DocumentFormat.OpenXml.Packaging.ExtendedPart!
 DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.AddExtendedPart(string! relationshipType, string! contentType, string! targetExt, string? rId) -> DocumentFormat.OpenXml.Packaging.ExtendedPart!
-DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.AddExternalRelationship(string! relationshipType, System.Uri! externalUri) -> DocumentFormat.OpenXml.Packaging.ExternalRelationship!
+DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.AddExtendedPart(string! relationshipType, string! contentType, string! targetExt) -> DocumentFormat.OpenXml.Packaging.ExtendedPart!
 DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.AddExternalRelationship(string! relationshipType, System.Uri! externalUri, string! id) -> DocumentFormat.OpenXml.Packaging.ExternalRelationship!
-DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.AddHyperlinkRelationship(System.Uri! hyperlinkUri, bool isExternal) -> DocumentFormat.OpenXml.Packaging.HyperlinkRelationship!
+DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.AddExternalRelationship(string! relationshipType, System.Uri! externalUri) -> DocumentFormat.OpenXml.Packaging.ExternalRelationship!
 DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.AddHyperlinkRelationship(System.Uri! hyperlinkUri, bool isExternal, string! id) -> DocumentFormat.OpenXml.Packaging.HyperlinkRelationship!
+DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.AddHyperlinkRelationship(System.Uri! hyperlinkUri, bool isExternal) -> DocumentFormat.OpenXml.Packaging.HyperlinkRelationship!
 DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.AddNewPart<T>() -> T!
 DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.AddNewPart<T>(string! id) -> T!
 DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.Annotation(System.Type! type) -> object?
@@ -588,8 +592,8 @@ DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.Annotation<T>() -> T?
 DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.Annotations(System.Type! type) -> System.Collections.Generic.IEnumerable<object!>!
 DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.Annotations<T>() -> System.Collections.Generic.IEnumerable<T!>!
 DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.ChangeIdOfPart(DocumentFormat.OpenXml.Packaging.OpenXmlPart! part, string! newRelationshipId) -> string!
-DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.CreateRelationshipToPart(DocumentFormat.OpenXml.Packaging.OpenXmlPart! targetPart) -> string!
 DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.CreateRelationshipToPart(DocumentFormat.OpenXml.Packaging.OpenXmlPart! targetPart, string! id) -> string!
+DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.CreateRelationshipToPart(DocumentFormat.OpenXml.Packaging.OpenXmlPart! targetPart) -> string!
 DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.DataPartReferenceRelationships.get -> System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.Packaging.DataPartReferenceRelationship!>!
 DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.DeleteExternalRelationship(DocumentFormat.OpenXml.Packaging.ExternalRelationship! externalRelationship) -> void
 DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.DeleteExternalRelationship(string! id) -> void
@@ -783,15 +787,15 @@ override DocumentFormat.OpenXml.OpenXmlPartWriter.Close() -> void
 override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteElement(DocumentFormat.OpenXml.OpenXmlElement! elementObject) -> void
 override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteEndElement() -> void
 override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartDocument() -> void
-override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartDocumentAsync() -> System.Threading.Tasks.Task!
 override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartDocument(bool standalone) -> void
+override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartDocumentAsync() -> System.Threading.Tasks.Task!
 override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartDocumentAsync(bool standalone) -> System.Threading.Tasks.Task!
-override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartElement(DocumentFormat.OpenXml.OpenXmlElement! elementObject) -> void
-override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartElement(DocumentFormat.OpenXml.OpenXmlElement! elementObject, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes) -> void
 override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartElement(DocumentFormat.OpenXml.OpenXmlElement! elementObject, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string!, string!>>! namespaceDeclarations) -> void
-override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartElement(DocumentFormat.OpenXml.OpenXmlReader! elementReader) -> void
-override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartElement(DocumentFormat.OpenXml.OpenXmlReader! elementReader, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes) -> void
+override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartElement(DocumentFormat.OpenXml.OpenXmlElement! elementObject, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes) -> void
+override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartElement(DocumentFormat.OpenXml.OpenXmlElement! elementObject) -> void
 override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartElement(DocumentFormat.OpenXml.OpenXmlReader! elementReader, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string!, string!>>! namespaceDeclarations) -> void
+override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartElement(DocumentFormat.OpenXml.OpenXmlReader! elementReader, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes) -> void
+override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartElement(DocumentFormat.OpenXml.OpenXmlReader! elementReader) -> void
 override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteString(string! text) -> void
 override DocumentFormat.OpenXml.OpenXmlSimpleType.ToString() -> string?
 override DocumentFormat.OpenXml.OpenXmlSimpleValue<T>.Equals(object? obj) -> bool
@@ -904,28 +908,28 @@ static DocumentFormat.OpenXml.OpenXmlElementFunctionalExtensions.With<TElement>(
 static DocumentFormat.OpenXml.OpenXmlElementFunctionalExtensions.With<TElement>(this TElement! element, params object![]! content) -> TElement!
 static DocumentFormat.OpenXml.OpenXmlElementList.operator !=(DocumentFormat.OpenXml.OpenXmlElementList left, DocumentFormat.OpenXml.OpenXmlElementList right) -> bool
 static DocumentFormat.OpenXml.OpenXmlElementList.operator ==(DocumentFormat.OpenXml.OpenXmlElementList left, DocumentFormat.OpenXml.OpenXmlElementList right) -> bool
-static DocumentFormat.OpenXml.OpenXmlReader.Create(DocumentFormat.OpenXml.OpenXmlElement! openXmlElement) -> DocumentFormat.OpenXml.OpenXmlReader!
 static DocumentFormat.OpenXml.OpenXmlReader.Create(DocumentFormat.OpenXml.OpenXmlElement! openXmlElement, bool readMiscNodes) -> DocumentFormat.OpenXml.OpenXmlReader!
-static DocumentFormat.OpenXml.OpenXmlReader.Create(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart) -> DocumentFormat.OpenXml.OpenXmlReader!
-static DocumentFormat.OpenXml.OpenXmlReader.Create(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart, bool readMiscNodes) -> DocumentFormat.OpenXml.OpenXmlReader!
+static DocumentFormat.OpenXml.OpenXmlReader.Create(DocumentFormat.OpenXml.OpenXmlElement! openXmlElement) -> DocumentFormat.OpenXml.OpenXmlReader!
 static DocumentFormat.OpenXml.OpenXmlReader.Create(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart, bool readMiscNodes, bool ignoreWhitespace) -> DocumentFormat.OpenXml.OpenXmlReader!
+static DocumentFormat.OpenXml.OpenXmlReader.Create(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart, bool readMiscNodes) -> DocumentFormat.OpenXml.OpenXmlReader!
+static DocumentFormat.OpenXml.OpenXmlReader.Create(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart) -> DocumentFormat.OpenXml.OpenXmlReader!
 static DocumentFormat.OpenXml.OpenXmlSimpleType.implicit operator string?(DocumentFormat.OpenXml.OpenXmlSimpleType? xmlAttribute) -> string?
 static DocumentFormat.OpenXml.OpenXmlSimpleValue<T>.implicit operator T(DocumentFormat.OpenXml.OpenXmlSimpleValue<T>! xmlAttribute) -> T
 static DocumentFormat.OpenXml.OpenXmlUnknownElementExtensions.CreateUnknownElement(this DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer! container, string! outerXml) -> DocumentFormat.OpenXml.OpenXmlUnknownElement!
-static DocumentFormat.OpenXml.OpenXmlWriter.Create(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart) -> DocumentFormat.OpenXml.OpenXmlWriter!
 static DocumentFormat.OpenXml.OpenXmlWriter.Create(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart, System.Text.Encoding! encoding) -> DocumentFormat.OpenXml.OpenXmlWriter!
-static DocumentFormat.OpenXml.OpenXmlWriter.Create(System.IO.Stream! partStream) -> DocumentFormat.OpenXml.OpenXmlWriter!
+static DocumentFormat.OpenXml.OpenXmlWriter.Create(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart) -> DocumentFormat.OpenXml.OpenXmlWriter!
 static DocumentFormat.OpenXml.OpenXmlWriter.Create(System.IO.Stream! partStream, System.Text.Encoding! encoding) -> DocumentFormat.OpenXml.OpenXmlWriter!
+static DocumentFormat.OpenXml.OpenXmlWriter.Create(System.IO.Stream! partStream) -> DocumentFormat.OpenXml.OpenXmlWriter!
 static DocumentFormat.OpenXml.Packaging.AudioReferenceRelationship.AudioReferenceRelationshipType.get -> string!
-static DocumentFormat.OpenXml.Packaging.CloneableExtensions.Clone<TPackage>(this TPackage! openXmlPackage) -> TPackage!
-static DocumentFormat.OpenXml.Packaging.CloneableExtensions.Clone<TPackage>(this TPackage! openXmlPackage, string! path) -> TPackage!
-static DocumentFormat.OpenXml.Packaging.CloneableExtensions.Clone<TPackage>(this TPackage! openXmlPackage, string! path, bool isEditable) -> TPackage!
 static DocumentFormat.OpenXml.Packaging.CloneableExtensions.Clone<TPackage>(this TPackage! openXmlPackage, string! path, bool isEditable, DocumentFormat.OpenXml.Packaging.OpenSettings? openSettings) -> TPackage!
-static DocumentFormat.OpenXml.Packaging.CloneableExtensions.Clone<TPackage>(this TPackage! openXmlPackage, System.IO.Packaging.Package! package) -> TPackage!
+static DocumentFormat.OpenXml.Packaging.CloneableExtensions.Clone<TPackage>(this TPackage! openXmlPackage, string! path, bool isEditable) -> TPackage!
+static DocumentFormat.OpenXml.Packaging.CloneableExtensions.Clone<TPackage>(this TPackage! openXmlPackage, string! path) -> TPackage!
 static DocumentFormat.OpenXml.Packaging.CloneableExtensions.Clone<TPackage>(this TPackage! openXmlPackage, System.IO.Packaging.Package! package, DocumentFormat.OpenXml.Packaging.OpenSettings! openSettings) -> TPackage!
-static DocumentFormat.OpenXml.Packaging.CloneableExtensions.Clone<TPackage>(this TPackage! openXmlPackage, System.IO.Stream! stream) -> TPackage!
-static DocumentFormat.OpenXml.Packaging.CloneableExtensions.Clone<TPackage>(this TPackage! openXmlPackage, System.IO.Stream! stream, bool isEditable) -> TPackage!
+static DocumentFormat.OpenXml.Packaging.CloneableExtensions.Clone<TPackage>(this TPackage! openXmlPackage, System.IO.Packaging.Package! package) -> TPackage!
 static DocumentFormat.OpenXml.Packaging.CloneableExtensions.Clone<TPackage>(this TPackage! openXmlPackage, System.IO.Stream! stream, bool isEditable, DocumentFormat.OpenXml.Packaging.OpenSettings! openSettings) -> TPackage!
+static DocumentFormat.OpenXml.Packaging.CloneableExtensions.Clone<TPackage>(this TPackage! openXmlPackage, System.IO.Stream! stream, bool isEditable) -> TPackage!
+static DocumentFormat.OpenXml.Packaging.CloneableExtensions.Clone<TPackage>(this TPackage! openXmlPackage, System.IO.Stream! stream) -> TPackage!
+static DocumentFormat.OpenXml.Packaging.CloneableExtensions.Clone<TPackage>(this TPackage! openXmlPackage) -> TPackage!
 static DocumentFormat.OpenXml.Packaging.FlatOpcExtensions.ToFlatOpcDocument(this DocumentFormat.OpenXml.Packaging.OpenXmlPackage! openXmlPackage) -> System.Xml.Linq.XDocument!
 static DocumentFormat.OpenXml.Packaging.FlatOpcExtensions.ToFlatOpcString(this DocumentFormat.OpenXml.Packaging.OpenXmlPackage! package) -> string!
 static DocumentFormat.OpenXml.Packaging.IdPartPair.operator !=(DocumentFormat.OpenXml.Packaging.IdPartPair left, DocumentFormat.OpenXml.Packaging.IdPartPair right) -> bool
@@ -1006,14 +1010,10 @@ virtual DocumentFormat.OpenXml.Packaging.DataPartReferenceRelationship.DataPart.
 virtual DocumentFormat.OpenXml.Packaging.OpenXmlPackage.RootPart.get -> DocumentFormat.OpenXml.Packaging.OpenXmlPart?
 virtual DocumentFormat.OpenXml.Packaging.OpenXmlPart.ContentType.get -> string!
 virtual DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.AddNewPart<T>(string! contentType, string? id = null) -> T!
-virtual DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.AddPart<T>(T! part) -> T!
 virtual DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.AddPart<T>(T! part, string! id) -> T!
+virtual DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.AddPart<T>(T! part) -> T!
 virtual DocumentFormat.OpenXml.Packaging.OpenXmlPartContainer.Features.get -> DocumentFormat.OpenXml.Features.IFeatureCollection!
 virtual DocumentFormat.OpenXml.Packaging.ReferenceRelationship.Id.get -> string!
 virtual DocumentFormat.OpenXml.Packaging.ReferenceRelationship.IsExternal.get -> bool
 virtual DocumentFormat.OpenXml.Packaging.ReferenceRelationship.RelationshipType.get -> string!
 virtual DocumentFormat.OpenXml.Packaging.ReferenceRelationship.Uri.get -> System.Uri!
-~override DocumentFormat.OpenXml.OpenXmlElementList.Equals(object obj) -> bool
-~override DocumentFormat.OpenXml.OpenXmlElementList.ToString() -> string
-~override DocumentFormat.OpenXml.Packaging.PartTypeInfo.Equals(object obj) -> bool
-~override DocumentFormat.OpenXml.Packaging.PartTypeInfo.ToString() -> string
