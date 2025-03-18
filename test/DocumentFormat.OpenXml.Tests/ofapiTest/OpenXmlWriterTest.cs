@@ -341,6 +341,39 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [Fact]
+        public async Task WriteElementAsync_ShouldWriteStartElement_With_Attributes_And_Namespaces()
+        {
+            // Arrange
+            using (MemoryStream memoryStream = new MemoryStream())
+            using (WordprocessingDocument wpd = WordprocessingDocument.Create(memoryStream, WordprocessingDocumentType.Document))
+            {
+                MainDocumentPart mdp = wpd.AddMainDocumentPart();
+                OpenXmlWriter writer = new OpenXmlPartWriter(mdp, useAsync: true);
+
+                // Act
+                await writer.WriteStartDocumentAsync();
+                await writer.WriteStartElementAsync(new Document());
+                await writer.WriteStartElementAsync(new Body());
+                await writer.WriteStartElementAsync(new Paragraph());
+                await writer.WriteStartElementAsync(new ParagraphProperties());
+                await writer.WriteStartElementAsync(new ParagraphStyleId(), new List<OpenXmlAttribute> { new OpenXmlAttribute("val", "http://schemas.openxmlformats.org/wordprocessingml/2006/main", "Normal") }, new List<KeyValuePair<string, string>>() { new KeyValuePair<string, string>("q", "http://schemas.openxmlformats.org/fake/namespace") });
+                await writer.WriteEndElementAsync();
+                await writer.WriteEndElementAsync();
+                await writer.WriteEndElementAsync();
+                await writer.WriteEndElementAsync();
+                await writer.WriteEndElementAsync();
+                writer.Close();
+
+                // Assert
+                Stream stream = mdp.GetStream();
+                stream.Position = 0;
+                string xml = new StreamReader(stream).ReadToEnd();
+                Assert.Contains("w:val=\"Normal\"", xml);
+                Assert.Contains("xmlns:q=\"http://schemas.openxmlformats.org/fake/namespace\"", xml);
+            }
+        }
+
+        [Fact]
         public async Task WriteStringAsync_ShouldWriteString()
         {
             // Arrange
