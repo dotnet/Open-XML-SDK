@@ -15634,6 +15634,24 @@
     ]
   },
   {
+    "Element": "DocumentFormat.OpenXml.Drawing.TableColExtension",
+    "Children": [
+      {
+        "Name": "colId",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Drawing.TableColExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      }
+    ]
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Drawing.TableGrid",
     "Children": [
       {
@@ -15700,6 +15718,24 @@
       },
       {
         "Name": "tc",
+        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Drawing.TableRowExtension",
+    "Children": [
+      {
+        "Name": "rowId",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Drawing.TableRowExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
         "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
       }
     ]
