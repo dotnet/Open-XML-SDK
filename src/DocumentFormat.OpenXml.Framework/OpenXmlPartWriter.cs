@@ -485,7 +485,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Asynchronously writes the XML declaration with the version "1.0".
+        /// Asynchronously writes the XML declaration with the version "1.0" and the standalone attribute.
         /// </summary>
         /// <param name="standalone">If true, it writes "standalone=yes"; if false, it writes "standalone=no". </param>
         public async override Task WriteStartDocumentAsync(bool standalone)
