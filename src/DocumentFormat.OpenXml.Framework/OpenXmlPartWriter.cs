@@ -496,6 +496,90 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
+        /// Asynchronously writes out a start element tag of the current element of the OpenXmlReader. And write all the attributes of the element.
+        /// </summary>
+        /// <param name="elementReader">The OpenXmlReader to read from. </param>
+        public async override Task WriteStartElementAsync(OpenXmlReader elementReader)
+        {
+            if (elementReader is null)
+            {
+                throw new ArgumentNullException(nameof(elementReader));
+            }
+
+            await WriteStartElementAsync(elementReader, elementReader.Attributes, elementReader.NamespaceDeclarations).ConfigureAwait(true);
+        }
+
+        /// <summary>
+        /// Asynchronously writes out a start element tag of the current element of the OpenXmlReader. And write the attributes in attributes.
+        /// </summary>
+        /// <param name="elementReader">The OpenXmlReader to read from. </param>
+        /// <param name="attributes">The attributes to be written, can be null if no attributes.</param>
+        public async override Task WriteStartElementAsync(OpenXmlReader elementReader, IEnumerable<OpenXmlAttribute> attributes)
+        {
+            if (elementReader is null)
+            {
+                throw new ArgumentNullException(nameof(elementReader));
+            }
+
+            await WriteStartElementAsync(elementReader, attributes, elementReader.NamespaceDeclarations).ConfigureAwait(true);
+        }
+
+        /// <summary>
+        /// Asynchronously writes out a start element tag of the current element of the OpenXmlReader. And write the attributes in attributes.
+        /// </summary>
+        /// <param name="elementReader">The OpenXmlReader to read from. </param>
+        /// <param name="attributes">The attributes to be written, can be null if no attributes.</param>
+        /// <param name="namespaceDeclarations">The namespace declarations to be written, can be null if no namespace declarations.</param>
+        public async override Task WriteStartElementAsync(OpenXmlReader elementReader, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations)
+        {
+            if (elementReader is null)
+            {
+                throw new ArgumentNullException(nameof(elementReader));
+            }
+
+            if (elementReader.IsEndElement)
+            {
+                throw new ArgumentOutOfRangeException(nameof(elementReader));
+            }
+
+            if (elementReader.IsMiscNode)
+            {
+                // OpenXmlMiscNode should be written by WriteElement( );
+                throw new ArgumentOutOfRangeException(nameof(elementReader));
+            }
+
+            ThrowIfObjectDisposed();
+
+            await _xmlWriter.WriteStartElementAsync(elementReader.Prefix, elementReader.LocalName, elementReader.NamespaceUri).ConfigureAwait(true);
+
+            if (namespaceDeclarations is not null)
+            {
+                foreach (var item in namespaceDeclarations)
+                {
+                    await _xmlWriter.WriteAttributeStringAsync(OpenXmlElementContext.XmlnsPrefix, item.Key, OpenXmlElementContext.XmlnsUri, item.Value).ConfigureAwait(true);
+                }
+            }
+
+            if (attributes is not null)
+            {
+                // write attributes
+                foreach (var attribute in attributes)
+                {
+                    await _xmlWriter.WriteAttributeStringAsync(attribute.Prefix, attribute.LocalName, attribute.NamespaceUri, attribute.Value).ConfigureAwait(true);
+                }
+            }
+
+            if (elementReader.ElementType.IsSubclassOf(typeof(OpenXmlLeafTextElement)))
+            {
+                _isLeafTextElementStart = true;
+            }
+            else
+            {
+                _isLeafTextElementStart = false;
+            }
+        }
+
+        /// <summary>
         /// Asynchronously writes out a start tag of the element and all the attributes of the element.
         /// </summary>
         /// <param name="elementObject">The OpenXmlElement object to be written.</param>
@@ -629,6 +713,7 @@ namespace DocumentFormat.OpenXml
         /// Asynchronously writes the given text content.
         /// </summary>
         /// <param name="text">The text to be written. </param>
+
         public async override Task WriteStringAsync(string text)
         {
             ThrowIfObjectDisposed();

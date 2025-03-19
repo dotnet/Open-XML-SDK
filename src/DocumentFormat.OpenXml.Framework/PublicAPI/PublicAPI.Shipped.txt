@@ -43,6 +43,9 @@ abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElement(DocumentFormat.O
 abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlElement! elementObject, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string!, string!>>! namespaceDeclarations) -> System.Threading.Tasks.Task!
 abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlElement! elementObject, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes) -> System.Threading.Tasks.Task!
 abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlElement! elementObject) -> System.Threading.Tasks.Task!
+abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlReader! elementReader, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string!, string!>>! namespaceDeclarations) -> System.Threading.Tasks.Task!
+abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlReader! elementReader, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes) -> System.Threading.Tasks.Task!
+abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlReader! elementReader) -> System.Threading.Tasks.Task!
 abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteString(string! text) -> void
 abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStringAsync(string! text) -> System.Threading.Tasks.Task!
 abstract DocumentFormat.OpenXml.Packaging.OpenXmlPart.RelationshipType.get -> string!
@@ -798,6 +801,9 @@ override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartElement(DocumentForm
 override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlElement! elementObject, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string!, string!>>! namespaceDeclarations) -> System.Threading.Tasks.Task!
 override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlElement! elementObject, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes) -> System.Threading.Tasks.Task!
 override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlElement! elementObject) -> System.Threading.Tasks.Task!
+override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlReader! elementReader, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string!, string!>>! namespaceDeclarations) -> System.Threading.Tasks.Task!
+override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlReader! elementReader, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes) -> System.Threading.Tasks.Task!
+override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlReader! elementReader) -> System.Threading.Tasks.Task!
 override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteString(string! text) -> void
 override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStringAsync(string! text) -> System.Threading.Tasks.Task!
 override DocumentFormat.OpenXml.OpenXmlSimpleType.ToString() -> string?

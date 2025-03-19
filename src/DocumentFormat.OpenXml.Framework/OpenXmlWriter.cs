@@ -144,6 +144,27 @@ namespace DocumentFormat.OpenXml
         public abstract Task WriteStartDocumentAsync(bool standalone);
 
         /// <summary>
+        /// Asynchronously writes out a start element tag of the current element of the OpenXmlReader. And write all the attributes of the element.
+        /// </summary>
+        /// <param name="elementReader">The OpenXmlReader to read from. </param>
+        public abstract Task WriteStartElementAsync(OpenXmlReader elementReader);
+
+        /// <summary>
+        /// Asynchronously writes out a start element tag of the current element of the OpenXmlReader. And write the attributes in attributes.
+        /// </summary>
+        /// <param name="elementReader">The OpenXmlReader to read from. </param>
+        /// <param name="attributes">The attributes to be written, can be null if no attributes.</param>
+        public abstract Task WriteStartElementAsync(OpenXmlReader elementReader, IEnumerable<OpenXmlAttribute> attributes);
+
+        /// <summary>
+        /// Asynchronously writes out a start element tag of the current element of the OpenXmlReader. And write the attributes in attributes.
+        /// </summary>
+        /// <param name="elementReader">The OpenXmlReader to read from. </param>
+        /// <param name="attributes">The attributes to be written, can be null if no attributes.</param>
+        /// <param name="namespaceDeclarations">The namespace declarations to be written, can be null if no namespace declarations.</param>
+        public abstract Task WriteStartElementAsync(OpenXmlReader elementReader, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations);
+
+        /// <summary>
         /// Asynchronously writes out a start tag of the element and all the attributes of the element.
         /// </summary>
         /// <param name="elementObject">The OpenXmlElement object to be written.</param>
