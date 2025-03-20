@@ -2,3 +2,20 @@
 DocumentFormat.OpenXml.Validation.OpenXmlValidator.Validate(DocumentFormat.OpenXml.OpenXmlElement! openXmlElement, System.Threading.CancellationToken token = default(System.Threading.CancellationToken)) -> System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.Validation.ValidationErrorInfo!>!
 DocumentFormat.OpenXml.Validation.OpenXmlValidator.Validate(DocumentFormat.OpenXml.Packaging.OpenXmlPackage! openXmlPackage, System.Threading.CancellationToken token = default(System.Threading.CancellationToken)) -> System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.Validation.ValidationErrorInfo!>!
 DocumentFormat.OpenXml.Validation.OpenXmlValidator.Validate(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart, System.Threading.CancellationToken token = default(System.Threading.CancellationToken)) -> System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.Validation.ValidationErrorInfo!>!
+
+abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteElementAsync(DocumentFormat.OpenXml.OpenXmlElement! elementObject) -> System.Threading.Tasks.Task!
+abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteEndElementAsync() -> System.Threading.Tasks.Task!
+abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartDocumentAsync(bool standalone) -> System.Threading.Tasks.Task!
+abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlElement! elementObject, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string!, string!>>! namespaceDeclarations) -> System.Threading.Tasks.Task!
+abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlElement! elementObject, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes) -> System.Threading.Tasks.Task!
+abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlElement! elementObject) -> System.Threading.Tasks.Task!
+abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStringAsync(string! text) -> System.Threading.Tasks.Task!
+abstract DocumentFormat.OpenXml.OpenXmlWriter.WriteStartDocumentAsync() -> System.Threading.Tasks.Task!
+override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteElementAsync(DocumentFormat.OpenXml.OpenXmlElement! elementObject) -> System.Threading.Tasks.Task!
+override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteEndElementAsync() -> System.Threading.Tasks.Task!
+override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartDocumentAsync() -> System.Threading.Tasks.Task!
+override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartDocumentAsync(bool standalone) -> System.Threading.Tasks.Task!
+override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlElement! elementObject, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string!, string!>>! namespaceDeclarations) -> System.Threading.Tasks.Task!
+override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlElement! elementObject, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes) -> System.Threading.Tasks.Task!
+override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlElement! elementObject) -> System.Threading.Tasks.Task!
+override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStringAsync(string! text) -> System.Threading.Tasks.Task!
