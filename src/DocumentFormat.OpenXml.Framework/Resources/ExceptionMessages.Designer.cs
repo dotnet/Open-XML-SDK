@@ -331,6 +331,15 @@ namespace DocumentFormat.OpenXml {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The enumerable contained more than a single element when only zero or one are allowed..
+        /// </summary>
+        internal static string FirstOrDefaultMaxOne {
+            get {
+                return ResourceManager.GetString("FirstOrDefaultMaxOne", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The root XML element &quot;{0}&quot; in the part is incorrect. The expected root XML element is: &quot;{1}&quot;..
         /// </summary>
         internal static string Fmt_PartRootIsInvalid {

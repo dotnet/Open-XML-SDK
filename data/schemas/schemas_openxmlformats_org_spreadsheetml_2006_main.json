@@ -25445,6 +25445,10 @@
         {
           "Name": "xlecs:CT_ExternalCodeService/xlecs:externalCodeService",
           "PropertyName": "ExternalCodeService"
+        },
+        {
+          "Name": "xlwcv:CT_Version/xlwcv:version",
+          "PropertyName": "Version"
         }
       ],
       "Particle": {
@@ -25496,6 +25500,10 @@
           },
           {
             "Name": "xlecs:CT_ExternalCodeService/xlecs:externalCodeService",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "xlwcv:CT_Version/xlwcv:version",
             "InitialVersion": "Microsoft365"
           },
           {
