@@ -135,26 +135,38 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Asynchronously writes the XML declaration with the version "1.0".
         /// </summary>
-        public abstract Task WriteStartDocumentAsync();
+        public virtual Task WriteStartDocumentAsync()
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Asynchronously writes the XML declaration with the version "1.0" and the standalone attribute.
         /// </summary>
         /// <param name="standalone">If true, it writes "standalone=yes"; if false, it writes "standalone=no". </param>
-        public abstract Task WriteStartDocumentAsync(bool standalone);
+        public virtual Task WriteStartDocumentAsync(bool standalone)
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Asynchronously writes out a start tag of the element and all the attributes of the element.
         /// </summary>
         /// <param name="elementObject">The OpenXmlElement object to be written.</param>
-        public abstract Task WriteStartElementAsync(OpenXmlElement elementObject);
+        public virtual Task WriteStartElementAsync(OpenXmlElement elementObject)
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Asynchronously writes out a start tag of the element. And write the attributes in attributes. The attributes of the element will be omitted.
         /// </summary>
         /// <param name="elementObject">The OpenXmlElement object to be written.</param>
         /// <param name="attributes">The attributes to be written.</param>
-        public abstract Task WriteStartElementAsync(OpenXmlElement elementObject, IEnumerable<OpenXmlAttribute> attributes);
+        public virtual Task WriteStartElementAsync(OpenXmlElement elementObject, IEnumerable<OpenXmlAttribute> attributes)
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Asynchronously writes out a start tag of the element. And write the attributes in attributes. The attributes of the element will be omitted.
@@ -162,24 +174,36 @@ namespace DocumentFormat.OpenXml
         /// <param name="elementObject">The OpenXmlElement object to be written.</param>
         /// <param name="attributes">The attributes to be written.</param>
         /// <param name="namespaceDeclarations">The namespace declarations to be written, can be null if no namespace declarations.</param>
-        public abstract Task WriteStartElementAsync(OpenXmlElement elementObject, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations);
+        public virtual Task WriteStartElementAsync(OpenXmlElement elementObject, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations)
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Asynchronously closes one element.
         /// </summary>
-        public abstract Task WriteEndElementAsync();
+        public virtual Task WriteEndElementAsync()
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Asynchronously write the OpenXmlElement to the writer.
         /// </summary>
         /// <param name="elementObject">The OpenXmlElement object to be written.</param>
-        public abstract Task WriteElementAsync(OpenXmlElement elementObject);
+        public virtual Task WriteElementAsync(OpenXmlElement elementObject)
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// When overridden in a derived class, asynchronously writes the given text content.
         /// </summary>
         /// <param name="text">The text to write. </param>
-        public abstract Task WriteStringAsync(string text);
+        public virtual Task WriteStringAsync(string text)
+        {
+            throw new NotImplementedException();
+        }
 #endif
 
         /// <summary>

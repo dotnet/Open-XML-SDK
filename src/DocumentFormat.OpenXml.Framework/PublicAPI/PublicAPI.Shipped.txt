@@ -366,12 +366,8 @@ DocumentFormat.OpenXml.OpenXmlPartRootElement.Reload() -> void
 DocumentFormat.OpenXml.OpenXmlPartRootElement.Save() -> void
 DocumentFormat.OpenXml.OpenXmlPartRootElement.Save(System.IO.Stream! stream) -> void
 DocumentFormat.OpenXml.OpenXmlPartWriter
-DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart, bool useAsync) -> void
-DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart, System.Text.Encoding! encoding, bool useAsync) -> void
 DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart, System.Text.Encoding! encoding) -> void
 DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart) -> void
-DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(System.IO.Stream! partStream, bool useAsync) -> void
-DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(System.IO.Stream! partStream, System.Text.Encoding! encoding, bool useAsync) -> void
 DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(System.IO.Stream! partStream, System.Text.Encoding! encoding) -> void
 DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(System.IO.Stream! partStream) -> void
 DocumentFormat.OpenXml.OpenXmlReader
@@ -1004,3 +1000,4 @@ virtual DocumentFormat.OpenXml.Packaging.ReferenceRelationship.Id.get -> string!
 virtual DocumentFormat.OpenXml.Packaging.ReferenceRelationship.IsExternal.get -> bool
 virtual DocumentFormat.OpenXml.Packaging.ReferenceRelationship.RelationshipType.get -> string!
 virtual DocumentFormat.OpenXml.Packaging.ReferenceRelationship.Uri.get -> System.Uri!
+
