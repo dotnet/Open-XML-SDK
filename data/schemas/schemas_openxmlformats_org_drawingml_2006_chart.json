@@ -1141,10 +1141,6 @@
           "PropertyName": "Marker"
         },
         {
-          "Name": "c:CT_PictureOptions/c:pictureOptions",
-          "PropertyName": "PictureOptions"
-        },
-        {
           "Name": "c:CT_DPt/c:dPt"
         },
         {
@@ -1206,14 +1202,6 @@
           },
           {
             "Name": "c:CT_Marker/c:marker",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_PictureOptions/c:pictureOptions",
             "Occurs": [
               {
                 "Max": 1
@@ -1875,10 +1863,6 @@
           "PropertyName": "ChartShapeProperties"
         },
         {
-          "Name": "c:CT_PictureOptions/c:pictureOptions",
-          "PropertyName": "PictureOptions"
-        },
-        {
           "Name": "c:CT_UnsignedInt/c:explosion",
           "PropertyName": "Explosion"
         },
@@ -1930,14 +1914,6 @@
                     ]
                   }
                 ]
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_PictureOptions/c:pictureOptions",
-            "Occurs": [
-              {
-                "Max": 1
               }
             ]
           },
@@ -2017,20 +1993,12 @@
           "PropertyName": "ChartShapeProperties"
         },
         {
-          "Name": "c:CT_PictureOptions/c:pictureOptions",
-          "PropertyName": "PictureOptions"
-        },
-        {
           "Name": "c:CT_AxDataSource/c:cat",
           "PropertyName": "CategoryAxisData"
         },
         {
           "Name": "c:CT_NumDataSource/c:val",
           "PropertyName": "Values"
-        },
-        {
-          "Name": "c:CT_Boolean/c:bubble3D",
-          "PropertyName": "Bubble3D"
         },
         {
           "Name": "c:CT_SurfaceSerExtensionList/c:extLst",
@@ -2073,14 +2041,6 @@
             ]
           },
           {
-            "Name": "c:CT_PictureOptions/c:pictureOptions",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
             "Name": "c:CT_AxDataSource/c:cat",
             "Occurs": [
               {
@@ -2090,14 +2050,6 @@
           },
           {
             "Name": "c:CT_NumDataSource/c:val",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_Boolean/c:bubble3D",
             "Occurs": [
               {
                 "Max": 1
@@ -10425,10 +10377,6 @@
           "PropertyName": "ChartShapeProperties"
         },
         {
-          "Name": "c:CT_PictureOptions/c:pictureOptions",
-          "PropertyName": "PictureOptions"
-        },
-        {
           "Name": "c:CT_Marker/c:marker",
           "PropertyName": "Marker"
         },
@@ -10480,14 +10428,6 @@
                     ]
                   }
                 ]
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_PictureOptions/c:pictureOptions",
-            "Occurs": [
-              {
-                "Max": 1
               }
             ]
           },
@@ -10725,10 +10665,6 @@
           "PropertyName": "ChartShapeProperties"
         },
         {
-          "Name": "c:CT_PictureOptions/c:pictureOptions",
-          "PropertyName": "PictureOptions"
-        },
-        {
           "Name": "c:CT_Boolean/c:invertIfNegative",
           "PropertyName": "InvertIfNegative"
         },
@@ -10792,14 +10728,6 @@
                     ]
                   }
                 ]
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_PictureOptions/c:pictureOptions",
-            "Occurs": [
-              {
-                "Max": 1
               }
             ]
           },
