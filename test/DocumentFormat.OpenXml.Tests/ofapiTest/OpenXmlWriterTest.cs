@@ -258,7 +258,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Stream stream = mdp.GetStream();
                 stream.Position = 0;
                 string xml = new StreamReader(stream).ReadToEnd();
-                Assert.Contains("<?xml version=\"1.0\" encoding=\"utf-8\"?>", xml);
+                Assert.Equal("<?xml version=\"1.0\" encoding=\"utf-8\"?>", xml);
             }
         }
 
@@ -280,7 +280,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Stream stream = mdp.GetStream();
                 stream.Position = 0;
                 string xml = new StreamReader(stream).ReadToEnd();
-                Assert.Contains("<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>", xml);
+                Assert.Equal("<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>", xml);
             }
         }
 
@@ -304,7 +304,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Stream stream = mdp.GetStream();
                 stream.Position = 0;
                 string xml = new StreamReader(stream).ReadToEnd();
-                Assert.Contains("<w:document", xml);
+                Assert.Equal("<?xml version=\"1.0\" encoding=\"utf-8\"?><w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" />", xml);
             }
         }
 
@@ -336,7 +336,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Stream stream = mdp.GetStream();
                 stream.Position = 0;
                 string xml = new StreamReader(stream).ReadToEnd();
-                Assert.Contains("w:val=\"Normal\"", xml);
+                Assert.Equal("<?xml version=\"1.0\" encoding=\"utf-8\"?><w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:pPr><w:pStyle w:val=\"Normal\" /></w:pPr></w:p></w:body></w:document>", xml);
             }
         }
 
@@ -368,8 +368,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Stream stream = mdp.GetStream();
                 stream.Position = 0;
                 string xml = new StreamReader(stream).ReadToEnd();
-                Assert.Contains("w:val=\"Normal\"", xml);
-                Assert.Contains("xmlns:q=\"http://schemas.openxmlformats.org/fake/namespace\"", xml);
+                Assert.Equal("<?xml version=\"1.0\" encoding=\"utf-8\"?><w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body><w:p><w:pPr><w:pStyle xmlns:q=\"http://schemas.openxmlformats.org/fake/namespace\" w:val=\"Normal\" /></w:pPr></w:p></w:body></w:document>", xml);
             }
         }
 
@@ -394,7 +393,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Stream stream = mdp.GetStream();
                 stream.Position = 0;
                 string xml = new StreamReader(stream).ReadToEnd();
-                Assert.Contains("</w:document>", xml);
+                Assert.Equal("<?xml version=\"1.0\" encoding=\"utf-8\"?><w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:body /></w:document>", xml);
             }
         }
 
@@ -417,7 +416,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Stream stream = mdp.GetStream();
                 stream.Position = 0;
                 string xml = new StreamReader(stream).ReadToEnd();
-                Assert.Contains("<w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" />", xml);
+                Assert.Equal("<?xml version=\"1.0\" encoding=\"utf-8\"?><w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" />", xml);
             }
         }
 
@@ -430,7 +429,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 MainDocumentPart mdp = wpd.AddMainDocumentPart();
                 OpenXmlWriter writer = new OpenXmlPartWriter(mdp, useAsync: true);
-                string txt = "I want some tacos!";
+                string txt = "Well, there's your problem";
 
                 // Act
                 await writer.WriteStartDocumentAsync();
@@ -449,7 +448,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Stream stream = mdp.GetStream();
                 stream.Position = 0;
                 string xml = new StreamReader(stream).ReadToEnd();
-                Assert.Contains(txt, xml);
+                Assert.Equal("<?xml version=\"1.0\" encoding=\"utf-8\"?><w:body xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:p><w:r><w:t>Well, there's your problem</w:t></w:r></w:p></w:body>", xml);
             }
         }
 #endif
