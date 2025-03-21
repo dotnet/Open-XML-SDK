@@ -6,6 +6,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+#if FEATURE_ASYNC_SAX_XML
+using System.Threading.Tasks;
+#endif
 using System.Xml;
 
 namespace DocumentFormat.OpenXml
@@ -28,6 +31,30 @@ namespace DocumentFormat.OpenXml
             : this(openXmlPart, Encoding.UTF8)
         {
         }
+
+#if FEATURE_ASYNC_SAX_XML
+        /// <summary>
+        /// Initializes a new instance of the OpenXmlPartWriter.
+        /// </summary>
+        /// <param name="openXmlPart">The OpenXmlPart to be written to.</param>
+        /// <param name="useAsync">Whether the writer should be initialized using async</param>
+        public OpenXmlPartWriter(OpenXmlPart openXmlPart, bool useAsync)
+        {
+            if (openXmlPart is null)
+            {
+                throw new ArgumentNullException(nameof(openXmlPart));
+            }
+
+            var partStream = openXmlPart.GetStream(FileMode.Create);
+            var settings = new XmlWriterSettings
+            {
+                CloseOutput = true,
+                Async = useAsync,
+            };
+
+            _xmlWriter = XmlWriter.Create(partStream, settings);
+        }
+#endif
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlPartWriter.
@@ -56,6 +83,37 @@ namespace DocumentFormat.OpenXml
             _xmlWriter = XmlWriter.Create(partStream, settings);
         }
 
+#if FEATURE_ASYNC_SAX_XML
+        /// <summary>
+        /// Initializes a new instance of the OpenXmlPartWriter.
+        /// </summary>
+        /// <param name="openXmlPart">The OpenXmlPart to be written to.</param>
+        /// <param name="encoding">The encoding for the XML stream.</param>
+        /// <param name="useAsync">Whether the writer should be initialized using async</param>
+        public OpenXmlPartWriter(OpenXmlPart openXmlPart, Encoding encoding, bool useAsync)
+        {
+            if (openXmlPart is null)
+            {
+                throw new ArgumentNullException(nameof(openXmlPart));
+            }
+
+            if (encoding is null)
+            {
+                throw new ArgumentNullException(nameof(encoding));
+            }
+
+            var partStream = openXmlPart.GetStream(FileMode.Create);
+            var settings = new XmlWriterSettings
+            {
+                CloseOutput = true,
+                Encoding = encoding,
+                Async = useAsync,
+            };
+
+            _xmlWriter = XmlWriter.Create(partStream, settings);
+        }
+#endif
+
         /// <summary>
         /// Initializes a new instance of the OpenXmlPartWriter.
         /// </summary>
@@ -64,6 +122,30 @@ namespace DocumentFormat.OpenXml
             : this(partStream, Encoding.UTF8)
         {
         }
+
+#if FEATURE_ASYNC_SAX_XML
+        /// <summary>
+        /// Initializes a new instance of the OpenXmlPartWriter.
+        /// </summary>
+        /// <param name="partStream">The given part stream.</param>
+        /// <param name="useAsync">Whether the writer should be initialized using async</param>
+        public OpenXmlPartWriter(Stream partStream, bool useAsync)
+        {
+            if (partStream is null)
+            {
+                throw new ArgumentNullException(nameof(partStream));
+            }
+
+            var settings = new XmlWriterSettings
+            {
+                CloseOutput = false,
+                Encoding = Encoding.UTF8,
+                Async = useAsync,
+            };
+
+            _xmlWriter = XmlWriter.Create(partStream, settings);
+        }
+#endif
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlPartWriter.
@@ -91,6 +173,36 @@ namespace DocumentFormat.OpenXml
             _xmlWriter = XmlWriter.Create(partStream, settings);
         }
 
+#if FEATURE_ASYNC_SAX_XML
+        /// <summary>
+        /// Initializes a new instance of the OpenXmlPartWriter.
+        /// </summary>
+        /// <param name="partStream">The given part stream.</param>
+        /// <param name="encoding">The encoding for the XML stream.</param>
+        /// <param name="useAsync">Whether the writer should be initialized using async</param>
+        public OpenXmlPartWriter(Stream partStream, Encoding encoding, bool useAsync)
+        {
+            if (partStream is null)
+            {
+                throw new ArgumentNullException(nameof(partStream));
+            }
+
+            if (encoding is null)
+            {
+                throw new ArgumentNullException(nameof(encoding));
+            }
+
+            var settings = new XmlWriterSettings
+            {
+                CloseOutput = false,
+                Encoding = encoding,
+                Async = useAsync,
+            };
+
+            _xmlWriter = XmlWriter.Create(partStream, settings);
+        }
+#endif
+
         #region public OpenXmlWriter methods
 
         /// <summary>
@@ -99,7 +211,6 @@ namespace DocumentFormat.OpenXml
         public override void WriteStartDocument()
         {
             ThrowIfObjectDisposed();
-
             _xmlWriter.WriteStartDocument();
         }
 
@@ -110,7 +221,6 @@ namespace DocumentFormat.OpenXml
         public override void WriteStartDocument(bool standalone)
         {
             ThrowIfObjectDisposed();
-
             _xmlWriter.WriteStartDocument(standalone);
         }
 
@@ -307,9 +417,7 @@ namespace DocumentFormat.OpenXml
         public override void WriteEndElement()
         {
             ThrowIfObjectDisposed();
-
             _xmlWriter.WriteEndElement();
-
             _isLeafTextElementStart = false;
         }
 
@@ -345,9 +453,7 @@ namespace DocumentFormat.OpenXml
             }
 
             ThrowIfObjectDisposed();
-
             elementObject.WriteTo(_xmlWriter);
-
             _isLeafTextElementStart = false;
         }
 
@@ -365,5 +471,179 @@ namespace DocumentFormat.OpenXml
         }
 
         #endregion
+
+        // Async Methods
+#if FEATURE_ASYNC_SAX_XML
+        /// <summary>
+        /// Asynchronously writes the XML declaration with the version "1.0".
+        /// </summary>
+        public async override Task WriteStartDocumentAsync()
+        {
+            ThrowIfObjectDisposed();
+            await _xmlWriter.WriteStartDocumentAsync().ConfigureAwait(true);
+            return;
+        }
+
+        /// <summary>
+        /// Asynchronously writes the XML declaration with the version "1.0" and the standalone attribute.
+        /// </summary>
+        /// <param name="standalone">If true, it writes "standalone=yes"; if false, it writes "standalone=no". </param>
+        public async override Task WriteStartDocumentAsync(bool standalone)
+        {
+            ThrowIfObjectDisposed();
+            await _xmlWriter.WriteStartDocumentAsync(standalone).ConfigureAwait(true);
+            return;
+        }
+
+        /// <summary>
+        /// Asynchronously writes out a start tag of the element and all the attributes of the element.
+        /// </summary>
+        /// <param name="elementObject">The OpenXmlElement object to be written.</param>
+        public async override Task WriteStartElementAsync(OpenXmlElement elementObject)
+        {
+            if (elementObject is null)
+            {
+                throw new ArgumentNullException(nameof(elementObject));
+            }
+
+            if (elementObject is OpenXmlMiscNode)
+            {
+                throw new ArgumentOutOfRangeException(nameof(elementObject));
+            }
+
+            ThrowIfObjectDisposed();
+
+            _xmlWriter.WriteStartElement(elementObject.Prefix, elementObject.LocalName, elementObject.NamespaceUri);
+
+            if (elementObject.HasAttributes)
+            {
+                // write attributes
+                foreach (var attribute in elementObject.GetAttributes())
+                {
+                    await _xmlWriter.WriteAttributeStringAsync(attribute.Prefix, attribute.LocalName, attribute.NamespaceUri, attribute.Value).ConfigureAwait(true);
+                }
+            }
+
+            if (elementObject is OpenXmlLeafTextElement)
+            {
+                _isLeafTextElementStart = true;
+            }
+            else
+            {
+                _isLeafTextElementStart = false;
+            }
+        }
+
+        /// <summary>
+        /// Asynchronously writes out a start tag of the element. And write the attributes in attributes. The attributes of the element will be omitted.
+        /// </summary>
+        /// <param name="elementObject">The OpenXmlElement object to be written.</param>
+        /// <param name="attributes">The attributes to be written.</param>
+        public async override Task WriteStartElementAsync(OpenXmlElement elementObject, IEnumerable<OpenXmlAttribute> attributes)
+        {
+            if (elementObject is null)
+            {
+                throw new ArgumentNullException(nameof(elementObject));
+            }
+
+            await WriteStartElementAsync(elementObject, attributes, elementObject.NamespaceDeclarations).ConfigureAwait(true);
+        }
+
+        /// <summary>
+        /// Asynchronously writes out a start tag of the element. And write the attributes in attributes. The attributes of the element will be omitted.
+        /// </summary>
+        /// <param name="elementObject">The OpenXmlElement object to be written.</param>
+        /// <param name="attributes">The attributes to be written.</param>
+        /// <param name="namespaceDeclarations">The namespace declarations to be written, can be null if no namespace declarations.</param>
+        public async override Task WriteStartElementAsync(OpenXmlElement elementObject, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations)
+        {
+            if (elementObject is null)
+            {
+                throw new ArgumentNullException(nameof(elementObject));
+            }
+
+            if (elementObject is OpenXmlMiscNode)
+            {
+                throw new ArgumentOutOfRangeException(nameof(elementObject));
+            }
+
+            ThrowIfObjectDisposed();
+
+            await _xmlWriter.WriteStartElementAsync(elementObject.Prefix, elementObject.LocalName, elementObject.NamespaceUri).ConfigureAwait(true);
+
+            if (namespaceDeclarations is not null)
+            {
+                foreach (var item in namespaceDeclarations)
+                {
+                    await _xmlWriter.WriteAttributeStringAsync(OpenXmlElementContext.XmlnsPrefix, item.Key, OpenXmlElementContext.XmlnsUri, item.Value).ConfigureAwait(true);
+                }
+            }
+
+            if (attributes is not null)
+            {
+                // write attributes
+                foreach (var attribute in attributes)
+                {
+                    await _xmlWriter.WriteAttributeStringAsync(attribute.Prefix, attribute.LocalName, attribute.NamespaceUri, attribute.Value).ConfigureAwait(true);
+                }
+            }
+
+            if (elementObject is OpenXmlLeafTextElement)
+            {
+                _isLeafTextElementStart = true;
+            }
+            else
+            {
+                _isLeafTextElementStart = false;
+            }
+        }
+
+        /// <summary>
+        /// Asynchronously closes one element.
+        /// </summary>
+        public async override Task WriteEndElementAsync()
+        {
+            ThrowIfObjectDisposed();
+            await _xmlWriter.WriteEndElementAsync().ConfigureAwait(true);
+            _isLeafTextElementStart = false;
+        }
+
+        /// <summary>
+        /// Asynchronously writes the OpenXmlElement to the writer.
+        /// </summary>
+        /// <param name="elementObject">The OpenXmlElement object to be written.</param>
+        public async override Task WriteElementAsync(OpenXmlElement elementObject)
+        {
+            if (elementObject is null)
+            {
+                throw new ArgumentNullException(nameof(elementObject));
+            }
+
+            ThrowIfObjectDisposed();
+            await WriteStartElementAsync(elementObject).ConfigureAwait(true);
+            await WriteEndElementAsync().ConfigureAwait(true);
+            _isLeafTextElementStart = false;
+        }
+
+        /// <summary>
+        /// Asynchronously writes the given text content.
+        /// </summary>
+        /// <param name="text">The text to be written. </param>
+        public async override Task WriteStringAsync(string text)
+        {
+            ThrowIfObjectDisposed();
+
+            if (_isLeafTextElementStart)
+            {
+                await _xmlWriter.WriteStringAsync(text).ConfigureAwait(true);
+            }
+            else
+            {
+                throw new InvalidOperationException(ExceptionMessages.InvalidWriteStringCall);
+            }
+
+            // can continue WriteStringAsync(), so don't set _isLeafTextElementStart to false.
+        }
+#endif
     }
 }

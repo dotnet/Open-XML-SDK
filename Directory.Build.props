@@ -70,6 +70,7 @@
         <LatestTargetFramework>net8.0</LatestTargetFramework>
         <SamplesFrameworks>net8.0</SamplesFrameworks>
         <SamplesFrameworks Condition=" '$(OS)' == 'Windows_NT' ">$(SamplesFrameworks);net472</SamplesFrameworks>
+        <DefineConstants Condition=" '$(TargetFramework)' != 'net35' And '$(TargetFramework)' != 'net40' And '$(TargetFramework)' != 'net46' And '$(TargetFramework)' != 'net472' ">$(DefineConstants);FEATURE_ASYNC_SAX_XML</DefineConstants>
       </PropertyGroup>
     </Otherwise>
   </Choose>
