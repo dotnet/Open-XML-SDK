@@ -2975,10 +2975,6 @@
         "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
       },
       {
-        "Name": "pictureOptions",
-        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
-      },
-      {
         "Name": "spPr",
         "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
       },
@@ -4518,10 +4514,6 @@
         "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
       },
       {
-        "Name": "pictureOptions",
-        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
-      },
-      {
         "Name": "smooth",
         "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
       },
@@ -5128,10 +5120,6 @@
         "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
       },
       {
-        "Name": "pictureOptions",
-        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
-      },
-      {
         "Name": "spPr",
         "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
       },
@@ -5490,10 +5478,6 @@
       },
       {
         "Name": "order",
-        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
-      },
-      {
-        "Name": "pictureOptions",
         "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
       },
       {
@@ -6320,10 +6304,6 @@
     "Element": "DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartSeries",
     "Children": [
       {
-        "Name": "bubble3D",
-        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
-      },
-      {
         "Name": "cat",
         "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
       },
@@ -6337,10 +6317,6 @@
       },
       {
         "Name": "order",
-        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
-      },
-      {
-        "Name": "pictureOptions",
         "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
       },
       {
@@ -28922,10 +28898,6 @@
         "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
       },
       {
-        "Name": "pictureOptions",
-        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
-      },
-      {
         "Name": "spPr",
         "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
       },
@@ -29339,10 +29311,6 @@
         "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
       },
       {
-        "Name": "pictureOptions",
-        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
-      },
-      {
         "Name": "smooth",
         "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
       },
@@ -29421,10 +29389,6 @@
         "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
       },
       {
-        "Name": "pictureOptions",
-        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
-      },
-      {
         "Name": "spPr",
         "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
       },
@@ -29484,10 +29448,6 @@
       },
       {
         "Name": "order",
-        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
-      },
-      {
-        "Name": "pictureOptions",
         "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
       },
       {
@@ -29642,10 +29602,6 @@
     "Element": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.SurfaceChartSeries",
     "Children": [
       {
-        "Name": "bubble3D",
-        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
-      },
-      {
         "Name": "cat",
         "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
       },
@@ -29659,10 +29615,6 @@
       },
       {
         "Name": "order",
-        "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
-      },
-      {
-        "Name": "pictureOptions",
         "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/chart"
       },
       {

@@ -3845,10 +3845,6 @@
        "ParticleType": "Group"
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.Charts.PictureOptions",
-       "MinOccurs": 0
-      },
-      {
        "ElementType": "DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative",
        "MinOccurs": 0
       },
@@ -6038,10 +6034,6 @@
        "MinOccurs": 0
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.Charts.PictureOptions",
-       "MinOccurs": 0
-      },
-      {
        "ElementType": "DocumentFormat.OpenXml.Drawing.Charts.DataPoint",
        "MaxOccurs": 0,
        "MinOccurs": 0
@@ -6892,10 +6884,6 @@
        "ParticleType": "Group"
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.Charts.PictureOptions",
-       "MinOccurs": 0
-      },
-      {
        "ElementType": "DocumentFormat.OpenXml.Drawing.Charts.Explosion",
        "MinOccurs": 0
       },
@@ -7397,10 +7385,6 @@
         }
        ],
        "ParticleType": "Group"
-      },
-      {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.Charts.PictureOptions",
-       "MinOccurs": 0
       },
       {
        "ElementType": "DocumentFormat.OpenXml.Drawing.Charts.Marker",
@@ -8660,19 +8644,11 @@
        "ParticleType": "Group"
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.Charts.PictureOptions",
-       "MinOccurs": 0
-      },
-      {
        "ElementType": "DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData",
        "MinOccurs": 0
       },
       {
        "ElementType": "DocumentFormat.OpenXml.Drawing.Charts.Values",
-       "MinOccurs": 0
-      },
-      {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.Charts.Bubble3D",
        "MinOccurs": 0
       },
       {
@@ -42284,10 +42260,6 @@
        "ParticleType": "Group"
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.Charts.PictureOptions",
-       "MinOccurs": 0
-      },
-      {
        "ElementType": "DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative",
        "MinOccurs": 0
       },
@@ -42915,10 +42887,6 @@
        "MinOccurs": 0
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.Charts.PictureOptions",
-       "MinOccurs": 0
-      },
-      {
        "ElementType": "DocumentFormat.OpenXml.Drawing.Charts.DataPoint",
        "MaxOccurs": 0,
        "MinOccurs": 0
@@ -43019,10 +42987,6 @@
        "ParticleType": "Group"
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.Charts.PictureOptions",
-       "MinOccurs": 0
-      },
-      {
        "ElementType": "DocumentFormat.OpenXml.Drawing.Charts.Explosion",
        "MinOccurs": 0
       },
@@ -43106,10 +43070,6 @@
         }
        ],
        "ParticleType": "Group"
-      },
-      {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.Charts.PictureOptions",
-       "MinOccurs": 0
       },
       {
        "ElementType": "DocumentFormat.OpenXml.Drawing.Charts.Marker",
@@ -43346,19 +43306,11 @@
        "ParticleType": "Group"
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.Charts.PictureOptions",
-       "MinOccurs": 0
-      },
-      {
        "ElementType": "DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData",
        "MinOccurs": 0
       },
       {
        "ElementType": "DocumentFormat.OpenXml.Drawing.Charts.Values",
-       "MinOccurs": 0
-      },
-      {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.Charts.Bubble3D",
        "MinOccurs": 0
       },
       {

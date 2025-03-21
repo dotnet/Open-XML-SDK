@@ -2547,7 +2547,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LineSerExtensionList" /> <c>&lt;c:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Marker" /> <c>&lt;c:marker></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Values" /> <c>&lt;c:val></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SeriesText" /> <c>&lt;c:tx></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Trendline" /> <c>&lt;c:trendline></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
@@ -2600,7 +2599,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LineSerExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Values>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Trendline>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
@@ -2618,7 +2616,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                     }
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Marker), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataPoint), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Trendline), 0, 0),
@@ -2692,19 +2689,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public DocumentFormat.OpenXml.Drawing.Charts.Marker? Marker
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>PictureOptions.</para>
-        /// <para>Represents the following element tag in the schema: c:pictureOptions.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
             set => SetElement(value);
         }
 
@@ -3264,7 +3248,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataPoint" /> <c>&lt;c:dPt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Values" /> <c>&lt;c:val></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PieSerExtensionList" /> <c>&lt;c:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SeriesText" /> <c>&lt;c:tx></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
@@ -3314,7 +3297,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataPoint>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Values>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PieSerExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
@@ -3332,7 +3314,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Explosion), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataPoint), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
@@ -3395,19 +3376,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         }
 
         /// <summary>
-        /// <para>PictureOptions.</para>
-        /// <para>Represents the following element tag in the schema: c:pictureOptions.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
         /// <para>Explosion.</para>
         /// <para>Represents the following element tag in the schema: c:explosion.</para>
         /// </summary>
@@ -3434,9 +3402,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData" /> <c>&lt;c:cat></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Bubble3D" /> <c>&lt;c:bubble3D></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Values" /> <c>&lt;c:val></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SeriesText" /> <c>&lt;c:tx></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList" /> <c>&lt;c:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
@@ -3482,9 +3448,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.SetSchema("c:ser");
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Values>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
@@ -3501,10 +3465,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Bubble3D), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList), 0, 1)
             };
         }
@@ -3562,19 +3524,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         }
 
         /// <summary>
-        /// <para>PictureOptions.</para>
-        /// <para>Represents the following element tag in the schema: c:pictureOptions.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
         /// <para>CategoryAxisData.</para>
         /// <para>Represents the following element tag in the schema: c:cat.</para>
         /// </summary>
@@ -3597,19 +3546,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public DocumentFormat.OpenXml.Drawing.Charts.Values? Values
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Values>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Bubble3D.</para>
-        /// <para>Represents the following element tag in the schema: c:bubble3D.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.Bubble3D? Bubble3D
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
             set => SetElement(value);
         }
 
@@ -15916,7 +15852,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataPoint" /> <c>&lt;c:dPt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Marker" /> <c>&lt;c:marker></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Values" /> <c>&lt;c:val></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtensionList" /> <c>&lt;c:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SeriesText" /> <c>&lt;c:tx></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
@@ -15966,7 +15901,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataPoint>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Values>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
@@ -15983,7 +15917,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Marker), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataPoint), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
@@ -16042,19 +15975,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>PictureOptions.</para>
-        /// <para>Represents the following element tag in the schema: c:pictureOptions.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
             set => SetElement(value);
         }
 
@@ -16463,7 +16383,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ErrorBars" /> <c>&lt;c:errBars></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.YValues" /> <c>&lt;c:yVal></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BubbleSize" /> <c>&lt;c:bubbleSize></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SeriesText" /> <c>&lt;c:tx></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Trendline" /> <c>&lt;c:trendline></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
@@ -16517,7 +16436,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBars>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.YValues>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BubbleSize>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Trendline>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
@@ -16534,7 +16452,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                         new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataPoint), 0, 0),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
@@ -16597,19 +16514,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>PictureOptions.</para>
-        /// <para>Represents the following element tag in the schema: c:pictureOptions.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
             set => SetElement(value);
         }
 
