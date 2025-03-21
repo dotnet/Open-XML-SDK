@@ -16,7 +16,6 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// <summary>
     /// Base class for each semantic constraint category.
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Performance", "CA1851:Possible multiple enumerations of 'IEnumerable' collection", Justification = "https://github.com/dotnet/Open-XML-SDK/issues/1325")]
     internal abstract class SemanticConstraint : IValidator
     {
         public SemanticConstraint(SemanticValidationLevel level)
@@ -130,13 +129,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             }
             else if (parts[0] == "..")
             {
-                var refParts = current.Package
+                return current.Package
                     .GetAllParts()
-                    .Where(p => p.Parts.Any(r => r.OpenXmlPart.PackagePart.Uri == current.Part.PackagePart.Uri));
-
-                Debug.Assert(refParts.Count() == 1);
-
-                return refParts.First();
+                    .Where(p => p.Parts.Any(r => r.OpenXmlPart.PackagePart.Uri == current.Part.PackagePart.Uri))
+                    .First();
             }
             else
             {
@@ -247,29 +243,25 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         private static OpenXmlPart? GetPartThroughPartPath(IEnumerable<IdPartPair> pairs, string[] path)
         {
-            var temp = default(OpenXmlPart);
+            var foundPart = default(OpenXmlPart);
             var parts = pairs;
 
             for (int i = 0; i < path.Length; i++)
             {
-                var s = parts.Where(p => p.OpenXmlPart.GetType().Name == path[i]).Select(t => t.OpenXmlPart);
-                var count = s.Count();
+                foundPart = parts
+                    .Where(p => p.OpenXmlPart.GetType().Name == path[i])
+                    .Select(t => t.OpenXmlPart)
+                    .FirstOrDefaultAndMaxOne(static () => new System.IO.FileFormatException(ValidationResources.MoreThanOnePartForOneUri));
 
-                if (count > 1)
-                {
-                    throw new System.IO.FileFormatException(ValidationResources.MoreThanOnePartForOneUri);
-                }
-
-                if (count == 0)
+                if (foundPart is not { })
                 {
                     return null;
                 }
 
-                temp = s.First();
-                parts = temp.Parts;
+                parts = foundPart.Parts;
             }
 
-            return temp;
+            return foundPart;
         }
 
         protected readonly struct PartHolder<T>
