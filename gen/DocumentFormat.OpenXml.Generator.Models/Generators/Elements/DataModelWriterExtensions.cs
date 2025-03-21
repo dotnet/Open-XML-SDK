@@ -18,7 +18,7 @@ public static class DataModelWriterExtensions
             // Example with annotations:
             // {
             //  This is the containing complex type class, in the json metadata, this comes from the fully qualified "Name": "c:CT_BubbleSer/c15:ser",
-            //  "c:CT_BubbleSer/c15:ser", 
+            //  "c:CT_BubbleSer/c15:ser",
             //  new Dictionary<string, List<string>>()
             //  {
             //        {
@@ -195,8 +195,8 @@ public static class DataModelWriterExtensions
 
         if (_attributeData.TryGetValue(element.Name.ToString(), out Dictionary<string, List<string>> ctAttributeData))
         {
-            // if the fully qualified CT/tag name is also one of the children of the dictionary that means the attributes of that 
-            // child's list need to be applied to the whole class, for example, if we're obsoleting an entire class. 
+            // if the fully qualified CT/tag name is also one of the children of the dictionary that means the attributes of that
+            // child's list need to be applied to the whole class, for example, if we're obsoleting an entire class.
             if (ctAttributeData.TryGetValue(element.Name.ToString(), out List<string> attributeStrings))
             {
                 foreach (string attributeString in attributeStrings)
