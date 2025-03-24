@@ -50011,7 +50011,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-<<<<<<< HEAD
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.DefinedNames.ElementType, 1, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.PivotCaches.ElementType, 1, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.SlicerCaches.ElementType, 1, 1, version: FileFormatVersions.Office2010),
@@ -50024,21 +50023,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 new ElementParticle(DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(DocumentFormat.OpenXml.Office2013.Excel.DataModel.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService.ExternalCodeService.ElementType, 1, 1, version: FileFormatVersions.Microsoft365),
-=======
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DefinedNames), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotCaches), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerCaches), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.SlicerCaches), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.WorkbookProperties), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotCaches), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotTableReferences), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotCaches), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReferences), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.DataModel), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService.ExternalCodeService), 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.WorkbookCompatibilityVersion.Version), 1, 1, version: FileFormatVersions.Microsoft365),
->>>>>>> main
+                new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.WorkbookCompatibilityVersion.Version.ElementType, 1, 1, version: FileFormatVersions.Microsoft365),
                 new AnyParticle(0, 1)
             };
         }
