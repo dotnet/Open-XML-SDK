@@ -5,7 +5,7 @@ using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Tests;
 using System;
 using System.IO;
-using Xunit.Abstractions;
+using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
 {

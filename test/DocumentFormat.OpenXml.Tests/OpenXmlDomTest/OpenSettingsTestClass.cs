@@ -4,7 +4,6 @@
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using Xunit;
-using Xunit.Abstractions;
 
 using static DocumentFormat.OpenXml.Tests.TestAssets;
 
