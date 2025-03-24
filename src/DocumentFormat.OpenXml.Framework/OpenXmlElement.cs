@@ -802,7 +802,7 @@ namespace DocumentFormat.OpenXml
             => ChildElements.First<T>();
 
         /// <summary>
-        /// Finds the first child element of type T or adds a new element if it does not exist.
+        /// Finds the first child element of <typeparam ref="T"/> or adds a new element if it does not exist.
         /// </summary>
         /// <typeparam name="T">Type of element.</typeparam>
         /// <returns>The new or existing OpenXmlElement</returns>
