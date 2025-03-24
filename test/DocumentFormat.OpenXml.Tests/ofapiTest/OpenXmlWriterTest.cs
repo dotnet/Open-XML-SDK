@@ -248,17 +248,20 @@ namespace DocumentFormat.OpenXml.Tests
             using (WordprocessingDocument wpd = WordprocessingDocument.Create(memoryStream, WordprocessingDocumentType.Document))
             {
                 MainDocumentPart mdp = wpd.AddMainDocumentPart();
-                OpenXmlWriter writer = new OpenXmlPartWriter(mdp, useAsync: true);
 
-                // Act
-                await writer.WriteStartDocumentAsync();
-                writer.Close();
+                using (Stream partStream = mdp.GetStream())
+                {
+                    OpenXmlWriter writer = new OpenXmlPartWriter(partStream, new OpenXmlPartWriterSettings() { Async = true });
 
-                // Assert
-                Stream stream = mdp.GetStream();
-                stream.Position = 0;
-                string xml = new StreamReader(stream).ReadToEnd();
-                Assert.Equal("<?xml version=\"1.0\" encoding=\"utf-8\"?>", xml);
+                    // Act
+                    await writer.WriteStartDocumentAsync();
+                    writer.Close();
+
+                    // Assert
+                    partStream.Position = 0;
+                    string xml = new StreamReader(partStream).ReadToEnd();
+                    Assert.Equal("<?xml version=\"1.0\" encoding=\"utf-8\"?>", xml);
+                }
             }
         }
 
@@ -270,17 +273,20 @@ namespace DocumentFormat.OpenXml.Tests
             using (WordprocessingDocument wpd = WordprocessingDocument.Create(memoryStream, WordprocessingDocumentType.Document))
             {
                 MainDocumentPart mdp = wpd.AddMainDocumentPart();
-                OpenXmlWriter writer = new OpenXmlPartWriter(mdp, useAsync: true);
 
-                // Act
-                await writer.WriteStartDocumentAsync(true);
-                writer.Close();
+                using (Stream partStream = mdp.GetStream())
+                {
+                    OpenXmlWriter writer = new OpenXmlPartWriter(partStream, new OpenXmlPartWriterSettings() { Async = true });
 
-                // Assert
-                Stream stream = mdp.GetStream();
-                stream.Position = 0;
-                string xml = new StreamReader(stream).ReadToEnd();
-                Assert.Equal("<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>", xml);
+                    // Act
+                    await writer.WriteStartDocumentAsync(true);
+                    writer.Close();
+
+                    // Assert
+                    partStream.Position = 0;
+                    string xml = new StreamReader(partStream).ReadToEnd();
+                    Assert.Equal("<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>", xml);
+                }
             }
         }
 
@@ -292,19 +298,22 @@ namespace DocumentFormat.OpenXml.Tests
             using (WordprocessingDocument wpd = WordprocessingDocument.Create(memoryStream, WordprocessingDocumentType.Document))
             {
                 MainDocumentPart mdp = wpd.AddMainDocumentPart();
-                OpenXmlWriter writer = new OpenXmlPartWriter(mdp, useAsync: true);
 
-                // Act
-                await writer.WriteStartDocumentAsync();
-                await writer.WriteStartElementAsync(new Document());
-                await writer.WriteEndElementAsync();
-                writer.Close();
+                using (Stream partStream = mdp.GetStream())
+                {
+                    OpenXmlWriter writer = new OpenXmlPartWriter(partStream, new OpenXmlPartWriterSettings() { Async = true });
 
-                // Assert
-                Stream stream = mdp.GetStream();
-                stream.Position = 0;
-                string xml = new StreamReader(stream).ReadToEnd();
-                Assert.Equal("<?xml version=\"1.0\" encoding=\"utf-8\"?><w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" />", xml);
+                    // Act
+                    await writer.WriteStartDocumentAsync();
+                    await writer.WriteStartElementAsync(new Document());
+                    await writer.WriteEndElementAsync();
+                    writer.Close();
+
+                    // Assert
+                    partStream.Position = 0;
+                    string xml = new StreamReader(partStream).ReadToEnd();
+                    Assert.Equal("<?xml version=\"1.0\" encoding=\"utf-8\"?><w:document xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" />", xml);
+                }
             }
         }
 
@@ -316,7 +325,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (WordprocessingDocument wpd = WordprocessingDocument.Create(memoryStream, WordprocessingDocumentType.Document))
             {
                 MainDocumentPart mdp = wpd.AddMainDocumentPart();
-                OpenXmlWriter writer = new OpenXmlPartWriter(mdp, useAsync: true);
+                OpenXmlWriter writer = new OpenXmlPartWriter(mdp, new OpenXmlPartWriterSettings() { Async = true });
 
                 // Act
                 await writer.WriteStartDocumentAsync();
@@ -348,7 +357,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (WordprocessingDocument wpd = WordprocessingDocument.Create(memoryStream, WordprocessingDocumentType.Document))
             {
                 MainDocumentPart mdp = wpd.AddMainDocumentPart();
-                OpenXmlWriter writer = new OpenXmlPartWriter(mdp, useAsync: true);
+                OpenXmlWriter writer = new OpenXmlPartWriter(mdp, new OpenXmlPartWriterSettings() { Async = true });
 
                 // Act
                 await writer.WriteStartDocumentAsync();
@@ -380,7 +389,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (WordprocessingDocument wpd = WordprocessingDocument.Create(memoryStream, WordprocessingDocumentType.Document))
             {
                 MainDocumentPart mdp = wpd.AddMainDocumentPart();
-                OpenXmlWriter writer = new OpenXmlPartWriter(mdp, useAsync: true);
+                OpenXmlWriter writer = new OpenXmlPartWriter(mdp, new OpenXmlPartWriterSettings() { Async = true });
 
                 // Act
                 await writer.WriteStartDocumentAsync();
@@ -405,7 +414,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (WordprocessingDocument wpd = WordprocessingDocument.Create(memoryStream, WordprocessingDocumentType.Document))
             {
                 MainDocumentPart mdp = wpd.AddMainDocumentPart();
-                OpenXmlWriter writer = new OpenXmlPartWriter(mdp, useAsync: true);
+                OpenXmlWriter writer = new OpenXmlPartWriter(mdp, new OpenXmlPartWriterSettings() { Async = true });
 
                 // Act
                 await writer.WriteStartDocumentAsync();
@@ -428,7 +437,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (WordprocessingDocument wpd = WordprocessingDocument.Create(memoryStream, WordprocessingDocumentType.Document))
             {
                 MainDocumentPart mdp = wpd.AddMainDocumentPart();
-                OpenXmlWriter writer = new OpenXmlPartWriter(mdp, useAsync: true);
+                OpenXmlWriter writer = new OpenXmlPartWriter(mdp, new OpenXmlPartWriterSettings() { Async = true });
                 string txt = "Well, there's your problem";
 
                 // Act

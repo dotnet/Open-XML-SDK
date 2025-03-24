@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 #if FEATURE_ASYNC_SAX_XML
+using DocumentFormat.OpenXml.Framework;
 using System.Threading.Tasks;
 #endif
 using System.Xml;
@@ -31,30 +32,6 @@ namespace DocumentFormat.OpenXml
             : this(openXmlPart, Encoding.UTF8)
         {
         }
-
-#if FEATURE_ASYNC_SAX_XML
-        /// <summary>
-        /// Initializes a new instance of the OpenXmlPartWriter.
-        /// </summary>
-        /// <param name="openXmlPart">The OpenXmlPart to be written to.</param>
-        /// <param name="useAsync">Whether the writer should be initialized using async</param>
-        public OpenXmlPartWriter(OpenXmlPart openXmlPart, bool useAsync)
-        {
-            if (openXmlPart is null)
-            {
-                throw new ArgumentNullException(nameof(openXmlPart));
-            }
-
-            var partStream = openXmlPart.GetStream(FileMode.Create);
-            var settings = new XmlWriterSettings
-            {
-                CloseOutput = true,
-                Async = useAsync,
-            };
-
-            _xmlWriter = XmlWriter.Create(partStream, settings);
-        }
-#endif
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlPartWriter.
@@ -88,29 +65,28 @@ namespace DocumentFormat.OpenXml
         /// Initializes a new instance of the OpenXmlPartWriter.
         /// </summary>
         /// <param name="openXmlPart">The OpenXmlPart to be written to.</param>
-        /// <param name="encoding">The encoding for the XML stream.</param>
-        /// <param name="useAsync">Whether the writer should be initialized using async</param>
-        public OpenXmlPartWriter(OpenXmlPart openXmlPart, Encoding encoding, bool useAsync)
+        /// <param name="settings">The settings for the OpenXmlPartWriter.</param>
+        public OpenXmlPartWriter(OpenXmlPart openXmlPart, OpenXmlPartWriterSettings settings)
         {
             if (openXmlPart is null)
             {
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
 
-            if (encoding is null)
+            if (settings is null)
             {
-                throw new ArgumentNullException(nameof(encoding));
+                throw new ArgumentNullException(nameof(settings));
             }
 
             var partStream = openXmlPart.GetStream(FileMode.Create);
-            var settings = new XmlWriterSettings
+            XmlWriterSettings xmlWriterSettings = new()
             {
                 CloseOutput = true,
-                Encoding = encoding,
-                Async = useAsync,
+                Encoding = settings.Encoding,
+                Async = settings.Async,
             };
 
-            _xmlWriter = XmlWriter.Create(partStream, settings);
+            _xmlWriter = XmlWriter.Create(partStream, xmlWriterSettings);
         }
 #endif
 
@@ -122,30 +98,6 @@ namespace DocumentFormat.OpenXml
             : this(partStream, Encoding.UTF8)
         {
         }
-
-#if FEATURE_ASYNC_SAX_XML
-        /// <summary>
-        /// Initializes a new instance of the OpenXmlPartWriter.
-        /// </summary>
-        /// <param name="partStream">The given part stream.</param>
-        /// <param name="useAsync">Whether the writer should be initialized using async</param>
-        public OpenXmlPartWriter(Stream partStream, bool useAsync)
-        {
-            if (partStream is null)
-            {
-                throw new ArgumentNullException(nameof(partStream));
-            }
-
-            var settings = new XmlWriterSettings
-            {
-                CloseOutput = false,
-                Encoding = Encoding.UTF8,
-                Async = useAsync,
-            };
-
-            _xmlWriter = XmlWriter.Create(partStream, settings);
-        }
-#endif
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlPartWriter.
@@ -178,28 +130,27 @@ namespace DocumentFormat.OpenXml
         /// Initializes a new instance of the OpenXmlPartWriter.
         /// </summary>
         /// <param name="partStream">The given part stream.</param>
-        /// <param name="encoding">The encoding for the XML stream.</param>
-        /// <param name="useAsync">Whether the writer should be initialized using async</param>
-        public OpenXmlPartWriter(Stream partStream, Encoding encoding, bool useAsync)
+        /// <param name="settings">The settings for the OpenXmlPartWriter.</param>
+        public OpenXmlPartWriter(Stream partStream, OpenXmlPartWriterSettings settings)
         {
             if (partStream is null)
             {
                 throw new ArgumentNullException(nameof(partStream));
             }
 
-            if (encoding is null)
+            if (settings is null)
             {
-                throw new ArgumentNullException(nameof(encoding));
+                throw new ArgumentNullException(nameof(settings));
             }
 
-            var settings = new XmlWriterSettings
+            XmlWriterSettings xmlWriterSettings = new()
             {
-                CloseOutput = false,
-                Encoding = encoding,
-                Async = useAsync,
+                CloseOutput = settings.CloseOutput,
+                Encoding = settings.Encoding,
+                Async = settings.Async,
             };
 
-            _xmlWriter = XmlWriter.Create(partStream, settings);
+            _xmlWriter = XmlWriter.Create(partStream, xmlWriterSettings);
         }
 #endif
 

@@ -22,7 +22,13 @@ override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartElementAsync(Documen
 override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlElement! elementObject, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.OpenXmlAttribute>! attributes) -> System.Threading.Tasks.Task!
 override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStartElementAsync(DocumentFormat.OpenXml.OpenXmlElement! elementObject) -> System.Threading.Tasks.Task!
 override DocumentFormat.OpenXml.OpenXmlPartWriter.WriteStringAsync(string! text) -> System.Threading.Tasks.Task!
-DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart, bool useAsync) -> void
-DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart, System.Text.Encoding! encoding, bool useAsync) -> void
-DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(System.IO.Stream! partStream, bool useAsync) -> void
-DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(System.IO.Stream! partStream, System.Text.Encoding! encoding, bool useAsync) -> void
+DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart, DocumentFormat.OpenXml.OpenXmlPartWriterSettings! settings) -> void
+DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(System.IO.Stream! partStream, DocumentFormat.OpenXml.OpenXmlPartWriterSettings! settings) -> void
+DocumentFormat.OpenXml.OpenXmlPartWriterSettings
+DocumentFormat.OpenXml.OpenXmlPartWriterSettings.Async.get -> bool
+DocumentFormat.OpenXml.OpenXmlPartWriterSettings.Async.set -> void
+DocumentFormat.OpenXml.OpenXmlPartWriterSettings.CloseOutput.get -> bool
+DocumentFormat.OpenXml.OpenXmlPartWriterSettings.CloseOutput.set -> void
+DocumentFormat.OpenXml.OpenXmlPartWriterSettings.Encoding.get -> System.Text.Encoding!
+DocumentFormat.OpenXml.OpenXmlPartWriterSettings.Encoding.set -> void
+DocumentFormat.OpenXml.OpenXmlPartWriterSettings.OpenXmlPartWriterSettings() -> void
