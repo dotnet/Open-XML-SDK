@@ -6,7 +6,6 @@ using System.IO;
 using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Framework.Tests
 {
