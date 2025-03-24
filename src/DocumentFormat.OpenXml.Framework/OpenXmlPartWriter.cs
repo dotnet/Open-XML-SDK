@@ -162,6 +162,7 @@ namespace DocumentFormat.OpenXml
         public override void WriteStartDocument()
         {
             ThrowIfObjectDisposed();
+
             _xmlWriter.WriteStartDocument();
         }
 
@@ -172,6 +173,7 @@ namespace DocumentFormat.OpenXml
         public override void WriteStartDocument(bool standalone)
         {
             ThrowIfObjectDisposed();
+
             _xmlWriter.WriteStartDocument(standalone);
         }
 
@@ -368,7 +370,9 @@ namespace DocumentFormat.OpenXml
         public override void WriteEndElement()
         {
             ThrowIfObjectDisposed();
+
             _xmlWriter.WriteEndElement();
+
             _isLeafTextElementStart = false;
         }
 
@@ -404,7 +408,9 @@ namespace DocumentFormat.OpenXml
             }
 
             ThrowIfObjectDisposed();
+
             elementObject.WriteTo(_xmlWriter);
+
             _isLeafTextElementStart = false;
         }
 
@@ -431,7 +437,9 @@ namespace DocumentFormat.OpenXml
         public async override Task WriteStartDocumentAsync()
         {
             ThrowIfObjectDisposed();
+
             await _xmlWriter.WriteStartDocumentAsync().ConfigureAwait(true);
+
             return;
         }
 
@@ -442,7 +450,9 @@ namespace DocumentFormat.OpenXml
         public async override Task WriteStartDocumentAsync(bool standalone)
         {
             ThrowIfObjectDisposed();
+
             await _xmlWriter.WriteStartDocumentAsync(standalone).ConfigureAwait(true);
+
             return;
         }
 
@@ -555,7 +565,9 @@ namespace DocumentFormat.OpenXml
         public async override Task WriteEndElementAsync()
         {
             ThrowIfObjectDisposed();
+
             await _xmlWriter.WriteEndElementAsync().ConfigureAwait(true);
+
             _isLeafTextElementStart = false;
         }
 
@@ -571,8 +583,11 @@ namespace DocumentFormat.OpenXml
             }
 
             ThrowIfObjectDisposed();
+
             await WriteStartElementAsync(elementObject).ConfigureAwait(true);
+
             await WriteEndElementAsync().ConfigureAwait(true);
+
             _isLeafTextElementStart = false;
         }
 
