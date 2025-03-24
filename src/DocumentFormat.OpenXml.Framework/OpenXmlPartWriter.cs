@@ -474,7 +474,7 @@ namespace DocumentFormat.OpenXml
 
             ThrowIfObjectDisposed();
 
-            _xmlWriter.WriteStartElement(elementObject.Prefix, elementObject.LocalName, elementObject.NamespaceUri);
+            await _xmlWriter.WriteStartElementAsync(elementObject.Prefix, elementObject.LocalName, elementObject.NamespaceUri).ConfigureAwait(true);
 
             if (elementObject.HasAttributes)
             {
