@@ -137,7 +137,11 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public virtual Task WriteStartDocumentAsync()
         {
-            throw new NotImplementedException();
+            ThrowIfObjectDisposed();
+
+            WriteStartDocument();
+
+            return Task.CompletedTask;
         }
 
         /// <summary>
@@ -146,7 +150,11 @@ namespace DocumentFormat.OpenXml
         /// <param name="standalone">If true, it writes "standalone=yes"; if false, it writes "standalone=no". </param>
         public virtual Task WriteStartDocumentAsync(bool standalone)
         {
-            throw new NotImplementedException();
+            ThrowIfObjectDisposed();
+
+            WriteStartDocument(standalone);
+
+            return Task.CompletedTask;
         }
 
         /// <summary>
@@ -155,7 +163,11 @@ namespace DocumentFormat.OpenXml
         /// <param name="elementObject">The OpenXmlElement object to be written.</param>
         public virtual Task WriteStartElementAsync(OpenXmlElement elementObject)
         {
-            throw new NotImplementedException();
+            ThrowIfObjectDisposed();
+
+            WriteStartElement(elementObject);
+
+            return Task.CompletedTask;
         }
 
         /// <summary>
@@ -165,7 +177,11 @@ namespace DocumentFormat.OpenXml
         /// <param name="attributes">The attributes to be written.</param>
         public virtual Task WriteStartElementAsync(OpenXmlElement elementObject, IEnumerable<OpenXmlAttribute> attributes)
         {
-            throw new NotImplementedException();
+            ThrowIfObjectDisposed();
+
+            WriteStartElement(elementObject, attributes);
+
+            return Task.CompletedTask;
         }
 
         /// <summary>
@@ -176,7 +192,11 @@ namespace DocumentFormat.OpenXml
         /// <param name="namespaceDeclarations">The namespace declarations to be written, can be null if no namespace declarations.</param>
         public virtual Task WriteStartElementAsync(OpenXmlElement elementObject, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations)
         {
-            throw new NotImplementedException();
+            ThrowIfObjectDisposed();
+
+            WriteStartElement(elementObject, attributes, namespaceDeclarations);
+
+            return Task.CompletedTask;
         }
 
         /// <summary>
@@ -184,7 +204,11 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public virtual Task WriteEndElementAsync()
         {
-            throw new NotImplementedException();
+            ThrowIfObjectDisposed();
+
+            WriteEndElement();
+
+            return Task.CompletedTask;
         }
 
         /// <summary>
@@ -193,7 +217,11 @@ namespace DocumentFormat.OpenXml
         /// <param name="elementObject">The OpenXmlElement object to be written.</param>
         public virtual Task WriteElementAsync(OpenXmlElement elementObject)
         {
-            throw new NotImplementedException();
+            ThrowIfObjectDisposed();
+
+            WriteElement(elementObject);
+
+            return Task.CompletedTask;
         }
 
         /// <summary>
@@ -202,7 +230,11 @@ namespace DocumentFormat.OpenXml
         /// <param name="text">The text to write. </param>
         public virtual Task WriteStringAsync(string text)
         {
-            throw new NotImplementedException();
+            ThrowIfObjectDisposed();
+
+            WriteString(text);
+
+            return Task.CompletedTask;
         }
 #endif
 

@@ -434,26 +434,22 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Asynchronously writes the XML declaration with the version "1.0".
         /// </summary>
-        public async override Task WriteStartDocumentAsync()
+        public override Task WriteStartDocumentAsync()
         {
             ThrowIfObjectDisposed();
 
-            await _xmlWriter.WriteStartDocumentAsync().ConfigureAwait(true);
-
-            return;
+            return _xmlWriter.WriteStartDocumentAsync();
         }
 
         /// <summary>
         /// Asynchronously writes the XML declaration with the version "1.0" and the standalone attribute.
         /// </summary>
         /// <param name="standalone">If true, it writes "standalone=yes"; if false, it writes "standalone=no". </param>
-        public async override Task WriteStartDocumentAsync(bool standalone)
+        public override Task WriteStartDocumentAsync(bool standalone)
         {
             ThrowIfObjectDisposed();
 
-            await _xmlWriter.WriteStartDocumentAsync(standalone).ConfigureAwait(true);
-
-            return;
+            return _xmlWriter.WriteStartDocumentAsync(standalone);
         }
 
         /// <summary>
@@ -500,14 +496,14 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="elementObject">The OpenXmlElement object to be written.</param>
         /// <param name="attributes">The attributes to be written.</param>
-        public async override Task WriteStartElementAsync(OpenXmlElement elementObject, IEnumerable<OpenXmlAttribute> attributes)
+        public override Task WriteStartElementAsync(OpenXmlElement elementObject, IEnumerable<OpenXmlAttribute> attributes)
         {
             if (elementObject is null)
             {
                 throw new ArgumentNullException(nameof(elementObject));
             }
 
-            await WriteStartElementAsync(elementObject, attributes, elementObject.NamespaceDeclarations).ConfigureAwait(true);
+            return WriteStartElementAsync(elementObject, attributes, elementObject.NamespaceDeclarations);
         }
 
         /// <summary>
@@ -562,13 +558,13 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Asynchronously closes one element.
         /// </summary>
-        public async override Task WriteEndElementAsync()
+        public override Task WriteEndElementAsync()
         {
             ThrowIfObjectDisposed();
 
-            await _xmlWriter.WriteEndElementAsync().ConfigureAwait(true);
-
             _isLeafTextElementStart = false;
+
+            return _xmlWriter.WriteEndElementAsync();
         }
 
         /// <summary>
@@ -595,13 +591,13 @@ namespace DocumentFormat.OpenXml
         /// Asynchronously writes the given text content.
         /// </summary>
         /// <param name="text">The text to be written. </param>
-        public async override Task WriteStringAsync(string text)
+        public override Task WriteStringAsync(string text)
         {
             ThrowIfObjectDisposed();
 
             if (_isLeafTextElementStart)
             {
-                await _xmlWriter.WriteStringAsync(text).ConfigureAwait(true);
+                return _xmlWriter.WriteStringAsync(text);
             }
             else
             {
