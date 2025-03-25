@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-#if FEATURE_ASYNC_SAX_XML
 using System.Text;
 
 namespace DocumentFormat.OpenXml;
@@ -11,10 +10,12 @@ namespace DocumentFormat.OpenXml;
 /// </summary>
 public class OpenXmlPartWriterSettings
 {
+#if FEATURE_ASYNC_SAX_XML
     /// <summary>
     /// Gets or sets a value indicating whether asynchronous OpenXmlPartWriter methods can be used.
     /// </summary>
     public bool Async { get; set; }
+#endif
 
     /// <summary>
     /// Gets or sets a value indicating whether the OpenXmlPartWriter should check to ensure that all characters in the document conform to the "2.2 Characters" section of the W3C XML 1.0 Recommendation.
@@ -26,4 +27,3 @@ public class OpenXmlPartWriterSettings
     /// </summary>
     public Encoding Encoding { get; set; } = Encoding.UTF8;
 }
-#endif

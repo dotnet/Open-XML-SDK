@@ -60,7 +60,6 @@ namespace DocumentFormat.OpenXml
             _xmlWriter = XmlWriter.Create(partStream, settings);
         }
 
-#if FEATURE_ASYNC_SAX_XML
         /// <summary>
         /// Initializes a new instance of the OpenXmlPartWriter.
         /// </summary>
@@ -83,12 +82,13 @@ namespace DocumentFormat.OpenXml
             {
                 CloseOutput = true,
                 Encoding = settings.Encoding,
+#if FEATURE_ASYNC_SAX_XML
                 Async = settings.Async,
+#endif
             };
 
             _xmlWriter = XmlWriter.Create(partStream, xmlWriterSettings);
         }
-#endif
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlPartWriter.
@@ -125,7 +125,6 @@ namespace DocumentFormat.OpenXml
             _xmlWriter = XmlWriter.Create(partStream, settings);
         }
 
-#if FEATURE_ASYNC_SAX_XML
         /// <summary>
         /// Initializes a new instance of the OpenXmlPartWriter.
         /// </summary>
@@ -147,12 +146,13 @@ namespace DocumentFormat.OpenXml
             {
                 CloseOutput = settings.CloseOutput,
                 Encoding = settings.Encoding,
+#if FEATURE_ASYNC_SAX_XML
                 Async = settings.Async,
+#endif
             };
 
             _xmlWriter = XmlWriter.Create(partStream, xmlWriterSettings);
         }
-#endif
 
         #region public OpenXmlWriter methods
 
