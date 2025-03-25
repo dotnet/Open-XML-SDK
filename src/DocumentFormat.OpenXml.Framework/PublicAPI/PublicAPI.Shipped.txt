@@ -270,6 +270,7 @@ DocumentFormat.OpenXml.OpenXmlElement.Features.get -> DocumentFormat.OpenXml.Fea
 DocumentFormat.OpenXml.OpenXmlElement.GetAttribute(string! localName, string! namespaceUri) -> DocumentFormat.OpenXml.OpenXmlAttribute
 DocumentFormat.OpenXml.OpenXmlElement.GetAttributes() -> System.Collections.Generic.IList<DocumentFormat.OpenXml.OpenXmlAttribute>!
 DocumentFormat.OpenXml.OpenXmlElement.GetFirstChild<T>() -> T?
+DocumentFormat.OpenXml.OpenXmlElement.GetOrAddFirstChild<T>() -> T!
 DocumentFormat.OpenXml.OpenXmlElement.HasAttributes.get -> bool
 DocumentFormat.OpenXml.OpenXmlElement.InsertAfterSelf<T>(T! newElement) -> T!
 DocumentFormat.OpenXml.OpenXmlElement.InsertBeforeSelf<T>(T! newElement) -> T!
