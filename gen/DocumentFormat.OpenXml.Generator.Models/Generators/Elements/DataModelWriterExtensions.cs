@@ -22,6 +22,12 @@ public static class DataModelWriterExtensions
         public const string EditorBrowsableNever = "[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)] ";
     }
 
+    private static readonly List<string> ObsoletePropertyWarnList =
+    [
+        AttributeStrings.ObsoletePropertyWarn,
+        AttributeStrings.EditorBrowsableNever,
+    ];
+
     // Use this dictionary to add attributes like ObsoleteAttribute or other directives to classes, child elements or attributes.
     private static readonly Dictionary<string, Dictionary<string, List<string>>> _attributeData =
         new Dictionary<string, Dictionary<string, List<string>>>()
@@ -37,32 +43,20 @@ public static class DataModelWriterExtensions
             //              In the json metadata:
             //                    Use the same fully qualified name as the class, for example "Name": "c:CT_BubbleSer/c15:ser",
             //              "c:CT_BubbleSer/c15:ser",
-            //              new List<string>()
-            //              {
-            //              "[Obsolete(\"Unused property, will be removed in the next major version.\", false)]",
-            //              "[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)] ",
-            //              }
+            //              ObsoleteClassErrorList
             //        },
             //        {
             //              This is an example obsoleting a child element (property in C#)
             //              In the json metadata:
             //                    For child elements, this comes from "Name": "c:CT_PictureOptions/c:pictureOptions",
             //              "c:CT_PictureOptions/c:pictureOptions",
-            //              new List<string>()
-            //              {
-            //              "[Obsolete(\"Unused property, will be removed in the next major version.\", false)]",
-            //              "[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)] ",
-            //              }
+            //              ObsoletePropertyWarnList
             //        },
             //        {
             //              This is an example obsoleting a child attribute (property in C#)
             //              In the json metadata: use for example "QName": ":formatCode",
             //              ":formatCode",
-            //              new List<string>()
-            //              {
-            //              "[Obsolete(\"Unused property, will be removed in the next major version.\", false)]",
-            //              "[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)] ",
-            //              }
+            //              ObsoleteAttributeWarnList
             //        },
             //  }
             // },
@@ -72,11 +66,7 @@ public static class DataModelWriterExtensions
               {
                     {
                           "c:CT_PictureOptions/c:pictureOptions",
-                          new List<string>()
-                          {
-                              AttributeStrings.ObsoletePropertyWarn,
-                              AttributeStrings.EditorBrowsableNever,
-                          }
+                          ObsoletePropertyWarnList
                     },
               }
             },
@@ -86,11 +76,7 @@ public static class DataModelWriterExtensions
               {
                     {
                         "c:CT_PictureOptions/c:pictureOptions",
-                        new List<string>()
-                        {
-                              AttributeStrings.ObsoletePropertyWarn,
-                              AttributeStrings.EditorBrowsableNever,
-                        }
+                        ObsoletePropertyWarnList
                     },
               }
             },
@@ -100,11 +86,7 @@ public static class DataModelWriterExtensions
                 {
                     {
                       "c:CT_PictureOptions/c:pictureOptions",
-                      new List<string>()
-                        {
-                              AttributeStrings.ObsoletePropertyWarn,
-                              AttributeStrings.EditorBrowsableNever,
-                        }
+                      ObsoletePropertyWarnList
                     },
                 }
             },
@@ -114,11 +96,7 @@ public static class DataModelWriterExtensions
                 {
                     {
                       "c:CT_PictureOptions/c:pictureOptions",
-                      new List<string>()
-                        {
-                              AttributeStrings.ObsoletePropertyWarn,
-                              AttributeStrings.EditorBrowsableNever,
-                        }
+                      ObsoletePropertyWarnList
                     },
                 }
             },
@@ -128,25 +106,15 @@ public static class DataModelWriterExtensions
                 {
                     {
                       "c:CT_PictureOptions/c:pictureOptions",
-                      new List<string>()
-                        {
-                              AttributeStrings.ObsoletePropertyWarn,
-                              AttributeStrings.EditorBrowsableNever,
-                        }
+                      ObsoletePropertyWarnList
                     },
                     {
                       "c:CT_Boolean/c:bubble3D",
-                      new List<string>()
-                        {
-                              AttributeStrings.ObsoletePropertyWarn,
-                              AttributeStrings.EditorBrowsableNever,
-                        }
+                      ObsoletePropertyWarnList
                     },
                 }
             },
         };
-
-    private static string _elementAttributeStrings = string.Empty;
 
     public static bool GetDataModelSyntax(this IndentedTextWriter writer, OpenXmlGeneratorServices services, SchemaNamespace model)
     {
