@@ -29,14 +29,14 @@ public static class DataModelWriterExtensions
     ];
 
     // Use this dictionary to add attributes like ObsoleteAttribute or other directives to classes, child elements or attributes.
-    private static readonly Dictionary<string, Dictionary<string, List<string>>> _attributeData =
-        new Dictionary<string, Dictionary<string, List<string>>>()
+    private static readonly Dictionary<TypedQName, Dictionary<TypedQName, List<string>>> _attributeData =
+        new Dictionary<TypedQName, Dictionary<TypedQName, List<string>>>()
         {
             // Example with annotations:
             // {
             //  This is the containing complex type class, in the json metadata, this comes from the fully qualified "Name": "c:CT_BubbleSer/c15:ser",
             //  "c:CT_BubbleSer/c15:ser",
-            //  new Dictionary<string, List<string>>()
+            //  new Dictionary<TypedQName, List<string>>()
             //  {
             //        {
             //              This is an example of obsoleting the whole class.
@@ -62,7 +62,7 @@ public static class DataModelWriterExtensions
             // },
             {
               "c:CT_BubbleSer/c15:ser",
-              new Dictionary<string, List<string>>()
+              new Dictionary<TypedQName, List<string>>()
               {
                     {
                           "c:CT_PictureOptions/c:pictureOptions",
@@ -72,7 +72,7 @@ public static class DataModelWriterExtensions
             },
             {
               "c:CT_LineSer/c15:ser",
-              new Dictionary<string, List<string>>()
+              new Dictionary<TypedQName, List<string>>()
               {
                     {
                         "c:CT_PictureOptions/c:pictureOptions",
@@ -82,7 +82,7 @@ public static class DataModelWriterExtensions
             },
             {
                 "c:CT_PieSer/c15:ser",
-                new Dictionary<string, List<string>>()
+                new Dictionary<TypedQName, List<string>>()
                 {
                     {
                       "c:CT_PictureOptions/c:pictureOptions",
@@ -92,7 +92,7 @@ public static class DataModelWriterExtensions
             },
             {
                 "c:CT_RadarSer/c15:ser",
-                new Dictionary<string, List<string>>()
+                new Dictionary<TypedQName, List<string>>()
                 {
                     {
                       "c:CT_PictureOptions/c:pictureOptions",
@@ -102,7 +102,7 @@ public static class DataModelWriterExtensions
             },
             {
                 "c:CT_SurfaceSer/c15:ser",
-                new Dictionary<string, List<string>>()
+                new Dictionary<TypedQName, List<string>>()
                 {
                     {
                       "c:CT_PictureOptions/c:pictureOptions",
@@ -172,7 +172,7 @@ public static class DataModelWriterExtensions
     {
         writer.WriteDocumentationComment(BuildTypeComments(services, element));
 
-        if (_attributeData.TryGetValue(element.Name.ToString(), out Dictionary<string, List<string>> ctAttributeData))
+        if (_attributeData.TryGetValue(element.Name.ToString(), out Dictionary<TypedQName, List<string>> ctAttributeData))
         {
             // if the fully qualified CT/tag name is also one of the children of the dictionary that means the attributes of that
             // child's list need to be applied to the whole class, for example, if we're obsoleting an entire class.
@@ -220,7 +220,7 @@ public static class DataModelWriterExtensions
             {
                 delimiter.AddDelimiter();
 
-                if (_attributeData.TryGetValue(element.Name.ToString(), out Dictionary<string, List<string>> attrAttributeData)
+                if (_attributeData.TryGetValue(element.Name.ToString(), out Dictionary<TypedQName, List<string>> attrAttributeData)
                     && attrAttributeData.TryGetValue(attribute.QName.ToString(), out List<string> attrAttributeStrings))
                 {
                     writer.WriteAttributeProperty(services, attribute, attrAttributeStrings);
@@ -238,7 +238,7 @@ public static class DataModelWriterExtensions
             {
                 foreach (var node in element.Children)
                 {
-                    if (_attributeData.TryGetValue(element.Name.ToString(), out Dictionary<string, List<string>> childAttributeData)
+                    if (_attributeData.TryGetValue(element.Name.ToString(), out Dictionary<TypedQName, List<string>> childAttributeData)
                         && childAttributeData.TryGetValue(node.Name.ToString(), out List<string> childAttributeStrings))
                     {
                         writer.WriteElement(services, element, node, ref delimiter, childAttributeStrings);
