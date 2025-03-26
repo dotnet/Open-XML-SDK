@@ -11,6 +11,17 @@ namespace DocumentFormat.OpenXml.Generator.Generators.Elements;
 
 public static class DataModelWriterExtensions
 {
+    public static class AttributeStrings
+    {
+        public const string ObsoletePropertyWarn = "[Obsolete(\"Unused property, will be removed in a future version.\", false)]";
+        public const string ObsoletePropertyError = "[Obsolete(\"Unused property, will be removed in a future version.\", true)]";
+        public const string ObsoleteAttributeWarn = "[Obsolete(\"Unused attribute, will be removed in a future version.\", false)]";
+        public const string ObsoleteAttributeError = "[Obsolete(\"Unused attribute, will be removed in a future version.\", true)]";
+        public const string EditorBrowsableAlways = "[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)] ";
+        public const string EditorBrowsableAdvanced = "[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)] ";
+        public const string EditorBrowsableNever = "[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)] ";
+    }
+
     // Use this dictionary to add attributes like ObsoleteAttribute or other directives to classes, child elements or attributes.
     private static readonly Dictionary<string, Dictionary<string, List<string>>> _attributeData =
         new Dictionary<string, Dictionary<string, List<string>>>()
@@ -63,8 +74,8 @@ public static class DataModelWriterExtensions
                           "c:CT_PictureOptions/c:pictureOptions",
                           new List<string>()
                           {
-                          "[Obsolete(\"Unused property, will be removed in the next major version.\", false)]",
-                          "[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)] ",
+                              AttributeStrings.ObsoletePropertyWarn,
+                              AttributeStrings.EditorBrowsableNever,
                           }
                     },
               }
@@ -77,8 +88,8 @@ public static class DataModelWriterExtensions
                         "c:CT_PictureOptions/c:pictureOptions",
                         new List<string>()
                         {
-                        "[Obsolete(\"Unused property, will be removed in the next major version.\", false)]",
-                        "[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)] ",
+                              AttributeStrings.ObsoletePropertyWarn,
+                              AttributeStrings.EditorBrowsableNever,
                         }
                     },
               }
@@ -91,8 +102,8 @@ public static class DataModelWriterExtensions
                       "c:CT_PictureOptions/c:pictureOptions",
                       new List<string>()
                         {
-                        "[Obsolete(\"Unused property, will be removed in the next major version.\", false)]",
-                        "[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)] ",
+                              AttributeStrings.ObsoletePropertyWarn,
+                              AttributeStrings.EditorBrowsableNever,
                         }
                     },
                 }
@@ -105,8 +116,8 @@ public static class DataModelWriterExtensions
                       "c:CT_PictureOptions/c:pictureOptions",
                       new List<string>()
                         {
-                        "[Obsolete(\"Unused property, will be removed in the next major version.\", false)]",
-                        "[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)] ",
+                              AttributeStrings.ObsoletePropertyWarn,
+                              AttributeStrings.EditorBrowsableNever,
                         }
                     },
                 }
@@ -119,16 +130,16 @@ public static class DataModelWriterExtensions
                       "c:CT_PictureOptions/c:pictureOptions",
                       new List<string>()
                         {
-                        "[Obsolete(\"Unused property, will be removed in the next major version.\", false)]",
-                        "[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)] ",
+                              AttributeStrings.ObsoletePropertyWarn,
+                              AttributeStrings.EditorBrowsableNever,
                         }
                     },
                     {
                       "c:CT_Boolean/c:bubble3D",
                       new List<string>()
                         {
-                        "[Obsolete(\"Unused property, will be removed in the next major version.\", false)]",
-                        "[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)] ",
+                              AttributeStrings.ObsoletePropertyWarn,
+                              AttributeStrings.EditorBrowsableNever,
                         }
                     },
                 }
