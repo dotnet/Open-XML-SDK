@@ -54,8 +54,9 @@ public static class DataModelWriterExtensions
             //        },
             //        {
             //              This is an example obsoleting a child attribute (property in C#)
-            //              In the json metadata: use for example "QName" converted to a TypedQName string: "/:formatCode",
-            //              "/:formatCode",
+            //              In the json metadata: use for example "QName" converted to a TypedQName string using the C# type from the
+            //              Type property with no prefix: ":StringValue/:formatCode",
+            //              ":StringValue/:formatCode",
             //              ObsoleteAttributeWarnList
             //        },
             //  }
@@ -221,7 +222,7 @@ public static class DataModelWriterExtensions
                 delimiter.AddDelimiter();
 
                 if (_attributeData.TryGetValue(element.Name, out Dictionary<TypedQName, List<string>> attrAttributeData)
-                    && attrAttributeData.TryGetValue(attribute.Type + "/" + attribute.QName.ToString(), out List<string> attrAttributeStrings))
+                    && attrAttributeData.TryGetValue(":" + attribute.Type + "/" + attribute.QName.ToString(), out List<string> attrAttributeStrings))
                 {
                     writer.WriteAttributeProperty(services, attribute, attrAttributeStrings);
                 }
