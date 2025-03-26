@@ -54,8 +54,8 @@ public static class DataModelWriterExtensions
             //        },
             //        {
             //              This is an example obsoleting a child attribute (property in C#)
-            //              In the json metadata: use for example "QName": ":formatCode",
-            //              ":formatCode",
+            //              In the json metadata: use for example "QName" converted to a TypedQName string: "/:formatCode",
+            //              "/:formatCode",
             //              ObsoleteAttributeWarnList
             //        },
             //  }
@@ -172,11 +172,11 @@ public static class DataModelWriterExtensions
     {
         writer.WriteDocumentationComment(BuildTypeComments(services, element));
 
-        if (_attributeData.TryGetValue(element.Name.ToString(), out Dictionary<TypedQName, List<string>> ctAttributeData))
+        if (_attributeData.TryGetValue(element.Name, out Dictionary<TypedQName, List<string>> ctAttributeData))
         {
             // if the fully qualified CT/tag name is also one of the children of the dictionary that means the attributes of that
             // child's list need to be applied to the whole class, for example, if we're obsoleting an entire class.
-            if (ctAttributeData.TryGetValue(element.Name.ToString(), out List<string> attributeStrings))
+            if (ctAttributeData.TryGetValue(element.Name, out List<string> attributeStrings))
             {
                 foreach (string attributeString in attributeStrings)
                 {
@@ -220,8 +220,8 @@ public static class DataModelWriterExtensions
             {
                 delimiter.AddDelimiter();
 
-                if (_attributeData.TryGetValue(element.Name.ToString(), out Dictionary<TypedQName, List<string>> attrAttributeData)
-                    && attrAttributeData.TryGetValue(attribute.QName.ToString(), out List<string> attrAttributeStrings))
+                if (_attributeData.TryGetValue(element.Name, out Dictionary<TypedQName, List<string>> attrAttributeData)
+                    && attrAttributeData.TryGetValue(attribute.Type + "/" + attribute.QName.ToString(), out List<string> attrAttributeStrings))
                 {
                     writer.WriteAttributeProperty(services, attribute, attrAttributeStrings);
                 }
@@ -238,8 +238,8 @@ public static class DataModelWriterExtensions
             {
                 foreach (var node in element.Children)
                 {
-                    if (_attributeData.TryGetValue(element.Name.ToString(), out Dictionary<TypedQName, List<string>> childAttributeData)
-                        && childAttributeData.TryGetValue(node.Name.ToString(), out List<string> childAttributeStrings))
+                    if (_attributeData.TryGetValue(element.Name, out Dictionary<TypedQName, List<string>> childAttributeData)
+                        && childAttributeData.TryGetValue(node.Name, out List<string> childAttributeStrings))
                     {
                         writer.WriteElement(services, element, node, ref delimiter, childAttributeStrings);
                     }
