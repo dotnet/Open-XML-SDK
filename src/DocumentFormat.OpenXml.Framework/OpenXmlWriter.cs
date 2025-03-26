@@ -137,8 +137,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public virtual Task WriteStartDocumentAsync()
         {
-            ThrowIfObjectDisposed();
-
             WriteStartDocument();
 
             return Task.CompletedTask;
@@ -150,8 +148,6 @@ namespace DocumentFormat.OpenXml
         /// <param name="standalone">If true, it writes "standalone=yes"; if false, it writes "standalone=no". </param>
         public virtual Task WriteStartDocumentAsync(bool standalone)
         {
-            ThrowIfObjectDisposed();
-
             WriteStartDocument(standalone);
 
             return Task.CompletedTask;
@@ -163,8 +159,6 @@ namespace DocumentFormat.OpenXml
         /// <param name="elementObject">The OpenXmlElement object to be written.</param>
         public virtual Task WriteStartElementAsync(OpenXmlElement elementObject)
         {
-            ThrowIfObjectDisposed();
-
             WriteStartElement(elementObject);
 
             return Task.CompletedTask;
@@ -177,8 +171,6 @@ namespace DocumentFormat.OpenXml
         /// <param name="attributes">The attributes to be written.</param>
         public virtual Task WriteStartElementAsync(OpenXmlElement elementObject, IEnumerable<OpenXmlAttribute> attributes)
         {
-            ThrowIfObjectDisposed();
-
             WriteStartElement(elementObject, attributes);
 
             return Task.CompletedTask;
@@ -192,8 +184,6 @@ namespace DocumentFormat.OpenXml
         /// <param name="namespaceDeclarations">The namespace declarations to be written, can be null if no namespace declarations.</param>
         public virtual Task WriteStartElementAsync(OpenXmlElement elementObject, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations)
         {
-            ThrowIfObjectDisposed();
-
             WriteStartElement(elementObject, attributes, namespaceDeclarations);
 
             return Task.CompletedTask;
@@ -204,8 +194,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public virtual Task WriteEndElementAsync()
         {
-            ThrowIfObjectDisposed();
-
             WriteEndElement();
 
             return Task.CompletedTask;
@@ -217,8 +205,6 @@ namespace DocumentFormat.OpenXml
         /// <param name="elementObject">The OpenXmlElement object to be written.</param>
         public virtual Task WriteElementAsync(OpenXmlElement elementObject)
         {
-            ThrowIfObjectDisposed();
-
             WriteElement(elementObject);
 
             return Task.CompletedTask;
@@ -230,8 +216,6 @@ namespace DocumentFormat.OpenXml
         /// <param name="text">The text to write. </param>
         public virtual Task WriteStringAsync(string text)
         {
-            ThrowIfObjectDisposed();
-
             WriteString(text);
 
             return Task.CompletedTask;
