@@ -10,6 +10,7 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Xml;
 
 namespace DocumentFormat.OpenXml
@@ -26,13 +27,9 @@ namespace DocumentFormat.OpenXml
         private readonly List<KeyValuePair<string, string>> _nsDecls = new List<KeyValuePair<string, string>>();
         private readonly Stack<OpenXmlElement> _elementStack = new Stack<OpenXmlElement>();
 
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private readonly string? _encoding;
-
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private readonly bool? _standalone;
-
         private ElementState _elementState;
+
+        private OpenXmlPartReaderState? _openXmlPartReaderState;
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlPartReader class using the supplied OpenXmlPart class.
@@ -100,7 +97,8 @@ namespace DocumentFormat.OpenXml
 
             _resolver = features.GetRequired<IOpenXmlNamespaceResolver>();
             _rootElements = features.GetRequired<IRootElementFeature>();
-            _xmlReader = CreateReader(partStream, options.CloseStream, options.MaxCharactersInPart, ignoreWhitespace: options.IgnoreWhitespace, out _standalone, out _encoding);
+            _xmlReader = CreateReader(partStream, options.CloseStream, options.MaxCharactersInPart, ignoreWhitespace: options.IgnoreWhitespace, out bool? standalone, out string? encoding);
+            _openXmlPartReaderState = new OpenXmlPartReaderState(standalone, encoding);
         }
 
         /// <summary>
@@ -114,7 +112,8 @@ namespace DocumentFormat.OpenXml
             get
             {
                 ThrowIfObjectDisposed();
-                return _encoding;
+
+                return _openXmlPartReaderState?.Encoding;
             }
         }
 
@@ -129,7 +128,7 @@ namespace DocumentFormat.OpenXml
 
                 // default is true for standalone
                 // <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-                return _standalone;
+                return _openXmlPartReaderState?.StandaloneXml;
             }
         }
 
