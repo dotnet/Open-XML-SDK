@@ -6,6 +6,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+#if FEATURE_ASYNC_SAX_XML
+using System.Threading.Tasks;
+#endif
 
 namespace DocumentFormat.OpenXml
 {
@@ -123,12 +126,101 @@ namespace DocumentFormat.OpenXml
         /// <param name="text">The text to write. </param>
         public abstract void WriteString(string text);
 
-        // public abstract void WriteRaw(string data);
-
         /// <summary>
         /// Close the writer.
         /// </summary>
         public abstract void Close();
+
+#if FEATURE_ASYNC_SAX_XML
+        /// <summary>
+        /// Asynchronously writes the XML declaration with the version "1.0".
+        /// </summary>
+        public virtual Task WriteStartDocumentAsync()
+        {
+            WriteStartDocument();
+
+            return Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// Asynchronously writes the XML declaration with the version "1.0" and the standalone attribute.
+        /// </summary>
+        /// <param name="standalone">If true, it writes "standalone=yes"; if false, it writes "standalone=no". </param>
+        public virtual Task WriteStartDocumentAsync(bool standalone)
+        {
+            WriteStartDocument(standalone);
+
+            return Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// Asynchronously writes out a start tag of the element and all the attributes of the element.
+        /// </summary>
+        /// <param name="elementObject">The OpenXmlElement object to be written.</param>
+        public virtual Task WriteStartElementAsync(OpenXmlElement elementObject)
+        {
+            WriteStartElement(elementObject);
+
+            return Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// Asynchronously writes out a start tag of the element. And write the attributes in attributes. The attributes of the element will be omitted.
+        /// </summary>
+        /// <param name="elementObject">The OpenXmlElement object to be written.</param>
+        /// <param name="attributes">The attributes to be written.</param>
+        public virtual Task WriteStartElementAsync(OpenXmlElement elementObject, IEnumerable<OpenXmlAttribute> attributes)
+        {
+            WriteStartElement(elementObject, attributes);
+
+            return Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// Asynchronously writes out a start tag of the element. And write the attributes in attributes. The attributes of the element will be omitted.
+        /// </summary>
+        /// <param name="elementObject">The OpenXmlElement object to be written.</param>
+        /// <param name="attributes">The attributes to be written.</param>
+        /// <param name="namespaceDeclarations">The namespace declarations to be written, can be null if no namespace declarations.</param>
+        public virtual Task WriteStartElementAsync(OpenXmlElement elementObject, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations)
+        {
+            WriteStartElement(elementObject, attributes, namespaceDeclarations);
+
+            return Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// Asynchronously closes one element.
+        /// </summary>
+        public virtual Task WriteEndElementAsync()
+        {
+            WriteEndElement();
+
+            return Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// Asynchronously write the OpenXmlElement to the writer.
+        /// </summary>
+        /// <param name="elementObject">The OpenXmlElement object to be written.</param>
+        public virtual Task WriteElementAsync(OpenXmlElement elementObject)
+        {
+            WriteElement(elementObject);
+
+            return Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// When overridden in a derived class, asynchronously writes the given text content.
+        /// </summary>
+        /// <param name="text">The text to write. </param>
+        public virtual Task WriteStringAsync(string text)
+        {
+            WriteString(text);
+
+            return Task.CompletedTask;
+        }
+#endif
 
         /// <summary>
         /// Throw if object is disposed.
