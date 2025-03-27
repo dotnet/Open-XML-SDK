@@ -24,6 +24,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class ShapeMoniker : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "spMk");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_ShapeMoniker");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShapeMoniker class.
         /// </summary>
@@ -54,7 +60,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:spMk");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ShapeMoniker>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
@@ -78,6 +84,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class GroupShapeMoniker : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "grpSpMk");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_GroupShapeMoniker");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the GroupShapeMoniker class.
         /// </summary>
@@ -108,7 +120,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:grpSpMk");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<GroupShapeMoniker>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
@@ -132,6 +144,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class GraphicFrameMoniker : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "graphicFrameMk");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_GraphicFrameMoniker");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the GraphicFrameMoniker class.
         /// </summary>
@@ -162,7 +180,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:graphicFrameMk");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<GraphicFrameMoniker>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
@@ -186,6 +204,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class ConnectorMoniker : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "cxnSpMk");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_ConnectorMoniker");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ConnectorMoniker class.
         /// </summary>
@@ -216,7 +240,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:cxnSpMk");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ConnectorMoniker>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
@@ -240,6 +264,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class PictureMoniker : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "picMk");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_PictureMoniker");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PictureMoniker class.
         /// </summary>
@@ -270,7 +300,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:picMk");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<PictureMoniker>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
@@ -294,6 +324,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class InkMoniker : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "inkMk");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_InkMoniker");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the InkMoniker class.
         /// </summary>
@@ -324,7 +360,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:inkMk");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<InkMoniker>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
@@ -348,6 +384,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class DrawingMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "dgMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_DrawingMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DrawingMonikerList class.
         /// </summary>
@@ -382,7 +424,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:dgMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -408,6 +450,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </remarks>
     public partial class Transform2D : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "xfrm");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Transform2D");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Transform2D class.
         /// </summary>
@@ -472,7 +520,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:xfrm");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
@@ -482,8 +530,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
                 .AddAttribute("flipV", a => a.VerticalFlip);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extents), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Offset.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Extents.ElementType, 0, 1)
             };
         }
 
@@ -496,8 +544,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Offset? Offset
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Offset.ElementType) as DocumentFormat.OpenXml.Drawing.Offset;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Offset.ElementType);
         }
 
         /// <summary>
@@ -509,8 +557,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Extents? Extents
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Extents.ElementType) as DocumentFormat.OpenXml.Drawing.Extents;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Extents.ElementType);
         }
 
         /// <inheritdoc/>
@@ -524,6 +572,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class GroupShapeMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "grpSpMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_GroupShapeMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the GroupShapeMonikerList class.
         /// </summary>
@@ -558,7 +612,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:grpSpMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -577,6 +631,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class DrawingElementPackage : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "dePkg");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_DrawingElementPackage");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DrawingElementPackage class.
         /// </summary>
@@ -587,7 +647,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:dePkg");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -602,6 +662,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class DeMkLstDrawingElementMonikerList : OpenXmlDrawingElementMonikerListElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "deMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_DrawingElementMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DeMkLstDrawingElementMonikerList class.
         /// </summary>
@@ -636,7 +702,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:deMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -655,6 +721,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class DeMasterMkLstDrawingElementMonikerList : OpenXmlDrawingElementMonikerListElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "deMasterMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_DrawingElementMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DeMasterMkLstDrawingElementMonikerList class.
         /// </summary>
@@ -689,7 +761,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:deMasterMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -708,6 +780,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class DeSrcMkLstDrawingElementMonikerList : OpenXmlDrawingElementMonikerListElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "deSrcMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_DrawingElementMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DeSrcMkLstDrawingElementMonikerList class.
         /// </summary>
@@ -742,7 +820,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:deSrcMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -761,6 +839,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class DeTgtMkLstDrawingElementMonikerList : OpenXmlDrawingElementMonikerListElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "deTgtMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_DrawingElementMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DeTgtMkLstDrawingElementMonikerList class.
         /// </summary>
@@ -795,7 +879,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:deTgtMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -814,6 +898,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public abstract partial class OpenXmlDrawingElementMonikerListElement : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_DrawingElementMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OpenXmlDrawingElementMonikerListElement class.
         /// </summary>
@@ -858,6 +948,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class ImgDataImgData : OpenXmlImgDataElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "imgData");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_ImgData");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ImgDataImgData class.
         /// </summary>
@@ -881,7 +977,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:imgData");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -896,6 +992,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class OrigImgDataImgData : OpenXmlImgDataElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "origImgData");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_ImgData");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OrigImgDataImgData class.
         /// </summary>
@@ -919,7 +1021,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:origImgData");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -934,6 +1036,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class SndDataImgData : OpenXmlImgDataElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "sndData");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_ImgData");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SndDataImgData class.
         /// </summary>
@@ -957,7 +1065,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:sndData");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -972,6 +1080,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public abstract partial class OpenXmlImgDataElement : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_ImgData");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OpenXmlImgDataElement class.
         /// </summary>
@@ -1005,6 +1119,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class ResourceUrl : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "imgUrl");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_ResourceUrl");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ResourceUrl class.
         /// </summary>
@@ -1035,7 +1155,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:imgUrl");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ResourceUrl>()
                 .AddAttribute("src", a => a.Src, aBuilder =>
@@ -1059,6 +1179,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class TextBodyPackage : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "txBodyPkg");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_TextBodyPackage");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TextBodyPackage class.
         /// </summary>
@@ -1069,7 +1195,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:txBodyPkg");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -1099,6 +1225,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </remarks>
     public partial class GroupCommand : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "grpCmd");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_GroupCommand");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the GroupCommand class.
         /// </summary>
@@ -1163,7 +1295,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:grpCmd");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.GroupShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.NonVisualDrawingProps>();
@@ -1181,22 +1313,22 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
                 .AddAttribute("grpId", a => a.GrpId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.DrawingMonikerList), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.DrawingMonikerList.ElementType, 1, 1, version: FileFormatVersions.Office2016),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0, version: FileFormatVersions.Office2016)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.ShapeMoniker), 1, 1, version: FileFormatVersions.Office2016),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.GroupShapeMoniker), 1, 1, version: FileFormatVersions.Office2016),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.GraphicFrameMoniker), 1, 1, version: FileFormatVersions.Office2016),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.ConnectorMoniker), 1, 1, version: FileFormatVersions.Office2016),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.PictureMoniker), 1, 1, version: FileFormatVersions.Office2016),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.InkMoniker), 1, 1, version: FileFormatVersions.Office2016)
+                        new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.ShapeMoniker.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                        new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.GroupShapeMoniker.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                        new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.GraphicFrameMoniker.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                        new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.ConnectorMoniker.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                        new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.PictureMoniker.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                        new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.InkMoniker.ElementType, 1, 1, version: FileFormatVersions.Office2016)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.GroupShapeProperties), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.NonVisualDrawingProps), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.NonVisualGroupDrawingShapeProps), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.GroupShapeProperties.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.NonVisualDrawingProps.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.NonVisualGroupDrawingShapeProps.ElementType, 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -1209,8 +1341,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.DrawingMonikerList? DrawingMonikerList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.DrawingMonikerList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.DrawingMonikerList.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.DrawingMonikerList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.DrawingMonikerList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -1224,6 +1356,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class ImgLink : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "imgLink");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_ImgLink");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ImgLink class.
         /// </summary>
@@ -1244,7 +1382,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:imgLink");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ImgLink>()
                 .AddAttribute("tgt", a => a.Tgt, aBuilder =>
@@ -1265,6 +1403,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class DocumentContextMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "dcMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_DocumentContextMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DocumentContextMonikerList class.
         /// </summary>
@@ -1299,7 +1443,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:dcMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -1318,6 +1462,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class GraphicParentMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "graphicParentMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_GraphicParentMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the GraphicParentMonikerList class.
         /// </summary>
@@ -1352,7 +1502,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:graphicParentMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -1371,6 +1521,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class ShapeMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "spMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_ShapeMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShapeMonikerList class.
         /// </summary>
@@ -1405,7 +1561,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:spMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -1424,6 +1580,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class GraphicFrameMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "graphicFrameMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_GraphicFrameMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the GraphicFrameMonikerList class.
         /// </summary>
@@ -1458,7 +1620,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:graphicFrameMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -1477,6 +1639,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class ConnectorMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "cxnSpMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_ConnectorMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ConnectorMonikerList class.
         /// </summary>
@@ -1511,7 +1679,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:cxnSpMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -1530,6 +1698,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class PictureMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "picMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_PictureMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PictureMonikerList class.
         /// </summary>
@@ -1564,7 +1738,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:picMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -1583,6 +1757,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class InkMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "inkMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_InkMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the InkMonikerList class.
         /// </summary>
@@ -1617,7 +1797,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:inkMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -1636,6 +1816,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class TextBodyMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "txBodyMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_TextBodyMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TextBodyMonikerList class.
         /// </summary>
@@ -1670,7 +1856,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:txBodyMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -1689,6 +1875,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class TextCharRangeMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "txMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_TextCharRangeMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TextCharRangeMonikerList class.
         /// </summary>
@@ -1723,7 +1915,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:txMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -1742,6 +1934,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class HyperlinkMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "hlinkMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_HyperlinkMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the HyperlinkMonikerList class.
         /// </summary>
@@ -1776,7 +1974,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:hlinkMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -1795,6 +1993,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class Model3DMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "model3DMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Model3DMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Model3DMonikerList class.
         /// </summary>
@@ -1829,7 +2033,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:model3DMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -1848,6 +2052,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class ViewSelectionStgList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "viewSelLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_ViewSelectionStgList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ViewSelectionStgList class.
         /// </summary>
@@ -1882,7 +2092,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:viewSelLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -1901,6 +2111,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class EditorSelectionStgList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "editorSelLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_EditorSelectionStgList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the EditorSelectionStgList class.
         /// </summary>
@@ -1935,7 +2151,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:editorSelLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -1954,6 +2170,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class DrawingSelectionStgList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "drSelLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_DrawingSelectionStgList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DrawingSelectionStgList class.
         /// </summary>
@@ -1988,7 +2210,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:drSelLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -2007,6 +2229,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class TableMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "tblMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_TableMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TableMonikerList class.
         /// </summary>
@@ -2041,7 +2269,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:tblMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -2060,6 +2288,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class TableCellMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "tcMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_TableCellMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TableCellMonikerList class.
         /// </summary>
@@ -2094,7 +2328,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:tcMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -2113,6 +2347,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class TableRowMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "trMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_TableRowMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TableRowMonikerList class.
         /// </summary>
@@ -2147,7 +2387,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:trMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -2166,6 +2406,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class TableColumnMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "gridColMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_TableColumnMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TableColumnMonikerList class.
         /// </summary>
@@ -2200,7 +2446,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:gridColMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -2219,6 +2465,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class ModifyNonVisualDrawingProps : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "cNvPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_ModifyNonVisualDrawingProps");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ModifyNonVisualDrawingProps class.
         /// </summary>
@@ -2289,7 +2541,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:cNvPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ModifyNonVisualDrawingProps>()
                 .AddAttribute("name", a => a.Name)
@@ -2311,6 +2563,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class ModifyTransformProps : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "xfrm");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_ModifyTransformProps");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ModifyTransformProps class.
         /// </summary>
@@ -2391,7 +2649,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:xfrm");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ModifyTransformProps>()
                 .AddAttribute("x", a => a.X, aBuilder =>
@@ -2426,6 +2684,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class Point2DType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "off");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Point2D");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Point2DType class.
         /// </summary>
@@ -2456,7 +2720,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:off");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<Point2DType>()
                 .AddAttribute("x", a => a.X, aBuilder =>
@@ -2504,6 +2768,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </remarks>
     public partial class TextParagraphPropertiesType : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "pPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextParagraphProperties");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TextParagraphPropertiesType class.
         /// </summary>
@@ -2648,7 +2918,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:pPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BulletColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
@@ -2699,47 +2969,47 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
                 .AddAttribute("hangingPunct", a => a.Height);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineSpacing), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpaceBefore), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SpaceAfter), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.LineSpacing.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.SpaceBefore.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.SpaceAfter.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletColorText), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletColor), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.BulletColorText.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.BulletColor.ElementType, 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizeText), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizePercentage), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletSizePoints), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.BulletSizeText.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.BulletSizePercentage.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.BulletSizePoints.ElementType, 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletFontText), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BulletFont), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.BulletFontText.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.BulletFont.ElementType, 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoBullet), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AutoNumberedBullet), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CharacterBullet), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PictureBullet), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.NoBullet.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.AutoNumberedBullet.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.CharacterBullet.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.PictureBullet.ElementType, 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TabStopList), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultRunProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.TabStopList.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.DefaultRunProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -2752,8 +3022,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.LineSpacing? LineSpacing
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.LineSpacing>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.LineSpacing.ElementType) as DocumentFormat.OpenXml.Drawing.LineSpacing;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.LineSpacing.ElementType);
         }
 
         /// <summary>
@@ -2765,8 +3035,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SpaceBefore? SpaceBefore
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.SpaceBefore>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.SpaceBefore.ElementType) as DocumentFormat.OpenXml.Drawing.SpaceBefore;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.SpaceBefore.ElementType);
         }
 
         /// <summary>
@@ -2778,8 +3048,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SpaceAfter? SpaceAfter
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.SpaceAfter>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.SpaceAfter.ElementType) as DocumentFormat.OpenXml.Drawing.SpaceAfter;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.SpaceAfter.ElementType);
         }
 
         /// <inheritdoc/>
@@ -2806,6 +3076,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </remarks>
     public partial class TextBodyProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "bodyPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextBodyProperties");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TextBodyProperties class.
         /// </summary>
@@ -3030,7 +3306,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:bodyPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.FlatText>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
@@ -3083,26 +3359,26 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
                 .AddAttribute("compatLnSpc", a => a.CompatibleLineSpacing);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetTextWarp), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.PresetTextWarp.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoAutoFit), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NormalAutoFit), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeAutoFit), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.NoAutoFit.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.NormalAutoFit.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.ShapeAutoFit.ElementType, 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Scene3DType.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FlatText), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Shape3DType.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.FlatText.ElementType, 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -3115,8 +3391,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PresetTextWarp? PresetTextWarp
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetTextWarp>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.PresetTextWarp.ElementType) as DocumentFormat.OpenXml.Drawing.PresetTextWarp;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.PresetTextWarp.ElementType);
         }
 
         /// <inheritdoc/>
@@ -3130,6 +3406,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class ModifyNonVisualDrawingShapeProps : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "cNvSpPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_ModifyNonVisualDrawingShapeProps");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ModifyNonVisualDrawingShapeProps class.
         /// </summary>
@@ -3260,7 +3542,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:cNvSpPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ModifyNonVisualDrawingShapeProps>()
                 .AddAttribute("noGrp", a => a.NoGrp)
@@ -3288,6 +3570,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class ShapePropsMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "spMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_ShapePropsMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShapePropsMonikerList class.
         /// </summary>
@@ -3322,7 +3610,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:spMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -3361,6 +3649,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </remarks>
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "spPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ShapeProperties");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShapeProperties class.
         /// </summary>
@@ -3405,7 +3699,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:spPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
@@ -3429,39 +3723,39 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Transform2D.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.CustomGeometry.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.PresetGeometry.ElementType, 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.NoFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.GradientFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.BlipFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.PatternFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.GroupFill.ElementType, 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Outline.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.EffectList.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Scene3DType.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Shape3DType.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -3474,8 +3768,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Transform2D.ElementType) as DocumentFormat.OpenXml.Drawing.Transform2D;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Transform2D.ElementType);
         }
 
         /// <inheritdoc/>
@@ -3489,6 +3783,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class XfrmEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "xfrm");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the XfrmEmpty class.
         /// </summary>
@@ -3499,7 +3799,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:xfrm");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -3514,6 +3814,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class GeomEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "geom");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the GeomEmpty class.
         /// </summary>
@@ -3524,7 +3830,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:geom");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -3539,6 +3845,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class FillEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "fill");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FillEmpty class.
         /// </summary>
@@ -3549,7 +3861,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:fill");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -3564,6 +3876,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class LnEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "ln");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LnEmpty class.
         /// </summary>
@@ -3574,7 +3892,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:ln");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -3589,6 +3907,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class EffectEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "effect");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the EffectEmpty class.
         /// </summary>
@@ -3599,7 +3923,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:effect");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -3614,6 +3938,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class Scene3dEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "scene3d");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Scene3dEmpty class.
         /// </summary>
@@ -3624,7 +3954,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:scene3d");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -3639,6 +3969,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class Sp3dEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "sp3d");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Sp3dEmpty class.
         /// </summary>
@@ -3649,7 +3985,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:sp3d");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -3664,6 +4000,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class ExtLstEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ExtLstEmpty class.
         /// </summary>
@@ -3674,7 +4016,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:extLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -3689,6 +4031,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class BwModeEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "bwMode");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BwModeEmpty class.
         /// </summary>
@@ -3699,7 +4047,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:bwMode");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -3714,6 +4062,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class SrcRectEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "srcRect");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SrcRectEmpty class.
         /// </summary>
@@ -3724,7 +4078,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:srcRect");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -3739,6 +4093,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class FillModeEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "fillMode");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FillModeEmpty class.
         /// </summary>
@@ -3749,7 +4109,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:fillMode");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -3764,6 +4124,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class DpiEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "dpi");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DpiEmpty class.
         /// </summary>
@@ -3774,7 +4140,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:dpi");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -3789,6 +4155,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class RotWithShapeEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "rotWithShape");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RotWithShapeEmpty class.
         /// </summary>
@@ -3799,7 +4171,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:rotWithShape");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -3814,6 +4186,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class StCxnEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "stCxn");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the StCxnEmpty class.
         /// </summary>
@@ -3824,7 +4202,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:stCxn");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -3839,6 +4217,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class EndCxnEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "endCxn");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the EndCxnEmpty class.
         /// </summary>
@@ -3849,7 +4233,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:endCxn");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -3864,6 +4248,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class NoGrpEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "noGrp");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NoGrpEmpty class.
         /// </summary>
@@ -3874,7 +4264,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:noGrp");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -3889,6 +4279,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class NoSelectEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "noSelect");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NoSelectEmpty class.
         /// </summary>
@@ -3899,7 +4295,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:noSelect");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -3914,6 +4310,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class NoRotEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "noRot");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NoRotEmpty class.
         /// </summary>
@@ -3924,7 +4326,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:noRot");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -3939,6 +4341,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class NoChangeAspectEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "noChangeAspect");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NoChangeAspectEmpty class.
         /// </summary>
@@ -3949,7 +4357,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:noChangeAspect");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -3964,6 +4372,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class NoMoveEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "noMove");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NoMoveEmpty class.
         /// </summary>
@@ -3974,7 +4388,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:noMove");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -3989,6 +4403,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class NoResizeEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "noResize");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NoResizeEmpty class.
         /// </summary>
@@ -3999,7 +4419,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:noResize");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -4014,6 +4434,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class NoEditPointsEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "noEditPoints");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NoEditPointsEmpty class.
         /// </summary>
@@ -4024,7 +4450,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:noEditPoints");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -4039,6 +4465,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class NoAdjustHandlesEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "noAdjustHandles");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NoAdjustHandlesEmpty class.
         /// </summary>
@@ -4049,7 +4481,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:noAdjustHandles");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -4064,6 +4496,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class NoChangeArrowheadsEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "noChangeArrowheads");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NoChangeArrowheadsEmpty class.
         /// </summary>
@@ -4074,7 +4512,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:noChangeArrowheads");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -4089,6 +4527,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class NoChangeShapeTypeEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "noChangeShapeType");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NoChangeShapeTypeEmpty class.
         /// </summary>
@@ -4099,7 +4543,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:noChangeShapeType");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -4114,6 +4558,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class LfPrEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "lfPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LfPrEmpty class.
         /// </summary>
@@ -4124,7 +4574,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:lfPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -4139,6 +4589,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class HlinkClickEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "hlinkClick");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the HlinkClickEmpty class.
         /// </summary>
@@ -4149,7 +4605,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:hlinkClick");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -4164,6 +4620,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class HlinkHoverEmpty : OpenXmlEmptyElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "hlinkHover");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the HlinkHoverEmpty class.
         /// </summary>
@@ -4174,7 +4636,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:hlinkHover");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -4189,6 +4651,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public abstract partial class OpenXmlEmptyElement : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OpenXmlEmptyElement class.
         /// </summary>
@@ -4223,6 +4691,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </remarks>
     public partial class ResetShapeProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "spPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_ResetShapeProperties");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ResetShapeProperties class.
         /// </summary>
@@ -4257,7 +4731,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:spPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.GeomEmpty>();
@@ -4270,15 +4744,15 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.GeomEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.LnEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.Sp3dEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.GeomEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.LnEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.Sp3dEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -4291,8 +4765,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty? XfrmEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty.ElementType);
         }
 
         /// <summary>
@@ -4304,8 +4778,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.GeomEmpty? GeomEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.GeomEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.GeomEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.GeomEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.GeomEmpty.ElementType);
         }
 
         /// <summary>
@@ -4317,8 +4791,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty? FillEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty.ElementType);
         }
 
         /// <summary>
@@ -4330,8 +4804,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.LnEmpty? LnEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.LnEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.LnEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.LnEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.LnEmpty.ElementType);
         }
 
         /// <summary>
@@ -4343,8 +4817,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty? EffectEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty.ElementType);
         }
 
         /// <summary>
@@ -4356,8 +4830,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty? Scene3dEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty.ElementType);
         }
 
         /// <summary>
@@ -4369,8 +4843,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.Sp3dEmpty? Sp3dEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.Sp3dEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.Sp3dEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.Sp3dEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.Sp3dEmpty.ElementType);
         }
 
         /// <summary>
@@ -4382,8 +4856,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty? ExtLstEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty.ElementType);
         }
 
         /// <summary>
@@ -4395,8 +4869,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty? BwModeEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty.ElementType);
         }
 
         /// <inheritdoc/>
@@ -4421,6 +4895,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </remarks>
     public partial class LnRefStyleMatrixReference : StyleMatrixReferenceType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "lnRef");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_StyleMatrixReference");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LnRefStyleMatrixReference class.
         /// </summary>
@@ -4455,7 +4935,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:lnRef");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -4463,12 +4943,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.RgbColorModelHex.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.HslColor.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.SystemColor.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.SchemeColor.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.PresetColor.ElementType, 1, 1)
                     }
                 }
             };
@@ -4496,6 +4976,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </remarks>
     public partial class FillRefStyleMatrixReference : StyleMatrixReferenceType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "fillRef");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_StyleMatrixReference");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FillRefStyleMatrixReference class.
         /// </summary>
@@ -4530,7 +5016,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:fillRef");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -4538,12 +5024,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.RgbColorModelHex.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.HslColor.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.SystemColor.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.SchemeColor.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.PresetColor.ElementType, 1, 1)
                     }
                 }
             };
@@ -4571,6 +5057,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </remarks>
     public partial class EffectRefStyleMatrixReference : StyleMatrixReferenceType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "effectRef");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_StyleMatrixReference");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the EffectRefStyleMatrixReference class.
         /// </summary>
@@ -4605,7 +5097,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:effectRef");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -4613,12 +5105,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.RgbColorModelHex.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.HslColor.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.SystemColor.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.SchemeColor.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.PresetColor.ElementType, 1, 1)
                     }
                 }
             };
@@ -4646,6 +5138,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </remarks>
     public abstract partial class StyleMatrixReferenceType : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_StyleMatrixReference");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the StyleMatrixReferenceType class.
         /// </summary>
@@ -4712,8 +5210,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage.ElementType) as DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage.ElementType);
         }
 
         /// <summary>
@@ -4725,8 +5223,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.RgbColorModelHex.ElementType) as DocumentFormat.OpenXml.Drawing.RgbColorModelHex;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.RgbColorModelHex.ElementType);
         }
 
         /// <summary>
@@ -4738,8 +5236,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.HslColor.ElementType) as DocumentFormat.OpenXml.Drawing.HslColor;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.HslColor.ElementType);
         }
 
         /// <summary>
@@ -4751,8 +5249,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.SystemColor.ElementType) as DocumentFormat.OpenXml.Drawing.SystemColor;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.SystemColor.ElementType);
         }
 
         /// <summary>
@@ -4764,8 +5262,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.SchemeColor.ElementType) as DocumentFormat.OpenXml.Drawing.SchemeColor;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.SchemeColor.ElementType);
         }
 
         /// <summary>
@@ -4777,8 +5275,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.PresetColor.ElementType) as DocumentFormat.OpenXml.Drawing.PresetColor;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.PresetColor.ElementType);
         }
     }
 
@@ -4800,6 +5298,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </remarks>
     public partial class FontReference : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "fontRef");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_FontReference");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FontReference class.
         /// </summary>
@@ -4844,7 +5348,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:fontRef");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
@@ -4864,12 +5368,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.RgbColorModelHex.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.HslColor.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.SystemColor.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.SchemeColor.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.PresetColor.ElementType, 1, 1)
                     }
                 }
             };
@@ -4884,8 +5388,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage.ElementType) as DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage.ElementType);
         }
 
         /// <summary>
@@ -4897,8 +5401,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.RgbColorModelHex.ElementType) as DocumentFormat.OpenXml.Drawing.RgbColorModelHex;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.RgbColorModelHex.ElementType);
         }
 
         /// <summary>
@@ -4910,8 +5414,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.HslColor.ElementType) as DocumentFormat.OpenXml.Drawing.HslColor;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.HslColor.ElementType);
         }
 
         /// <summary>
@@ -4923,8 +5427,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.SystemColor.ElementType) as DocumentFormat.OpenXml.Drawing.SystemColor;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.SystemColor.ElementType);
         }
 
         /// <summary>
@@ -4936,8 +5440,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.SchemeColor.ElementType) as DocumentFormat.OpenXml.Drawing.SchemeColor;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.SchemeColor.ElementType);
         }
 
         /// <summary>
@@ -4949,8 +5453,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.PresetColor.ElementType) as DocumentFormat.OpenXml.Drawing.PresetColor;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.PresetColor.ElementType);
         }
 
         /// <inheritdoc/>
@@ -4973,6 +5477,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </remarks>
     public partial class ModifyShapeStyleProps : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "style");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_ModifyShapeStyleProps");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ModifyShapeStyleProps class.
         /// </summary>
@@ -5007,7 +5517,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:style");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.FontReference>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.LnRefStyleMatrixReference>();
@@ -5015,10 +5525,10 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectRefStyleMatrixReference>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.LnRefStyleMatrixReference), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.FillRefStyleMatrixReference), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectRefStyleMatrixReference), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.FontReference), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.LnRefStyleMatrixReference.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.FillRefStyleMatrixReference.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectRefStyleMatrixReference.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.FontReference.ElementType, 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -5031,8 +5541,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.LnRefStyleMatrixReference? LnRefStyleMatrixReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.LnRefStyleMatrixReference>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.LnRefStyleMatrixReference.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.LnRefStyleMatrixReference;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.LnRefStyleMatrixReference.ElementType);
         }
 
         /// <summary>
@@ -5044,8 +5554,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.FillRefStyleMatrixReference? FillRefStyleMatrixReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.FillRefStyleMatrixReference>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.FillRefStyleMatrixReference.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.FillRefStyleMatrixReference;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.FillRefStyleMatrixReference.ElementType);
         }
 
         /// <summary>
@@ -5057,8 +5567,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectRefStyleMatrixReference? EffectRefStyleMatrixReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectRefStyleMatrixReference>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectRefStyleMatrixReference.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectRefStyleMatrixReference;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectRefStyleMatrixReference.ElementType);
         }
 
         /// <summary>
@@ -5070,8 +5580,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.FontReference? FontReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.FontReference>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.FontReference.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.FontReference;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.FontReference.ElementType);
         }
 
         /// <inheritdoc/>
@@ -5085,6 +5595,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class ResetXsdboolean : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "reset");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ResetXsdboolean class.
         /// </summary>
@@ -5109,7 +5625,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<BooleanValue>(NumberValidator.Instance);
-            builder.SetSchema("oac:reset");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -5124,6 +5640,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class UseBoundsXsdboolean : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "useBounds");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the UseBoundsXsdboolean class.
         /// </summary>
@@ -5148,7 +5670,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<BooleanValue>(NumberValidator.Instance);
-            builder.SetSchema("oac:useBounds");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -5172,6 +5694,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </remarks>
     public partial class BlipFillProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "blipFill");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_BlipFillProperties");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BlipFillProperties class.
         /// </summary>
@@ -5226,7 +5754,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:blipFill");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Blip>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SourceRectangle>();
@@ -5237,14 +5765,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
                 .AddAttribute("rotWithShape", a => a.RotateWithShape);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Blip), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SourceRectangle), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Blip.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.SourceRectangle.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Tile), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Stretch), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Tile.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Stretch.ElementType, 1, 1)
                     }
                 }
             };
@@ -5259,8 +5787,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Blip? Blip
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Blip>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Blip.ElementType) as DocumentFormat.OpenXml.Drawing.Blip;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Blip.ElementType);
         }
 
         /// <summary>
@@ -5272,8 +5800,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SourceRectangle? SourceRectangle
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.SourceRectangle>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.SourceRectangle.ElementType) as DocumentFormat.OpenXml.Drawing.SourceRectangle;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.SourceRectangle.ElementType);
         }
 
         /// <inheritdoc/>
@@ -5287,6 +5815,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class FillRectRelativeRectProps : OpenXmlRelativeRectPropsElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "fillRect");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_RelativeRectProps");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FillRectRelativeRectProps class.
         /// </summary>
@@ -5297,7 +5831,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:fillRect");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -5312,6 +5846,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class SrcRectRelativeRectProps : OpenXmlRelativeRectPropsElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "srcRect");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_RelativeRectProps");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SrcRectRelativeRectProps class.
         /// </summary>
@@ -5322,7 +5862,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:srcRect");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -5337,6 +5877,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public abstract partial class OpenXmlRelativeRectPropsElement : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_RelativeRectProps");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OpenXmlRelativeRectPropsElement class.
         /// </summary>
@@ -5411,6 +5957,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </remarks>
     public partial class ResetBlipFillProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "blipFill");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_ResetBlipFillProperties");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ResetBlipFillProperties class.
         /// </summary>
@@ -5445,7 +5997,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:blipFill");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.SrcRectEmpty>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.FillModeEmpty>();
@@ -5453,10 +6005,10 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.RotWithShapeEmpty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.SrcRectEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.FillModeEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.DpiEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.RotWithShapeEmpty), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.SrcRectEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.FillModeEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.DpiEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.RotWithShapeEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -5469,8 +6021,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.SrcRectEmpty? SrcRectEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.SrcRectEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.SrcRectEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.SrcRectEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.SrcRectEmpty.ElementType);
         }
 
         /// <summary>
@@ -5482,8 +6034,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.FillModeEmpty? FillModeEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.FillModeEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.FillModeEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.FillModeEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.FillModeEmpty.ElementType);
         }
 
         /// <summary>
@@ -5495,8 +6047,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.DpiEmpty? DpiEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.DpiEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.DpiEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.DpiEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.DpiEmpty.ElementType);
         }
 
         /// <summary>
@@ -5508,8 +6060,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.RotWithShapeEmpty? RotWithShapeEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.RotWithShapeEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.RotWithShapeEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.RotWithShapeEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.RotWithShapeEmpty.ElementType);
         }
 
         /// <inheritdoc/>
@@ -5523,6 +6075,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class ModifyNonVisualGroupDrawingShapeProps : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "cNvGrpSpPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_ModifyNonVisualGroupDrawingShapeProps");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ModifyNonVisualGroupDrawingShapeProps class.
         /// </summary>
@@ -5603,7 +6161,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:cNvGrpSpPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ModifyNonVisualGroupDrawingShapeProps>()
                 .AddAttribute("noGrp", a => a.NoGrp)
@@ -5642,6 +6200,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </remarks>
     public partial class GroupShapeProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "grpSpPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GroupShapeProperties");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the GroupShapeProperties class.
         /// </summary>
@@ -5686,7 +6250,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:grpSpPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
@@ -5706,29 +6270,29 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TransformGroup), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.TransformGroup.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.NoFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.GradientFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.BlipFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.PatternFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.GroupFill.ElementType, 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.EffectList.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Scene3DType.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -5741,8 +6305,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.TransformGroup? TransformGroup
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.TransformGroup>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.TransformGroup.ElementType) as DocumentFormat.OpenXml.Drawing.TransformGroup;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.TransformGroup.ElementType);
         }
 
         /// <inheritdoc/>
@@ -5767,6 +6331,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </remarks>
     public partial class ResetGroupShapeProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "grpSpPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_ResetGroupShapeProperties");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ResetGroupShapeProperties class.
         /// </summary>
@@ -5801,7 +6371,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:grpSpPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty>();
@@ -5811,12 +6381,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -5829,8 +6399,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty? XfrmEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty.ElementType);
         }
 
         /// <summary>
@@ -5842,8 +6412,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty? FillEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty.ElementType);
         }
 
         /// <summary>
@@ -5855,8 +6425,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty? EffectEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty.ElementType);
         }
 
         /// <summary>
@@ -5868,8 +6438,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty? Scene3dEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty.ElementType);
         }
 
         /// <summary>
@@ -5881,8 +6451,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty? ExtLstEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty.ElementType);
         }
 
         /// <summary>
@@ -5894,8 +6464,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty? BwModeEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty.ElementType);
         }
 
         /// <inheritdoc/>
@@ -5917,6 +6487,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </remarks>
     public partial class NonVisualDrawingProps : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "cNvPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_NonVisualDrawingProps");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NonVisualDrawingProps class.
         /// </summary>
@@ -6001,7 +6577,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:cNvPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
@@ -6020,9 +6596,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
                 .AddAttribute("title", a => a.Title);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -6035,8 +6611,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick? HyperlinkOnClick
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick.ElementType) as DocumentFormat.OpenXml.Drawing.HyperlinkOnClick;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.HyperlinkOnClick.ElementType);
         }
 
         /// <summary>
@@ -6048,8 +6624,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover? HyperlinkOnHover
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover.ElementType) as DocumentFormat.OpenXml.Drawing.HyperlinkOnHover;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.HyperlinkOnHover.ElementType);
         }
 
         /// <summary>
@@ -6061,8 +6637,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -6083,6 +6659,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </remarks>
     public partial class NonVisualGroupDrawingShapeProps : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "cNvGrpSpPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_NonVisualGroupDrawingShapeProps");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NonVisualGroupDrawingShapeProps class.
         /// </summary>
@@ -6117,14 +6699,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:cNvGrpSpPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupShapeLocks), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.GroupShapeLocks.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -6137,8 +6719,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.GroupShapeLocks? GroupShapeLocks
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.GroupShapeLocks.ElementType) as DocumentFormat.OpenXml.Drawing.GroupShapeLocks;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.GroupShapeLocks.ElementType);
         }
 
         /// <summary>
@@ -6150,8 +6732,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList? NonVisualGroupDrawingShapePropsExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -6165,6 +6747,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class ModifyNonVisualGraphicFrameProps : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "cNvGraphicFramePr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_ModifyNonVisualGraphicFrameProps");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ModifyNonVisualGraphicFrameProps class.
         /// </summary>
@@ -6235,7 +6823,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:cNvGraphicFramePr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ModifyNonVisualGraphicFrameProps>()
                 .AddAttribute("noGrp", a => a.NoGrp)
@@ -6257,6 +6845,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class StCxnConnection : ConnectionType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "stCxn");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Connection");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the StCxnConnection class.
         /// </summary>
@@ -6267,7 +6861,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:stCxn");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -6282,6 +6876,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class EndCxnConnection : ConnectionType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "endCxn");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Connection");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the EndCxnConnection class.
         /// </summary>
@@ -6292,7 +6892,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:endCxn");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -6307,6 +6907,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public abstract partial class ConnectionType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Connection");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ConnectionType class.
         /// </summary>
@@ -6363,6 +6969,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </remarks>
     public partial class ModifyNonVisualConnectorProps : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "cNvCxnSpPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_ModifyNonVisualConnectorProps");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ModifyNonVisualConnectorProps class.
         /// </summary>
@@ -6497,7 +7109,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:cNvCxnSpPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnConnection>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnConnection>();
@@ -6514,8 +7126,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
                 .AddAttribute("noChangeShapeType", a => a.NoChangeShapeType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnConnection), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnConnection), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnConnection.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnConnection.ElementType, 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -6528,8 +7140,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnConnection? StCxnConnection
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnConnection>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnConnection.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnConnection;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnConnection.ElementType);
         }
 
         /// <summary>
@@ -6541,8 +7153,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnConnection? EndCxnConnection
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnConnection>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnConnection.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnConnection;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnConnection.ElementType);
         }
 
         /// <inheritdoc/>
@@ -6573,6 +7185,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </remarks>
     public partial class ResetNonVisualConnectorProps : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "cNvCxnSpPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_ResetNonVisualConnectorProps");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ResetNonVisualConnectorProps class.
         /// </summary>
@@ -6607,7 +7225,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:cNvCxnSpPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnEmpty>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnEmpty>();
@@ -6623,18 +7241,18 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeShapeTypeEmpty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoGrpEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoSelectEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoRotEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeAspectEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoMoveEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoResizeEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoEditPointsEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoAdjustHandlesEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeArrowheadsEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeShapeTypeEmpty), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoGrpEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoSelectEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoRotEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeAspectEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoMoveEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoResizeEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoEditPointsEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoAdjustHandlesEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeArrowheadsEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeShapeTypeEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -6647,8 +7265,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnEmpty? StCxnEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnEmpty.ElementType);
         }
 
         /// <summary>
@@ -6660,8 +7278,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnEmpty? EndCxnEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnEmpty.ElementType);
         }
 
         /// <summary>
@@ -6673,8 +7291,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoGrpEmpty? NoGrpEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoGrpEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoGrpEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.NoGrpEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.NoGrpEmpty.ElementType);
         }
 
         /// <summary>
@@ -6686,8 +7304,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoSelectEmpty? NoSelectEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoSelectEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoSelectEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.NoSelectEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.NoSelectEmpty.ElementType);
         }
 
         /// <summary>
@@ -6699,8 +7317,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoRotEmpty? NoRotEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoRotEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoRotEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.NoRotEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.NoRotEmpty.ElementType);
         }
 
         /// <summary>
@@ -6712,8 +7330,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeAspectEmpty? NoChangeAspectEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeAspectEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeAspectEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeAspectEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeAspectEmpty.ElementType);
         }
 
         /// <summary>
@@ -6725,8 +7343,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoMoveEmpty? NoMoveEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoMoveEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoMoveEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.NoMoveEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.NoMoveEmpty.ElementType);
         }
 
         /// <summary>
@@ -6738,8 +7356,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoResizeEmpty? NoResizeEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoResizeEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoResizeEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.NoResizeEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.NoResizeEmpty.ElementType);
         }
 
         /// <summary>
@@ -6751,8 +7369,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoEditPointsEmpty? NoEditPointsEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoEditPointsEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoEditPointsEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.NoEditPointsEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.NoEditPointsEmpty.ElementType);
         }
 
         /// <summary>
@@ -6764,8 +7382,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoAdjustHandlesEmpty? NoAdjustHandlesEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoAdjustHandlesEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoAdjustHandlesEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.NoAdjustHandlesEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.NoAdjustHandlesEmpty.ElementType);
         }
 
         /// <summary>
@@ -6777,8 +7395,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeArrowheadsEmpty? NoChangeArrowheadsEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeArrowheadsEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeArrowheadsEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeArrowheadsEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeArrowheadsEmpty.ElementType);
         }
 
         /// <summary>
@@ -6790,8 +7408,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeShapeTypeEmpty? NoChangeShapeTypeEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeShapeTypeEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeShapeTypeEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeShapeTypeEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeShapeTypeEmpty.ElementType);
         }
 
         /// <inheritdoc/>
@@ -6805,6 +7423,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class CompressPictureProps : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "compressPicPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_CompressPictureProps");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CompressPictureProps class.
         /// </summary>
@@ -6845,7 +7469,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:compressPicPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<CompressPictureProps>()
                 .AddAttribute("removeCrop", a => a.RemoveCrop)
@@ -6867,6 +7491,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class ModifyNonVisualPictureProps : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "cNvPicPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_ModifyNonVisualPictureProps");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ModifyNonVisualPictureProps class.
         /// </summary>
@@ -6997,7 +7627,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:cNvPicPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ModifyNonVisualPictureProps>()
                 .AddAttribute("noGrp", a => a.NoGrp)
@@ -7031,6 +7661,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </remarks>
     public partial class ResetNonVisualPictureProps : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "cNvPicPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_ResetNonVisualPictureProps");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ResetNonVisualPictureProps class.
         /// </summary>
@@ -7065,12 +7701,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:cNvPicPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.LfPrEmpty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.LfPrEmpty), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.LfPrEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -7083,8 +7719,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.LfPrEmpty? LfPrEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.LfPrEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.LfPrEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.LfPrEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.LfPrEmpty.ElementType);
         }
 
         /// <inheritdoc/>
@@ -7098,6 +7734,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class BoundRect : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "bounds");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_BoundRect");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BoundRect class.
         /// </summary>
@@ -7148,7 +7790,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:bounds");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<BoundRect>()
                 .AddAttribute("l", a => a.L, aBuilder =>
@@ -7184,6 +7826,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class SVGBlipMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "svgBlipMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_SVGBlipMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SVGBlipMonikerList class.
         /// </summary>
@@ -7218,7 +7866,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:svgBlipMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -7254,6 +7902,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </remarks>
     public partial class LinePropertiesType : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "lineProps");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_LineProperties");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LinePropertiesType class.
         /// </summary>
@@ -7328,7 +7982,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:lineProps");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomDash>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
@@ -7365,32 +8019,32 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.NoFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.GradientFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.PatternFill.ElementType, 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetDash), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomDash), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.PresetDash.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.CustomDash.ElementType, 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Round), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineJoinBevel), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Miter), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Round.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.LineJoinBevel.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Miter.ElementType, 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HeadEnd), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TailEnd), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.HeadEnd.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.TailEnd.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -7405,6 +8059,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class ModifyNonVisualInkProps : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "cNvInkPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_ModifyNonVisualInkProps");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ModifyNonVisualInkProps class.
         /// </summary>
@@ -7525,7 +8185,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:cNvInkPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<ModifyNonVisualInkProps>()
                 .AddAttribute("noGrp", a => a.NoGrp)
@@ -7558,6 +8218,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </remarks>
     public partial class HlinkClickHyperlinkProps : OpenXmlHyperlinkPropsElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "hlinkClick");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_HyperlinkProps");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the HlinkClickHyperlinkProps class.
         /// </summary>
@@ -7592,11 +8258,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:hlinkClick");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData.ElementType, 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -7617,6 +8283,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </remarks>
     public partial class HlinkHoverHyperlinkProps : OpenXmlHyperlinkPropsElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "hlinkHover");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_HyperlinkProps");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the HlinkHoverHyperlinkProps class.
         /// </summary>
@@ -7651,11 +8323,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:hlinkHover");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData.ElementType, 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -7676,6 +8348,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </remarks>
     public abstract partial class OpenXmlHyperlinkPropsElement : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_HyperlinkProps");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OpenXmlHyperlinkPropsElement class.
         /// </summary>
@@ -7800,8 +8478,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData? SndDataImgData
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData.ElementType);
         }
     }
 
@@ -7819,6 +8497,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </remarks>
     public partial class ModifyHyperlinkProps : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "hlink");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_ModifyHyperlinkProps");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ModifyHyperlinkProps class.
         /// </summary>
@@ -7853,14 +8537,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:hlink");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickHyperlinkProps>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverHyperlinkProps>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickHyperlinkProps), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverHyperlinkProps), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickHyperlinkProps.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverHyperlinkProps.ElementType, 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -7873,8 +8557,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickHyperlinkProps? HlinkClickHyperlinkProps
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickHyperlinkProps>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickHyperlinkProps.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickHyperlinkProps;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickHyperlinkProps.ElementType);
         }
 
         /// <summary>
@@ -7886,8 +8570,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverHyperlinkProps? HlinkHoverHyperlinkProps
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverHyperlinkProps>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverHyperlinkProps.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverHyperlinkProps;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverHyperlinkProps.ElementType);
         }
 
         /// <inheritdoc/>
@@ -7908,6 +8592,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </remarks>
     public partial class ResetHyperlinkProps : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "hlink");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_ResetHyperlinkProps");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ResetHyperlinkProps class.
         /// </summary>
@@ -7942,14 +8632,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:hlink");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickEmpty>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverEmpty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickEmpty), 0, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverEmpty), 0, 1, version: FileFormatVersions.Office2016)
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016)
             };
         }
 
@@ -7962,8 +8652,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickEmpty? HlinkClickEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickEmpty.ElementType);
         }
 
         /// <summary>
@@ -7975,8 +8665,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverEmpty? HlinkHoverEmpty
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverEmpty>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverEmpty.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverEmpty;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverEmpty.ElementType);
         }
 
         /// <inheritdoc/>
@@ -7990,6 +8680,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// </summary>
     public partial class TextCharRangeContext : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "context");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "CT_TextCharRangeContext");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TextCharRangeContext class.
         /// </summary>
@@ -8020,7 +8716,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("oac:context");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<TextCharRangeContext>()
                 .AddAttribute("len", a => a.Len)

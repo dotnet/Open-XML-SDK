@@ -31,6 +31,12 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// </remarks>
     public partial class Tasks : OpenXmlPartRootElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Tasks");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "CT_Tasks");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Tasks class.
         /// </summary>
@@ -65,14 +71,14 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("t:Tasks");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.Task>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.Task), 0, 0, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.DocumentTasks.Task.ElementType, 0, 0, version: FileFormatVersions.Office2021),
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -126,6 +132,12 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// </remarks>
     public partial class Task : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Task");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "CT_Task");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Task class.
         /// </summary>
@@ -170,7 +182,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("t:Task");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor>();
@@ -183,9 +195,9 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor), 0, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistory), 0, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor.ElementType, 0, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistory.ElementType, 0, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -198,8 +210,8 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor? TaskAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor.ElementType) as DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor.ElementType);
         }
 
         /// <summary>
@@ -211,8 +223,8 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistory? TaskHistory
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistory>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistory.ElementType) as DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistory;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistory.ElementType);
         }
 
         /// <summary>
@@ -224,8 +236,8 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList.ElementType) as DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -245,6 +257,12 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2019/extlst", "CT_ExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
         /// </summary>
@@ -279,12 +297,12 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("t:extLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.OfficeExtLst.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.OfficeExtLst.Extension), 0, 0, version: FileFormatVersions.Office2021)
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.OfficeExtLst.Extension.ElementType, 0, 0, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -306,6 +324,12 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// </remarks>
     public partial class TaskAnchor : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Anchor");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "CT_TaskAnchor");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskAnchor class.
         /// </summary>
@@ -340,14 +364,14 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("t:Anchor");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.CommentAnchor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.CommentAnchor), 0, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.DocumentTasks.CommentAnchor.ElementType, 0, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -360,8 +384,8 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.DocumentTasks.CommentAnchor? CommentAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.CommentAnchor>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2021.DocumentTasks.CommentAnchor.ElementType) as DocumentFormat.OpenXml.Office2021.DocumentTasks.CommentAnchor;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2021.DocumentTasks.CommentAnchor.ElementType);
         }
 
         /// <summary>
@@ -373,8 +397,8 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList.ElementType) as DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -394,6 +418,12 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// </remarks>
     public partial class TaskHistory : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "History");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "CT_TaskHistory");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskHistory class.
         /// </summary>
@@ -428,12 +458,12 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("t:History");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistoryEvent>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistoryEvent), 0, 0, version: FileFormatVersions.Office2021)
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistoryEvent.ElementType, 0, 0, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -467,6 +497,12 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// </remarks>
     public partial class TaskHistoryEvent : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Event");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "CT_TaskHistoryEvent");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskHistoryEvent class.
         /// </summary>
@@ -521,7 +557,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("t:Event");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor>();
@@ -549,23 +585,23 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.AttributionTaskUser), 1, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor), 0, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.DocumentTasks.AttributionTaskUser.ElementType, 1, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor.ElementType, 0, 1, version: FileFormatVersions.Office2021),
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.AssignTaskUser), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.UnassignTaskUser), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskCreateEventInfo), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskTitleEventInfo), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskScheduleEventInfo), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskProgressEventInfo), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskPriorityEventInfo), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskDeleteEventInfo), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskUndeleteEventInfo), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskUnassignAll), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskUndo), 1, 1, version: FileFormatVersions.Office2021)
+                    new ElementParticle(DocumentFormat.OpenXml.Office2021.DocumentTasks.AssignTaskUser.ElementType, 1, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2021.DocumentTasks.UnassignTaskUser.ElementType, 1, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskCreateEventInfo.ElementType, 1, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskTitleEventInfo.ElementType, 1, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskScheduleEventInfo.ElementType, 1, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskProgressEventInfo.ElementType, 1, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskPriorityEventInfo.ElementType, 1, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskDeleteEventInfo.ElementType, 1, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskUndeleteEventInfo.ElementType, 1, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskUnassignAll.ElementType, 1, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskUndo.ElementType, 1, 1, version: FileFormatVersions.Office2021)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -578,8 +614,8 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.DocumentTasks.AttributionTaskUser? AttributionTaskUser
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.AttributionTaskUser>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2021.DocumentTasks.AttributionTaskUser.ElementType) as DocumentFormat.OpenXml.Office2021.DocumentTasks.AttributionTaskUser;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2021.DocumentTasks.AttributionTaskUser.ElementType);
         }
 
         /// <summary>
@@ -591,8 +627,8 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor? TaskAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor.ElementType) as DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor.ElementType);
         }
 
         /// <inheritdoc/>
@@ -606,6 +642,12 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// </summary>
     public partial class AttributionTaskUser : OpenXmlTaskUserElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Attribution");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "CT_TaskUser");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AttributionTaskUser class.
         /// </summary>
@@ -616,7 +658,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("t:Attribution");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -631,6 +673,12 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// </summary>
     public partial class AssignTaskUser : OpenXmlTaskUserElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Assign");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "CT_TaskUser");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AssignTaskUser class.
         /// </summary>
@@ -641,7 +689,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("t:Assign");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -656,6 +704,12 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// </summary>
     public partial class UnassignTaskUser : OpenXmlTaskUserElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Unassign");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "CT_TaskUser");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the UnassignTaskUser class.
         /// </summary>
@@ -666,7 +720,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("t:Unassign");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -681,6 +735,12 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// </summary>
     public abstract partial class OpenXmlTaskUserElement : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "CT_TaskUser");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OpenXmlTaskUserElement class.
         /// </summary>
@@ -744,6 +804,12 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// </summary>
     public partial class TaskCreateEventInfo : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Create");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "CT_TaskCreateEventInfo");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskCreateEventInfo class.
         /// </summary>
@@ -754,7 +820,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("t:Create");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -769,6 +835,12 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// </summary>
     public partial class TaskTitleEventInfo : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "SetTitle");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "CT_TaskTitleEventInfo");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskTitleEventInfo class.
         /// </summary>
@@ -789,7 +861,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("t:SetTitle");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<TaskTitleEventInfo>()
                 .AddAttribute("title", a => a.Title, aBuilder =>
@@ -809,6 +881,12 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// </summary>
     public partial class TaskScheduleEventInfo : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Schedule");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "CT_TaskScheduleEventInfo");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskScheduleEventInfo class.
         /// </summary>
@@ -839,7 +917,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("t:Schedule");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<TaskScheduleEventInfo>()
                 .AddAttribute("startDate", a => a.StartDate)
@@ -857,6 +935,12 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// </summary>
     public partial class TaskProgressEventInfo : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Progress");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "CT_TaskProgressEventInfo");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskProgressEventInfo class.
         /// </summary>
@@ -877,7 +961,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("t:Progress");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<TaskProgressEventInfo>()
                 .AddAttribute("percentComplete", a => a.PercentComplete, aBuilder =>
@@ -898,6 +982,12 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// </summary>
     public partial class TaskPriorityEventInfo : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Priority");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "CT_TaskPriorityEventInfo");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskPriorityEventInfo class.
         /// </summary>
@@ -918,7 +1008,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("t:Priority");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<TaskPriorityEventInfo>()
                 .AddAttribute("value", a => a.Value, aBuilder =>
@@ -939,6 +1029,12 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// </summary>
     public partial class TaskDeleteEventInfo : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Delete");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "CT_TaskDeleteEventInfo");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskDeleteEventInfo class.
         /// </summary>
@@ -949,7 +1045,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("t:Delete");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -964,6 +1060,12 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// </summary>
     public partial class TaskUndeleteEventInfo : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Undelete");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "CT_TaskUndeleteEventInfo");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskUndeleteEventInfo class.
         /// </summary>
@@ -974,7 +1076,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("t:Undelete");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -989,6 +1091,12 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// </summary>
     public partial class TaskUnassignAll : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "UnassignAll");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "CT_TaskUnassignAll");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskUnassignAll class.
         /// </summary>
@@ -999,7 +1107,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("t:UnassignAll");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -1014,6 +1122,12 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// </summary>
     public partial class TaskUndo : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Undo");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "CT_TaskUndo");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskUndo class.
         /// </summary>
@@ -1034,7 +1148,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("t:Undo");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<TaskUndo>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
@@ -1055,6 +1169,12 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// </summary>
     public partial class CommentAnchor : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Comment");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "CT_CommentAnchor");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CommentAnchor class.
         /// </summary>
@@ -1075,7 +1195,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("t:Comment");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<CommentAnchor>()
                 .AddAttribute("id", a => a.Id, aBuilder =>

@@ -128,6 +128,10 @@ public static class TextWriterExtensions
         {
             writer.WriteString(item.ToString());
         }
+        else if (typeof(T) == typeof(TypedQName))
+        {
+            writer.WriteString(item.ToString());
+        }
         else if (typeof(T) == typeof(string))
         {
             writer.WriteString((string)(object)item, isConstant);

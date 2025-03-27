@@ -29,6 +29,12 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
     /// </remarks>
     public partial class TracksInfo : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2017/3/main", "tracksInfo");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2017/3/main", "CT_TracksInfo");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TracksInfo class.
         /// </summary>
@@ -73,7 +79,7 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p173:tracksInfo");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Presentation.TrackList>();
             builder.AddElement<TracksInfo>()
@@ -83,7 +89,7 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Presentation.TrackList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(DocumentFormat.OpenXml.Office2019.Presentation.TrackList.ElementType, 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -96,8 +102,8 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
         /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Presentation.TrackList? TrackList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Presentation.TrackList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2019.Presentation.TrackList.ElementType) as DocumentFormat.OpenXml.Office2019.Presentation.TrackList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2019.Presentation.TrackList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -111,6 +117,12 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
     /// </summary>
     public partial class Track : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2017/3/main", "track");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2017/3/main", "CT_Track");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Track class.
         /// </summary>
@@ -177,7 +189,7 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p173:track");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<Track>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
@@ -211,6 +223,12 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
     /// </remarks>
     public partial class TrackList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2017/3/main", "trackLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2017/3/main", "CT_TrackList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TrackList class.
         /// </summary>
@@ -245,12 +263,12 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p173:trackLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Presentation.Track>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Presentation.Track), 0, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(DocumentFormat.OpenXml.Office2019.Presentation.Track.ElementType, 0, 0, version: FileFormatVersions.Office2019)
             };
         }
 

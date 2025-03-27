@@ -23,6 +23,12 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// </summary>
     public partial class CommentAuthorMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "cmAuthorMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "CT_CommentAuthorMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CommentAuthorMonikerList class.
         /// </summary>
@@ -57,7 +63,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("pc:cmAuthorMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -76,6 +82,12 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// </summary>
     public partial class CommentMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "cmMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "CT_CommentMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CommentMonikerList class.
         /// </summary>
@@ -110,7 +122,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("pc:cmMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -129,6 +141,12 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// </summary>
     public partial class StringTagMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "tagMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "CT_StringTagMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the StringTagMonikerList class.
         /// </summary>
@@ -163,7 +181,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("pc:tagMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -182,6 +200,12 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// </summary>
     public partial class CustomShowMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "custShowMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "CT_CustomShowMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CustomShowMonikerList class.
         /// </summary>
@@ -216,7 +240,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("pc:custShowMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -235,6 +259,12 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// </summary>
     public partial class DocumentMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "docMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "CT_DocumentMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DocumentMonikerList class.
         /// </summary>
@@ -269,7 +299,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("pc:docMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -288,6 +318,12 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// </summary>
     public partial class SectionMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "sectionMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "CT_SectionMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SectionMonikerList class.
         /// </summary>
@@ -322,7 +358,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("pc:sectionMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -341,6 +377,12 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// </summary>
     public partial class SlideBaseMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "sldBaseMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "CT_SlideBaseMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SlideBaseMonikerList class.
         /// </summary>
@@ -375,7 +417,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("pc:sldBaseMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -394,6 +436,12 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// </summary>
     public partial class SlideLayoutMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "sldLayoutMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "CT_SlideLayoutMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SlideLayoutMonikerList class.
         /// </summary>
@@ -428,7 +476,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("pc:sldLayoutMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -447,6 +495,12 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// </summary>
     public partial class MainMasterMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "sldMasterMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "CT_MainMasterMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MainMasterMonikerList class.
         /// </summary>
@@ -481,7 +535,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("pc:sldMasterMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -507,6 +561,12 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// </remarks>
     public partial class SlideMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "sldMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "CT_SlideMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SlideMonikerList class.
         /// </summary>
@@ -541,14 +601,14 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("pc:sldMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Presentation.Command.DocumentMoniker>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMoniker>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Presentation.Command.DocumentMoniker), 1, 1, version: FileFormatVersions.Office2016),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMoniker), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Presentation.Command.DocumentMoniker.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMoniker.ElementType, 1, 1, version: FileFormatVersions.Office2016),
                 new AnyParticle(0, 0)
             };
         }
@@ -562,8 +622,8 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Presentation.Command.DocumentMoniker? DocumentMoniker
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Presentation.Command.DocumentMoniker>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Presentation.Command.DocumentMoniker.ElementType) as DocumentFormat.OpenXml.Office2016.Presentation.Command.DocumentMoniker;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Presentation.Command.DocumentMoniker.ElementType);
         }
 
         /// <summary>
@@ -575,8 +635,8 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMoniker? SlideMoniker
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMoniker>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMoniker.ElementType) as DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMoniker;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMoniker.ElementType);
         }
 
         /// <inheritdoc/>
@@ -590,6 +650,12 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// </summary>
     public partial class SlidePosMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "sldPosMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "CT_SlidePosMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SlidePosMonikerList class.
         /// </summary>
@@ -624,7 +690,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("pc:sldPosMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -643,6 +709,12 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// </summary>
     public partial class NotesMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "notesMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "CT_NotesMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NotesMonikerList class.
         /// </summary>
@@ -677,7 +749,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("pc:notesMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -696,6 +768,12 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// </summary>
     public partial class NotesTextMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "notesTxtMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "CT_NotesTextMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NotesTextMonikerList class.
         /// </summary>
@@ -730,7 +808,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("pc:notesTxtMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -749,6 +827,12 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// </summary>
     public partial class NotesMasterMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "notesMasterMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "CT_NotesMasterMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NotesMasterMonikerList class.
         /// </summary>
@@ -783,7 +867,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("pc:notesMasterMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -802,6 +886,12 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// </summary>
     public partial class HandoutMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "handoutMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "CT_HandoutMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the HandoutMonikerList class.
         /// </summary>
@@ -836,7 +926,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("pc:handoutMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -855,6 +945,12 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// </summary>
     public partial class AnimEffectMkLstAnimationEffectMonikerList : OpenXmlAnimationEffectMonikerListElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "animEffectMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "CT_AnimationEffectMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AnimEffectMkLstAnimationEffectMonikerList class.
         /// </summary>
@@ -889,7 +985,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("pc:animEffectMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -908,6 +1004,12 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// </summary>
     public partial class AnimEffectParentMkLstAnimationEffectMonikerList : OpenXmlAnimationEffectMonikerListElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "animEffectParentMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "CT_AnimationEffectMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AnimEffectParentMkLstAnimationEffectMonikerList class.
         /// </summary>
@@ -942,7 +1044,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("pc:animEffectParentMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -961,6 +1063,12 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// </summary>
     public abstract partial class OpenXmlAnimationEffectMonikerListElement : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "CT_AnimationEffectMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OpenXmlAnimationEffectMonikerListElement class.
         /// </summary>
@@ -1005,6 +1113,12 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// </summary>
     public partial class OsfTaskPaneAppMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "tkAppMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "CT_OsfTaskPaneAppMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OsfTaskPaneAppMonikerList class.
         /// </summary>
@@ -1039,7 +1153,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("pc:tkAppMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -1058,6 +1172,12 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// </summary>
     public partial class SummaryZoomMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "tocMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "CT_SummaryZoomMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SummaryZoomMonikerList class.
         /// </summary>
@@ -1092,7 +1212,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("pc:tocMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -1111,6 +1231,12 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// </summary>
     public partial class SectionLinkObjMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "sectionLnkObjMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "CT_SectionLinkObjMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SectionLinkObjMonikerList class.
         /// </summary>
@@ -1145,7 +1271,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("pc:sectionLnkObjMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -1164,6 +1290,12 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// </summary>
     public partial class DesignerTagMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "designTagMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "CT_DesignerTagMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DesignerTagMonikerList class.
         /// </summary>
@@ -1198,7 +1330,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("pc:designTagMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -1217,6 +1349,12 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// </summary>
     public partial class CustomXmlPartMonikerList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "cXmlMkLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "CT_CustomXmlPartMonikerList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CustomXmlPartMonikerList class.
         /// </summary>
@@ -1251,7 +1389,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("pc:cXmlMkLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
@@ -1270,6 +1408,12 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// </summary>
     public partial class DocumentMoniker : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "docMk");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "CT_DocumentMoniker");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DocumentMoniker class.
         /// </summary>
@@ -1280,7 +1424,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("pc:docMk");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
         }
 
@@ -1295,6 +1439,12 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// </summary>
     public partial class SlideMoniker : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "sldMk");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2013/main/command", "CT_SlideMoniker");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SlideMoniker class.
         /// </summary>
@@ -1325,7 +1475,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("pc:sldMk");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddElement<SlideMoniker>()
                 .AddAttribute("cId", a => a.CId)

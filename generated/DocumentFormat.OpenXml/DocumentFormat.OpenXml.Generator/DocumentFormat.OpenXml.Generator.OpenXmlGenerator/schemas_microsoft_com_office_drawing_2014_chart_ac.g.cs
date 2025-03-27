@@ -32,6 +32,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartsAc
     /// </remarks>
     public partial class MultiLvlStrData : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chart/ac", "multiLvlStrLit");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_MultiLvlStrData");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MultiLvlStrData class.
         /// </summary>
@@ -66,16 +72,16 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartsAc
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("c16ac:multiLvlStrLit");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Level>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Level), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PointCount.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Level.ElementType, 0, 0),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -88,8 +94,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartsAc
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PointCount? PointCount
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PointCount.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PointCount;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PointCount.ElementType);
         }
 
         /// <inheritdoc/>

@@ -23,6 +23,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays
     /// </summary>
     public partial class PivotCacheDynamicArray : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2024/pivotDynamicArrays", "pivotCacheDynamicArray");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2024/pivotDynamicArrays", "CT_PivotCacheDynamicArray");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PivotCacheDynamicArray class.
         /// </summary>
@@ -43,7 +49,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlpda:pivotCacheDynamicArray");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddElement<PivotCacheDynamicArray>()
                 .AddAttribute("ref", a => a.Ref, aBuilder =>
