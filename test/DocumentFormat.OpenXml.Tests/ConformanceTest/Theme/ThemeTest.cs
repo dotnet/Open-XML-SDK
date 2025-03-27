@@ -6,7 +6,6 @@ using DocumentFormat.OpenXml.Tests.ThemeClass;
 using System.IO;
 using System.Linq;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests.Theme
 {

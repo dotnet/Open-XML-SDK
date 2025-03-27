@@ -73,7 +73,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var testDocument = WordprocessingDocument.Open(stream, false))
             {
                 var validator = new OpenXmlValidator();
-                var errors = validator.Validate(testDocument);
+                var errors = validator.Validate(testDocument, TestContext.Current.CancellationToken);
                 Assert.Empty(errors);
 
                 var mainPart = testDocument.MainDocumentPart;
@@ -179,7 +179,7 @@ namespace DocumentFormat.OpenXml.Tests
                     body.AppendChild(new Paragraph(new Hyperlink(new Run(new Text("empty URI link"))) { Id = link.Id }));
 
                     var validator = new OpenXmlValidator();
-                    var errors = validator.Validate(testDocument);
+                    var errors = validator.Validate(testDocument, TestContext.Current.CancellationToken);
                     Assert.Empty(errors);
                 }
 
