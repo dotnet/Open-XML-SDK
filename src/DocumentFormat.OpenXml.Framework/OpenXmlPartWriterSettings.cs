@@ -6,24 +6,24 @@ using System.Text;
 namespace DocumentFormat.OpenXml;
 
 /// <summary>
-/// Settings for the OpenXmlPartWriter.
+/// Settings for the <see cref="OpenXmlPartWriter" /> .
 /// </summary>
 public class OpenXmlPartWriterSettings
 {
 #if FEATURE_ASYNC_SAX_XML
     /// <summary>
-    /// Gets or sets a value indicating whether asynchronous OpenXmlPartWriter methods can be used.
+    /// Gets or sets a value indicating whether asynchronous <see cref="OpenXmlPartWriter" />  methods can be used.
     /// </summary>
     public bool Async { get; set; }
 #endif
 
     /// <summary>
-    /// Gets or sets a value indicating whether the OpenXmlPartWriter should check to ensure that all characters in the document conform to the "2.2 Characters" section of the W3C XML 1.0 Recommendation.
+    /// Gets or sets a value indicating whether the <see cref="OpenXmlPartWriter" />  should also close the underlying stream or TextWriter when the Close() method is called.
     /// </summary>
     public bool CloseOutput { get; set; }
 
     /// <summary>
-    /// Gets or sets a value indicating whether the OpenXmlPartWriter should also close the underlying stream or TextWriter when the Close() method is called.
+    /// Gets or sets the type of text encoding to use.
     /// </summary>
     public Encoding Encoding { get; set; } = Encoding.UTF8;
 }
