@@ -13294,7 +13294,7 @@
     "Value": {
      "ChildrenParticles": [
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.ExtensionList",
+       "ElementType": "DocumentFormat.OpenXml.Drawing.TableColExtensionList",
        "MinOccurs": 0
       }
      ],
@@ -19774,6 +19774,56 @@
   ]
  },
  {
+  "Key": "DocumentFormat.OpenXml.Drawing.TableColExtension",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.ColIdIdentifier"
+      },
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   },
+   {
+    "Key": "Office2007, Office2010, Office2013",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Drawing.TableColExtensionList",
+  "Value": [
+   {
+    "Key": "Office2007, Office2010, Office2013, Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Drawing.TableColExtension",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
   "Key": "DocumentFormat.OpenXml.Drawing.TableGrid",
   "Value": [
    {
@@ -19878,7 +19928,57 @@
        "MinOccurs": 0
       },
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.ExtensionList",
+       "ElementType": "DocumentFormat.OpenXml.Drawing.TableRowExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Drawing.TableRowExtension",
+  "Value": [
+   {
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.RowIdIdentifier"
+      },
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   },
+   {
+    "Key": "Office2007, Office2010, Office2013",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Drawing.TableRowExtensionList",
+  "Value": [
+   {
+    "Key": "Office2007, Office2010, Office2013, Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Drawing.TableRowExtension",
+       "MaxOccurs": 0,
        "MinOccurs": 0
       }
      ],

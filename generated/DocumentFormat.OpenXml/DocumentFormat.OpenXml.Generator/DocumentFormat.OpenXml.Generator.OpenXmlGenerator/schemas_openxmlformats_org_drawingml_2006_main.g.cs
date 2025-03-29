@@ -22682,157 +22682,6 @@ namespace DocumentFormat.OpenXml.Drawing
     }
 
     /// <summary>
-    /// <para>Table Cell.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is a:tc.</para>
-    /// </summary>
-    /// <remarks>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TableCellProperties" /> <c>&lt;a:tcPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TextBody" /> <c>&lt;a:txBody></c></description></item>
-    /// </list>
-    /// </remarks>
-    public partial class TableCell : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the TableCell class.
-        /// </summary>
-        public TableCell() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the TableCell class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public TableCell(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the TableCell class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public TableCell(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the TableCell class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public TableCell(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>Row Span</para>
-        /// <para>Represents the following attribute in the schema: rowSpan</para>
-        /// </summary>
-        public Int32Value? RowSpan
-        {
-            get => GetAttribute<Int32Value>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Grid Span</para>
-        /// <para>Represents the following attribute in the schema: gridSpan</para>
-        /// </summary>
-        public Int32Value? GridSpan
-        {
-            get => GetAttribute<Int32Value>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Horizontal Merge</para>
-        /// <para>Represents the following attribute in the schema: hMerge</para>
-        /// </summary>
-        public BooleanValue? HorizontalMerge
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Vertical Merge</para>
-        /// <para>Represents the following attribute in the schema: vMerge</para>
-        /// </summary>
-        public BooleanValue? VerticalMerge
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("a:tc");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.TableCellProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.TextBody>();
-            builder.AddElement<TableCell>()
-                .AddAttribute("rowSpan", a => a.RowSpan)
-                .AddAttribute("gridSpan", a => a.GridSpan)
-                .AddAttribute("hMerge", a => a.HorizontalMerge)
-                .AddAttribute("vMerge", a => a.VerticalMerge);
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TextBody), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
-            };
-            builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("a:rowSpan"), true, 1, true, double.PositiveInfinity, true));
-            builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("a:gridSpan"), true, 1, true, double.PositiveInfinity, true));
-        }
-
-        /// <summary>
-        /// <para>Text Body.</para>
-        /// <para>Represents the following element tag in the schema: a:txBody.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.TextBody? TextBody
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.TextBody>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Table Cell Properties.</para>
-        /// <para>Represents the following element tag in the schema: a:tcPr.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.TableCellProperties? TableCellProperties
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.TableCellProperties>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>ExtensionList.</para>
-        /// <para>Represents the following element tag in the schema: a:extLst.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            set => SetElement(value);
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableCell>(deep);
-    }
-
-    /// <summary>
     /// <para>Table Style.</para>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a:tableStyle.</para>
@@ -23356,7 +23205,7 @@ namespace DocumentFormat.OpenXml.Drawing
     /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TableColExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
     public partial class GridColumn : OpenXmlCompositeElement
@@ -23393,7 +23242,7 @@ namespace DocumentFormat.OpenXml.Drawing
         }
 
         /// <summary>
-        /// <para>Width</para>
+        /// <para>w</para>
         /// <para>Represents the following attribute in the schema: w</para>
         /// </summary>
         public Int64Value? Width
@@ -23406,7 +23255,7 @@ namespace DocumentFormat.OpenXml.Drawing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("a:gridCol");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.TableColExtensionList>();
             builder.AddElement<GridColumn>()
                 .AddAttribute("w", a => a.Width, aBuilder =>
                 {
@@ -23415,20 +23264,20 @@ namespace DocumentFormat.OpenXml.Drawing
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableColExtensionList), 0, 1)
             };
         }
 
         /// <summary>
-        /// <para>ExtensionList.</para>
+        /// <para>TableColExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
         /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Drawing.TableColExtensionList? TableColExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.TableColExtensionList>();
             set => SetElement(value);
         }
 
@@ -23685,8 +23534,8 @@ namespace DocumentFormat.OpenXml.Drawing
     /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TableCell" /> <c>&lt;a:tc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TableRowExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
     public partial class TableRow : OpenXmlCompositeElement
@@ -23723,7 +23572,7 @@ namespace DocumentFormat.OpenXml.Drawing
         }
 
         /// <summary>
-        /// <para>Height</para>
+        /// <para>h</para>
         /// <para>Represents the following attribute in the schema: h</para>
         /// </summary>
         public Int64Value? Height
@@ -23736,8 +23585,8 @@ namespace DocumentFormat.OpenXml.Drawing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("a:tr");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.TableCell>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.TableRowExtensionList>();
             builder.AddElement<TableRow>()
                 .AddAttribute("h", a => a.Height, aBuilder =>
                 {
@@ -23747,7 +23596,7 @@ namespace DocumentFormat.OpenXml.Drawing
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCell), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableRowExtensionList), 0, 1)
             };
         }
 
@@ -30990,6 +30839,395 @@ namespace DocumentFormat.OpenXml.Drawing
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<PtExtension>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the TableColExtension Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is a:ext.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ColIdIdentifier" /> <c>&lt;a16:colId></c></description></item>
+    /// </list>
+    /// </remarks>
+    public partial class TableColExtension : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the TableColExtension class.
+        /// </summary>
+        public TableColExtension() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableColExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TableColExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableColExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TableColExtension(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableColExtension class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public TableColExtension(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("a:ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ColIdIdentifier>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.ColIdIdentifier), 1, 1, version: FileFormatVersions.Office2016),
+                new AnyParticle(0, 1)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableColExtension>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the TableRowExtension Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is a:ext.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.RowIdIdentifier" /> <c>&lt;a16:rowId></c></description></item>
+    /// </list>
+    /// </remarks>
+    public partial class TableRowExtension : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the TableRowExtension class.
+        /// </summary>
+        public TableRowExtension() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableRowExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TableRowExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableRowExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TableRowExtension(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableRowExtension class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public TableRowExtension(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("a:ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.RowIdIdentifier>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.RowIdIdentifier), 1, 1, version: FileFormatVersions.Office2016),
+                new AnyParticle(0, 1)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableRowExtension>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the TableColExtensionList Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is a:extLst.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TableColExtension" /> <c>&lt;a:ext></c></description></item>
+    /// </list>
+    /// </remarks>
+    public partial class TableColExtensionList : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the TableColExtensionList class.
+        /// </summary>
+        public TableColExtensionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableColExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TableColExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableColExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TableColExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableColExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public TableColExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("a:extLst");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.TableColExtension>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableColExtension), 0, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableColExtensionList>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the TableCell Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is a:tc.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TableCellProperties" /> <c>&lt;a:tcPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TextBody" /> <c>&lt;a:txBody></c></description></item>
+    /// </list>
+    /// </remarks>
+    public partial class TableCell : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the TableCell class.
+        /// </summary>
+        public TableCell() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableCell class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TableCell(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableCell class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TableCell(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableCell class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public TableCell(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Row Span</para>
+        /// <para>Represents the following attribute in the schema: rowSpan</para>
+        /// </summary>
+        public Int32Value? RowSpan
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Grid Span</para>
+        /// <para>Represents the following attribute in the schema: gridSpan</para>
+        /// </summary>
+        public Int32Value? GridSpan
+        {
+            get => GetAttribute<Int32Value>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Horizontal Merge</para>
+        /// <para>Represents the following attribute in the schema: hMerge</para>
+        /// </summary>
+        public BooleanValue? HorizontalMerge
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Vertical Merge</para>
+        /// <para>Represents the following attribute in the schema: vMerge</para>
+        /// </summary>
+        public BooleanValue? VerticalMerge
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("a:tc");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.TableCellProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.TextBody>();
+            builder.AddElement<TableCell>()
+                .AddAttribute("rowSpan", a => a.RowSpan)
+                .AddAttribute("gridSpan", a => a.GridSpan)
+                .AddAttribute("hMerge", a => a.HorizontalMerge)
+                .AddAttribute("vMerge", a => a.VerticalMerge);
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TextBody), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableCellProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+            };
+            builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("a:rowSpan"), true, 1, true, double.PositiveInfinity, true));
+            builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("a:gridSpan"), true, 1, true, double.PositiveInfinity, true));
+        }
+
+        /// <summary>
+        /// <para>Text Body.</para>
+        /// <para>Represents the following element tag in the schema: a:txBody.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.TextBody? TextBody
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.TextBody>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Table Cell Properties.</para>
+        /// <para>Represents the following element tag in the schema: a:tcPr.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.TableCellProperties? TableCellProperties
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.TableCellProperties>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>ExtensionList.</para>
+        /// <para>Represents the following element tag in the schema: a:extLst.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            set => SetElement(value);
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableCell>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the TableRowExtensionList Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is a:extLst.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TableRowExtension" /> <c>&lt;a:ext></c></description></item>
+    /// </list>
+    /// </remarks>
+    public partial class TableRowExtensionList : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the TableRowExtensionList class.
+        /// </summary>
+        public TableRowExtensionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableRowExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TableRowExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableRowExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TableRowExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableRowExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public TableRowExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("a:extLst");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.TableRowExtension>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TableRowExtension), 0, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableRowExtensionList>(deep);
     }
 
     /// <summary>

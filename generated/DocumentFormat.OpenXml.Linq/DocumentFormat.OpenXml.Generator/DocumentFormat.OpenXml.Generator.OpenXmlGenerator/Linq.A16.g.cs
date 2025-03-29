@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.ext" />, <see cref="A.graphicData" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ColIdIdentifier.</description></item>
         /// </list>
         /// </remarks>
@@ -72,7 +72,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.ext" />, <see cref="A.graphicData" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: RowIdIdentifier.</description></item>
         /// </list>
         /// </remarks>

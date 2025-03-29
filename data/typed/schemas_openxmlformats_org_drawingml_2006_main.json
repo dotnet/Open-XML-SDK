@@ -620,6 +620,14 @@
     "ClassName": "ShapePropertiesExtension"
   },
   {
+    "Name": "a:CT_TableColExtension/a:ext",
+    "ClassName": "TableColExtension"
+  },
+  {
+    "Name": "a:CT_TableRowExtension/a:ext",
+    "ClassName": "TableRowExtension"
+  },
+  {
     "Name": "a:CT_BlipExtensionList/a:extLst",
     "ClassName": "BlipExtensionList"
   },
@@ -662,6 +670,14 @@
   {
     "Name": "a:CT_ShapePropertiesExtensionList/a:extLst",
     "ClassName": "ShapePropertiesExtensionList"
+  },
+  {
+    "Name": "a:CT_TableColExtensionList/a:extLst",
+    "ClassName": "TableColExtensionList"
+  },
+  {
+    "Name": "a:CT_TableRowExtensionList/a:extLst",
+    "ClassName": "TableRowExtensionList"
   },
   {
     "Name": "a:CT_ColorSchemeAndMapping/a:extraClrScheme",
