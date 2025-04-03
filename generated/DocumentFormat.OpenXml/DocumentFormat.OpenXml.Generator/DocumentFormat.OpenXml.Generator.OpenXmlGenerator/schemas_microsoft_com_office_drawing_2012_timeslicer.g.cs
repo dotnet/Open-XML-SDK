@@ -30,6 +30,12 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
     /// </remarks>
     public partial class TimeSlicer : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/timeslicer", "timeslicer");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2012/timeslicer", "CT_Timeline");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TimeSlicer class.
         /// </summary>
@@ -74,7 +80,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("tsle:timeslicer");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.OfficeArtExtensionList>();
             builder.AddElement<TimeSlicer>()
@@ -84,7 +90,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.OfficeArtExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -97,8 +103,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.OfficeArtExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.OfficeArtExtensionList.ElementType) as DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.OfficeArtExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.OfficeArtExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -118,6 +124,12 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
     /// </remarks>
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/timeslicer", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_OfficeArtExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OfficeArtExtensionList class.
         /// </summary>
@@ -152,7 +164,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("tsle:extLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -161,7 +173,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Extension.ElementType, 0, 0)
                     }
                 }
             };

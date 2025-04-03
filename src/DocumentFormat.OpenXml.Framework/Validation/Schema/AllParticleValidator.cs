@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -12,7 +13,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     internal class AllParticleValidator : CompositeParticleValidator
     {
-        private readonly Dictionary<Type, bool> _childrenParticles;
+        private readonly Dictionary<OpenXmlSchemaType, bool> _childrenParticles;
 
         /// <summary>
         /// Initializes a new instance of the AllParticleValidator.
@@ -34,13 +35,13 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             }
 #endif
 
-            _childrenParticles = new Dictionary<Type, bool>(ParticleConstraint.ChildrenParticles.Length);
+            _childrenParticles = new Dictionary<OpenXmlSchemaType, bool>(ParticleConstraint.ChildrenParticles.Length);
 
             foreach (var childParticle in ParticleConstraint.ChildrenParticles)
             {
                 if (childParticle is ElementParticle element)
                 {
-                    _childrenParticles.Add(element.ElementType, false);
+                    _childrenParticles.Add(element.Type, false);
                 }
             }
         }
@@ -79,13 +80,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 if (childParticle is ElementParticle element)
                 {
-                    _childrenParticles[element.ElementType] = false;
+                    _childrenParticles[element.Type] = false;
                 }
             }
 
             while (next is not null)
             {
-                if (_childrenParticles.TryGetValue(next.GetType(), out bool visited))
+                var nextType = next.Metadata.Type;
+                if (_childrenParticles.TryGetValue(nextType, out var visited))
                 {
                     if (visited)
                     {
@@ -94,7 +96,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     }
                     else
                     {
-                        _childrenParticles[next.GetType()] = true;
+                        _childrenParticles[nextType] = true;
                     }
                 }
                 else
@@ -117,7 +119,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 {
                     if (childParticle is ElementParticle element)
                     {
-                        particleMatchInfo.ExpectedChildren.Add(element.ElementType);
+                        particleMatchInfo.ExpectedChildren.Add(element.Type);
                     }
                 }
 
@@ -132,7 +134,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 {
                     if (childParticle is ElementParticle element)
                     {
-                        if (!_childrenParticles[element.ElementType] && childParticle.MinOccurs == 1)
+                        if (!_childrenParticles[element.Type] && childParticle.MinOccurs == 1)
                         {
                             // one of the required children are missed.
                             particleMatchInfo.Match = ParticleMatch.Partial;
@@ -143,9 +145,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 // find expected child elements.
                 foreach (var childParticle in ParticleConstraint.ChildrenParticles)
                 {
-                    if (childParticle is ElementParticle element && !_childrenParticles[element.ElementType])
+                    if (childParticle is ElementParticle element && !_childrenParticles[element.Type])
                     {
-                        particleMatchInfo.ExpectedChildren.Add(element.ElementType);
+                        particleMatchInfo.ExpectedChildren.Add(element.Type);
                     }
                 }
 
@@ -184,7 +186,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                 case ParticleMatch.Partial:
                 case ParticleMatch.Matched:
-                    if (_childrenParticles.ContainsKey(child.GetType()))
+                    if (_childrenParticles.ContainsKey(child.Metadata.Type))
                     {
                         // more than one occurs of a child.
                         errorInfo = validationContext.ComposeSchemaValidationError(element, child, "Sch_AllElement", child.XmlQualifiedName.ToString());

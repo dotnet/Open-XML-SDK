@@ -2,28 +2,26 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework.Schema;
-using System;
 using System.Diagnostics;
 
-namespace DocumentFormat.OpenXml.Framework
+namespace DocumentFormat.OpenXml.Framework;
+
+[DebuggerDisplay("[{Type}] - {Path}")]
+internal readonly record struct LookupItem
 {
-    [DebuggerDisplay("[{Type}] - {Path}")]
-    internal readonly struct LookupItem
+    public LookupItem(OpenXmlSchemaType type, ParticlePath path)
     {
-        public LookupItem(Type type, ParticlePath path)
-        {
-            Type = type;
-            Path = path;
-        }
+        Type = type;
+        Path = path;
+    }
 
-        public Type Type { get; }
+    public OpenXmlSchemaType Type { get; }
 
-        public ParticlePath Path { get; }
+    public ParticlePath Path { get; }
 
-        public void Deconstruct(out Type type, out ParticlePath path)
-        {
-            type = Type;
-            path = Path;
-        }
+    public void Deconstruct(out OpenXmlSchemaType type, out ParticlePath path)
+    {
+        type = Type;
+        path = Path;
     }
 }

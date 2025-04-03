@@ -32,6 +32,12 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// </remarks>
     public partial class CustomXsn : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/metadata/customXsn", "customXsn");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/metadata/customXsn", "CT_CustomXsn");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CustomXsn class.
         /// </summary>
@@ -66,17 +72,17 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("ntns:customXsn");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomXsn.CachedView>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomXsn.Scope>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.CachedView), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.Scope), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Office.CustomXsn.CachedView.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Office.CustomXsn.Scope.ElementType, 1, 1)
             };
         }
 
@@ -89,8 +95,8 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation? XsnLocation
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation.ElementType) as DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation.ElementType);
         }
 
         /// <summary>
@@ -102,8 +108,8 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomXsn.CachedView? CachedView
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomXsn.CachedView>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office.CustomXsn.CachedView.ElementType) as DocumentFormat.OpenXml.Office.CustomXsn.CachedView;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.CustomXsn.CachedView.ElementType);
         }
 
         /// <summary>
@@ -115,8 +121,8 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault? OpenByDefault
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault.ElementType) as DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault.ElementType);
         }
 
         /// <summary>
@@ -128,8 +134,8 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomXsn.Scope? Scope
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomXsn.Scope>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office.CustomXsn.Scope.ElementType) as DocumentFormat.OpenXml.Office.CustomXsn.Scope;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.CustomXsn.Scope.ElementType);
         }
 
         /// <inheritdoc/>
@@ -143,6 +149,12 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// </summary>
     public partial class XsnLocation : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/metadata/customXsn", "xsnLocation");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the XsnLocation class.
         /// </summary>
@@ -166,7 +178,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("ntns:xsnLocation");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -180,6 +192,12 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// </summary>
     public partial class CachedView : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/metadata/customXsn", "cached");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CachedView class.
         /// </summary>
@@ -203,7 +221,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("ntns:cached");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -217,6 +235,12 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// </summary>
     public partial class OpenByDefault : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/metadata/customXsn", "openByDefault");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OpenByDefault class.
         /// </summary>
@@ -240,7 +264,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("ntns:openByDefault");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -254,6 +278,12 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// </summary>
     public partial class Scope : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/metadata/customXsn", "xsnScope");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Scope class.
         /// </summary>
@@ -277,7 +307,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("ntns:xsnScope");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>

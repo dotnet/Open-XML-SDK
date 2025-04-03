@@ -31,6 +31,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// </remarks>
     public partial class TaskHistoryDetails : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "taskHistoryDetails");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "CT_TaskHistoryDetails");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskHistoryDetails class.
         /// </summary>
@@ -75,7 +81,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:taskHistoryDetails");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistory>();
@@ -87,8 +93,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistory), 1, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistory.ElementType, 1, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -101,8 +107,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistory? TaskHistory
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistory>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistory.ElementType) as DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistory;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistory.ElementType);
         }
 
         /// <summary>
@@ -114,8 +120,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList.ElementType) as DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -129,6 +135,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// </summary>
     public partial class CommentAnchor : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "comment");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "CT_CommentAnchor");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CommentAnchor class.
         /// </summary>
@@ -149,7 +161,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:comment");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<CommentAnchor>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
@@ -176,6 +188,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "CT_ExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
         /// </summary>
@@ -210,7 +228,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:extLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -219,7 +237,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Extension), 0, 0)
+                        new ElementParticle(DocumentFormat.OpenXml.Presentation.Extension.ElementType, 0, 0)
                     }
                 }
             };
@@ -236,6 +254,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// </summary>
     public partial class AtrbtnTaskAssignUnassignUser : OpenXmlTaskAssignUnassignUserElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "atrbtn");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "CT_TaskAssignUnassignUser");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AtrbtnTaskAssignUnassignUser class.
         /// </summary>
@@ -246,7 +270,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:atrbtn");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -261,6 +285,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// </summary>
     public partial class AsgnTaskAssignUnassignUser : OpenXmlTaskAssignUnassignUserElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "asgn");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "CT_TaskAssignUnassignUser");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AsgnTaskAssignUnassignUser class.
         /// </summary>
@@ -271,7 +301,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:asgn");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -286,6 +316,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// </summary>
     public partial class UnAsgnTaskAssignUnassignUser : OpenXmlTaskAssignUnassignUserElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "unAsgn");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "CT_TaskAssignUnassignUser");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the UnAsgnTaskAssignUnassignUser class.
         /// </summary>
@@ -296,7 +332,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:unAsgn");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -311,6 +347,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// </summary>
     public abstract partial class OpenXmlTaskAssignUnassignUserElement : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "CT_TaskAssignUnassignUser");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OpenXmlTaskAssignUnassignUserElement class.
         /// </summary>
@@ -354,6 +396,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// </remarks>
     public partial class TaskAnchor : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "anchr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "CT_TaskAnchor");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskAnchor class.
         /// </summary>
@@ -388,14 +436,14 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:anchr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.CommentAnchor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.CommentAnchor), 1, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.CommentAnchor.ElementType, 1, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -408,8 +456,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.CommentAnchor? CommentAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.CommentAnchor>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.CommentAnchor.ElementType) as DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.CommentAnchor;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.CommentAnchor.ElementType);
         }
 
         /// <summary>
@@ -421,8 +469,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList.ElementType) as DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -436,6 +484,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// </summary>
     public partial class AddEmpty : EmptyType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "add");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AddEmpty class.
         /// </summary>
@@ -446,7 +500,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:add");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -461,6 +515,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// </summary>
     public partial class UnasgnAllEmpty : EmptyType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "unasgnAll");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the UnasgnAllEmpty class.
         /// </summary>
@@ -471,7 +531,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:unasgnAll");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -486,6 +546,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// </summary>
     public abstract partial class EmptyType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the EmptyType class.
         /// </summary>
@@ -506,6 +572,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// </summary>
     public partial class TaskTitleEventInfo : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "title");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "CT_TaskTitleEventInfo");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskTitleEventInfo class.
         /// </summary>
@@ -526,7 +598,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:title");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<TaskTitleEventInfo>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
@@ -546,6 +618,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// </summary>
     public partial class TaskScheduleEventInfo : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "date");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "CT_TaskScheduleEventInfo");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskScheduleEventInfo class.
         /// </summary>
@@ -576,7 +654,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:date");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<TaskScheduleEventInfo>()
                 .AddAttribute("stDt", a => a.StDt)
@@ -594,6 +672,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// </summary>
     public partial class TaskProgressEventInfo : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "pcntCmplt");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "CT_TaskProgressEventInfo");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskProgressEventInfo class.
         /// </summary>
@@ -614,7 +698,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:pcntCmplt");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<TaskProgressEventInfo>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
@@ -635,6 +719,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// </summary>
     public partial class TaskPriorityRecord : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "pri");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "CT_TaskPriorityRecord");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskPriorityRecord class.
         /// </summary>
@@ -655,7 +745,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:pri");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<TaskPriorityRecord>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
@@ -676,6 +766,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// </summary>
     public partial class TaskUndo : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "undo");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "CT_TaskUndo");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskUndo class.
         /// </summary>
@@ -696,7 +792,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:undo");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<TaskUndo>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
@@ -717,6 +813,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// </summary>
     public partial class TaskUnknownRecord : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "unknown");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "CT_TaskUnknownRecord");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskUnknownRecord class.
         /// </summary>
@@ -727,7 +829,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:unknown");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -760,6 +862,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// </remarks>
     public partial class TaskHistoryEvent : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "event");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "CT_TaskHistoryEvent");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskHistoryEvent class.
         /// </summary>
@@ -814,7 +922,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:event");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AddEmpty>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.UnasgnAllEmpty>();
@@ -841,22 +949,22 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser), 1, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskAnchor), 0, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser.ElementType, 1, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskAnchor.ElementType, 0, 1, version: FileFormatVersions.Office2021),
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AsgnTaskAssignUnassignUser), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.UnAsgnTaskAssignUnassignUser), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AddEmpty), 0, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskTitleEventInfo), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskScheduleEventInfo), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskProgressEventInfo), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskPriorityRecord), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.UnasgnAllEmpty), 0, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskUndo), 1, 1, version: FileFormatVersions.Office2021),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskUnknownRecord), 1, 1, version: FileFormatVersions.Office2021)
+                    new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AsgnTaskAssignUnassignUser.ElementType, 1, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.UnAsgnTaskAssignUnassignUser.ElementType, 1, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AddEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskTitleEventInfo.ElementType, 1, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskScheduleEventInfo.ElementType, 1, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskProgressEventInfo.ElementType, 1, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskPriorityRecord.ElementType, 1, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.UnasgnAllEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskUndo.ElementType, 1, 1, version: FileFormatVersions.Office2021),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskUnknownRecord.ElementType, 1, 1, version: FileFormatVersions.Office2021)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -869,8 +977,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser? AtrbtnTaskAssignUnassignUser
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser.ElementType) as DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser.ElementType);
         }
 
         /// <summary>
@@ -882,8 +990,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskAnchor? TaskAnchor
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskAnchor>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskAnchor.ElementType) as DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskAnchor;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskAnchor.ElementType);
         }
 
         /// <inheritdoc/>
@@ -903,6 +1011,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// </remarks>
     public partial class TaskHistory : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "history");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2019/12/main", "CT_TaskHistory");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TaskHistory class.
         /// </summary>
@@ -937,12 +1051,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p1912:history");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistoryEvent>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistoryEvent), 0, 0, version: FileFormatVersions.Office2021)
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistoryEvent.ElementType, 0, 0, version: FileFormatVersions.Office2021)
             };
         }
 
