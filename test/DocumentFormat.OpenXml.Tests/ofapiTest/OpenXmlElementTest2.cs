@@ -240,5 +240,43 @@ namespace DocumentFormat.OpenXml.Tests
             var r2 = p.GetOrAddFirstChild<Run>();
             Assert.Same(r, r2);
         }
+
+        [Fact]
+        public void IsValidChild_ValidChild_ReturnsTrue()
+        {
+            // Arrange
+            var parentElement = new Paragraph();
+            var validChild = new Run();
+
+            // Act
+            var result = parentElement.IsValidChild(validChild);
+
+            // Assert
+            Assert.True(result);
+        }
+
+        [Fact]
+        public void IsValidChild_InvalidChild_ReturnsFalse()
+        {
+            // Arrange
+            var parentElement = new Paragraph();
+            var invalidChild = new Table();
+
+            // Act
+            var result = parentElement.IsValidChild(invalidChild);
+
+            // Assert
+            Assert.False(result);
+        }
+
+        [Fact]
+        public void IsValidChild_NullChild_ThrowsArgumentNullException()
+        {
+            // Arrange
+            var parentElement = new Paragraph();
+
+            // Act & Assert
+            Assert.Throws<ArgumentNullException>(() => parentElement.IsValidChild(null));
+        }
     }
 }
