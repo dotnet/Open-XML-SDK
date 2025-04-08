@@ -28,7 +28,6 @@ namespace DocumentFormat.OpenXml.Validation
             _cache = cache;
         }
 
-
         /// <summary>
         /// Validates the specified Open XML package against the provided validation settings.
         /// </summary>
