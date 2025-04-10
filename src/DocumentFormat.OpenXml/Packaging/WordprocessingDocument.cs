@@ -311,6 +311,73 @@ namespace DocumentFormat.OpenXml.Packaging
             => Open(package, new OpenSettings());
 
         /// <summary>
+        /// Validates whether the specified file is a valid WordprocessingDocument of the given type.
+        /// </summary>
+        /// <param name="path">The path to the WordprocessingDocument file.</param>
+        /// <param name="documentType">The expected type of the WordprocessingDocument. Defaults to <see cref="WordprocessingDocumentType.Document"/>.</param>
+        /// <returns>True if the file is a valid WordprocessingDocument of the specified type; otherwise, false.</returns>
+        public static bool IsValidDocument(string path, WordprocessingDocumentType documentType = WordprocessingDocumentType.Document)
+        {
+            if (string.IsNullOrEmpty(path))
+            {
+                return false;
+            }
+
+            try
+            {
+                if (!File.Exists(path))
+                {
+                    return false;
+                }
+
+                string ext = new FileInfo(path).Extension.ToUpperInvariant();
+
+                switch (ext)
+                {
+                    case ".DOCX":
+                        if (documentType != WordprocessingDocumentType.Document)
+                        {
+                            return false;
+                        }
+
+                        break;
+                    case ".DOTX":
+                        if (documentType != WordprocessingDocumentType.Template)
+                        {
+                            return false;
+                        }
+
+                        break;
+                    case ".DOCM":
+                        if (documentType != WordprocessingDocumentType.MacroEnabledDocument)
+                        {
+                            return false;
+                        }
+
+                        break;
+                    case ".DOTM":
+                        if (documentType != WordprocessingDocumentType.MacroEnabledTemplate)
+                        {
+                            return false;
+                        }
+
+                        break;
+                    default:
+                        return false;
+                }
+
+                using (WordprocessingDocument wordprocessingDocument = Open(path, false))
+                {
+                    return wordprocessingDocument?.MainDocumentPart?.Document?.Body is not null;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
         /// Changes the document type.
         /// </summary>
         /// <param name="newType">The new type of the document.</param>

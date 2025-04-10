@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Presentation;
 using DocumentFormat.OpenXml.Wordprocessing;
+using Microsoft.Testing.Platform.MSBuild;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -329,6 +330,123 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             spd.LoadAllParts();
 
             Assert.NotNull(spd);
+        }
+
+        [Fact]
+        public void IsValidDocument_ShouldReturnFalse_WhenPathIsNull()
+        {
+            // Act
+            bool result = WordprocessingDocument.IsValidDocument(null);
+
+            // Assert
+            Assert.False(result);
+        }
+
+        [Fact]
+        public void IsValidDocument_ShouldReturnFalse_WhenFileDoesNotExist()
+        {
+            // Arrange
+            string nonExistentPath = string.Concat(Path.GetTempPath(), "nonexistent.docx");
+
+            // Act
+            bool result = WordprocessingDocument.IsValidDocument(nonExistentPath);
+
+            // Assert
+            Assert.False(result);
+        }
+
+        [Fact]
+        public void IsValidDocument_ShouldReturnFalse_WhenFileExtensionIsUnsupported()
+        {
+            // Arrange
+            string unsupportedFilePath = string.Concat(Path.GetTempPath(), "unsupported.txt");
+            File.WriteAllText(unsupportedFilePath, "Test content");
+
+            try
+            {
+                // Act
+                bool result = WordprocessingDocument.IsValidDocument(unsupportedFilePath);
+
+                // Assert
+                Assert.False(result);
+            }
+            finally
+            {
+                File.Delete(unsupportedFilePath);
+            }
+        }
+
+        [Fact]
+        public void IsValidDocument_ShouldReturnFalse_WhenDocumentTypeDoesNotMatchExtension()
+        {
+            // Arrange
+            string filePath = string.Concat(Path.GetTempPath(), "test.docx");
+            File.WriteAllText(filePath, "Test content");
+
+            try
+            {
+                // Act
+                bool result = WordprocessingDocument.IsValidDocument(filePath, WordprocessingDocumentType.Template);
+
+                // Assert
+                Assert.False(result);
+            }
+            finally
+            {
+                File.Delete(filePath);
+            }
+        }
+
+        [Fact]
+        public void IsValidDocument_ShouldReturnTrue_ForValidDocument()
+        {
+            // Arrange
+            string filePath = string.Concat(Path.GetTempPath(), "test.docx");
+
+            using (WordprocessingDocument document = WordprocessingDocument.Create(filePath, WordprocessingDocumentType.Document))
+            {
+                document.AddMainDocumentPart();
+                document.MainDocumentPart.Document = new Document(new Body());
+            }
+
+            try
+            {
+                // Act
+                bool result = WordprocessingDocument.IsValidDocument(filePath);
+
+                // Assert
+                Assert.True(result);
+            }
+            finally
+            {
+                File.Delete(filePath);
+            }
+        }
+
+        [Fact]
+        public void IsValidDocument_ShouldReturnFalse_WhenDocumentIsCorrupted()
+        {
+            // Arrange
+            string corruptedFilePath = string.Concat(Path.GetTempPath(), "corrupt.docx");
+            using (WordprocessingDocument wordprocessingDocument = WordprocessingDocument.Create(corruptedFilePath, WordprocessingDocumentType.Document))
+            {
+                MainDocumentPart mainDocumentPart = wordprocessingDocument.AddMainDocumentPart();
+
+                mainDocumentPart.Document = new Document(new Paragraph());
+            }
+
+            try
+            {
+                // Act
+                bool result = WordprocessingDocument.IsValidDocument(corruptedFilePath);
+
+                // Assert
+                Assert.False(result);
+            }
+            finally
+            {
+                File.Delete(corruptedFilePath);
+            }
         }
     }
 }
