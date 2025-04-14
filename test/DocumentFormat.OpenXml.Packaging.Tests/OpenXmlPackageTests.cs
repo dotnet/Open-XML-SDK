@@ -3,7 +3,6 @@
 
 using DocumentFormat.OpenXml.Presentation;
 using DocumentFormat.OpenXml.Wordprocessing;
-using Microsoft.Testing.Platform.MSBuild;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -333,7 +332,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         }
 
         [Fact]
-        public void IsValidDocument_ShouldReturnFalse_WhenPathIsNull()
+        public void WordprocessingDocument_IsValidDocument_ShouldReturnFalse_WhenPathIsNull()
         {
             // Act
             bool result = WordprocessingDocument.IsValidDocument(null);
@@ -343,7 +342,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         }
 
         [Fact]
-        public void IsValidDocument_ShouldReturnFalse_WhenFileDoesNotExist()
+        public void WordprocessingDocument_IsValidDocument_ShouldReturnFalse_WhenFileDoesNotExist()
         {
             // Arrange
             string nonExistentPath = string.Concat(Path.GetTempPath(), "nonexistent.docx");
@@ -356,7 +355,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         }
 
         [Fact]
-        public void IsValidDocument_ShouldReturnFalse_WhenFileExtensionIsUnsupported()
+        public void WordprocessingDocument_IsValidDocument_ShouldReturnFalse_WhenFileExtensionIsUnsupported()
         {
             // Arrange
             string unsupportedFilePath = string.Concat(Path.GetTempPath(), "unsupported.txt");
@@ -377,7 +376,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         }
 
         [Fact]
-        public void IsValidDocument_ShouldReturnFalse_WhenDocumentTypeDoesNotMatchExtension()
+        public void WordprocessingDocument_IsValidDocument_ShouldReturnFalse_WhenDocumentTypeDoesNotMatchExtension()
         {
             // Arrange
             string filePath = string.Concat(Path.GetTempPath(), "test.docx");
@@ -398,7 +397,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         }
 
         [Fact]
-        public void IsValidDocument_ShouldReturnTrue_ForValidDocument()
+        public void WordprocessingDocument_IsValidDocument_ShouldReturnTrue_ForValidDocument()
         {
             // Arrange
             string filePath = string.Concat(Path.GetTempPath(), "test.docx");
@@ -424,7 +423,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         }
 
         [Fact]
-        public void IsValidDocument_ShouldReturnFalse_WhenDocumentIsCorrupted()
+        public void WordprocessingDocument_IsValidDocument_ShouldReturnFalse_WhenDocumentIsCorrupted()
         {
             // Arrange
             string corruptedFilePath = string.Concat(Path.GetTempPath(), "corrupt.docx");
@@ -446,6 +445,132 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             finally
             {
                 File.Delete(corruptedFilePath);
+            }
+        }
+
+        [Fact]
+        public void SpreadsheetDocument_IsValidDocument_ShouldReturnFalse_WhenPathIsNull()
+        {
+            // Act
+            bool result = SpreadsheetDocument.IsValidDocument(null);
+
+            // Assert
+            Assert.False(result);
+        }
+
+        [Fact]
+        public void SpreadsheetDocument_IsValidDocument_ShouldReturnFalse_WhenFileDoesNotExist()
+        {
+            // Arrange
+            string nonExistentPath = string.Concat(Path.GetTempPath(), "nonexistent.docx");
+
+            // Act
+            bool result = SpreadsheetDocument.IsValidDocument(nonExistentPath);
+
+            // Assert
+            Assert.False(result);
+        }
+
+        [Fact]
+        public void SpreadsheetDocument_IsValidDocument_ShouldReturnFalse_WhenFileExtensionIsUnsupported()
+        {
+            // Arrange
+            string unsupportedFilePath = Path.GetTempFileName();
+            File.WriteAllText(unsupportedFilePath, "Test content");
+
+            try
+            {
+                // Act
+                bool result = SpreadsheetDocument.IsValidDocument(unsupportedFilePath);
+
+                // Assert
+                Assert.False(result);
+            }
+            finally
+            {
+                File.Delete(unsupportedFilePath);
+            }
+        }
+
+        [Fact]
+        public void SpreadsheetDocument_IsValidDocument_ShouldReturnFalse_WhenDocumentTypeDoesNotMatchExtension()
+        {
+            // Arrange
+            string filePath = Path.Combine(Path.GetTempPath(), "test.xlsx");
+
+            using (SpreadsheetDocument spreadsheetDocument = SpreadsheetDocument.Create(filePath, SpreadsheetDocumentType.Workbook))
+            {
+                WorkbookPart wbp = spreadsheetDocument.AddWorkbookPart();
+                WorksheetPart wsp = wbp.AddNewPart<WorksheetPart>();
+                wbp.Workbook = new Spreadsheet.Workbook(new Spreadsheet.Sheets(new Spreadsheet.Sheet() { Id = wbp.GetIdOfPart(wsp), SheetId = 1, Name = "Sheet1" }));
+                wsp.Worksheet = new Spreadsheet.Worksheet(new Spreadsheet.SheetData());
+            }
+
+            try
+            {
+                // Act
+                bool result = SpreadsheetDocument.IsValidDocument(filePath, SpreadsheetDocumentType.Template);
+
+                // Assert
+                Assert.False(result);
+            }
+            finally
+            {
+                File.Delete(filePath);
+            }
+        }
+
+        [Fact]
+        public void SpreadsheetDocument_IsValidDocument_ShouldReturnTrue_ForValidDocument()
+        {
+            // Arrange
+            string filePath = Path.Combine(Path.GetTempPath(), "valid.xlsx");
+
+            using (SpreadsheetDocument spreadsheetDocument = SpreadsheetDocument.Create(filePath, SpreadsheetDocumentType.Workbook))
+            {
+                WorkbookPart wbp = spreadsheetDocument.AddWorkbookPart();
+                WorksheetPart wsp = wbp.AddNewPart<WorksheetPart>();
+                wbp.Workbook = new Spreadsheet.Workbook(new Spreadsheet.Sheets(new Spreadsheet.Sheet() { Id = wbp.GetIdOfPart(wsp), SheetId = 1, Name = "Sheet1" }));
+                wsp.Worksheet = new Spreadsheet.Worksheet(new Spreadsheet.SheetData());
+            }
+
+            try
+            {
+                // Act
+                bool result = SpreadsheetDocument.IsValidDocument(filePath);
+
+                // Assert
+                Assert.True(result);
+            }
+            finally
+            {
+                File.Delete(filePath);
+            }
+        }
+
+        [Fact]
+        public void SpreadsheetDocument_IsValidDocument_ShouldReturnFalse_WhenDocumentIsInvalid()
+        {
+            // Arrange
+            string filePath = Path.Combine(Path.GetTempPath(), "invalid.xlsx");
+
+            using (SpreadsheetDocument invalidSpreadsheetDocument = SpreadsheetDocument.Create(filePath, SpreadsheetDocumentType.Workbook))
+            {
+                WorkbookPart wbp = invalidSpreadsheetDocument.AddWorkbookPart();
+                WorksheetPart wsp = wbp.AddNewPart<WorksheetPart>();
+            }
+
+            try
+            {
+                // Act
+                bool result = SpreadsheetDocument.IsValidDocument(filePath);
+
+                // Assert
+                Assert.False(result);
+            }
+            finally
+            {
+                File.Delete(filePath);
             }
         }
     }

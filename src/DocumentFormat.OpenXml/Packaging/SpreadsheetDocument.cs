@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Builder;
 using DocumentFormat.OpenXml.Features;
+using DocumentFormat.OpenXml.Spreadsheet;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
@@ -266,6 +267,83 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="OpenXmlPackageException">Thrown when the package is not valid Open XML SpreadsheetDocument.</exception>
         public static SpreadsheetDocument Open(System.IO.Packaging.Package package)
             => Open(package, new OpenSettings());
+
+        /// <summary>
+        /// Validates whether the specified file is a valid SpreadsheetDocument of the given type.
+        /// </summary>
+        /// <param name="path">The path to the SpreadsheetDocument file.</param>
+        /// <param name="documentType">The expected type of the SpreadsheetDocument. Defaults to <see cref="SpreadsheetDocumentType.Workbook"/>.</param>
+        /// <returns>True if the file is a valid SpreadsheetDocument of the specified type; otherwise, false.</returns>
+        public static bool IsValidDocument(string path, SpreadsheetDocumentType documentType = SpreadsheetDocumentType.Workbook)
+        {
+            if (string.IsNullOrEmpty(path))
+            {
+                return false;
+            }
+
+            try
+            {
+                if (!File.Exists(path))
+                {
+                    return false;
+                }
+
+                string ext = new FileInfo(path).Extension.ToUpperInvariant();
+
+                switch (ext)
+                {
+                    case ".XLSX":
+                        if (documentType != SpreadsheetDocumentType.Workbook)
+                        {
+                            return false;
+                        }
+
+                        break;
+                    case ".XLTX":
+                        if (documentType != SpreadsheetDocumentType.Template)
+                        {
+                            return false;
+                        }
+
+                        break;
+                    case ".XLSM":
+                        if (documentType != SpreadsheetDocumentType.MacroEnabledWorkbook)
+                        {
+                            return false;
+                        }
+
+                        break;
+                    case ".XLTM":
+                        if (documentType != SpreadsheetDocumentType.MacroEnabledTemplate)
+                        {
+                            return false;
+                        }
+
+                        break;
+                    case ".XLAM":
+                        if (documentType != SpreadsheetDocumentType.AddIn)
+                        {
+                            return false;
+                        }
+
+                        break;
+                    default:
+                        return false;
+                }
+
+                using (SpreadsheetDocument spreadsheetDocument = Open(path, false))
+                {
+                    Sheet? sheet = spreadsheetDocument?.WorkbookPart?.Workbook?.Sheets?.GetFirstChild<Sheet>();
+                    SheetData? sheetData = spreadsheetDocument?.WorkbookPart?.WorksheetParts?.FirstOrDefaultAndMaxOne()?.Worksheet?.GetFirstChild<SheetData>();
+
+                    return sheet is not null && sheetData is not null;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
         /// <summary>
         /// Changes the document type.
