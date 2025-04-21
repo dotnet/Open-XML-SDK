@@ -40,6 +40,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class TwoCellAnchor : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "twoCellAnchor");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "CT_TwoCellAnchor");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TwoCellAnchor class.
         /// </summary>
@@ -84,7 +90,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:twoCellAnchor");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame>();
@@ -101,24 +107,24 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ToMarker), 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.ToMarker.ElementType, 1, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart), 1, 1, version: FileFormatVersions.Office2010)
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart.ElementType, 1, 1, version: FileFormatVersions.Office2010)
                         }
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData.ElementType, 1, 1)
             };
         }
 
@@ -131,8 +137,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker? FromMarker
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker.ElementType);
         }
 
         /// <summary>
@@ -144,8 +150,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.ToMarker? ToMarker
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ToMarker>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.ToMarker.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.ToMarker;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.ToMarker.ElementType);
         }
 
         /// <inheritdoc/>
@@ -173,6 +179,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class OneCellAnchor : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "oneCellAnchor");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "CT_OneCellAnchor");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OneCellAnchor class.
         /// </summary>
@@ -207,7 +219,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:oneCellAnchor");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape>();
@@ -219,24 +231,24 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent), 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent.ElementType, 1, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart), 1, 1, version: FileFormatVersions.Office2010)
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart.ElementType, 1, 1, version: FileFormatVersions.Office2010)
                         }
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData.ElementType, 1, 1)
             };
         }
 
@@ -249,8 +261,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker? FromMarker
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker.ElementType);
         }
 
         /// <summary>
@@ -262,8 +274,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent? Extent
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent.ElementType);
         }
 
         /// <inheritdoc/>
@@ -291,6 +303,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class AbsoluteAnchor : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "absoluteAnchor");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "CT_AbsoluteAnchor");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AbsoluteAnchor class.
         /// </summary>
@@ -325,7 +343,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:absoluteAnchor");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Position>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData>();
@@ -337,24 +355,24 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Position), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent), 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.Position.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent.ElementType, 1, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart), 1, 1, version: FileFormatVersions.Office2010)
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart.ElementType, 1, 1, version: FileFormatVersions.Office2010)
                         }
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData.ElementType, 1, 1)
             };
         }
 
@@ -367,8 +385,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.Position? Position
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.Position>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.Position.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.Position;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.Position.ElementType);
         }
 
         /// <summary>
@@ -380,8 +398,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent? Extent
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent.ElementType);
         }
 
         /// <inheritdoc/>
@@ -404,6 +422,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class Shape : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "sp");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "CT_Shape");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Shape class.
         /// </summary>
@@ -478,7 +502,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:sp");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody>();
@@ -490,10 +514,10 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
                 .AddAttribute("fPublished", a => a.Published);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeProperties.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody.ElementType, 0, 1)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("xdr:macro"), 0, 256));
         }
@@ -507,8 +531,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeProperties? NonVisualShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -520,8 +544,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties? ShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -533,8 +557,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle? ShapeStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle.ElementType);
         }
 
         /// <summary>
@@ -546,8 +570,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody? TextBody
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody.ElementType);
         }
 
         /// <inheritdoc/>
@@ -574,6 +598,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class GroupShape : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "grpSp");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "CT_GroupShape");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the GroupShape class.
         /// </summary>
@@ -608,7 +638,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:grpSp");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame>();
@@ -619,16 +649,16 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShapeProperties), 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeProperties.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShapeProperties.ElementType, 1, 1),
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart), 1, 1, version: FileFormatVersions.Office2010)
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShape.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.GraphicFrame.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.ConnectionShape.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.Picture.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart.ElementType, 1, 1, version: FileFormatVersions.Office2010)
                 }
             };
         }
@@ -642,8 +672,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeProperties? NonVisualGroupShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -655,8 +685,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShapeProperties? GroupShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShapeProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -678,6 +708,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class GraphicFrame : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "graphicFrame");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "CT_GraphicalObjectFrame");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the GraphicFrame class.
         /// </summary>
@@ -732,7 +768,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:graphicFrame");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Graphic>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.Transform>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties>();
@@ -741,9 +777,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
                 .AddAttribute("fPublished", a => a.Published);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.Transform), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Graphic), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.Transform.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Graphic.ElementType, 1, 1)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("xdr:macro"), 0, 256));
         }
@@ -757,8 +793,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties? NonVisualGraphicFrameProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties.ElementType);
         }
 
         /// <summary>
@@ -770,8 +806,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.Transform? Transform
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.Transform>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.Transform.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.Transform;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.Transform.ElementType);
         }
 
         /// <summary>
@@ -783,8 +819,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Graphic? Graphic
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Graphic.ElementType) as DocumentFormat.OpenXml.Drawing.Graphic;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Graphic.ElementType);
         }
 
         /// <inheritdoc/>
@@ -806,6 +842,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class ConnectionShape : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "cxnSp");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "CT_Connector");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ConnectionShape class.
         /// </summary>
@@ -860,7 +902,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:cxnSp");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties>();
@@ -869,9 +911,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
                 .AddAttribute("fPublished", a => a.Published);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle.ElementType, 0, 1)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("xdr:macro"), 0, 256));
         }
@@ -885,8 +927,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties? NonVisualConnectionShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -898,8 +940,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties? ShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -911,8 +953,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle? ShapeStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle.ElementType);
         }
 
         /// <inheritdoc/>
@@ -935,6 +977,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class Picture : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "pic");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "CT_Picture");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Picture class.
         /// </summary>
@@ -989,7 +1037,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:pic");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.BlipFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle>();
@@ -999,10 +1047,10 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
                 .AddAttribute("fPublished", a => a.Published);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.BlipFill), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureProperties.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.BlipFill.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle.ElementType, 0, 1)
             };
         }
 
@@ -1015,8 +1063,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureProperties? NonVisualPictureProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureProperties.ElementType);
         }
 
         /// <summary>
@@ -1028,8 +1076,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.BlipFill? BlipFill
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.BlipFill>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.BlipFill.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.BlipFill;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.BlipFill.ElementType);
         }
 
         /// <summary>
@@ -1041,8 +1089,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties? ShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -1054,8 +1102,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle? ShapeStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle.ElementType);
         }
 
         /// <inheritdoc/>
@@ -1078,6 +1126,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class ContentPart : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "contentPart");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing", "CT_ContentPart");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ContentPart class.
         /// </summary>
@@ -1135,7 +1189,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:contentPart");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D>();
@@ -1152,10 +1206,10 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D.ElementType, 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2010)
             };
         }
 
@@ -1168,8 +1222,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties? ExcelNonVisualContentPartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties.ElementType) as DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties.ElementType);
         }
 
         /// <summary>
@@ -1181,8 +1235,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties.ElementType) as DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties.ElementType);
         }
 
         /// <summary>
@@ -1194,8 +1248,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D? Transform2D
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D.ElementType) as DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D.ElementType);
         }
 
         /// <summary>
@@ -1207,8 +1261,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList? OfficeArtExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList.ElementType) as DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -1230,6 +1284,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class WorksheetDrawing : OpenXmlPartRootElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "wsDr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "CT_Drawing");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the WorksheetDrawing class.
         /// </summary>
@@ -1264,7 +1324,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:wsDr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.AbsoluteAnchor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.OneCellAnchor>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.TwoCellAnchor>();
@@ -1274,9 +1334,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.TwoCellAnchor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.OneCellAnchor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.AbsoluteAnchor), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.TwoCellAnchor.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.OneCellAnchor.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.AbsoluteAnchor.ElementType, 1, 1)
                     }
                 }
             };
@@ -1331,6 +1391,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class NonVisualShapeProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "nvSpPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "CT_ShapeNonVisual");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NonVisualShapeProperties class.
         /// </summary>
@@ -1365,13 +1431,13 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:nvSpPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeDrawingProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeDrawingProperties), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeDrawingProperties.ElementType, 1, 1)
             };
         }
 
@@ -1384,8 +1450,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties.ElementType);
         }
 
         /// <summary>
@@ -1397,8 +1463,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeDrawingProperties? NonVisualShapeDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeDrawingProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeDrawingProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeDrawingProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -1432,6 +1498,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "spPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ShapeProperties");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShapeProperties class.
         /// </summary>
@@ -1476,7 +1548,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:spPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
@@ -1499,39 +1571,39 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Transform2D.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.CustomGeometry.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.PresetGeometry.ElementType, 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.NoFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.GradientFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.BlipFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.PatternFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.GroupFill.ElementType, 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Outline.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.EffectList.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Scene3DType.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Shape3DType.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -1544,8 +1616,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Transform2D.ElementType) as DocumentFormat.OpenXml.Drawing.Transform2D;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Transform2D.ElementType);
         }
 
         /// <inheritdoc/>
@@ -1568,6 +1640,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class ShapeStyle : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "style");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ShapeStyle");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShapeStyle class.
         /// </summary>
@@ -1602,17 +1680,17 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:style");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.FontReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.LineReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.FillReference>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectReference>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.LineReference), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FillReference), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectReference), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.FontReference), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.LineReference.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.FillReference.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.EffectReference.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.FontReference.ElementType, 1, 1)
             };
         }
 
@@ -1625,8 +1703,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.LineReference? LineReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.LineReference>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.LineReference.ElementType) as DocumentFormat.OpenXml.Drawing.LineReference;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.LineReference.ElementType);
         }
 
         /// <summary>
@@ -1638,8 +1716,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.FillReference? FillReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.FillReference>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.FillReference.ElementType) as DocumentFormat.OpenXml.Drawing.FillReference;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.FillReference.ElementType);
         }
 
         /// <summary>
@@ -1651,8 +1729,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.EffectReference? EffectReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.EffectReference.ElementType) as DocumentFormat.OpenXml.Drawing.EffectReference;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.EffectReference.ElementType);
         }
 
         /// <summary>
@@ -1664,8 +1742,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.FontReference? FontReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.FontReference>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.FontReference.ElementType) as DocumentFormat.OpenXml.Drawing.FontReference;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.FontReference.ElementType);
         }
 
         /// <inheritdoc/>
@@ -1687,6 +1765,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class TextBody : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "txBody");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextBody");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TextBody class.
         /// </summary>
@@ -1721,15 +1805,15 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:txBody");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BodyProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ListStyle>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Paragraph>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ListStyle), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Paragraph), 1, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.BodyProperties.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ListStyle.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Paragraph.ElementType, 1, 0)
             };
         }
 
@@ -1742,8 +1826,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.BodyProperties? BodyProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.BodyProperties.ElementType) as DocumentFormat.OpenXml.Drawing.BodyProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.BodyProperties.ElementType);
         }
 
         /// <summary>
@@ -1755,8 +1839,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ListStyle? ListStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.ListStyle.ElementType) as DocumentFormat.OpenXml.Drawing.ListStyle;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.ListStyle.ElementType);
         }
 
         /// <inheritdoc/>
@@ -1777,6 +1861,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "nvCxnSpPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "CT_ConnectorNonVisual");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NonVisualConnectionShapeProperties class.
         /// </summary>
@@ -1811,13 +1901,13 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:nvCxnSpPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectorShapeDrawingProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectorShapeDrawingProperties), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectorShapeDrawingProperties.ElementType, 1, 1)
             };
         }
 
@@ -1830,8 +1920,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties.ElementType);
         }
 
         /// <summary>
@@ -1843,8 +1933,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectorShapeDrawingProperties? NonVisualConnectorShapeDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectorShapeDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectorShapeDrawingProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectorShapeDrawingProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectorShapeDrawingProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -1865,6 +1955,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "nvPicPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "CT_PictureNonVisual");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NonVisualPictureProperties class.
         /// </summary>
@@ -1899,13 +1995,13 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:nvPicPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureDrawingProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureDrawingProperties), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureDrawingProperties.ElementType, 1, 1)
             };
         }
 
@@ -1918,8 +2014,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties.ElementType);
         }
 
         /// <summary>
@@ -1931,8 +2027,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureDrawingProperties? NonVisualPictureDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureDrawingProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureDrawingProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureDrawingProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -1955,6 +2051,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class BlipFill : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "blipFill");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_BlipFillProperties2");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the BlipFill class.
         /// </summary>
@@ -1999,7 +2101,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:blipFill");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Blip>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.SourceRectangle>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Stretch>();
@@ -2008,14 +2110,14 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
                 .AddAttribute("rotWithShape", a => a.RotateWithShape);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Blip), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SourceRectangle), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Blip.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.SourceRectangle.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Tile), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Stretch), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Tile.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.Stretch.ElementType, 1, 1)
                     }
                 }
             };
@@ -2030,8 +2132,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Blip? Blip
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Blip>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Blip.ElementType) as DocumentFormat.OpenXml.Drawing.Blip;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Blip.ElementType);
         }
 
         /// <summary>
@@ -2043,8 +2145,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SourceRectangle? SourceRectangle
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.SourceRectangle>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.SourceRectangle.ElementType) as DocumentFormat.OpenXml.Drawing.SourceRectangle;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.SourceRectangle.ElementType);
         }
 
         /// <inheritdoc/>
@@ -2065,6 +2167,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "nvGraphicFramePr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "CT_GraphicalObjectFrameNonVisual");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NonVisualGraphicFrameProperties class.
         /// </summary>
@@ -2099,13 +2207,13 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:nvGraphicFramePr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameDrawingProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameDrawingProperties), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameDrawingProperties.ElementType, 1, 1)
             };
         }
 
@@ -2118,8 +2226,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties.ElementType);
         }
 
         /// <summary>
@@ -2131,8 +2239,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameDrawingProperties? NonVisualGraphicFrameDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameDrawingProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameDrawingProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameDrawingProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -2153,6 +2261,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class Transform : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "xfrm");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Transform2D");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Transform class.
         /// </summary>
@@ -2217,7 +2331,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:xfrm");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
             builder.AddElement<Transform>()
@@ -2226,8 +2340,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
                 .AddAttribute("flipV", a => a.VerticalFlip);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extents), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Offset.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Extents.ElementType, 0, 1)
             };
         }
 
@@ -2240,8 +2354,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Offset? Offset
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Offset.ElementType) as DocumentFormat.OpenXml.Drawing.Offset;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Offset.ElementType);
         }
 
         /// <summary>
@@ -2253,8 +2367,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Extents? Extents
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Extents.ElementType) as DocumentFormat.OpenXml.Drawing.Extents;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Extents.ElementType);
         }
 
         /// <inheritdoc/>
@@ -2268,6 +2382,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </summary>
     public partial class ColumnId : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "col");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "ST_ColID");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ColumnId class.
         /// </summary>
@@ -2292,7 +2412,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
-            builder.SetSchema("xdr:col");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2306,6 +2426,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </summary>
     public partial class ColumnOffset : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "colOff");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "ST_Coordinate");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ColumnOffset class.
         /// </summary>
@@ -2330,7 +2456,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Int64Value>(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-            builder.SetSchema("xdr:colOff");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2344,6 +2470,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </summary>
     public partial class RowOffset : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "rowOff");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "ST_Coordinate");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RowOffset class.
         /// </summary>
@@ -2368,7 +2500,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Int64Value>(new NumberValidator() { MinInclusive = (-27273042329600L), MaxInclusive = (27273042316900L) });
-            builder.SetSchema("xdr:rowOff");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2382,6 +2514,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </summary>
     public partial class RowId : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "row");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "ST_RowID");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RowId class.
         /// </summary>
@@ -2406,7 +2544,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<Int32Value>(new NumberValidator() { MinInclusive = (0L) });
-            builder.SetSchema("xdr:row");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2429,6 +2567,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class FromMarker : MarkerType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "from");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "CT_Marker");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FromMarker class.
         /// </summary>
@@ -2463,13 +2607,13 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:from");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset.ElementType, 1, 1)
             };
         }
 
@@ -2493,6 +2637,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class ToMarker : MarkerType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "to");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "CT_Marker");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ToMarker class.
         /// </summary>
@@ -2527,13 +2677,13 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:to");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset.ElementType, 1, 1)
             };
         }
 
@@ -2557,6 +2707,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public abstract partial class MarkerType : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "CT_Marker");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MarkerType class.
         /// </summary>
@@ -2606,8 +2762,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId? ColumnId
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId.ElementType);
         }
 
         /// <summary>
@@ -2619,8 +2775,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset? ColumnOffset
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset.ElementType);
         }
 
         /// <summary>
@@ -2632,8 +2788,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId? RowId
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId.ElementType);
         }
 
         /// <summary>
@@ -2645,8 +2801,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset? RowOffset
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset.ElementType);
         }
     }
 
@@ -2657,6 +2813,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </summary>
     public partial class ClientData : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "clientData");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "CT_AnchorClientData");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ClientData class.
         /// </summary>
@@ -2687,7 +2849,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:clientData");
+            builder.SetSchema(ElementType);
             builder.AddElement<ClientData>()
                 .AddAttribute("fLocksWithSheet", a => a.LockWithSheet)
                 .AddAttribute("fPrintsWithSheet", a => a.PrintWithSheet);
@@ -2704,6 +2866,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </summary>
     public partial class Extent : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_PositiveSize2D");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Extent class.
         /// </summary>
@@ -2734,7 +2902,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:ext");
+            builder.SetSchema(ElementType);
             builder.AddElement<Extent>()
                 .AddAttribute("cx", a => a.Cx, aBuilder =>
                 {
@@ -2759,6 +2927,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </summary>
     public partial class Position : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "pos");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Point2D");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Position class.
         /// </summary>
@@ -2789,7 +2963,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:pos");
+            builder.SetSchema(ElementType);
             builder.AddElement<Position>()
                 .AddAttribute("x", a => a.X, aBuilder =>
                 {
@@ -2822,6 +2996,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "cNvPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_SpreadSheetNonVisualDrawingProps");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NonVisualDrawingProperties class.
         /// </summary>
@@ -2906,7 +3086,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:cNvPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
@@ -2924,9 +3104,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
                 .AddAttribute("title", a => a.Title);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList.ElementType, 0, 1)
             };
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName("xdr:id"), true, null));
         }
@@ -2940,8 +3120,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick? HyperlinkOnClick
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick.ElementType) as DocumentFormat.OpenXml.Drawing.HyperlinkOnClick;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.HyperlinkOnClick.ElementType);
         }
 
         /// <summary>
@@ -2953,8 +3133,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover? HyperlinkOnHover
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover.ElementType) as DocumentFormat.OpenXml.Drawing.HyperlinkOnHover;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.HyperlinkOnHover.ElementType);
         }
 
         /// <summary>
@@ -2966,8 +3146,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -2988,6 +3168,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "cNvSpPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_NonVisualDrawingShapeProps");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NonVisualShapeDrawingProperties class.
         /// </summary>
@@ -3032,15 +3218,15 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:cNvSpPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapeLocks>();
             builder.AddElement<NonVisualShapeDrawingProperties>()
                 .AddAttribute("txBox", a => a.TextBox);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapeLocks), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ShapeLocks.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -3053,8 +3239,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ShapeLocks? ShapeLocks
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ShapeLocks>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.ShapeLocks.ElementType) as DocumentFormat.OpenXml.Drawing.ShapeLocks;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.ShapeLocks.ElementType);
         }
 
         /// <summary>
@@ -3066,8 +3252,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -3090,6 +3276,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "cNvCxnSpPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_NonVisualConnectorProperties");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NonVisualConnectorShapeDrawingProperties class.
         /// </summary>
@@ -3124,17 +3316,17 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:cNvCxnSpPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.StartConnection>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EndConnection>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.StartConnection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EndConnection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.StartConnection.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.EndConnection.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -3147,8 +3339,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks? ConnectionShapeLocks
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks.ElementType) as DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks.ElementType);
         }
 
         /// <summary>
@@ -3160,8 +3352,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.StartConnection? StartConnection
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.StartConnection>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.StartConnection.ElementType) as DocumentFormat.OpenXml.Drawing.StartConnection;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.StartConnection.ElementType);
         }
 
         /// <summary>
@@ -3173,8 +3365,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.EndConnection? EndConnection
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.EndConnection>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.EndConnection.ElementType) as DocumentFormat.OpenXml.Drawing.EndConnection;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.EndConnection.ElementType);
         }
 
         /// <summary>
@@ -3186,8 +3378,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -3208,6 +3400,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "cNvPicPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_NonVisualPictureProperties");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NonVisualPictureDrawingProperties class.
         /// </summary>
@@ -3252,15 +3450,15 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:cNvPicPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.PictureLocks>();
             builder.AddElement<NonVisualPictureDrawingProperties>()
                 .AddAttribute("preferRelativeResize", a => a.PreferRelativeResize);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PictureLocks), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.PictureLocks.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -3273,8 +3471,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PictureLocks? PictureLocks
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.PictureLocks>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.PictureLocks.ElementType) as DocumentFormat.OpenXml.Drawing.PictureLocks;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.PictureLocks.ElementType);
         }
 
         /// <summary>
@@ -3286,8 +3484,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList? NonVisualPicturePropertiesExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -3308,6 +3506,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "cNvGraphicFramePr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_NonVisualGraphicFrameProperties");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NonVisualGraphicFrameDrawingProperties class.
         /// </summary>
@@ -3342,13 +3546,13 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:cNvGraphicFramePr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -3361,8 +3565,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.GraphicFrameLocks? GraphicFrameLocks
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks.ElementType) as DocumentFormat.OpenXml.Drawing.GraphicFrameLocks;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.GraphicFrameLocks.ElementType);
         }
 
         /// <summary>
@@ -3374,8 +3578,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -3396,6 +3600,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "cNvGrpSpPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_NonVisualGroupDrawingShapeProps");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NonVisualGroupShapeDrawingProperties class.
         /// </summary>
@@ -3430,13 +3640,13 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:cNvGrpSpPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupShapeLocks), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.GroupShapeLocks.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -3449,8 +3659,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.GroupShapeLocks? GroupShapeLocks
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.GroupShapeLocks.ElementType) as DocumentFormat.OpenXml.Drawing.GroupShapeLocks;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.GroupShapeLocks.ElementType);
         }
 
         /// <summary>
@@ -3462,8 +3672,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList? NonVisualGroupDrawingShapePropsExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -3484,6 +3694,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "nvGrpSpPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "CT_GroupShapeNonVisual");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the NonVisualGroupShapeProperties class.
         /// </summary>
@@ -3518,13 +3734,13 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:nvGrpSpPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeDrawingProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeDrawingProperties), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeDrawingProperties.ElementType, 1, 1)
             };
         }
 
@@ -3537,8 +3753,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties.ElementType);
         }
 
         /// <summary>
@@ -3550,8 +3766,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeDrawingProperties? NonVisualGroupShapeDrawingProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeDrawingProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeDrawingProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeDrawingProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeDrawingProperties.ElementType);
         }
 
         /// <inheritdoc/>
@@ -3581,6 +3797,12 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// </remarks>
     public partial class GroupShapeProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "grpSpPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_GroupShapeProperties");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the GroupShapeProperties class.
         /// </summary>
@@ -3625,7 +3847,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xdr:grpSpPr");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
@@ -3644,29 +3866,29 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TransformGroup), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.TransformGroup.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.NoFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.GradientFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.BlipFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.PatternFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.GroupFill.ElementType, 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.EffectList.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Scene3DType.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -3679,8 +3901,8 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.TransformGroup? TransformGroup
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.TransformGroup>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.TransformGroup.ElementType) as DocumentFormat.OpenXml.Drawing.TransformGroup;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.TransformGroup.ElementType);
         }
 
         /// <inheritdoc/>

@@ -23,6 +23,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </summary>
     public partial class UnsizedControlClone : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "control");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_ControlCloneRegular");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the UnsizedControlClone class.
         /// </summary>
@@ -293,7 +299,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:control");
+            builder.SetSchema(ElementType);
             builder.AddElement<UnsizedControlClone>()
                 .AddAttribute("idQ", a => a.IdQ, aBuilder =>
                 {
@@ -400,6 +406,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </summary>
     public partial class UnsizedButton : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "button");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_ButtonRegular");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the UnsizedButton class.
         /// </summary>
@@ -710,7 +722,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:button");
+            builder.SetSchema(ElementType);
             builder.AddElement<UnsizedButton>()
                 .AddAttribute("onAction", a => a.OnAction, aBuilder =>
                 {
@@ -833,6 +845,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </summary>
     public partial class CheckBox : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "checkBox");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_CheckBox");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CheckBox class.
         /// </summary>
@@ -1083,7 +1101,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:checkBox");
+            builder.SetSchema(ElementType);
             builder.AddElement<CheckBox>()
                 .AddAttribute("getPressed", a => a.GetPressed, aBuilder =>
                 {
@@ -1195,6 +1213,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </remarks>
     public partial class UnsizedGallery : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "gallery");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_GalleryRegular");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the UnsizedGallery class.
         /// </summary>
@@ -1709,7 +1733,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:gallery");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Item>();
             builder.AddElement<UnsizedGallery>()
@@ -1890,8 +1914,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Item), 0, 1000),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 0, 16)
+                        new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.Item.ElementType, 0, 1000),
+                        new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton.ElementType, 0, 16)
                     }
                 }
             };
@@ -1908,6 +1932,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </summary>
     public partial class UnsizedToggleButton : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "toggleButton");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_ToggleButtonRegular");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the UnsizedToggleButton class.
         /// </summary>
@@ -2228,7 +2258,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:toggleButton");
+            builder.SetSchema(ElementType);
             builder.AddElement<UnsizedToggleButton>()
                 .AddAttribute("getPressed", a => a.GetPressed, aBuilder =>
                 {
@@ -2355,6 +2385,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </summary>
     public partial class MenuSeparator : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "menuSeparator");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_MenuSeparator");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MenuSeparator class.
         /// </summary>
@@ -2445,7 +2481,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:menuSeparator");
+            builder.SetSchema(ElementType);
             builder.AddElement<MenuSeparator>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -2500,6 +2536,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </remarks>
     public partial class UnsizedSplitButton : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "splitButton");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_SplitButtonRegular");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the UnsizedSplitButton class.
         /// </summary>
@@ -2694,7 +2736,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:splitButton");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.VisibleButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton>();
@@ -2760,10 +2802,10 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.VisibleButton), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.VisibleButton.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton.ElementType, 1, 1)
                     },
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu.ElementType, 1, 1)
                 }
             };
         }
@@ -2793,6 +2835,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </remarks>
     public partial class UnsizedMenu : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "menu");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_MenuRegular");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the UnsizedMenu class.
         /// </summary>
@@ -3127,7 +3175,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:menu");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.CheckBox>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone>();
@@ -3253,21 +3301,21 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
                         {
                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.CheckBox), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator), 1, 1)
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.CheckBox.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator.ElementType, 1, 1)
                             }
                         },
                         new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu), 1, 1)
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu.ElementType, 1, 1)
                             }
                         }
                     }
@@ -3286,6 +3334,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </summary>
     public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "dynamicMenu");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_DynamicMenuRegular");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the UnsizedDynamicMenu class.
         /// </summary>
@@ -3606,7 +3660,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:dynamicMenu");
+            builder.SetSchema(ElementType);
             builder.AddElement<UnsizedDynamicMenu>()
                 .AddAttribute("description", a => a.Description, aBuilder =>
                 {
@@ -3739,6 +3793,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </remarks>
     public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "splitButton");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_SplitButtonWithTitle");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SplitButtonWithTitle class.
         /// </summary>
@@ -3933,7 +3993,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:splitButton");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.MenuWithTitle>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.VisibleButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton>();
@@ -3999,10 +4059,10 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.VisibleButton), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.VisibleButton.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton.ElementType, 1, 1)
                     },
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.MenuWithTitle), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.MenuWithTitle.ElementType, 1, 1)
                 }
             };
         }
@@ -4032,6 +4092,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </remarks>
     public partial class MenuWithTitle : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "menu");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_MenuWithTitle");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MenuWithTitle class.
         /// </summary>
@@ -4366,7 +4432,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:menu");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.CheckBox>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone>();
@@ -4492,21 +4558,21 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
                         {
                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.CheckBox), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator), 1, 1)
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.CheckBox.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator.ElementType, 1, 1)
                             }
                         },
                         new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                         {
                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.SplitButtonWithTitle), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.MenuWithTitle), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu), 1, 1)
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.SplitButtonWithTitle.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.MenuWithTitle.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu.ElementType, 1, 1)
                             }
                         }
                     }
@@ -4525,6 +4591,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </summary>
     public partial class ControlClone : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "control");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_ControlClone");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ControlClone class.
         /// </summary>
@@ -4835,7 +4907,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:control");
+            builder.SetSchema(ElementType);
             builder.AddElement<ControlClone>()
                 .AddAttribute("size", a => a.Size)
                 .AddAttribute("getSize", a => a.GetSize, aBuilder =>
@@ -4955,6 +5027,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </summary>
     public partial class TextLabel : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "labelControl");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_LabelControl");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TextLabel class.
         /// </summary>
@@ -5165,7 +5243,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:labelControl");
+            builder.SetSchema(ElementType);
             builder.AddElement<TextLabel>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -5251,6 +5329,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </summary>
     public partial class Button : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "button");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_Button");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Button class.
         /// </summary>
@@ -5581,7 +5665,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:button");
+            builder.SetSchema(ElementType);
             builder.AddElement<Button>()
                 .AddAttribute("size", a => a.Size)
                 .AddAttribute("getSize", a => a.GetSize, aBuilder =>
@@ -5709,6 +5793,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </summary>
     public partial class ToggleButton : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "toggleButton");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_ToggleButton");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ToggleButton class.
         /// </summary>
@@ -6049,7 +6139,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:toggleButton");
+            builder.SetSchema(ElementType);
             builder.AddElement<ToggleButton>()
                 .AddAttribute("size", a => a.Size)
                 .AddAttribute("getSize", a => a.GetSize, aBuilder =>
@@ -6181,6 +6271,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </summary>
     public partial class EditBox : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "editBox");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_EditBox");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the EditBox class.
         /// </summary>
@@ -6501,7 +6597,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:editBox");
+            builder.SetSchema(ElementType);
             builder.AddElement<EditBox>()
                 .AddAttribute("enabled", a => a.Enabled)
                 .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
@@ -6634,6 +6730,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </remarks>
     public partial class ComboBox : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "comboBox");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_ComboBox");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ComboBox class.
         /// </summary>
@@ -7058,7 +7160,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:comboBox");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Item>();
             builder.AddElement<ComboBox>()
                 .AddAttribute("showItemImage", a => a.ShowItemImage)
@@ -7203,7 +7305,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Item), 0, 1000)
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.Item.ElementType, 0, 1000)
                 }
             };
         }
@@ -7226,6 +7328,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </remarks>
     public partial class DropDown : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "dropDown");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_DropDownRegular");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DropDown class.
         /// </summary>
@@ -7650,7 +7758,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:dropDown");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Item>();
             builder.AddElement<DropDown>()
@@ -7796,8 +7904,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Item), 0, 1000),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 0, 16)
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.Item.ElementType, 0, 1000),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton.ElementType, 0, 16)
                 }
             };
         }
@@ -7820,6 +7928,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </remarks>
     public partial class Gallery : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "gallery");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_Gallery");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Gallery class.
         /// </summary>
@@ -8354,7 +8468,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:gallery");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Item>();
             builder.AddElement<Gallery>()
@@ -8542,8 +8656,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
                     {
                         new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Item), 0, 1000),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 0, 16)
+                            new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.Item.ElementType, 0, 1000),
+                            new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton.ElementType, 0, 16)
                         }
                     }
                 }
@@ -8575,6 +8689,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </remarks>
     public partial class Menu : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "menu");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_Menu");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Menu class.
         /// </summary>
@@ -8929,7 +9049,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:menu");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.CheckBox>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone>();
@@ -9062,21 +9182,21 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
                             {
                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                 {
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone), 1, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.CheckBox), 1, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery), 1, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton), 1, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator), 1, 1)
+                                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone.ElementType, 1, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton.ElementType, 1, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.CheckBox.ElementType, 1, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery.ElementType, 1, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton.ElementType, 1, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator.ElementType, 1, 1)
                                 }
                             },
                             new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                             {
                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                 {
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton), 1, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu), 1, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu), 1, 1)
+                                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton.ElementType, 1, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu.ElementType, 1, 1),
+                                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu.ElementType, 1, 1)
                                 }
                             }
                         }
@@ -9096,6 +9216,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </summary>
     public partial class DynamicMenu : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "dynamicMenu");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_DynamicMenu");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DynamicMenu class.
         /// </summary>
@@ -9436,7 +9562,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:dynamicMenu");
+            builder.SetSchema(ElementType);
             builder.AddElement<DynamicMenu>()
                 .AddAttribute("size", a => a.Size)
                 .AddAttribute("getSize", a => a.GetSize, aBuilder =>
@@ -9574,6 +9700,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </remarks>
     public partial class SplitButton : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "splitButton");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_SplitButton");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SplitButton class.
         /// </summary>
@@ -9788,7 +9920,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:splitButton");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.VisibleButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton>();
@@ -9861,10 +9993,10 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
                     {
                         new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.VisibleButton), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton), 1, 1)
+                            new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.VisibleButton.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton.ElementType, 1, 1)
                         },
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu.ElementType, 1, 1)
                     }
                 }
             };
@@ -9900,6 +10032,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </remarks>
     public partial class Box : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "box");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_Box");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Box class.
         /// </summary>
@@ -10024,7 +10162,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:box");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Box>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Button>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.ButtonGroup>();
@@ -10074,20 +10212,20 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.ControlClone), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.TextLabel), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Button), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.ToggleButton), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.CheckBox), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.EditBox), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.ComboBox), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.DropDown), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Gallery), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Menu), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.DynamicMenu), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.SplitButton), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Box), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.ButtonGroup), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.ControlClone.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.TextLabel.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.Button.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.ToggleButton.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.CheckBox.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.EditBox.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.ComboBox.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.DropDown.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.Gallery.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.Menu.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.DynamicMenu.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.SplitButton.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.Box.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.ButtonGroup.ElementType, 1, 1)
                 }
             };
         }
@@ -10115,6 +10253,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </remarks>
     public partial class ButtonGroup : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "buttonGroup");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_ButtonGroup");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ButtonGroup class.
         /// </summary>
@@ -10229,7 +10373,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:buttonGroup");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu>();
@@ -10271,13 +10415,13 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton.ElementType, 1, 1)
                 }
             };
         }
@@ -10307,6 +10451,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </remarks>
     public partial class MenuRoot : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "menu");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_MenuRoot");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MenuRoot class.
         /// </summary>
@@ -10371,7 +10521,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:menu");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.CheckBox>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone>();
@@ -10399,21 +10549,21 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
                     {
                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.CheckBox), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator), 1, 1)
+                            new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.CheckBox.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator.ElementType, 1, 1)
                         }
                     },
                     new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                     {
                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu), 1, 1)
+                            new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu.ElementType, 1, 1)
                         }
                     }
                 }
@@ -10438,6 +10588,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </remarks>
     public partial class CustomUI : OpenXmlPartRootElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "customUI");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_CustomUI");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CustomUI class.
         /// </summary>
@@ -10492,7 +10648,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:customUI");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommands>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Ribbon>();
             builder.AddElement<CustomUI>()
@@ -10506,8 +10662,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommands), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Ribbon), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommands.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.Ribbon.ElementType, 0, 1)
             };
         }
 
@@ -10520,8 +10676,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommands? RepurposedCommands
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommands>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommands.ElementType) as DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommands;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommands.ElementType);
         }
 
         /// <summary>
@@ -10533,8 +10689,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomUI.Ribbon? Ribbon
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.Ribbon>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office.CustomUI.Ribbon.ElementType) as DocumentFormat.OpenXml.Office.CustomUI.Ribbon;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.CustomUI.Ribbon.ElementType);
         }
 
         /// <inheritdoc/>
@@ -10548,6 +10704,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </summary>
     public partial class Item : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "item");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_Item");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Item class.
         /// </summary>
@@ -10618,7 +10780,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:item");
+            builder.SetSchema(ElementType);
             builder.AddElement<Item>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -10657,6 +10819,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </summary>
     public partial class VisibleButton : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "button");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_VisibleButton");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the VisibleButton class.
         /// </summary>
@@ -10947,7 +11115,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:button");
+            builder.SetSchema(ElementType);
             builder.AddElement<VisibleButton>()
                 .AddAttribute("onAction", a => a.OnAction, aBuilder =>
                 {
@@ -11065,6 +11233,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </summary>
     public partial class VisibleToggleButton : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "toggleButton");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_VisibleToggleButton");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the VisibleToggleButton class.
         /// </summary>
@@ -11365,7 +11539,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:toggleButton");
+            builder.SetSchema(ElementType);
             builder.AddElement<VisibleToggleButton>()
                 .AddAttribute("getPressed", a => a.GetPressed, aBuilder =>
                 {
@@ -11487,6 +11661,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </summary>
     public partial class VerticalSeparator : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "separator");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_Separator");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the VerticalSeparator class.
         /// </summary>
@@ -11577,7 +11757,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:separator");
+            builder.SetSchema(ElementType);
             builder.AddElement<VerticalSeparator>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -11627,6 +11807,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </remarks>
     public partial class DialogBoxLauncher : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "dialogBoxLauncher");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_DialogLauncher");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DialogBoxLauncher class.
         /// </summary>
@@ -11661,11 +11847,11 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:dialogBoxLauncher");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton.ElementType, 1, 1)
             };
         }
 
@@ -11678,8 +11864,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton? UnsizedButton
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton.ElementType) as DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton.ElementType);
         }
 
         /// <inheritdoc/>
@@ -11714,6 +11900,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </remarks>
     public partial class Group : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "group");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_Group");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Group class.
         /// </summary>
@@ -11958,7 +12150,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:group");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Box>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Button>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.ButtonGroup>();
@@ -12067,26 +12259,26 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
                         {
                             new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                             {
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.ControlClone), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.TextLabel), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Button), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.ToggleButton), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.CheckBox), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.EditBox), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.ComboBox), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.DropDown), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Gallery), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Menu), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.DynamicMenu), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.SplitButton), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Box), 1, 1),
-                                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.ButtonGroup), 1, 1)
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.ControlClone.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.TextLabel.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.Button.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.ToggleButton.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.CheckBox.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.EditBox.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.ComboBox.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.DropDown.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.Gallery.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.Menu.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.DynamicMenu.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.SplitButton.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.Box.ElementType, 1, 1),
+                                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.ButtonGroup.ElementType, 1, 1)
                             }
                         },
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.VerticalSeparator), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.VerticalSeparator.ElementType, 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.DialogBoxLauncher), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.DialogBoxLauncher.ElementType, 0, 1)
             };
         }
 
@@ -12101,6 +12293,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </summary>
     public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "control");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_ControlCloneQat");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the QuickAccessToolbarControlClone class.
         /// </summary>
@@ -12411,7 +12609,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:control");
+            builder.SetSchema(ElementType);
             builder.AddElement<QuickAccessToolbarControlClone>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -12539,6 +12737,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </remarks>
     public partial class SharedQatControls : QatItemsType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "sharedControls");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_QatItems");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SharedQatControls class.
         /// </summary>
@@ -12573,14 +12777,14 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:sharedControls");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbarControlClone), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.VerticalSeparator), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbarControlClone.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.VerticalSeparator.ElementType, 1, 1)
                 }
             };
         }
@@ -12604,6 +12808,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </remarks>
     public partial class DocumentSpecificQuickAccessToolbarControls : QatItemsType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "documentControls");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_QatItems");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DocumentSpecificQuickAccessToolbarControls class.
         /// </summary>
@@ -12638,14 +12848,14 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:documentControls");
+            builder.SetSchema(ElementType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbarControlClone), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.VerticalSeparator), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbarControlClone.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton.ElementType, 1, 1),
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.VerticalSeparator.ElementType, 1, 1)
                 }
             };
         }
@@ -12669,6 +12879,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </remarks>
     public abstract partial class QatItemsType : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_QatItems");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the QatItemsType class.
         /// </summary>
@@ -12722,6 +12938,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </remarks>
     public partial class Tab : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "tab");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_Tab");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Tab class.
         /// </summary>
@@ -12896,7 +13118,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:tab");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Group>();
             builder.AddElement<Tab>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
@@ -12956,7 +13178,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 100)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Group), 1, 1)
+                    new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.Group.ElementType, 1, 1)
                 }
             };
         }
@@ -12978,6 +13200,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </remarks>
     public partial class ContextualTabSet : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "tabSet");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_TabSet");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ContextualTabSet class.
         /// </summary>
@@ -13042,7 +13270,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:tabSet");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Tab>();
             builder.AddElement<ContextualTabSet>()
                 .AddAttribute("idMso", a => a.IdMso, aBuilder =>
@@ -13057,7 +13285,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Tab), 0, 50)
+                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.Tab.ElementType, 0, 50)
             };
         }
 
@@ -13072,6 +13300,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </summary>
     public partial class RepurposedCommand : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "command");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_Command");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RepurposedCommand class.
         /// </summary>
@@ -13122,7 +13356,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:command");
+            builder.SetSchema(ElementType);
             builder.AddElement<RepurposedCommand>()
                 .AddAttribute("onAction", a => a.OnAction, aBuilder =>
                 {
@@ -13164,6 +13398,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </remarks>
     public partial class OfficeMenu : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "officeMenu");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_OfficeMenu");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OfficeMenu class.
         /// </summary>
@@ -13198,7 +13438,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:officeMenu");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.CheckBox>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone>();
@@ -13216,21 +13456,21 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
                     {
                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.CheckBox), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator), 1, 1)
+                            new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.CheckBox.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator.ElementType, 1, 1)
                         }
                     },
                     new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                     {
                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.SplitButtonWithTitle), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.MenuWithTitle), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu), 1, 1)
+                            new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.SplitButtonWithTitle.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.MenuWithTitle.ElementType, 1, 1),
+                            new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu.ElementType, 1, 1)
                         }
                     }
                 }
@@ -13255,6 +13495,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </remarks>
     public partial class QuickAccessToolbar : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "qat");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_Qat");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the QuickAccessToolbar class.
         /// </summary>
@@ -13289,13 +13535,13 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:qat");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.SharedQatControls>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.DocumentSpecificQuickAccessToolbarControls>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.SharedQatControls), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.DocumentSpecificQuickAccessToolbarControls), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.SharedQatControls.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.DocumentSpecificQuickAccessToolbarControls.ElementType, 0, 1)
             };
         }
 
@@ -13308,8 +13554,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomUI.SharedQatControls? SharedQatControls
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.SharedQatControls>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office.CustomUI.SharedQatControls.ElementType) as DocumentFormat.OpenXml.Office.CustomUI.SharedQatControls;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.CustomUI.SharedQatControls.ElementType);
         }
 
         /// <summary>
@@ -13321,8 +13567,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomUI.DocumentSpecificQuickAccessToolbarControls? DocumentSpecificQuickAccessToolbarControls
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.DocumentSpecificQuickAccessToolbarControls>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office.CustomUI.DocumentSpecificQuickAccessToolbarControls.ElementType) as DocumentFormat.OpenXml.Office.CustomUI.DocumentSpecificQuickAccessToolbarControls;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.CustomUI.DocumentSpecificQuickAccessToolbarControls.ElementType);
         }
 
         /// <inheritdoc/>
@@ -13342,6 +13588,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </remarks>
     public partial class Tabs : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "tabs");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_Tabs");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Tabs class.
         /// </summary>
@@ -13376,11 +13628,11 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:tabs");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Tab>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Tab), 1, 100)
+                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.Tab.ElementType, 1, 100)
             };
         }
 
@@ -13401,6 +13653,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </remarks>
     public partial class ContextualTabSets : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "contextualTabs");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_ContextualTabs");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ContextualTabSets class.
         /// </summary>
@@ -13435,11 +13693,11 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:contextualTabs");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSet>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSet), 1, 100)
+                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSet.ElementType, 1, 100)
             };
         }
 
@@ -13460,6 +13718,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </remarks>
     public partial class RepurposedCommands : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "commands");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_Commands");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RepurposedCommands class.
         /// </summary>
@@ -13494,11 +13758,11 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:commands");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommand>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommand), 1, 5000)
+                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommand.ElementType, 1, 5000)
             };
         }
 
@@ -13522,6 +13786,12 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// </remarks>
     public partial class Ribbon : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2006/01/customui", "ribbon");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/2006/01/customui", "CT_Ribbon");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Ribbon class.
         /// </summary>
@@ -13566,7 +13836,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("mso:ribbon");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSets>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.OfficeMenu>();
             builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbar>();
@@ -13575,10 +13845,10 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
                 .AddAttribute("startFromScratch", a => a.StartFromScratch);
             builder.Particle = new CompositeParticle.Builder(ParticleType.All, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.OfficeMenu), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbar), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.Tabs), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSets), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.OfficeMenu.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbar.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.Tabs.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSets.ElementType, 0, 1)
             };
         }
 
@@ -13591,8 +13861,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomUI.OfficeMenu? OfficeMenu
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.OfficeMenu>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office.CustomUI.OfficeMenu.ElementType) as DocumentFormat.OpenXml.Office.CustomUI.OfficeMenu;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.CustomUI.OfficeMenu.ElementType);
         }
 
         /// <summary>
@@ -13604,8 +13874,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbar? QuickAccessToolbar
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbar>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbar.ElementType) as DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbar;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbar.ElementType);
         }
 
         /// <summary>
@@ -13617,8 +13887,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomUI.Tabs? Tabs
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.Tabs>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office.CustomUI.Tabs.ElementType) as DocumentFormat.OpenXml.Office.CustomUI.Tabs;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.CustomUI.Tabs.ElementType);
         }
 
         /// <summary>
@@ -13630,8 +13900,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSets? ContextualTabSets
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSets>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSets.ElementType) as DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSets;
+            set => SetElement(value, DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSets.ElementType);
         }
 
         /// <inheritdoc/>

@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -12,22 +13,22 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     internal class ExpectedChildren
     {
-        private List<Type>? _elementTypes;
+        private List<OpenXmlSchemaType>? _elements;
         private List<string>? _xsdanyNamespaces;
 
         /// <summary>
         /// Add a known element of the child.
         /// </summary>
-        /// <param name="elementType"></param>
-        public void Add(Type elementType)
+        /// <param name="type"></param>
+        public void Add(OpenXmlSchemaType type)
         {
             // No lock, not safe for multi-thread
-            if (_elementTypes is null)
+            if (_elements is null)
             {
-                _elementTypes = new List<Type>();
+                _elements = [];
             }
 
-            _elementTypes.Add(elementType);
+            _elements.Add(type);
         }
 
         /// <summary>
@@ -51,18 +52,18 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <param name="expectedChildren"></param>
         internal void Add(ExpectedChildren expectedChildren)
         {
-            if (expectedChildren._elementTypes is not null &&
-                expectedChildren._elementTypes.Count > 0)
+            if (expectedChildren._elements is not null &&
+                expectedChildren._elements.Count > 0)
             {
                 // No lock, not safe for multi-thread
-                if (_elementTypes is null)
+                if (_elements is null)
                 {
-                    _elementTypes = new List<Type>();
+                    _elements = [];
                 }
 
-                foreach (var id in expectedChildren._elementTypes)
+                foreach (var id in expectedChildren._elements)
                 {
-                    _elementTypes.Add(id);
+                    _elements.Add(id);
                 }
             }
 
@@ -90,9 +91,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             get
             {
                 int count = 0;
-                if (_elementTypes is not null)
+                if (_elements is not null)
                 {
-                    count = _elementTypes.Count;
+                    count = _elements.Count;
                 }
 
                 if (_xsdanyNamespaces is not null)
@@ -112,20 +113,20 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Maintainability", "CA1508:Avoid dead conditional code", Justification = "Needs refactoring")]
         internal string GetExpectedChildrenMessage(OpenXmlElement parent)
         {
-            if (_elementTypes is not null || _xsdanyNamespaces is not null)
+            if (_elements is not null || _xsdanyNamespaces is not null)
             {
-                Debug.Assert((_elementTypes is not null && _elementTypes.Count > 0) || (_xsdanyNamespaces is not null && _xsdanyNamespaces.Count > 0));
+                Debug.Assert((_elements is not null && _elements.Count > 0) || (_xsdanyNamespaces is not null && _xsdanyNamespaces.Count > 0));
 
                 var childrenNames = new List<string>();
 
-                if (_elementTypes is not null)
+                if (_elements is not null)
                 {
-                    foreach (var childElement in parent.Metadata.Children.Elements)
+                    foreach (var child in parent.Metadata.Children.Elements)
                     {
-                        if (childElement.Type is not null && _elementTypes.Contains(childElement.Type))
+                        if (_elements.Contains(child.Type))
                         {
                             // <namespace:localname>, use InvariantCulture
-                            childrenNames.Add(SR.Format(ValidationResources.Fmt_ElementName, childElement.QName.Namespace.Uri, childElement.QName.Name));
+                            childrenNames.Add(SR.Format(ValidationResources.Fmt_ElementName, child.Type.Name.Namespace.Uri, child.Type.Name.Name));
                         }
                     }
                 }
@@ -152,9 +153,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
         internal void Clear()
         {
-            if (_elementTypes is not null)
+            if (_elements is not null)
             {
-                _elementTypes.Clear();
+                _elements.Clear();
             }
 
             if (_xsdanyNamespaces is not null)

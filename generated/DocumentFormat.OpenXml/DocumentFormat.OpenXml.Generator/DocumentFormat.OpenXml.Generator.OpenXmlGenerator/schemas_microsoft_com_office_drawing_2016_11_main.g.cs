@@ -23,6 +23,12 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing
     /// </summary>
     public partial class PictureAttributionSourceURL : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2016/11/main", "picAttrSrcUrl");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2016/11/main", "CT_PictureAttributionSourceURL");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PictureAttributionSourceURL class.
         /// </summary>
@@ -46,7 +52,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("a1611:picAttrSrcUrl");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<PictureAttributionSourceURL>()
                 .AddAttribute("r:id", a => a.Id, aBuilder =>

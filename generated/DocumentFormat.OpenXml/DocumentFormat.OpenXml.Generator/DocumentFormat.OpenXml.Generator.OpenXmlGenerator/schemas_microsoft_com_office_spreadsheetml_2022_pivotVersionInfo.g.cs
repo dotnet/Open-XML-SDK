@@ -30,6 +30,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo
     /// </remarks>
     public partial class CacheVersionInfo : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo", "cacheVersionInfo");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo", "CT_CacheVersionInfo");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CacheVersionInfo class.
         /// </summary>
@@ -64,14 +70,14 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xxpvi:cacheVersionInfo");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.RequiredFeatureXsdstring>();
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.LastRefreshFeatureXsdstring>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.RequiredFeatureXsdstring), 0, 0, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.LastRefreshFeatureXsdstring), 0, 0, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.RequiredFeatureXsdstring.ElementType, 0, 0, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.LastRefreshFeatureXsdstring.ElementType, 0, 0, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -93,6 +99,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo
     /// </remarks>
     public partial class PivotVersionInfo : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo", "pivotVersionInfo");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo", "CT_PivotVersionInfo");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PivotVersionInfo class.
         /// </summary>
@@ -127,14 +139,14 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xxpvi:pivotVersionInfo");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.RequiredFeatureXsdstring>();
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.LastUpdateFeatureXsdstring>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.RequiredFeatureXsdstring), 0, 0, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.LastUpdateFeatureXsdstring), 0, 0, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.RequiredFeatureXsdstring.ElementType, 0, 0, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.LastUpdateFeatureXsdstring.ElementType, 0, 0, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -149,6 +161,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo
     /// </summary>
     public partial class RequiredFeatureXsdstring : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo", "requiredFeature");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RequiredFeatureXsdstring class.
         /// </summary>
@@ -172,7 +190,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xxpvi:requiredFeature");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
         }
 
@@ -187,6 +205,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo
     /// </summary>
     public partial class LastRefreshFeatureXsdstring : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo", "lastRefreshFeature");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LastRefreshFeatureXsdstring class.
         /// </summary>
@@ -210,7 +234,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xxpvi:lastRefreshFeature");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
         }
 
@@ -225,6 +249,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo
     /// </summary>
     public partial class LastUpdateFeatureXsdstring : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo", "lastUpdateFeature");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LastUpdateFeatureXsdstring class.
         /// </summary>
@@ -248,7 +278,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xxpvi:lastUpdateFeature");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
         }
 
