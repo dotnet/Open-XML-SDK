@@ -4,7 +4,6 @@
 using DocumentFormat.OpenXml.Tests.WorkBookPrClass;
 using System.IO;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests.WorkBookPr
 {

@@ -12,7 +12,6 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using Xunit;
-using Xunit.Abstractions;
 
 using static DocumentFormat.OpenXml.Framework.Tests.TestUtility;
 
@@ -141,16 +140,12 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                     }
                 }
 
-                Children = GetLookup().Elements.Select(t => new ChildData
-                {
-                    Name = t.QName.Name,
-                    Namespace = t.QName.Namespace.Uri,
-                });
+                Children = GetLookup().Elements.Select(t => new OpenXmlTypeProxy(t.Type));
             }
 
             public string Element { get; set; }
 
-            public IEnumerable<ChildData> Children { get; set; }
+            public IEnumerable<OpenXmlTypeProxy> Children { get; set; }
 
             public override bool Equals(object obj) => Equals(obj as LookupData);
 
@@ -163,6 +158,8 @@ namespace DocumentFormat.OpenXml.Framework.Tests
 
                 if (!string.Equals(Element, other.Element, StringComparison.Ordinal) || !Children.SequenceEqual(other.Children))
                 {
+                    var c1 = Children.ToList();
+                    var c2 = other.Children.ToList();
                     System.Diagnostics.Debugger.Break();
                 }
 
@@ -171,23 +168,31 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             }
 
             public override int GetHashCode() => throw new NotImplementedException();
+        }
 
-            public class ChildData : IEquatable<ChildData>
+        private class OpenXmlTypeProxy : IEquatable<OpenXmlTypeProxy>
+        {
+            public OpenXmlTypeProxy()
             {
-                public string Name { get; set; }
-
-                public string Namespace { get; set; }
-
-                public bool Equals(ChildData other)
-                {
-                    return string.Equals(Name, other.Name, StringComparison.Ordinal)
-                        && string.Equals(Namespace, other.Namespace, StringComparison.Ordinal);
-                }
-
-                public override int GetHashCode() => throw new NotImplementedException();
-
-                public override bool Equals(object obj) => Equals(obj as ChildData);
             }
+
+            public OpenXmlTypeProxy(OpenXmlSchemaType type)
+            {
+                Name = type.Name;
+                Type = type.Type;
+            }
+
+            public OpenXmlQualifiedName Name { get; set; }
+
+            public OpenXmlQualifiedName Type { get; set; }
+
+            public bool Equals(OpenXmlTypeProxy other) => other is not null && Name.Equals(other.Name) && Type.Equals(other.Type);
+
+            public override bool Equals(object obj) => obj is OpenXmlTypeProxy other && Equals(other);
+
+            public override int GetHashCode() => Name.GetHashCode() ^ Type.GetHashCode();
+
+            public override string ToString() => $"{Type}/{Name}";
         }
     }
 }

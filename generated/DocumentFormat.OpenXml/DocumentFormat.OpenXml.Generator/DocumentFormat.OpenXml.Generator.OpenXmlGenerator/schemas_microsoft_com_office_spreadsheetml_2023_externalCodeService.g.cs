@@ -23,6 +23,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService
     /// </summary>
     public partial class ExternalCodeService : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/externalCodeService", "externalCodeService");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/externalCodeService", "CT_ExternalCodeService");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ExternalCodeService class.
         /// </summary>
@@ -53,7 +59,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlecs:externalCodeService");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddElement<ExternalCodeService>()
                 .AddAttribute("autoShow", a => a.AutoShow)

@@ -25,6 +25,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// </summary>
     public partial class Color : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2012/wordml", "color");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "CT_Color");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Color class.
         /// </summary>
@@ -87,7 +93,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("w15:color");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<Color>()
                 .AddAttribute("w:val", a => a.Val, aBuilder =>
@@ -121,6 +127,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// </summary>
     public partial class DataBinding : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2012/wordml", "dataBinding");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "CT_DataBinding");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DataBinding class.
         /// </summary>
@@ -170,7 +182,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("w15:dataBinding");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<DataBinding>()
                 .AddAttribute("w:prefixMappings", a => a.PrefixMappings)
@@ -195,6 +207,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// </summary>
     public partial class Appearance : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2012/wordml", "appearance");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/word/2012/wordml", "CT_SdtAppearance");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Appearance class.
         /// </summary>
@@ -218,7 +236,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("w15:appearance");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<Appearance>()
                 .AddAttribute("w15:val", a => a.Val, aBuilder =>
@@ -244,6 +262,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// </remarks>
     public partial class CommentsEx : OpenXmlPartRootElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2012/wordml", "commentsEx");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/word/2012/wordml", "CT_CommentsEx");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CommentsEx class.
         /// </summary>
@@ -278,12 +302,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("w15:commentsEx");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.CommentEx>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.CommentEx), 0, 0, version: FileFormatVersions.Office2013)
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Word.CommentEx.ElementType, 0, 0, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -335,6 +359,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// </remarks>
     public partial class People : OpenXmlPartRootElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2012/wordml", "people");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/word/2012/wordml", "CT_People");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the People class.
         /// </summary>
@@ -369,12 +399,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("w15:people");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.Person>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.Person), 0, 0, version: FileFormatVersions.Office2013)
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Word.Person.ElementType, 0, 0, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -427,6 +457,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// </remarks>
     public partial class SdtRepeatedSection : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2012/wordml", "repeatingSection");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/word/2012/wordml", "CT_SdtRepeatedSection");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SdtRepeatedSection class.
         /// </summary>
@@ -461,14 +497,14 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("w15:repeatingSection");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.SectionTitle>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.SectionTitle), 0, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Word.SectionTitle.ElementType, 0, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection.ElementType, 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -481,8 +517,8 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Word.SectionTitle? SectionTitle
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Word.SectionTitle>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2013.Word.SectionTitle.ElementType) as DocumentFormat.OpenXml.Office2013.Word.SectionTitle;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2013.Word.SectionTitle.ElementType);
         }
 
         /// <summary>
@@ -494,8 +530,8 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection? DoNotAllowInsertDeleteSection
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection.ElementType) as DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection.ElementType);
         }
 
         /// <inheritdoc/>
@@ -509,6 +545,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// </summary>
     public partial class SdtRepeatedSectionItem : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2012/wordml", "repeatingSectionItem");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SdtRepeatedSectionItem class.
         /// </summary>
@@ -519,7 +561,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("w15:repeatingSectionItem");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
         }
 
@@ -534,6 +576,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// </summary>
     public partial class ChartTrackingRefBased : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2012/wordml", "chartTrackingRefBased");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "CT_OnOff");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ChartTrackingRefBased class.
         /// </summary>
@@ -544,7 +592,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("w15:chartTrackingRefBased");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
         }
 
@@ -559,6 +607,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// </summary>
     public partial class DefaultCollapsed : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2012/wordml", "collapsed");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "CT_OnOff");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DefaultCollapsed class.
         /// </summary>
@@ -569,7 +623,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("w15:collapsed");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
         }
 
@@ -584,6 +638,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// </summary>
     public partial class WebExtensionLinked : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2012/wordml", "webExtensionLinked");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "CT_OnOff");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the WebExtensionLinked class.
         /// </summary>
@@ -594,7 +654,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("w15:webExtensionLinked");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
         }
 
@@ -609,6 +669,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// </summary>
     public partial class WebExtensionCreated : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2012/wordml", "webExtensionCreated");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "CT_OnOff");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the WebExtensionCreated class.
         /// </summary>
@@ -619,7 +685,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("w15:webExtensionCreated");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
         }
 
@@ -634,6 +700,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// </summary>
     public partial class DoNotAllowInsertDeleteSection : OnOffType
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2012/wordml", "doNotAllowInsertDeleteSection");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "CT_OnOff");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DoNotAllowInsertDeleteSection class.
         /// </summary>
@@ -644,7 +716,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("w15:doNotAllowInsertDeleteSection");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
         }
 
@@ -659,6 +731,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// </summary>
     public abstract partial class OnOffType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "CT_OnOff");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the OnOffType class.
         /// </summary>
@@ -694,6 +772,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// </summary>
     public partial class PersistentDocumentId : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2012/wordml", "docId");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/word/2012/wordml", "CT_Guid");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PersistentDocumentId class.
         /// </summary>
@@ -717,7 +801,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("w15:docId");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<PersistentDocumentId>()
                 .AddAttribute("w15:val", a => a.Val, aBuilder =>
@@ -738,6 +822,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// </summary>
     public partial class FootnoteColumns : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2012/wordml", "footnoteColumns");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "CT_DecimalNumber");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FootnoteColumns class.
         /// </summary>
@@ -761,7 +851,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("w15:footnoteColumns");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<FootnoteColumns>()
                 .AddAttribute("w:val", a => a.Val, aBuilder =>
@@ -781,6 +871,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// </summary>
     public partial class CommentEx : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2012/wordml", "commentEx");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/word/2012/wordml", "CT_CommentEx");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CommentEx class.
         /// </summary>
@@ -830,7 +926,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("w15:commentEx");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<CommentEx>()
                 .AddAttribute("w15:paraId", a => a.ParaId, aBuilder =>
@@ -869,6 +965,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// </remarks>
     public partial class Person : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2012/wordml", "person");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/word/2012/wordml", "CT_Person");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Person class.
         /// </summary>
@@ -916,7 +1018,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("w15:person");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.PresenceInfo>();
             builder.AddElement<Person>()
@@ -927,7 +1029,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Word.PresenceInfo), 0, 1, version: FileFormatVersions.Office2013)
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Word.PresenceInfo.ElementType, 0, 1, version: FileFormatVersions.Office2013)
             };
         }
 
@@ -940,8 +1042,8 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Word.PresenceInfo? PresenceInfo
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2013.Word.PresenceInfo>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2013.Word.PresenceInfo.ElementType) as DocumentFormat.OpenXml.Office2013.Word.PresenceInfo;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2013.Word.PresenceInfo.ElementType);
         }
 
         /// <inheritdoc/>
@@ -955,6 +1057,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// </summary>
     public partial class PresenceInfo : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2012/wordml", "presenceInfo");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/word/2012/wordml", "CT_PresenceInfo");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PresenceInfo class.
         /// </summary>
@@ -991,7 +1099,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("w15:presenceInfo");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<PresenceInfo>()
                 .AddAttribute("w15:providerId", a => a.ProviderId, aBuilder =>
@@ -1019,6 +1127,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// </summary>
     public partial class SectionTitle : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2012/wordml", "sectionTitle");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "CT_String");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SectionTitle class.
         /// </summary>
@@ -1042,7 +1156,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("w15:sectionTitle");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddElement<SectionTitle>()
                 .AddAttribute("w:val", a => a.Val, aBuilder =>

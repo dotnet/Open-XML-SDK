@@ -411,4 +411,7 @@
   <data name="FailedToOpenPackage" xml:space="preserve">
     <value>Package could not be opened for stream. See inner exception for details and be aware that there are behavior differences in stream support between .NET Framework and Core.</value>
   </data>
+  <data name="FirstOrDefaultMaxOne" xml:space="preserve">
+    <value>The enumerable contained more than a single element when only zero or one are allowed.</value>
+  </data>
 </root>

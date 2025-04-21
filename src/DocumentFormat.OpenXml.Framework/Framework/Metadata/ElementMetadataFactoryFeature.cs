@@ -12,8 +12,8 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
     {
         private readonly ConcurrentDictionary<Type, ElementMetadata> _lookup = new(new[]
         {
-            new KeyValuePair<Type, ElementMetadata>(typeof(OpenXmlUnknownElement), new ElementMetadata(typeof(OpenXmlUnknownElement))),
-            new KeyValuePair<Type, ElementMetadata>(typeof(OpenXmlMiscNode), new ElementMetadata(typeof(OpenXmlMiscNode))),
+            new KeyValuePair<Type, ElementMetadata>(typeof(OpenXmlUnknownElement), new ElementMetadata()),
+            new KeyValuePair<Type, ElementMetadata>(typeof(OpenXmlMiscNode), new ElementMetadata()),
         });
 
         public IElementMetadata GetMetadata(OpenXmlElement element)
@@ -35,7 +35,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         private static ElementMetadata CreateMetadata(OpenXmlElement element)
         {
-            var builder = new ElementMetadata.Builder(element.GetType(), element.Features.GetNamespaceResolver());
+            var builder = new ElementMetadata.Builder(element.Features.GetNamespaceResolver());
 
             element.ConfigureMetadata(builder);
 

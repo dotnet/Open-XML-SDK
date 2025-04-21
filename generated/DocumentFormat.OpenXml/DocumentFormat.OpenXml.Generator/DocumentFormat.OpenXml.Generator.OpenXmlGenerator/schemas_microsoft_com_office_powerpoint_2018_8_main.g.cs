@@ -27,6 +27,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// </summary>
     public partial class CommentUnknownAnchor : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2018/8/main", "unknownAnchor");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2018/8/main", "CT_CommentUnknownAnchor");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CommentUnknownAnchor class.
         /// </summary>
@@ -37,7 +43,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p188:unknownAnchor");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -60,6 +66,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// </remarks>
     public partial class TextBodyType : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2018/8/main", "txBody");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextBody");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TextBodyType class.
         /// </summary>
@@ -94,16 +106,16 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p188:txBody");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BodyProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ListStyle>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Paragraph>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ListStyle), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Paragraph), 1, 0)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.BodyProperties.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ListStyle.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Paragraph.ElementType, 1, 0)
             };
         }
 
@@ -116,8 +128,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.BodyProperties? BodyProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.BodyProperties.ElementType) as DocumentFormat.OpenXml.Drawing.BodyProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.BodyProperties.ElementType);
         }
 
         /// <summary>
@@ -129,8 +141,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ListStyle? ListStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.ListStyle.ElementType) as DocumentFormat.OpenXml.Drawing.ListStyle;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.ListStyle.ElementType);
         }
 
         /// <inheritdoc/>
@@ -150,6 +162,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// </remarks>
     public partial class CommentPropertiesExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2018/8/main", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2018/8/main", "CT_CommentPropertiesExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CommentPropertiesExtensionList class.
         /// </summary>
@@ -184,7 +202,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p188:extLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Presentation.CommentPropertiesExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -193,7 +211,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommentPropertiesExtension), 0, 0, version: FileFormatVersions.Office2021)
+                        new ElementParticle(DocumentFormat.OpenXml.Presentation.CommentPropertiesExtension.ElementType, 0, 0, version: FileFormatVersions.Office2021)
                     }
                 }
             };
@@ -216,6 +234,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// </remarks>
     public partial class AuthorList : OpenXmlPartRootElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2018/8/main", "authorLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2018/8/main", "CT_AuthorList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AuthorList class.
         /// </summary>
@@ -250,12 +274,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p188:authorLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Author>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Author), 0, 0, version: FileFormatVersions.Office2021)
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Author.ElementType, 0, 0, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -307,6 +331,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// </remarks>
     public partial class CommentList : OpenXmlPartRootElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2018/8/main", "cmLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2018/8/main", "CT_CommentList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CommentList class.
         /// </summary>
@@ -341,12 +371,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p188:cmLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Comment>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Comment), 0, 0, version: FileFormatVersions.Office2021)
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Comment.ElementType, 0, 0, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -392,6 +422,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// </summary>
     public partial class CommentRelationship : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2018/8/main", "commentRel");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2018/8/main", "CT_CommentRelationship");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CommentRelationship class.
         /// </summary>
@@ -415,7 +451,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p188:commentRel");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<CommentRelationship>()
                 .AddAttribute("r:id", a => a.Id, aBuilder =>
@@ -441,6 +477,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2018/8/main", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "CT_ExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
         /// </summary>
@@ -475,7 +517,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p188:extLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -484,7 +526,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Extension), 0, 0)
+                        new ElementParticle(DocumentFormat.OpenXml.Presentation.Extension.ElementType, 0, 0)
                     }
                 }
             };
@@ -507,6 +549,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// </remarks>
     public partial class Author : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2018/8/main", "author");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2018/8/main", "CT_Author");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Author class.
         /// </summary>
@@ -591,7 +639,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p188:author");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.ExtensionList>();
             builder.AddElement<Author>()
@@ -615,7 +663,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.ExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -628,8 +676,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.ExtensionList.ElementType) as DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -650,6 +698,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// </remarks>
     public partial class CommentReply : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2018/8/main", "reply");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2018/8/main", "CT_CommentReply");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CommentReply class.
         /// </summary>
@@ -744,7 +798,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p188:reply");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.TextBodyType>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtensionList>();
@@ -775,8 +829,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.TextBodyType), 0, 1, version: FileFormatVersions.Office2021),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                        new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.TextBodyType.ElementType, 0, 1, version: FileFormatVersions.Office2021),
+                        new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2021)
                     }
                 }
             };
@@ -791,8 +845,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.TextBodyType? TextBodyType
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.TextBodyType>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.TextBodyType.ElementType) as DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.TextBodyType;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.TextBodyType.ElementType);
         }
 
         /// <summary>
@@ -804,8 +858,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// </remarks>
         public DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtensionList? CommentPropertiesExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtensionList.ElementType) as DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -819,6 +873,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// </summary>
     public partial class Point2DType : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2018/8/main", "pos");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_Point2D");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Point2DType class.
         /// </summary>
@@ -849,7 +909,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p188:pos");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<Point2DType>()
                 .AddAttribute("x", a => a.X, aBuilder =>
@@ -881,6 +941,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// </remarks>
     public partial class CommentReplyList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2018/8/main", "replyLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2018/8/main", "CT_CommentReplyList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CommentReplyList class.
         /// </summary>
@@ -915,12 +981,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p188:replyLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentReply>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentReply), 0, 0, version: FileFormatVersions.Office2021)
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentReply.ElementType, 0, 0, version: FileFormatVersions.Office2021)
             };
         }
 
@@ -954,6 +1020,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// </remarks>
     public partial class Comment : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2018/8/main", "cm");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/powerpoint/2018/8/main", "CT_Comment");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Comment class.
         /// </summary>
@@ -1108,7 +1180,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("p188:cm");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Point2DType>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.TextBodyType>();
@@ -1163,26 +1235,26 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList), 1, 1, version: FileFormatVersions.Office2016),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideLayoutMonikerList), 1, 1, version: FileFormatVersions.Office2016),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Presentation.Command.MainMasterMonikerList), 1, 1, version: FileFormatVersions.Office2016),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.DeMkLstDrawingElementMonikerList), 0, 0, version: FileFormatVersions.Office2016),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.TextBodyMonikerList), 0, 0, version: FileFormatVersions.Office2016),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.TextCharRangeMonikerList), 0, 0, version: FileFormatVersions.Office2016),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.TableCellMonikerList), 0, 0, version: FileFormatVersions.Office2016),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.TableRowMonikerList), 0, 0, version: FileFormatVersions.Office2016),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Command.TableColumnMonikerList), 0, 0, version: FileFormatVersions.Office2016),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentUnknownAnchor), 1, 1, version: FileFormatVersions.Office2021)
+                        new ElementParticle(DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                        new ElementParticle(DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideLayoutMonikerList.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                        new ElementParticle(DocumentFormat.OpenXml.Office2016.Presentation.Command.MainMasterMonikerList.ElementType, 1, 1, version: FileFormatVersions.Office2016),
+                        new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.DeMkLstDrawingElementMonikerList.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                        new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.TextBodyMonikerList.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                        new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.TextCharRangeMonikerList.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                        new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.TableCellMonikerList.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                        new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.TableRowMonikerList.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                        new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.TableColumnMonikerList.ElementType, 0, 0, version: FileFormatVersions.Office2016),
+                        new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentUnknownAnchor.ElementType, 1, 1, version: FileFormatVersions.Office2021)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Point2DType), 0, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentReplyList), 0, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Point2DType.ElementType, 0, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentReplyList.ElementType, 0, 1, version: FileFormatVersions.Office2021),
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2021)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.TextBodyType), 0, 1, version: FileFormatVersions.Office2021),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtensionList), 0, 1, version: FileFormatVersions.Office2021)
+                        new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.TextBodyType.ElementType, 0, 1, version: FileFormatVersions.Office2021),
+                        new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2021)
                     }
                 }
             };
