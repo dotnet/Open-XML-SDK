@@ -274,11 +274,35 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Validates whether the specified file is a minimum valid PresentationDocument.
         /// </summary>
         /// <param name="path">The path to the PresentationDocument file.</param>
-        /// <param name="documentType">The expected type of the PresentationDocument. Defaults to PresentationDocumentType.Presentation.</param>
-        /// <returns>True if the file is a minimum valid PresentationDocument; otherwise, false.</returns>
+        /// <param name="documentType">
+        /// The expected type of the PresentationDocument. Defaults to <see cref="PresentationDocumentType.Presentation"/>.
+        /// Supported types are:
+        /// <list type="bullet">
+        /// <item><see cref="PresentationDocumentType.Presentation"/> (.pptx)</item>
+        /// <item><see cref="PresentationDocumentType.Template"/> (.potx)</item>
+        /// <item><see cref="PresentationDocumentType.MacroEnabledPresentation"/> (.pptm)</item>
+        /// <item><see cref="PresentationDocumentType.MacroEnabledTemplate"/> (.potm)</item>
+        /// </list>
+        /// </param>
+        /// <returns>
+        /// <c>true</c> if the file is a minimum valid PresentationDocument; otherwise, <c>false</c>.
+        /// </returns>
         /// <exception cref="ArgumentException">
         /// Thrown when the <paramref name="documentType"/> is invalid or unsupported.
         /// </exception>
+        /// <remarks>
+        /// A minimum valid PresentationDocument must meet the following criteria:
+        /// <list type="bullet">
+        /// <item>The file must exist and have a valid extension matching the <paramref name="documentType"/>.</item>
+        /// <item>The file must contain a valid <see cref="NotesSize"/> element in the presentation part.</item>
+        /// </list>
+        /// Unsupported document types include:
+        /// <list type="bullet">
+        /// <item><see cref="PresentationDocumentType.AddIn"/> (.ppam)</item>
+        /// <item><see cref="PresentationDocumentType.Slideshow"/> (.ppsx)</item>
+        /// <item><see cref="PresentationDocumentType.MacroEnabledSlideshow"/> (.ppsm)</item>
+        /// </list>
+        /// </remarks>
         public static bool IsMinimumDocument(string path, PresentationDocumentType documentType = PresentationDocumentType.Presentation)
         {
             if (documentType == PresentationDocumentType.AddIn || documentType == PresentationDocumentType.Slideshow || documentType == PresentationDocumentType.MacroEnabledSlideshow)

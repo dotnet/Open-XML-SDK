@@ -331,197 +331,141 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             Assert.NotNull(spd);
         }
 
+        #region WordprocessingDocument.IsMinimumDocument tests
         [Fact]
-        public void WordprocessingDocument_IsValidDocument_ShouldReturnFalse_WhenPathIsNull()
+        public void WordprocessingDocument_IsMinimumDocument_ValidDocx_ReturnsTrue()
         {
+            // Arrange
+            string filePath = Path.Combine(Path.GetTempPath(), "valid.docx");
+
+            using (var wordDocument = WordprocessingDocument.Create(filePath, WordprocessingDocumentType.Document))
+            {
+                var mainPart = wordDocument.AddMainDocumentPart();
+                mainPart.Document = new Document(new Body());
+            }
+
             // Act
-            bool result = WordprocessingDocument.IsValidDocument(null);
+            bool result = WordprocessingDocument.IsMinimumDocument(filePath, WordprocessingDocumentType.Document);
+
+            // Assert
+            Assert.True(result);
+
+            // Cleanup
+            File.Delete(filePath);
+        }
+
+        [Fact]
+        public void WordprocessingDocument_IsMinimumDocument_ValidDotx_ReturnsTrue()
+        {
+            // Arrange
+            string filePath = Path.Combine(Path.GetTempPath(), "valid.dotx");
+
+            using (var wordDocument = WordprocessingDocument.Create(filePath, WordprocessingDocumentType.Document))
+            {
+                var mainPart = wordDocument.AddMainDocumentPart();
+                mainPart.Document = new Document(new Body());
+            }
+
+            // Act
+            bool result = WordprocessingDocument.IsMinimumDocument(filePath, WordprocessingDocumentType.Template);
+
+            // Assert
+            Assert.True(result);
+
+            // Cleanup
+            File.Delete(filePath);
+        }
+
+        [Fact]
+        public void WordprocessingDocument_IsMinimumDocument_InvalidExtension_ReturnsFalse()
+        {
+            // Arrange
+            string filePath = Path.Combine(Path.GetTempPath(), "invalid-ext.txt");
+
+            File.WriteAllText(filePath, string.Empty);
+
+            // Act
+            bool result = WordprocessingDocument.IsMinimumDocument(filePath, WordprocessingDocumentType.Document);
+
+            // Assert
+            Assert.False(result);
+
+            // Cleanup
+            File.Delete(filePath);
+        }
+
+        [Fact]
+        public void WordprocessingDocument_IsMinimumDocument_NonExistentFile_ReturnsFalse()
+        {
+            // Arrange
+            string filePath = Path.Combine(Path.GetTempPath(), "nonexistent.docx");
+
+            // Act
+            bool result = WordprocessingDocument.IsMinimumDocument(filePath, WordprocessingDocumentType.Document);
 
             // Assert
             Assert.False(result);
         }
 
         [Fact]
-        public void WordprocessingDocument_IsValidDocument_ShouldReturnFalse_WhenFileDoesNotExist()
+        public void WordprocessingDocument_IsMinimumDocument_InvalidPathCharacters_ReturnsFalse()
         {
             // Arrange
-            string nonExistentPath = string.Concat(Path.GetTempPath(), "nonexistent.docx");
+            string filePath = "invalid|path.docx";
 
             // Act
-            bool result = WordprocessingDocument.IsValidDocument(nonExistentPath);
+            bool result = WordprocessingDocument.IsMinimumDocument(filePath, WordprocessingDocumentType.Document);
 
             // Assert
             Assert.False(result);
         }
 
         [Fact]
-        public void WordprocessingDocument_IsValidDocument_ShouldReturnFalse_WhenFileExtensionIsUnsupported()
-        {
-            // Arrange
-            string unsupportedFilePath = string.Concat(Path.GetTempPath(), "unsupported.txt");
-            File.WriteAllText(unsupportedFilePath, "Test content");
-
-            try
-            {
-                // Act
-                bool result = WordprocessingDocument.IsValidDocument(unsupportedFilePath);
-
-                // Assert
-                Assert.False(result);
-            }
-            finally
-            {
-                File.Delete(unsupportedFilePath);
-            }
-        }
-
-        [Fact]
-        public void WordprocessingDocument_IsValidDocument_ShouldReturnFalse_WhenDocumentTypeDoesNotMatchExtension()
-        {
-            // Arrange
-            string filePath = string.Concat(Path.GetTempPath(), "test.docx");
-            File.WriteAllText(filePath, "Test content");
-
-            try
-            {
-                // Act
-                bool result = WordprocessingDocument.IsValidDocument(filePath, WordprocessingDocumentType.Template);
-
-                // Assert
-                Assert.False(result);
-            }
-            finally
-            {
-                File.Delete(filePath);
-            }
-        }
-
-        [Fact]
-        public void WordprocessingDocument_IsValidDocument_ShouldReturnTrue_ForValidDocument()
-        {
-            // Arrange
-            string filePath = string.Concat(Path.GetTempPath(), "test.docx");
-
-            using (WordprocessingDocument document = WordprocessingDocument.Create(filePath, WordprocessingDocumentType.Document))
-            {
-                document.AddMainDocumentPart();
-                document.MainDocumentPart.Document = new Document(new Body());
-            }
-
-            try
-            {
-                // Act
-                bool result = WordprocessingDocument.IsValidDocument(filePath);
-
-                // Assert
-                Assert.True(result);
-            }
-            finally
-            {
-                File.Delete(filePath);
-            }
-        }
-
-        [Fact]
-        public void WordprocessingDocument_IsValidDocument_ShouldReturnFalse_WhenDocumentIsCorrupted()
-        {
-            // Arrange
-            string corruptedFilePath = string.Concat(Path.GetTempPath(), "corrupt.docx");
-            using (WordprocessingDocument wordprocessingDocument = WordprocessingDocument.Create(corruptedFilePath, WordprocessingDocumentType.Document))
-            {
-                MainDocumentPart mainDocumentPart = wordprocessingDocument.AddMainDocumentPart();
-
-                mainDocumentPart.Document = new Document(new Paragraph());
-            }
-
-            try
-            {
-                // Act
-                bool result = WordprocessingDocument.IsValidDocument(corruptedFilePath);
-
-                // Assert
-                Assert.False(result);
-            }
-            finally
-            {
-                File.Delete(corruptedFilePath);
-            }
-        }
-
-        [Fact]
-        public void SpreadsheetDocument_IsValidDocument_ShouldReturnFalse_WhenPathIsNull()
+        public void WordprocessingDocument_IsMinimumDocument_EmptyPath_ReturnsFalse()
         {
             // Act
-            bool result = SpreadsheetDocument.IsValidDocument(null);
+            bool result = WordprocessingDocument.IsMinimumDocument(string.Empty, WordprocessingDocumentType.Document);
 
             // Assert
             Assert.False(result);
         }
 
         [Fact]
-        public void SpreadsheetDocument_IsValidDocument_ShouldReturnFalse_WhenFileDoesNotExist()
+        public void WordprocessingDocument_IsMinimumDocument_NullPath_ReturnsFalse()
         {
-            // Arrange
-            string nonExistentPath = string.Concat(Path.GetTempPath(), "nonexistent.docx");
-
             // Act
-            bool result = SpreadsheetDocument.IsValidDocument(nonExistentPath);
+            bool result = WordprocessingDocument.IsMinimumDocument(null, WordprocessingDocumentType.Document);
 
             // Assert
             Assert.False(result);
         }
 
         [Fact]
-        public void SpreadsheetDocument_IsValidDocument_ShouldReturnFalse_WhenFileExtensionIsUnsupported()
+        public void WordprocessingDocument_IsMinimumDocument_InvalidContent_ReturnsFalse()
         {
             // Arrange
-            string unsupportedFilePath = Path.GetTempFileName();
-            File.WriteAllText(unsupportedFilePath, "Test content");
+            string filePath = Path.Combine(Path.GetTempPath(), "invalid.docx");
 
-            try
+            using (var wordDocument = WordprocessingDocument.Create(filePath, WordprocessingDocumentType.Document))
             {
-                // Act
-                bool result = SpreadsheetDocument.IsValidDocument(unsupportedFilePath);
+                var mainPart = wordDocument.AddMainDocumentPart();
+                mainPart.Document = new Document();
+            }
 
-                // Assert
-                Assert.False(result);
-            }
-            finally
-            {
-                File.Delete(unsupportedFilePath);
-            }
+            // Act
+            bool result = WordprocessingDocument.IsMinimumDocument(filePath, WordprocessingDocumentType.Document);
+
+            // Assert
+            Assert.False(result);
+
+            // Cleanup
+            File.Delete(filePath);
         }
+        #endregion
 
+        #region SpreadsheetDocument.IsMinimumDocument tests
         [Fact]
-        public void SpreadsheetDocument_IsValidDocument_ShouldReturnFalse_WhenDocumentTypeDoesNotMatchExtension()
-        {
-            // Arrange
-            string filePath = Path.Combine(Path.GetTempPath(), "test.xlsx");
-
-            using (SpreadsheetDocument spreadsheetDocument = SpreadsheetDocument.Create(filePath, SpreadsheetDocumentType.Workbook))
-            {
-                WorkbookPart wbp = spreadsheetDocument.AddWorkbookPart();
-                WorksheetPart wsp = wbp.AddNewPart<WorksheetPart>();
-                wbp.Workbook = new Spreadsheet.Workbook(new Spreadsheet.Sheets(new Spreadsheet.Sheet() { Id = wbp.GetIdOfPart(wsp), SheetId = 1, Name = "Sheet1" }));
-                wsp.Worksheet = new Spreadsheet.Worksheet(new Spreadsheet.SheetData());
-            }
-
-            try
-            {
-                // Act
-                bool result = SpreadsheetDocument.IsValidDocument(filePath, SpreadsheetDocumentType.Template);
-
-                // Assert
-                Assert.False(result);
-            }
-            finally
-            {
-                File.Delete(filePath);
-            }
-        }
-
-        [Fact]
-        public void SpreadsheetDocument_IsValidDocument_ShouldReturnTrue_ForValidDocument()
+        public void IsMinimumDocument_ValidXlsx_ReturnsTrue()
         {
             // Arrange
             string filePath = Path.Combine(Path.GetTempPath(), "valid.xlsx");
@@ -534,52 +478,155 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                 wsp.Worksheet = new Spreadsheet.Worksheet(new Spreadsheet.SheetData());
             }
 
-            try
-            {
-                // Act
-                bool result = SpreadsheetDocument.IsValidDocument(filePath);
+            // Act
+            bool result = SpreadsheetDocument.IsMinimumDocument(filePath, SpreadsheetDocumentType.Workbook);
 
-                // Assert
-                Assert.True(result);
-            }
-            finally
-            {
-                File.Delete(filePath);
-            }
+            // Assert
+            Assert.True(result);
+
+            // Cleanup
+            File.Delete(filePath);
         }
 
         [Fact]
-        public void SpreadsheetDocument_IsValidDocument_ShouldReturnFalse_WhenDocumentIsInvalid()
+        public void IsMinimumDocument_ValidXltx_ReturnsTrue()
+        {
+            // Arrange
+            string filePath = Path.Combine(Path.GetTempPath(), "valid.xltx");
+
+            using (SpreadsheetDocument spreadsheetDocument = SpreadsheetDocument.Create(filePath, SpreadsheetDocumentType.Template))
+            {
+                WorkbookPart wbp = spreadsheetDocument.AddWorkbookPart();
+                WorksheetPart wsp = wbp.AddNewPart<WorksheetPart>();
+                wbp.Workbook = new Spreadsheet.Workbook(new Spreadsheet.Sheets(new Spreadsheet.Sheet() { Id = wbp.GetIdOfPart(wsp), SheetId = 1, Name = "Sheet1" }));
+                wsp.Worksheet = new Spreadsheet.Worksheet(new Spreadsheet.SheetData());
+            }
+
+            // Act
+            bool result = SpreadsheetDocument.IsMinimumDocument(filePath, SpreadsheetDocumentType.Template);
+
+            // Assert
+            Assert.True(result);
+
+            // Cleanup
+            File.Delete(filePath);
+        }
+
+        [Fact]
+        public void SpreadsheetDocument_IsMinimumDocument_InvalidExtension_ReturnsFalse()
+        {
+            // Arrange
+            string filePath = Path.Combine(Path.GetTempPath(), string.Concat(Path.GetTempFileName(), ".txt"));
+            File.WriteAllText(filePath, string.Empty);
+
+            // Act
+            bool result = SpreadsheetDocument.IsMinimumDocument(filePath, SpreadsheetDocumentType.Workbook);
+
+            // Assert
+            Assert.False(result);
+
+            // Cleanup
+            File.Delete(filePath);
+        }
+
+        [Fact]
+        public void SpreadsheetDocument_IsMinimumDocument_NonExistentFile_ReturnsFalse()
+        {
+            // Arrange
+            string filePath = "nonexistent.xlsx";
+
+            // Act
+            bool result = SpreadsheetDocument.IsMinimumDocument(filePath, SpreadsheetDocumentType.Workbook);
+
+            // Assert
+            Assert.False(result);
+        }
+
+        [Fact]
+        public void SpreadsheetDocument_IsMinimumDocument_InvalidPathCharacters_ReturnsFalse()
+        {
+            // Arrange
+            string filePath = "invalid|path.xlsx";
+
+            // Act
+            bool result = SpreadsheetDocument.IsMinimumDocument(filePath, SpreadsheetDocumentType.Workbook);
+
+            // Assert
+            Assert.False(result);
+        }
+
+        [Fact]
+        public void SpreadsheetDocument_IsMinimumDocument_UnsupportedDocumentType_ThrowsArgumentException()
+        {
+            // Arrange
+            string filePath = Path.Combine(Path.GetTempPath(), "valid.xlsx");
+
+            using (SpreadsheetDocument spreadsheetDocument = SpreadsheetDocument.Create(filePath, SpreadsheetDocumentType.Workbook))
+            {
+                WorkbookPart wbp = spreadsheetDocument.AddWorkbookPart();
+                WorksheetPart wsp = wbp.AddNewPart<WorksheetPart>();
+                wbp.Workbook = new Spreadsheet.Workbook(new Spreadsheet.Sheets(new Spreadsheet.Sheet() { Id = wbp.GetIdOfPart(wsp), SheetId = 1, Name = "Sheet1" }));
+                wsp.Worksheet = new Spreadsheet.Worksheet(new Spreadsheet.SheetData());
+            }
+
+            // Act & Assert
+            Assert.Throws<ArgumentException>(() =>
+                SpreadsheetDocument.IsMinimumDocument(filePath, SpreadsheetDocumentType.AddIn));
+
+            // Cleanup
+            File.Delete(filePath);
+        }
+
+        [Fact]
+        public void SpreadsheetDocument_IsMinimumDocument_EmptyPath_ReturnsFalse()
+        {
+            // Act
+            bool result = SpreadsheetDocument.IsMinimumDocument(string.Empty, SpreadsheetDocumentType.Workbook);
+
+            // Assert
+            Assert.False(result);
+        }
+
+        [Fact]
+        public void SpreadsheetDocument_IsMinimumDocument_NullPath_ReturnsFalse()
+        {
+            // Act
+            bool result = SpreadsheetDocument.IsMinimumDocument(null, SpreadsheetDocumentType.Workbook);
+
+            // Assert
+            Assert.False(result);
+        }
+
+        [Fact]
+        public void SpreadsheetDocument_IsMinimumDocument_InvalidContent_ReturnsFalse()
         {
             // Arrange
             string filePath = Path.Combine(Path.GetTempPath(), "invalid.xlsx");
 
-            using (SpreadsheetDocument invalidSpreadsheetDocument = SpreadsheetDocument.Create(filePath, SpreadsheetDocumentType.Workbook))
+            using (SpreadsheetDocument spreadsheetDocument = SpreadsheetDocument.Create(filePath, SpreadsheetDocumentType.Workbook))
             {
-                WorkbookPart wbp = invalidSpreadsheetDocument.AddWorkbookPart();
+                WorkbookPart wbp = spreadsheetDocument.AddWorkbookPart();
                 WorksheetPart wsp = wbp.AddNewPart<WorksheetPart>();
+                wbp.Workbook = new Spreadsheet.Workbook(new Spreadsheet.Sheets(new Spreadsheet.Sheet() { Id = wbp.GetIdOfPart(wsp), SheetId = 1, Name = "Sheet1" }));
             }
 
-            try
-            {
-                // Act
-                bool result = SpreadsheetDocument.IsValidDocument(filePath);
+            // Act
+            bool result = SpreadsheetDocument.IsMinimumDocument(filePath, SpreadsheetDocumentType.Workbook);
 
-                // Assert
-                Assert.False(result);
-            }
-            finally
-            {
-                File.Delete(filePath);
-            }
+            // Assert
+            Assert.False(result);
+
+            // Cleanup
+            File.Delete(filePath);
         }
+        #endregion
 
-#region PresentationDocument.IsMinimumDocument tests
+        #region PresentationDocument.IsMinimumDocument tests
         [Fact]
         public void IsMinimumDocument_ValidPptx_ReturnsTrue()
         {
             // Arrange
-            string filePath = Path.Combine(Path.GetTempPath(), "invalid.pptx");
+            string filePath = Path.Combine(Path.GetTempPath(), "valid.pptx");
 
             using (PresentationDocument presentationDocument = PresentationDocument.Create(filePath, PresentationDocumentType.Presentation))
             {
@@ -622,7 +669,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         }
 
         [Fact]
-        public void IsMinimumDocument_InvalidExtension_ReturnsFalse()
+        public void PresentationDocument_IsMinimumDocument_InvalidExtension_ReturnsFalse()
         {
             // Arrange
             string filePath = Path.Combine(Path.GetTempPath(), "invalid.txt");
@@ -640,7 +687,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         }
 
         [Fact]
-        public void IsMinimumDocument_NonExistentFile_ReturnsFalse()
+        public void PresentationDocument_IsMinimumDocument_NonExistentFile_ReturnsFalse()
         {
             // Arrange
             string filePath = "nonexistent.pptx";
@@ -653,7 +700,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         }
 
         [Fact]
-        public void IsMinimumDocument_InvalidPathCharacters_ReturnsFalse()
+        public void PresentationDocument_IsMinimumDocument_InvalidPathCharacters_ReturnsFalse()
         {
             // Arrange
             string filePath = "invalid|path.pptx";
@@ -666,7 +713,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         }
 
         [Fact]
-        public void IsMinimumDocument_UnsupportedDocumentType_ThrowsArgumentException()
+        public void PresentationDocument_IsMinimumDocument_UnsupportedDocumentType_ThrowsArgumentException()
         {
             // Arrange
             string filePath = Path.Combine(Path.GetTempPath(), "invalid.pptx");
@@ -687,7 +734,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         }
 
         [Fact]
-        public void IsMinimumDocument_EmptyPath_ReturnsFalse()
+        public void PresentationDocument_IsMinimumDocument_EmptyPath_ReturnsFalse()
         {
             // Act
             bool result = PresentationDocument.IsMinimumDocument(string.Empty, PresentationDocumentType.Presentation);
@@ -697,7 +744,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         }
 
         [Fact]
-        public void IsMinimumDocument_NullPath_ReturnsFalse()
+        public void PresentationDocument_IsMinimumDocument_NullPath_ReturnsFalse()
         {
             // Act
             bool result = PresentationDocument.IsMinimumDocument(null, PresentationDocumentType.Presentation);
@@ -707,7 +754,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         }
 
         [Fact]
-        public void IsMinimumDocument_InvalidContent_ReturnsFalse()
+        public void PresentationDocument_IsMinimumDocument_InvalidContent_ReturnsFalse()
         {
             // Arrange
             string filePath = Path.Combine(Path.GetTempPath(), "invalid.pptx");

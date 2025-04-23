@@ -311,14 +311,37 @@ namespace DocumentFormat.OpenXml.Packaging
             => Open(package, new OpenSettings());
 
         /// <summary>
-        /// Validates whether the specified file is a valid WordprocessingDocument of the given type.
+        /// Validates whether the specified file is a minimum valid WordprocessingDocument.
         /// </summary>
         /// <param name="path">The path to the WordprocessingDocument file.</param>
-        /// <param name="documentType">The expected type of the WordprocessingDocument. Defaults to <see cref="WordprocessingDocumentType.Document"/>.</param>
-        /// <returns>True if the file is a valid WordprocessingDocument of the specified type; otherwise, false.</returns>
-        public static bool IsValidDocument(string path, WordprocessingDocumentType documentType = WordprocessingDocumentType.Document)
+        /// <param name="documentType">
+        /// The expected type of the WordprocessingDocument. Defaults to <see cref="WordprocessingDocumentType.Document"/>.
+        /// Supported types are:
+        /// <list type="bullet">
+        /// <item><see cref="WordprocessingDocumentType.Document"/> (.docx)</item>
+        /// <item><see cref="WordprocessingDocumentType.Template"/> (.dotx)</item>
+        /// <item><see cref="WordprocessingDocumentType.MacroEnabledDocument"/> (.docm)</item>
+        /// <item><see cref="WordprocessingDocumentType.MacroEnabledTemplate"/> (.dotm)</item>
+        /// </list>
+        /// </param>
+        /// <returns>
+        /// <c>true</c> if the file is a minimum valid WordprocessingDocument; otherwise, <c>false</c>.
+        /// </returns>
+        /// <remarks>
+        /// A minimum valid WordprocessingDocument must meet the following criteria:
+        /// <list type="bullet">
+        /// <item>The file must exist and have a valid extension matching the <paramref name="documentType"/>.</item>
+        /// <item>The file must contain a <see cref="Body"/> element in the main document part.</item>
+        /// </list>
+        /// </remarks>
+        public static bool IsMinimumDocument(string path, WordprocessingDocumentType documentType = WordprocessingDocumentType.Document)
         {
             if (string.IsNullOrEmpty(path))
+            {
+                return false;
+            }
+
+            if (path.IndexOfAny(System.IO.Path.GetInvalidPathChars()) >= 0)
             {
                 return false;
             }

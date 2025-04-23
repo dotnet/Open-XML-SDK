@@ -269,14 +269,47 @@ namespace DocumentFormat.OpenXml.Packaging
             => Open(package, new OpenSettings());
 
         /// <summary>
-        /// Validates whether the specified file is a valid SpreadsheetDocument of the given type.
+        /// Validates whether the specified file is a minimum valid SpreadsheetDocument.
         /// </summary>
         /// <param name="path">The path to the SpreadsheetDocument file.</param>
-        /// <param name="documentType">The expected type of the SpreadsheetDocument. Defaults to <see cref="SpreadsheetDocumentType.Workbook"/>.</param>
-        /// <returns>True if the file is a valid SpreadsheetDocument of the specified type; otherwise, false.</returns>
-        public static bool IsValidDocument(string path, SpreadsheetDocumentType documentType = SpreadsheetDocumentType.Workbook)
+        /// <param name="documentType">
+        /// The expected type of the SpreadsheetDocument. Defaults to <see cref="SpreadsheetDocumentType.Workbook"/>.
+        /// Supported types are:
+        /// <list type="bullet">
+        /// <item><see cref="SpreadsheetDocumentType.Workbook"/> (.xlsx)</item>
+        /// <item><see cref="SpreadsheetDocumentType.Template"/> (.xltx)</item>
+        /// <item><see cref="SpreadsheetDocumentType.MacroEnabledWorkbook"/> (.xlsm)</item>
+        /// <item><see cref="SpreadsheetDocumentType.MacroEnabledTemplate"/> (.xltm)</item>
+        /// </list>
+        /// </param>
+        /// <returns>
+        /// <c>true</c> if the file is a minimum valid SpreadsheetDocument; otherwise, <c>false</c>.
+        /// </returns>
+        /// <exception cref="ArgumentException">
+        /// Thrown when the <paramref name="documentType"/> is invalid or unsupported.
+        /// </exception>
+        /// <remarks>
+        /// A minimum valid SpreadsheetDocument must meet the following criteria:
+        /// <list type="bullet">
+        /// <item>The file must exist and have a valid extension matching the <paramref name="documentType"/>.</item>
+        /// <item>The file must contain at least one <see cref="Sheet"/> element in the workbook part.</item>
+        /// <item>The file must contain at least one <see cref="SheetData"/> element in the worksheet part.</item>
+        /// </list>
+        /// Unsupported document types include <see cref="SpreadsheetDocumentType.AddIn"/> (.xlam).
+        /// </remarks>
+        public static bool IsMinimumDocument(string path, SpreadsheetDocumentType documentType = SpreadsheetDocumentType.Workbook)
         {
+            if (documentType == SpreadsheetDocumentType.AddIn)
+            {
+                throw new ArgumentException($"Invalid value: {documentType}. Allowed values are SpreadsheetDocumentType.Workbook, SpreadsheetDocumentType.Template, SpreadsheetDocumentType.MacroEnabledWorkbook, and SpreadsheetDocumentType.MacroEnabledTemplate.");
+            }
+
             if (string.IsNullOrEmpty(path))
+            {
+                return false;
+            }
+
+            if (path.IndexOfAny(System.IO.Path.GetInvalidPathChars()) >= 0)
             {
                 return false;
             }
@@ -321,12 +354,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                         break;
                     case ".XLAM":
-                        if (documentType != SpreadsheetDocumentType.AddIn)
-                        {
-                            return false;
-                        }
-
-                        break;
+                        throw new FileFormatException($"Validation for SpreadsheetDocument.AddIn (.xlam) is not supported.");
                     default:
                         return false;
                 }
