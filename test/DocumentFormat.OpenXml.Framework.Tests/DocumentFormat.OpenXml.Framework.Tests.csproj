@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Bcl.Memory" />
     <PackageReference Condition=" '$(SupportsNetStandard)' == 'true' " Include="ObjectLayoutInspector" />
   </ItemGroup>
 
@@ -26,7 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" />
     <PackageReference Include="NSubstitute" />
   </ItemGroup>
 

@@ -23,6 +23,12 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
     /// </summary>
     public partial class InkAnnotationFlag : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:powerpoint", "iscomment");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:powerpoint", "CT_Empty");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the InkAnnotationFlag class.
         /// </summary>
@@ -33,7 +39,7 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("pvml:iscomment");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -47,6 +53,12 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
     /// </summary>
     public partial class TextData : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:powerpoint", "textdata");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:powerpoint", "CT_Rel");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TextData class.
         /// </summary>
@@ -67,7 +79,7 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("pvml:textdata");
+            builder.SetSchema(ElementType);
             builder.AddElement<TextData>()
                 .AddAttribute("id", a => a.Id);
         }

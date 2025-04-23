@@ -23,6 +23,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.WorkbookCompatibilit
     /// </summary>
     public partial class Version : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2024/workbookCompatibilityVersion", "version");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2024/workbookCompatibilityVersion", "CT_Version");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Version class.
         /// </summary>
@@ -53,7 +59,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.WorkbookCompatibilit
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xlwcv:version");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddElement<Version>()
                 .AddAttribute("warnBelowVersion", a => a.WarnBelowVersion)

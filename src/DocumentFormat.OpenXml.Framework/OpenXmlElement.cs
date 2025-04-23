@@ -318,12 +318,12 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets the namespace URI of the current element.
         /// </summary>
-        public virtual string NamespaceUri => Metadata.QName.Namespace.Uri;
+        public virtual string NamespaceUri => Metadata.Type.Name.Namespace.Uri;
 
         /// <summary>
         /// Gets the local name of the current element.
         /// </summary>
-        public virtual string LocalName => Metadata.QName.Name;
+        public virtual string LocalName => Metadata.Type.Name.Name;
 
         internal OpenXmlQualifiedName QName => new(NamespaceUri, LocalName);
 

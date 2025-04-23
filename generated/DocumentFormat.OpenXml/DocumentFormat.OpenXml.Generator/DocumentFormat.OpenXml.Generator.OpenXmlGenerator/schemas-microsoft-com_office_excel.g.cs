@@ -96,6 +96,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </remarks>
     public partial class ClientData : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "ClientData");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "CT_ClientData");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ClientData class.
         /// </summary>
@@ -140,7 +146,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xvml:ClientData");
+            builder.SetSchema(ElementType);
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.CommentRowTarget>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.CommentColumnTarget>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.InputValidationType>();
@@ -215,73 +221,73 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.MoveWithCells), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ResizeWithCells), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Anchor), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Locked), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.DefaultSize), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.PrintObject), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Disabled), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.AutoFill), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.AutoLine), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.AutoSizePicture), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaMacro), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.HorizontalTextAlignment), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.VerticalTextAlignment), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.LockText), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.JustifyLastLine), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.SecretEdit), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.DefaultButton), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.HelpButton), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.CancelButton), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.DismissButton), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.AcceleratorPrimary), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.AcceleratorSecondary), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.CommentRowTarget), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.CommentColumnTarget), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Visible), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.RowHidden), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ColumnHidden), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.InputValidationType), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.MultiLine), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.VerticalScrollBar), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ValidIds), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaRange), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.MinDropDownWidth), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.SelectionEntry), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Disable3DForListBoxAndDropDown), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.SelectionType), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.MultiSelections), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ListBoxCallbackType), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ListItem), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.DropStyle), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Colored), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.DropLines), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Checked), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaLink), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaPicture), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Disable3D), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.FirstButton), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaGroup), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarPosition), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarMin), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarMax), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarIncrement), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarPageIncrement), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.HorizontalScrollBar), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarWidth), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.MapOcxControl), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClipboardFormat), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.CameraObject), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.RecalculateAlways), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.AutoScaleFont), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.DdeObject), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.UIObject), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptText), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptExtended), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptLanguage), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptLocation), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaTextBox), 1, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.MoveWithCells.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.ResizeWithCells.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.Anchor.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.Locked.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.DefaultSize.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.PrintObject.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.Disabled.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.AutoFill.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.AutoLine.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.AutoSizePicture.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaMacro.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.HorizontalTextAlignment.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.VerticalTextAlignment.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.LockText.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.JustifyLastLine.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.SecretEdit.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.DefaultButton.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.HelpButton.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.CancelButton.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.DismissButton.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.AcceleratorPrimary.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.AcceleratorSecondary.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.CommentRowTarget.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.CommentColumnTarget.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.Visible.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.RowHidden.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.ColumnHidden.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.InputValidationType.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.MultiLine.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.VerticalScrollBar.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.ValidIds.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaRange.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.MinDropDownWidth.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.SelectionEntry.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.Disable3DForListBoxAndDropDown.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.SelectionType.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.MultiSelections.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.ListBoxCallbackType.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.ListItem.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.DropStyle.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.Colored.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.DropLines.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.Checked.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaLink.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaPicture.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.Disable3D.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.FirstButton.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaGroup.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarPosition.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarMin.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarMax.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarIncrement.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarPageIncrement.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.HorizontalScrollBar.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarWidth.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.MapOcxControl.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.ClipboardFormat.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.CameraObject.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.RecalculateAlways.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.AutoScaleFont.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.DdeObject.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.UIObject.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptText.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptExtended.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptLanguage.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptLocation.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaTextBox.ElementType, 1, 1)
             };
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("xvml:ObjectType"), false, new string[] { "Movie" }) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("x:ObjectType"), false, new string[] { "LineA", "RectA" }) { Application = ApplicationType.Excel });
@@ -298,6 +304,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class MoveWithCells : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "MoveWithCells");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MoveWithCells class.
         /// </summary>
@@ -322,7 +334,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:MoveWithCells");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -336,6 +348,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class ResizeWithCells : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "SizeWithCells");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ResizeWithCells class.
         /// </summary>
@@ -360,7 +378,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:SizeWithCells");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -374,6 +392,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class Locked : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Locked");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Locked class.
         /// </summary>
@@ -398,7 +422,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:Locked");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -412,6 +436,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class DefaultSize : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "DefaultSize");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DefaultSize class.
         /// </summary>
@@ -436,7 +466,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:DefaultSize");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -450,6 +480,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class PrintObject : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "PrintObject");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PrintObject class.
         /// </summary>
@@ -474,7 +510,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:PrintObject");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -488,6 +524,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class Disabled : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Disabled");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Disabled class.
         /// </summary>
@@ -512,7 +554,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:Disabled");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -526,6 +568,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class AutoFill : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "AutoFill");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AutoFill class.
         /// </summary>
@@ -550,7 +598,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:AutoFill");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -564,6 +612,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class AutoLine : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "AutoLine");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AutoLine class.
         /// </summary>
@@ -588,7 +642,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:AutoLine");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -602,6 +656,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class AutoSizePicture : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "AutoPict");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AutoSizePicture class.
         /// </summary>
@@ -626,7 +686,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:AutoPict");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -640,6 +700,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class LockText : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "LockText");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the LockText class.
         /// </summary>
@@ -664,7 +730,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:LockText");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -678,6 +744,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class JustifyLastLine : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "JustLastX");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the JustifyLastLine class.
         /// </summary>
@@ -702,7 +774,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:JustLastX");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -716,6 +788,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class SecretEdit : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "SecretEdit");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SecretEdit class.
         /// </summary>
@@ -740,7 +818,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:SecretEdit");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -754,6 +832,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class DefaultButton : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Default");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DefaultButton class.
         /// </summary>
@@ -778,7 +862,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:Default");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -792,6 +876,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class HelpButton : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Help");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the HelpButton class.
         /// </summary>
@@ -816,7 +906,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:Help");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -830,6 +920,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class CancelButton : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Cancel");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CancelButton class.
         /// </summary>
@@ -854,7 +950,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:Cancel");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -868,6 +964,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class DismissButton : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Dismiss");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DismissButton class.
         /// </summary>
@@ -892,7 +994,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:Dismiss");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -906,6 +1008,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class Visible : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Visible");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Visible class.
         /// </summary>
@@ -930,7 +1038,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:Visible");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -944,6 +1052,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class RowHidden : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "RowHidden");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RowHidden class.
         /// </summary>
@@ -968,7 +1082,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:RowHidden");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -982,6 +1096,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class ColumnHidden : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "ColHidden");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ColumnHidden class.
         /// </summary>
@@ -1006,7 +1126,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:ColHidden");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1020,6 +1140,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class MultiLine : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "MultiLine");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MultiLine class.
         /// </summary>
@@ -1044,7 +1170,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:MultiLine");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1058,6 +1184,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class VerticalScrollBar : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "VScroll");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the VerticalScrollBar class.
         /// </summary>
@@ -1082,7 +1214,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:VScroll");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1096,6 +1228,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class ValidIds : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "ValidIds");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ValidIds class.
         /// </summary>
@@ -1120,7 +1258,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:ValidIds");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1134,6 +1272,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class Disable3DForListBoxAndDropDown : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "NoThreeD2");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Disable3DForListBoxAndDropDown class.
         /// </summary>
@@ -1158,7 +1302,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:NoThreeD2");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1172,6 +1316,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class Colored : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Colored");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Colored class.
         /// </summary>
@@ -1196,7 +1346,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:Colored");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1210,6 +1360,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class Disable3D : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "NoThreeD");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Disable3D class.
         /// </summary>
@@ -1234,7 +1390,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:NoThreeD");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1248,6 +1404,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class FirstButton : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "FirstButton");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FirstButton class.
         /// </summary>
@@ -1272,7 +1434,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:FirstButton");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1286,6 +1448,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class HorizontalScrollBar : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Horiz");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the HorizontalScrollBar class.
         /// </summary>
@@ -1310,7 +1478,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:Horiz");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1324,6 +1492,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class MapOcxControl : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "MapOCX");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MapOcxControl class.
         /// </summary>
@@ -1348,7 +1522,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:MapOCX");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1362,6 +1536,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class CameraObject : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Camera");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CameraObject class.
         /// </summary>
@@ -1386,7 +1566,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:Camera");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1400,6 +1580,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class RecalculateAlways : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "RecalcAlways");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the RecalculateAlways class.
         /// </summary>
@@ -1424,7 +1610,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:RecalcAlways");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1438,6 +1624,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class AutoScaleFont : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "AutoScale");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AutoScaleFont class.
         /// </summary>
@@ -1462,7 +1654,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:AutoScale");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1476,6 +1668,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class DdeObject : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "DDE");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DdeObject class.
         /// </summary>
@@ -1500,7 +1698,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:DDE");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1514,6 +1712,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class UIObject : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "UIObj");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_TrueFalseBlank");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the UIObject class.
         /// </summary>
@@ -1538,7 +1742,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:UIObj");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1552,6 +1756,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class Anchor : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Anchor");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Anchor class.
         /// </summary>
@@ -1575,7 +1785,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xvml:Anchor");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1589,6 +1799,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class HorizontalTextAlignment : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "TextHAlign");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the HorizontalTextAlignment class.
         /// </summary>
@@ -1612,7 +1828,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xvml:TextHAlign");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1626,6 +1842,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class VerticalTextAlignment : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "TextVAlign");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the VerticalTextAlignment class.
         /// </summary>
@@ -1649,7 +1871,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xvml:TextVAlign");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1663,6 +1885,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class FormulaRange : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "FmlaRange");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FormulaRange class.
         /// </summary>
@@ -1686,7 +1914,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xvml:FmlaRange");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1700,6 +1928,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class SelectionType : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "SelType");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SelectionType class.
         /// </summary>
@@ -1723,7 +1957,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xvml:SelType");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1737,6 +1971,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class MultiSelections : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "MultiSel");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MultiSelections class.
         /// </summary>
@@ -1760,7 +2000,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xvml:MultiSel");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1774,6 +2014,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class ListBoxCallbackType : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "LCT");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ListBoxCallbackType class.
         /// </summary>
@@ -1797,7 +2043,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xvml:LCT");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1811,6 +2057,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class ListItem : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "ListItem");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ListItem class.
         /// </summary>
@@ -1834,7 +2086,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xvml:ListItem");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1848,6 +2100,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class DropStyle : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "DropStyle");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DropStyle class.
         /// </summary>
@@ -1871,7 +2129,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xvml:DropStyle");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1885,6 +2143,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class FormulaLink : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "FmlaLink");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FormulaLink class.
         /// </summary>
@@ -1908,7 +2172,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xvml:FmlaLink");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1922,6 +2186,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class FormulaPicture : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "FmlaPict");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FormulaPicture class.
         /// </summary>
@@ -1945,7 +2215,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xvml:FmlaPict");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1959,6 +2229,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class FormulaGroup : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "FmlaGroup");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FormulaGroup class.
         /// </summary>
@@ -1982,7 +2258,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xvml:FmlaGroup");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -1996,6 +2272,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class ScriptText : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "ScriptText");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ScriptText class.
         /// </summary>
@@ -2019,7 +2301,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xvml:ScriptText");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2033,6 +2315,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class ScriptExtended : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "ScriptExtended");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ScriptExtended class.
         /// </summary>
@@ -2056,7 +2344,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xvml:ScriptExtended");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2070,6 +2358,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class FormulaTextBox : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "FmlaTxbx");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "string");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FormulaTextBox class.
         /// </summary>
@@ -2093,7 +2387,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xvml:FmlaTxbx");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2107,6 +2401,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class FormulaMacro : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "FmlaMacro");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_Macro");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the FormulaMacro class.
         /// </summary>
@@ -2131,7 +2431,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator(new StringValidator() { MinLength = (0L), MaxLength = (256L) });
-            builder.SetSchema("xvml:FmlaMacro");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2145,6 +2445,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class AcceleratorPrimary : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Accel");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "unsignedByte");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AcceleratorPrimary class.
         /// </summary>
@@ -2169,7 +2475,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<ByteValue>(NumberValidator.Instance);
-            builder.SetSchema("xvml:Accel");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2183,6 +2489,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class AcceleratorSecondary : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Accel2");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "unsignedByte");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the AcceleratorSecondary class.
         /// </summary>
@@ -2207,7 +2519,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<ByteValue>(NumberValidator.Instance);
-            builder.SetSchema("xvml:Accel2");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2221,6 +2533,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class CommentRowTarget : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Row");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "integer");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CommentRowTarget class.
         /// </summary>
@@ -2245,7 +2563,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(NumberValidator.Instance);
-            builder.SetSchema("xvml:Row");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2259,6 +2577,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class CommentColumnTarget : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Column");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "integer");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the CommentColumnTarget class.
         /// </summary>
@@ -2283,7 +2607,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(NumberValidator.Instance);
-            builder.SetSchema("xvml:Column");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2297,6 +2621,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class InputValidationType : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "VTEdit");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "integer");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the InputValidationType class.
         /// </summary>
@@ -2321,7 +2651,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(NumberValidator.Instance);
-            builder.SetSchema("xvml:VTEdit");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2335,6 +2665,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class MinDropDownWidth : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "WidthMin");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "integer");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the MinDropDownWidth class.
         /// </summary>
@@ -2359,7 +2695,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(NumberValidator.Instance);
-            builder.SetSchema("xvml:WidthMin");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2373,6 +2709,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class SelectionEntry : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Sel");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "integer");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the SelectionEntry class.
         /// </summary>
@@ -2397,7 +2739,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(NumberValidator.Instance);
-            builder.SetSchema("xvml:Sel");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2411,6 +2753,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class DropLines : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "DropLines");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "integer");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DropLines class.
         /// </summary>
@@ -2435,7 +2783,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(NumberValidator.Instance);
-            builder.SetSchema("xvml:DropLines");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2449,6 +2797,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class Checked : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Checked");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "integer");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Checked class.
         /// </summary>
@@ -2473,7 +2827,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(NumberValidator.Instance);
-            builder.SetSchema("xvml:Checked");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2487,6 +2841,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class ScrollBarPosition : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Val");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "integer");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ScrollBarPosition class.
         /// </summary>
@@ -2511,7 +2871,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(NumberValidator.Instance);
-            builder.SetSchema("xvml:Val");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2525,6 +2885,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class ScrollBarMin : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Min");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "integer");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ScrollBarMin class.
         /// </summary>
@@ -2549,7 +2915,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(NumberValidator.Instance);
-            builder.SetSchema("xvml:Min");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2563,6 +2929,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class ScrollBarMax : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Max");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "integer");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ScrollBarMax class.
         /// </summary>
@@ -2587,7 +2959,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(NumberValidator.Instance);
-            builder.SetSchema("xvml:Max");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2601,6 +2973,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class ScrollBarIncrement : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Inc");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "integer");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ScrollBarIncrement class.
         /// </summary>
@@ -2625,7 +3003,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(NumberValidator.Instance);
-            builder.SetSchema("xvml:Inc");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2639,6 +3017,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class ScrollBarPageIncrement : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Page");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "integer");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ScrollBarPageIncrement class.
         /// </summary>
@@ -2663,7 +3047,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(NumberValidator.Instance);
-            builder.SetSchema("xvml:Page");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2677,6 +3061,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class ScrollBarWidth : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "Dx");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "integer");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ScrollBarWidth class.
         /// </summary>
@@ -2701,7 +3091,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(NumberValidator.Instance);
-            builder.SetSchema("xvml:Dx");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2715,6 +3105,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class ClipboardFormat : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "CF");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("urn:schemas-microsoft-com:office:excel", "ST_CF");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ClipboardFormat class.
         /// </summary>
@@ -2739,7 +3135,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ClipboardFormatValues>>(EnumValidator.Instance);
-            builder.SetSchema("xvml:CF");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2753,6 +3149,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class ScriptLanguage : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "ScriptLanguage");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "nonNegativeInteger");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ScriptLanguage class.
         /// </summary>
@@ -2777,7 +3179,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(new NumberValidator() { IsNonNegative = (true) });
-            builder.SetSchema("xvml:ScriptLanguage");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>
@@ -2791,6 +3193,12 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// </summary>
     public partial class ScriptLocation : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("urn:schemas-microsoft-com:office:excel", "ScriptLocation");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "nonNegativeInteger");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ScriptLocation class.
         /// </summary>
@@ -2815,7 +3223,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<IntegerValue>(new NumberValidator() { IsNonNegative = (true) });
-            builder.SetSchema("xvml:ScriptLocation");
+            builder.SetSchema(ElementType);
         }
 
         /// <inheritdoc/>

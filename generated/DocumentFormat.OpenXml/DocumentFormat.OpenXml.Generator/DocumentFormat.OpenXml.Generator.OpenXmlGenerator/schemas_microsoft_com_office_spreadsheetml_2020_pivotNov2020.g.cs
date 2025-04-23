@@ -23,6 +23,12 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.Pivot
     /// </summary>
     public partial class Xsdboolean : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/pivotNov2020", "implicitMeasureSupport");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Xsdboolean class.
         /// </summary>
@@ -47,7 +53,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.Pivot
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<BooleanValue>(NumberValidator.Instance);
-            builder.SetSchema("xxpim:implicitMeasureSupport");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
         }
 
@@ -62,6 +68,12 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.Pivot
     /// </summary>
     public partial class Ignorable : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/pivotNov2020", "ignorableAfterVersion");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/pivotNov2020", "CT_Ignorable");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Ignorable class.
         /// </summary>
@@ -82,7 +94,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.Pivot
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xxpim:ignorableAfterVersion");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<Ignorable>()
                 .AddAttribute("version", a => a.Version, aBuilder =>
@@ -102,6 +114,12 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.Pivot
     /// </summary>
     public partial class DataFieldFutureData : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/pivotNov2020", "dataFieldFutureData");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/pivotNov2020", "CT_DataFieldFutureData");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the DataFieldFutureData class.
         /// </summary>
@@ -132,7 +150,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.Pivot
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xxpim:dataFieldFutureData");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
             builder.AddElement<DataFieldFutureData>()
                 .AddAttribute("version", a => a.Version, aBuilder =>
