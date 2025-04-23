@@ -573,5 +573,160 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                 File.Delete(filePath);
             }
         }
+
+#region PresentationDocument.IsMinimumDocument tests
+        [Fact]
+        public void IsMinimumDocument_ValidPptx_ReturnsTrue()
+        {
+            // Arrange
+            string filePath = Path.Combine(Path.GetTempPath(), "invalid.pptx");
+
+            using (PresentationDocument presentationDocument = PresentationDocument.Create(filePath, PresentationDocumentType.Presentation))
+            {
+                PresentationPart presentationPart = presentationDocument.AddPresentationPart();
+                presentationPart.Presentation = new Presentation.Presentation();
+                presentationPart.Presentation.AddChild(new NotesSize() { Cx = 913607, Cy = 913607 });
+            }
+
+            // Act
+            bool result = PresentationDocument.IsMinimumDocument(filePath, PresentationDocumentType.Presentation);
+
+            // Assert
+            Assert.True(result);
+
+            // Cleanup
+            File.Delete(filePath);
+        }
+
+        [Fact]
+        public void IsMinimumDocument_ValidPotx_ReturnsTrue()
+        {
+            // Arrange
+            string filePath = Path.Combine(Path.GetTempPath(), "invalid.potx");
+
+            using (PresentationDocument presentationDocument = PresentationDocument.Create(filePath, PresentationDocumentType.Presentation))
+            {
+                PresentationPart presentationPart = presentationDocument.AddPresentationPart();
+                presentationPart.Presentation = new Presentation.Presentation();
+                presentationPart.Presentation.AddChild(new NotesSize() { Cx = 913607, Cy = 913607 });
+            }
+
+            // Act
+            bool result = PresentationDocument.IsMinimumDocument(filePath, PresentationDocumentType.Template);
+
+            // Assert
+            Assert.True(result);
+
+            // Cleanup
+            File.Delete(filePath);
+        }
+
+        [Fact]
+        public void IsMinimumDocument_InvalidExtension_ReturnsFalse()
+        {
+            // Arrange
+            string filePath = Path.Combine(Path.GetTempPath(), "invalid.txt");
+
+            File.WriteAllText(filePath, string.Empty);
+
+            // Act
+            bool result = PresentationDocument.IsMinimumDocument(filePath, PresentationDocumentType.Presentation);
+
+            // Assert
+            Assert.False(result);
+
+            // Cleanup
+            File.Delete(filePath);
+        }
+
+        [Fact]
+        public void IsMinimumDocument_NonExistentFile_ReturnsFalse()
+        {
+            // Arrange
+            string filePath = "nonexistent.pptx";
+
+            // Act
+            bool result = PresentationDocument.IsMinimumDocument(filePath, PresentationDocumentType.Presentation);
+
+            // Assert
+            Assert.False(result);
+        }
+
+        [Fact]
+        public void IsMinimumDocument_InvalidPathCharacters_ReturnsFalse()
+        {
+            // Arrange
+            string filePath = "invalid|path.pptx";
+
+            // Act
+            bool result = PresentationDocument.IsMinimumDocument(filePath, PresentationDocumentType.Presentation);
+
+            // Assert
+            Assert.False(result);
+        }
+
+        [Fact]
+        public void IsMinimumDocument_UnsupportedDocumentType_ThrowsArgumentException()
+        {
+            // Arrange
+            string filePath = Path.Combine(Path.GetTempPath(), "invalid.pptx");
+
+            using (PresentationDocument presentationDocument = PresentationDocument.Create(filePath, PresentationDocumentType.Presentation))
+            {
+                PresentationPart presentationPart = presentationDocument.AddPresentationPart();
+                presentationPart.Presentation = new Presentation.Presentation();
+                presentationPart.Presentation.AddChild(new NotesSize() { Cx = 913607, Cy = 913607 });
+            }
+
+            // Act & Assert
+            Assert.Throws<ArgumentException>(() =>
+                PresentationDocument.IsMinimumDocument(filePath, PresentationDocumentType.AddIn));
+
+            // Cleanup
+            File.Delete(filePath);
+        }
+
+        [Fact]
+        public void IsMinimumDocument_EmptyPath_ReturnsFalse()
+        {
+            // Act
+            bool result = PresentationDocument.IsMinimumDocument(string.Empty, PresentationDocumentType.Presentation);
+
+            // Assert
+            Assert.False(result);
+        }
+
+        [Fact]
+        public void IsMinimumDocument_NullPath_ReturnsFalse()
+        {
+            // Act
+            bool result = PresentationDocument.IsMinimumDocument(null, PresentationDocumentType.Presentation);
+
+            // Assert
+            Assert.False(result);
+        }
+
+        [Fact]
+        public void IsMinimumDocument_InvalidContent_ReturnsFalse()
+        {
+            // Arrange
+            string filePath = Path.Combine(Path.GetTempPath(), "invalid.pptx");
+
+            using (PresentationDocument presentationDocument = PresentationDocument.Create(filePath, PresentationDocumentType.Presentation))
+            {
+                PresentationPart presentationPart = presentationDocument.AddPresentationPart();
+                presentationPart.Presentation = new Presentation.Presentation();
+            }
+
+            // Act
+            bool result = PresentationDocument.IsMinimumDocument(filePath, PresentationDocumentType.Presentation);
+
+            // Assert
+            Assert.False(result);
+
+            // Cleanup
+            File.Delete(filePath);
+        }
+        #endregion
     }
 }

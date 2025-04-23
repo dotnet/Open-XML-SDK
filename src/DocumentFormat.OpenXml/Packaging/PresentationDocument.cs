@@ -2,11 +2,14 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Builder;
+using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Features;
+using DocumentFormat.OpenXml.Presentation;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Packaging;
+using System.Linq;
 using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Packaging
@@ -266,6 +269,96 @@ namespace DocumentFormat.OpenXml.Packaging
                 .UseSettings(openSettings)
                 .Build()
                 .Open(package);
+
+        /// <summary>
+        /// Validates whether the specified file is a minimum valid PresentationDocument.
+        /// </summary>
+        /// <param name="path">The path to the PresentationDocument file.</param>
+        /// <param name="documentType">The expected type of the PresentationDocument. Defaults to PresentationDocumentType.Presentation.</param>
+        /// <returns>True if the file is a minimum valid PresentationDocument; otherwise, false.</returns>
+        /// <exception cref="ArgumentException">
+        /// Thrown when the <paramref name="documentType"/> is invalid or unsupported.
+        /// </exception>
+        public static bool IsMinimumDocument(string path, PresentationDocumentType documentType = PresentationDocumentType.Presentation)
+        {
+            if (documentType == PresentationDocumentType.AddIn || documentType == PresentationDocumentType.Slideshow || documentType == PresentationDocumentType.MacroEnabledSlideshow)
+            {
+                throw new ArgumentException($"Invalid value: {documentType}. Allowed values are PresentationDocumentType.Presentation, PresentationDocumentType.MacroEnabledPresentation, PresentationDocumentType.MacroEnabledTemplate, and PresentationDocumentType.Template.");
+            }
+
+            if (string.IsNullOrEmpty(path))
+            {
+                return false;
+            }
+
+            if (path.IndexOfAny(System.IO.Path.GetInvalidPathChars()) >= 0)
+            {
+                return false;
+            }
+
+            try
+            {
+                if (!File.Exists(path))
+                {
+                    return false;
+                }
+
+                string ext = new FileInfo(path).Extension.ToUpperInvariant();
+
+                switch (ext)
+                {
+                    case ".PPTX":
+                        if (documentType != PresentationDocumentType.Presentation)
+                        {
+                            return false;
+                        }
+
+                        break;
+                    case ".POTX":
+                        if (documentType != PresentationDocumentType.Template)
+                        {
+                            return false;
+                        }
+
+                        break;
+                    case ".PPTM":
+                        if (documentType != PresentationDocumentType.MacroEnabledPresentation)
+                        {
+                            return false;
+                        }
+
+                        break;
+                    case ".POTM":
+                        if (documentType != PresentationDocumentType.MacroEnabledTemplate)
+                        {
+                            return false;
+                        }
+
+                        break;
+                    case ".PPSX":
+                        throw new FileFormatException($"Validation for PresentationDocumentType.AddIn (.ppsx) is not supported.");
+                    case ".PPSM":
+                        throw new FileFormatException($"Validation for PresentationDocumentType.AddIn (.ppsm) is not supported.");
+                    case ".PPAM":
+                        throw new FileFormatException($"Validation for PresentationDocumentType.AddIn (.ppam) is not supported.");
+                    default:
+                        return false;
+                }
+
+                using (PresentationDocument presentationDocument = Open(path, false))
+                {
+                    NotesSize? notesSize = presentationDocument.PresentationPart?.Presentation?.NotesSize;
+
+                    return notesSize is not null && notesSize.Cx is not null && notesSize.Cx.HasValue &&
+                        notesSize.Cx >= 0 && notesSize.Cx <= 27273042316900 && notesSize.Cy is not null && notesSize.Cy.HasValue &&
+                        notesSize.Cy >= 0 && notesSize.Cy <= 27273042316900;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
         /// <summary>
         /// Changes the document type.
