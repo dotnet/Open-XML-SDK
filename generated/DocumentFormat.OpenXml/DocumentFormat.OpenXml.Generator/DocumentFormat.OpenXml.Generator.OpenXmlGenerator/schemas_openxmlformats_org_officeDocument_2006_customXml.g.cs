@@ -83,7 +83,11 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences.ElementType, static () => new DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences>();
+>>>>>>> origin/main
             builder.AddElement<DataStoreItem>()
                 .AddAttribute("ds:itemID", a => a.ItemId, aBuilder =>
                 {
@@ -246,7 +250,11 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReference.ElementType, static () => new DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReference());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReference>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReference.ElementType, 0, 0)

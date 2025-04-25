@@ -17808,6 +17808,18 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName setDefinition = "setDefinition";
 
         /// <summary>
+        /// Represents the setVersion XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="XLWCV.version" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: Version.SetVersion.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName setVersion = "setVersion";
+
+        /// <summary>
         /// Represents the shadeToTitle XML attribute.
         /// </summary>
         /// <remarks>
@@ -22510,6 +22522,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName w = "w";
+
+        /// <summary>
+        /// Represents the warnBelowVersion XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="XLWCV.version" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: Version.WarnBelowVersion.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName warnBelowVersion = "warnBelowVersion";
 
         /// <summary>
         /// Represents the weight XML attributes.

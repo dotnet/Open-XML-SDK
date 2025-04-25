@@ -16,6 +16,7 @@ using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo;
 using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService;
 using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms;
 using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays;
+using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.WorkbookCompatibilityVersion;
 using DocumentFormat.OpenXml.Office2010.Excel;
 using DocumentFormat.OpenXml.Office2013.Excel;
 using DocumentFormat.OpenXml.Office2013.ExcelAc;
@@ -157,8 +158,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CalculationCell.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CalculationCell());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CalculationCell>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.CalculationCell.ElementType, 1, 0),
@@ -257,9 +263,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Authors.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Authors());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CommentList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CommentList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Authors>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CommentList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Authors.ElementType, 1, 1),
@@ -407,8 +419,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Map.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Map());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Schema.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Schema());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Map>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Schema>();
+>>>>>>> origin/main
             builder.AddElement<MapInfo>()
                 .AddAttribute("SelectionNamespaces", a => a.SelectionNamespaces, aBuilder =>
                 {
@@ -510,7 +527,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Connection.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Connection());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Connection>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Connection.ElementType, 1, 0)
@@ -809,6 +830,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CacheFields.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CacheFields());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CacheHierarchies.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CacheHierarchies());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CacheSource.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CacheSource());
@@ -820,6 +842,19 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Kpis.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Kpis());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.TupleCache.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.TupleCache());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CacheFields>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CacheHierarchies>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CacheSource>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CalculatedItems>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CalculatedMembers>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Dimensions>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Maps>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MeasureGroups>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Kpis>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TupleCache>();
+>>>>>>> origin/main
             builder.AddElement<PivotCacheDefinition>()
                 .AddAttribute("r:id", a => a.Id)
                 .AddAttribute("invalid", a => a.Invalid)
@@ -1100,8 +1135,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotCacheRecord.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotCacheRecord());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotCacheRecord>();
+>>>>>>> origin/main
             builder.AddElement<PivotCacheRecords>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -1896,6 +1936,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ChartFormats.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ChartFormats());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ColumnFields.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ColumnFields());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage());
@@ -1913,6 +1954,25 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.RowFields.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.RowFields());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.RowItems.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.RowItems());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ChartFormats>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColumnFields>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColumnItems>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataFields>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formats>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Location>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageFields>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotFields>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotFilters>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowFields>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowItems>();
+>>>>>>> origin/main
             builder.AddElement<PivotTableDefinition>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -2557,8 +2617,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.QueryTableExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.QueryTableExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.QueryTableRefresh.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.QueryTableRefresh());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.QueryTableExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.QueryTableRefresh>();
+>>>>>>> origin/main
             builder.AddElement<QueryTable>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -2735,8 +2800,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.SharedStringItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.SharedStringItem());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SharedStringItem>();
+>>>>>>> origin/main
             builder.AddElement<SharedStringTable>()
                 .AddAttribute("count", a => a.Count)
                 .AddAttribute("uniqueCount", a => a.UniqueCount);
@@ -2958,7 +3028,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Header.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Header());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Header>();
+>>>>>>> origin/main
             builder.AddElement<Headers>()
                 .AddAttribute("guid", a => a.Guid, aBuilder =>
                 {
@@ -3089,6 +3163,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.RevisionAutoFormat.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.RevisionAutoFormat());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.RevisionCellChange.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.RevisionCellChange());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.RevisionComment.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.RevisionComment());
@@ -3101,6 +3176,20 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.RevisionQueryTable.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.RevisionQueryTable());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.RevisionRowColumn.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.RevisionRowColumn());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.RevisionSheetName.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.RevisionSheetName());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionAutoFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionCellChange>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionComment>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionConflict>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionCustomView>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionDefinedName>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionInsertSheet>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionMove>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionQueryTable>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionRowColumn>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionSheetName>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.RevisionRowColumn.ElementType, 0, 0),
@@ -3217,7 +3306,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.UserInfo.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.UserInfo());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.UserInfo>();
+>>>>>>> origin/main
             builder.AddElement<Users>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -3353,6 +3446,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.AutoFilter.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.AutoFilter());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CellWatches.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CellWatches());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Columns.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Columns());
@@ -3391,6 +3485,46 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.TableParts.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.TableParts());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.WebPublishItems.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.WebPublishItems());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.WorksheetExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.WorksheetExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.AutoFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellWatches>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Columns>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatting>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Controls>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataConsolidate>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataValidations>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Drawing>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Hyperlinks>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.IgnoredErrors>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MergeCells>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OleObjects>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowBreaks>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageMargins>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageSetup>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PrintOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ProtectedRanges>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Scenarios>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Picture>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetCalculationProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetData>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetDimension>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetProtection>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetViews>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortState>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableParts>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WebPublishItems>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorksheetExtensionList>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.SheetProperties.ElementType, 0, 1),
@@ -3588,6 +3722,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ChartSheetProperties.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ChartSheetProperties());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ChartSheetProtection.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ChartSheetProtection());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ChartSheetViews.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ChartSheetViews());
@@ -3602,6 +3737,22 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PageMargins.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PageMargins());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Picture.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Picture());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.WebPublishItems.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.WebPublishItems());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ChartSheetProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ChartSheetProtection>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ChartSheetViews>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomChartsheetViews>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Drawing>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageMargins>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Picture>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WebPublishItems>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.ChartSheetProperties.ElementType, 0, 1),
@@ -3907,6 +4058,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Controls.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Controls());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Drawing.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Drawing());
@@ -3923,6 +4075,24 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.SheetProperties.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.SheetProperties());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.SheetProtection.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.SheetProtection());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.SheetViews.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.SheetViews());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Controls>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Drawing>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OleObjects>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageMargins>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageSetup>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PrintOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetProtection>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetViews>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.SheetProperties.ElementType, 0, 1),
@@ -4247,6 +4417,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.FutureMetadata.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.FutureMetadata());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.MdxMetadata.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.MdxMetadata());
@@ -4254,6 +4425,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ValueMetadata.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ValueMetadata());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.MetadataStrings.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.MetadataStrings());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.MetadataTypes.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.MetadataTypes());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FutureMetadata>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MdxMetadata>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellMetadata>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ValueMetadata>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MetadataStrings>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MetadataTypes>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.MetadataTypes.ElementType, 0, 1),
@@ -4394,7 +4574,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.SingleXmlCell.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.SingleXmlCell());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SingleXmlCell>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.SingleXmlCell.ElementType, 1, 0)
@@ -4500,6 +4684,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Borders.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Borders());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CellStyles.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CellStyles());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CellStyleFormats.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CellStyleFormats());
@@ -4511,6 +4696,19 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.NumberingFormats.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.NumberingFormats());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.StylesheetExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.StylesheetExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.TableStyles.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.TableStyles());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Borders>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellStyles>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellStyleFormats>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellFormats>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Colors>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DifferentialFormats>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Fills>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Fonts>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormats>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.StylesheetExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableStyles>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.NumberingFormats.ElementType, 0, 1),
@@ -4762,10 +4960,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DdeLink.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DdeLink());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExternalBook.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExternalBook());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.OleLink.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.OleLink());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DdeLink>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExternalBook>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OleLink>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -5091,11 +5296,19 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.AutoFilter.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.AutoFilter());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.SortState.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.SortState());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.TableColumns.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.TableColumns());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.TableExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.TableExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.TableStyleInfo.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.TableStyleInfo());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.AutoFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortState>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableColumns>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableStyleInfo>();
+>>>>>>> origin/main
             builder.AddElement<Table>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -5308,8 +5521,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.VolatileType.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.VolatileType());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.VolatileType>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.VolatileType.ElementType, 1, 0),
@@ -5433,6 +5651,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.BookViews.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.BookViews());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CalculationProperties.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CalculationProperties());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookViews.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookViews());
@@ -5451,6 +5670,26 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.WorkbookProperties.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.WorkbookProperties());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.WorkbookProtection.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.WorkbookProtection());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath.ElementType, static () => new DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.BookViews>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CalculationProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookViews>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DefinedNames>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExternalReferences>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FileRecoveryProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FileSharing>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FileVersion>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FunctionGroups>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OleSize>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotCaches>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Sheets>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WebPublishing>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WebPublishObjects>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorkbookExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorkbookProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorkbookProtection>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath>();
+>>>>>>> origin/main
             builder.AddElement<Workbook>()
                 .AddAttribute("conformance", a => a.Conformance);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -5798,6 +6037,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ColorFilter.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ColorFilter());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CustomFilters.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CustomFilters());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DynamicFilter.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DynamicFilter());
@@ -5807,6 +6047,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Top10.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Top10());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.CustomFilters.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.CustomFilters());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.IconFilter.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.IconFilter());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColorFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomFilters>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DynamicFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Filters>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.IconFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Top10>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.CustomFilters>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.IconFilter>();
+>>>>>>> origin/main
             builder.AddElement<FilterColumn>()
                 .AddAttribute("colId", a => a.ColumnId, aBuilder =>
                 {
@@ -6045,9 +6296,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.SortCondition.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.SortCondition());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.SortCondition.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.SortCondition());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortCondition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SortCondition>();
+>>>>>>> origin/main
             builder.AddElement<SortState>()
                 .AddAttribute("columnSort", a => a.ColumnSort)
                 .AddAttribute("caseSensitive", a => a.CaseSensitive)
@@ -6125,7 +6382,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Extension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Extension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -6358,7 +6619,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Author.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Author());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Author>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Author.ElementType, 0, 0)
@@ -6423,7 +6688,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Comment.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Comment());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Comment>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Comment.ElementType, 0, 0)
@@ -6529,8 +6798,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CommentProperties.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CommentProperties());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CommentText.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CommentText());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CommentProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CommentText>();
+>>>>>>> origin/main
             builder.AddElement<Comment>()
                 .AddAttribute("ref", a => a.Reference, aBuilder =>
                 {
@@ -7533,7 +7807,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DataBinding.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DataBinding());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataBinding>();
+>>>>>>> origin/main
             builder.AddElement<Map>()
                 .AddAttribute("ID", a => a.ID, aBuilder =>
                 {
@@ -7983,12 +8261,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ConnectionExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ConnectionExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DatabaseProperties.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DatabaseProperties());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.OlapProperties.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.OlapProperties());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Parameters.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Parameters());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.TextProperties.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.TextProperties());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.WebQueryProperties.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.WebQueryProperties());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConnectionExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DatabaseProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OlapProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Parameters>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WebQueryProperties>();
+>>>>>>> origin/main
             builder.AddElement<Connection>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -8184,9 +8471,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.FieldItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.FieldItem());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.MissingTable.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.MissingTable());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CharacterValue.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CharacterValue());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FieldItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MissingTable>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CharacterValue>();
+>>>>>>> origin/main
             builder.AddElement<Tables>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
@@ -8712,10 +9005,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CacheFieldExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CacheFieldExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.FieldGroup.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.FieldGroup());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.SharedItems.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.SharedItems());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.MemberPropertiesMap.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.MemberPropertiesMap());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CacheFieldExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FieldGroup>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SharedItems>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberPropertiesMap>();
+>>>>>>> origin/main
             builder.AddElement<CacheField>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -8837,7 +9137,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Page.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Page());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Page>();
+>>>>>>> origin/main
             builder.AddElement<Pages>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -8914,7 +9218,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.RangeSet.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.RangeSet());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RangeSet>();
+>>>>>>> origin/main
             builder.AddElement<RangeSets>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -8991,7 +9299,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PageItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PageItem());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageItem>();
+>>>>>>> origin/main
             builder.AddElement<Page>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -9338,8 +9650,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Tuples.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Tuples());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Tuples>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex>();
+>>>>>>> origin/main
             builder.AddElement<MissingItem>()
                 .AddAttribute("u", a => a.Unused)
                 .AddAttribute("f", a => a.Calculated)
@@ -9546,8 +9863,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Tuples.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Tuples());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Tuples>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex>();
+>>>>>>> origin/main
             builder.AddElement<NumberItem>()
                 .AddAttribute("v", a => a.Val, aBuilder =>
                 {
@@ -9690,7 +10012,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex>();
+>>>>>>> origin/main
             builder.AddElement<BooleanItem>()
                 .AddAttribute("v", a => a.Val, aBuilder =>
                 {
@@ -9886,8 +10212,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Tuples.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Tuples());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Tuples>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex>();
+>>>>>>> origin/main
             builder.AddElement<ErrorItem>()
                 .AddAttribute("v", a => a.Val, aBuilder =>
                 {
@@ -10111,8 +10442,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Tuples.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Tuples());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Tuples>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex>();
+>>>>>>> origin/main
             builder.AddElement<StringItem>()
                 .AddAttribute("v", a => a.Val, aBuilder =>
                 {
@@ -10252,7 +10588,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex>();
+>>>>>>> origin/main
             builder.AddElement<DateTimeItem>()
                 .AddAttribute("v", a => a.Val, aBuilder =>
                 {
@@ -10629,6 +10969,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.BooleanItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.BooleanItem());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DateTimeItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DateTimeItem());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ErrorItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ErrorItem());
@@ -10636,6 +10977,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.MissingItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.MissingItem());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.NumberItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.NumberItem());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.StringItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.StringItem());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.BooleanItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DateTimeItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ErrorItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FieldItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MissingItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.StringItem>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.MissingItem.ElementType, 1, 1),
@@ -10954,8 +11304,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Groups.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Groups());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Groups>();
+>>>>>>> origin/main
             builder.AddElement<GroupLevel>()
                 .AddAttribute("uniqueName", a => a.UniqueName, aBuilder =>
                 {
@@ -11069,7 +11424,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Group.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Group());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Group>();
+>>>>>>> origin/main
             builder.AddElement<Groups>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -11186,7 +11545,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.GroupMembers.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.GroupMembers());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.GroupMembers>();
+>>>>>>> origin/main
             builder.AddElement<Group>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -11293,7 +11656,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.GroupMember.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.GroupMember());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.GroupMember>();
+>>>>>>> origin/main
             builder.AddElement<GroupMembers>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -11431,10 +11798,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ErrorItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ErrorItem());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.MissingItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.MissingItem());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.NumberItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.NumberItem());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.StringItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.StringItem());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ErrorItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MissingItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.StringItem>();
+>>>>>>> origin/main
             builder.AddElement<Entries>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
@@ -11514,7 +11888,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.TupleSet.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.TupleSet());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TupleSet>();
+>>>>>>> origin/main
             builder.AddElement<Sets>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -11591,7 +11969,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Query.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Query());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Query>();
+>>>>>>> origin/main
             builder.AddElement<QueryCache>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -11668,7 +12050,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ServerFormat.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ServerFormat());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ServerFormat>();
+>>>>>>> origin/main
             builder.AddElement<ServerFormats>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -11912,8 +12298,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Tuples.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Tuples());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.SortByTuple.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.SortByTuple());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Tuples>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortByTuple>();
+>>>>>>> origin/main
             builder.AddElement<TupleSet>()
                 .AddAttribute("count", a => a.Count)
                 .AddAttribute("maxRank", a => a.MaxRank, aBuilder =>
@@ -12003,7 +12394,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Tuples.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Tuples());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Tuples>();
+>>>>>>> origin/main
             builder.AddElement<Query>()
                 .AddAttribute("mdx", a => a.Mdx, aBuilder =>
                 {
@@ -12108,8 +12503,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotArea.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotArea());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
+>>>>>>> origin/main
             builder.AddElement<CalculatedItem>()
                 .AddAttribute("field", a => a.Field)
                 .AddAttribute("formula", a => a.Formula);
@@ -12325,8 +12725,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences>();
+>>>>>>> origin/main
             builder.AddElement<PivotArea>()
                 .AddAttribute("field", a => a.Field)
                 .AddAttribute("type", a => a.Type)
@@ -12502,7 +12907,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtensionList>();
+>>>>>>> origin/main
             builder.AddElement<CalculatedMember>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -13085,9 +13494,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.AutoSortScope.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.AutoSortScope());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Items.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Items());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.AutoSortScope>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Items>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtensionList>();
+>>>>>>> origin/main
             builder.AddElement<PivotField>()
                 .AddAttribute("name", a => a.Name)
                 .AddAttribute("axis", a => a.Axis)
@@ -13468,7 +13883,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DataFieldExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DataFieldExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataFieldExtensionList>();
+>>>>>>> origin/main
             builder.AddElement<DataField>()
                 .AddAttribute("name", a => a.Name)
                 .AddAttribute("fld", a => a.Field, aBuilder =>
@@ -13588,7 +14007,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex>();
+>>>>>>> origin/main
             builder.AddElement<RowItem>()
                 .AddAttribute("t", a => a.ItemType)
                 .AddAttribute("r", a => a.RepeatedItemCount)
@@ -13725,8 +14148,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotArea.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotArea());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
+>>>>>>> origin/main
             builder.AddElement<Format>()
                 .AddAttribute("action", a => a.Action)
                 .AddAttribute("dxfId", a => a.FormatId);
@@ -13853,8 +14281,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotAreas.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotAreas());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotAreas>();
+>>>>>>> origin/main
             builder.AddElement<ConditionalFormat>()
                 .AddAttribute("scope", a => a.Scope)
                 .AddAttribute("type", a => a.Type)
@@ -13964,7 +14397,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotArea.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotArea());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
+>>>>>>> origin/main
             builder.AddElement<PivotAreas>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -14061,7 +14498,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotArea.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotArea());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
+>>>>>>> origin/main
             builder.AddElement<ChartFormat>()
                 .AddAttribute("chart", a => a.Chart, aBuilder =>
                 {
@@ -14261,9 +14702,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.MemberProperties.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.MemberProperties());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Members.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Members());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotHierarchyExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotHierarchyExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Members>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotHierarchyExtensionList>();
+>>>>>>> origin/main
             builder.AddElement<PivotHierarchy>()
                 .AddAttribute("outline", a => a.Outline)
                 .AddAttribute("multipleItemSelectionAllowed", a => a.MultipleItemSelectionAllowed)
@@ -14955,8 +15402,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.AutoFilter.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.AutoFilter());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.AutoFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtensionList>();
+>>>>>>> origin/main
             builder.AddElement<PivotFilter>()
                 .AddAttribute("fld", a => a.Field, aBuilder =>
                 {
@@ -15295,9 +15747,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.FieldsUsage.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.FieldsUsage());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.GroupLevels.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.GroupLevels());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FieldsUsage>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.GroupLevels>();
+>>>>>>> origin/main
             builder.AddElement<CacheHierarchy>()
                 .AddAttribute("uniqueName", a => a.UniqueName, aBuilder =>
                 {
@@ -15568,7 +16026,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.FieldItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.FieldItem());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FieldItem>();
+>>>>>>> origin/main
             builder.AddElement<DiscreteProperties>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -15650,12 +16112,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.BooleanItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.BooleanItem());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DateTimeItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DateTimeItem());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ErrorItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ErrorItem());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.MissingItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.MissingItem());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.NumberItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.NumberItem());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.StringItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.StringItem());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.BooleanItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DateTimeItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ErrorItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MissingItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.StringItem>();
+>>>>>>> origin/main
             builder.AddElement<GroupItems>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
@@ -15777,7 +16248,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+>>>>>>> origin/main
             builder.AddElement<PageField>()
                 .AddAttribute("fld", a => a.Field, aBuilder =>
                 {
@@ -15876,7 +16351,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotAreaReference.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotAreaReference());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotAreaReference>();
+>>>>>>> origin/main
             builder.AddElement<PivotAreaReferences>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -16114,8 +16593,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.FieldItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.FieldItem());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FieldItem>();
+>>>>>>> origin/main
             builder.AddElement<PivotAreaReference>()
                 .AddAttribute("field", a => a.Field)
                 .AddAttribute("count", a => a.Count)
@@ -16209,7 +16693,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.QueryTableField.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.QueryTableField());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.QueryTableField>();
+>>>>>>> origin/main
             builder.AddElement<QueryTableFields>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -16286,7 +16774,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DeletedField.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DeletedField());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DeletedField>();
+>>>>>>> origin/main
             builder.AddElement<QueryTableDeletedFields>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -16469,7 +16961,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+>>>>>>> origin/main
             builder.AddElement<QueryTableField>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -17653,6 +18149,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Bold.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Bold());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Italic.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Italic());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Strike.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Strike());
@@ -17668,6 +18165,23 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.RunPropertyCharSet.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.RunPropertyCharSet());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Underline.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Underline());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Bold>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Italic>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Strike>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Condense>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extend>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Outline>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Shadow>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RunFont>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FontScheme>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FontSize>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FontFamily>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RunPropertyCharSet>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Underline>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 0)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Bold.ElementType, 0, 1),
@@ -17747,8 +18261,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.RunProperties.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.RunProperties());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Text.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Text());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RunProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Text>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.RunProperties.ElementType, 0, 1),
@@ -17860,7 +18379,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Text.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Text());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Text>();
+>>>>>>> origin/main
             builder.AddElement<PhoneticRun>()
                 .AddAttribute("sb", a => a.BaseTextStartIndex, aBuilder =>
                 {
@@ -18091,9 +18614,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ReviewedList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ReviewedList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.SheetIdMap.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.SheetIdMap());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ReviewedList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetIdMap>();
+>>>>>>> origin/main
             builder.AddElement<Header>()
                 .AddAttribute("guid", a => a.Guid, aBuilder =>
                 {
@@ -18308,9 +18837,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.RevisionCellChange.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.RevisionCellChange());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.RevisionFormat.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.RevisionFormat());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Undo.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Undo());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionCellChange>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Undo>();
+>>>>>>> origin/main
             builder.AddElement<RevisionRowColumn>()
                 .AddAttribute("rId", a => a.RevisionId, aBuilder =>
                 {
@@ -18471,9 +19006,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.RevisionCellChange.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.RevisionCellChange());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.RevisionFormat.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.RevisionFormat());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Undo.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Undo());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionCellChange>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RevisionFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Undo>();
+>>>>>>> origin/main
             builder.AddElement<RevisionMove>()
                 .AddAttribute("rId", a => a.RevisionId, aBuilder =>
                 {
@@ -18682,7 +19223,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+>>>>>>> origin/main
             builder.AddElement<RevisionSheetName>()
                 .AddAttribute("rId", a => a.RevisionId, aBuilder =>
                 {
@@ -19035,11 +19580,19 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.OldCell.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.OldCell());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.OldDifferentialFormat.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.OldDifferentialFormat());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.NewDifferentialFormat.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.NewDifferentialFormat());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.NewCell.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.NewCell());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OldCell>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OldDifferentialFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NewDifferentialFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NewCell>();
+>>>>>>> origin/main
             builder.AddElement<RevisionCellChange>()
                 .AddAttribute("rId", a => a.RevisionId, aBuilder =>
                 {
@@ -19256,8 +19809,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+>>>>>>> origin/main
             builder.AddElement<RevisionFormat>()
                 .AddAttribute("sheetId", a => a.SheetId, aBuilder =>
                 {
@@ -19743,9 +20301,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Formula.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Formula());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.OldFormula.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.OldFormula());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formula>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OldFormula>();
+>>>>>>> origin/main
             builder.AddElement<RevisionDefinedName>()
                 .AddAttribute("rId", a => a.RevisionId, aBuilder =>
                 {
@@ -20225,7 +20789,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.SheetId.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.SheetId());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetId>();
+>>>>>>> origin/main
             builder.AddElement<SheetIdMap>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -20302,7 +20870,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Reviewed.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Reviewed());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Reviewed>();
+>>>>>>> origin/main
             builder.AddElement<ReviewedList>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -20977,10 +21549,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CellFormula.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CellFormula());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.InlineString.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.InlineString());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CellValue.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CellValue());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellFormula>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.InlineString>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellValue>();
+>>>>>>> origin/main
             builder.AddElement<NewCell>()
                 .AddAttribute("r", a => a.CellReference, aBuilder =>
                 {
@@ -21779,7 +22358,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+>>>>>>> origin/main
             builder.AddElement<UserInfo>()
                 .AddAttribute("guid", a => a.Guid, aBuilder =>
                 {
@@ -22009,8 +22592,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Cell.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Cell());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Cell>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+>>>>>>> origin/main
             builder.AddElement<Row>()
                 .AddAttribute("r", a => a.RowIndex)
                 .AddAttribute("spans", a => a.Spans)
@@ -22714,7 +23302,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotArea.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotArea());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
+>>>>>>> origin/main
             builder.AddElement<PivotSelection>()
                 .AddAttribute("pane", a => a.Pane)
                 .AddAttribute("showHeader", a => a.ShowHeader)
@@ -23673,12 +24265,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.OddHeader.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.OddHeader());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.OddFooter.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.OddFooter());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.EvenHeader.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.EvenHeader());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.EvenFooter.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.EvenFooter());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.FirstHeader.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.FirstHeader());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.FirstFooter.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.FirstFooter());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OddHeader>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OddFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.EvenHeader>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.EvenFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FirstHeader>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FirstFooter>();
+>>>>>>> origin/main
             builder.AddElement<HeaderFooter>()
                 .AddAttribute("differentOddEven", a => a.DifferentOddEven)
                 .AddAttribute("differentFirst", a => a.DifferentFirst)
@@ -23843,9 +24444,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.FilterColumn.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.FilterColumn());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.SortState.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.SortState());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FilterColumn>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortState>();
+>>>>>>> origin/main
             builder.AddElement<AutoFilter>()
                 .AddAttribute("ref", a => a.Reference);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -24048,11 +24655,19 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRuleExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRuleExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ColorScale.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ColorScale());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DataBar.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DataBar());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.IconSet.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.IconSet());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Formula.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Formula());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRuleExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColorScale>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataBar>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.IconSet>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formula>();
+>>>>>>> origin/main
             builder.AddElement<ConditionalFormattingRule>()
                 .AddAttribute("type", a => a.Type, aBuilder =>
                 {
@@ -24270,7 +24885,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+>>>>>>> origin/main
             builder.AddElement<ConditionalFormatValueObject>()
                 .AddAttribute("type", a => a.Type, aBuilder =>
                 {
@@ -24415,7 +25034,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.InputCells.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.InputCells());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.InputCells>();
+>>>>>>> origin/main
             builder.AddElement<Scenario>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -25121,7 +25744,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+>>>>>>> origin/main
             builder.AddElement<ChartSheetView>()
                 .AddAttribute("tabSelected", a => a.TabSelected)
                 .AddAttribute("zoomScale", a => a.ZoomScale)
@@ -25255,9 +25882,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.HeaderFooter.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.HeaderFooter());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PageMargins.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PageMargins());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ChartSheetPageSetup>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageMargins>();
+>>>>>>> origin/main
             builder.AddElement<CustomChartsheetView>()
                 .AddAttribute("guid", a => a.Guid, aBuilder =>
                 {
@@ -25501,7 +26134,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ControlProperties.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ControlProperties());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ControlProperties>();
+>>>>>>> origin/main
             builder.AddElement<Control>()
                 .AddAttribute("shapeId", a => a.ShapeId, aBuilder =>
                 {
@@ -25914,9 +26551,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Formula1.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Formula1());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Formula2.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Formula2());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.ExcelAc.List.ElementType, static () => new DocumentFormat.OpenXml.Office2010.ExcelAc.List());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formula1>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formula2>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.ExcelAc.List>();
+>>>>>>> origin/main
             builder.AddElement<DataValidation>()
                 .AddAttribute("type", a => a.Type)
                 .AddAttribute("errorStyle", a => a.ErrorStyle)
@@ -26235,10 +26878,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Pane.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Pane());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotSelection.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotSelection());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Selection.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Selection());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Pane>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotSelection>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Selection>();
+>>>>>>> origin/main
             builder.AddElement<SheetView>()
                 .AddAttribute("windowProtection", a => a.WindowProtection)
                 .AddAttribute("showFormulas", a => a.ShowFormulas)
@@ -26557,6 +27207,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.AutoFilter.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.AutoFilter());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.HeaderFooter.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.HeaderFooter());
@@ -26567,6 +27218,18 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Pane.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Pane());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PrintOptions.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PrintOptions());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Selection.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Selection());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.AutoFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowBreaks>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageMargins>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageSetup>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Pane>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PrintOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Selection>();
+>>>>>>> origin/main
             builder.AddElement<CustomSheetView>()
                 .AddAttribute("guid", a => a.Guid, aBuilder =>
                 {
@@ -26871,7 +27534,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.EmbeddedObjectProperties.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.EmbeddedObjectProperties());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.EmbeddedObjectProperties>();
+>>>>>>> origin/main
             builder.AddElement<OleObject>()
                 .AddAttribute("progId", a => a.ProgId)
                 .AddAttribute("dvAspect", a => a.DataOrViewAspect)
@@ -26973,7 +27640,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.MetadataType.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.MetadataType());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MetadataType>();
+>>>>>>> origin/main
             builder.AddElement<MetadataTypes>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -27051,7 +27722,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CharacterValue.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CharacterValue());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CharacterValue>();
+>>>>>>> origin/main
             builder.AddElement<MetadataStrings>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -27129,7 +27804,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Mdx.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Mdx());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Mdx>();
+>>>>>>> origin/main
             builder.AddElement<MdxMetadata>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -27218,8 +27897,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.FutureMetadataBlock.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.FutureMetadataBlock());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FutureMetadataBlock>();
+>>>>>>> origin/main
             builder.AddElement<FutureMetadata>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -27841,7 +28525,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.MetadataRecord.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.MetadataRecord());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MetadataRecord>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.MetadataRecord.ElementType, 1, 0)
@@ -27967,7 +28655,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, 0, 1)
@@ -28068,10 +28760,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.MdxKpi.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.MdxKpi());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.MdxMemberProp.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.MdxMemberProp());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.MdxSet.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.MdxSet());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.MdxTuple.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.MdxTuple());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MdxKpi>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MdxMemberProp>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MdxSet>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MdxTuple>();
+>>>>>>> origin/main
             builder.AddElement<Mdx>()
                 .AddAttribute("n", a => a.NameIndex, aBuilder =>
                 {
@@ -28302,7 +29001,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.NameIndex.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.NameIndex());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NameIndex>();
+>>>>>>> origin/main
             builder.AddElement<MdxTuple>()
                 .AddAttribute("c", a => a.MemberIndexCount)
                 .AddAttribute("ct", a => a.CultureCurrency)
@@ -28418,7 +29121,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.NameIndex.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.NameIndex());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NameIndex>();
+>>>>>>> origin/main
             builder.AddElement<MdxSet>()
                 .AddAttribute("ns", a => a.SetDefinitionIndex, aBuilder =>
                 {
@@ -28725,8 +29432,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.XmlCellProperties.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.XmlCellProperties());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.XmlCellProperties>();
+>>>>>>> origin/main
             builder.AddElement<SingleXmlCell>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -28855,8 +29567,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.XmlProperties.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.XmlProperties());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.XmlProperties>();
+>>>>>>> origin/main
             builder.AddElement<XmlCellProperties>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -28990,7 +29707,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+>>>>>>> origin/main
             builder.AddElement<XmlProperties>()
                 .AddAttribute("mapId", a => a.MapId, aBuilder =>
                 {
@@ -29094,8 +29815,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ForegroundColor.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ForegroundColor());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.BackgroundColor.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.BackgroundColor());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ForegroundColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.BackgroundColor>();
+>>>>>>> origin/main
             builder.AddElement<PatternFill>()
                 .AddAttribute("patternType", a => a.PatternType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -29249,7 +29975,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.GradientStop.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.GradientStop());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.GradientStop>();
+>>>>>>> origin/main
             builder.AddElement<GradientFill>()
                 .AddAttribute("type", a => a.Type)
                 .AddAttribute("degree", a => a.Degree)
@@ -29336,7 +30066,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Color.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Color());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
+>>>>>>> origin/main
             builder.AddElement<GradientStop>()
                 .AddAttribute("position", a => a.Position, aBuilder =>
                 {
@@ -29691,6 +30425,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Bold.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Bold());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Italic.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Italic());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Strike.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Strike());
@@ -29706,6 +30441,23 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.FontSize.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.FontSize());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Underline.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Underline());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Bold>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Italic>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Strike>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Condense>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extend>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Outline>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Shadow>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FontCharSet>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FontFamilyNumbering>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FontName>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FontScheme>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FontSize>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Underline>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Bold.ElementType, 0, 1),
@@ -29980,8 +30732,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.GradientFill.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.GradientFill());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PatternFill.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PatternFill());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PatternFill>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.PatternFill.ElementType, 0, 1),
@@ -30111,6 +30868,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.StartBorder.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.StartBorder());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.EndBorder.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.EndBorder());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.LeftBorder.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.LeftBorder());
@@ -30120,6 +30878,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DiagonalBorder.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DiagonalBorder());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.VerticalBorder.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.VerticalBorder());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.HorizontalBorder.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.HorizontalBorder());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.StartBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.EndBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.LeftBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RightBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TopBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.BottomBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DiagonalBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.VerticalBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.HorizontalBorder>();
+>>>>>>> origin/main
             builder.AddElement<Border>()
                 .AddAttribute("diagonalUp", a => a.DiagonalUp)
                 .AddAttribute("diagonalDown", a => a.DiagonalDown)
@@ -30313,7 +31082,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.RgbColor.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.RgbColor());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RgbColor>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.RgbColor.ElementType, 1, 64)
@@ -30378,7 +31151,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Color.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Color());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Color.ElementType, 1, 10)
@@ -30483,7 +31260,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.TableStyleElement.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.TableStyleElement());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableStyleElement>();
+>>>>>>> origin/main
             builder.AddElement<TableStyle>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -30662,7 +31443,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+>>>>>>> origin/main
             builder.AddElement<CellStyle>()
                 .AddAttribute("name", a => a.Name)
                 .AddAttribute("xfId", a => a.FormatId, aBuilder =>
@@ -30887,9 +31672,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Alignment.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Alignment());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Protection.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Protection());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Protection>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+>>>>>>> origin/main
             builder.AddElement<CellFormat>()
                 .AddAttribute("numFmtId", a => a.NumberFormatId)
                 .AddAttribute("fontId", a => a.FontId)
@@ -31315,7 +32106,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExternalRow.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExternalRow());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExternalRow>();
+>>>>>>> origin/main
             builder.AddElement<ExternalSheetData>()
                 .AddAttribute("sheetId", a => a.SheetId, aBuilder =>
                 {
@@ -31397,7 +32192,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExternalCell.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExternalCell());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExternalCell>();
+>>>>>>> origin/main
             builder.AddElement<ExternalRow>()
                 .AddAttribute("r", a => a.RowIndex, aBuilder =>
                 {
@@ -31501,7 +32300,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Xstring.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Xstring());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Xstring>();
+>>>>>>> origin/main
             builder.AddElement<ExternalCell>()
                 .AddAttribute("r", a => a.CellReference, aBuilder =>
                 {
@@ -31588,7 +32391,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DdeItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DdeItem());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DdeItem>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.DdeItem.ElementType, 0, 0)
@@ -31693,7 +32500,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Values.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Values());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Values>();
+>>>>>>> origin/main
             builder.AddElement<DdeItem>()
                 .AddAttribute("name", a => a.Name)
                 .AddAttribute("ole", a => a.UseOle)
@@ -31798,7 +32609,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Value.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Value());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Value>();
+>>>>>>> origin/main
             builder.AddElement<Values>()
                 .AddAttribute("rows", a => a.Rows)
                 .AddAttribute("cols", a => a.Columns);
@@ -31878,7 +32693,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DdeLinkValue.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DdeLinkValue());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DdeLinkValue>();
+>>>>>>> origin/main
             builder.AddElement<Value>()
                 .AddAttribute("t", a => a.ValueType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -31959,8 +32778,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.OleItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.OleItem());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.OleItem.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.OleItem());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OleItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OleItem>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.OleItem.ElementType, 1, 1),
@@ -32042,10 +32866,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedNames.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedNames());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.SheetDataSet.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.SheetDataSet());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.SheetNames.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.SheetNames());
             builder.AddChild(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.ExternalBookAlternateUrls.ElementType, static () => new DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.ExternalBookAlternateUrls());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedNames>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetDataSet>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetNames>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.ExternalBookAlternateUrls>();
+>>>>>>> origin/main
             builder.AddElement<ExternalBook>()
                 .AddAttribute("r:id", a => a.Id, aBuilder =>
                 {
@@ -32190,7 +33021,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DdeItems.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DdeItems());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DdeItems>();
+>>>>>>> origin/main
             builder.AddElement<DdeLink>()
                 .AddAttribute("ddeService", a => a.DdeService, aBuilder =>
                 {
@@ -32302,7 +33137,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.OleItems.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.OleItems());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OleItems>();
+>>>>>>> origin/main
             builder.AddElement<OleLink>()
                 .AddAttribute("r:id", a => a.Id, aBuilder =>
                 {
@@ -32599,10 +33438,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CalculatedColumnFormula.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CalculatedColumnFormula());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.TotalsRowFormula.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.TotalsRowFormula());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.XmlColumnProperties.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.XmlColumnProperties());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CalculatedColumnFormula>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TotalsRowFormula>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.XmlColumnProperties>();
+>>>>>>> origin/main
             builder.AddElement<TableColumn>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -32946,7 +33792,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+>>>>>>> origin/main
             builder.AddElement<XmlColumnProperties>()
                 .AddAttribute("mapId", a => a.MapId, aBuilder =>
                 {
@@ -33051,7 +33901,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Main.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Main());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Main>();
+>>>>>>> origin/main
             builder.AddElement<VolatileType>()
                 .AddAttribute("type", a => a.Type, aBuilder =>
                 {
@@ -33131,7 +33985,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Topic.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Topic());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Topic>();
+>>>>>>> origin/main
             builder.AddElement<Main>()
                 .AddAttribute("first", a => a.First, aBuilder =>
                 {
@@ -33214,9 +34072,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.TopicReferences.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.TopicReferences());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Subtopic.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Subtopic());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Xstring.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Xstring());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TopicReferences>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Subtopic>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Xstring>();
+>>>>>>> origin/main
             builder.AddElement<Topic>()
                 .AddAttribute("t", a => a.ValueType);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -33821,7 +34685,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+>>>>>>> origin/main
             builder.AddElement<CustomWorkbookView>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -34163,7 +35031,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+>>>>>>> origin/main
             builder.AddElement<WorkbookView>()
                 .AddAttribute("visibility", a => a.Visibility)
                 .AddAttribute("minimized", a => a.Minimized)
@@ -34917,7 +35789,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.Id.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.Id());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Id>();
+>>>>>>> origin/main
             builder.AddElement<ConditionalFormattingRuleExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -34999,7 +35875,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.PivotHierarchy.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.PivotHierarchy());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotHierarchy>();
+>>>>>>> origin/main
             builder.AddElement<PivotHierarchyExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -35081,7 +35961,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.PivotField.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.PivotField());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotField>();
+>>>>>>> origin/main
             builder.AddElement<PivotFieldExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -35163,7 +36047,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.SourceConnection.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.SourceConnection());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SourceConnection>();
+>>>>>>> origin/main
             builder.AddElement<CacheSourceExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -36458,7 +37346,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.TabColor.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.TabColor());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TabColor>();
+>>>>>>> origin/main
             builder.AddElement<ChartSheetProperties>()
                 .AddAttribute("published", a => a.Published)
                 .AddAttribute("codeName", a => a.CodeName);
@@ -36542,8 +37434,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ChartSheetView.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ChartSheetView());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ChartSheetView>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.ChartSheetView.ElementType, 1, 0),
@@ -36720,7 +37617,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CustomChartsheetView.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CustomChartsheetView());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomChartsheetView>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.CustomChartsheetView.ElementType, 0, 0)
@@ -37243,7 +38144,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.WebPublishItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.WebPublishItem());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WebPublishItem>();
+>>>>>>> origin/main
             builder.AddElement<WebPublishItems>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -37311,8 +38216,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Color.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Color());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject.ElementType, 2, 3),
@@ -37409,8 +38319,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Color.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Color());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
+>>>>>>> origin/main
             builder.AddElement<DataBar>()
                 .AddAttribute("minLength", a => a.MinLength)
                 .AddAttribute("maxLength", a => a.MaxLength)
@@ -37522,7 +38437,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject>();
+>>>>>>> origin/main
             builder.AddElement<IconSet>()
                 .AddAttribute("iconSet", a => a.IconSetValue)
                 .AddAttribute("showValue", a => a.ShowValue)
@@ -37592,7 +38511,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRuleExtension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRuleExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRuleExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRuleExtension.ElementType, 0, 0)
@@ -37667,7 +38590,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DataReference.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DataReference());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataReference>();
+>>>>>>> origin/main
             builder.AddElement<DataReferences>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -37826,9 +38753,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.TabColor.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.TabColor());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.OutlineProperties.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.OutlineProperties());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PageSetupProperties.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PageSetupProperties());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TabColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OutlineProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageSetupProperties>();
+>>>>>>> origin/main
             builder.AddElement<SheetProperties>()
                 .AddAttribute("syncHorizontal", a => a.SyncHorizontal)
                 .AddAttribute("syncVertical", a => a.SyncVertical)
@@ -37947,8 +38880,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.SheetView.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.SheetView());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetView>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.SheetView.ElementType, 1, 0),
@@ -38433,7 +39371,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CustomSheetView.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CustomSheetView());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomSheetView>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.CustomSheetView.ElementType, 1, 0)
@@ -38498,7 +39440,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.OleObject.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.OleObject());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OleObject>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.OleObject.ElementType, 1, 65535)
@@ -38563,7 +39509,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Control.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Control());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Control>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Control.ElementType, 1, 65535)
@@ -38677,7 +39627,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Column.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Column());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Column>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Column.ElementType, 1, 0)
@@ -38742,7 +39696,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Row.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Row());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Row>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Row.ElementType, 0, 0)
@@ -38858,7 +39816,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DataReferences.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DataReferences());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataReferences>();
+>>>>>>> origin/main
             builder.AddElement<DataConsolidate>()
                 .AddAttribute("function", a => a.Function)
                 .AddAttribute("leftLabels", a => a.LeftLabels)
@@ -38966,8 +39928,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRule.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRule());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRule>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+>>>>>>> origin/main
             builder.AddElement<ConditionalFormatting>()
                 .AddAttribute("pivot", a => a.Pivot)
                 .AddAttribute("sqref", a => a.SequenceOfReferences);
@@ -39037,7 +40004,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CustomProperty.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CustomProperty());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomProperty>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.CustomProperty.ElementType, 1, 0)
@@ -39112,7 +40083,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.MemberProperty.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.MemberProperty());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MemberProperty>();
+>>>>>>> origin/main
             builder.AddElement<MemberProperties>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -39199,7 +40174,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Member.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Member());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Member>();
+>>>>>>> origin/main
             builder.AddElement<Members>()
                 .AddAttribute("count", a => a.Count)
                 .AddAttribute("level", a => a.Level);
@@ -39267,7 +40246,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotHierarchyExtension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotHierarchyExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotHierarchyExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.PivotHierarchyExtension.ElementType, 0, 0)
@@ -39342,7 +40325,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Item.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Item());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Item>();
+>>>>>>> origin/main
             builder.AddElement<Items>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -39409,7 +40396,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotArea.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotArea());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.PivotArea.ElementType, 1, 1)
@@ -39487,7 +40478,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtension.ElementType, 0, 0)
@@ -39644,8 +40639,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Pages.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Pages());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.RangeSets.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.RangeSets());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Pages>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RangeSets>();
+>>>>>>> origin/main
             builder.AddElement<Consolidation>()
                 .AddAttribute("autoPage", a => a.AutoPage);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -39739,7 +40739,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtension.ElementType, 0, 0)
@@ -40351,9 +41355,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DateGroupItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DateGroupItem());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Filter.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Filter());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.Filter.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.Filter());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DateGroupItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Filter>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Filter>();
+>>>>>>> origin/main
             builder.AddElement<Filters>()
                 .AddAttribute("blank", a => a.Blank)
                 .AddAttribute("calendarType", a => a.CalendarType);
@@ -40511,7 +41521,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CustomFilter.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CustomFilter());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomFilter>();
+>>>>>>> origin/main
             builder.AddElement<CustomFilters>()
                 .AddAttribute("and", a => a.And);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -40798,9 +41812,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.SlicerCachePivotTables.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.SlicerCachePivotTables());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.SlicerCacheHideItemsWithNoData.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.SlicerCacheHideItemsWithNoData());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.TableSlicerCache.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.TableSlicerCache());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.SlicerCachePivotTables>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.SlicerCacheHideItemsWithNoData>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TableSlicerCache>();
+>>>>>>> origin/main
             builder.AddElement<SlicerCacheDefinitionExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -40885,8 +41905,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.PivotFilter.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.PivotFilter());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotFilter>();
+>>>>>>> origin/main
             builder.AddElement<PivotFilterExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -40969,7 +41994,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.QueryTable.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.QueryTable());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.QueryTable>();
+>>>>>>> origin/main
             builder.AddElement<QueryTableExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -41382,7 +42411,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Tables.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Tables());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Tables>();
+>>>>>>> origin/main
             builder.AddElement<WebQueryProperties>()
                 .AddAttribute("xml", a => a.XmlSource)
                 .AddAttribute("sourceData", a => a.SourceData)
@@ -41635,7 +42668,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.TextFields.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.TextFields());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TextFields>();
+>>>>>>> origin/main
             builder.AddElement<TextProperties>()
                 .AddAttribute("prompt", a => a.Prompt)
                 .AddAttribute("fileType", a => a.FileType)
@@ -41745,7 +42782,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Parameter.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Parameter());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Parameter>();
+>>>>>>> origin/main
             builder.AddElement<Parameters>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -41812,7 +42853,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ConnectionExtension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ConnectionExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConnectionExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.ConnectionExtension.ElementType, 0, 0)
@@ -41888,8 +42933,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.Connection.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.Connection());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.Connection.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.Connection());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Connection>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.Connection>();
+>>>>>>> origin/main
             builder.AddElement<ConnectionExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -41972,7 +43022,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.TextField.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.TextField());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TextField>();
+>>>>>>> origin/main
             builder.AddElement<TextFields>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -42184,12 +43238,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.BooleanItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.BooleanItem());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DateTimeItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DateTimeItem());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ErrorItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ErrorItem());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.MissingItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.MissingItem());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.NumberItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.NumberItem());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.StringItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.StringItem());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.BooleanItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DateTimeItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ErrorItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MissingItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.StringItem>();
+>>>>>>> origin/main
             builder.AddElement<SharedItems>()
                 .AddAttribute("containsSemiMixedTypes", a => a.ContainsSemiMixedTypes)
                 .AddAttribute("containsNonDate", a => a.ContainsNonDate)
@@ -42299,9 +43362,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DiscreteProperties.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DiscreteProperties());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.GroupItems.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.GroupItems());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.RangeProperties.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.RangeProperties());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DiscreteProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.GroupItems>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RangeProperties>();
+>>>>>>> origin/main
             builder.AddElement<FieldGroup>()
                 .AddAttribute("par", a => a.ParentId)
                 .AddAttribute("base", a => a.Base);
@@ -42374,7 +43443,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CacheFieldExtension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CacheFieldExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CacheFieldExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.CacheFieldExtension.ElementType, 0, 0)
@@ -42450,8 +43523,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.CacheField.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.CacheField());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueNames.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueNames());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.CacheField>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueNames>();
+>>>>>>> origin/main
             builder.AddElement<CacheFieldExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -42534,7 +43612,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.FieldUsage.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.FieldUsage());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FieldUsage>();
+>>>>>>> origin/main
             builder.AddElement<FieldsUsage>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -42611,7 +43693,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.GroupLevel.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.GroupLevel());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.GroupLevel>();
+>>>>>>> origin/main
             builder.AddElement<GroupLevels>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -42678,7 +43764,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtension.ElementType, 0, 0)
@@ -42754,8 +43844,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.CacheHierarchy.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.CacheHierarchy());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.CacheHierarchy.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.CacheHierarchy());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.CacheHierarchy>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.CacheHierarchy>();
+>>>>>>> origin/main
             builder.AddElement<CacheHierarchyExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -42828,7 +43923,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtension.ElementType, 0, 0)
@@ -42904,8 +44003,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.CalculatedMember.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.CalculatedMember());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.CalculatedMember.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.CalculatedMember());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.CalculatedMember>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.CalculatedMember>();
+>>>>>>> origin/main
             builder.AddElement<CalculatedMemberExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -42978,7 +44082,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DataFieldExtension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DataFieldExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataFieldExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.DataFieldExtension.ElementType, 0, 0)
@@ -43054,8 +44162,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.DataField.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.DataField());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.DataField.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.DataField());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DataField>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.DataField>();
+>>>>>>> origin/main
             builder.AddElement<DataFieldExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -43128,7 +44241,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtension.ElementType, 0, 0)
@@ -43266,10 +44383,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.QueryTableDeletedFields.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.QueryTableDeletedFields());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.QueryTableFields.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.QueryTableFields());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.SortState.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.SortState());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.QueryTableDeletedFields>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.QueryTableFields>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortState>();
+>>>>>>> origin/main
             builder.AddElement<QueryTableRefresh>()
                 .AddAttribute("preserveSortFilterLayout", a => a.PreserveSortFilterLayout)
                 .AddAttribute("fieldIdWrapped", a => a.FieldIdWrapped)
@@ -43401,7 +44525,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.QueryTableExtension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.QueryTableExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.QueryTableExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.QueryTableExtension.ElementType, 0, 0)
@@ -43508,7 +44636,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ProtectedRange.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ProtectedRange());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ProtectedRange>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.ProtectedRange.ElementType, 1, 0)
@@ -43603,7 +44735,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Scenario.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Scenario());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Scenario>();
+>>>>>>> origin/main
             builder.AddElement<Scenarios>()
                 .AddAttribute("current", a => a.Current)
                 .AddAttribute("show", a => a.Show)
@@ -43682,7 +44818,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.MergeCell.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.MergeCell());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MergeCell>();
+>>>>>>> origin/main
             builder.AddElement<MergeCells>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -43789,7 +44929,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DataValidation.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DataValidation());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataValidation>();
+>>>>>>> origin/main
             builder.AddElement<DataValidations>()
                 .AddAttribute("disablePrompts", a => a.DisablePrompts)
                 .AddAttribute("xWindow", a => a.XWindow)
@@ -43862,7 +45006,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Hyperlink.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Hyperlink());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Hyperlink>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Hyperlink.ElementType, 1, 0)
@@ -43927,7 +45075,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CellWatch.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CellWatch());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellWatch>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.CellWatch.ElementType, 1, 0)
@@ -43993,8 +45145,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.IgnoredError.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.IgnoredError());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.IgnoredError>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.IgnoredError.ElementType, 1, 9),
@@ -44070,7 +45227,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.TablePart.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.TablePart());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TablePart>();
+>>>>>>> origin/main
             builder.AddElement<TableParts>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -44137,7 +45298,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.WorksheetExtension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.WorksheetExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorksheetExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.WorksheetExtension.ElementType, 0, 0)
@@ -44219,6 +45384,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattings.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattings());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.DataValidations.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.DataValidations());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.IgnoredErrors.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.IgnoredErrors());
@@ -44227,6 +45393,16 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.SparklineGroups.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.SparklineGroups());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.TimelineReferences.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.TimelineReferences());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.WebExtensions.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.WebExtensions());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattings>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DataValidations>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.IgnoredErrors>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ProtectedRanges>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SparklineGroups>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineReferences>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.WebExtensions>();
+>>>>>>> origin/main
             builder.AddElement<WorksheetExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -44315,7 +45491,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.NumberingFormat());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
+>>>>>>> origin/main
             builder.AddElement<NumberingFormats>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -44405,7 +45585,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Font.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Font());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Font>();
+>>>>>>> origin/main
             builder.AddElement<Fonts>()
                 .AddAttribute("count", a => a.Count)
                 .AddAttribute("x14ac:knownFonts", a => a.KnownFonts, aBuilder =>
@@ -44486,7 +45670,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Fill.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Fill());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Fill>();
+>>>>>>> origin/main
             builder.AddElement<Fills>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -44563,7 +45751,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Border.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Border());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Border>();
+>>>>>>> origin/main
             builder.AddElement<Borders>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -44640,7 +45832,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CellFormat.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CellFormat());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellFormat>();
+>>>>>>> origin/main
             builder.AddElement<CellStyleFormats>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -44717,7 +45913,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CellFormat.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CellFormat());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellFormat>();
+>>>>>>> origin/main
             builder.AddElement<CellFormats>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -44794,7 +45994,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CellStyle.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CellStyle());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CellStyle>();
+>>>>>>> origin/main
             builder.AddElement<CellStyles>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -44871,7 +46075,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat>();
+>>>>>>> origin/main
             builder.AddElement<DifferentialFormats>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -44968,7 +46176,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.TableStyle.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.TableStyle());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableStyle>();
+>>>>>>> origin/main
             builder.AddElement<TableStyles>()
                 .AddAttribute("count", a => a.Count)
                 .AddAttribute("defaultTableStyle", a => a.DefaultTableStyle)
@@ -45039,8 +46251,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.IndexedColors.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.IndexedColors());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.MruColors.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.MruColors());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.IndexedColors>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MruColors>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.IndexedColors.ElementType, 0, 1),
@@ -45132,7 +46349,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.StylesheetExtension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.StylesheetExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.StylesheetExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.StylesheetExtension.ElementType, 0, 0)
@@ -45210,10 +46431,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.DifferentialFormats.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.DifferentialFormats());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.DifferentialFormats.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.DifferentialFormats());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.SlicerStyles.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.SlicerStyles());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.TimelineStyles.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.TimelineStyles());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DifferentialFormats>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.DifferentialFormats>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerStyles>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineStyles>();
+>>>>>>> origin/main
             builder.AddElement<StylesheetExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -45407,7 +46635,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotField.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotField());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotField>();
+>>>>>>> origin/main
             builder.AddElement<PivotFields>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -45484,7 +46716,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Field.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Field());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Field>();
+>>>>>>> origin/main
             builder.AddElement<RowFields>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -45561,7 +46797,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.RowItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.RowItem());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowItem>();
+>>>>>>> origin/main
             builder.AddElement<RowItems>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -45638,7 +46878,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Field.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Field());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Field>();
+>>>>>>> origin/main
             builder.AddElement<ColumnFields>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -45715,7 +46959,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.RowItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.RowItem());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowItem>();
+>>>>>>> origin/main
             builder.AddElement<ColumnItems>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -45792,7 +47040,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PageField.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PageField());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageField>();
+>>>>>>> origin/main
             builder.AddElement<PageFields>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -45869,7 +47121,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DataField.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DataField());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataField>();
+>>>>>>> origin/main
             builder.AddElement<DataFields>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -45946,7 +47202,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Format.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Format());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Format>();
+>>>>>>> origin/main
             builder.AddElement<Formats>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -46023,7 +47283,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormat.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ConditionalFormat());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormat>();
+>>>>>>> origin/main
             builder.AddElement<ConditionalFormats>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -46100,7 +47364,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ChartFormat.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ChartFormat());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ChartFormat>();
+>>>>>>> origin/main
             builder.AddElement<ChartFormats>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -46177,7 +47445,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotHierarchy.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotHierarchy());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotHierarchy>();
+>>>>>>> origin/main
             builder.AddElement<PivotHierarchies>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -46352,7 +47624,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotFilter.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotFilter());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotFilter>();
+>>>>>>> origin/main
             builder.AddElement<PivotFilters>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -46429,7 +47705,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.RowHierarchyUsage.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.RowHierarchyUsage());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowHierarchyUsage>();
+>>>>>>> origin/main
             builder.AddElement<RowHierarchiesUsage>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -46506,7 +47786,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchyUsage.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchyUsage());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchyUsage>();
+>>>>>>> origin/main
             builder.AddElement<ColumnHierarchiesUsage>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -46573,7 +47857,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtension.ElementType, 0, 0)
@@ -46651,10 +47939,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.PivotTableDefinition.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.PivotTableDefinition());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.PivotTableData.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.PivotTableData());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.PivotTableUISettings.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.PivotTableUISettings());
             builder.AddChild(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.PivotVersionInfo.ElementType, static () => new DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.PivotVersionInfo());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotTableDefinition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotTableData>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotTableUISettings>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.PivotVersionInfo>();
+>>>>>>> origin/main
             builder.AddElement<PivotTableDefinitionExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -46751,9 +48046,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Consolidation.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Consolidation());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.WorksheetSource.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.WorksheetSource());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Consolidation>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorksheetSource>();
+>>>>>>> origin/main
             builder.AddElement<CacheSource>()
                 .AddAttribute("type", a => a.Type, aBuilder =>
                 {
@@ -46877,7 +48178,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CacheField.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CacheField());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CacheField>();
+>>>>>>> origin/main
             builder.AddElement<CacheFields>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -46954,7 +48259,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CacheHierarchy.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CacheHierarchy());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CacheHierarchy>();
+>>>>>>> origin/main
             builder.AddElement<CacheHierarchies>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -47031,7 +48340,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Kpi.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Kpi());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Kpi>();
+>>>>>>> origin/main
             builder.AddElement<Kpis>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -47102,11 +48415,19 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Entries.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Entries());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.QueryCache.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.QueryCache());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ServerFormats.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ServerFormats());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Sets.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Sets());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Entries>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.QueryCache>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ServerFormats>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Sets>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Entries.ElementType, 0, 1),
@@ -47250,7 +48571,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CalculatedItem.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CalculatedItem());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CalculatedItem>();
+>>>>>>> origin/main
             builder.AddElement<CalculatedItems>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -47327,7 +48652,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CalculatedMember.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CalculatedMember());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CalculatedMember>();
+>>>>>>> origin/main
             builder.AddElement<CalculatedMembers>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -47404,7 +48733,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Dimension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Dimension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Dimension>();
+>>>>>>> origin/main
             builder.AddElement<Dimensions>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -47481,7 +48814,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.MeasureGroup.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.MeasureGroup());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MeasureGroup>();
+>>>>>>> origin/main
             builder.AddElement<MeasureGroups>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -47558,7 +48895,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.MeasureDimensionMap.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.MeasureDimensionMap());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.MeasureDimensionMap>();
+>>>>>>> origin/main
             builder.AddElement<Maps>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -47625,7 +48966,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtension.ElementType, 0, 0)
@@ -47708,6 +49053,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.PivotCacheDefinition.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.PivotCacheDefinition());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.PivotCacheDecoupled.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.PivotCacheDecoupled());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion());
@@ -47717,6 +49063,17 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild(DocumentFormat.OpenXml.Office2021.Excel.Pivot.Xsdboolean.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Excel.Pivot.Xsdboolean());
             builder.AddChild(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotAutoRefresh.Xsdboolean.ElementType, static () => new DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotAutoRefresh.Xsdboolean());
             builder.AddChild(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo.ElementType, static () => new DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotCacheDefinition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotCacheDecoupled>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelinePivotCacheDefinition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays.PivotCacheDynamicArray>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.PivotCacheRichInfo>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.Pivot.Xsdboolean>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotAutoRefresh.Xsdboolean>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo>();
+>>>>>>> origin/main
             builder.AddElement<PivotCacheDefinitionExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -47796,7 +49153,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.SheetName.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.SheetName());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetName>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.SheetName.ElementType, 1, 65534)
@@ -47861,7 +49222,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedName.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedName());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedName>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedName.ElementType, 0, 0)
@@ -47926,7 +49291,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExternalSheetData.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExternalSheetData());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExternalSheetData>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.ExternalSheetData.ElementType, 1, 0)
@@ -48001,7 +49370,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.TableColumn.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.TableColumn());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableColumn>();
+>>>>>>> origin/main
             builder.AddElement<TableColumns>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -48155,7 +49528,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.TableExtension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.TableExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.TableExtension.ElementType, 0, 0)
@@ -48231,8 +49608,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.Table.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.Table());
             builder.AddChild(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.MsForm.ElementType, static () => new DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.MsForm());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Table>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.MsForm>();
+>>>>>>> origin/main
             builder.AddElement<TableExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -48933,7 +50315,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.WorkbookView.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.WorkbookView());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorkbookView>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.WorkbookView.ElementType, 1, 0)
@@ -48998,7 +50384,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Sheet.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Sheet());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Sheet>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Sheet.ElementType, 1, 32767)
@@ -49073,7 +50463,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.FunctionGroup.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.FunctionGroup());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FunctionGroup>();
+>>>>>>> origin/main
             builder.AddElement<FunctionGroups>()
                 .AddAttribute("builtInGroupCount", a => a.BuiltInGroupCount);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 0)
@@ -49141,7 +50535,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExternalReference.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExternalReference());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExternalReference>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.ExternalReference.ElementType, 1, 65534)
@@ -49206,7 +50604,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DefinedName.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DefinedName());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DefinedName>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.DefinedName.ElementType, 0, 0)
@@ -49490,7 +50892,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookView.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookView());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookView>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookView.ElementType, 1, 0)
@@ -49555,7 +50961,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotCache.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotCache());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotCache>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.PivotCache.ElementType, 1, 0)
@@ -49835,7 +51245,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.WebPublishObject.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.WebPublishObject());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WebPublishObject>();
+>>>>>>> origin/main
             builder.AddElement<WebPublishObjects>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -49902,7 +51316,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.WorkbookExtension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.WorkbookExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorkbookExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.WorkbookExtension.ElementType, 0, 0)
@@ -49933,6 +51351,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReferences" /> <c>&lt;x15:timelineCacheRefs></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties" /> <c>&lt;x15:workbookPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService.ExternalCodeService" /> <c>&lt;xlecs:externalCodeService></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.WorkbookCompatibilityVersion.Version" /> <c>&lt;xlwcv:version></c></description></item>
     /// </list>
     /// </remarks>
     public partial class WorkbookExtension : OpenXmlCompositeElement
@@ -49988,6 +51407,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.PivotCaches.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.PivotCaches());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.PivotCaches.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.PivotCaches());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotCaches.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotCaches());
@@ -50000,6 +51420,21 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReferences.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReferences());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties());
             builder.AddChild(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService.ExternalCodeService.ElementType, static () => new DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService.ExternalCodeService());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotCaches>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotCaches>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotCaches>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DefinedNames>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerCaches>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.SlicerCaches>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.WorkbookProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.DataModel>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotTableReferences>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReferences>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService.ExternalCodeService>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.WorkbookCompatibilityVersion.Version>();
+>>>>>>> origin/main
             builder.AddElement<WorkbookExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -50020,6 +51455,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 new ElementParticle(DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(DocumentFormat.OpenXml.Office2013.Excel.DataModel.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService.ExternalCodeService.ElementType, 1, 1, version: FileFormatVersions.Microsoft365),
+<<<<<<< HEAD
+=======
+                new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.WorkbookCompatibilityVersion.Version.ElementType, 1, 1, version: FileFormatVersions.Microsoft365),
+>>>>>>> origin/main
                 new AnyParticle(0, 1)
             };
         }

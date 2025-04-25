@@ -13,6 +13,112 @@ namespace DocumentFormat.OpenXml.Generator.Generators.Elements;
 
 public static class DataModelWriterExtensions
 {
+    public static class AttributeStrings
+    {
+        public const string ObsoletePropertyWarn = "[Obsolete(\"Unused property, will be removed in a future version.\", false)]";
+        public const string ObsoletePropertyError = "[Obsolete(\"Unused property, will be removed in a future version.\", true)]";
+        public const string ObsoleteAttributeWarn = "[Obsolete(\"Unused attribute, will be removed in a future version.\", false)]";
+        public const string ObsoleteAttributeError = "[Obsolete(\"Unused attribute, will be removed in a future version.\", true)]";
+        public const string EditorBrowsableAlways = "[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)] ";
+        public const string EditorBrowsableAdvanced = "[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)] ";
+        public const string EditorBrowsableNever = "[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)] ";
+    }
+
+    private static readonly List<string> ObsoletePropertyWarnList =
+    [
+        AttributeStrings.ObsoletePropertyWarn,
+        AttributeStrings.EditorBrowsableNever,
+    ];
+
+    // Use this dictionary to add attributes like ObsoleteAttribute or other directives to classes, child elements or attributes.
+    private static readonly Dictionary<TypedQName, Dictionary<TypedQName, List<string>>> _attributeData =
+        new Dictionary<TypedQName, Dictionary<TypedQName, List<string>>>()
+        {
+            // Example with annotations:
+            // {
+            //  This is the containing complex type class, in the json metadata, this comes from the fully qualified "Name": "c:CT_BubbleSer/c15:ser",
+            //  "c:CT_BubbleSer/c15:ser",
+            //  new Dictionary<TypedQName, List<string>>()
+            //  {
+            //        {
+            //              This is an example of obsoleting the whole class.
+            //              In the json metadata:
+            //                    Use the same fully qualified name as the class, for example "Name": "c:CT_BubbleSer/c15:ser",
+            //              "c:CT_BubbleSer/c15:ser",
+            //              ObsoleteClassErrorList
+            //        },
+            //        {
+            //              This is an example obsoleting a child element (property in C#)
+            //              In the json metadata:
+            //                    For child elements, this comes from "Name": "c:CT_PictureOptions/c:pictureOptions",
+            //              "c:CT_PictureOptions/c:pictureOptions",
+            //              ObsoletePropertyWarnList
+            //        },
+            //        {
+            //              This is an example obsoleting a child attribute (property in C#)
+            //              In the json metadata: use for example "QName" converted to a TypedQName string using the C# type from the
+            //              Type property with no prefix: ":StringValue/:formatCode",
+            //              ":StringValue/:formatCode",
+            //              ObsoleteAttributeWarnList
+            //        },
+            //  }
+            // },
+            {
+              "c:CT_BubbleSer/c15:ser",
+              new Dictionary<TypedQName, List<string>>()
+              {
+                    {
+                          "c:CT_PictureOptions/c:pictureOptions",
+                          ObsoletePropertyWarnList
+                    },
+              }
+            },
+            {
+              "c:CT_LineSer/c15:ser",
+              new Dictionary<TypedQName, List<string>>()
+              {
+                    {
+                        "c:CT_PictureOptions/c:pictureOptions",
+                        ObsoletePropertyWarnList
+                    },
+              }
+            },
+            {
+                "c:CT_PieSer/c15:ser",
+                new Dictionary<TypedQName, List<string>>()
+                {
+                    {
+                      "c:CT_PictureOptions/c:pictureOptions",
+                      ObsoletePropertyWarnList
+                    },
+                }
+            },
+            {
+                "c:CT_RadarSer/c15:ser",
+                new Dictionary<TypedQName, List<string>>()
+                {
+                    {
+                      "c:CT_PictureOptions/c:pictureOptions",
+                      ObsoletePropertyWarnList
+                    },
+                }
+            },
+            {
+                "c:CT_SurfaceSer/c15:ser",
+                new Dictionary<TypedQName, List<string>>()
+                {
+                    {
+                      "c:CT_PictureOptions/c:pictureOptions",
+                      ObsoletePropertyWarnList
+                    },
+                    {
+                      "c:CT_Boolean/c:bubble3D",
+                      ObsoletePropertyWarnList
+                    },
+                }
+            },
+        };
+
     public static bool GetDataModelSyntax(this IndentedTextWriter writer, OpenXmlGeneratorServices services, SchemaNamespace model)
     {
         foreach (var ns in GetNamespaces(model, services).Distinct().OrderBy(n => n))
@@ -84,6 +190,20 @@ public static class DataModelWriterExtensions
     private static void WriteType(this IndentedTextWriter writer, OpenXmlGeneratorServices services, SchemaType element)
     {
         writer.WriteDocumentationComment(BuildTypeComments(services, element));
+
+        if (_attributeData.TryGetValue(element.Name, out Dictionary<TypedQName, List<string>> ctAttributeData))
+        {
+            // if the fully qualified CT/tag name is also one of the children of the dictionary that means the attributes of that
+            // child's list need to be applied to the whole class, for example, if we're obsoleting an entire class.
+            if (ctAttributeData.TryGetValue(element.Name, out List<string> attributeStrings))
+            {
+                foreach (string attributeString in attributeStrings)
+                {
+                    writer.WriteLine(attributeString);
+                }
+            }
+        }
+
         writer.Write("public ");
 
         if (element.IsAbstract)
@@ -122,7 +242,16 @@ public static class DataModelWriterExtensions
             foreach (var attribute in element.Attributes)
             {
                 delimiter.AddDelimiter();
-                writer.WriteAttributeProperty(services, attribute);
+
+                if (_attributeData.TryGetValue(element.Name, out Dictionary<TypedQName, List<string>> attrAttributeData)
+                    && attrAttributeData.TryGetValue(":" + attribute.Type + "/" + attribute.QName.ToString(), out List<string> attrAttributeStrings))
+                {
+                    writer.WriteAttributeProperty(services, attribute, attrAttributeStrings);
+                }
+                else
+                {
+                    writer.WriteAttributeProperty(services, attribute);
+                }
             }
 
             delimiter.AddDelimiter();
@@ -132,7 +261,15 @@ public static class DataModelWriterExtensions
             {
                 foreach (var node in element.Children)
                 {
-                    writer.WriteElement(services, element, node, ref delimiter);
+                    if (_attributeData.TryGetValue(element.Name, out Dictionary<TypedQName, List<string>> childAttributeData)
+                        && childAttributeData.TryGetValue(node.Name, out List<string> childAttributeStrings))
+                    {
+                        writer.WriteElement(services, element, node, ref delimiter, childAttributeStrings);
+                    }
+                    else
+                    {
+                        writer.WriteElement(services, element, node, ref delimiter);
+                    }
                 }
             }
 
@@ -322,7 +459,7 @@ public static class DataModelWriterExtensions
         }
     }
 
-    private static void WriteElement(this IndentedTextWriter writer, OpenXmlGeneratorServices services, SchemaType parent, SchemaElement element, ref Delimiter delimiter)
+    private static void WriteElement(this IndentedTextWriter writer, OpenXmlGeneratorServices services, SchemaType parent, SchemaElement element, ref Delimiter delimiter, List<string>? attributeStrings = null)
     {
         if (string.IsNullOrEmpty(element.PropertyName))
         {
@@ -343,6 +480,14 @@ public static class DataModelWriterExtensions
                 },
             Remarks = $"xmlns:{element.Name.QName.Prefix} = {services.GetNamespaceInfo(element.Name.QName.Prefix).Uri}",
         });
+
+        if (attributeStrings is not null)
+        {
+            foreach (string attributeString in attributeStrings)
+            {
+                writer.WriteLine(attributeString);
+            }
+        }
 
         writer.Write("public ");
         writer.Write(className);
@@ -381,7 +526,7 @@ public static class DataModelWriterExtensions
         writer.Write(")");
     }
 
-    private static void WriteAttributeProperty(this IndentedTextWriter writer, OpenXmlGeneratorServices services, SchemaAttribute attribute)
+    private static void WriteAttributeProperty(this IndentedTextWriter writer, OpenXmlGeneratorServices services, SchemaAttribute attribute, List<string>? attributeStrings = null)
     {
         var remarks = default(string);
         var info = services.GetNamespaceInfo(attribute.QName.Prefix);
@@ -404,6 +549,14 @@ public static class DataModelWriterExtensions
             },
             Remarks = remarks,
         });
+
+        if (attributeStrings is not null)
+        {
+            foreach (string attributeString in attributeStrings)
+            {
+                writer.WriteLine(attributeString);
+            }
+        }
 
         writer.Write("public ");
         writer.Write(attribute.Type);

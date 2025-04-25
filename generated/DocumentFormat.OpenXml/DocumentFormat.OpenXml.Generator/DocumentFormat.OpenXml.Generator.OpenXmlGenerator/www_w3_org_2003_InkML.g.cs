@@ -88,6 +88,7 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.InkML.Annotation.ElementType, static () => new DocumentFormat.OpenXml.InkML.Annotation());
             builder.AddChild(DocumentFormat.OpenXml.InkML.AnnotationXml.ElementType, static () => new DocumentFormat.OpenXml.InkML.AnnotationXml());
             builder.AddChild(DocumentFormat.OpenXml.InkML.Context.ElementType, static () => new DocumentFormat.OpenXml.InkML.Context());
@@ -95,6 +96,15 @@ namespace DocumentFormat.OpenXml.InkML
             builder.AddChild(DocumentFormat.OpenXml.InkML.Trace.ElementType, static () => new DocumentFormat.OpenXml.InkML.Trace());
             builder.AddChild(DocumentFormat.OpenXml.InkML.TraceGroup.ElementType, static () => new DocumentFormat.OpenXml.InkML.TraceGroup());
             builder.AddChild(DocumentFormat.OpenXml.InkML.TraceView.ElementType, static () => new DocumentFormat.OpenXml.InkML.TraceView());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Annotation>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.AnnotationXml>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Context>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Definitions>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Trace>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceGroup>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceView>();
+>>>>>>> origin/main
             builder.AddElement<Ink>()
                 .AddAttribute("documentID", a => a.DocumentId, aBuilder =>
                 {
@@ -419,10 +429,17 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.InkML.Bind.ElementType, static () => new DocumentFormat.OpenXml.InkML.Bind());
             builder.AddChild(DocumentFormat.OpenXml.InkML.Mapping.ElementType, static () => new DocumentFormat.OpenXml.InkML.Mapping());
             builder.AddChild(DocumentFormat.OpenXml.InkML.Matrix.ElementType, static () => new DocumentFormat.OpenXml.InkML.Matrix());
             builder.AddChild(DocumentFormat.OpenXml.InkML.Table.ElementType, static () => new DocumentFormat.OpenXml.InkML.Table());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Bind>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Mapping>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Matrix>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Table>();
+>>>>>>> origin/main
             builder.AddElement<Mapping>()
                 .AddAttribute("xml:id", a => a.Id)
                 .AddAttribute("type", a => a.Type)
@@ -599,7 +616,11 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.InkML.Mapping.ElementType, static () => new DocumentFormat.OpenXml.InkML.Mapping());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Mapping>();
+>>>>>>> origin/main
             builder.AddElement<Channel>()
                 .AddAttribute("xml:id", a => a.Id)
                 .AddAttribute("name", a => a.Name, aBuilder =>
@@ -709,7 +730,11 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.InkML.Channel.ElementType, static () => new DocumentFormat.OpenXml.InkML.Channel());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Channel>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.InkML.Channel.ElementType, 0, 0)
@@ -899,8 +924,13 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.InkML.Channel.ElementType, static () => new DocumentFormat.OpenXml.InkML.Channel());
             builder.AddChild(DocumentFormat.OpenXml.InkML.IntermittentChannels.ElementType, static () => new DocumentFormat.OpenXml.InkML.IntermittentChannels());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Channel>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.IntermittentChannels>();
+>>>>>>> origin/main
             builder.AddElement<TraceFormat>()
                 .AddAttribute("xml:id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -1248,7 +1278,11 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.InkML.ChannelProperty.ElementType, static () => new DocumentFormat.OpenXml.InkML.ChannelProperty());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.InkML.ChannelProperty>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.InkML.ChannelProperty.ElementType, 0, 0)
@@ -1409,7 +1443,11 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.EMMA.Emma.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Emma());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.EMMA.Emma>();
+>>>>>>> origin/main
             builder.AddElement<AnnotationXml>()
                 .AddAttribute("type", a => a.Type)
                 .AddAttribute("encoding", a => a.Encoding)
@@ -1525,8 +1563,13 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.InkML.Annotation.ElementType, static () => new DocumentFormat.OpenXml.InkML.Annotation());
             builder.AddChild(DocumentFormat.OpenXml.InkML.AnnotationXml.ElementType, static () => new DocumentFormat.OpenXml.InkML.AnnotationXml());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Annotation>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.AnnotationXml>();
+>>>>>>> origin/main
             builder.AddElement<BrushProperty>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -1655,7 +1698,11 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.InkML.TraceFormat.ElementType, static () => new DocumentFormat.OpenXml.InkML.TraceFormat());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceFormat>();
+>>>>>>> origin/main
             builder.AddElement<Canvas>()
                 .AddAttribute("xml:id", a => a.Id)
                 .AddAttribute("traceFormatRef", a => a.TraceFormatRef, aBuilder =>
@@ -1762,7 +1809,11 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.InkML.Mapping.ElementType, static () => new DocumentFormat.OpenXml.InkML.Mapping());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Mapping>();
+>>>>>>> origin/main
             builder.AddElement<CanvasTransform>()
                 .AddAttribute("xml:id", a => a.Id)
                 .AddAttribute("invertible", a => a.Invertible);
@@ -1898,12 +1949,21 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.InkML.ActiveArea.ElementType, static () => new DocumentFormat.OpenXml.InkML.ActiveArea());
             builder.AddChild(DocumentFormat.OpenXml.InkML.ChannelProperties.ElementType, static () => new DocumentFormat.OpenXml.InkML.ChannelProperties());
             builder.AddChild(DocumentFormat.OpenXml.InkML.Latency.ElementType, static () => new DocumentFormat.OpenXml.InkML.Latency());
             builder.AddChild(DocumentFormat.OpenXml.InkML.SampleRate.ElementType, static () => new DocumentFormat.OpenXml.InkML.SampleRate());
             builder.AddChild(DocumentFormat.OpenXml.InkML.SourceProperty.ElementType, static () => new DocumentFormat.OpenXml.InkML.SourceProperty());
             builder.AddChild(DocumentFormat.OpenXml.InkML.TraceFormat.ElementType, static () => new DocumentFormat.OpenXml.InkML.TraceFormat());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.InkML.ActiveArea>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.ChannelProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Latency>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.SampleRate>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.SourceProperty>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceFormat>();
+>>>>>>> origin/main
             builder.AddElement<InkSource>()
                 .AddAttribute("xml:id", a => a.Id, aBuilder =>
                 {
@@ -2063,9 +2123,15 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.InkML.Annotation.ElementType, static () => new DocumentFormat.OpenXml.InkML.Annotation());
             builder.AddChild(DocumentFormat.OpenXml.InkML.AnnotationXml.ElementType, static () => new DocumentFormat.OpenXml.InkML.AnnotationXml());
             builder.AddChild(DocumentFormat.OpenXml.InkML.BrushProperty.ElementType, static () => new DocumentFormat.OpenXml.InkML.BrushProperty());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Annotation>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.AnnotationXml>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.BrushProperty>();
+>>>>>>> origin/main
             builder.AddElement<Brush>()
                 .AddAttribute("xml:id", a => a.Id)
                 .AddAttribute("brushRef", a => a.BrushRef, aBuilder =>
@@ -2413,10 +2479,17 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.InkML.Annotation.ElementType, static () => new DocumentFormat.OpenXml.InkML.Annotation());
             builder.AddChild(DocumentFormat.OpenXml.InkML.AnnotationXml.ElementType, static () => new DocumentFormat.OpenXml.InkML.AnnotationXml());
             builder.AddChild(DocumentFormat.OpenXml.InkML.Trace.ElementType, static () => new DocumentFormat.OpenXml.InkML.Trace());
             builder.AddChild(DocumentFormat.OpenXml.InkML.TraceGroup.ElementType, static () => new DocumentFormat.OpenXml.InkML.TraceGroup());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Annotation>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.AnnotationXml>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Trace>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceGroup>();
+>>>>>>> origin/main
             builder.AddElement<TraceGroup>()
                 .AddAttribute("xml:id", a => a.Id)
                 .AddAttribute("contextRef", a => a.ContextRef, aBuilder =>
@@ -2549,9 +2622,15 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.InkML.Annotation.ElementType, static () => new DocumentFormat.OpenXml.InkML.Annotation());
             builder.AddChild(DocumentFormat.OpenXml.InkML.AnnotationXml.ElementType, static () => new DocumentFormat.OpenXml.InkML.AnnotationXml());
             builder.AddChild(DocumentFormat.OpenXml.InkML.TraceView.ElementType, static () => new DocumentFormat.OpenXml.InkML.TraceView());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Annotation>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.AnnotationXml>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceView>();
+>>>>>>> origin/main
             builder.AddElement<TraceView>()
                 .AddAttribute("xml:id", a => a.Id)
                 .AddAttribute("contextRef", a => a.ContextRef, aBuilder =>
@@ -2718,12 +2797,21 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.InkML.Brush.ElementType, static () => new DocumentFormat.OpenXml.InkML.Brush());
             builder.AddChild(DocumentFormat.OpenXml.InkML.Canvas.ElementType, static () => new DocumentFormat.OpenXml.InkML.Canvas());
             builder.AddChild(DocumentFormat.OpenXml.InkML.CanvasTransform.ElementType, static () => new DocumentFormat.OpenXml.InkML.CanvasTransform());
             builder.AddChild(DocumentFormat.OpenXml.InkML.InkSource.ElementType, static () => new DocumentFormat.OpenXml.InkML.InkSource());
             builder.AddChild(DocumentFormat.OpenXml.InkML.Timestamp.ElementType, static () => new DocumentFormat.OpenXml.InkML.Timestamp());
             builder.AddChild(DocumentFormat.OpenXml.InkML.TraceFormat.ElementType, static () => new DocumentFormat.OpenXml.InkML.TraceFormat());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Brush>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Canvas>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.CanvasTransform>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.InkSource>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Timestamp>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceFormat>();
+>>>>>>> origin/main
             builder.AddElement<Context>()
                 .AddAttribute("xml:id", a => a.Id)
                 .AddAttribute("contextRef", a => a.ContextRef, aBuilder =>
@@ -2911,6 +2999,7 @@ namespace DocumentFormat.OpenXml.InkML
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.InkML.Brush.ElementType, static () => new DocumentFormat.OpenXml.InkML.Brush());
             builder.AddChild(DocumentFormat.OpenXml.InkML.Canvas.ElementType, static () => new DocumentFormat.OpenXml.InkML.Canvas());
             builder.AddChild(DocumentFormat.OpenXml.InkML.CanvasTransform.ElementType, static () => new DocumentFormat.OpenXml.InkML.CanvasTransform());
@@ -2922,6 +3011,19 @@ namespace DocumentFormat.OpenXml.InkML
             builder.AddChild(DocumentFormat.OpenXml.InkML.TraceFormat.ElementType, static () => new DocumentFormat.OpenXml.InkML.TraceFormat());
             builder.AddChild(DocumentFormat.OpenXml.InkML.TraceGroup.ElementType, static () => new DocumentFormat.OpenXml.InkML.TraceGroup());
             builder.AddChild(DocumentFormat.OpenXml.InkML.TraceView.ElementType, static () => new DocumentFormat.OpenXml.InkML.TraceView());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Brush>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Canvas>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.CanvasTransform>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Context>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.InkSource>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Mapping>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Timestamp>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.Trace>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceGroup>();
+            builder.AddChild<DocumentFormat.OpenXml.InkML.TraceView>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new ElementParticle(DocumentFormat.OpenXml.InkML.Brush.ElementType, 0, 1),

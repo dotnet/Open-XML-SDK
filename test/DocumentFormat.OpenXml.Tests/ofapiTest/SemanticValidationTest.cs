@@ -40,12 +40,12 @@ namespace DocumentFormat.OpenXml.Tests
             TableColumn column = new TableColumn();
 
             column.TotalsRowFunction = TotalsRowFunctionValues.Custom;
-            Assert.False(ErrorShowsUp(o12Validator.Validate(column), "Attribute 'totalsRowLabel' should be absent when the value of attribute 'totalsRowFunction' is 'custom'."));
-            Assert.False(ErrorShowsUp(o14Validator.Validate(column), "Attribute 'totalsRowLabel' should be absent when the value of attribute 'totalsRowFunction' is 'custom'."));
+            Assert.False(ErrorShowsUp(o12Validator.Validate(column, TestContext.Current.CancellationToken), "Attribute 'totalsRowLabel' should be absent when the value of attribute 'totalsRowFunction' is 'custom'."));
+            Assert.False(ErrorShowsUp(o14Validator.Validate(column, TestContext.Current.CancellationToken), "Attribute 'totalsRowLabel' should be absent when the value of attribute 'totalsRowFunction' is 'custom'."));
 
             column.TotalsRowLabel = "somevalue";
-            Assert.True(ErrorShowsUp(o12Validator.Validate(column), "Attribute 'totalsRowLabel' should be absent when the value of attribute 'totalsRowFunction' is 'custom'."));
-            Assert.True(ErrorShowsUp(o14Validator.Validate(column), "Attribute 'totalsRowLabel' should be absent when the value of attribute 'totalsRowFunction' is 'custom'."));
+            Assert.True(ErrorShowsUp(o12Validator.Validate(column, TestContext.Current.CancellationToken), "Attribute 'totalsRowLabel' should be absent when the value of attribute 'totalsRowFunction' is 'custom'."));
+            Assert.True(ErrorShowsUp(o14Validator.Validate(column, TestContext.Current.CancellationToken), "Attribute 'totalsRowLabel' should be absent when the value of attribute 'totalsRowFunction' is 'custom'."));
         }
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace DocumentFormat.OpenXml.Tests
             DocumentFormat.OpenXml.Spreadsheet.ServerFormat sf = new DocumentFormat.OpenXml.Spreadsheet.ServerFormat();
             sf.Culture = "test";
             sf.Format = "test";
-            var errors = new OpenXmlValidator(FileFormatVersions.Office2010).Validate(sf);
+            var errors = new OpenXmlValidator(FileFormatVersions.Office2010).Validate(sf, TestContext.Current.CancellationToken);
 
             Assert.Single(errors);
         }

@@ -4,7 +4,6 @@
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Tests.PresetTransitionClass;
 using Xunit;
-using Xunit.Abstractions;
 
 using P15 = DocumentFormat.OpenXml.Office2013.PowerPoint;
 

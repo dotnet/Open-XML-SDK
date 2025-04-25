@@ -75,12 +75,21 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office.CoverPageProps.PublishDate.ElementType, static () => new DocumentFormat.OpenXml.Office.CoverPageProps.PublishDate());
             builder.AddChild(DocumentFormat.OpenXml.Office.CoverPageProps.DocumentAbstract.ElementType, static () => new DocumentFormat.OpenXml.Office.CoverPageProps.DocumentAbstract());
             builder.AddChild(DocumentFormat.OpenXml.Office.CoverPageProps.CompanyAddress.ElementType, static () => new DocumentFormat.OpenXml.Office.CoverPageProps.CompanyAddress());
             builder.AddChild(DocumentFormat.OpenXml.Office.CoverPageProps.CompanyPhoneNumber.ElementType, static () => new DocumentFormat.OpenXml.Office.CoverPageProps.CompanyPhoneNumber());
             builder.AddChild(DocumentFormat.OpenXml.Office.CoverPageProps.CompanyFaxNumber.ElementType, static () => new DocumentFormat.OpenXml.Office.CoverPageProps.CompanyFaxNumber());
             builder.AddChild(DocumentFormat.OpenXml.Office.CoverPageProps.CompanyEmailAddress.ElementType, static () => new DocumentFormat.OpenXml.Office.CoverPageProps.CompanyEmailAddress());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office.CoverPageProps.PublishDate>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.CoverPageProps.DocumentAbstract>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.CoverPageProps.CompanyAddress>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.CoverPageProps.CompanyPhoneNumber>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.CoverPageProps.CompanyFaxNumber>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.CoverPageProps.CompanyEmailAddress>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.CoverPageProps.PublishDate.ElementType, 1, 1),

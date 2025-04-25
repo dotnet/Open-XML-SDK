@@ -156,6 +156,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.BlipFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BlipFill());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.CustomGeometry.ElementType, static () => new DocumentFormat.OpenXml.Drawing.CustomGeometry());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectDag());
@@ -170,6 +171,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Shape3DType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Shape3DType());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SolidFill());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Transform2D.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Transform2D());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
+>>>>>>> origin/main
             builder.AddElement<ChartShapeProperties>()
                 .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
                 {
@@ -1916,8 +1933,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ManualLayout.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ManualLayout());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ManualLayout>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ManualLayout.ElementType, 0, 1),
@@ -2011,9 +2033,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.RichText.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.RichText());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.StringLiteral.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.StringLiteral());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.StringReference.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.StringReference());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RichText>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringLiteral>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringReference>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -2866,8 +2894,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.StringReference.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.StringReference());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.NumericValue.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.NumericValue());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumericValue>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -3017,6 +3050,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Smooth.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Smooth());
@@ -3031,6 +3065,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Trendline.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Trendline());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Index());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Order());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Smooth>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBars>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LineSerExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Values>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Trendline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -3207,6 +3257,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.TextProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Delete.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Delete());
@@ -3223,6 +3274,24 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.DLblsExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.DLblsExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Separator.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Separator());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowLegendKey>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowCategoryName>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowSeriesName>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowPercent>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowBubbleSize>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowLeaderLines>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LeaderLines>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabel>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabelPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DLblsExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Separator>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataLabel.ElementType, 0, 0),
@@ -3417,6 +3486,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.BarSerExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.BarSerExtensionList());
@@ -3431,6 +3501,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Trendline.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Trendline());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Index());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Order());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarSerExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBars>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Values>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Shape>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Trendline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -3603,6 +3689,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData());
@@ -3615,6 +3702,20 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Trendline.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Trendline());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Index());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Order());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBars>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Values>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Trendline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -3771,6 +3872,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.DataLabels());
@@ -3782,6 +3884,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Index());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Order());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Explosion.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Explosion());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Values>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PieSerExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Explosion>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -3948,6 +4063,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Bubble3D.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Bubble3D());
@@ -3957,6 +4073,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Index());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Order());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Values>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -4152,7 +4279,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.BandFormat.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.BandFormat());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BandFormat>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BandFormat.ElementType, 0, 0)
@@ -4221,11 +4352,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.MaxAxisValue.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.MaxAxisValue());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.MinAxisValue.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.MinAxisValue());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.LogBase.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.LogBase());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Orientation.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Orientation());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MaxAxisValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MinAxisValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LogBase>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Orientation>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.LogBase.ElementType, 0, 1),
@@ -4409,12 +4548,21 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.TextProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Overlay.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Overlay());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Layout.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Layout());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartText.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartText());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Overlay>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartText>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartText.ElementType, 0, 1),
@@ -5198,6 +5346,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ColorMapOverride.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ColorMapOverride());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.TextProperties());
@@ -5213,6 +5362,23 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Style.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Style());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.EditingLanguage.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.EditingLanguage());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.Charts.Style.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.Charts.Style());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ColorMapOverride>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Date1904>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RoundedCorners>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Chart>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExternalData>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PivotSource>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PrintSettings>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Protection>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.UserShapesReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Style>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.EditingLanguage>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.Style>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Date1904.ElementType, 0, 1),
@@ -5365,8 +5531,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.ChartDrawing.AbsoluteAnchorSize.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ChartDrawing.AbsoluteAnchorSize());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.ChartDrawing.RelativeAnchorSize.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ChartDrawing.RelativeAnchorSize());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ChartDrawing.AbsoluteAnchorSize>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ChartDrawing.RelativeAnchorSize>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -6084,7 +6255,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.NumericValue.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.NumericValue());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumericValue>();
+>>>>>>> origin/main
             builder.AddElement<NumericPoint>()
                 .AddAttribute("idx", a => a.Index, aBuilder =>
                 {
@@ -6170,7 +6345,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Extension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Extension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Extension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Extension.ElementType, 0, 0)
@@ -6237,9 +6416,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.NumberingCache.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.NumberingCache());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.NumRefExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.NumRefExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Formula.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Formula());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberingCache>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumRefExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Formula>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Formula.ElementType, 1, 1),
@@ -6574,7 +6759,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.StringPoint.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.StringPoint());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringPoint>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.StringPoint.ElementType, 0, 0)
@@ -6641,9 +6830,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringCache.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringCache());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Formula.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Formula());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringCache>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Formula>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Formula.ElementType, 1, 1),
@@ -6751,9 +6946,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.StringCache.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.StringCache());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.StrRefExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.StrRefExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Formula.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Formula());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringCache>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StrRefExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Formula>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Formula.ElementType, 1, 1),
@@ -7278,6 +7479,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Left.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Left());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Top.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Top());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Width.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Width());
@@ -7288,6 +7490,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.WidthMode.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.WidthMode());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.HeightMode.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.HeightMode());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.LayoutTarget.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.LayoutTarget());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Left>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Top>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Width>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Height>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LeftMode>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TopMode>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.WidthMode>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.HeightMode>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LayoutTarget>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.LayoutTarget.ElementType, 0, 1),
@@ -7809,10 +8023,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Size.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Size());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Symbol.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Symbol());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Size>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Symbol>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Symbol.ElementType, 0, 1),
@@ -7936,11 +8157,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ApplyToFront.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ApplyToFront());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ApplyToSides.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ApplyToSides());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ApplyToEnd.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ApplyToEnd());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PictureFormat.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PictureFormat());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PictureStackUnit.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PictureStackUnit());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ApplyToFront>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ApplyToSides>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ApplyToEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureStackUnit>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ApplyToFront.ElementType, 0, 1),
@@ -8214,12 +8443,21 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.TextProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Layout.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Layout());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartText.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartText());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartText>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Layout.ElementType, 0, 1),
@@ -9321,7 +9559,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.SecondPiePoint.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.SecondPiePoint());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SecondPiePoint>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SecondPiePoint.ElementType, 0, 0)
@@ -9432,8 +9674,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Index());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, 1, 1),
@@ -9661,10 +9908,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.TextProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Layout.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Layout());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartText.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartText());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartText>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Layout.ElementType, 0, 1),
@@ -9876,11 +10130,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.DataLabel.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.DataLabel());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Marker.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Marker());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Index());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabel>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, 1, 1),
@@ -10059,10 +10321,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.TextProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Delete.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Delete());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Index());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, 1, 1),
@@ -10187,12 +10456,21 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.OddHeader.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.OddHeader());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.OddFooter.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.OddFooter());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.EvenHeader.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.EvenHeader());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.EvenFooter.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.EvenFooter());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.FirstHeader.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.FirstHeader());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.FirstFooter.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.FirstFooter());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.OddHeader>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.OddFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.EvenHeader>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.EvenFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.FirstHeader>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.FirstFooter>();
+>>>>>>> origin/main
             builder.AddElement<HeaderFooter>()
                 .AddAttribute("alignWithMargins", a => a.AlignWithMargins)
                 .AddAttribute("differentOddEven", a => a.DifferentOddEven)
@@ -10621,6 +10899,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.BlipFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BlipFill());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.CustomGeometry.ElementType, static () => new DocumentFormat.OpenXml.Drawing.CustomGeometry());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectDag());
@@ -10636,6 +10915,23 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SolidFill());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Transform2D.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Transform2D());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
+>>>>>>> origin/main
             builder.AddElement<ShapeProperties>()
                 .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
                 {
@@ -10765,6 +11061,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.TextProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Delete.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Delete());
@@ -10781,6 +11078,24 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartText.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartText());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Index());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Separator.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Separator());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowLegendKey>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowCategoryName>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowSeriesName>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowPercent>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowBubbleSize>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DLblExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabelPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartText>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Separator>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, 1, 1),
@@ -10894,6 +11209,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AreaChartExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AreaChartExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AreaChartSeries.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AreaChartSeries());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.VaryColors());
@@ -10901,6 +11217,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.DataLabels());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Grouping.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Grouping());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AxisId());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AreaChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AreaChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DropLines>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Grouping>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -11010,6 +11335,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Area3DChartExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Area3DChartExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AreaChartSeries.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AreaChartSeries());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.VaryColors());
@@ -11018,6 +11344,16 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.GapDepth.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.GapDepth());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Grouping.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Grouping());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AxisId());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Area3DChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AreaChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DropLines>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.GapDepth>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Grouping>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -11131,6 +11467,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.VaryColors());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ShowMarker.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ShowMarker());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Smooth.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Smooth());
@@ -11142,6 +11479,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.LineChartSeries.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.LineChartSeries());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AxisId());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.UpDownBars.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.UpDownBars());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowMarker>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Smooth>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DropLines>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.HighLowLines>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Grouping>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LineChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LineChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.UpDownBars>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -11255,6 +11605,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.VaryColors());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.DropLines.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.DropLines());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.DataLabels());
@@ -11263,6 +11614,16 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Line3DChartExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Line3DChartExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.LineChartSeries.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.LineChartSeries());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AxisId());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DropLines>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.GapDepth>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Grouping>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Line3DChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LineChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -11372,6 +11733,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.DropLines.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.DropLines());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.HighLowLines.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.HighLowLines());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.DataLabels());
@@ -11379,6 +11741,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.StockChartExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.StockChartExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AxisId());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.UpDownBars.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.UpDownBars());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DropLines>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.HighLowLines>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LineChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StockChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.UpDownBars>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.LineChartSeries.ElementType, 3, 4),
@@ -11454,12 +11825,21 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.VaryColors());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.DataLabels());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.RadarChartExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.RadarChartExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.RadarChartSeries.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.RadarChartSeries());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.RadarStyle.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.RadarStyle());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AxisId());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RadarChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RadarChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RadarStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.RadarStyle.ElementType, 1, 1),
@@ -11560,12 +11940,21 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.VaryColors());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.DataLabels());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ScatterChartExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ScatterChartExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ScatterChartSeries.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ScatterChartSeries());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ScatterStyle.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ScatterStyle());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AxisId());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ScatterChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ScatterChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ScatterStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ScatterStyle.ElementType, 1, 1),
@@ -11665,11 +12054,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.VaryColors());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.DataLabels());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.FirstSliceAngle.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.FirstSliceAngle());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PieChartExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PieChartExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.FirstSliceAngle>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PieChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -11760,10 +12157,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.VaryColors());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.DataLabels());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Pie3DChartExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Pie3DChartExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Pie3DChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -11855,12 +12259,21 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.VaryColors());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.DataLabels());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.FirstSliceAngle.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.FirstSliceAngle());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.HoleSize.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.HoleSize());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.FirstSliceAngle>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.HoleSize>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -11958,6 +12371,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.BarChartExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.BarChartExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.BarDirection.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.BarDirection());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.BarGrouping.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.BarGrouping());
@@ -11968,6 +12382,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.GapWidth.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.GapWidth());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Overlap.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Overlap());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AxisId());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarDirection>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarGrouping>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesLines>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.GapWidth>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Overlap>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -12095,6 +12521,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Bar3DChartExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Bar3DChartExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.BarDirection.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.BarDirection());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.BarGrouping.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.BarGrouping());
@@ -12105,6 +12532,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.GapDepth.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.GapDepth());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Shape.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Shape());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AxisId());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Bar3DChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarDirection>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarGrouping>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.GapWidth>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.GapDepth>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Shape>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -12233,6 +12672,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.VaryColors());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.SeriesLines.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.SeriesLines());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.CustomSplit.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.CustomSplit());
@@ -12244,6 +12684,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.SecondPieSize.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.SecondPieSize());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.SplitType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.SplitType());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesLines>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CustomSplit>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SplitPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.GapWidth>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.OfPieType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SecondPieSize>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SplitType>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.OfPieType.ElementType, 1, 1),
@@ -12354,11 +12807,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.BandFormats.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.BandFormats());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Wireframe.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Wireframe());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartSeries.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartSeries());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AxisId());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BandFormats>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Wireframe>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -12451,12 +12912,21 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.BandFormats.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.BandFormats());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Wireframe.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Wireframe());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.VaryColors());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Surface3DChartExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Surface3DChartExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartSeries.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartSeries());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AxisId());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BandFormats>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Wireframe>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Surface3DChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Wireframe.ElementType, 0, 1),
@@ -12560,6 +13030,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.VaryColors());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Bubble3D.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Bubble3D());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ShowNegativeBubbles.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ShowNegativeBubbles());
@@ -12569,6 +13040,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.DataLabels());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.SizeRepresents.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.SizeRepresents());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AxisId());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowNegativeBubbles>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BubbleChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BubbleScale>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BubbleChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SizeRepresents>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.VaryColors.ElementType, 0, 1),
@@ -12674,6 +13156,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.TextProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.MajorUnit.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.MajorUnit());
@@ -12695,6 +13178,29 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AxisId());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ValAxExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ValAxExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MajorUnit>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MinorUnit>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CrossBetween>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Crosses>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DisplayUnits>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CrossesAt>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Scaling>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Title>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ValAxExtensionList>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -12992,6 +13498,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.TextProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AxisPosition.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AxisPosition());
@@ -13015,6 +13522,31 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Title.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Title());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AxisId());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AutoLabeled>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NoMultiLevelLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CatAxExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Crosses>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CrossesAt>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LabelAlignment>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LabelOffset>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Scaling>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TickLabelSkip>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TickMarkSkip>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Title>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -13315,6 +13847,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.TextProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.MajorUnit.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.MajorUnit());
@@ -13339,6 +13872,32 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Title.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Title());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AxisId());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MajorUnit>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MinorUnit>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AutoLabeled>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Crosses>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DateAxExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CrossesAt>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LabelOffset>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Scaling>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BaseTimeUnit>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MajorTimeUnit>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MinorTimeUnit>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Title>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -13635,6 +14194,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.TextProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AxisPosition.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AxisPosition());
@@ -13654,6 +14214,27 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Title.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Title());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AxisId.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AxisId());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Crosses>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CrossesAt>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Scaling>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SerAxExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TickLabelSkip>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TickMarkSkip>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Title>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -13933,6 +14514,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.TextProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ShowHorizontalBorder.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ShowHorizontalBorder());
@@ -13940,6 +14522,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ShowOutlineBorder.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ShowOutlineBorder());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ShowKeys.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ShowKeys());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowHorizontalBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowVerticalBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowOutlineBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowKeys>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShowHorizontalBorder.ElementType, 0, 1),
@@ -14202,7 +14793,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.NumericValue.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.NumericValue());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumericValue>();
+>>>>>>> origin/main
             builder.AddElement<StringPoint>()
                 .AddAttribute("idx", a => a.Index, aBuilder =>
                 {
@@ -14342,7 +14937,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension>();
+>>>>>>> origin/main
             builder.AddElement<StockChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -14424,7 +15023,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries>();
+>>>>>>> origin/main
             builder.AddElement<PieChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -14506,7 +15109,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries>();
+>>>>>>> origin/main
             builder.AddElement<Pie3DChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -14590,9 +15197,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference>();
+>>>>>>> origin/main
             builder.AddElement<NumRefExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -14676,7 +15289,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.AutoGeneneratedCategories.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.AutoGeneneratedCategories());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.AutoGeneneratedCategories>();
+>>>>>>> origin/main
             builder.AddElement<StrDataExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -14760,9 +15377,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference>();
+>>>>>>> origin/main
             builder.AddElement<StrRefExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -14848,9 +15471,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference>();
+>>>>>>> origin/main
             builder.AddElement<MultiLvlStrRefExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -14940,6 +15569,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowLeaderLines.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowLeaderLines());
@@ -14947,6 +15577,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ChartText.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.ChartText());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowLeaderLines>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.LeaderLines>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ChartText>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable>();
+>>>>>>> origin/main
             builder.AddElement<DLblsExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -15034,7 +15673,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension>();
+>>>>>>> origin/main
             builder.AddElement<LineChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -15116,7 +15759,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension>();
+>>>>>>> origin/main
             builder.AddElement<Line3DChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -15198,7 +15845,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredScatterSeries.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredScatterSeries());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredScatterSeries>();
+>>>>>>> origin/main
             builder.AddElement<ScatterChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -15280,7 +15931,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredRadarSeries.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredRadarSeries());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredRadarSeries>();
+>>>>>>> origin/main
             builder.AddElement<RadarChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -15362,7 +16017,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries>();
+>>>>>>> origin/main
             builder.AddElement<BarChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -15444,7 +16103,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries>();
+>>>>>>> origin/main
             builder.AddElement<Bar3DChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -15526,7 +16189,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries>();
+>>>>>>> origin/main
             builder.AddElement<AreaChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -15608,7 +16275,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries>();
+>>>>>>> origin/main
             builder.AddElement<Area3DChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -15690,7 +16361,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBubbleSeries.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBubbleSeries());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBubbleSeries>();
+>>>>>>> origin/main
             builder.AddElement<BubbleChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -15772,7 +16447,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries>();
+>>>>>>> origin/main
             builder.AddElement<SurfaceChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -15854,7 +16533,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries>();
+>>>>>>> origin/main
             builder.AddElement<Surface3DChartExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -15936,7 +16619,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat>();
+>>>>>>> origin/main
             builder.AddElement<CatAxExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -16018,7 +16705,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat>();
+>>>>>>> origin/main
             builder.AddElement<DateAxExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -16100,7 +16791,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat>();
+>>>>>>> origin/main
             builder.AddElement<SerAxExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -16182,7 +16877,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat>();
+>>>>>>> origin/main
             builder.AddElement<ValAxExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -16257,10 +16956,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.GapWidth.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.GapWidth());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.UpBars.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.UpBars());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.DownBars.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.DownBars());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.GapWidth>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.UpBars>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DownBars>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.GapWidth.ElementType, 0, 1),
@@ -16380,7 +17086,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.StockChartExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.StockChartExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StockChartExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.StockChartExtension.ElementType, 0, 0)
@@ -16445,7 +17155,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PieChartExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PieChartExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PieChartExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PieChartExtension.ElementType, 0, 0)
@@ -16510,7 +17224,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Pie3DChartExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Pie3DChartExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Pie3DChartExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Pie3DChartExtension.ElementType, 0, 0)
@@ -16575,7 +17293,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.NumRefExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.NumRefExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumRefExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.NumRefExtension.ElementType, 0, 0)
@@ -16640,7 +17362,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.StrDataExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.StrDataExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StrDataExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.StrDataExtension.ElementType, 0, 0)
@@ -16705,7 +17431,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.StrRefExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.StrRefExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StrRefExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.StrRefExtension.ElementType, 0, 0)
@@ -16772,9 +17502,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Level.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Level());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PointCount.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PointCount());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Level>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PointCount.ElementType, 0, 1),
@@ -16854,7 +17590,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtension.ElementType, 0, 0)
@@ -16919,7 +17659,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.DLblsExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.DLblsExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DLblsExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DLblsExtension.ElementType, 0, 0)
@@ -16984,7 +17728,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.LineChartExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.LineChartExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LineChartExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.LineChartExtension.ElementType, 0, 0)
@@ -17049,7 +17797,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Line3DChartExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Line3DChartExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Line3DChartExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Line3DChartExtension.ElementType, 0, 0)
@@ -17168,6 +17920,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.XValues.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.XValues());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Smooth.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Smooth());
@@ -17181,6 +17934,21 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Trendline.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Trendline());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Index());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Order());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.XValues>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Smooth>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBars>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.YValues>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Trendline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -17328,7 +18096,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ScatterChartExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ScatterChartExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ScatterChartExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ScatterChartExtension.ElementType, 0, 0)
@@ -17448,6 +18220,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.DataLabels.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.DataLabels());
@@ -17459,6 +18232,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.SeriesText.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.SeriesText());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Index());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Order());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Values>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -17617,7 +18403,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.RadarChartExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.RadarChartExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RadarChartExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.RadarChartExtension.ElementType, 0, 0)
@@ -17727,7 +18517,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.BarChartExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.BarChartExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarChartExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BarChartExtension.ElementType, 0, 0)
@@ -17834,7 +18628,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Bar3DChartExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Bar3DChartExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Bar3DChartExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Bar3DChartExtension.ElementType, 0, 0)
@@ -17899,7 +18697,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AreaChartExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AreaChartExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AreaChartExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AreaChartExtension.ElementType, 0, 0)
@@ -17964,7 +18766,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Area3DChartExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Area3DChartExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Area3DChartExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Area3DChartExtension.ElementType, 0, 0)
@@ -18043,6 +18849,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.XValues.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.XValues());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative());
@@ -18058,6 +18865,23 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Trendline.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Trendline());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Index());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Order.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Order());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.XValues>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBars>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.YValues>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BubbleSize>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Trendline>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -18307,7 +19131,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.BubbleChartExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.BubbleChartExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BubbleChartExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BubbleChartExtension.ElementType, 0, 0)
@@ -18372,7 +19200,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartExtension.ElementType, 0, 0)
@@ -18437,7 +19269,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Surface3DChartExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Surface3DChartExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Surface3DChartExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Surface3DChartExtension.ElementType, 0, 0)
@@ -18694,7 +19530,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.CatAxExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.CatAxExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CatAxExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.CatAxExtension.ElementType, 0, 0)
@@ -18989,7 +19829,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.DateAxExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.DateAxExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DateAxExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DateAxExtension.ElementType, 0, 0)
@@ -19054,7 +19898,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.SerAxExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.SerAxExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SerAxExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SerAxExtension.ElementType, 0, 0)
@@ -19167,10 +20015,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.BuiltInUnit.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.BuiltInUnit());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.DisplayUnitsLabel.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.DisplayUnitsLabel());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.CustomDisplayUnit.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.CustomDisplayUnit());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BuiltInUnit>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DisplayUnitsLabel>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CustomDisplayUnit>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -19241,7 +20096,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ValAxExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ValAxExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ValAxExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ValAxExtension.ElementType, 0, 0)
@@ -19516,7 +20375,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ExtensionList());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+>>>>>>> origin/main
             builder.AddElement<ColorMapOverride>()
                 .AddAttribute("bg1", a => a.Background1, aBuilder =>
                 {
@@ -19657,9 +20520,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.FormatId.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.FormatId());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PivotTableName.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PivotTableName());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.FormatId>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PivotTableName>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PivotTableName.ElementType, 1, 1),
@@ -19769,11 +20638,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartObject.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartObject());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Data.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Data());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Formatting.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Formatting());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Selection.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Selection());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.UserInterface.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.UserInterface());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartObject>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Data>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Formatting>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Selection>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.UserInterface>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartObject.ElementType, 0, 1),
@@ -19919,6 +20796,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum());
@@ -19932,6 +20810,21 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.BackWall.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.BackWall());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Title.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Title());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.View3D.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.View3D());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Legend>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PivotFormats>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PlotArea>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Floor>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SideWall>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BackWall>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Title>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.View3D>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Title.ElementType, 0, 1),
@@ -20191,7 +21084,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate>();
+>>>>>>> origin/main
             builder.AddElement<ExternalData>()
                 .AddAttribute("r:id", a => a.Id, aBuilder =>
                 {
@@ -20278,10 +21175,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PageMargins.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PageMargins());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PageSetup.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PageSetup());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PageMargins>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PageSetup>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter.ElementType, 0, 1),
@@ -20401,7 +21305,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtension.ElementType, 0, 0)
@@ -20478,9 +21386,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.Charts.PivotOptions.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.Charts.PivotOptions());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.Charts.SketchOptions.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.Charts.SketchOptions());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.PivotOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.SketchOptions>();
+>>>>>>> origin/main
             builder.AddElement<ChartSpaceExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -20554,7 +21468,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.DLblExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.DLblExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DLblExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DLblExtension.ElementType, 0, 0)
@@ -20634,12 +21552,21 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ExceptionForSave.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.ExceptionForSave());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable());
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ExceptionForSave>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID>();
+>>>>>>> origin/main
             builder.AddElement<DLblExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -20723,6 +21650,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Bubble3D.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Bubble3D());
@@ -20731,6 +21659,16 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PictureOptions());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Index());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Explosion.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Explosion());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Explosion>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Index.ElementType, 1, 1),
@@ -20917,6 +21855,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation());
@@ -20929,6 +21868,20 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.TrendlineType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.TrendlineType());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.TrendlineName.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.TrendlineName());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Forward>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Backward>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Intercept>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PolynomialOrder>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Period>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TrendlineType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TrendlineName>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.TrendlineName.ElementType, 0, 1),
@@ -21168,6 +22121,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.NoEndCap.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.NoEndCap());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue());
@@ -21177,6 +22131,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Plus.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Plus());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Minus.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Minus());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NoEndCap>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorDirection>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValueType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Plus>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Minus>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ErrorDirection.ElementType, 0, 1),
@@ -21646,7 +22611,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.LineSerExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.LineSerExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LineSerExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.LineSerExtension.ElementType, 0, 0)
@@ -21727,6 +22696,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle());
@@ -21734,6 +22704,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions());
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap());
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID>();
+>>>>>>> origin/main
             builder.AddElement<LineSerExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -21811,7 +22790,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtension.ElementType, 0, 0)
@@ -21892,6 +22875,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle());
@@ -21899,6 +22883,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions());
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap());
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID>();
+>>>>>>> origin/main
             builder.AddElement<ScatterSerExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -21976,7 +22969,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtension.ElementType, 0, 0)
@@ -22057,6 +23054,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle());
@@ -22064,6 +23062,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions());
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap());
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID>();
+>>>>>>> origin/main
             builder.AddElement<RadarSerExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -22141,7 +23148,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.BarSerExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.BarSerExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarSerExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BarSerExtension.ElementType, 0, 0)
@@ -22223,6 +23234,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle());
@@ -22231,6 +23243,16 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions());
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap());
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID>();
+>>>>>>> origin/main
             builder.AddElement<BarSerExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -22309,7 +23331,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtension.ElementType, 0, 0)
@@ -22390,6 +23416,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle());
@@ -22397,6 +23424,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions());
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap());
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID>();
+>>>>>>> origin/main
             builder.AddElement<AreaSerExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -22474,7 +23510,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PieSerExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PieSerExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PieSerExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PieSerExtension.ElementType, 0, 0)
@@ -22555,6 +23595,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle());
@@ -22562,6 +23603,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions());
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap());
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID>();
+>>>>>>> origin/main
             builder.AddElement<PieSerExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -22639,7 +23689,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtension.ElementType, 0, 0)
@@ -22720,6 +23774,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle());
@@ -22727,6 +23782,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions());
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap());
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID>();
+>>>>>>> origin/main
             builder.AddElement<BubbleSerExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -22804,7 +23868,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtension());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtension>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtension.ElementType, 0, 0)
@@ -22884,12 +23952,21 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle());
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions());
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap());
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID>();
+>>>>>>> origin/main
             builder.AddElement<SurfaceSerExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -23045,7 +24122,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PivotFormat.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PivotFormat());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PivotFormat>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PivotFormat.ElementType, 0, 0)
@@ -23116,6 +24197,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.RightAngleAxes.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.RightAngleAxes());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.DepthPercent.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.DepthPercent());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ExtensionList());
@@ -23123,6 +24205,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Perspective.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Perspective());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.RotateX.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.RotateX());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.RotateY.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.RotateY());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RightAngleAxes>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DepthPercent>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.HeightPercent>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Perspective>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RotateX>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RotateY>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.RotateX.ElementType, 0, 1),
@@ -23632,6 +24723,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Area3DChart.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Area3DChart());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AreaChart.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AreaChart());
@@ -23656,6 +24748,32 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Surface3DChart.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Surface3DChart());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.SurfaceChart.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.SurfaceChart());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ValueAxis.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ValueAxis());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Area3DChart>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AreaChart>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Bar3DChart>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarChart>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BubbleChart>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxis>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DateAxis>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DoughnutChart>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataTable>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Line3DChart>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LineChart>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.OfPieChart>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Pie3DChart>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PieChart>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RadarChart>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ScatterChart>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesAxis>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StockChart>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Surface3DChart>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SurfaceChart>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ValueAxis>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Layout.ElementType, 0, 1),
@@ -23768,6 +24886,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.TextProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.TextProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Overlay.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Overlay());
@@ -23775,6 +24894,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Layout.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Layout());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.LegendEntry.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.LegendEntry());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.LegendPosition.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.LegendPosition());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Overlay>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LegendEntry>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LegendPosition>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.LegendPosition.ElementType, 0, 1),
@@ -23900,7 +25028,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.DataDisplayOptions16.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.DataDisplayOptions16());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataDisplayOptions16>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DataDisplayOptions16.ElementType, 0, 0, version: FileFormatVersions.Office2019)

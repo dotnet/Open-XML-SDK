@@ -796,10 +796,29 @@ namespace DocumentFormat.OpenXml
         /// Finds the first child element in type T.
         /// </summary>
         /// <typeparam name="T">Type of element.</typeparam>
-        /// <returns></returns>
+        /// <returns>The first child element of type T or null</returns>
         public T? GetFirstChild<T>()
             where T : OpenXmlElement
             => ChildElements.First<T>();
+
+        /// <summary>
+        /// Finds the first child element of <typeparam ref="T"/> or adds a new element if it does not exist.
+        /// </summary>
+        /// <typeparam name="T">Type of element.</typeparam>
+        /// <returns>The new or existing OpenXmlElement</returns>
+        public T GetOrAddFirstChild<T>()
+            where T : OpenXmlElement, new()
+        {
+            var child = GetFirstChild<T>();
+
+            if (child is null)
+            {
+                child = new T();
+                AppendChild(child);
+            }
+
+            return child;
+        }
 
         /// <summary>
         /// Gets the OpenXmlElement element that immediately precedes the current OpenXmlElement element.

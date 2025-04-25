@@ -97,6 +97,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.AutoFilter.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.AutoFilter());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Columns.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Columns());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatting.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatting());
@@ -124,6 +125,35 @@ namespace DocumentFormat.OpenXml.Office.Excel
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.SheetProtection.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.SheetProtection());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.SheetViews.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.SheetViews());
             builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.SortState.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.SortState());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.AutoFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Columns>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatting>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataConsolidate>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Drawing>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OleObjects>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowBreaks>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageMargins>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageSetup>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PrintOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Picture>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetData>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetDimension>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetProtection>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetViews>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortState>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.SheetProperties.ElementType, 0, 1),
@@ -298,8 +328,13 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office.Excel.ColumnSortMap.ElementType, static () => new DocumentFormat.OpenXml.Office.Excel.ColumnSortMap());
             builder.AddChild(DocumentFormat.OpenXml.Office.Excel.RowSortMap.ElementType, static () => new DocumentFormat.OpenXml.Office.Excel.RowSortMap());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ColumnSortMap>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.RowSortMap>();
+>>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.Excel.RowSortMap.ElementType, 0, 1),
@@ -531,7 +566,11 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office.Excel.RowSortMapItem.ElementType, static () => new DocumentFormat.OpenXml.Office.Excel.RowSortMapItem());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.RowSortMapItem>();
+>>>>>>> origin/main
             builder.AddElement<RowSortMap>()
                 .AddAttribute("ref", a => a.Ref, aBuilder =>
                 {
@@ -625,7 +664,11 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office.Excel.ColumnSortMapItem.ElementType, static () => new DocumentFormat.OpenXml.Office.Excel.ColumnSortMapItem());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ColumnSortMapItem>();
+>>>>>>> origin/main
             builder.AddElement<ColumnSortMap>()
                 .AddAttribute("ref", a => a.Ref, aBuilder =>
                 {

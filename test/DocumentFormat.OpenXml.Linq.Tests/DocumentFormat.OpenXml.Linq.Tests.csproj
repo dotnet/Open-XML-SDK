@@ -4,6 +4,7 @@
     <TargetFrameworks>$(TestTargetFrameworks)</TargetFrameworks>
     <IsTestProject>true</IsTestProject>
     <Nullable>enable</Nullable>
+    <OutputType>Exe</OutputType>
   </PropertyGroup>
 
   <ItemGroup>

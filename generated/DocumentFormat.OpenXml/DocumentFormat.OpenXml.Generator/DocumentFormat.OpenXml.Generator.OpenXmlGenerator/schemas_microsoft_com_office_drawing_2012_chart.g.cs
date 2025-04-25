@@ -2752,6 +2752,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remarks>
+        [Obsolete("Unused property, will be removed in a future version.", false)]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)] 
         public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
             get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PictureOptions;
@@ -3262,6 +3264,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remarks>
+        [Obsolete("Unused property, will be removed in a future version.", false)]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)] 
         public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
             get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PictureOptions;
@@ -3454,6 +3458,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remarks>
+        [Obsolete("Unused property, will be removed in a future version.", false)]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)] 
         public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
             get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PictureOptions;
@@ -3634,6 +3640,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remarks>
+        [Obsolete("Unused property, will be removed in a future version.", false)]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)] 
         public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
             get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PictureOptions;
@@ -3808,6 +3816,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remarks>
+        [Obsolete("Unused property, will be removed in a future version.", false)]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)] 
         public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
             get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PictureOptions;
@@ -3847,6 +3857,8 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remarks>
+        [Obsolete("Unused property, will be removed in a future version.", false)]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)] 
         public DocumentFormat.OpenXml.Drawing.Charts.Bubble3D? Bubble3D
         {
             get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Bubble3D.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Bubble3D;

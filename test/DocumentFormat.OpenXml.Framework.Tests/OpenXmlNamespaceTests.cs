@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         public void NamespaceCount()
         {
             var resolver = new OpenXmlNamespaceResolver();
-            Assert.Equal(165, resolver.GetNamespacesInScope(System.Xml.XmlNamespaceScope.All).Count);
+            Assert.Equal(166, resolver.GetNamespacesInScope(System.Xml.XmlNamespaceScope.All).Count);
         }
 
         [InlineData("", "", FileFormatVersions.Office2007)]

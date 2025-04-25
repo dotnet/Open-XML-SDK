@@ -282,9 +282,15 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
+<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Ink.SourceLink.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Ink.SourceLink());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Ink.DestinationLink.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Ink.DestinationLink());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Ink.ContextNodeProperty.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Ink.ContextNodeProperty());
+=======
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Ink.SourceLink>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Ink.DestinationLink>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Ink.ContextNodeProperty>();
+>>>>>>> origin/main
             builder.AddElement<ContextNode>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
