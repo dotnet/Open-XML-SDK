@@ -22,6 +22,11 @@ namespace SvgExample
             PresentationPart presentationPart = presentationDocument.PresentationPart ??
                                                 throw new InvalidOperationException(@"PresentationDocument is invalid.");
 
+            if (presentationPart.Presentation is null)
+            {
+                throw new ArgumentNullException(@"Presentation root element is missing!");
+            }
+
             // Get relationship ID of first slide.
             string sldRelId = presentationPart
                 .Presentation
@@ -88,6 +93,11 @@ namespace SvgExample
                             new Drawing.FillRectangle())),
                     GetShapeProperties(presentationPart, percentageOfCy));
 
+            if (slidePart.Slide is null)
+            {
+                throw new ArgumentNullException(@"Slide root element is missing!");
+            }
+
             Presentation.ShapeTree shapeTree = slidePart
                 .Slide
                 .CommonSlideData?
@@ -108,6 +118,11 @@ namespace SvgExample
 
         private static Presentation.ShapeProperties GetShapeProperties(PresentationPart part, double percentageOfCy)
         {
+            if (part.Presentation is null)
+            {
+                throw new ArgumentNullException(@"Presentation root element is missing!");
+            }
+
             Presentation.SlideSize slideSize = part.Presentation.SlideSize!;
             var slideCx = (int)slideSize.Cx!;
             var slideCy = (int)slideSize.Cy!;

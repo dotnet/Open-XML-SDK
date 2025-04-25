@@ -9,6 +9,7 @@ using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
@@ -50,7 +51,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Office2013.Word.People People
+        [DisallowNull]
+        public DocumentFormat.OpenXml.Office2013.Word.People? People
         {
             get
             {

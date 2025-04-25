@@ -1,5 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 #nullable enable
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
@@ -53,7 +54,7 @@ namespace Common
             worksheetPart.Worksheet = new Worksheet(new SheetData());
 
             // Add Sheets to the Workbook.
-            Sheets? sheets = spreadsheetDocument?.WorkbookPart?.Workbook.AppendChild<Sheets>(new Sheets());
+            Sheets? sheets = spreadsheetDocument?.WorkbookPart?.Workbook!.AppendChild<Sheets>(new Sheets());
 
             // Append a new worksheet and associate it with the workbook.
             Sheet sheet = new()
@@ -127,7 +128,7 @@ namespace Common
                         cell.DataType = new EnumValue<CellValues>(CellValues.SharedString);
 
                         // Save the new worksheet.
-                        worksheetPart.Worksheet.Save();
+                        worksheetPart.Worksheet?.Save();
                     }
                 }
             }
@@ -149,6 +150,11 @@ namespace Common
             else
             {
                 workbookPart = sd.WorkbookPart;
+            }
+
+            if (workbookPart.Workbook is null)
+            {
+                throw new ArgumentNullException("Workbook root element is missing!");
             }
 
             IEnumerable<Sheet>? sheets = workbookPart.Workbook.GetFirstChild<Sheets>()?.Elements<Sheet>().Where(s => s.Name == sheetName);
@@ -207,6 +213,11 @@ namespace Common
 
         private static Cell InsertCellInWorksheet(string columnName, uint rowIndex, WorksheetPart worksheetPart)
         {
+            if (worksheetPart.Worksheet is null)
+            {
+                throw new ArgumentNullException("Worksheet root element is missing!");
+            }
+
             Worksheet worksheet = worksheetPart.Worksheet;
             SheetData? sheetData = worksheet.GetFirstChild<SheetData>();
 
