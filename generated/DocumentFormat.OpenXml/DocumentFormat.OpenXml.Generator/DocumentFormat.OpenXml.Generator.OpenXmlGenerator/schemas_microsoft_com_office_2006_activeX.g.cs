@@ -122,11 +122,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty.ElementType, static () => new DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty>();
->>>>>>> origin/main
             builder.AddElement<ActiveXControlData>()
                 .AddAttribute("ax:classid", a => a.ActiveXControlClassId, aBuilder =>
                 {
@@ -229,13 +225,8 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office.ActiveX.SharedComFont.ElementType, static () => new DocumentFormat.OpenXml.Office.ActiveX.SharedComFont());
             builder.AddChild(DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture.ElementType, static () => new DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Office.ActiveX.SharedComFont>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture>();
->>>>>>> origin/main
             builder.AddElement<ActiveXObjectProperty>()
                 .AddAttribute("ax:name", a => a.Name, aBuilder =>
                 {
@@ -362,11 +353,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty.ElementType, static () => new DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty>();
->>>>>>> origin/main
             builder.AddElement<SharedComFont>()
                 .AddAttribute("ax:persistence", a => a.Persistence)
                 .AddAttribute("r:id", a => a.Id);

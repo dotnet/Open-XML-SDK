@@ -147,7 +147,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Vml.Spreadsheet.CommentRowTarget.ElementType, static () => new DocumentFormat.OpenXml.Vml.Spreadsheet.CommentRowTarget());
             builder.AddChild(DocumentFormat.OpenXml.Vml.Spreadsheet.CommentColumnTarget.ElementType, static () => new DocumentFormat.OpenXml.Vml.Spreadsheet.CommentColumnTarget());
             builder.AddChild(DocumentFormat.OpenXml.Vml.Spreadsheet.InputValidationType.ElementType, static () => new DocumentFormat.OpenXml.Vml.Spreadsheet.InputValidationType());
@@ -215,75 +214,6 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
             builder.AddChild(DocumentFormat.OpenXml.Vml.Spreadsheet.AutoScaleFont.ElementType, static () => new DocumentFormat.OpenXml.Vml.Spreadsheet.AutoScaleFont());
             builder.AddChild(DocumentFormat.OpenXml.Vml.Spreadsheet.DdeObject.ElementType, static () => new DocumentFormat.OpenXml.Vml.Spreadsheet.DdeObject());
             builder.AddChild(DocumentFormat.OpenXml.Vml.Spreadsheet.UIObject.ElementType, static () => new DocumentFormat.OpenXml.Vml.Spreadsheet.UIObject());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.CommentRowTarget>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.CommentColumnTarget>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.InputValidationType>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.MinDropDownWidth>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.SelectionEntry>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.DropLines>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.Checked>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarPosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarMin>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarMax>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarIncrement>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarPageIncrement>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarWidth>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptLanguage>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptLocation>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.Anchor>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.HorizontalTextAlignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.VerticalTextAlignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaRange>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.SelectionType>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.MultiSelections>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ListBoxCallbackType>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ListItem>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.DropStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaLink>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaPicture>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaGroup>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptText>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptExtended>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaTextBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.AcceleratorPrimary>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.AcceleratorSecondary>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClipboardFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaMacro>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.MoveWithCells>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ResizeWithCells>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.Locked>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.DefaultSize>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.PrintObject>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.Disabled>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.AutoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.AutoLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.AutoSizePicture>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.LockText>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.JustifyLastLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.SecretEdit>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.DefaultButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.HelpButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.CancelButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.DismissButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.Visible>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.RowHidden>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ColumnHidden>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.MultiLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.VerticalScrollBar>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ValidIds>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.Disable3DForListBoxAndDropDown>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.Colored>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.Disable3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.FirstButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.HorizontalScrollBar>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.MapOcxControl>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.CameraObject>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.RecalculateAlways>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.AutoScaleFont>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.DdeObject>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.UIObject>();
->>>>>>> origin/main
             builder.AddElement<ClientData>()
                 .AddAttribute("ObjectType", a => a.ObjectType, aBuilder =>
                 {

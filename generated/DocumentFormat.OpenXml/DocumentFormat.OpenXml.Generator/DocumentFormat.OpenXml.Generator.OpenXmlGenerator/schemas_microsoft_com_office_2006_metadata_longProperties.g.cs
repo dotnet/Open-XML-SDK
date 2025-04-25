@@ -70,11 +70,7 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office.LongProperties.LongProperty.ElementType, static () => new DocumentFormat.OpenXml.Office.LongProperties.LongProperty());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Office.LongProperties.LongProperty>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.LongProperties.LongProperty.ElementType, 0, 0)

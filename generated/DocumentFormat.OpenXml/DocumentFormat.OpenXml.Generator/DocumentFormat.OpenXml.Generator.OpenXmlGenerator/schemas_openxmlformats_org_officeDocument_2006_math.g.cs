@@ -201,7 +201,6 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.RunProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.RunProperties());
             builder.AddChild(DocumentFormat.OpenXml.Math.Text.ElementType, static () => new DocumentFormat.OpenXml.Math.Text());
             builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Break.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Break());
@@ -237,43 +236,6 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedText.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedText());
             builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FieldCode.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FieldCode());
             builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedFieldCode.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedFieldCode());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.RunProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Text>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Break>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Drawing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NoBreakHyphen>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SoftHyphen>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DayShort>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MonthShort>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.YearShort>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DayLong>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MonthLong>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.YearLong>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AnnotationReferenceMark>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FootnoteReferenceMark>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EndnoteReferenceMark>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SeparatorMark>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContinuationSeparatorMark>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PageNumber>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CarriageReturn>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TabChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LastRenderedPageBreak>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FieldChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FootnoteReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EndnoteReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EmbeddedObject>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Picture>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PositionalTab>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Ruby>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SymbolChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Text>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedText>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FieldCode>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedFieldCode>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.RunProperties.ElementType, 0, 1),
@@ -414,13 +376,8 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.AccentProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.AccentProperties());
             builder.AddChild(DocumentFormat.OpenXml.Math.Base.ElementType, static () => new DocumentFormat.OpenXml.Math.Base());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.AccentProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.AccentProperties.ElementType, 0, 1),
@@ -513,13 +470,8 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.BarProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.BarProperties());
             builder.AddChild(DocumentFormat.OpenXml.Math.Base.ElementType, static () => new DocumentFormat.OpenXml.Math.Base());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.BarProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.BarProperties.ElementType, 0, 1),
@@ -612,13 +564,8 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.BoxProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.BoxProperties());
             builder.AddChild(DocumentFormat.OpenXml.Math.Base.ElementType, static () => new DocumentFormat.OpenXml.Math.Base());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.BoxProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.BoxProperties.ElementType, 0, 1),
@@ -711,13 +658,8 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.BorderBoxProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.BorderBoxProperties());
             builder.AddChild(DocumentFormat.OpenXml.Math.Base.ElementType, static () => new DocumentFormat.OpenXml.Math.Base());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBoxProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.BorderBoxProperties.ElementType, 0, 1),
@@ -810,13 +752,8 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.DelimiterProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.DelimiterProperties());
             builder.AddChild(DocumentFormat.OpenXml.Math.Base.ElementType, static () => new DocumentFormat.OpenXml.Math.Base());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.DelimiterProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.DelimiterProperties.ElementType, 0, 1),
@@ -896,13 +833,8 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.EquationArrayProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.EquationArrayProperties());
             builder.AddChild(DocumentFormat.OpenXml.Math.Base.ElementType, static () => new DocumentFormat.OpenXml.Math.Base());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArrayProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.EquationArrayProperties.ElementType, 0, 1),
@@ -983,15 +915,9 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.FractionProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.FractionProperties());
             builder.AddChild(DocumentFormat.OpenXml.Math.Numerator.ElementType, static () => new DocumentFormat.OpenXml.Math.Numerator());
             builder.AddChild(DocumentFormat.OpenXml.Math.Denominator.ElementType, static () => new DocumentFormat.OpenXml.Math.Denominator());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.FractionProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Numerator>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Denominator>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.FractionProperties.ElementType, 0, 1),
@@ -1099,15 +1025,9 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.FunctionProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.FunctionProperties());
             builder.AddChild(DocumentFormat.OpenXml.Math.FunctionName.ElementType, static () => new DocumentFormat.OpenXml.Math.FunctionName());
             builder.AddChild(DocumentFormat.OpenXml.Math.Base.ElementType, static () => new DocumentFormat.OpenXml.Math.Base());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.FunctionProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.FunctionName>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.FunctionProperties.ElementType, 0, 1),
@@ -1214,13 +1134,8 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.GroupCharProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.GroupCharProperties());
             builder.AddChild(DocumentFormat.OpenXml.Math.Base.ElementType, static () => new DocumentFormat.OpenXml.Math.Base());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.GroupCharProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.GroupCharProperties.ElementType, 0, 1),
@@ -1314,15 +1229,9 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.LimitLowerProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitLowerProperties());
             builder.AddChild(DocumentFormat.OpenXml.Math.Base.ElementType, static () => new DocumentFormat.OpenXml.Math.Base());
             builder.AddChild(DocumentFormat.OpenXml.Math.Limit.ElementType, static () => new DocumentFormat.OpenXml.Math.Limit());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLowerProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Limit>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.LimitLowerProperties.ElementType, 0, 1),
@@ -1430,15 +1339,9 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.LimitUpperProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitUpperProperties());
             builder.AddChild(DocumentFormat.OpenXml.Math.Base.ElementType, static () => new DocumentFormat.OpenXml.Math.Base());
             builder.AddChild(DocumentFormat.OpenXml.Math.Limit.ElementType, static () => new DocumentFormat.OpenXml.Math.Limit());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpperProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Limit>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.LimitUpperProperties.ElementType, 0, 1),
@@ -1545,13 +1448,8 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.MatrixProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.MatrixProperties());
             builder.AddChild(DocumentFormat.OpenXml.Math.MatrixRow.ElementType, static () => new DocumentFormat.OpenXml.Math.MatrixRow());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.MatrixProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.MatrixRow>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.MatrixProperties.ElementType, 0, 1),
@@ -1633,17 +1531,10 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.NaryProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.NaryProperties());
             builder.AddChild(DocumentFormat.OpenXml.Math.SubArgument.ElementType, static () => new DocumentFormat.OpenXml.Math.SubArgument());
             builder.AddChild(DocumentFormat.OpenXml.Math.SuperArgument.ElementType, static () => new DocumentFormat.OpenXml.Math.SuperArgument());
             builder.AddChild(DocumentFormat.OpenXml.Math.Base.ElementType, static () => new DocumentFormat.OpenXml.Math.Base());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.NaryProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SubArgument>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SuperArgument>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.NaryProperties.ElementType, 0, 1),
@@ -1764,13 +1655,8 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.Base.ElementType, static () => new DocumentFormat.OpenXml.Math.Base());
             builder.AddChild(DocumentFormat.OpenXml.Math.PhantomProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.PhantomProperties());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.PhantomProperties>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.PhantomProperties.ElementType, 0, 1),
@@ -1864,15 +1750,9 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.Degree.ElementType, static () => new DocumentFormat.OpenXml.Math.Degree());
             builder.AddChild(DocumentFormat.OpenXml.Math.Base.ElementType, static () => new DocumentFormat.OpenXml.Math.Base());
             builder.AddChild(DocumentFormat.OpenXml.Math.RadicalProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.RadicalProperties());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.Degree>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.RadicalProperties>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.RadicalProperties.ElementType, 0, 1),
@@ -1981,17 +1861,10 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.SubArgument.ElementType, static () => new DocumentFormat.OpenXml.Math.SubArgument());
             builder.AddChild(DocumentFormat.OpenXml.Math.SuperArgument.ElementType, static () => new DocumentFormat.OpenXml.Math.SuperArgument());
             builder.AddChild(DocumentFormat.OpenXml.Math.Base.ElementType, static () => new DocumentFormat.OpenXml.Math.Base());
             builder.AddChild(DocumentFormat.OpenXml.Math.PreSubSuperProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.PreSubSuperProperties());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.SubArgument>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SuperArgument>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuperProperties>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.PreSubSuperProperties.ElementType, 0, 1),
@@ -2113,15 +1986,9 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.Base.ElementType, static () => new DocumentFormat.OpenXml.Math.Base());
             builder.AddChild(DocumentFormat.OpenXml.Math.SubArgument.ElementType, static () => new DocumentFormat.OpenXml.Math.SubArgument());
             builder.AddChild(DocumentFormat.OpenXml.Math.SubscriptProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.SubscriptProperties());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SubArgument>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SubscriptProperties>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.SubscriptProperties.ElementType, 0, 1),
@@ -2230,17 +2097,10 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.Base.ElementType, static () => new DocumentFormat.OpenXml.Math.Base());
             builder.AddChild(DocumentFormat.OpenXml.Math.SubArgument.ElementType, static () => new DocumentFormat.OpenXml.Math.SubArgument());
             builder.AddChild(DocumentFormat.OpenXml.Math.SuperArgument.ElementType, static () => new DocumentFormat.OpenXml.Math.SuperArgument());
             builder.AddChild(DocumentFormat.OpenXml.Math.SubSuperscriptProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.SubSuperscriptProperties());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SubArgument>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SuperArgument>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscriptProperties>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.SubSuperscriptProperties.ElementType, 0, 1),
@@ -2362,15 +2222,9 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.Base.ElementType, static () => new DocumentFormat.OpenXml.Math.Base());
             builder.AddChild(DocumentFormat.OpenXml.Math.SuperArgument.ElementType, static () => new DocumentFormat.OpenXml.Math.SuperArgument());
             builder.AddChild(DocumentFormat.OpenXml.Math.SuperscriptProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.SuperscriptProperties());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SuperArgument>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SuperscriptProperties>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.SuperscriptProperties.ElementType, 0, 1),
@@ -2509,7 +2363,6 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.OfficeMath.ElementType, static () => new DocumentFormat.OpenXml.Math.OfficeMath());
             builder.AddChild(DocumentFormat.OpenXml.Math.ParagraphProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.ParagraphProperties());
             builder.AddChild(DocumentFormat.OpenXml.Math.Run.ElementType, static () => new DocumentFormat.OpenXml.Math.Run());
@@ -2544,42 +2397,6 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.ParagraphProperties.ElementType, 0, 1),
@@ -2802,7 +2619,6 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.Accent.ElementType, static () => new DocumentFormat.OpenXml.Math.Accent());
             builder.AddChild(DocumentFormat.OpenXml.Math.Bar.ElementType, static () => new DocumentFormat.OpenXml.Math.Bar());
             builder.AddChild(DocumentFormat.OpenXml.Math.BorderBox.ElementType, static () => new DocumentFormat.OpenXml.Math.BorderBox());
@@ -2859,64 +2675,6 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Hyperlink>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SimpleField>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -3167,7 +2925,6 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.BreakBinary.ElementType, static () => new DocumentFormat.OpenXml.Math.BreakBinary());
             builder.AddChild(DocumentFormat.OpenXml.Math.BreakBinarySubtraction.ElementType, static () => new DocumentFormat.OpenXml.Math.BreakBinarySubtraction());
             builder.AddChild(DocumentFormat.OpenXml.Math.MathFont.ElementType, static () => new DocumentFormat.OpenXml.Math.MathFont());
@@ -3184,24 +2941,6 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild(DocumentFormat.OpenXml.Math.InterSpacing.ElementType, static () => new DocumentFormat.OpenXml.Math.InterSpacing());
             builder.AddChild(DocumentFormat.OpenXml.Math.IntraSpacing.ElementType, static () => new DocumentFormat.OpenXml.Math.IntraSpacing());
             builder.AddChild(DocumentFormat.OpenXml.Math.WrapIndent.ElementType, static () => new DocumentFormat.OpenXml.Math.WrapIndent());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.BreakBinary>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.BreakBinarySubtraction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.MathFont>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.IntegralLimitLocation>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.NaryLimitLocation>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.DefaultJustification>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SmallFraction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.DisplayDefaults>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.WrapRight>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LeftMargin>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.RightMargin>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.PreSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.PostSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.InterSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.IntraSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.WrapIndent>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.MathFont.ElementType, 0, 1),
@@ -4451,21 +4190,12 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.Break.ElementType, static () => new DocumentFormat.OpenXml.Math.Break());
             builder.AddChild(DocumentFormat.OpenXml.Math.Literal.ElementType, static () => new DocumentFormat.OpenXml.Math.Literal());
             builder.AddChild(DocumentFormat.OpenXml.Math.NormalText.ElementType, static () => new DocumentFormat.OpenXml.Math.NormalText());
             builder.AddChild(DocumentFormat.OpenXml.Math.Alignment.ElementType, static () => new DocumentFormat.OpenXml.Math.Alignment());
             builder.AddChild(DocumentFormat.OpenXml.Math.Script.ElementType, static () => new DocumentFormat.OpenXml.Math.Script());
             builder.AddChild(DocumentFormat.OpenXml.Math.Style.ElementType, static () => new DocumentFormat.OpenXml.Math.Style());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.Break>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Literal>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.NormalText>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Alignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Script>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Style>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.Literal.ElementType, 0, 1),
@@ -4787,19 +4517,11 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedMathControl.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedMathControl());
             builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedMathControl.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedMathControl());
             builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromMathControl.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromMathControl());
             builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToMathControl.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToMathControl());
             builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RunProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RunProperties());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedMathControl>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedMathControl>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromMathControl>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToMathControl>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunProperties>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -4893,13 +4615,8 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.AccentChar.ElementType, static () => new DocumentFormat.OpenXml.Math.AccentChar());
             builder.AddChild(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.ControlProperties());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.AccentChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.AccentChar.ElementType, 0, 1),
@@ -7632,13 +7349,8 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.ControlProperties());
             builder.AddChild(DocumentFormat.OpenXml.Math.Position.ElementType, static () => new DocumentFormat.OpenXml.Math.Position());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Position>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.Position.ElementType, 0, 1),
@@ -7735,21 +7447,12 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.ControlProperties());
             builder.AddChild(DocumentFormat.OpenXml.Math.Break.ElementType, static () => new DocumentFormat.OpenXml.Math.Break());
             builder.AddChild(DocumentFormat.OpenXml.Math.OperatorEmulator.ElementType, static () => new DocumentFormat.OpenXml.Math.OperatorEmulator());
             builder.AddChild(DocumentFormat.OpenXml.Math.NoBreak.ElementType, static () => new DocumentFormat.OpenXml.Math.NoBreak());
             builder.AddChild(DocumentFormat.OpenXml.Math.Differential.ElementType, static () => new DocumentFormat.OpenXml.Math.Differential());
             builder.AddChild(DocumentFormat.OpenXml.Math.Alignment.ElementType, static () => new DocumentFormat.OpenXml.Math.Alignment());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Break>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.OperatorEmulator>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.NoBreak>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Differential>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Alignment>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.OperatorEmulator.ElementType, 0, 1),
@@ -7905,7 +7608,6 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.ControlProperties());
             builder.AddChild(DocumentFormat.OpenXml.Math.HideTop.ElementType, static () => new DocumentFormat.OpenXml.Math.HideTop());
             builder.AddChild(DocumentFormat.OpenXml.Math.HideBottom.ElementType, static () => new DocumentFormat.OpenXml.Math.HideBottom());
@@ -7915,17 +7617,6 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild(DocumentFormat.OpenXml.Math.StrikeVertical.ElementType, static () => new DocumentFormat.OpenXml.Math.StrikeVertical());
             builder.AddChild(DocumentFormat.OpenXml.Math.StrikeBottomLeftToTopRight.ElementType, static () => new DocumentFormat.OpenXml.Math.StrikeBottomLeftToTopRight());
             builder.AddChild(DocumentFormat.OpenXml.Math.StrikeTopLeftToBottomRight.ElementType, static () => new DocumentFormat.OpenXml.Math.StrikeTopLeftToBottomRight());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.HideTop>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.HideBottom>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.HideLeft>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.HideRight>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.StrikeHorizontal>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.StrikeVertical>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.StrikeBottomLeftToTopRight>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.StrikeTopLeftToBottomRight>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.HideTop.ElementType, 0, 1),
@@ -8168,21 +7859,12 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.BeginChar.ElementType, static () => new DocumentFormat.OpenXml.Math.BeginChar());
             builder.AddChild(DocumentFormat.OpenXml.Math.SeparatorChar.ElementType, static () => new DocumentFormat.OpenXml.Math.SeparatorChar());
             builder.AddChild(DocumentFormat.OpenXml.Math.EndChar.ElementType, static () => new DocumentFormat.OpenXml.Math.EndChar());
             builder.AddChild(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.ControlProperties());
             builder.AddChild(DocumentFormat.OpenXml.Math.GrowOperators.ElementType, static () => new DocumentFormat.OpenXml.Math.GrowOperators());
             builder.AddChild(DocumentFormat.OpenXml.Math.Shape.ElementType, static () => new DocumentFormat.OpenXml.Math.Shape());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.BeginChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SeparatorChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.EndChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.GrowOperators>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Shape>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.BeginChar.ElementType, 0, 1),
@@ -8592,21 +8274,12 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.ControlProperties());
             builder.AddChild(DocumentFormat.OpenXml.Math.MaxDistribution.ElementType, static () => new DocumentFormat.OpenXml.Math.MaxDistribution());
             builder.AddChild(DocumentFormat.OpenXml.Math.ObjectDistribution.ElementType, static () => new DocumentFormat.OpenXml.Math.ObjectDistribution());
             builder.AddChild(DocumentFormat.OpenXml.Math.RowSpacingRule.ElementType, static () => new DocumentFormat.OpenXml.Math.RowSpacingRule());
             builder.AddChild(DocumentFormat.OpenXml.Math.RowSpacing.ElementType, static () => new DocumentFormat.OpenXml.Math.RowSpacing());
             builder.AddChild(DocumentFormat.OpenXml.Math.BaseJustification.ElementType, static () => new DocumentFormat.OpenXml.Math.BaseJustification());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.MaxDistribution>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.ObjectDistribution>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.RowSpacingRule>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.RowSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.BaseJustification>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.BaseJustification.ElementType, 0, 1),
@@ -8803,13 +8476,8 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.ControlProperties());
             builder.AddChild(DocumentFormat.OpenXml.Math.FractionType.ElementType, static () => new DocumentFormat.OpenXml.Math.FractionType());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.FractionType>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.FractionType.ElementType, 0, 1),
@@ -8901,11 +8569,7 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.ControlProperties());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
@@ -8986,17 +8650,10 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.AccentChar.ElementType, static () => new DocumentFormat.OpenXml.Math.AccentChar());
             builder.AddChild(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.ControlProperties());
             builder.AddChild(DocumentFormat.OpenXml.Math.Position.ElementType, static () => new DocumentFormat.OpenXml.Math.Position());
             builder.AddChild(DocumentFormat.OpenXml.Math.VerticalJustification.ElementType, static () => new DocumentFormat.OpenXml.Math.VerticalJustification());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.AccentChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Position>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.VerticalJustification>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.AccentChar.ElementType, 0, 1),
@@ -9116,11 +8773,7 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.ControlProperties());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
@@ -9198,11 +8851,7 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.ControlProperties());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
@@ -9378,13 +9027,8 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.MatrixColumnCount.ElementType, static () => new DocumentFormat.OpenXml.Math.MatrixColumnCount());
             builder.AddChild(DocumentFormat.OpenXml.Math.MatrixColumnJustification.ElementType, static () => new DocumentFormat.OpenXml.Math.MatrixColumnJustification());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.MatrixColumnCount>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.MatrixColumnJustification>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.MatrixColumnCount.ElementType, 0, 1),
@@ -9476,11 +9120,7 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.MatrixColumnProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.MatrixColumnProperties());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.MatrixColumnProperties>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.MatrixColumnProperties.ElementType, 0, 1)
@@ -9843,11 +9483,7 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.MatrixColumn.ElementType, static () => new DocumentFormat.OpenXml.Math.MatrixColumn());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.MatrixColumn>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.MatrixColumn.ElementType, 1, 64)
@@ -9920,7 +9556,6 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.ControlProperties());
             builder.AddChild(DocumentFormat.OpenXml.Math.MatrixColumns.ElementType, static () => new DocumentFormat.OpenXml.Math.MatrixColumns());
             builder.AddChild(DocumentFormat.OpenXml.Math.HidePlaceholder.ElementType, static () => new DocumentFormat.OpenXml.Math.HidePlaceholder());
@@ -9930,17 +9565,6 @@ namespace DocumentFormat.OpenXml.Math
             builder.AddChild(DocumentFormat.OpenXml.Math.RowSpacing.ElementType, static () => new DocumentFormat.OpenXml.Math.RowSpacing());
             builder.AddChild(DocumentFormat.OpenXml.Math.ColumnGap.ElementType, static () => new DocumentFormat.OpenXml.Math.ColumnGap());
             builder.AddChild(DocumentFormat.OpenXml.Math.BaseJustification.ElementType, static () => new DocumentFormat.OpenXml.Math.BaseJustification());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.MatrixColumns>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.HidePlaceholder>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.RowSpacingRule>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.ColumnGapRule>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.ColumnSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.RowSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.ColumnGap>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.BaseJustification>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.BaseJustification.ElementType, 0, 1),
@@ -10130,11 +9754,7 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.Base.ElementType, static () => new DocumentFormat.OpenXml.Math.Base());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.Base>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.Base.ElementType, 1, 64)
@@ -10338,21 +9958,12 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.AccentChar.ElementType, static () => new DocumentFormat.OpenXml.Math.AccentChar());
             builder.AddChild(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.ControlProperties());
             builder.AddChild(DocumentFormat.OpenXml.Math.LimitLocation.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitLocation());
             builder.AddChild(DocumentFormat.OpenXml.Math.GrowOperators.ElementType, static () => new DocumentFormat.OpenXml.Math.GrowOperators());
             builder.AddChild(DocumentFormat.OpenXml.Math.HideSubArgument.ElementType, static () => new DocumentFormat.OpenXml.Math.HideSubArgument());
             builder.AddChild(DocumentFormat.OpenXml.Math.HideSuperArgument.ElementType, static () => new DocumentFormat.OpenXml.Math.HideSuperArgument());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.AccentChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLocation>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.GrowOperators>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.HideSubArgument>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.HideSuperArgument>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.AccentChar.ElementType, 0, 1),
@@ -10505,21 +10116,12 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.ControlProperties());
             builder.AddChild(DocumentFormat.OpenXml.Math.ShowPhantom.ElementType, static () => new DocumentFormat.OpenXml.Math.ShowPhantom());
             builder.AddChild(DocumentFormat.OpenXml.Math.ZeroWidth.ElementType, static () => new DocumentFormat.OpenXml.Math.ZeroWidth());
             builder.AddChild(DocumentFormat.OpenXml.Math.ZeroAscent.ElementType, static () => new DocumentFormat.OpenXml.Math.ZeroAscent());
             builder.AddChild(DocumentFormat.OpenXml.Math.ZeroDescent.ElementType, static () => new DocumentFormat.OpenXml.Math.ZeroDescent());
             builder.AddChild(DocumentFormat.OpenXml.Math.Transparent.ElementType, static () => new DocumentFormat.OpenXml.Math.Transparent());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.ShowPhantom>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.ZeroWidth>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.ZeroAscent>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.ZeroDescent>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Transparent>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.ShowPhantom.ElementType, 0, 1),
@@ -10668,13 +10270,8 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.ControlProperties());
             builder.AddChild(DocumentFormat.OpenXml.Math.HideDegree.ElementType, static () => new DocumentFormat.OpenXml.Math.HideDegree());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.HideDegree>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.HideDegree.ElementType, 0, 1),
@@ -10766,11 +10363,7 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.ControlProperties());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
@@ -10848,11 +10441,7 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.ControlProperties());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
@@ -10931,13 +10520,8 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.ControlProperties());
             builder.AddChild(DocumentFormat.OpenXml.Math.AlignScripts.ElementType, static () => new DocumentFormat.OpenXml.Math.AlignScripts());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.AlignScripts>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.AlignScripts.ElementType, 0, 1),
@@ -11029,11 +10613,7 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.ControlProperties());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.ControlProperties>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.ControlProperties.ElementType, 0, 1)
@@ -11160,11 +10740,7 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.ArgumentSize.ElementType, static () => new DocumentFormat.OpenXml.Math.ArgumentSize());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.ArgumentSize>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.ArgumentSize.ElementType, 0, 1)
@@ -11489,11 +11065,7 @@ namespace DocumentFormat.OpenXml.Math
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Math.Justification.ElementType, static () => new DocumentFormat.OpenXml.Math.Justification());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Math.Justification>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Math.Justification.ElementType, 0, 1)

@@ -74,17 +74,10 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office.Word.AllocatedCommands.ElementType, static () => new DocumentFormat.OpenXml.Office.Word.AllocatedCommands());
             builder.AddChild(DocumentFormat.OpenXml.Office.Word.KeyMapCustomizations.ElementType, static () => new DocumentFormat.OpenXml.Office.Word.KeyMapCustomizations());
             builder.AddChild(DocumentFormat.OpenXml.Office.Word.MismatchedKeyMapCustomization.ElementType, static () => new DocumentFormat.OpenXml.Office.Word.MismatchedKeyMapCustomization());
             builder.AddChild(DocumentFormat.OpenXml.Office.Word.Toolbars.ElementType, static () => new DocumentFormat.OpenXml.Office.Word.Toolbars());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.AllocatedCommands>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.KeyMapCustomizations>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.MismatchedKeyMapCustomization>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Toolbars>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.Word.KeyMapCustomizations.ElementType, 0, 0),
@@ -183,11 +176,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office.Word.Mcd.ElementType, static () => new DocumentFormat.OpenXml.Office.Word.Mcd());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Mcd>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.Word.Mcd.ElementType, 0, 0)
@@ -253,13 +242,8 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office.Word.DocEvents.ElementType, static () => new DocumentFormat.OpenXml.Office.Word.DocEvents());
             builder.AddChild(DocumentFormat.OpenXml.Office.Word.Mcds.ElementType, static () => new DocumentFormat.OpenXml.Office.Word.Mcds());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.DocEvents>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Mcds>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.Word.DocEvents.ElementType, 0, 1),
@@ -382,11 +366,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office.Word.SingleDataSourceRecord.ElementType, static () => new DocumentFormat.OpenXml.Office.Word.SingleDataSourceRecord());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.SingleDataSourceRecord>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.Word.SingleDataSourceRecord.ElementType, 1, 0)
@@ -850,19 +830,11 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office.Word.AllocatedCommandKeyboardCustomization.ElementType, static () => new DocumentFormat.OpenXml.Office.Word.AllocatedCommandKeyboardCustomization());
             builder.AddChild(DocumentFormat.OpenXml.Office.Word.FixedCommandKeyboardCustomization.ElementType, static () => new DocumentFormat.OpenXml.Office.Word.FixedCommandKeyboardCustomization());
             builder.AddChild(DocumentFormat.OpenXml.Office.Word.CharacterInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office.Word.CharacterInsertion());
             builder.AddChild(DocumentFormat.OpenXml.Office.Word.MacroKeyboardCustomization.ElementType, static () => new DocumentFormat.OpenXml.Office.Word.MacroKeyboardCustomization());
             builder.AddChild(DocumentFormat.OpenXml.Office.Word.WllMacroKeyboardCustomization.ElementType, static () => new DocumentFormat.OpenXml.Office.Word.WllMacroKeyboardCustomization());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.AllocatedCommandKeyboardCustomization>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.FixedCommandKeyboardCustomization>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.CharacterInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.MacroKeyboardCustomization>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.WllMacroKeyboardCustomization>();
->>>>>>> origin/main
             builder.AddElement<KeyMapEntry>()
                 .AddAttribute("wne:chmPrimary", a => a.CharacterMapPrimary, aBuilder =>
                 {
@@ -1785,7 +1757,6 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office.Word.EventDocNewXsdString.ElementType, static () => new DocumentFormat.OpenXml.Office.Word.EventDocNewXsdString());
             builder.AddChild(DocumentFormat.OpenXml.Office.Word.EventDocOpenXsdString.ElementType, static () => new DocumentFormat.OpenXml.Office.Word.EventDocOpenXsdString());
             builder.AddChild(DocumentFormat.OpenXml.Office.Word.EventDocCloseXsdString.ElementType, static () => new DocumentFormat.OpenXml.Office.Word.EventDocCloseXsdString());
@@ -1799,21 +1770,6 @@ namespace DocumentFormat.OpenXml.Office.Word
             builder.AddChild(DocumentFormat.OpenXml.Office.Word.EventDocStoreUpdateXsdString.ElementType, static () => new DocumentFormat.OpenXml.Office.Word.EventDocStoreUpdateXsdString());
             builder.AddChild(DocumentFormat.OpenXml.Office.Word.EventDocContentControlUpdateXsdString.ElementType, static () => new DocumentFormat.OpenXml.Office.Word.EventDocContentControlUpdateXsdString());
             builder.AddChild(DocumentFormat.OpenXml.Office.Word.EventDocBuildingBlockAfterInsertXsdString.ElementType, static () => new DocumentFormat.OpenXml.Office.Word.EventDocBuildingBlockAfterInsertXsdString());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocNewXsdString>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocOpenXsdString>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocCloseXsdString>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocSyncXsdString>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocXmlAfterInsertXsdString>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocXmlBeforeDeleteXsdString>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocContentControlAfterInsertXsdString>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocContentControlBeforeDeleteXsdString>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocContentControlOnExistXsdString>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocContentControlOnEnterXsdString>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocStoreUpdateXsdString>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocContentControlUpdateXsdString>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocBuildingBlockAfterInsertXsdString>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.Word.EventDocNewXsdString.ElementType, 0, 1),
@@ -2059,11 +2015,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifestEntry.ElementType, static () => new DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifestEntry());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifestEntry>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifestEntry.ElementType, 0, 0)
@@ -2362,13 +2314,8 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifest.ElementType, static () => new DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifest());
             builder.AddChild(DocumentFormat.OpenXml.Office.Word.ToolbarData.ElementType, static () => new DocumentFormat.OpenXml.Office.Word.ToolbarData());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifest>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.ToolbarData>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifest.ElementType, 0, 0),
@@ -2434,11 +2381,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office.Word.AllocatedCommand.ElementType, static () => new DocumentFormat.OpenXml.Office.Word.AllocatedCommand());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.AllocatedCommand>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.Word.AllocatedCommand.ElementType, 0, 0)
@@ -2597,13 +2540,8 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office.Word.RecordHashCode.ElementType, static () => new DocumentFormat.OpenXml.Office.Word.RecordHashCode());
             builder.AddChild(DocumentFormat.OpenXml.Office.Word.RecordIncluded.ElementType, static () => new DocumentFormat.OpenXml.Office.Word.RecordIncluded());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.RecordHashCode>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.RecordIncluded>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.Word.RecordIncluded.ElementType, 0, 1),

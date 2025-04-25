@@ -73,17 +73,10 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation());
             builder.AddChild(DocumentFormat.OpenXml.Office.CustomXsn.CachedView.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomXsn.CachedView());
             builder.AddChild(DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault());
             builder.AddChild(DocumentFormat.OpenXml.Office.CustomXsn.Scope.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomXsn.Scope());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomXsn.CachedView>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomXsn.Scope>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation.ElementType, 1, 1),

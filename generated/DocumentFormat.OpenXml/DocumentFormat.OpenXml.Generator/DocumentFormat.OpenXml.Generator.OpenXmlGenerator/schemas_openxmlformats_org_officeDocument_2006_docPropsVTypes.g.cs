@@ -105,7 +105,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.VariantTypes.VTArray.ElementType, static () => new DocumentFormat.OpenXml.VariantTypes.VTArray());
             builder.AddChild(DocumentFormat.OpenXml.VariantTypes.VTClipboardData.ElementType, static () => new DocumentFormat.OpenXml.VariantTypes.VTClipboardData());
             builder.AddChild(DocumentFormat.OpenXml.VariantTypes.VTEmpty.ElementType, static () => new DocumentFormat.OpenXml.VariantTypes.VTEmpty());
@@ -141,43 +140,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
             builder.AddChild(DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger.ElementType, static () => new DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger());
             builder.AddChild(DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64.ElementType, static () => new DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64());
             builder.AddChild(DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort.ElementType, static () => new DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTArray>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTClipboardData>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTNull>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.Variant>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTVector>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTVStreamData>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTClassId>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTCurrency>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTError>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTBlob>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTOBlob>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTStreamData>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTOStreamData>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTStorage>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTOStorage>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTBool>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTByte>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTDate>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTFileTime>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTDecimal>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTDouble>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTFloat>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTInt32>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTInteger>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTInt64>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTShort>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTLPSTR>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTLPWSTR>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTBString>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.VariantTypes.Variant.ElementType, 1, 1),
@@ -771,7 +733,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.VariantTypes.VTClipboardData.ElementType, static () => new DocumentFormat.OpenXml.VariantTypes.VTClipboardData());
             builder.AddChild(DocumentFormat.OpenXml.VariantTypes.Variant.ElementType, static () => new DocumentFormat.OpenXml.VariantTypes.Variant());
             builder.AddChild(DocumentFormat.OpenXml.VariantTypes.VTClassId.ElementType, static () => new DocumentFormat.OpenXml.VariantTypes.VTClassId());
@@ -793,29 +754,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
             builder.AddChild(DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32.ElementType, static () => new DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32());
             builder.AddChild(DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64.ElementType, static () => new DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64());
             builder.AddChild(DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort.ElementType, static () => new DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTClipboardData>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.Variant>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTClassId>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTCurrency>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTError>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTBool>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTByte>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTDate>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTFileTime>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTDouble>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTFloat>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTInt32>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTInt64>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTShort>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTLPSTR>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTLPWSTR>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTBString>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort>();
->>>>>>> origin/main
             builder.AddElement<VTVector>()
                 .AddAttribute("baseType", a => a.BaseType, aBuilder =>
                 {
@@ -955,7 +893,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.VariantTypes.Variant.ElementType, static () => new DocumentFormat.OpenXml.VariantTypes.Variant());
             builder.AddChild(DocumentFormat.OpenXml.VariantTypes.VTCurrency.ElementType, static () => new DocumentFormat.OpenXml.VariantTypes.VTCurrency());
             builder.AddChild(DocumentFormat.OpenXml.VariantTypes.VTError.ElementType, static () => new DocumentFormat.OpenXml.VariantTypes.VTError());
@@ -973,25 +910,6 @@ namespace DocumentFormat.OpenXml.VariantTypes
             builder.AddChild(DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32.ElementType, static () => new DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32());
             builder.AddChild(DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger.ElementType, static () => new DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger());
             builder.AddChild(DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort.ElementType, static () => new DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.Variant>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTCurrency>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTError>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTBool>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTByte>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTDate>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTDecimal>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTDouble>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTFloat>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTInt32>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTInteger>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTShort>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTBString>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger>();
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort>();
->>>>>>> origin/main
             builder.AddElement<VTArray>()
                 .AddAttribute("lBound", a => a.LowerBounds, aBuilder =>
                 {

@@ -965,11 +965,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ExtensionList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
->>>>>>> origin/main
             builder.AddElement<ColorMap>()
                 .AddAttribute("bg1", a => a.Background1, aBuilder =>
                 {
@@ -1109,13 +1105,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.OverrideColorMapping.ElementType, static () => new DocumentFormat.OpenXml.Drawing.OverrideColorMapping());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.MasterColorMapping.ElementType, static () => new DocumentFormat.OpenXml.Drawing.MasterColorMapping());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.OverrideColorMapping>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.MasterColorMapping>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -1227,7 +1218,6 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.BlipFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BlipFill());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectDag());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectList());
@@ -1236,16 +1226,6 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild(DocumentFormat.OpenXml.Drawing.PatternFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PatternFill());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SolidFill());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
->>>>>>> origin/main
             builder.AddElement<BackgroundProperties>()
                 .AddAttribute("shadeToTitle", a => a.ShadeToTitle);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -1346,21 +1326,12 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.HslColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HslColor());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.PresetColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PresetColor());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.SchemeColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SchemeColor());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage.ElementType, static () => new DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.RgbColorModelHex.ElementType, static () => new DocumentFormat.OpenXml.Drawing.RgbColorModelHex());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.SystemColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SystemColor());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
->>>>>>> origin/main
             builder.AddElement<BackgroundStyleReference>()
                 .AddAttribute("idx", a => a.Index, aBuilder =>
                 {
@@ -1614,11 +1585,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommentAuthor.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommentAuthor());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommentAuthor>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.CommentAuthor.ElementType, 0, 0)
@@ -1714,11 +1681,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.Comment.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Comment());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Comment>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.Comment.ElementType, 0, 0)
@@ -1889,15 +1852,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.OleObjectEmbed.ElementType, static () => new DocumentFormat.OpenXml.Presentation.OleObjectEmbed());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.OleObjectLink.ElementType, static () => new DocumentFormat.OpenXml.Presentation.OleObjectLink());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.Picture.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Picture());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.OleObjectEmbed>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.OleObjectLink>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Picture>();
->>>>>>> origin/main
             builder.AddElement<OleObject>()
                 .AddAttribute("spid", a => a.ShapeId, aBuilder =>
                 {
@@ -2118,7 +2075,6 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.NotesSize.ElementType, static () => new DocumentFormat.OpenXml.Presentation.NotesSize());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.DefaultTextStyle.ElementType, static () => new DocumentFormat.OpenXml.Presentation.DefaultTextStyle());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CustomerDataList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CustomerDataList());
@@ -2133,22 +2089,6 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild(DocumentFormat.OpenXml.Presentation.SlideIdList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.SlideIdList());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.SlideMasterIdList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.SlideMasterIdList());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.SlideSize.ElementType, static () => new DocumentFormat.OpenXml.Presentation.SlideSize());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NotesSize>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.DefaultTextStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomerDataList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomShowList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.EmbeddedFontList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.HandoutMasterIdList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Kinsoku>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ModificationVerifier>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NotesMasterIdList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.PhotoAlbum>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.PresentationExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideIdList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideMasterIdList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideSize>();
->>>>>>> origin/main
             builder.AddElement<Presentation>()
                 .AddAttribute("serverZoom", a => a.ServerZoom)
                 .AddAttribute("firstSlideNum", a => a.FirstSlideNum)
@@ -2461,21 +2401,12 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ColorMostRecentlyUsed.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ColorMostRecentlyUsed());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.HtmlPublishProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.HtmlPublishProperties());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.PrintingProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.PrintingProperties());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ShowProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ShowProperties());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.WebProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.WebProperties());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ColorMostRecentlyUsed>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.HtmlPublishProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.PrintingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ShowProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.WebProperties>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.HtmlPublishProperties.ElementType, 0, 1),
@@ -2688,19 +2619,11 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ColorMapOverride.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ColorMapOverride());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonSlideData.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonSlideData());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.SlideExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.SlideExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.Timing.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Timing());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.Transition.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Transition());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ColorMapOverride>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Timing>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Transition>();
->>>>>>> origin/main
             builder.AddElement<Slide>()
                 .AddAttribute("showMasterSp", a => a.ShowMasterShapes)
                 .AddAttribute("showMasterPhAnim", a => a.ShowMasterPlaceholderAnimations)
@@ -2941,21 +2864,12 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ColorMapOverride.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ColorMapOverride());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonSlideData.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonSlideData());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.HeaderFooter.ElementType, static () => new DocumentFormat.OpenXml.Presentation.HeaderFooter());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.SlideLayoutExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.SlideLayoutExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.Timing.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Timing());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.Transition.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Transition());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ColorMapOverride>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.HeaderFooter>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideLayoutExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Timing>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Transition>();
->>>>>>> origin/main
             builder.AddElement<SlideLayout>()
                 .AddAttribute("showMasterSp", a => a.ShowMasterShapes)
                 .AddAttribute("showMasterPhAnim", a => a.ShowMasterPlaceholderAnimations)
@@ -3167,7 +3081,6 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ColorMap.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ColorMap());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonSlideData.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonSlideData());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.HeaderFooter.ElementType, static () => new DocumentFormat.OpenXml.Presentation.HeaderFooter());
@@ -3176,16 +3089,6 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild(DocumentFormat.OpenXml.Presentation.TextStyles.ElementType, static () => new DocumentFormat.OpenXml.Presentation.TextStyles());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.Timing.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Timing());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.Transition.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Transition());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ColorMap>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.HeaderFooter>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideLayoutIdList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideMasterExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.TextStyles>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Timing>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Transition>();
->>>>>>> origin/main
             builder.AddElement<SlideMaster>()
                 .AddAttribute("preserve", a => a.Preserve);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -3403,17 +3306,10 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ColorMap.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ColorMap());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonSlideData.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonSlideData());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.HandoutMasterExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.HandoutMasterExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.HeaderFooter.ElementType, static () => new DocumentFormat.OpenXml.Presentation.HeaderFooter());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ColorMap>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.HandoutMasterExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.HeaderFooter>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.CommonSlideData.ElementType, 1, 1),
@@ -3574,19 +3470,11 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ColorMap.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ColorMap());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.NotesStyle.ElementType, static () => new DocumentFormat.OpenXml.Presentation.NotesStyle());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonSlideData.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonSlideData());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.HeaderFooter.ElementType, static () => new DocumentFormat.OpenXml.Presentation.HeaderFooter());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.NotesMasterExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.NotesMasterExtensionList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ColorMap>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NotesStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.HeaderFooter>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NotesMasterExtensionList>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.CommonSlideData.ElementType, 1, 1),
@@ -3779,15 +3667,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ColorMapOverride.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ColorMapOverride());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonSlideData.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonSlideData());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionListWithModification());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ColorMapOverride>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
->>>>>>> origin/main
             builder.AddElement<NotesSlide>()
                 .AddAttribute("showMasterSp", a => a.ShowMasterShapes)
                 .AddAttribute("showMasterPhAnim", a => a.ShowMasterPlaceholderAnimations);
@@ -3963,11 +3845,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
->>>>>>> origin/main
             builder.AddElement<SlideSyncProperties>()
                 .AddAttribute("serverSldId", a => a.ServerSlideId, aBuilder =>
                 {
@@ -4089,11 +3967,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.Tag.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Tag());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Tag>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.Tag.ElementType, 0, 0)
@@ -4216,7 +4090,6 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.GridSpacing.ElementType, static () => new DocumentFormat.OpenXml.Presentation.GridSpacing());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.NormalViewProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.NormalViewProperties());
@@ -4225,16 +4098,6 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild(DocumentFormat.OpenXml.Presentation.OutlineViewProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.OutlineViewProperties());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.SorterViewProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.SorterViewProperties());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.SlideViewProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.SlideViewProperties());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.GridSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NormalViewProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NotesTextViewProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NotesViewProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.OutlineViewProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SorterViewProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideViewProperties>();
->>>>>>> origin/main
             builder.AddElement<ViewProperties>()
                 .AddAttribute("lastView", a => a.LastView, aBuilder =>
                 {
@@ -4730,11 +4593,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.Sound.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Sound());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Sound>();
->>>>>>> origin/main
             builder.AddElement<StartSoundAction>()
                 .AddAttribute("loop", a => a.Loop);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -4920,19 +4779,11 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.SoundTarget.ElementType, static () => new DocumentFormat.OpenXml.Presentation.SoundTarget());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.SlideTarget.ElementType, static () => new DocumentFormat.OpenXml.Presentation.SlideTarget());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ShapeTarget.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ShapeTarget());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.InkTarget.ElementType, static () => new DocumentFormat.OpenXml.Presentation.InkTarget());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.BookmarkTarget.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.BookmarkTarget());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SoundTarget>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideTarget>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ShapeTarget>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.InkTarget>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.BookmarkTarget>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.SlideTarget.ElementType, 1, 1),
@@ -5431,11 +5282,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonTimeNode.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonTimeNode());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonTimeNode>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.CommonTimeNode.ElementType, 1, 1)
@@ -5545,15 +5392,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonTimeNode.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonTimeNode());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.PreviousConditionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.PreviousConditionList());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.NextConditionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.NextConditionList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonTimeNode>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.PreviousConditionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NextConditionList>();
->>>>>>> origin/main
             builder.AddElement<SequenceTimeNode>()
                 .AddAttribute("concurrent", a => a.Concurrent)
                 .AddAttribute("prevAc", a => a.PreviousAction, aBuilder =>
@@ -5669,11 +5510,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonTimeNode.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonTimeNode());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonTimeNode>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.CommonTimeNode.ElementType, 1, 1)
@@ -5815,13 +5652,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonBehavior.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonBehavior());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.TimeAnimateValueList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.TimeAnimateValueList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.TimeAnimateValueList>();
->>>>>>> origin/main
             builder.AddElement<Animate>()
                 .AddAttribute("by", a => a.By)
                 .AddAttribute("from", a => a.From)
@@ -5953,17 +5785,10 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.FromColor.ElementType, static () => new DocumentFormat.OpenXml.Presentation.FromColor());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ToColor.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ToColor());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ByColor.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ByColor());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonBehavior.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonBehavior());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.FromColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ToColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ByColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
->>>>>>> origin/main
             builder.AddElement<AnimateColor>()
                 .AddAttribute("clrSpc", a => a.ColorSpace, aBuilder =>
                 {
@@ -6123,13 +5948,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.Progress.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Progress());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonBehavior.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonBehavior());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Progress>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
->>>>>>> origin/main
             builder.AddElement<AnimateEffect>()
                 .AddAttribute("transition", a => a.Transition, aBuilder =>
                 {
@@ -6295,19 +6115,11 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonBehavior.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonBehavior());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ByPosition.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ByPosition());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.FromPosition.ElementType, static () => new DocumentFormat.OpenXml.Presentation.FromPosition());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ToPosition.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ToPosition());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.RotationCenter.ElementType, static () => new DocumentFormat.OpenXml.Presentation.RotationCenter());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ByPosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.FromPosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ToPosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.RotationCenter>();
->>>>>>> origin/main
             builder.AddElement<AnimateMotion>()
                 .AddAttribute("origin", a => a.Origin, aBuilder =>
                 {
@@ -6502,11 +6314,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonBehavior.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonBehavior());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
->>>>>>> origin/main
             builder.AddElement<AnimateRotation>()
                 .AddAttribute("by", a => a.By)
                 .AddAttribute("from", a => a.From)
@@ -6622,17 +6430,10 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonBehavior.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonBehavior());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ByPosition.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ByPosition());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.FromPosition.ElementType, static () => new DocumentFormat.OpenXml.Presentation.FromPosition());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ToPosition.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ToPosition());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ByPosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.FromPosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ToPosition>();
->>>>>>> origin/main
             builder.AddElement<AnimateScale>()
                 .AddAttribute("zoomContents", a => a.ZoomContents)
                 .AddAttribute("p14:bounceEnd", a => a.BounceEnd, aBuilder =>
@@ -6779,11 +6580,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonBehavior.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonBehavior());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
->>>>>>> origin/main
             builder.AddElement<Command>()
                 .AddAttribute("type", a => a.Type, aBuilder =>
                 {
@@ -6868,13 +6665,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ToVariantValue.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ToVariantValue());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonBehavior.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonBehavior());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ToVariantValue>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.CommonBehavior.ElementType, 1, 1),
@@ -6976,11 +6768,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonMediaNode.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonMediaNode());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonMediaNode>();
->>>>>>> origin/main
             builder.AddElement<Audio>()
                 .AddAttribute("isNarration", a => a.IsNarration);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -7070,11 +6858,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonMediaNode.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonMediaNode());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonMediaNode>();
->>>>>>> origin/main
             builder.AddElement<Video>()
                 .AddAttribute("fullScrn", a => a.FullScreen);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -7402,21 +7186,12 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ChildTimeNodeList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ChildTimeNodeList());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.SubTimeNodeList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.SubTimeNodeList());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.Iterate.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Iterate());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.EndSync.ElementType, static () => new DocumentFormat.OpenXml.Presentation.EndSync());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.StartConditionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.StartConditionList());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.EndConditionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.EndConditionList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ChildTimeNodeList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SubTimeNodeList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Iterate>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.EndSync>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.StartConditionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.EndConditionList>();
->>>>>>> origin/main
             builder.AddElement<CommonTimeNode>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("presetID", a => a.PresetId)
@@ -8017,11 +7792,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.AttributeName.ElementType, static () => new DocumentFormat.OpenXml.Presentation.AttributeName());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.AttributeName>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.AttributeName.ElementType, 1, 0)
@@ -8591,11 +8362,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.VariantValue.ElementType, static () => new DocumentFormat.OpenXml.Presentation.VariantValue());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.VariantValue>();
->>>>>>> origin/main
             builder.AddElement<TimeAnimateValue>()
                 .AddAttribute("tm", a => a.Time, aBuilder =>
                 {
@@ -8916,15 +8683,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.AttributeNameList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.AttributeNameList());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonTimeNode.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonTimeNode());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.TargetElement.ElementType, static () => new DocumentFormat.OpenXml.Presentation.TargetElement());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.AttributeNameList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonTimeNode>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.TargetElement>();
->>>>>>> origin/main
             builder.AddElement<CommonBehavior>()
                 .AddAttribute("additive", a => a.Additive, aBuilder =>
                 {
@@ -9051,11 +8812,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.FloatVariantValue.ElementType, static () => new DocumentFormat.OpenXml.Presentation.FloatVariantValue());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.FloatVariantValue>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.FloatVariantValue.ElementType, 1, 1)
@@ -9448,13 +9205,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonTimeNode.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonTimeNode());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.TargetElement.ElementType, static () => new DocumentFormat.OpenXml.Presentation.TargetElement());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonTimeNode>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.TargetElement>();
->>>>>>> origin/main
             builder.AddElement<CommonMediaNode>()
                 .AddAttribute("vol", a => a.Volume, aBuilder =>
                 {
@@ -9554,11 +9306,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ParallelTimeNode.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ParallelTimeNode());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ParallelTimeNode>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.ParallelTimeNode.ElementType, 1, 1)
@@ -9646,11 +9394,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.TimeNodeList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.TimeNodeList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.TimeNodeList>();
->>>>>>> origin/main
             builder.AddElement<Template>()
                 .AddAttribute("lvl", a => a.Level);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -9732,11 +9476,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.Template.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Template());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Template>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.Template.ElementType, 0, 9)
@@ -9802,13 +9542,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.BuildChart.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BuildChart());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.BuildDiagram.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BuildDiagram());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BuildChart>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BuildDiagram>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.BuildDiagram.ElementType, 1, 1),
@@ -9990,11 +9725,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.TemplateList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.TemplateList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.TemplateList>();
->>>>>>> origin/main
             builder.AddElement<BuildParagraph>()
                 .AddAttribute("spid", a => a.ShapeId, aBuilder =>
                 {
@@ -10327,13 +10058,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.BuildSubElement.ElementType, static () => new DocumentFormat.OpenXml.Presentation.BuildSubElement());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.BuildAsOne.ElementType, static () => new DocumentFormat.OpenXml.Presentation.BuildAsOne());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.BuildSubElement>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.BuildAsOne>();
->>>>>>> origin/main
             builder.AddElement<BuildGraphics>()
                 .AddAttribute("spid", a => a.ShapeId, aBuilder =>
                 {
@@ -10443,17 +10169,10 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.BuildDiagram.ElementType, static () => new DocumentFormat.OpenXml.Presentation.BuildDiagram());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.BuildParagraph.ElementType, static () => new DocumentFormat.OpenXml.Presentation.BuildParagraph());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.BuildGraphics.ElementType, static () => new DocumentFormat.OpenXml.Presentation.BuildGraphics());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.BuildOleChart.ElementType, static () => new DocumentFormat.OpenXml.Presentation.BuildOleChart());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.BuildDiagram>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.BuildParagraph>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.BuildGraphics>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.BuildOleChart>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.BuildParagraph.ElementType, 1, 1),
@@ -10531,11 +10250,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.Extension.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Extension());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
->>>>>>> origin/main
             builder.AddElement<ExtensionListWithModification>()
                 .AddAttribute("mod", a => a.Modify);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -10609,13 +10324,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.HslColor.ElementType, static () => new DocumentFormat.OpenXml.Presentation.HslColor());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.RgbColor.ElementType, static () => new DocumentFormat.OpenXml.Presentation.RgbColor());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.HslColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.RgbColor>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.RgbColor.ElementType, 1, 1),
@@ -11195,11 +10905,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommentAuthorExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommentAuthorExtensionList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommentAuthorExtensionList>();
->>>>>>> origin/main
             builder.AddElement<CommentAuthor>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -11333,15 +11039,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.Position.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Position());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommentExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommentExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.Text.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Text());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Position>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommentExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Text>();
->>>>>>> origin/main
             builder.AddElement<Comment>()
                 .AddAttribute("authorId", a => a.AuthorId, aBuilder =>
                 {
@@ -11457,11 +11157,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.Extension.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Extension());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -11596,13 +11292,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.Picture.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Picture());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Picture>();
->>>>>>> origin/main
             builder.AddElement<Control>()
                 .AddAttribute("spid", a => a.ShapeId, aBuilder =>
                 {
@@ -11733,11 +11424,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
->>>>>>> origin/main
             builder.AddElement<SlideId>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -11850,11 +11537,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
->>>>>>> origin/main
             builder.AddElement<SlideMasterId>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -11956,11 +11639,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
->>>>>>> origin/main
             builder.AddElement<NotesMasterId>()
                 .AddAttribute("r:id", a => a.Id, aBuilder =>
                 {
@@ -12057,11 +11736,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
->>>>>>> origin/main
             builder.AddElement<HandoutMasterId>()
                 .AddAttribute("r:id", a => a.Id, aBuilder =>
                 {
@@ -12391,19 +12066,11 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.Font.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Font());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.RegularFont.ElementType, static () => new DocumentFormat.OpenXml.Presentation.RegularFont());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.BoldFont.ElementType, static () => new DocumentFormat.OpenXml.Presentation.BoldFont());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ItalicFont.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ItalicFont());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.BoldItalicFont.ElementType, static () => new DocumentFormat.OpenXml.Presentation.BoldItalicFont());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Font>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.RegularFont>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.BoldFont>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ItalicFont>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.BoldItalicFont>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.Font.ElementType, 1, 1),
@@ -12537,11 +12204,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.SlideListEntry.ElementType, static () => new DocumentFormat.OpenXml.Presentation.SlideListEntry());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideListEntry>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.SlideListEntry.ElementType, 0, 0)
@@ -12627,13 +12290,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.SlideList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.SlideList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideList>();
->>>>>>> origin/main
             builder.AddElement<CustomShow>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -12787,15 +12445,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HyperlinkOnClick());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HyperlinkOnHover());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
->>>>>>> origin/main
             builder.AddElement<NonVisualDrawingProperties>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -12924,13 +12576,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.ShapeLocks.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ShapeLocks());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapeLocks>();
->>>>>>> origin/main
             builder.AddElement<NonVisualShapeDrawingProperties>()
                 .AddAttribute("txBox", a => a.TextBox);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -13051,7 +12698,6 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.AudioFromCD.ElementType, static () => new DocumentFormat.OpenXml.Drawing.AudioFromCD());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.AudioFromFile.ElementType, static () => new DocumentFormat.OpenXml.Drawing.AudioFromFile());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.WaveAudioFile.ElementType, static () => new DocumentFormat.OpenXml.Drawing.WaveAudioFile());
@@ -13060,16 +12706,6 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CustomerDataList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CustomerDataList());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.PlaceholderShape.ElementType, static () => new DocumentFormat.OpenXml.Presentation.PlaceholderShape());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AudioFromCD>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AudioFromFile>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.WaveAudioFile>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.QuickTimeFromFile>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.VideoFromFile>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomerDataList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.PlaceholderShape>();
->>>>>>> origin/main
             builder.AddElement<ApplicationNonVisualDrawingProperties>()
                 .AddAttribute("isPhoto", a => a.IsPhoto)
                 .AddAttribute("userDrawn", a => a.UserDrawn);
@@ -13165,15 +12801,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.NonVisualShapeDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.NonVisualShapeDrawingProperties());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualShapeDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties.ElementType, 1, 1),
@@ -13303,7 +12933,6 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.BlipFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BlipFill());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.CustomGeometry.ElementType, static () => new DocumentFormat.OpenXml.Drawing.CustomGeometry());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectDag());
@@ -13319,23 +12948,6 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SolidFill());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Transform2D.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Transform2D());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
->>>>>>> origin/main
             builder.AddElement<ShapeProperties>()
                 .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
                 {
@@ -13453,17 +13065,10 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.FontReference.ElementType, static () => new DocumentFormat.OpenXml.Drawing.FontReference());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.LineReference.ElementType, static () => new DocumentFormat.OpenXml.Drawing.LineReference());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.FillReference.ElementType, static () => new DocumentFormat.OpenXml.Drawing.FillReference());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectReference.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectReference());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.FontReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.LineReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.FillReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectReference>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.LineReference.ElementType, 1, 1),
@@ -13585,15 +13190,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.BodyProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BodyProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.ListStyle.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ListStyle());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Paragraph.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Paragraph());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BodyProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ListStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Paragraph>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.BodyProperties.ElementType, 1, 1),
@@ -13689,17 +13288,10 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.StartConnection.ElementType, static () => new DocumentFormat.OpenXml.Drawing.StartConnection());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.EndConnection.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EndConnection());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ExtensionList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.StartConnection>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EndConnection>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks.ElementType, 0, 1),
@@ -13821,15 +13413,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.NonVisualConnectorShapeDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.NonVisualConnectorShapeDrawingProperties());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualConnectorShapeDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties.ElementType, 1, 1),
@@ -13946,13 +13532,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.PictureLocks.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PictureLocks());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PictureLocks>();
->>>>>>> origin/main
             builder.AddElement<NonVisualPictureDrawingProperties>()
                 .AddAttribute("preferRelativeResize", a => a.PreferRelativeResize);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -14048,15 +13629,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.NonVisualPictureDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.NonVisualPictureDrawingProperties());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualPictureDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties.ElementType, 1, 1),
@@ -14185,17 +13760,10 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Blip.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Blip());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.SourceRectangle.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SourceRectangle());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Stretch.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Stretch());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Tile.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Tile());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Blip>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SourceRectangle>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Stretch>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Tile>();
->>>>>>> origin/main
             builder.AddElement<BlipFill>()
                 .AddAttribute("dpi", a => a.Dpi)
                 .AddAttribute("rotWithShape", a => a.RotateWithShape);
@@ -14299,13 +13867,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GraphicFrameLocks());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ExtensionList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks.ElementType, 0, 1),
@@ -14399,15 +13962,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameDrawingProperties());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties.ElementType, 1, 1),
@@ -14544,13 +14101,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Offset.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Offset());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Extents.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Extents());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
->>>>>>> origin/main
             builder.AddElement<Transform>()
                 .AddAttribute("rot", a => a.Rotation)
                 .AddAttribute("flipH", a => a.HorizontalFlip)
@@ -14647,13 +14199,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.GroupShapeLocks.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GroupShapeLocks());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.GroupShapeLocks.ElementType, 0, 1),
@@ -15408,11 +14955,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
->>>>>>> origin/main
             builder.AddElement<SlideLayoutId>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -15515,19 +15058,11 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.Background.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Background());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonSlideDataExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonSlideDataExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ControlList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ControlList());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CustomerDataList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CustomerDataList());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ShapeTree.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ShapeTree());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Background>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonSlideDataExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ControlList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomerDataList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ShapeTree>();
->>>>>>> origin/main
             builder.AddElement<CommonSlideData>()
                 .AddAttribute("name", a => a.Name);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -15837,13 +15372,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.ScaleX.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ScaleX());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.ScaleY.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ScaleY());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ScaleX>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ScaleY>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.ScaleX.ElementType, 1, 1),
@@ -16063,13 +15593,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.Origin.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Origin());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ScaleFactor.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ScaleFactor());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Origin>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ScaleFactor>();
->>>>>>> origin/main
             builder.AddElement<CommonViewProperties>()
                 .AddAttribute("varScale", a => a.VariableScale);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -16223,11 +15748,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.OutlineViewSlideListEntry.ElementType, static () => new DocumentFormat.OpenXml.Presentation.OutlineViewSlideListEntry());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.OutlineViewSlideListEntry>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.OutlineViewSlideListEntry.ElementType, 0, 0)
@@ -16348,11 +15869,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.Guide.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Guide());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Guide>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.Guide.ElementType, 0, 0)
@@ -16448,13 +15965,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonViewProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonViewProperties());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.GuideList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.GuideList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonViewProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.GuideList>();
->>>>>>> origin/main
             builder.AddElement<CommonSlideViewProperties>()
                 .AddAttribute("snapToGrid", a => a.SnapToGrid)
                 .AddAttribute("snapToObjects", a => a.SnapToObjects)
@@ -16602,15 +16114,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.RestoredLeft.ElementType, static () => new DocumentFormat.OpenXml.Presentation.RestoredLeft());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.RestoredTop.ElementType, static () => new DocumentFormat.OpenXml.Presentation.RestoredTop());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.RestoredLeft>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.RestoredTop>();
->>>>>>> origin/main
             builder.AddElement<NormalViewProperties>()
                 .AddAttribute("showOutlineIcons", a => a.ShowOutlineIcons)
                 .AddAttribute("snapVertSplitter", a => a.SnapVerticalSplitter)
@@ -16729,13 +16235,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties.ElementType, 1, 1),
@@ -16829,15 +16330,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonViewProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonViewProperties());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.OutlineViewSlideList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.OutlineViewSlideList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonViewProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.OutlineViewSlideList>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.CommonViewProperties.ElementType, 1, 1),
@@ -16944,13 +16439,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonViewProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonViewProperties());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonViewProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.CommonViewProperties.ElementType, 1, 1),
@@ -17053,13 +16543,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonViewProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonViewProperties());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonViewProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
->>>>>>> origin/main
             builder.AddElement<SorterViewProperties>()
                 .AddAttribute("showFormatting", a => a.ShowFormatting);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -17154,13 +16639,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties.ElementType, 1, 1),
@@ -17381,15 +16861,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.LaserTraceList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.LaserTraceList());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.ShowEventRecordList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.ShowEventRecordList());
             builder.AddChild(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentRelationship.ElementType, static () => new DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentRelationship());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.LaserTraceList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ShowEventRecordList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentRelationship>();
->>>>>>> origin/main
             builder.AddElement<SlideExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -17473,11 +16947,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.CreationId.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.CreationId());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.CreationId>();
->>>>>>> origin/main
             builder.AddElement<CommonSlideDataExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -17561,15 +17031,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.LaserColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.LaserColor());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.BrowseMode.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.BrowseMode());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.ShowMediaControls.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.ShowMediaControls());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.LaserColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.BrowseMode>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ShowMediaControls>();
->>>>>>> origin/main
             builder.AddElement<ShowPropertiesExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -17647,19 +17111,11 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.BlipFill.ElementType, static () => new DocumentFormat.OpenXml.Presentation.BlipFill());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ShapeStyle.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ShapeStyle());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionListWithModification());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.NonVisualPictureProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.NonVisualPictureProperties());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ShapeStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualPictureProperties>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.NonVisualPictureProperties.ElementType, 1, 1),
@@ -17803,11 +17259,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
->>>>>>> origin/main
             builder.AddElement<OleObjectEmbed>()
                 .AddAttribute("followColorScheme", a => a.FollowColorScheme, aBuilder =>
                 {
@@ -17900,11 +17352,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
->>>>>>> origin/main
             builder.AddElement<OleObjectLink>()
                 .AddAttribute("updateAutomatic", a => a.AutoUpdate);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -18069,7 +17517,6 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.StripsTransition.ElementType, static () => new DocumentFormat.OpenXml.Presentation.StripsTransition());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CoverTransition.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CoverTransition());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.PullTransition.ElementType, static () => new DocumentFormat.OpenXml.Presentation.PullTransition());
@@ -18113,51 +17560,6 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.RippleTransition.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.RippleTransition());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.ShredTransition.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.ShredTransition());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.PowerPoint.PresetTransition.ElementType, static () => new DocumentFormat.OpenXml.Office2013.PowerPoint.PresetTransition());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.StripsTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CoverTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.PullTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CircleTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.DissolveTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.DiamondTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NewsflashTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.PlusTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.RandomTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.WedgeTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.FlashTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.HoneycombTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ZoomTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.WarpTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CutTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.FadeTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.BlindsTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CheckerTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CombTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.RandomBarTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.DoorsTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.WindowTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.PushTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.WipeTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.VortexTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.PanTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SplitTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SoundAction>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.WheelTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.WheelReverseTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.FlythroughTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.GlitterTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.SwitchTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.FlipTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.FerrisTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.GalleryTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ConveyorTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.PrismTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.RevealTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.RippleTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ShredTransition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.PresetTransition>();
->>>>>>> origin/main
             builder.AddElement<Transition>()
                 .AddAttribute("spd", a => a.Speed, aBuilder =>
                 {
@@ -18286,15 +17688,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.BuildList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.BuildList());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionListWithModification());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.TimeNodeList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.TimeNodeList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.BuildList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.TimeNodeList>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.TimeNodeList.ElementType, 0, 1),
@@ -18400,11 +17796,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.SlideExtension.ElementType, static () => new DocumentFormat.OpenXml.Presentation.SlideExtension());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideExtension>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.SlideExtension.ElementType, 0, 0)
@@ -18480,13 +17872,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.BackgroundStyleReference.ElementType, static () => new DocumentFormat.OpenXml.Presentation.BackgroundStyleReference());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.BackgroundProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.BackgroundProperties());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.BackgroundStyleReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.BackgroundProperties>();
->>>>>>> origin/main
             builder.AddElement<Background>()
                 .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
                 {
@@ -18855,13 +18242,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CustomerData.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CustomerData());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CustomerDataTags.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CustomerDataTags());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomerData>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomerDataTags>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.CustomerData.ElementType, 0, 0),
@@ -18927,11 +18309,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.Control.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Control());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Control>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.Control.ElementType, 0, 0)
@@ -18996,11 +18374,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommonSlideDataExtension.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommonSlideDataExtension());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommonSlideDataExtension>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.CommonSlideDataExtension.ElementType, 0, 0)
@@ -19067,15 +18441,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeDrawingProperties());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties.ElementType, 1, 1),
@@ -19201,7 +18569,6 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.BlipFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BlipFill());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectDag());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectList());
@@ -19213,19 +18580,6 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild(DocumentFormat.OpenXml.Drawing.PatternFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PatternFill());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Scene3DType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Scene3DType());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SolidFill());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.TransformGroup>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
->>>>>>> origin/main
             builder.AddElement<GroupShapeProperties>()
                 .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
                 {
@@ -19344,19 +18698,11 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ShapeStyle.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ShapeStyle());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.TextBody.ElementType, static () => new DocumentFormat.OpenXml.Presentation.TextBody());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionListWithModification());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.NonVisualShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.NonVisualShapeProperties());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ShapeStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.TextBody>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualShapeProperties>();
->>>>>>> origin/main
             builder.AddElement<Shape>()
                 .AddAttribute("useBgFill", a => a.UseBackgroundFill);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -19495,17 +18841,10 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Graphic.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Graphic());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.Transform.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Transform());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionListWithModification());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameProperties());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Graphic>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Transform>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameProperties>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameProperties.ElementType, 1, 1),
@@ -19628,17 +18967,10 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ShapeStyle.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ShapeStyle());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.NonVisualConnectionShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Presentation.NonVisualConnectionShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionListWithModification());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ShapeStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NonVisualConnectionShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.NonVisualConnectionShapeProperties.ElementType, 1, 1),
@@ -19758,11 +19090,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ShowPropertiesExtension.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ShowPropertiesExtension());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ShowPropertiesExtension>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.ShowPropertiesExtension.ElementType, 0, 0)
@@ -19841,19 +19169,11 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.GraphicElement.ElementType, static () => new DocumentFormat.OpenXml.Presentation.GraphicElement());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.BackgroundAnimation.ElementType, static () => new DocumentFormat.OpenXml.Presentation.BackgroundAnimation());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.OleChartElement.ElementType, static () => new DocumentFormat.OpenXml.Presentation.OleChartElement());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.SubShape.ElementType, static () => new DocumentFormat.OpenXml.Presentation.SubShape());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.TextElement.ElementType, static () => new DocumentFormat.OpenXml.Presentation.TextElement());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.GraphicElement>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.BackgroundAnimation>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.OleChartElement>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SubShape>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.TextElement>();
->>>>>>> origin/main
             builder.AddElement<ShapeTarget>()
                 .AddAttribute("spid", a => a.ShapeId, aBuilder =>
                 {
@@ -20107,11 +19427,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.PowerPoint.PresenceInfo.ElementType, static () => new DocumentFormat.OpenXml.Office2013.PowerPoint.PresenceInfo());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.PresenceInfo>();
->>>>>>> origin/main
             builder.AddElement<CommentAuthorExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -20193,11 +19509,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.PowerPoint.ThreadingInfo.ElementType, static () => new DocumentFormat.OpenXml.Office2013.PowerPoint.ThreadingInfo());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.ThreadingInfo>();
->>>>>>> origin/main
             builder.AddElement<CommentExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -20279,11 +19591,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList.ElementType, static () => new DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList>();
->>>>>>> origin/main
             builder.AddElement<SlideLayoutExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -20365,11 +19673,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList.ElementType, static () => new DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList>();
->>>>>>> origin/main
             builder.AddElement<SlideMasterExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -20451,11 +19755,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList.ElementType, static () => new DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList>();
->>>>>>> origin/main
             builder.AddElement<HandoutMasterExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -20537,11 +19837,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList.ElementType, static () => new DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList>();
->>>>>>> origin/main
             builder.AddElement<NotesMasterExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -20663,11 +19959,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionListWithModification());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
->>>>>>> origin/main
             builder.AddElement<PlaceholderShape>()
                 .AddAttribute("type", a => a.Type, aBuilder =>
                 {
@@ -20760,11 +20052,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtension.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtension());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtension>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtension.ElementType, 0, 0)
@@ -20840,13 +20128,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.Media.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.Media());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.ModificationId.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.ModificationId());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.Media>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ModificationId>();
->>>>>>> origin/main
             builder.AddElement<ApplicationNonVisualDrawingPropertiesExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -20940,13 +20223,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.TimePercentage.ElementType, static () => new DocumentFormat.OpenXml.Presentation.TimePercentage());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.TimeAbsolute.ElementType, static () => new DocumentFormat.OpenXml.Presentation.TimeAbsolute());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.TimePercentage>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.TimeAbsolute>();
->>>>>>> origin/main
             builder.AddElement<Iterate>()
                 .AddAttribute("type", a => a.Type, aBuilder =>
                 {
@@ -21301,11 +20579,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.TimeAnimateValue.ElementType, static () => new DocumentFormat.OpenXml.Presentation.TimeAnimateValue());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.TimeAnimateValue>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.TimeAnimateValue.ElementType, 0, 0)
@@ -21545,11 +20819,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommentAuthorExtension.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommentAuthorExtension());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommentAuthorExtension>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.CommentAuthorExtension.ElementType, 0, 0)
@@ -21614,11 +20884,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CommentExtension.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CommentExtension());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommentExtension>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.CommentExtension.ElementType, 0, 0)
@@ -21683,11 +20949,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.SlideMasterId.ElementType, static () => new DocumentFormat.OpenXml.Presentation.SlideMasterId());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideMasterId>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.SlideMasterId.ElementType, 0, 0)
@@ -21752,11 +21014,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.NotesMasterId.ElementType, static () => new DocumentFormat.OpenXml.Presentation.NotesMasterId());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NotesMasterId>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.NotesMasterId.ElementType, 0, 1)
@@ -21834,11 +21092,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.HandoutMasterId.ElementType, static () => new DocumentFormat.OpenXml.Presentation.HandoutMasterId());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.HandoutMasterId>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.HandoutMasterId.ElementType, 0, 1)
@@ -21916,11 +21170,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.SlideId.ElementType, static () => new DocumentFormat.OpenXml.Presentation.SlideId());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideId>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.SlideId.ElementType, 0, 0)
@@ -22060,11 +21310,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.EmbeddedFont.ElementType, static () => new DocumentFormat.OpenXml.Presentation.EmbeddedFont());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.EmbeddedFont>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.EmbeddedFont.ElementType, 0, 0)
@@ -22129,11 +21375,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CustomShow.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CustomShow());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomShow>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.CustomShow.ElementType, 0, 0)
@@ -22238,11 +21480,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
->>>>>>> origin/main
             builder.AddElement<PhotoAlbum>()
                 .AddAttribute("bw", a => a.BlackWhite)
                 .AddAttribute("showCaptions", a => a.ShowCaptions)
@@ -22652,11 +21890,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.PresentationExtension.ElementType, static () => new DocumentFormat.OpenXml.Presentation.PresentationExtension());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.PresentationExtension>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.PresentationExtension.ElementType, 0, 0)
@@ -22734,17 +21968,10 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.SectionList());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.SectionProperties());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList.ElementType, static () => new DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.PowerPoint.NotesGuideList.ElementType, static () => new DocumentFormat.OpenXml.Office2013.PowerPoint.NotesGuideList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.SectionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.SectionProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.NotesGuideList>();
->>>>>>> origin/main
             builder.AddElement<PresentationExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -22855,17 +22082,10 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CustomShowReference.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CustomShowReference());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.SlideAll.ElementType, static () => new DocumentFormat.OpenXml.Presentation.SlideAll());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.SlideRange.ElementType, static () => new DocumentFormat.OpenXml.Presentation.SlideRange());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomShowReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideAll>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideRange>();
->>>>>>> origin/main
             builder.AddElement<HtmlPublishProperties>()
                 .AddAttribute("showSpeakerNotes", a => a.ShowSpeakerNotes)
                 .AddAttribute("pubBrowser", a => a.TargetBrowser, aBuilder =>
@@ -23039,11 +22259,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
->>>>>>> origin/main
             builder.AddElement<WebProperties>()
                 .AddAttribute("showAnimation", a => a.ShowAnimation)
                 .AddAttribute("resizeGraphics", a => a.ResizeGraphics)
@@ -23187,11 +22403,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
->>>>>>> origin/main
             builder.AddElement<PrintingProperties>()
                 .AddAttribute("prnWhat", a => a.PrintWhat, aBuilder =>
                 {
@@ -23328,7 +22540,6 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.PenColor.ElementType, static () => new DocumentFormat.OpenXml.Presentation.PenColor());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CustomShowReference.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CustomShowReference());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.PresenterSlideMode.ElementType, static () => new DocumentFormat.OpenXml.Presentation.PresenterSlideMode());
@@ -23337,16 +22548,6 @@ namespace DocumentFormat.OpenXml.Presentation
             builder.AddChild(DocumentFormat.OpenXml.Presentation.BrowseSlideMode.ElementType, static () => new DocumentFormat.OpenXml.Presentation.BrowseSlideMode());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.KioskSlideMode.ElementType, static () => new DocumentFormat.OpenXml.Presentation.KioskSlideMode());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ShowPropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ShowPropertiesExtensionList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.PenColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomShowReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.PresenterSlideMode>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideAll>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideRange>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.BrowseSlideMode>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.KioskSlideMode>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ShowPropertiesExtensionList>();
->>>>>>> origin/main
             builder.AddElement<ShowProperties>()
                 .AddAttribute("loop", a => a.Loop)
                 .AddAttribute("showNarration", a => a.ShowNarration)
@@ -23440,21 +22641,12 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.HslColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HslColor());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.PresetColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PresetColor());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.SchemeColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SchemeColor());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage.ElementType, static () => new DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.RgbColorModelHex.ElementType, static () => new DocumentFormat.OpenXml.Drawing.RgbColorModelHex());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.SystemColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SystemColor());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1, requireFilter: true)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 10, version: FileFormatVersions.Office2007)
@@ -23542,11 +22734,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtension.ElementType, static () => new DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtension());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtension>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtension.ElementType, 0, 0)
@@ -23624,17 +22812,10 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.TextMath.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.TextMath());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.DefaultImageDpi.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.DefaultImageDpi());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.DiscardImageEditData.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.DiscardImageEditData());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.PowerPoint.ChartTrackingReferenceBased.ElementType, static () => new DocumentFormat.OpenXml.Office2013.PowerPoint.ChartTrackingReferenceBased());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.TextMath>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.DefaultImageDpi>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.DiscardImageEditData>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.ChartTrackingReferenceBased>();
->>>>>>> origin/main
             builder.AddElement<PresentationPropertiesExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -23749,11 +22930,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionListWithModification.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionListWithModification());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
->>>>>>> origin/main
             builder.AddElement<HeaderFooter>()
                 .AddAttribute("sldNum", a => a.SlideNumber)
                 .AddAttribute("hdr", a => a.Header)
@@ -23836,11 +23013,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.SlideLayoutExtension.ElementType, static () => new DocumentFormat.OpenXml.Presentation.SlideLayoutExtension());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideLayoutExtension>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.SlideLayoutExtension.ElementType, 0, 0)
@@ -23905,11 +23078,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.SlideLayoutId.ElementType, static () => new DocumentFormat.OpenXml.Presentation.SlideLayoutId());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideLayoutId>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.SlideLayoutId.ElementType, 0, 0)
@@ -23977,17 +23146,10 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.TitleStyle.ElementType, static () => new DocumentFormat.OpenXml.Presentation.TitleStyle());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.BodyStyle.ElementType, static () => new DocumentFormat.OpenXml.Presentation.BodyStyle());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.OtherStyle.ElementType, static () => new DocumentFormat.OpenXml.Presentation.OtherStyle());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionList());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.TitleStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.BodyStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.OtherStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ExtensionList>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.TitleStyle.ElementType, 0, 1),
@@ -24107,11 +23269,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.SlideMasterExtension.ElementType, static () => new DocumentFormat.OpenXml.Presentation.SlideMasterExtension());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.SlideMasterExtension>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.SlideMasterExtension.ElementType, 0, 0)
@@ -24176,11 +23334,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.HandoutMasterExtension.ElementType, static () => new DocumentFormat.OpenXml.Presentation.HandoutMasterExtension());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.HandoutMasterExtension>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.HandoutMasterExtension.ElementType, 0, 0)
@@ -24245,11 +23399,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.NotesMasterExtension.ElementType, static () => new DocumentFormat.OpenXml.Presentation.NotesMasterExtension());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.NotesMasterExtension>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.NotesMasterExtension.ElementType, 0, 0)
@@ -24372,13 +23522,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.CharRange.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CharRange());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.ParagraphIndexRange.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ParagraphIndexRange());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CharRange>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ParagraphIndexRange>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.CharRange.ElementType, 1, 1),
@@ -24471,13 +23616,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Chart.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Chart());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Diagram.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Diagram());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Chart>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Diagram>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Diagram.ElementType, 1, 1),
@@ -25226,13 +24366,8 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Presentation.EndSoundAction.ElementType, static () => new DocumentFormat.OpenXml.Presentation.EndSoundAction());
             builder.AddChild(DocumentFormat.OpenXml.Presentation.StartSoundAction.ElementType, static () => new DocumentFormat.OpenXml.Presentation.StartSoundAction());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.EndSoundAction>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.StartSoundAction>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Presentation.StartSoundAction.ElementType, 1, 1),

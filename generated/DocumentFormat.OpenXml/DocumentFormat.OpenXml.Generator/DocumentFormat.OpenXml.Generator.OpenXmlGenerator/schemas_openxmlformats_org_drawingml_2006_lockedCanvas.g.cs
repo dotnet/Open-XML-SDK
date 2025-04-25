@@ -81,7 +81,6 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-<<<<<<< HEAD
             builder.AddChild(DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.ConnectionShape.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ConnectionShape());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.GraphicFrame.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GraphicFrame());
@@ -92,18 +91,6 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Shape.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Shape());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.TextShape.ElementType, static () => new DocumentFormat.OpenXml.Drawing.TextShape());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart());
-=======
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ConnectionShape>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GraphicFrame>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupShape>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GvmlGroupShapeExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Picture>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.TextShape>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart>();
->>>>>>> origin/main
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties.ElementType, 1, 1),
