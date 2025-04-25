@@ -48,7 +48,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        [DisallowNull]
         public DocumentFormat.OpenXml.Wordprocessing.Comments? Comments
         {
             get

@@ -409,7 +409,6 @@ public static class PartWriter
         yield return new(ItemType.Property, api.Class, writer =>
         {
             writer.WriteDocumentationComment("Gets or sets the root element of this part.");
-            writer.WriteLine("[DisallowNull]");
             writer.Write("public ");
             writer.Write(apiName);
             writer.Write("? ");

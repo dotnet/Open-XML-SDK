@@ -33,7 +33,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        [DisallowNull]
         public DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationLabelList? ClassificationLabelList
         {
             get
