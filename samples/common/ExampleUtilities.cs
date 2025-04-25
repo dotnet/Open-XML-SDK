@@ -127,8 +127,13 @@ namespace Common
                         cell.CellValue = new CellValue(index.ToString());
                         cell.DataType = new EnumValue<CellValues>(CellValues.SharedString);
 
+                        if (worksheetPart.Worksheet == null)
+                        {
+                            throw new InvalidOperationException("Worksheet is null. Unable to save changes.");
+                        }
+
                         // Save the new worksheet.
-                        worksheetPart.Worksheet?.Save();
+                        worksheetPart.Worksheet!.Save();
                     }
                 }
             }
