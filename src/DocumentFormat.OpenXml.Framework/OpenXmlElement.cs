@@ -1335,14 +1335,9 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="element">The element to check.</param>
         /// <returns>True if the specified element is a valid child; otherwise, false.</returns>
-        public bool IsValidChild(OpenXmlElement element)
+        public virtual bool IsValidChild(OpenXmlElement element)
         {
-            if (element is null)
-            {
-                throw new ArgumentNullException(nameof(element));
-            }
-
-            return Metadata.Children.Elements.Any(el => el.Type.Name.Equals(element.Metadata.Type.Name));
+            return false;
         }
 
         private enum ElementOrder

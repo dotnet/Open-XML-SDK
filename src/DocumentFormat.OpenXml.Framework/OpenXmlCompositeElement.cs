@@ -9,6 +9,7 @@ using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Xml;
 
@@ -533,6 +534,21 @@ namespace DocumentFormat.OpenXml
         }
 
         #endregion
+
+        /// <summary>
+        /// Determines if the specified element is a valid child of the current element.
+        /// </summary>
+        /// <param name="element">The element to check.</param>
+        /// <returns>True if the specified element is a valid child; otherwise, false.</returns>
+        public override bool IsValidChild(OpenXmlElement element)
+        {
+            if (element is null)
+            {
+                return false;
+            }
+
+            return Metadata.Children.Elements.Any(el => el.Type.Name.Equals(element.Metadata.Type.Name));
+        }
 
         /// <summary>
         /// Saves all of the current node's children to the specified XmlWriter.

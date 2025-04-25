@@ -245,11 +245,11 @@ namespace DocumentFormat.OpenXml.Tests
         public void IsValidChild_ValidChild_ReturnsTrue()
         {
             // Arrange
-            var parentElement = new Paragraph();
-            var validChild = new Run();
+            Paragraph parentElement = new();
+            Run validChild = new();
 
             // Act
-            var result = parentElement.IsValidChild(validChild);
+            bool result = parentElement.IsValidChild(validChild);
 
             // Assert
             Assert.True(result);
@@ -259,24 +259,27 @@ namespace DocumentFormat.OpenXml.Tests
         public void IsValidChild_InvalidChild_ReturnsFalse()
         {
             // Arrange
-            var parentElement = new Paragraph();
-            var invalidChild = new Table();
+            Paragraph parentElement = new();
+            Table invalidChild = new();
 
             // Act
-            var result = parentElement.IsValidChild(invalidChild);
+            bool result = parentElement.IsValidChild(invalidChild);
 
             // Assert
             Assert.False(result);
         }
 
         [Fact]
-        public void IsValidChild_NullChild_ThrowsArgumentNullException()
+        public void IsValidChild_NullChild_ReturnsFalse()
         {
             // Arrange
-            var parentElement = new Paragraph();
+            Paragraph parentElement = new();
 
-            // Act & Assert
-            Assert.Throws<ArgumentNullException>(() => parentElement.IsValidChild(null));
+            // Act
+            bool result = parentElement.IsValidChild(null);
+
+            // Assert
+            Assert.False(result);
         }
     }
 }
