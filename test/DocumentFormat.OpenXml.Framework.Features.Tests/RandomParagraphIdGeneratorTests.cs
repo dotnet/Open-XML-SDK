@@ -44,7 +44,7 @@ namespace DocumentFormat.OpenXml.Features
             var paraIdCollection = wordDocument.Features.GetRequired<IParagraphIdCollectionFeature>();
 
             MainDocumentPart part = wordDocument.MainDocumentPart!;
-            Body body = part.Document.Body!;
+            Body body = part.Document!.Body!;
 
             // The MainDocumentPart's DOM tree must have been loaded by accessing
             // the Document property before determining the number of w14:paraId

@@ -58,7 +58,9 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             // Act/Assert
             foreach (var rootType in allTypedParts)
             {
+#nullable disable
                 var root = ((OpenXmlElement)Activator.CreateInstance(rootType))!;
+#nullable enable
                 Assert.True(feature.TryCreate(root.QName, out var created));
                 Assert.IsType(rootType, created);
             }
@@ -102,7 +104,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                 _features = package.Select(p => p.Features.GetRequired<IRootElementFeature>()).ToArray();
             }
 
-            public bool TryCreate(in OpenXmlQualifiedName qname, [NotNullWhen(true)] out OpenXmlElement element)
+            public bool TryCreate(in OpenXmlQualifiedName qname, [NotNullWhen(true)] out OpenXmlElement? element)
             {
                 foreach (var feature in _features)
                 {
@@ -131,8 +133,10 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                 {
                     if (type.GetConstructor(Cached.Array<Type>()) is not null)
                     {
+#nullable disable
                         var instance = (OpenXmlElement)Activator.CreateInstance(type);
-                        return instance.Metadata.Children;
+#nullable enable
+                        return instance!.Metadata.Children;
                     }
                     else
                     {
@@ -143,15 +147,15 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                 Children = GetLookup().Elements.Select(t => new OpenXmlTypeProxy(t.Type));
             }
 
-            public string Element { get; set; }
+            public string? Element { get; set; }
 
-            public IEnumerable<OpenXmlTypeProxy> Children { get; set; }
+            public IEnumerable<OpenXmlTypeProxy>? Children { get; set; }
 
-            public override bool Equals(object obj) => Equals(obj as LookupData);
+            public override bool Equals(object? obj) => Equals(obj as LookupData);
 
-            public bool Equals(LookupData other)
+            public bool Equals(LookupData? other)
             {
-                if (other is null)
+                if ((other is null) || (other.Children is null) || (Children is null))
                 {
                     return false;
                 }
@@ -186,9 +190,9 @@ namespace DocumentFormat.OpenXml.Framework.Tests
 
             public OpenXmlQualifiedName Type { get; set; }
 
-            public bool Equals(OpenXmlTypeProxy other) => other is not null && Name.Equals(other.Name) && Type.Equals(other.Type);
+            public bool Equals(OpenXmlTypeProxy? other) => other is not null && Name.Equals(other.Name) && Type.Equals(other.Type);
 
-            public override bool Equals(object obj) => obj is OpenXmlTypeProxy other && Equals(other);
+            public override bool Equals(object? obj) => obj is OpenXmlTypeProxy other && Equals(other);
 
             public override int GetHashCode() => Name.GetHashCode() ^ Type.GetHashCode();
 

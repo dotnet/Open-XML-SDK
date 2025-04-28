@@ -2,11 +2,8 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Builder;
-using DocumentFormat.OpenXml.Features;
-using DocumentFormat.OpenXml.Framework.Tests.Builder;
 using DocumentFormat.OpenXml.Packaging;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using Xunit;
 
@@ -258,7 +255,7 @@ public class OpenXmlPackageBuilderTests
 
     private sealed class Builder : OpenXmlPackageBuilder<TestPackage>
     {
-        public Builder(Builder other = null)
+        public Builder(Builder? other = null)
             : base(other)
         {
         }
