@@ -76,11 +76,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneFilter>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneCategories>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneData>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneSeries>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZonesVisible>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneFilter.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneFilter());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneCategories.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneCategories());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneData.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneData());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneSeries.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneSeries());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZonesVisible.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZonesVisible());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZoneFilter.ElementType, 0, 1, version: FileFormatVersions.Office2010),
@@ -216,8 +216,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.InSketchMode>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShowSketchButton>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.Charts.InSketchMode.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.Charts.InSketchMode());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShowSketchButton.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShowSketchButton());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Drawing.Charts.InSketchMode.ElementType, 0, 1, version: FileFormatVersions.Office2010),
@@ -310,7 +310,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShapeProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShapeProperties());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShapeProperties.ElementType, 1, 1, version: FileFormatVersions.Office2010)
@@ -460,21 +460,21 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BlipFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BlipFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.CustomGeometry.ElementType, static () => new DocumentFormat.OpenXml.Drawing.CustomGeometry());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectDag());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GradientFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GradientFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GroupFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GroupFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Outline.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Outline());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NoFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NoFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PatternFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PatternFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PresetGeometry.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PresetGeometry());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Scene3DType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Scene3DType());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Shape3DType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Shape3DType());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SolidFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Transform2D.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Transform2D());
             builder.AddElement<ShapeProperties>()
                 .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
                 {

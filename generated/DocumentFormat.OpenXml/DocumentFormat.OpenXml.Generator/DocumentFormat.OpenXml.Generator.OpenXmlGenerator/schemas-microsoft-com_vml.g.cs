@@ -285,7 +285,7 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Formula>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Formula.ElementType, static () => new DocumentFormat.OpenXml.Vml.Formula());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Vml.Formula.ElementType, 0, 128)
@@ -350,7 +350,7 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandle>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ShapeHandle.ElementType, static () => new DocumentFormat.OpenXml.Vml.ShapeHandle());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Vml.ShapeHandle.ElementType, 0, 4)
@@ -693,7 +693,7 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties());
             builder.AddElement<Fill>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("type", a => a.Type)
@@ -1104,11 +1104,11 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.LeftStroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.TopStroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.RightStroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.BottomStroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ColumnStroke>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.LeftStroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.LeftStroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.TopStroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.TopStroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.RightStroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.RightStroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.BottomStroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.BottomStroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ColumnStroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ColumnStroke());
             builder.AddElement<Stroke>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("on", a => a.On)
@@ -1472,7 +1472,7 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextBoxContent>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextBoxContent());
             builder.AddElement<TextBox>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("style", a => a.Style)
@@ -2619,31 +2619,31 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Ink>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Callout());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ClipPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Extrusion());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Ink.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Ink());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Lock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.SignatureLine());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Skew());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag.ElementType, static () => new DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Presentation.TextData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Fill.ElementType, static () => new DocumentFormat.OpenXml.Vml.Fill());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Formulas.ElementType, static () => new DocumentFormat.OpenXml.Vml.Formulas());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, static () => new DocumentFormat.OpenXml.Vml.ShapeHandles());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ImageData.ElementType, static () => new DocumentFormat.OpenXml.Vml.ImageData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Path.ElementType, static () => new DocumentFormat.OpenXml.Vml.Path());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Stroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Stroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextBox.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextBox());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData());
             builder.AddElement<Shape>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("style", a => a.Style)
@@ -3469,30 +3469,30 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Complex>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Callout());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ClipPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Complex.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Complex());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Extrusion());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Lock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.SignatureLine());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Skew());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Presentation.TextData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Fill.ElementType, static () => new DocumentFormat.OpenXml.Vml.Fill());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Formulas.ElementType, static () => new DocumentFormat.OpenXml.Vml.Formulas());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, static () => new DocumentFormat.OpenXml.Vml.ShapeHandles());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ImageData.ElementType, static () => new DocumentFormat.OpenXml.Vml.ImageData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Path.ElementType, static () => new DocumentFormat.OpenXml.Vml.Path());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Stroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Stroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextBox.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextBox());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData());
             builder.AddElement<Shapetype>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("style", a => a.Style)
@@ -4069,23 +4069,23 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Diagram>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Arc>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Curve>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Group>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageFile>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Line>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Oval>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.PolyLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Rectangle>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.RoundRectangle>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shape>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shapetype>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ClipPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Diagram.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Diagram());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Lock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Arc.ElementType, static () => new DocumentFormat.OpenXml.Vml.Arc());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Curve.ElementType, static () => new DocumentFormat.OpenXml.Vml.Curve());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Group.ElementType, static () => new DocumentFormat.OpenXml.Vml.Group());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ImageFile.ElementType, static () => new DocumentFormat.OpenXml.Vml.ImageFile());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Line.ElementType, static () => new DocumentFormat.OpenXml.Vml.Line());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Oval.ElementType, static () => new DocumentFormat.OpenXml.Vml.Oval());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.PolyLine.ElementType, static () => new DocumentFormat.OpenXml.Vml.PolyLine());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Rectangle.ElementType, static () => new DocumentFormat.OpenXml.Vml.Rectangle());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.RoundRectangle.ElementType, static () => new DocumentFormat.OpenXml.Vml.RoundRectangle());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shape.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shape());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shapetype.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shapetype());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData());
             builder.AddElement<Group>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("style", a => a.Style)
@@ -4287,7 +4287,7 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Fill.ElementType, static () => new DocumentFormat.OpenXml.Vml.Fill());
             builder.AddElement<Background>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -5034,29 +5034,29 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Callout());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ClipPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Extrusion());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Lock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.SignatureLine());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Skew());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Presentation.TextData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Fill.ElementType, static () => new DocumentFormat.OpenXml.Vml.Fill());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Formulas.ElementType, static () => new DocumentFormat.OpenXml.Vml.Formulas());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, static () => new DocumentFormat.OpenXml.Vml.ShapeHandles());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ImageData.ElementType, static () => new DocumentFormat.OpenXml.Vml.ImageData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Path.ElementType, static () => new DocumentFormat.OpenXml.Vml.Path());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Stroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Stroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextBox.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextBox());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData());
             builder.AddElement<Arc>()
                 .AddAttribute("o:spid", a => a.OptionalString)
                 .AddAttribute("o:oned", a => a.Oned)
@@ -5902,29 +5902,29 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Callout());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ClipPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Extrusion());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Lock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.SignatureLine());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Skew());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Presentation.TextData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Fill.ElementType, static () => new DocumentFormat.OpenXml.Vml.Fill());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Formulas.ElementType, static () => new DocumentFormat.OpenXml.Vml.Formulas());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, static () => new DocumentFormat.OpenXml.Vml.ShapeHandles());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ImageData.ElementType, static () => new DocumentFormat.OpenXml.Vml.ImageData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Path.ElementType, static () => new DocumentFormat.OpenXml.Vml.Path());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Stroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Stroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextBox.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextBox());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData());
             builder.AddElement<Curve>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("style", a => a.Style)
@@ -6818,29 +6818,29 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Callout());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ClipPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Extrusion());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Lock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.SignatureLine());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Skew());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Presentation.TextData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Fill.ElementType, static () => new DocumentFormat.OpenXml.Vml.Fill());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Formulas.ElementType, static () => new DocumentFormat.OpenXml.Vml.Formulas());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, static () => new DocumentFormat.OpenXml.Vml.ShapeHandles());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ImageData.ElementType, static () => new DocumentFormat.OpenXml.Vml.ImageData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Path.ElementType, static () => new DocumentFormat.OpenXml.Vml.Path());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Stroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Stroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextBox.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextBox());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData());
             builder.AddElement<ImageFile>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("style", a => a.Style)
@@ -7669,29 +7669,29 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Callout());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ClipPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Extrusion());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Lock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.SignatureLine());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Skew());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Presentation.TextData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Fill.ElementType, static () => new DocumentFormat.OpenXml.Vml.Fill());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Formulas.ElementType, static () => new DocumentFormat.OpenXml.Vml.Formulas());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, static () => new DocumentFormat.OpenXml.Vml.ShapeHandles());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ImageData.ElementType, static () => new DocumentFormat.OpenXml.Vml.ImageData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Path.ElementType, static () => new DocumentFormat.OpenXml.Vml.Path());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Stroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Stroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextBox.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextBox());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData());
             builder.AddElement<Line>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("style", a => a.Style)
@@ -8491,29 +8491,29 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Callout());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ClipPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Extrusion());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Lock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.SignatureLine());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Skew());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Presentation.TextData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Fill.ElementType, static () => new DocumentFormat.OpenXml.Vml.Fill());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Formulas.ElementType, static () => new DocumentFormat.OpenXml.Vml.Formulas());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, static () => new DocumentFormat.OpenXml.Vml.ShapeHandles());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ImageData.ElementType, static () => new DocumentFormat.OpenXml.Vml.ImageData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Path.ElementType, static () => new DocumentFormat.OpenXml.Vml.Path());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Stroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Stroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextBox.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextBox());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData());
             builder.AddElement<Oval>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("style", a => a.Style)
@@ -9324,30 +9324,30 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Ink>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Callout());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ClipPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Extrusion());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Ink.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Ink());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Lock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.SignatureLine());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Skew());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Presentation.TextData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Fill.ElementType, static () => new DocumentFormat.OpenXml.Vml.Fill());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Formulas.ElementType, static () => new DocumentFormat.OpenXml.Vml.Formulas());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, static () => new DocumentFormat.OpenXml.Vml.ShapeHandles());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ImageData.ElementType, static () => new DocumentFormat.OpenXml.Vml.ImageData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Path.ElementType, static () => new DocumentFormat.OpenXml.Vml.Path());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Stroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Stroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextBox.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextBox());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData());
             builder.AddElement<PolyLine>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("style", a => a.Style)
@@ -10148,29 +10148,29 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Callout());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ClipPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Extrusion());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Lock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.SignatureLine());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Skew());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Presentation.TextData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Fill.ElementType, static () => new DocumentFormat.OpenXml.Vml.Fill());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Formulas.ElementType, static () => new DocumentFormat.OpenXml.Vml.Formulas());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, static () => new DocumentFormat.OpenXml.Vml.ShapeHandles());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ImageData.ElementType, static () => new DocumentFormat.OpenXml.Vml.ImageData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Path.ElementType, static () => new DocumentFormat.OpenXml.Vml.Path());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Stroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Stroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextBox.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextBox());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData());
             builder.AddElement<Rectangle>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("style", a => a.Style)
@@ -10970,29 +10970,29 @@ namespace DocumentFormat.OpenXml.Vml
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ClipPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.SignatureLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Presentation.TextData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Formulas>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ShapeHandles>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Path>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextPath>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Callout());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ClipPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ClipPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Extrusion());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Lock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.SignatureLine.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.SignatureLine());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Skew());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Presentation.TextData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Presentation.TextData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Fill.ElementType, static () => new DocumentFormat.OpenXml.Vml.Fill());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Formulas.ElementType, static () => new DocumentFormat.OpenXml.Vml.Formulas());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ShapeHandles.ElementType, static () => new DocumentFormat.OpenXml.Vml.ShapeHandles());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ImageData.ElementType, static () => new DocumentFormat.OpenXml.Vml.ImageData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Path.ElementType, static () => new DocumentFormat.OpenXml.Vml.Path());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Stroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Stroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextBox.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextBox());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextPath.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextPath());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap.ElementType, static () => new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData.ElementType, static () => new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData());
             builder.AddElement<RoundRectangle>()
                 .AddAttribute("id", a => a.Id)
                 .AddAttribute("style", a => a.Style)

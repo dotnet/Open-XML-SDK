@@ -147,7 +147,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList());
             builder.AddElement<CommentHyperlink>()
                 .AddAttribute("startIndex", a => a.StartIndex, aBuilder =>
                 {
@@ -239,7 +239,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Extension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)

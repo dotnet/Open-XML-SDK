@@ -22,10 +22,12 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             WriteIndented = true,
         };
 
-        public static T Deserialize<T>(string name)
+#nullable enable
+
+        public static T? Deserialize<T>(string name)
         {
             using (var stream = typeof(TestUtility).GetTypeInfo().Assembly.GetManifestResourceStream($"DocumentFormat.OpenXml.Framework.Tests.{name}"))
-            using (var reader = new StreamReader(stream))
+            using (var reader = new StreamReader(stream!))
             {
                 var txt = reader.ReadToEnd();
 

@@ -96,21 +96,21 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BlipFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BlipFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.CustomGeometry.ElementType, static () => new DocumentFormat.OpenXml.Drawing.CustomGeometry());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectDag());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GradientFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GradientFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GroupFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GroupFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Outline.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Outline());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NoFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NoFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PatternFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PatternFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PresetGeometry.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PresetGeometry());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Scene3DType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Scene3DType());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Shape3DType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Shape3DType());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SolidFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Transform2D.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Transform2D());
             builder.AddElement<ShapeProperties>()
                 .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
                 {
@@ -236,17 +236,17 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties.ElementType, 0, 1),

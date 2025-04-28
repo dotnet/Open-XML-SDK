@@ -1734,8 +1734,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Item>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.Item.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.Item());
             builder.AddElement<UnsizedGallery>()
                 .AddAttribute("description", a => a.Description, aBuilder =>
                 {
@@ -2737,9 +2737,9 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.VisibleButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.VisibleButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.VisibleButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton());
             builder.AddElement<UnsizedSplitButton>()
                 .AddAttribute("enabled", a => a.Enabled)
                 .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
@@ -3176,15 +3176,15 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.CheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.CheckBox.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.CheckBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton());
             builder.AddElement<UnsizedMenu>()
                 .AddAttribute("itemSize", a => a.ItemSize)
                 .AddAttribute("description", a => a.Description, aBuilder =>
@@ -3994,9 +3994,9 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.MenuWithTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.VisibleButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.MenuWithTitle.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.MenuWithTitle());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.VisibleButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.VisibleButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton());
             builder.AddElement<SplitButtonWithTitle>()
                 .AddAttribute("enabled", a => a.Enabled)
                 .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
@@ -4433,15 +4433,15 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.CheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.MenuWithTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.SplitButtonWithTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.CheckBox.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.CheckBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.MenuWithTitle.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.MenuWithTitle());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.SplitButtonWithTitle.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.SplitButtonWithTitle());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton());
             builder.AddElement<MenuWithTitle>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -7161,7 +7161,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Item>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.Item.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.Item());
             builder.AddElement<ComboBox>()
                 .AddAttribute("showItemImage", a => a.ShowItemImage)
                 .AddAttribute("getItemCount", a => a.GetItemCount, aBuilder =>
@@ -7759,8 +7759,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Item>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.Item.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.Item());
             builder.AddElement<DropDown>()
                 .AddAttribute("onAction", a => a.OnAction, aBuilder =>
                 {
@@ -8469,8 +8469,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Item>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.Item.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.Item());
             builder.AddElement<Gallery>()
                 .AddAttribute("size", a => a.Size)
                 .AddAttribute("getSize", a => a.GetSize, aBuilder =>
@@ -9050,15 +9050,15 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.CheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.CheckBox.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.CheckBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton());
             builder.AddElement<Menu>()
                 .AddAttribute("size", a => a.Size)
                 .AddAttribute("getSize", a => a.GetSize, aBuilder =>
@@ -9921,9 +9921,9 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.VisibleButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.VisibleButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.VisibleButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton());
             builder.AddElement<SplitButton>()
                 .AddAttribute("size", a => a.Size)
                 .AddAttribute("getSize", a => a.GetSize, aBuilder =>
@@ -10163,20 +10163,20 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Box>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Button>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.ButtonGroup>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.CheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.ComboBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.ControlClone>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.DropDown>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.DynamicMenu>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.EditBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Gallery>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.TextLabel>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Menu>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.SplitButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.ToggleButton>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.Box.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.Box());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.Button.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.Button());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.ButtonGroup.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.ButtonGroup());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.CheckBox.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.CheckBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.ComboBox.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.ComboBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.ControlClone.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.ControlClone());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.DropDown.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.DropDown());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.DynamicMenu.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.DynamicMenu());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.EditBox.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.EditBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.Gallery.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.Gallery());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.TextLabel.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.TextLabel());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.Menu.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.Menu());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.SplitButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.SplitButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.ToggleButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.ToggleButton());
             builder.AddElement<Box>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -10374,13 +10374,13 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton());
             builder.AddElement<ButtonGroup>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -10522,15 +10522,15 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.CheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.CheckBox.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.CheckBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedMenu());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedSplitButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton());
             builder.AddElement<MenuRoot>()
                 .AddAttribute("title", a => a.Title, aBuilder =>
                 {
@@ -10649,8 +10649,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommands>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Ribbon>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommands.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommands());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.Ribbon.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.Ribbon());
             builder.AddElement<CustomUI>()
                 .AddAttribute("onLoad", a => a.OnLoad, aBuilder =>
                 {
@@ -11848,7 +11848,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton.ElementType, 1, 1)
@@ -12151,22 +12151,22 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Box>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Button>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.ButtonGroup>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.CheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.ComboBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.ControlClone>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.DialogBoxLauncher>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.DropDown>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.DynamicMenu>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.EditBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Gallery>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.TextLabel>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Menu>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.VerticalSeparator>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.SplitButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.ToggleButton>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.Box.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.Box());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.Button.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.Button());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.ButtonGroup.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.ButtonGroup());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.CheckBox.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.CheckBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.ComboBox.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.ComboBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.ControlClone.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.ControlClone());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.DialogBoxLauncher.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.DialogBoxLauncher());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.DropDown.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.DropDown());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.DynamicMenu.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.DynamicMenu());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.EditBox.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.EditBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.Gallery.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.Gallery());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.TextLabel.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.TextLabel());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.Menu.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.Menu());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.VerticalSeparator.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.VerticalSeparator());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.SplitButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.SplitButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.ToggleButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.ToggleButton());
             builder.AddElement<Group>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -12919,9 +12919,9 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbarControlClone>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.VerticalSeparator>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbarControlClone.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbarControlClone());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.VerticalSeparator.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.VerticalSeparator());
         }
     }
 
@@ -13119,7 +13119,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Group>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.Group.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.Group());
             builder.AddElement<Tab>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -13271,7 +13271,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Tab>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.Tab.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.Tab());
             builder.AddElement<ContextualTabSet>()
                 .AddAttribute("idMso", a => a.IdMso, aBuilder =>
                 {
@@ -13439,15 +13439,15 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.CheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.MenuWithTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.SplitButtonWithTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.CheckBox.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.CheckBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedControlClone());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedDynamicMenu());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedGallery());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.MenuSeparator());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.MenuWithTitle.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.MenuWithTitle());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.SplitButtonWithTitle.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.SplitButtonWithTitle());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
@@ -13536,8 +13536,8 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.SharedQatControls>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.DocumentSpecificQuickAccessToolbarControls>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.SharedQatControls.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.SharedQatControls());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.DocumentSpecificQuickAccessToolbarControls.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.DocumentSpecificQuickAccessToolbarControls());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.SharedQatControls.ElementType, 0, 1),
@@ -13629,7 +13629,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Tab>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.Tab.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.Tab());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.Tab.ElementType, 1, 100)
@@ -13694,7 +13694,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSet>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSet.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSet());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSet.ElementType, 1, 100)
@@ -13759,7 +13759,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommand>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommand.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommand());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommand.ElementType, 1, 5000)
@@ -13837,10 +13837,10 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSets>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.OfficeMenu>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbar>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomUI.Tabs>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSets.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSets());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.OfficeMenu.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.OfficeMenu());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbar.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbar());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomUI.Tabs.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomUI.Tabs());
             builder.AddElement<Ribbon>()
                 .AddAttribute("startFromScratch", a => a.StartFromScratch);
             builder.Particle = new CompositeParticle.Builder(ParticleType.All, 1, 1)

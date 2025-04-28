@@ -76,11 +76,11 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.CustomRichFilters>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.DynamicRichFilter>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilters>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichTop10>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.CustomRichFilters.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.CustomRichFilters());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.DynamicRichFilter.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.DynamicRichFilter());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilters.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilters());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichTop10.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichTop10());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilters.ElementType, 1, 1, version: FileFormatVersions.Office2019),
@@ -339,8 +339,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayData>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagData>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayData.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayData());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagData.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagData());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayData.ElementType, 0, 1, version: FileFormatVersions.Office2019),
@@ -475,8 +475,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagStructure>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagStructure.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagStructure());
             builder.AddElement<SupportingPropertyBagStructures>()
                 .AddAttribute("count", a => a.Count, aBuilder =>
                 {
@@ -590,8 +590,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.Array>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.Array.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.Array());
             builder.AddElement<ArrayData>()
                 .AddAttribute("count", a => a.Count, aBuilder =>
                 {
@@ -697,10 +697,10 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.Dxfs>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyles>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.Dxfs.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.Dxfs());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyles.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyles());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.RichData2.Dxfs.ElementType, 0, 1, version: FileFormatVersions.Office2019),
@@ -854,9 +854,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueGlobalType>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypes>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueGlobalType.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueGlobalType());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypes.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypes());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueGlobalType.ElementType, 0, 1, version: FileFormatVersions.Office2019),
@@ -996,9 +996,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichDateGroupItem>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilter>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichDateGroupItem.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichDateGroupItem());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilter.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilter());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilter.ElementType, 0, 0, version: FileFormatVersions.Office2019),
@@ -1167,8 +1167,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.CustomRichFilter>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.CustomRichFilter.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.CustomRichFilter());
             builder.AddElement<CustomRichFilters>()
                 .AddAttribute("and", a => a.And);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -1347,7 +1347,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Extension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -1697,8 +1697,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArray>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArray.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArray());
             builder.AddElement<SupportingPropertyBagArrayData>()
                 .AddAttribute("count", a => a.Count, aBuilder =>
                 {
@@ -1781,8 +1781,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBag>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBag.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBag());
             builder.AddElement<SupportingPropertyBagData>()
                 .AddAttribute("count", a => a.Count, aBuilder =>
                 {
@@ -1864,7 +1864,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagValue>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagValue.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagValue());
             builder.AddElement<SupportingPropertyBag>()
                 .AddAttribute("s", a => a.S, aBuilder =>
                 {
@@ -1979,7 +1979,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagKey>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagKey.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagKey());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagKey.ElementType, 1, 0, version: FileFormatVersions.Office2019)
@@ -2112,7 +2112,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayValue>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayValue.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayValue());
             builder.AddElement<SupportingPropertyBagArray>()
                 .AddAttribute("count", a => a.Count, aBuilder =>
                 {
@@ -2259,7 +2259,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ArrayValue>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ArrayValue.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.ArrayValue());
             builder.AddElement<Array>()
                 .AddAttribute("r", a => a.R, aBuilder =>
                 {
@@ -2397,7 +2397,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat());
             builder.AddElement<Dxfs>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -2465,7 +2465,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatProperty>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatProperty.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatProperty());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatProperty.ElementType, 1, 0, version: FileFormatVersions.Office2019)
@@ -2531,7 +2531,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyle>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyle.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyle());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyle.ElementType, 1, 0, version: FileFormatVersions.Office2019)
@@ -2667,7 +2667,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStylePropertyValue>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStylePropertyValue.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStylePropertyValue());
             builder.AddElement<RichStyle>()
                 .AddAttribute("dxfid", a => a.Dxfid);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -2795,8 +2795,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags.ElementType, 0, 1, version: FileFormatVersions.Office2019),
@@ -2889,7 +2889,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueType>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueType.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueType());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueType.ElementType, 0, 0, version: FileFormatVersions.Office2019)
@@ -2966,8 +2966,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags());
             builder.AddElement<RichValueType>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -3065,7 +3065,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeReservedKey>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeReservedKey.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeReservedKey());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeReservedKey.ElementType, 1, 0, version: FileFormatVersions.Office2019)
@@ -3141,7 +3141,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeReservedKeyFlag>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeReservedKeyFlag.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeReservedKeyFlag());
             builder.AddElement<RichValueTypeReservedKey>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {

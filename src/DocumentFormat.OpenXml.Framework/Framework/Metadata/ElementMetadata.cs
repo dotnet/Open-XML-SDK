@@ -60,7 +60,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             private readonly IOpenXmlNamespaceResolver _resolver;
 
             private List<IMetadataBuilder<AttributeMetadata>>? _attributes;
-            private HashSet<IMetadataBuilder<ElementFactory>>? _children;
+            private List<ElementFactory>? _children;
             private List<IValidator>? _constraints;
             private OpenXmlSchemaType _type;
 
@@ -93,15 +93,14 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
             public void SetSchema(in OpenXmlSchemaType type)
                 => _type = type;
 
-            public void AddChild<T>()
-                where T : OpenXmlElement, new()
+            public void AddChild(in OpenXmlSchemaType type, Func<OpenXmlElement> activator)
             {
                 if (_children is null)
                 {
-                    _children = new HashSet<IMetadataBuilder<ElementFactory>>();
+                    _children = [];
                 }
 
-                _children.Add(new KnownChild<T>());
+                _children.Add(new ElementFactory(type, activator));
             }
 
             public FileFormatVersions Availability { get; set; } = FileFormatVersions.Office2007;
@@ -118,7 +117,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
             public ElementMetadata Build()
             {
-                var lookup = _children is null ? _lazy : new Lazy<ElementFactoryCollection>(() => new ElementFactoryCollection(_children.Select(c => c.Build())), true);
+                var lookup = _children is null ? _lazy : new Lazy<ElementFactoryCollection>(() => new ElementFactoryCollection(_children), true);
 
                 return new ElementMetadata(_type, BuildAttributes(), GetValidators(), _constraints?.ToArray(), Availability, Particle.Compile(), lookup);
             }
@@ -138,12 +137,6 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
                 }
 
                 return attributes;
-            }
-
-            private class KnownChild<T> : IMetadataBuilder<ElementFactory>
-                where T : OpenXmlElement, new()
-            {
-                public ElementFactory Build() => ElementFactory.Create<T>();
             }
         }
 
