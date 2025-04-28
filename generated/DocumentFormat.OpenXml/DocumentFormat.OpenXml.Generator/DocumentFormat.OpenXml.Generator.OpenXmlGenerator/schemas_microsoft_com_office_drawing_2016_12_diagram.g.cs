@@ -44,6 +44,12 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
     /// </remarks>
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2016/12/diagram", "spPr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ShapeProperties");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ShapeProperties class.
         /// </summary>
@@ -88,7 +94,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("dgm1612:spPr");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
@@ -112,39 +118,39 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Transform2D.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.CustomGeometry.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.PresetGeometry.ElementType, 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.NoFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.GradientFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.BlipFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.PatternFill.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.GroupFill.ElementType, 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Outline.ElementType, 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.EffectList.ElementType, 1, 1),
+                        new ElementParticle(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Scene3DType.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Shape3DType.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -157,8 +163,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Transform2D.ElementType) as DocumentFormat.OpenXml.Drawing.Transform2D;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Transform2D.ElementType);
         }
 
         /// <inheritdoc/>
@@ -188,6 +194,12 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
     /// </remarks>
     public partial class TextListStyleType : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2016/12/diagram", "lstStyle");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_TextListStyle");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the TextListStyleType class.
         /// </summary>
@@ -222,7 +234,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("dgm1612:lstStyle");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties>();
@@ -237,17 +249,17 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, 0, 1)
             };
         }
 
@@ -260,8 +272,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties? DefaultParagraphProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties.ElementType) as DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties.ElementType);
         }
 
         /// <summary>
@@ -273,8 +285,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties? Level1ParagraphProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties.ElementType);
         }
 
         /// <summary>
@@ -286,8 +298,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties? Level2ParagraphProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties.ElementType);
         }
 
         /// <summary>
@@ -299,8 +311,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties? Level3ParagraphProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties.ElementType);
         }
 
         /// <summary>
@@ -312,8 +324,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties? Level4ParagraphProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties.ElementType);
         }
 
         /// <summary>
@@ -325,8 +337,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties? Level5ParagraphProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties.ElementType);
         }
 
         /// <summary>
@@ -338,8 +350,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties? Level6ParagraphProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties.ElementType);
         }
 
         /// <summary>
@@ -351,8 +363,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties? Level7ParagraphProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties.ElementType);
         }
 
         /// <summary>
@@ -364,8 +376,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties? Level8ParagraphProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties.ElementType);
         }
 
         /// <summary>
@@ -377,8 +389,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties? Level9ParagraphProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties.ElementType) as DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties.ElementType);
         }
 
         /// <summary>
@@ -390,8 +402,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>

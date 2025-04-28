@@ -31,6 +31,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     /// </remarks>
     public partial class PersonList : OpenXmlPartRootElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "personList");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "CT_PersonList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the PersonList class.
         /// </summary>
@@ -65,14 +71,14 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xltc:personList");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Person>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Person), 0, 0, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Person.ElementType, 0, 0, version: FileFormatVersions.Office2019),
+                new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -125,6 +131,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     /// </remarks>
     public partial class ThreadedComments : OpenXmlPartRootElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "ThreadedComments");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "CT_ThreadedComments");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ThreadedComments class.
         /// </summary>
@@ -159,14 +171,14 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xltc:ThreadedComments");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedComment>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedComment), 0, 0, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedComment.ElementType, 0, 0, version: FileFormatVersions.Office2019),
+                new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -218,6 +230,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     /// </remarks>
     public partial class Person : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "person");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "CT_Person");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Person class.
         /// </summary>
@@ -292,7 +310,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xltc:person");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList>();
             builder.AddElement<Person>()
@@ -309,7 +327,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
                 .AddAttribute("providerId", a => a.ProviderId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -322,8 +340,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList.ElementType) as DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -343,6 +361,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "CT_ExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
         /// </summary>
@@ -377,7 +401,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xltc:extLst");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -386,7 +410,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Extension), 0, 0)
+                        new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Extension.ElementType, 0, 0)
                     }
                 }
             };
@@ -411,6 +435,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     /// </remarks>
     public partial class ThreadedComment : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "threadedComment");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "CT_ThreadedComment");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ThreadedComment class.
         /// </summary>
@@ -505,7 +535,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xltc:threadedComment");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentText>();
@@ -530,9 +560,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
                 .AddAttribute("done", a => a.Done);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentText), 0, 1, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions), 0, 1, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentText.ElementType, 0, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions.ElementType, 0, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -545,8 +575,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentText? ThreadedCommentText
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentText>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentText.ElementType) as DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentText;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentText.ElementType);
         }
 
         /// <summary>
@@ -558,8 +588,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions? ThreadedCommentMentions
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions.ElementType) as DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions.ElementType);
         }
 
         /// <summary>
@@ -571,8 +601,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList>();
-            set => SetElement(value);
+            get => GetElement(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList.ElementType) as DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList.ElementType);
         }
 
         /// <inheritdoc/>
@@ -586,6 +616,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     /// </summary>
     public partial class ThreadedCommentText : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "text");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ST_Xstring");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ThreadedCommentText class.
         /// </summary>
@@ -609,7 +645,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xltc:text");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
         }
 
@@ -630,6 +666,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     /// </remarks>
     public partial class ThreadedCommentMentions : OpenXmlCompositeElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "mentions");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "CT_ThreadedCommentMentions");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the ThreadedCommentMentions class.
         /// </summary>
@@ -664,12 +706,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xltc:mentions");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Mention>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Mention), 0, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Mention.ElementType, 0, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -684,6 +726,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     /// </summary>
     public partial class Mention : OpenXmlLeafElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "mention");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "CT_Mention");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Mention class.
         /// </summary>
@@ -734,7 +782,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xltc:mention");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
             builder.AddElement<Mention>()
                 .AddAttribute("mentionpersonId", a => a.MentionpersonId, aBuilder =>

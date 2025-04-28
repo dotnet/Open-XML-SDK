@@ -180,7 +180,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 if (constraint1 is ElementParticle element1 && constraint2 is ElementParticle element2)
                 {
-                    return element1.ElementType == element2.ElementType;
+                    return element1.Type == element2.Type;
                 }
                 else if (_requireFilter && constraint1.ParticleType == ParticleType.Group && constraint2.ParticleType == ParticleType.Group)
                 {

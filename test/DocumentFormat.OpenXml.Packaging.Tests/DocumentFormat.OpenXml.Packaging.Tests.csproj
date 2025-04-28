@@ -11,6 +11,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Bcl.Memory" />
+    <Compile Include="..\DocumentFormat.OpenXml.Framework.Tests\TestUtility.cs" Link="TestUtility.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="..\..\.editorconfig" Link=".editorconfig" />
   </ItemGroup>
 

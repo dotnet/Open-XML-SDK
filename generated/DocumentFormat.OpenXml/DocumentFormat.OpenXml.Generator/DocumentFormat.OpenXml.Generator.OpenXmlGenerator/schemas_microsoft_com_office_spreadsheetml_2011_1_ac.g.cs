@@ -23,6 +23,12 @@ namespace DocumentFormat.OpenXml.Office2010.ExcelAc
     /// </summary>
     public partial class List : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2011/1/ac", "list");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ST_Xstring");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the List class.
         /// </summary>
@@ -46,7 +52,7 @@ namespace DocumentFormat.OpenXml.Office2010.ExcelAc
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("x12ac:list");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
         }
 

@@ -23,6 +23,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotAutoRefresh
     /// </summary>
     public partial class Xsdboolean : OpenXmlLeafTextElement
     {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2024/pivotAutoRefresh", "autoRefresh");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://www.w3.org/2001/XMLSchema", "boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
         /// <summary>
         /// Initializes a new instance of the Xsdboolean class.
         /// </summary>
@@ -47,7 +53,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotAutoRefresh
         {
             base.ConfigureMetadata(builder);
             builder.AddValidator<BooleanValue>(NumberValidator.Instance);
-            builder.SetSchema("xlpar:autoRefresh");
+            builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
         }
 

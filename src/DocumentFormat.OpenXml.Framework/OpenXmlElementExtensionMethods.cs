@@ -133,9 +133,11 @@ namespace DocumentFormat.OpenXml
         {
             if (parent is OpenXmlCompositeElement)
             {
+                var childType = child.Metadata.Type;
+
                 foreach (var element in parent.Metadata.Children.Elements)
                 {
-                    if (element.Type is not null && element.Type.GetTypeInfo().IsAssignableFrom(child.GetType().GetTypeInfo()))
+                    if (element.Type == childType)
                     {
                         return true;
                     }
