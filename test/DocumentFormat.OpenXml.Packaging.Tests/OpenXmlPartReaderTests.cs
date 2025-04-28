@@ -15,8 +15,8 @@ public class OpenXmlPartReaderTests
     [Fact]
     public void ThrowsNull()
     {
-        Assert.Throws<ArgumentNullException>(() => new OpenXmlPartReader(null));
-        Assert.Throws<ArgumentNullException>(() => new OpenXmlPartReader(null, true));
+        Assert.Throws<ArgumentNullException>(() => new OpenXmlPartReader(null!));
+        Assert.Throws<ArgumentNullException>(() => new OpenXmlPartReader(null!, true));
     }
 
     [InlineData("<?xml version='1.0' encoding='UTF-8' standalone='yes'?><root/>", "UTF-8", true)]
@@ -27,7 +27,7 @@ public class OpenXmlPartReaderTests
     [InlineData("<?xml version='1.0'?>", null, null)]
     [InlineData("<root/>", null, null)]
     [Theory]
-    public void ExtractsInfoFromStream(string xml, string encoding, bool? standalone)
+    public void ExtractsInfoFromStream(string xml, string? encoding, bool? standalone)
     {
         var features = new FeatureCollection();
         var elementFactory = Substitute.For<IRootElementFeature>();

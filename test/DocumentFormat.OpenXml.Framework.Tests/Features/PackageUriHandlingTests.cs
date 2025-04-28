@@ -244,7 +244,7 @@ public class PackageUriHandlingTests
 
     private sealed class DisposableFeature : IDisposableFeature, IDisposable
     {
-        private Action _dispose;
+        private Action? _dispose;
 
         void IDisposable.Dispose() => _dispose?.Invoke();
 

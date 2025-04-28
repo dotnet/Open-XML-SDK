@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Presentation;
+using System;
 
 using D = DocumentFormat.OpenXml.Drawing;
 using P = DocumentFormat.OpenXml.Presentation;
@@ -41,6 +42,11 @@ namespace Common
             SlideSize slideSize1 = new SlideSize() { Cx = 9144000, Cy = 6858000, Type = SlideSizeValues.Screen4x3 };
             NotesSize notesSize1 = new NotesSize() { Cx = 6858000, Cy = 9144000 };
             DefaultTextStyle defaultTextStyle1 = new DefaultTextStyle();
+
+            if (presentationPart.Presentation is null)
+            {
+                throw new ArgumentNullException("Presentation root element is missing!");
+            }
 
             presentationPart.Presentation.Append(slideMasterIdList1, slideIdList1, slideSize1, notesSize1, defaultTextStyle1);
 
@@ -166,7 +172,7 @@ namespace Common
               new D.LatinFont() { Typeface = "Calibri" },
               new D.EastAsianFont() { Typeface = string.Empty },
               new D.ComplexScriptFont() { Typeface = string.Empty }))
-              { Name = "Office" },
+            { Name = "Office" },
             new D.FormatScheme(
               new D.FillStyleList(
               new D.SolidFill(new D.SchemeColor() { Val = D.SchemeColorValues.PhColor }),
@@ -282,7 +288,7 @@ namespace Common
                     new D.SchemeColor(
                         new D.Tint() { Val = 50000 },
                         new D.SaturationModulation() { Val = 300000 })
-                  { Val = D.SchemeColorValues.PhColor })
+                    { Val = D.SchemeColorValues.PhColor })
                 { Position = 0 },
                 new D.GradientStop(
                   new D.SchemeColor(
@@ -291,7 +297,7 @@ namespace Common
                   { Val = D.SchemeColorValues.PhColor })
                 { Position = 0 }),
                 new D.LinearGradientFill() { Angle = 16200000, Scaled = true })))
-              { Name = "Office" });
+            { Name = "Office" });
 
             theme1.Append(themeElements1);
             theme1.Append(new D.ObjectDefaults());
