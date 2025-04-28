@@ -61,7 +61,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
 
         private class SomeElement : OpenXmlElement
         {
-            public StringValue Str { get; set; }
+            public StringValue? Str { get; set; }
 
             public override bool HasChildren => throw new NotImplementedException();
 

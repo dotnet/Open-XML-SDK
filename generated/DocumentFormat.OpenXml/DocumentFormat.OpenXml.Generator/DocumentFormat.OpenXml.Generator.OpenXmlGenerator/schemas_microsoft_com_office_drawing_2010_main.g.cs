@@ -243,9 +243,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Transform2D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.NonVisualContentPartProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.Transform2D.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.Transform2D());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.NonVisualContentPartProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.NonVisualContentPartProperties());
             builder.AddElement<GvmlContentPart>()
                 .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
                 {
@@ -409,12 +409,12 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BlipFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BlipFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GradientFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GradientFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GroupFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GroupFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NoFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NoFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PatternFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PatternFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SolidFill());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -620,18 +620,18 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomDash>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HeadEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.TailEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.LineJoinBevel>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Miter>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Round>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetDash>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.CustomDash.ElementType, static () => new DocumentFormat.OpenXml.Drawing.CustomDash());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GradientFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GradientFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HeadEnd.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HeadEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.TailEnd.ElementType, static () => new DocumentFormat.OpenXml.Drawing.TailEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.LineJoinBevel.ElementType, static () => new DocumentFormat.OpenXml.Drawing.LineJoinBevel());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Miter.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Miter());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Round.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Round());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NoFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NoFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PatternFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PatternFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PresetDash.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PresetDash());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SolidFill());
             builder.AddElement<HiddenLineProperties>()
                 .AddAttribute("w", a => a.Width, aBuilder =>
                 {
@@ -744,8 +744,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectDag());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectList());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -847,10 +847,10 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Backdrop>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Camera>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.LightRig>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Backdrop.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Backdrop());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Camera.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Camera());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.LightRig.ElementType, static () => new DocumentFormat.OpenXml.Drawing.LightRig());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ExtensionList());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Camera.ElementType, 1, 1),
@@ -1015,11 +1015,11 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BevelTop>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BevelBottom>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtrusionColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ContourColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BevelTop.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BevelTop());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BevelBottom.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BevelBottom());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ExtrusionColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ExtrusionColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ContourColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ContourColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ExtensionList());
             builder.AddElement<HiddenShape3D>()
                 .AddAttribute("z", a => a.Z, aBuilder =>
                 {
@@ -1171,7 +1171,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ImageLayer>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ImageLayer.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ImageLayer());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Drawing.ImageLayer.ElementType, 1, 1, version: FileFormatVersions.Office2010)
@@ -1324,7 +1324,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Extension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -1496,7 +1496,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList());
             builder.AddElement<ContentPartLocks>()
                 .AddAttribute("noGrp", a => a.NoGrouping)
                 .AddAttribute("noSelect", a => a.NoSelection)
@@ -3117,8 +3117,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.BackgroundMark>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ForegroundMark>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.BackgroundMark.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.BackgroundMark());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ForegroundMark.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ForegroundMark());
             builder.AddElement<BackgroundRemoval>()
                 .AddAttribute("t", a => a.MarqueeTop, aBuilder =>
                 {
@@ -3440,33 +3440,33 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.BackgroundRemoval>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticBlur>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.BrightnessContrast>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCement>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticChalkSketch>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ColorTemperature>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCrisscrossEtching>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCutout>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticFilmGrain>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlass>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowDiffused>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowEdges>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLightScreen>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLineDrawing>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMarker>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMosaicBubbles>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintBrush>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintStrokes>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPastelsSmooth>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilGrayscale>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilSketch>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPhotocopy>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPlasticWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Saturation>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.SharpenSoften>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticTexturizer>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ArtisticWatercolorSponge>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.BackgroundRemoval.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.BackgroundRemoval());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticBlur.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ArtisticBlur());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.BrightnessContrast.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.BrightnessContrast());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCement.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCement());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticChalkSketch.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ArtisticChalkSketch());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ColorTemperature.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ColorTemperature());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCrisscrossEtching.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCrisscrossEtching());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCutout.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ArtisticCutout());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticFilmGrain.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ArtisticFilmGrain());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlass.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlass());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowDiffused.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowDiffused());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowEdges.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ArtisticGlowEdges());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLightScreen.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLightScreen());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLineDrawing.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ArtisticLineDrawing());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMarker.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMarker());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMosaicBubbles.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ArtisticMosaicBubbles());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintBrush.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintBrush());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintStrokes.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPaintStrokes());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPastelsSmooth.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPastelsSmooth());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilGrayscale.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilGrayscale());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilSketch.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPencilSketch());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPhotocopy.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPhotocopy());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPlasticWrap.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ArtisticPlasticWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.Saturation.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.Saturation());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.SharpenSoften.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.SharpenSoften());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticTexturizer.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ArtisticTexturizer());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ArtisticWatercolorSponge.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ArtisticWatercolorSponge());
             builder.AddElement<ImageEffect>()
                 .AddAttribute("visible", a => a.Visible);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -3924,7 +3924,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ImageEffect>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ImageEffect.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ImageEffect());
             builder.AddElement<ImageLayer>()
                 .AddAttribute("r:embed", a => a.Embed);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -4044,9 +4044,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HyperlinkOnClick());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HyperlinkOnHover());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList());
             builder.AddElement<NonVisualDrawingProperties>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -4176,8 +4176,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks());
             builder.AddElement<NonVisualInkContentPartProperties>()
                 .AddAttribute("isComment", a => a.IsComment);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -4273,8 +4273,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.NonVisualDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.NonVisualInkContentPartProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.NonVisualDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.NonVisualDrawingProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.NonVisualInkContentPartProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.NonVisualInkContentPartProperties());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Drawing.NonVisualDrawingProperties.ElementType, 1, 1, version: FileFormatVersions.Office2010),
@@ -4398,8 +4398,8 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Offset.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Offset());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Extents.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Extents());
             builder.AddElement<Transform2D>()
                 .AddAttribute("rot", a => a.Rotation)
                 .AddAttribute("flipH", a => a.HorizontalFlip)
