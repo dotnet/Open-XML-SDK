@@ -1,7 +1,10 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DocumentFormat.OpenXml.Wordprocessing
 {
@@ -28,14 +31,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <summary>
         /// Gets the collection of TableRow elements.
         /// </summary>
-        public IEnumerable<TableRow>? TableRow
+        public IEnumerable<TableRow> TableRows
         {
             get
             {
-                foreach (var element in Elements<TableRow>())
-                {
-                    yield return element;
-                }
+                return Elements<TableRow>()?.OfType<TableRow>() ?? Enumerable.Empty<TableRow>();
             }
         }
     }

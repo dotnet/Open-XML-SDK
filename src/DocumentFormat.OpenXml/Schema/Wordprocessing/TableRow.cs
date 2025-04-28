@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DocumentFormat.OpenXml.Wordprocessing
 {
@@ -13,14 +14,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <summary>
         /// Gets the collection of table cells within the table row.
         /// </summary>
-        public IEnumerable<TableCell>? TableCell
+        public IEnumerable<TableCell> TableCells
         {
             get
             {
-                foreach (var element in Elements<TableCell>())
-                {
-                    yield return element;
-                }
+                return Elements<TableCell>()?.OfType<TableCell>() ?? Enumerable.Empty<TableCell>();
             }
         }
     }
