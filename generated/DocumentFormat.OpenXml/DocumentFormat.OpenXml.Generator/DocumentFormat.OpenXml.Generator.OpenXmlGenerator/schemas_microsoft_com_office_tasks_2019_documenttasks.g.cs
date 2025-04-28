@@ -73,8 +73,8 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.Task>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.DocumentTasks.Task.ElementType, static () => new DocumentFormat.OpenXml.Office2021.DocumentTasks.Task());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2021.DocumentTasks.Task.ElementType, 0, 0, version: FileFormatVersions.Office2021),
@@ -184,9 +184,9 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistory>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor.ElementType, static () => new DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistory.ElementType, static () => new DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistory());
             builder.AddElement<Task>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -299,7 +299,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.OfficeExtLst.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.OfficeExtLst.Extension.ElementType, static () => new DocumentFormat.OpenXml.Office2021.OfficeExtLst.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2021.OfficeExtLst.Extension.ElementType, 0, 0, version: FileFormatVersions.Office2021)
@@ -366,8 +366,8 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.CommentAnchor>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.DocumentTasks.CommentAnchor.ElementType, static () => new DocumentFormat.OpenXml.Office2021.DocumentTasks.CommentAnchor());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2021.DocumentTasks.CommentAnchor.ElementType, 0, 1, version: FileFormatVersions.Office2021),
@@ -460,7 +460,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistoryEvent>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistoryEvent.ElementType, static () => new DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistoryEvent());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistoryEvent.ElementType, 0, 0, version: FileFormatVersions.Office2021)
@@ -559,20 +559,20 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskCreateEventInfo>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskDeleteEventInfo>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskPriorityEventInfo>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskProgressEventInfo>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskScheduleEventInfo>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskTitleEventInfo>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskUnassignAll>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskUndeleteEventInfo>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskUndo>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.AttributionTaskUser>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.AssignTaskUser>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.DocumentTasks.UnassignTaskUser>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor.ElementType, static () => new DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskCreateEventInfo.ElementType, static () => new DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskCreateEventInfo());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskDeleteEventInfo.ElementType, static () => new DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskDeleteEventInfo());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskPriorityEventInfo.ElementType, static () => new DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskPriorityEventInfo());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskProgressEventInfo.ElementType, static () => new DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskProgressEventInfo());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskScheduleEventInfo.ElementType, static () => new DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskScheduleEventInfo());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskTitleEventInfo.ElementType, static () => new DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskTitleEventInfo());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskUnassignAll.ElementType, static () => new DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskUnassignAll());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskUndeleteEventInfo.ElementType, static () => new DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskUndeleteEventInfo());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskUndo.ElementType, static () => new DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskUndo());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.DocumentTasks.AttributionTaskUser.ElementType, static () => new DocumentFormat.OpenXml.Office2021.DocumentTasks.AttributionTaskUser());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.DocumentTasks.AssignTaskUser.ElementType, static () => new DocumentFormat.OpenXml.Office2021.DocumentTasks.AssignTaskUser());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.DocumentTasks.UnassignTaskUser.ElementType, static () => new DocumentFormat.OpenXml.Office2021.DocumentTasks.UnassignTaskUser());
             builder.AddElement<TaskHistoryEvent>()
                 .AddAttribute("time", a => a.Time, aBuilder =>
                 {

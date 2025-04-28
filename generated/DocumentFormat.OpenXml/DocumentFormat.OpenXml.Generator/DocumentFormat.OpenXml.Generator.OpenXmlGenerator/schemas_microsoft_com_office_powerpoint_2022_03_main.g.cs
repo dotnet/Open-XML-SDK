@@ -72,7 +72,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reaction>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reaction.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reaction());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reaction.ElementType, 0, 0, version: FileFormatVersions.Microsoft365)
@@ -138,7 +138,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Presentation.Extension.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -230,7 +230,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ExtensionList());
             builder.AddElement<ReactionInstance>()
                 .AddAttribute("time", a => a.Time, aBuilder =>
                 {
@@ -329,7 +329,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ReactionInstance>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ReactionInstance.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ReactionInstance());
             builder.AddElement<Reaction>()
                 .AddAttribute("type", a => a.Type, aBuilder =>
                 {

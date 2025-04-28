@@ -22,6 +22,7 @@ public static class PartWriter
         "DocumentFormat.OpenXml.Framework",
         "System",
         "System.Collections.Generic",
+        "System.Diagnostics.CodeAnalysis",
     };
 
     private static readonly BlockOptions _options = new()
@@ -410,7 +411,7 @@ public static class PartWriter
             writer.WriteDocumentationComment("Gets or sets the root element of this part.");
             writer.Write("public ");
             writer.Write(apiName);
-            writer.Write(" ");
+            writer.Write("? ");
             writer.WriteLine(api.Class);
 
             using (writer.AddBlock(_options))

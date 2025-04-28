@@ -91,15 +91,15 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualConnectorProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.ShapeStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.TextBodyProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.LinkedTextBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.TextBoxInfo2>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualConnectorProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualConnectorProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.DrawingShape.NonVisualDrawingShapeProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.DrawingShape.ShapeProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.ShapeStyle.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.DrawingShape.ShapeStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.TextBodyProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.DrawingShape.TextBodyProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.LinkedTextBox.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.DrawingShape.LinkedTextBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.TextBoxInfo2.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.DrawingShape.TextBoxInfo2());
             builder.AddElement<WordprocessingShape>()
                 .AddAttribute("normalEastAsianFlow", a => a.NormalEastAsianFlow);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -194,7 +194,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Extension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -318,9 +318,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HyperlinkOnClick());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HyperlinkOnHover());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList());
             builder.AddElement<NonVisualDrawingProperties>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -450,8 +450,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapeLocks>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ShapeLocks.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ShapeLocks());
             builder.AddElement<NonVisualDrawingShapeProperties>()
                 .AddAttribute("txBox", a => a.TextBox);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -549,10 +549,10 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.StartConnection>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EndConnection>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.StartConnection.ElementType, static () => new DocumentFormat.OpenXml.Drawing.StartConnection());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EndConnection.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EndConnection());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ExtensionList());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks.ElementType, 0, 1),
@@ -697,21 +697,21 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BlipFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BlipFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.CustomGeometry.ElementType, static () => new DocumentFormat.OpenXml.Drawing.CustomGeometry());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectDag());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GradientFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GradientFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GroupFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GroupFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Outline.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Outline());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NoFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NoFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PatternFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PatternFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PresetGeometry.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PresetGeometry());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Scene3DType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Scene3DType());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Shape3DType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Shape3DType());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SolidFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Transform2D.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Transform2D());
             builder.AddElement<ShapeProperties>()
                 .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
                 {
@@ -830,10 +830,10 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.FontReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.LineReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.FillReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectReference>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.FontReference.ElementType, static () => new DocumentFormat.OpenXml.Drawing.FontReference());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.LineReference.ElementType, static () => new DocumentFormat.OpenXml.Drawing.LineReference());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.FillReference.ElementType, static () => new DocumentFormat.OpenXml.Drawing.FillReference());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectReference.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectReference());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.LineReference.ElementType, 1, 1),
@@ -965,8 +965,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextBoxContent>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextBoxContent());
             builder.AddElement<TextBoxInfo2>()
                 .AddAttribute("id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -1081,7 +1081,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList());
             builder.AddElement<LinkedTextBox>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -1366,14 +1366,14 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.FlatText>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetTextWarp>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoAutoFit>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NormalAutoFit>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapeAutoFit>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.FlatText.ElementType, static () => new DocumentFormat.OpenXml.Drawing.FlatText());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PresetTextWarp.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PresetTextWarp());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Scene3DType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Scene3DType());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Shape3DType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Shape3DType());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NoAutoFit.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NoAutoFit());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NormalAutoFit.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NormalAutoFit());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ShapeAutoFit.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ShapeAutoFit());
             builder.AddElement<TextBodyProperties>()
                 .AddAttribute("rot", a => a.Rotation)
                 .AddAttribute("spcFirstLastPara", a => a.UseParagraphSpacing)

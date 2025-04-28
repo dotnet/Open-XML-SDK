@@ -70,7 +70,7 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.AdditionalCharacteristics.Characteristic>();
+            builder.AddChild(DocumentFormat.OpenXml.AdditionalCharacteristics.Characteristic.ElementType, static () => new DocumentFormat.OpenXml.AdditionalCharacteristics.Characteristic());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.AdditionalCharacteristics.Characteristic.ElementType, 0, 0)

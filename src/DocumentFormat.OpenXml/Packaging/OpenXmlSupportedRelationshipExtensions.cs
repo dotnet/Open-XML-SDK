@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Packaging;
 /// </summary>
 public static class OpenXmlSupportedRelationshipExtensions
 {
-    private static TChild InitPart<TChild>(this OpenXmlPartContainer parent, TChild childPart, PartTypeInfo partType, string? relId = null)
+    private static TChild InitPart<TChild>(this OpenXmlPartContainer? parent, TChild childPart, PartTypeInfo partType, string? relId = null)
         where TChild : OpenXmlPart
     {
         if (parent == null)
@@ -54,7 +54,7 @@ public static class OpenXmlSupportedRelationshipExtensions
     /// <param name="id">The relationship id. Optional, default to null.</param>
     /// <return>The newly added part</return>
     public static AlternativeFormatImportPart AddAlternativeFormatImportPart<T>(this T parent, PartTypeInfo partType, string? id = null)
-        where T : OpenXmlPartContainer, ISupportedRelationship<AlternativeFormatImportPart>
+        where T : OpenXmlPartContainer?, ISupportedRelationship<AlternativeFormatImportPart>?
         => InitPart(parent, new AlternativeFormatImportPart(), partType, id);
 
     /// <summary>

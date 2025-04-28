@@ -72,7 +72,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2021)
@@ -151,7 +151,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2021)
@@ -230,7 +230,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2021)
@@ -309,7 +309,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2021)
@@ -389,8 +389,8 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties.ElementType, 0, 1, version: FileFormatVersions.Office2021),
@@ -483,7 +483,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Extension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -559,11 +559,11 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundBlurProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundCustomProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundNormalProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundRemovedProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundBlurProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundBlurProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundCustomProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundCustomProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundNormalProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundNormalProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundRemovedProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundRemovedProperties());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2021)

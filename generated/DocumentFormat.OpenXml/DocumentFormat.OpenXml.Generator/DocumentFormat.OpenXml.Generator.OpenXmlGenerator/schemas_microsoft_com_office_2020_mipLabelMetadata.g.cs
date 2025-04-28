@@ -72,8 +72,8 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationLabel>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationLabel.ElementType, static () => new DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationLabel());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationLabel.ElementType, 0, 0, version: FileFormatVersions.Office2021),
@@ -393,7 +393,7 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationExtension>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationExtension.ElementType, static () => new DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationExtension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationExtension.ElementType, 0, 0, version: FileFormatVersions.Office2021)

@@ -85,6 +85,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Equal(expectedConstraints.ContentType, part.ContentType);
             }
 
+            Assert.NotNull(expectedConstraints.Parts);
 #if DEBUG
             _output.WriteObjectToTempFile("expected constraints", expectedConstraints.Parts.OrderBy(p => p.RelationshipType));
             _output.WriteObjectToTempFile("actual constraints", constraints.Rules.OrderBy(p => p.RelationshipType).Select(p => new PartConstraintRule2(p)));
@@ -133,17 +134,19 @@ namespace DocumentFormat.OpenXml.Tests
 
         private static OpenXmlPart InitializePart(Type type)
         {
+#nullable disable
             var part = (OpenXmlPart)Activator.CreateInstance(type, true);
+#nullable enable
 
             var appType = Substitute.For<IApplicationTypeFeature>();
             appType.Type.Returns(ApplicationType.None);
 
-            part.Features.Set(appType);
+            part!.Features.Set(appType);
 
             return part;
         }
 
-        private static ConstraintData GetConstraintData(OpenXmlPart part) => _cachedConstraintData.Value[part.GetType().FullName];
+        private static ConstraintData GetConstraintData(OpenXmlPart part) => _cachedConstraintData.Value[part.GetType().FullName!];
 
         private static Lazy<Dictionary<string, ConstraintData>> _cachedConstraintData = new Lazy<Dictionary<string, ConstraintData>>(() =>
         {
@@ -151,39 +154,41 @@ namespace DocumentFormat.OpenXml.Tests
 
             // If there are added parts, PartConstraintData.json needs to be updated with the new part's data and relationship.
             using (var stream = typeof(PartConstraintRuleTests).GetTypeInfo().Assembly.GetManifestResourceStream("DocumentFormat.OpenXml.Packaging.Tests.data.PartConstraintData.json"))
-            using (var reader = new StreamReader(stream))
+            using (var reader = new StreamReader(stream!))
             {
+#nullable disable
                 return JsonConvert.DeserializeObject<ConstraintData[]>(reader.ReadToEnd(), new StringEnumConverter())
                     .ToDictionary(t => t.Name, StringComparer.Ordinal);
+#nullable enable
             }
         });
 
 #pragma warning disable CA1812
         private class ConstraintData
         {
-            public string Name { get; set; }
+            public string? Name { get; set; }
 
-            public string ContentType { get; set; }
+            public string? ContentType { get; set; }
 
             public bool IsContentTypeFixed { get; set; }
 
-            public string RelationshipType { get; set; }
+            public string? RelationshipType { get; set; }
 
-            public string TargetFileExtension { get; set; }
+            public string? TargetFileExtension { get; set; }
 
-            public string TargetName { get; set; }
+            public string? TargetName { get; set; }
 
-            public string TargetPath { get; set; }
+            public string? TargetPath { get; set; }
 
-            public PartConstraintRule2[] Parts { get; set; }
+            public PartConstraintRule2[]? Parts { get; set; }
         }
 #pragma warning restore CA1712
 
         private class PartConstraintRule2
         {
-            public string RelationshipType { get; set; }
+            public string? RelationshipType { get; set; }
 
-            public string ContentType { get; set; }
+            public string? ContentType { get; set; }
 
             public bool MinOccursIsNonZero { get; set; }
 
@@ -204,7 +209,7 @@ namespace DocumentFormat.OpenXml.Tests
                 ContentType = rule.ContentType;
             }
 
-            public override bool Equals(object obj)
+            public override bool Equals(object? obj)
             {
                 if (obj is PartConstraintRule2 other)
                 {
@@ -225,8 +230,8 @@ namespace DocumentFormat.OpenXml.Tests
                 unchecked
                 {
                     int hash = 17;
-                    hash = (hash * HashMultiplier) + StringComparer.Ordinal.GetHashCode(RelationshipType);
-                    hash = (hash * HashMultiplier) + StringComparer.Ordinal.GetHashCode(ContentType);
+                    hash = (hash * HashMultiplier) + StringComparer.Ordinal.GetHashCode(RelationshipType!);
+                    hash = (hash * HashMultiplier) + StringComparer.Ordinal.GetHashCode(ContentType!);
                     hash = (hash * HashMultiplier) + MinOccursIsNonZero.GetHashCode();
                     hash = (hash * HashMultiplier) + MaxOccursGreatThanOne.GetHashCode();
                     hash = (hash * HashMultiplier) + FileFormat.GetHashCode();

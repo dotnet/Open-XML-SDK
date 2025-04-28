@@ -75,10 +75,10 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.FontReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.LineReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.FillReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectReference>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.FontReference.ElementType, static () => new DocumentFormat.OpenXml.Drawing.FontReference());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.LineReference.ElementType, static () => new DocumentFormat.OpenXml.Drawing.LineReference());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.FillReference.ElementType, static () => new DocumentFormat.OpenXml.Drawing.FillReference());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectReference.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectReference());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.LineReference.ElementType, 1, 1),
@@ -199,7 +199,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Extension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)

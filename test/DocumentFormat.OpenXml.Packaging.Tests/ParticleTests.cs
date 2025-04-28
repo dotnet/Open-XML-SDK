@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Validation.Schema;
 using Newtonsoft.Json;
@@ -179,11 +178,13 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
                     if (constructor is not null)
                     {
+#nullable disable
                         var element = (OpenXmlElement)Activator.CreateInstance(type);
+#nullable enable
 
-                        if (version.AtLeast(element.InitialVersion))
+                        if (version.AtLeast(element!.InitialVersion))
                         {
-                            var constraint = element.Metadata.Particle.Particle?.Build(version);
+                            var constraint = element.Metadata.Particle?.Particle?.Build(version);
 
                             if (constraint is not null)
                             {
@@ -238,7 +239,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             }
 
             using (var expectedStream = typeof(ParticleTests).GetTypeInfo().Assembly.GetManifestResourceStream("DocumentFormat.OpenXml.Packaging.Tests.data.Particles.json"))
-            using (var expectedStreamReader = new StreamReader(expectedStream))
+            using (var expectedStreamReader = new StreamReader(expectedStream!))
             using (var actualStream = File.OpenRead(tmp))
             using (var actualStreamReader = new StreamReader(actualStream))
             {
@@ -307,7 +308,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             {
                 foreach (var entry in _dic)
                 {
-                    if (entry.Value.Equals(value))
+                    if (entry.Value!.Equals(value))
                     {
                         _dic.Remove(entry);
                         _dic.Insert(0, new KeyValuePair<FileFormatVersions, T>(entry.Key | key, value));
@@ -325,11 +326,11 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
         private class TypeNameConverter : JsonConverter<Type>
         {
-            public override Type ReadJson(JsonReader reader, Type objectType, Type existingValue, bool hasExistingValue, JsonSerializer serializer)
+            public override Type ReadJson(JsonReader reader, Type objectType, Type? existingValue, bool hasExistingValue, JsonSerializer serializer)
                 => throw new NotImplementedException();
 
-            public override void WriteJson(JsonWriter writer, Type value, JsonSerializer serializer)
-                => serializer.Serialize(writer, value.FullName);
+            public override void WriteJson(JsonWriter writer, Type? value, JsonSerializer serializer)
+                => serializer.Serialize(writer, value!.FullName);
         }
 
         private sealed class QNameConverter : JsonConverter<OpenXmlQualifiedName>

@@ -83,8 +83,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskHistory>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskHistory.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskHistory());
             builder.AddElement<TaskHistoryDetails>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -230,7 +230,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Presentation.Extension.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -438,8 +438,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.CommentAnchor>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.CommentAnchor.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.CommentAnchor());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.CommentAnchor.ElementType, 1, 1, version: FileFormatVersions.Microsoft365),
@@ -924,19 +924,19 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.AddEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.UnasgnAllEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskAnchor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.AtrbtnTaskAssignUnassignUser>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.AsgnTaskAssignUnassignUser>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.UnAsgnTaskAssignUnassignUser>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskPriorityRecord>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskProgressEventInfo>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskScheduleEventInfo>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskTitleEventInfo>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskUndo>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskUnknownRecord>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.AddEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.AddEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.UnasgnAllEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.UnasgnAllEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskAnchor.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskAnchor());
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.AtrbtnTaskAssignUnassignUser.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.AtrbtnTaskAssignUnassignUser());
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.AsgnTaskAssignUnassignUser.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.AsgnTaskAssignUnassignUser());
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.UnAsgnTaskAssignUnassignUser.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.UnAsgnTaskAssignUnassignUser());
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskPriorityRecord.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskPriorityRecord());
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskProgressEventInfo.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskProgressEventInfo());
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskScheduleEventInfo.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskScheduleEventInfo());
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskTitleEventInfo.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskTitleEventInfo());
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskUndo.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskUndo());
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskUnknownRecord.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskUnknownRecord());
             builder.AddElement<TaskHistoryEvent>()
                 .AddAttribute("time", a => a.Time, aBuilder =>
                 {
@@ -1053,7 +1053,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskHistoryEvent>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskHistoryEvent.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskHistoryEvent());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskHistoryEvent.ElementType, 0, 0, version: FileFormatVersions.Microsoft365)
