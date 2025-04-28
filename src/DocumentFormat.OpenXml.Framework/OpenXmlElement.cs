@@ -318,12 +318,12 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets the namespace URI of the current element.
         /// </summary>
-        public virtual string NamespaceUri => Metadata.QName.Namespace.Uri;
+        public virtual string NamespaceUri => Metadata.Type.Name.Namespace.Uri;
 
         /// <summary>
         /// Gets the local name of the current element.
         /// </summary>
-        public virtual string LocalName => Metadata.QName.Name;
+        public virtual string LocalName => Metadata.Type.Name.Name;
 
         internal OpenXmlQualifiedName QName => new(NamespaceUri, LocalName);
 
@@ -796,10 +796,29 @@ namespace DocumentFormat.OpenXml
         /// Finds the first child element in type T.
         /// </summary>
         /// <typeparam name="T">Type of element.</typeparam>
-        /// <returns></returns>
+        /// <returns>The first child element of type T or null</returns>
         public T? GetFirstChild<T>()
             where T : OpenXmlElement
             => ChildElements.First<T>();
+
+        /// <summary>
+        /// Finds the first child element of <typeparam ref="T"/> or adds a new element if it does not exist.
+        /// </summary>
+        /// <typeparam name="T">Type of element.</typeparam>
+        /// <returns>The new or existing OpenXmlElement</returns>
+        public T GetOrAddFirstChild<T>()
+            where T : OpenXmlElement, new()
+        {
+            var child = GetFirstChild<T>();
+
+            if (child is null)
+            {
+                child = new T();
+                AppendChild(child);
+            }
+
+            return child;
+        }
 
         /// <summary>
         /// Gets the OpenXmlElement element that immediately precedes the current OpenXmlElement element.
