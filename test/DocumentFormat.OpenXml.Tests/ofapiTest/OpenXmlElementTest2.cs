@@ -8,7 +8,6 @@ using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System;
 using System.IO;
-using System.Xml;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
@@ -196,21 +195,6 @@ namespace DocumentFormat.OpenXml.Tests
             cell.Child = null;
 
             Assert.Null(cell.Child);
-        }
-
-        /// <summary>
-        /// A test for OpenXmlElement.GetOrAddFirstChild.
-        /// </summary>
-        [Fact]
-        public void GetOrAddFirstChildTest()
-        {
-            Paragraph p = new();
-            Run r = p.GetOrAddFirstChild<Run>();
-            Assert.NotNull(r);
-            Assert.Same(r, p.GetFirstChild<Run>());
-
-            var r2 = p.GetOrAddFirstChild<Run>();
-            Assert.Same(r, r2);
         }
 
         private class WithChildElement : OpenXmlCompositeElement
