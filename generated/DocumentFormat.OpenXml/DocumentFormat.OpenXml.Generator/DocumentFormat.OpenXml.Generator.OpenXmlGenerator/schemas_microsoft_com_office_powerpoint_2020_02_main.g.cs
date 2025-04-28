@@ -72,7 +72,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTag>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTag.ElementType, static () => new DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTag());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTag.ElementType, 0, 0, version: FileFormatVersions.Office2021)
@@ -149,8 +149,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList.ElementType, static () => new DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList());
             builder.AddElement<DesignerDrawingProps>()
                 .AddAttribute("edtDesignElem", a => a.EdtDesignElem);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -305,7 +305,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Presentation.Extension.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)

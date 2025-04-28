@@ -82,7 +82,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList());
             builder.AddElement<Question>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -207,8 +207,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.SyncedQuestionId>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.SyncedQuestionId.ElementType, static () => new DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.SyncedQuestionId());
             builder.AddElement<MsForm>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -327,7 +327,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Extension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
