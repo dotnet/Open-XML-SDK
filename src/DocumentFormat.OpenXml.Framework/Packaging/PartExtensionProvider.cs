@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="contentType">The content type</param>
         /// <param name="extension">Part Extension (".xml") to be used for the part with the specified content type.</param>
         /// <exception cref="ArgumentNullException">Thrown when either parameter is null.</exception>
-        public void Register(string contentType, string extension)
+        public void Register(string? contentType, string? extension)
         {
             if (contentType is null)
             {

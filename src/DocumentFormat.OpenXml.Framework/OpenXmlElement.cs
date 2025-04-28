@@ -1843,7 +1843,7 @@ namespace DocumentFormat.OpenXml
                 newElement = ElementFactory(qname);
 
                 // try AlternateContent
-                if (newElement is null && AlternateContent.InternalQName.Equals(qname))
+                if (newElement is null && AlternateContent.ElementQName.Equals(qname))
                 {
                     newElement = new AlternateContent();
                 }

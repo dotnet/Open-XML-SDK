@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema>();
+            builder.AddChild(DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema.ElementType, static () => new DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema.ElementType, 0, 0)

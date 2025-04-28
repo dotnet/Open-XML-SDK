@@ -198,6 +198,21 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Null(cell.Child);
         }
 
+        /// <summary>
+        /// A test for OpenXmlElement.GetOrAddFirstChild.
+        /// </summary>
+        [Fact]
+        public void GetOrAddFirstChildTest()
+        {
+            Paragraph p = new();
+            Run r = p.GetOrAddFirstChild<Run>();
+            Assert.NotNull(r);
+            Assert.Same(r, p.GetFirstChild<Run>());
+
+            var r2 = p.GetOrAddFirstChild<Run>();
+            Assert.Same(r, r2);
+        }
+
         private class WithChildElement : OpenXmlCompositeElement
         {
             public ChildElement Child

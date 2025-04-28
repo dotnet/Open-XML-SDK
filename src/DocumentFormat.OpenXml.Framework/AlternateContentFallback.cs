@@ -12,9 +12,10 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class AlternateContentFallback : OpenXmlCompositeElement
     {
-        internal static OpenXmlQualifiedName InternalQName => new(AlternateContent.InternalQName.Namespace.Uri, Name);
-
         private const string Name = "Fallback";
+
+        internal static readonly OpenXmlQualifiedName ElementQName = new(AlternateContent.ElementQName.Namespace.Uri, Name);
+        internal static readonly OpenXmlSchemaType ElementType = new(ElementQName, default);
 
         /// <summary>
         /// Initializes a new instance of the AlternateContentFallback class.
@@ -98,7 +99,7 @@ namespace DocumentFormat.OpenXml
         {
             base.ConfigureMetadata(builder);
 
-            builder.SetSchema(new(new(AlternateContent.InternalQName.Namespace.Uri, Name), default));
+            builder.SetSchema(ElementType);
         }
     }
 }

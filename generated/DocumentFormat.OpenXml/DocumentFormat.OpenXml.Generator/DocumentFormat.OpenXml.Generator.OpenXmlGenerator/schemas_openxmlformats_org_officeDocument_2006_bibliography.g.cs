@@ -100,7 +100,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Source>();
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Source.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Source());
             builder.AddElement<Sources>()
                 .AddAttribute("SelectedStyle", a => a.SelectedStyle, aBuilder =>
                 {
@@ -180,9 +180,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Last>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.First>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Middle>();
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Last.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Last());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.First.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.First());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Middle.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Middle());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Bibliography.Last.ElementType, 0, 0),
@@ -2625,7 +2625,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Person>();
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Person.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Person());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Bibliography.Person.ElementType, 1, 0)
@@ -3585,7 +3585,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.NameList>();
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.NameList.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.NameList());
         }
 
         /// <summary>
@@ -3794,8 +3794,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.NameList>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Corporate>();
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.NameList.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.NameList());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Corporate.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Corporate());
         }
 
         /// <summary>
@@ -3894,22 +3894,22 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Author>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Performer>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Artist>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.BookAuthor>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Compiler>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Composer>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Conductor>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Counsel>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Director>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Editor>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Interviewee>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Interviewer>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Inventor>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.ProducerName>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Translator>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Writer>();
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Author.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Author());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Performer.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Performer());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Artist.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Artist());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.BookAuthor.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.BookAuthor());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Compiler.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Compiler());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Composer.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Composer());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Conductor.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Conductor());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Counsel.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Counsel());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Director.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Director());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Editor.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Editor());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Interviewee.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Interviewee());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Interviewer.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Interviewer());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Inventor.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Inventor());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.ProducerName.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.ProducerName());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Translator.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Translator());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Writer.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Writer());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
@@ -4295,58 +4295,58 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.AuthorList>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.SourceType>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.AlbumTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.BookTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Broadcaster>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.BroadcastTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.CaseNumber>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.ChapterNumber>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.City>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Comments>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.ConferenceName>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.CountryRegion>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Court>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Day>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.DayAccessed>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Department>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Distributor>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Edition>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.GuidString>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Institution>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.InternetSiteTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Issue>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.JournalName>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.LcId>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Medium>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Month>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.MonthAccessed>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.NumberVolumes>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Pages>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.PatentNumber>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.PeriodicalTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.ProductionCompany>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.PublicationTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Publisher>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.RecordingNumber>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.ReferenceOrder>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Reporter>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.ShortTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.StandardNumber>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.StateProvince>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Station>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Tag>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Theater>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.ThesisType>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Title>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.PatentType>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.UrlString>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Version>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Volume>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Year>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.YearAccessed>();
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.AuthorList.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.AuthorList());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.SourceType.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.SourceType());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.AlbumTitle.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.AlbumTitle());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.BookTitle.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.BookTitle());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Broadcaster.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Broadcaster());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.BroadcastTitle.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.BroadcastTitle());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.CaseNumber.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.CaseNumber());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.ChapterNumber.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.ChapterNumber());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.City.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.City());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Comments.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Comments());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.ConferenceName.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.ConferenceName());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.CountryRegion.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.CountryRegion());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Court.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Court());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Day.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Day());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.DayAccessed.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.DayAccessed());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Department.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Department());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Distributor.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Distributor());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Edition.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Edition());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.GuidString.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.GuidString());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Institution.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Institution());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.InternetSiteTitle.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.InternetSiteTitle());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Issue.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Issue());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.JournalName.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.JournalName());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.LcId.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.LcId());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Medium.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Medium());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Month.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Month());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.MonthAccessed.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.MonthAccessed());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.NumberVolumes.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.NumberVolumes());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Pages.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Pages());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.PatentNumber.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.PatentNumber());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.PeriodicalTitle.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.PeriodicalTitle());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.ProductionCompany.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.ProductionCompany());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.PublicationTitle.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.PublicationTitle());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Publisher.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Publisher());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.RecordingNumber.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.RecordingNumber());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.ReferenceOrder.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.ReferenceOrder());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Reporter.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Reporter());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.ShortTitle.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.ShortTitle());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.StandardNumber.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.StandardNumber());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.StateProvince.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.StateProvince());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Station.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Station());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Tag.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Tag());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Theater.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Theater());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.ThesisType.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.ThesisType());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Title.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Title());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.PatentType.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.PatentType());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.UrlString.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.UrlString());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Version.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Version());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Volume.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Volume());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.Year.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.Year());
+            builder.AddChild(DocumentFormat.OpenXml.Bibliography.YearAccessed.ElementType, static () => new DocumentFormat.OpenXml.Bibliography.YearAccessed());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)

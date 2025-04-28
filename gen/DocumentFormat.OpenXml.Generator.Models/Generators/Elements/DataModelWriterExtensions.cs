@@ -360,9 +360,13 @@ public static class DataModelWriterExtensions
             {
                 foreach (var child in containingType.KnownChildren)
                 {
-                    writer.Write("builder.AddChild<");
-                    writer.Write(services.FindClassName(child));
-                    writer.WriteLine(">();");
+                    var className = services.FindClassName(child);
+
+                    writer.Write("builder.AddChild(");
+                    writer.Write(className);
+                    writer.Write(".ElementType, static () => new ");
+                    writer.Write(className);
+                    writer.WriteLine("());");
                 }
             }
 

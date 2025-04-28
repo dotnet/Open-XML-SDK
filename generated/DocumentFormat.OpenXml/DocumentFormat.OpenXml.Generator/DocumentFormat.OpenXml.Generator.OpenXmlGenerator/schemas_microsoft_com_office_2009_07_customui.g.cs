@@ -1752,8 +1752,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Item>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.Item.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.Item());
             builder.AddElement<GalleryRegular>()
                 .AddAttribute("description", a => a.Description, aBuilder =>
                 {
@@ -2773,9 +2773,9 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.VisibleButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.VisibleButton.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.VisibleButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton());
             builder.AddElement<SplitButtonRegular>()
                 .AddAttribute("enabled", a => a.Enabled)
                 .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
@@ -3213,15 +3213,15 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular());
             builder.AddElement<MenuRegular>()
                 .AddAttribute("itemSize", a => a.ItemSize)
                 .AddAttribute("description", a => a.Description, aBuilder =>
@@ -4033,9 +4033,9 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuWithTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.VisibleButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.MenuWithTitle.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.MenuWithTitle());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.VisibleButton.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.VisibleButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton());
             builder.AddElement<SplitButtonWithTitle>()
                 .AddAttribute("enabled", a => a.Enabled)
                 .AddAttribute("getEnabled", a => a.GetEnabled, aBuilder =>
@@ -4473,15 +4473,15 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuWithTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonWithTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.MenuWithTitle.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.MenuWithTitle());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonWithTitle.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonWithTitle());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular());
             builder.AddElement<MenuWithTitle>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -7340,7 +7340,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Item>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.Item.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.Item());
             builder.AddElement<ComboBox>()
                 .AddAttribute("showItemImage", a => a.ShowItemImage)
                 .AddAttribute("getItemCount", a => a.GetItemCount, aBuilder =>
@@ -7939,8 +7939,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Item>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.Item.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.Item());
             builder.AddElement<DropDownRegular>()
                 .AddAttribute("onAction", a => a.OnAction, aBuilder =>
                 {
@@ -8660,8 +8660,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Item>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.Item.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.Item());
             builder.AddElement<Gallery>()
                 .AddAttribute("size", a => a.Size)
                 .AddAttribute("getSize", a => a.GetSize, aBuilder =>
@@ -9243,15 +9243,15 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular());
             builder.AddElement<Menu>()
                 .AddAttribute("size", a => a.Size)
                 .AddAttribute("getSize", a => a.GetSize, aBuilder =>
@@ -10116,9 +10116,9 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.VisibleButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.VisibleButton.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.VisibleButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton());
             builder.AddElement<SplitButton>()
                 .AddAttribute("size", a => a.Size)
                 .AddAttribute("getSize", a => a.GetSize, aBuilder =>
@@ -10369,20 +10369,20 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Box>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Button>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonGroup>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ComboBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ControlClone>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DropDownRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenu>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.EditBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Gallery>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.LabelControl>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Menu>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.SplitButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButton>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.Box.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.Box());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.Button.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.Button());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonGroup.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ButtonGroup());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ComboBox.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ComboBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ControlClone.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ControlClone());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.DropDownRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.DropDownRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenu.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenu());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.EditBox.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.EditBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.Gallery.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.Gallery());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.LabelControl.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.LabelControl());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.Menu.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.Menu());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.SplitButton.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.SplitButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButton.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButton());
             builder.AddElement<Box>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -10596,14 +10596,14 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Separator>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.Separator.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.Separator());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular());
             builder.AddElement<ButtonGroup>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -11386,7 +11386,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuGroup>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuGroup.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuGroup());
             builder.AddElement<BackstageSubMenu>()
                 .AddAttribute("description", a => a.Description, aBuilder =>
                 {
@@ -12913,7 +12913,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ItemBackstageItem>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ItemBackstageItem.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ItemBackstageItem());
             builder.AddElement<BackstageDropDown>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -13240,7 +13240,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.RadioButtonBackstageItem>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.RadioButtonBackstageItem.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.RadioButtonBackstageItem());
             builder.AddElement<RadioGroup>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -13557,7 +13557,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ItemBackstageItem>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ItemBackstageItem.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ItemBackstageItem());
             builder.AddElement<BackstageComboBox>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -14285,17 +14285,17 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageComboBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageLabelControl>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.GroupBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ImageControl>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageComboBox.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageComboBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageLabelControl.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageLabelControl());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.GroupBox.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.GroupBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ImageControl.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ImageControl());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup());
             builder.AddElement<GroupBox>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -14469,17 +14469,17 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageComboBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageLabelControl>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.GroupBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ImageControl>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageComboBox.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageComboBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageLabelControl.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageLabelControl());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.GroupBox.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.GroupBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ImageControl.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ImageControl());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup());
             builder.AddElement<LayoutContainer>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -14953,9 +14953,9 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.TopItemsGroupControls>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BottomItemsGroupControls>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.PrimaryItem>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.TopItemsGroupControls.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.TopItemsGroupControls());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BottomItemsGroupControls.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BottomItemsGroupControls());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.PrimaryItem.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.PrimaryItem());
             builder.AddElement<BackstageGroup>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -15260,7 +15260,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroupCategory>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroupCategory.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroupCategory());
             builder.AddElement<TaskGroup>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -15424,15 +15424,15 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparator());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular());
             builder.AddElement<MenuRoot>()
                 .AddAttribute("title", a => a.Title, aBuilder =>
                 {
@@ -15554,10 +15554,10 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Backstage>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Commands>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ContextMenus>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Ribbon>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.Backstage.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.Backstage());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.Commands.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.Commands());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ContextMenus.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ContextMenus());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.Ribbon.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.Ribbon());
             builder.AddElement<CustomUI>()
                 .AddAttribute("onLoad", a => a.OnLoad, aBuilder =>
                 {
@@ -16835,7 +16835,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular.ElementType, 1, 1, version: FileFormatVersions.Office2010)
@@ -17159,22 +17159,22 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Box>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Button>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonGroup>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ComboBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ControlClone>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DialogBoxLauncher>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DropDownRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenu>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.EditBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Gallery>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.LabelControl>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Menu>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Separator>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.SplitButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButton>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.Box.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.Box());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.Button.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.Button());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonGroup.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ButtonGroup());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ComboBox.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ComboBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ControlClone.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ControlClone());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.DialogBoxLauncher.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.DialogBoxLauncher());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.DropDownRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.DropDownRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenu.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenu());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.EditBox.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.EditBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.Gallery.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.Gallery());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.LabelControl.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.LabelControl());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.Menu.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.Menu());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.Separator.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.Separator());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.SplitButton.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.SplitButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButton.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButton());
             builder.AddElement<Group>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -17933,9 +17933,9 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneQat>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Separator>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneQat.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneQat());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.Separator.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.Separator());
         }
     }
 
@@ -18134,7 +18134,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Group>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.Group.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.Group());
             builder.AddElement<Tab>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -18287,7 +18287,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Tab>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.Tab.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.Tab());
             builder.AddElement<TabSet>()
                 .AddAttribute("idMso", a => a.IdMso, aBuilder =>
                 {
@@ -18450,8 +18450,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.SharedControlsQatItems>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DocumentControlsQatItems>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.SharedControlsQatItems.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.SharedControlsQatItems());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.DocumentControlsQatItems.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.DocumentControlsQatItems());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.CustomUI.SharedControlsQatItems.ElementType, 0, 1, version: FileFormatVersions.Office2010),
@@ -18544,7 +18544,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Tab>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.Tab.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.Tab());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.CustomUI.Tab.ElementType, 1, 100, version: FileFormatVersions.Office2010)
@@ -18610,7 +18610,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.TabSet>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.TabSet.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.TabSet());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.CustomUI.TabSet.ElementType, 1, 100, version: FileFormatVersions.Office2010)
@@ -18694,15 +18694,15 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparatorNoTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.CheckBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ControlCloneRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.DynamicMenuRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.GalleryRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.MenuRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparatorNoTitle.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.MenuSeparatorNoTitle());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.SplitButtonRegular());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular());
             builder.AddElement<ContextMenu>()
                 .AddAttribute("idMso", a => a.IdMso, aBuilder =>
                 {
@@ -19406,7 +19406,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuGroup>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuGroup.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuGroup());
             builder.AddElement<BackstagePrimaryMenu>()
                 .AddAttribute("screentip", a => a.Screentip, aBuilder =>
                 {
@@ -19608,10 +19608,10 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuCheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuToggleButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageSubMenu>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuButton.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuCheckBox.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuCheckBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuToggleButton.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuToggleButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageSubMenu.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageSubMenu());
             builder.AddElement<BackstageMenuGroup>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -19712,8 +19712,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstagePrimaryMenu>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageRegularButton>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstagePrimaryMenu.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstagePrimaryMenu());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageRegularButton.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageRegularButton());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageRegularButton.ElementType, 0, 1, version: FileFormatVersions.Office2010),
@@ -19996,17 +19996,17 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageComboBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageLabelControl>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.GroupBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ImageControl>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageCheckBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageComboBox.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageComboBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageDropDown());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageEditBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroupButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageLabelControl.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageLabelControl());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.GroupBox.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.GroupBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.Hyperlink());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ImageControl.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ImageControl());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.LayoutContainer());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup());
         }
     }
 
@@ -20185,7 +20185,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroupTask>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroupTask.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroupTask());
             builder.AddElement<TaskGroupCategory>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -20762,7 +20762,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroupTask>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroupTask.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroupTask());
             builder.AddElement<TaskFormGroupCategory>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -21084,7 +21084,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroup>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroup.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroup());
             builder.AddElement<TaskFormGroupTask>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -21359,7 +21359,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroupCategory>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroupCategory.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroupCategory());
             builder.AddElement<TaskFormGroup>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -21471,9 +21471,9 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroup>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroup>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroup>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroup.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroup());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroup.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroup());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroup.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroup());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
@@ -21554,8 +21554,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroup>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroup>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroup.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroup());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroup.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroup());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1000)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1, version: FileFormatVersions.Office2010)
@@ -21859,8 +21859,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroups>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.SimpleGroups>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroups.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroups());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.SimpleGroups.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.SimpleGroups());
             builder.AddElement<BackstageTab>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -22359,7 +22359,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Command>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.Command.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.Command());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.CustomUI.Command.ElementType, 1, 5000, version: FileFormatVersions.Office2010)
@@ -22437,9 +22437,9 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ContextualTabs>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.QuickAccessToolbar>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.Tabs>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ContextualTabs.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ContextualTabs());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.QuickAccessToolbar.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.QuickAccessToolbar());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.Tabs.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.Tabs());
             builder.AddElement<Ribbon>()
                 .AddAttribute("startFromScratch", a => a.StartFromScratch);
             builder.Particle = new CompositeParticle.Builder(ParticleType.All, 1, 1)
@@ -22569,8 +22569,8 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageFastCommandButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.BackstageTab>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageFastCommandButton.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageFastCommandButton());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.BackstageTab.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.BackstageTab());
             builder.AddElement<Backstage>()
                 .AddAttribute("onShow", a => a.OnShow, aBuilder =>
                 {
@@ -22649,7 +22649,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.CustomUI.ContextMenu>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.CustomUI.ContextMenu.ElementType, static () => new DocumentFormat.OpenXml.Office2010.CustomUI.ContextMenu());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.CustomUI.ContextMenu.ElementType, 1, 1000, version: FileFormatVersions.Office2010)

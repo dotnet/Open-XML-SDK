@@ -16,7 +16,8 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class AlternateContent : OpenXmlCompositeElement
     {
-        internal static readonly OpenXmlQualifiedName InternalQName = new(@"http://schemas.openxmlformats.org/markup-compatibility/2006", "AlternateContent");
+        internal static readonly OpenXmlQualifiedName ElementQName = new(@"http://schemas.openxmlformats.org/markup-compatibility/2006", "AlternateContent");
+        internal static readonly OpenXmlSchemaType ElementType = new(ElementQName, default);
 
         /// <summary>
         /// Initializes a new instance of the AlternateContent
@@ -66,16 +67,16 @@ namespace DocumentFormat.OpenXml
         /// Gets a value that represents the markup compatibility
         /// namespace.
         /// </summary>
-        public static string MarkupCompatibilityNamespace => InternalQName.Namespace.Uri;
+        public static string MarkupCompatibilityNamespace => ElementQName.Namespace.Uri;
 
         /// <summary>
         /// Gets a value that represents the tag name of the
         /// AlternateContent element.
         /// </summary>
-        public static string TagName => InternalQName.Name;
+        public static string TagName => ElementQName.Name;
 
         /// <inheritdoc/>
-        public override string LocalName => InternalQName.Name;
+        public override string LocalName => ElementQName.Name;
 
         /// <summary>
         /// Appends a new child of type T:DocumentFormat.OpenXml.AlternateContentChoice
@@ -113,10 +114,10 @@ namespace DocumentFormat.OpenXml
         {
             base.ConfigureMetadata(builder);
 
-            builder.SetSchema(new(InternalQName, default));
+            builder.SetSchema(ElementType);
 
-            builder.AddChild<AlternateContentChoice>();
-            builder.AddChild<AlternateContentFallback>();
+            builder.AddChild(AlternateContentChoice.ElementType, () => new AlternateContentChoice());
+            builder.AddChild(AlternateContentFallback.ElementType, () => new AlternateContentFallback());
         }
     }
 }
