@@ -28,12 +28,12 @@ namespace SvgExample
             }
 
             // Get relationship ID of first slide.
-            string? sldRelId = presentationPart
+            string sldRelId = presentationPart
                 .Presentation
                 .SlideIdList?
                 .Elements<Presentation.SlideId>()
                 .Select(slideId => (string)slideId.RelationshipId!)
-                .First();
+                .FirstOrDefault() ?? throw new InvalidOperationException("Presentation has no slides.");
 
             // Get first slide's part.
             var slidePart = (SlidePart)presentationPart.GetPartById(sldRelId);
