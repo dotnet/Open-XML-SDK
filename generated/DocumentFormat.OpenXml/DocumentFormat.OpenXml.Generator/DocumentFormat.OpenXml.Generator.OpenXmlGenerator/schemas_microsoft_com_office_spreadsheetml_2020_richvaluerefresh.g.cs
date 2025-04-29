@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals.RichValueRefreshInterval>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals.RichValueRefreshInterval.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals.RichValueRefreshInterval());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals.RichValueRefreshInterval.ElementType, 1, 0, version: FileFormatVersions.Office2021)

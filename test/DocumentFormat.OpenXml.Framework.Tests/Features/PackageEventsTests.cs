@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Features.Tests
             using (var package = WordprocessingDocument.Create(ms, WordprocessingDocumentType.Document))
             {
                 package.AddPackageEventsFeature();
-                package.Features.Get<IPackageEventsFeature>().Change += a => events.Add(a.Type);
+                package.Features.Get<IPackageEventsFeature>()!.Change += a => events.Add(a.Type);
             }
 
             Assert.Collection(
@@ -45,7 +45,7 @@ namespace DocumentFormat.OpenXml.Features.Tests
                 var deleting = default(OpenXmlPart);
                 var deleted = default(OpenXmlPart);
 
-                package.Features.Get<IPartEventsFeature>().Change += a =>
+                package.Features.Get<IPartEventsFeature>()!.Change += a =>
                 {
                     events.Add(a.Type);
 

@@ -73,8 +73,8 @@ namespace DocumentFormat.OpenXml.Office.Y2022.RichValueRel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.RichValueRel.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.RichValueRel.RichValueRelRelationship>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.Y2022.RichValueRel.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office.Y2022.RichValueRel.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office.Y2022.RichValueRel.RichValueRelRelationship.ElementType, static () => new DocumentFormat.OpenXml.Office.Y2022.RichValueRel.RichValueRelRelationship());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.Y2022.RichValueRel.RichValueRelRelationship.ElementType, 0, 0, version: FileFormatVersions.Microsoft365),
@@ -190,7 +190,7 @@ namespace DocumentFormat.OpenXml.Office.Y2022.RichValueRel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Extension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)

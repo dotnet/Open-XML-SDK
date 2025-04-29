@@ -249,8 +249,8 @@ namespace DocumentFormat.OpenXml.EMMA
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Arc>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Node>();
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Arc.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Arc());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Node.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Node());
             builder.AddElement<Lattice>()
                 .AddAttribute("initial", a => a.Initial, aBuilder =>
                 {
@@ -710,11 +710,11 @@ namespace DocumentFormat.OpenXml.EMMA
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.DerivedFrom>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Info>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Lattice>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Literal>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Ink.ContextNode>();
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.DerivedFrom.ElementType, static () => new DocumentFormat.OpenXml.EMMA.DerivedFrom());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Info.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Info());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Lattice.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Lattice());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Literal.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Literal());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Ink.ContextNode.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Ink.ContextNode());
             builder.AddElement<Interpretation>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -1149,12 +1149,12 @@ namespace DocumentFormat.OpenXml.EMMA
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.DerivedFrom>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Group>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Info>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Interpretation>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.OneOf>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Sequence>();
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.DerivedFrom.ElementType, static () => new DocumentFormat.OpenXml.EMMA.DerivedFrom());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Group.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Group());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Info.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Info());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Interpretation.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Interpretation());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.OneOf.ElementType, static () => new DocumentFormat.OpenXml.EMMA.OneOf());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Sequence.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Sequence());
             builder.AddElement<OneOf>()
                 .AddAttribute("disjunction-type", a => a.DisjunctionType)
                 .AddAttribute("id", a => a.Id, aBuilder =>
@@ -1579,13 +1579,13 @@ namespace DocumentFormat.OpenXml.EMMA
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.DerivedFrom>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Group>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.GroupInfo>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Info>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Interpretation>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.OneOf>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Sequence>();
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.DerivedFrom.ElementType, static () => new DocumentFormat.OpenXml.EMMA.DerivedFrom());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Group.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Group());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.GroupInfo.ElementType, static () => new DocumentFormat.OpenXml.EMMA.GroupInfo());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Info.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Info());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Interpretation.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Interpretation());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.OneOf.ElementType, static () => new DocumentFormat.OpenXml.EMMA.OneOf());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Sequence.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Sequence());
             builder.AddElement<Group>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -2008,12 +2008,12 @@ namespace DocumentFormat.OpenXml.EMMA
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.DerivedFrom>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Group>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Info>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Interpretation>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.OneOf>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Sequence>();
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.DerivedFrom.ElementType, static () => new DocumentFormat.OpenXml.EMMA.DerivedFrom());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Group.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Group());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Info.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Info());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Interpretation.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Interpretation());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.OneOf.ElementType, static () => new DocumentFormat.OpenXml.EMMA.OneOf());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Sequence.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Sequence());
             builder.AddElement<Sequence>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -2197,10 +2197,10 @@ namespace DocumentFormat.OpenXml.EMMA
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Group>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Interpretation>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.OneOf>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Sequence>();
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Group.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Group());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Interpretation.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Interpretation());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.OneOf.ElementType, static () => new DocumentFormat.OpenXml.EMMA.OneOf());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Sequence.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Sequence());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(DocumentFormat.OpenXml.EMMA.Interpretation.ElementType, 1, 1),
@@ -2427,7 +2427,7 @@ namespace DocumentFormat.OpenXml.EMMA
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.EndPoint>();
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.EndPoint.ElementType, static () => new DocumentFormat.OpenXml.EMMA.EndPoint());
             builder.AddElement<EndPointInfo>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -2748,7 +2748,7 @@ namespace DocumentFormat.OpenXml.EMMA
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Info>();
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Info.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Info());
             builder.AddElement<Node>()
                 .AddAttribute("node-number", a => a.NodeNumber, aBuilder =>
                 {
@@ -2977,7 +2977,7 @@ namespace DocumentFormat.OpenXml.EMMA
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Info>();
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Info.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Info());
             builder.AddElement<Arc>()
                 .AddAttribute("from", a => a.From, aBuilder =>
                 {
@@ -3087,15 +3087,15 @@ namespace DocumentFormat.OpenXml.EMMA
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Derivation>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.EndPointInfo>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Grammar>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Group>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Info>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Interpretation>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Model>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.OneOf>();
-            builder.AddChild<DocumentFormat.OpenXml.EMMA.Sequence>();
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Derivation.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Derivation());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.EndPointInfo.ElementType, static () => new DocumentFormat.OpenXml.EMMA.EndPointInfo());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Grammar.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Grammar());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Group.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Group());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Info.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Info());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Interpretation.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Interpretation());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Model.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Model());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.OneOf.ElementType, static () => new DocumentFormat.OpenXml.EMMA.OneOf());
+            builder.AddChild(DocumentFormat.OpenXml.EMMA.Sequence.ElementType, static () => new DocumentFormat.OpenXml.EMMA.Sequence());
             builder.AddElement<Emma>()
                 .AddAttribute("version", a => a.Version, aBuilder =>
                 {

@@ -81,7 +81,7 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Presentation.TrackList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Presentation.TrackList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Presentation.TrackList());
             builder.AddElement<TracksInfo>()
                 .AddAttribute("displayLoc", a => a.DisplayLoc, aBuilder =>
                 {
@@ -265,7 +265,7 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Presentation.Track>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Presentation.Track.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Presentation.Track());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2019.Presentation.Track.ElementType, 0, 0, version: FileFormatVersions.Office2019)

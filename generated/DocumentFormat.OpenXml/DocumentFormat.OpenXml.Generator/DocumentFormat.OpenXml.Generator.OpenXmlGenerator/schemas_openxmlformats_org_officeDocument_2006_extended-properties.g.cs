@@ -97,33 +97,33 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.DigitalSignature>();
-            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts>();
-            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.HeadingPairs>();
-            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.HyperlinkList>();
-            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.ScaleCrop>();
-            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.LinksUpToDate>();
-            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.SharedDocument>();
-            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.HyperlinksChanged>();
-            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Pages>();
-            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Words>();
-            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Characters>();
-            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Lines>();
-            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Paragraphs>();
-            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Slides>();
-            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Notes>();
-            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.TotalTime>();
-            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.HiddenSlides>();
-            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.MultimediaClips>();
-            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.CharactersWithSpaces>();
-            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.DocumentSecurity>();
-            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Template>();
-            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Manager>();
-            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Company>();
-            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.PresentationFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.HyperlinkBase>();
-            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.Application>();
-            builder.AddChild<DocumentFormat.OpenXml.ExtendedProperties.ApplicationVersion>();
+            builder.AddChild(DocumentFormat.OpenXml.ExtendedProperties.DigitalSignature.ElementType, static () => new DocumentFormat.OpenXml.ExtendedProperties.DigitalSignature());
+            builder.AddChild(DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts.ElementType, static () => new DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts());
+            builder.AddChild(DocumentFormat.OpenXml.ExtendedProperties.HeadingPairs.ElementType, static () => new DocumentFormat.OpenXml.ExtendedProperties.HeadingPairs());
+            builder.AddChild(DocumentFormat.OpenXml.ExtendedProperties.HyperlinkList.ElementType, static () => new DocumentFormat.OpenXml.ExtendedProperties.HyperlinkList());
+            builder.AddChild(DocumentFormat.OpenXml.ExtendedProperties.ScaleCrop.ElementType, static () => new DocumentFormat.OpenXml.ExtendedProperties.ScaleCrop());
+            builder.AddChild(DocumentFormat.OpenXml.ExtendedProperties.LinksUpToDate.ElementType, static () => new DocumentFormat.OpenXml.ExtendedProperties.LinksUpToDate());
+            builder.AddChild(DocumentFormat.OpenXml.ExtendedProperties.SharedDocument.ElementType, static () => new DocumentFormat.OpenXml.ExtendedProperties.SharedDocument());
+            builder.AddChild(DocumentFormat.OpenXml.ExtendedProperties.HyperlinksChanged.ElementType, static () => new DocumentFormat.OpenXml.ExtendedProperties.HyperlinksChanged());
+            builder.AddChild(DocumentFormat.OpenXml.ExtendedProperties.Pages.ElementType, static () => new DocumentFormat.OpenXml.ExtendedProperties.Pages());
+            builder.AddChild(DocumentFormat.OpenXml.ExtendedProperties.Words.ElementType, static () => new DocumentFormat.OpenXml.ExtendedProperties.Words());
+            builder.AddChild(DocumentFormat.OpenXml.ExtendedProperties.Characters.ElementType, static () => new DocumentFormat.OpenXml.ExtendedProperties.Characters());
+            builder.AddChild(DocumentFormat.OpenXml.ExtendedProperties.Lines.ElementType, static () => new DocumentFormat.OpenXml.ExtendedProperties.Lines());
+            builder.AddChild(DocumentFormat.OpenXml.ExtendedProperties.Paragraphs.ElementType, static () => new DocumentFormat.OpenXml.ExtendedProperties.Paragraphs());
+            builder.AddChild(DocumentFormat.OpenXml.ExtendedProperties.Slides.ElementType, static () => new DocumentFormat.OpenXml.ExtendedProperties.Slides());
+            builder.AddChild(DocumentFormat.OpenXml.ExtendedProperties.Notes.ElementType, static () => new DocumentFormat.OpenXml.ExtendedProperties.Notes());
+            builder.AddChild(DocumentFormat.OpenXml.ExtendedProperties.TotalTime.ElementType, static () => new DocumentFormat.OpenXml.ExtendedProperties.TotalTime());
+            builder.AddChild(DocumentFormat.OpenXml.ExtendedProperties.HiddenSlides.ElementType, static () => new DocumentFormat.OpenXml.ExtendedProperties.HiddenSlides());
+            builder.AddChild(DocumentFormat.OpenXml.ExtendedProperties.MultimediaClips.ElementType, static () => new DocumentFormat.OpenXml.ExtendedProperties.MultimediaClips());
+            builder.AddChild(DocumentFormat.OpenXml.ExtendedProperties.CharactersWithSpaces.ElementType, static () => new DocumentFormat.OpenXml.ExtendedProperties.CharactersWithSpaces());
+            builder.AddChild(DocumentFormat.OpenXml.ExtendedProperties.DocumentSecurity.ElementType, static () => new DocumentFormat.OpenXml.ExtendedProperties.DocumentSecurity());
+            builder.AddChild(DocumentFormat.OpenXml.ExtendedProperties.Template.ElementType, static () => new DocumentFormat.OpenXml.ExtendedProperties.Template());
+            builder.AddChild(DocumentFormat.OpenXml.ExtendedProperties.Manager.ElementType, static () => new DocumentFormat.OpenXml.ExtendedProperties.Manager());
+            builder.AddChild(DocumentFormat.OpenXml.ExtendedProperties.Company.ElementType, static () => new DocumentFormat.OpenXml.ExtendedProperties.Company());
+            builder.AddChild(DocumentFormat.OpenXml.ExtendedProperties.PresentationFormat.ElementType, static () => new DocumentFormat.OpenXml.ExtendedProperties.PresentationFormat());
+            builder.AddChild(DocumentFormat.OpenXml.ExtendedProperties.HyperlinkBase.ElementType, static () => new DocumentFormat.OpenXml.ExtendedProperties.HyperlinkBase());
+            builder.AddChild(DocumentFormat.OpenXml.ExtendedProperties.Application.ElementType, static () => new DocumentFormat.OpenXml.ExtendedProperties.Application());
+            builder.AddChild(DocumentFormat.OpenXml.ExtendedProperties.ApplicationVersion.ElementType, static () => new DocumentFormat.OpenXml.ExtendedProperties.ApplicationVersion());
             builder.Particle = new CompositeParticle.Builder(ParticleType.All, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.ExtendedProperties.Template.ElementType, 0, 1),
@@ -1728,7 +1728,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTVector>();
+            builder.AddChild(DocumentFormat.OpenXml.VariantTypes.VTVector.ElementType, static () => new DocumentFormat.OpenXml.VariantTypes.VTVector());
         }
 
         /// <summary>
@@ -1799,7 +1799,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTVector>();
+            builder.AddChild(DocumentFormat.OpenXml.VariantTypes.VTVector.ElementType, static () => new DocumentFormat.OpenXml.VariantTypes.VTVector());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.VariantTypes.VTVector.ElementType, 1, 1)
@@ -1877,7 +1877,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.VariantTypes.VTBlob>();
+            builder.AddChild(DocumentFormat.OpenXml.VariantTypes.VTBlob.ElementType, static () => new DocumentFormat.OpenXml.VariantTypes.VTBlob());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.VariantTypes.VTBlob.ElementType, 1, 1)

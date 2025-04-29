@@ -84,9 +84,9 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.BagExtensions>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FeaturePropertyBag>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.BagExtensions.ElementType, static () => new DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.BagExtensions());
+            builder.AddChild(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FeaturePropertyBag.ElementType, static () => new DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FeaturePropertyBag());
             builder.AddElement<FeaturePropertyBags>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -266,9 +266,9 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.BagExtensions>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FeaturePropertyBag>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.BagExtensions.ElementType, static () => new DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.BagExtensions());
+            builder.AddChild(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FeaturePropertyBag.ElementType, static () => new DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FeaturePropertyBag());
             builder.AddElement<OpenXmlFeaturePropertyBagsElement>()
                 .AddAttribute("count", a => a.Count);
         }
@@ -422,8 +422,8 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType.ElementType, static () => new DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType());
+            builder.AddChild(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags.ElementType, static () => new DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags.ElementType, 1, 1, version: FileFormatVersions.Microsoft365),
@@ -1118,8 +1118,8 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType.ElementType, static () => new DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType());
+            builder.AddChild(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags.ElementType, static () => new DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags());
         }
 
         /// <summary>
@@ -1204,7 +1204,7 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Microsoft365)
@@ -1329,13 +1329,13 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ArrayFeatureProperty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.BagFeatureProperty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.BoolFeatureProperty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DecimalFeatureProperty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.IntFeatureProperty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.RelFeatureProperty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.StringFeatureProperty>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ArrayFeatureProperty.ElementType, static () => new DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ArrayFeatureProperty());
+            builder.AddChild(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.BagFeatureProperty.ElementType, static () => new DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.BagFeatureProperty());
+            builder.AddChild(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.BoolFeatureProperty.ElementType, static () => new DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.BoolFeatureProperty());
+            builder.AddChild(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DecimalFeatureProperty.ElementType, static () => new DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DecimalFeatureProperty());
+            builder.AddChild(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.IntFeatureProperty.ElementType, static () => new DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.IntFeatureProperty());
+            builder.AddChild(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.RelFeatureProperty.ElementType, static () => new DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.RelFeatureProperty());
+            builder.AddChild(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.StringFeatureProperty.ElementType, static () => new DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.StringFeatureProperty());
             builder.AddElement<FeaturePropertyBag>()
                 .AddAttribute("type", a => a.Type, aBuilder =>
                 {
@@ -1415,7 +1415,7 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Extension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -1502,12 +1502,12 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.Xsdboolean>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.Xsddouble>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.Xsdinteger>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.SXsdstring>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.RelXsdstring>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.XsdunsignedInt>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.Xsdboolean.ElementType, static () => new DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.Xsdboolean());
+            builder.AddChild(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.Xsddouble.ElementType, static () => new DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.Xsddouble());
+            builder.AddChild(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.Xsdinteger.ElementType, static () => new DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.Xsdinteger());
+            builder.AddChild(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.SXsdstring.ElementType, static () => new DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.SXsdstring());
+            builder.AddChild(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.RelXsdstring.ElementType, static () => new DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.RelXsdstring());
+            builder.AddChild(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.XsdunsignedInt.ElementType, static () => new DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.XsdunsignedInt());
             builder.AddElement<ArrayFeatureProperty>()
                 .AddAttribute("k", a => a.K, aBuilder =>
                 {
@@ -1943,13 +1943,13 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Border>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Protection>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Font>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Border.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Border());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Alignment.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Alignment());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Protection.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Protection());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Fill.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Fill());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Font.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Font());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.NumberingFormat());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Font.ElementType, 0, 1),

@@ -80,14 +80,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ColorMappingType>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Chart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartData>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormatOverrides>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PrintSettings>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ColorMappingType.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ColorMappingType());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Chart.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Chart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartData.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartData());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormatOverrides.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormatOverrides());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PrintSettings.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PrintSettings());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartData.ElementType, 1, 1, version: FileFormatVersions.Office2016),
@@ -709,12 +709,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HslColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HslColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PresetColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PresetColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SchemeColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SchemeColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage.ElementType, static () => new DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.RgbColorModelHex.ElementType, static () => new DocumentFormat.OpenXml.Drawing.RgbColorModelHex());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SystemColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SystemColor());
         }
 
         /// <summary>
@@ -1069,7 +1069,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartStringValue>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartStringValue.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartStringValue());
             builder.AddElement<StringLevel>()
                 .AddAttribute("ptCount", a => a.PtCount, aBuilder =>
                 {
@@ -1230,7 +1230,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericValue>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericValue.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericValue());
             builder.AddElement<NumericLevel>()
                 .AddAttribute("ptCount", a => a.PtCount, aBuilder =>
                 {
@@ -1315,9 +1315,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Formula>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NfFormula>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericLevel>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Formula.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Formula());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NfFormula.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NfFormula());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericLevel.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericLevel());
             builder.AddElement<NumericDimension>()
                 .AddAttribute("type", a => a.Type, aBuilder =>
                 {
@@ -1406,9 +1406,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Formula>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NfFormula>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringLevel>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Formula.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Formula());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NfFormula.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NfFormula());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringLevel.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringLevel());
             builder.AddElement<StringDimension>()
                 .AddAttribute("type", a => a.Type, aBuilder =>
                 {
@@ -1485,7 +1485,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Extension2>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Extension2.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Extension2());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Extension2.ElementType, 0, 0, version: FileFormatVersions.Office2016)
@@ -1629,9 +1629,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericDimension>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringDimension>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericDimension.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericDimension());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringDimension.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringDimension());
             builder.AddElement<Data>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -2104,8 +2104,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Formula>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.VXsdstring>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Formula.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Formula());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.VXsdstring.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.VXsdstring());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -2314,9 +2314,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BodyProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ListStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Paragraph>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BodyProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BodyProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ListStyle.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ListStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Paragraph.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Paragraph());
         }
 
         /// <summary>
@@ -2402,8 +2402,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.RichTextBody>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TextData>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.RichTextBody.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.RichTextBody());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TextData.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TextData());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -2523,21 +2523,21 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BlipFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BlipFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.CustomGeometry.ElementType, static () => new DocumentFormat.OpenXml.Drawing.CustomGeometry());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectDag());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GradientFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GradientFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GroupFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GroupFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Outline.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Outline());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NoFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NoFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PatternFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PatternFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PresetGeometry.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PresetGeometry());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Scene3DType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Scene3DType());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Shape3DType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Shape3DType());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SolidFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Transform2D.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Transform2D());
             builder.AddElement<ShapeProperties>()
                 .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
                 {
@@ -2656,10 +2656,10 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text.ElementType, 0, 1, version: FileFormatVersions.Office2016),
@@ -2937,10 +2937,10 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text.ElementType, 0, 1, version: FileFormatVersions.Office2016),
@@ -3072,8 +3072,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnitsLabel>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnitsLabel.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnitsLabel());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList());
             builder.AddElement<AxisUnits>()
                 .AddAttribute("unit", a => a.Unit);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -3301,8 +3301,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList());
         }
 
         /// <summary>
@@ -3525,7 +3525,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList());
             builder.AddElement<OpenXmlTickMarksElement>()
                 .AddAttribute("type", a => a.Type);
         }
@@ -3599,7 +3599,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2016)
@@ -3929,7 +3929,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Address>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Address.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Address());
             builder.AddElement<GeoLocation>()
                 .AddAttribute("latitude", a => a.Latitude)
                 .AddAttribute("longitude", a => a.Longitude)
@@ -4109,7 +4109,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocation>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocation.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocation());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocation.ElementType, 0, 1, version: FileFormatVersions.Office2016)
@@ -4189,8 +4189,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQuery>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocations>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQuery.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQuery());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocations.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocations());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQuery.ElementType, 0, 1, version: FileFormatVersions.Office2016),
@@ -4357,7 +4357,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoPolygon>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoPolygon.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoPolygon());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoPolygon.ElementType, 0, 0, version: FileFormatVersions.Office2016)
@@ -4423,7 +4423,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.CopyrightXsdstring>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.CopyrightXsdstring.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.CopyrightXsdstring());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.CopyrightXsdstring.ElementType, 0, 0, version: FileFormatVersions.Office2016)
@@ -4610,8 +4610,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Copyrights>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoPolygons>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Copyrights.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Copyrights());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoPolygons.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoPolygons());
             builder.AddElement<GeoData>()
                 .AddAttribute("entityName", a => a.EntityName, aBuilder =>
                 {
@@ -4730,8 +4730,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoData>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQuery>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoData.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoData());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQuery.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQuery());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQuery.ElementType, 0, 1, version: FileFormatVersions.Office2016),
@@ -4959,8 +4959,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointQuery>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointToEntityQuery>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointQuery.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointQuery());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointToEntityQuery.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointToEntityQuery());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointQuery.ElementType, 0, 1, version: FileFormatVersions.Office2016),
@@ -5098,7 +5098,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityType>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityType.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityType());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityType.ElementType, 0, 0, version: FileFormatVersions.Office2016)
@@ -5248,7 +5248,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildTypes>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildTypes.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildTypes());
             builder.AddElement<GeoChildEntitiesQuery>()
                 .AddAttribute("entityId", a => a.EntityId, aBuilder =>
                 {
@@ -5332,7 +5332,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoHierarchyEntity>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoHierarchyEntity.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoHierarchyEntity());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoHierarchyEntity.ElementType, 0, 0, version: FileFormatVersions.Office2016)
@@ -5399,8 +5399,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntities>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQuery>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntities.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntities());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQuery.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQuery());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQuery.ElementType, 0, 1, version: FileFormatVersions.Office2016),
@@ -5647,9 +5647,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoEntity>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQuery>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntity>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoEntity.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoEntity());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQuery.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQuery());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntity.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntity());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQuery.ElementType, 1, 1, version: FileFormatVersions.Office2016),
@@ -5756,7 +5756,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQueryResult>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQueryResult.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQueryResult());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQueryResult.ElementType, 0, 0, version: FileFormatVersions.Office2016)
@@ -5822,7 +5822,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQueryResult>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQueryResult.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQueryResult());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQueryResult.ElementType, 0, 0, version: FileFormatVersions.Office2016)
@@ -5888,7 +5888,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointToEntityQueryResult>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointToEntityQueryResult.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointToEntityQueryResult());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointToEntityQueryResult.ElementType, 0, 0, version: FileFormatVersions.Office2016)
@@ -5954,7 +5954,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQueryResult>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQueryResult.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQueryResult());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQueryResult.ElementType, 0, 0, version: FileFormatVersions.Office2016)
@@ -6020,7 +6020,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQueryResult>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQueryResult.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQueryResult());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQueryResult.ElementType, 0, 0, version: FileFormatVersions.Office2016)
@@ -6135,11 +6135,11 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQueryResults>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQueryResults>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointToEntityQueryResults>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQueryResults>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQueryResults>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQueryResults.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQueryResults());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQueryResults.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQueryResults());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointToEntityQueryResults.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointToEntityQueryResults());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQueryResults.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQueryResults());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQueryResults.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQueryResults());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQueryResults.ElementType, 0, 1, version: FileFormatVersions.Office2016),
@@ -6285,8 +6285,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Clear>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Xsdbase64Binary>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Clear.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Clear());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Xsdbase64Binary.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Xsdbase64Binary());
             builder.AddElement<GeoCache>()
                 .AddAttribute("provider", a => a.Provider, aBuilder =>
                 {
@@ -6599,8 +6599,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Xsddouble>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.BinCountXsdunsignedInt>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Xsddouble.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Xsddouble());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.BinCountXsdunsignedInt.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.BinCountXsdunsignedInt());
             builder.AddElement<Binning>()
                 .AddAttribute("intervalClosed", a => a.IntervalClosed)
                 .AddAttribute("underflow", a => a.Underflow, aBuilder =>
@@ -6761,7 +6761,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoCache>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoCache.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoCache());
             builder.AddElement<Geography>()
                 .AddAttribute("projectionType", a => a.ProjectionType)
                 .AddAttribute("viewedRegionType", a => a.ViewedRegionType)
@@ -6899,7 +6899,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.UnsignedIntegerType>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.UnsignedIntegerType.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.UnsignedIntegerType());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.UnsignedIntegerType.ElementType, 0, 0, version: FileFormatVersions.Office2016)
@@ -7226,9 +7226,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtremeValueColorPosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberColorPosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PercentageColorPosition>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtremeValueColorPosition.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtremeValueColorPosition());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberColorPosition.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberColorPosition());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PercentageColorPosition.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PercentageColorPosition());
         }
 
         /// <summary>
@@ -7327,8 +7327,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberColorPosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PercentageColorPosition>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberColorPosition.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberColorPosition());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PercentageColorPosition.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PercentageColorPosition());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberColorPosition.ElementType, 1, 1, version: FileFormatVersions.Office2016),
@@ -7511,12 +7511,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelVisibilities>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeparatorXsdstring>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelVisibilities.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelVisibilities());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeparatorXsdstring.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeparatorXsdstring());
             builder.AddElement<DataLabel>()
                 .AddAttribute("idx", a => a.Idx, aBuilder =>
                 {
@@ -7719,9 +7719,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinColorSolidColorFillProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MidColorSolidColorFillProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MaxColorSolidColorFillProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinColorSolidColorFillProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinColorSolidColorFillProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MidColorSolidColorFillProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MidColorSolidColorFillProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MaxColorSolidColorFillProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MaxColorSolidColorFillProperties());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinColorSolidColorFillProperties.ElementType, 0, 1, version: FileFormatVersions.Office2016),
@@ -7840,9 +7840,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinValueColorEndPosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MaxValueColorEndPosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueColorMiddlePosition>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinValueColorEndPosition.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinValueColorEndPosition());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MaxValueColorEndPosition.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MaxValueColorEndPosition());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueColorMiddlePosition.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueColorMiddlePosition());
             builder.AddElement<ValueColorPositions>()
                 .AddAttribute("count", a => a.Count, aBuilder =>
                 {
@@ -7965,8 +7965,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList());
             builder.AddElement<DataPoint>()
                 .AddAttribute("idx", a => a.Idx, aBuilder =>
                 {
@@ -8081,14 +8081,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabel>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelHidden>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelVisibilities>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeparatorXsdstring>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabel.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabel());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelHidden.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelHidden());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelVisibilities.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelVisibilities());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeparatorXsdstring.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeparatorXsdstring());
             builder.AddElement<DataLabels>()
                 .AddAttribute("pos", a => a.Pos);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -8282,15 +8282,15 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Aggregation>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Binning>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Geography>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ParentLabelLayout>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.RegionLabelLayout>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeriesElementVisibilities>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Statistics>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Subtotals>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Aggregation.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Aggregation());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Binning.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Binning());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Geography.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Geography());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ParentLabelLayout.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ParentLabelLayout());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.RegionLabelLayout.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.RegionLabelLayout());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeriesElementVisibilities.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeriesElementVisibilities());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Statistics.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Statistics());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Subtotals.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Subtotals());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ParentLabelLayout.ElementType, 0, 1, version: FileFormatVersions.Office2016),
@@ -8452,8 +8452,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties.ElementType, 0, 1, version: FileFormatVersions.Office2016),
@@ -8605,16 +8605,16 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataId>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabels>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataPoint>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeriesLayoutProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueColorPositions>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueColors>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisId>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataId.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataId());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabels.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabels());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataPoint.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataPoint());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeriesLayoutProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeriesLayoutProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueColorPositions.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueColorPositions());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueColors.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueColors());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisId.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisId());
             builder.AddElement<Series>()
                 .AddAttribute("layoutId", a => a.LayoutId, aBuilder =>
                 {
@@ -8752,9 +8752,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotSurface>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Series>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotSurface.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotSurface());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Series.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Series());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotSurface.ElementType, 0, 1, version: FileFormatVersions.Office2016),
@@ -8867,19 +8867,19 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnits>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.CategoryAxisScaling>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MajorGridlinesGridlines>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinorGridlinesGridlines>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TickLabels>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MajorTickMarksTickMarks>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinorTickMarksTickMarks>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueAxisScaling>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisTitle.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisTitle());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnits.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnits());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.CategoryAxisScaling.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.CategoryAxisScaling());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MajorGridlinesGridlines.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MajorGridlinesGridlines());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinorGridlinesGridlines.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinorGridlinesGridlines());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TickLabels.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TickLabels());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MajorTickMarksTickMarks.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MajorTickMarksTickMarks());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinorTickMarksTickMarks.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinorTickMarksTickMarks());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueAxisScaling.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueAxisScaling());
             builder.AddElement<Axis>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -8999,10 +8999,10 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text());
             builder.AddElement<ChartTitle>()
                 .AddAttribute("pos", a => a.Pos)
                 .AddAttribute("align", a => a.Align)
@@ -9130,10 +9130,10 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Axis>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotAreaRegion>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Axis.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Axis());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotAreaRegion.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotAreaRegion());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotAreaRegion.ElementType, 1, 1, version: FileFormatVersions.Office2016),
@@ -9247,9 +9247,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList());
             builder.AddElement<Legend>()
                 .AddAttribute("pos", a => a.Pos)
                 .AddAttribute("align", a => a.Align)
@@ -9371,8 +9371,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList());
             builder.AddElement<FormatOverride>()
                 .AddAttribute("idx", a => a.Idx, aBuilder =>
                 {
@@ -9505,12 +9505,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.OddHeaderXsdstring>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.OddFooterXsdstring>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EvenHeaderXsdstring>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EvenFooterXsdstring>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FirstHeaderXsdstring>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FirstFooterXsdstring>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.OddHeaderXsdstring.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.OddHeaderXsdstring());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.OddFooterXsdstring.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.OddFooterXsdstring());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EvenHeaderXsdstring.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EvenHeaderXsdstring());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EvenFooterXsdstring.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EvenFooterXsdstring());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FirstHeaderXsdstring.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FirstHeaderXsdstring());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FirstFooterXsdstring.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FirstFooterXsdstring());
             builder.AddElement<HeaderFooter>()
                 .AddAttribute("alignWithMargins", a => a.AlignWithMargins)
                 .AddAttribute("differentOddEven", a => a.DifferentOddEven)
@@ -9912,9 +9912,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Data>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExternalData>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Data.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Data());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExternalData.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExternalData());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExternalData.ElementType, 0, 1, version: FileFormatVersions.Office2016),
@@ -9998,10 +9998,10 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Legend>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotArea>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartTitle.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartTitle());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Legend.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Legend());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotArea.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotArea());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartTitle.ElementType, 0, 1, version: FileFormatVersions.Office2016),
@@ -10242,7 +10242,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ExtensionList());
             builder.AddElement<ColorMappingType>()
                 .AddAttribute("bg1", a => a.Background1, aBuilder =>
                 {
@@ -10382,7 +10382,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormatOverride>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormatOverride.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormatOverride());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormatOverride.ElementType, 0, 0, version: FileFormatVersions.Office2016)
@@ -10450,9 +10450,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.HeaderFooter>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageMargins>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageSetup>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.HeaderFooter.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.HeaderFooter());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageMargins.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageMargins());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageSetup.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageSetup());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.HeaderFooter.ElementType, 0, 1, version: FileFormatVersions.Office2016),
