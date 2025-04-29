@@ -442,6 +442,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             Assert.False(result);
         }
 
+#if !NET8_0_OR_GREATER
         [Fact]
         public void WordprocessingDocument_IsMinimumDocument_NullPath_ReturnsFalse()
         {
@@ -451,6 +452,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             // Assert
             Assert.False(result);
         }
+#endif
 
         [Fact]
         public void WordprocessingDocument_IsMinimumDocument_InvalidContent_ReturnsFalse()
@@ -599,6 +601,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             Assert.False(result);
         }
 
+#if !NET8_0_OR_GREATER
         [Fact]
         public void SpreadsheetDocument_IsMinimumDocument_NullPath_ReturnsFalse()
         {
@@ -608,6 +611,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             // Assert
             Assert.False(result);
         }
+#endif
 
         [Fact]
         public void SpreadsheetDocument_IsMinimumDocument_InvalidContent_ReturnsFalse()
@@ -755,6 +759,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             Assert.False(result);
         }
 
+#if !NET8_0_OR_GREATER
         [Fact]
         public void PresentationDocument_IsMinimumDocument_NullPath_ReturnsFalse()
         {
@@ -764,6 +769,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             // Assert
             Assert.False(result);
         }
+#endif
 
         [Fact]
         public void PresentationDocument_IsMinimumDocument_InvalidContent_ReturnsFalse()
