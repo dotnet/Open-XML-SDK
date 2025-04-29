@@ -83,14 +83,14 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.BackgroundFormatting>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.WholeFormatting>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Pictures.Picture>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.GraphicFrameType>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.WordprocessingGroup>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.BackgroundFormatting.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.BackgroundFormatting());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.OfficeArtExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.WholeFormatting.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.WholeFormatting());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Pictures.Picture.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Pictures.Picture());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.GraphicFrameType.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.GraphicFrameType());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.WordprocessingGroup.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.WordprocessingGroup());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas.BackgroundFormatting.ElementType, 0, 1, version: FileFormatVersions.Office2010),
@@ -199,14 +199,14 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BlipFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BlipFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectDag());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GradientFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GradientFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GroupFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GroupFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NoFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NoFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PatternFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PatternFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SolidFill());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -293,9 +293,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectDag());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Outline.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Outline());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Outline.ElementType, 0, 1),
@@ -386,11 +386,11 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Graphic>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Graphic.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Graphic());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties.ElementType, 1, 1, version: FileFormatVersions.Office2010),
@@ -525,7 +525,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Extension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)

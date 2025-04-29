@@ -304,7 +304,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.CommentEx>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Word.CommentEx.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Word.CommentEx());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2013.Word.CommentEx.ElementType, 0, 0, version: FileFormatVersions.Office2013)
@@ -401,7 +401,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.Person>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Word.Person.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Word.Person());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2013.Word.Person.ElementType, 0, 0, version: FileFormatVersions.Office2013)
@@ -499,8 +499,8 @@ namespace DocumentFormat.OpenXml.Office2013.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.SectionTitle>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Word.SectionTitle.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Word.SectionTitle());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2013.Word.SectionTitle.ElementType, 0, 1, version: FileFormatVersions.Office2013),
@@ -1020,7 +1020,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.PresenceInfo>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Word.PresenceInfo.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Word.PresenceInfo());
             builder.AddElement<Person>()
                 .AddAttribute("w15:author", a => a.Author, aBuilder =>
                 {

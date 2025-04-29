@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             var contentTypeFeature = Substitute.For<IContentTypeFeature>();
             var expectedUri = new Uri(FilePath, UriKind.Relative);
 
-            partExtensionFeature.TryGetExtension(ContentType, out string expectedExt).Returns(callInfo =>
+            partExtensionFeature.TryGetExtension(ContentType, out string? expectedExt).Returns(callInfo =>
             {
                 callInfo[1] = ExpectedExt;
                 return true;

@@ -74,7 +74,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormatting>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormatting.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormatting());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormatting.ElementType, 1, 0, version: FileFormatVersions.Office2010)
@@ -180,7 +180,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DataValidation>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.DataValidation.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.DataValidation());
             builder.AddElement<DataValidations>()
                 .AddAttribute("disablePrompts", a => a.DisablePrompts)
                 .AddAttribute("xWindow", a => a.XWindow)
@@ -253,7 +253,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SparklineGroup>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.SparklineGroup.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.SparklineGroup());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.SparklineGroup.ElementType, 1, 0, version: FileFormatVersions.Office2010)
@@ -319,7 +319,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerRef>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.SlicerRef.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.SlicerRef());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.SlicerRef.ElementType, 1, 0, version: FileFormatVersions.Office2010)
@@ -385,7 +385,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ProtectedRange>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.ProtectedRange.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.ProtectedRange());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.ProtectedRange.ElementType, 1, 0, version: FileFormatVersions.Office2010)
@@ -452,8 +452,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.IgnoredError>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.IgnoredError.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.IgnoredError());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.IgnoredError.ElementType, 0, 0, version: FileFormatVersions.Office2010),
@@ -520,7 +520,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DefinedName>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.DefinedName.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.DefinedName());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.DefinedName.ElementType, 1, 0, version: FileFormatVersions.Office2010)
@@ -586,7 +586,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotCache>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotCache.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotCache());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.PivotCache.ElementType, 1, 0)
@@ -652,7 +652,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerCache>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.SlicerCache.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.SlicerCache());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.SlicerCache.ElementType, 1, 0, version: FileFormatVersions.Office2010)
@@ -834,7 +834,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TupleSet>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.TupleSet.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.TupleSet());
             builder.AddElement<CalculatedMember>()
                 .AddAttribute("displayFolder", a => a.DisplayFolder)
                 .AddAttribute("flattenHierarchies", a => a.FlattenHierarchies)
@@ -961,7 +961,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SetLevels>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.SetLevels.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.SetLevels());
             builder.AddElement<CacheHierarchy>()
                 .AddAttribute("flattenHierarchies", a => a.FlattenHierarchies)
                 .AddAttribute("measuresSet", a => a.MeasuresSet)
@@ -1271,9 +1271,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormats>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotChanges>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotEdits>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormats.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormats());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.PivotChanges.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.PivotChanges());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.PivotEdits.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.PivotEdits());
             builder.AddElement<PivotTableDefinition>()
                 .AddAttribute("fillDownLabelsDefault", a => a.FillDownLabelsDefault)
                 .AddAttribute("visualTotalsForSets", a => a.VisualTotalsForSets)
@@ -1501,7 +1501,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.CalculatedMembers>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.CalculatedMembers.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.CalculatedMembers());
             builder.AddElement<Connection>()
                 .AddAttribute("culture", a => a.Culture)
                 .AddAttribute("embeddedDataId", a => a.EmbeddedDataId);
@@ -1651,7 +1651,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerStyle>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.SlicerStyle.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.SlicerStyle());
             builder.AddElement<SlicerStyles>()
                 .AddAttribute("defaultSlicerStyle", a => a.DefaultSlicerStyle, aBuilder =>
                 {
@@ -1733,7 +1733,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat());
             builder.AddElement<DifferentialFormats>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -1841,7 +1841,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DdeValues>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.DdeValues.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.DdeValues());
             builder.AddElement<OleItem>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -2172,7 +2172,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.CustomFilter>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.CustomFilter.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.CustomFilter());
             builder.AddElement<CustomFilters>()
                 .AddAttribute("and", a => a.And);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -2411,7 +2411,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.ExtensionList());
             builder.AddElement<DatastoreItem>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -2838,8 +2838,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ListItems>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.ListItems.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.ListItems());
             builder.AddElement<FormControlProperties>()
                 .AddAttribute("objectType", a => a.ObjectType, aBuilder =>
                 {
@@ -3015,7 +3015,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Slicer>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.Slicer.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.Slicer());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.Slicer.ElementType, 1, 0, version: FileFormatVersions.Office2010)
@@ -3134,9 +3134,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheDefinitionExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheData>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTables>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheDefinitionExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheDefinitionExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheData.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheData());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTables.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTables());
             builder.AddElement<SlicerCacheDefinition>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -3295,9 +3295,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingRule>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingRule.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingRule());
+            builder.AddChild(DocumentFormat.OpenXml.Office.Excel.ReferenceSequence.ElementType, static () => new DocumentFormat.OpenXml.Office.Excel.ReferenceSequence());
             builder.AddElement<ConditionalFormatting>()
                 .AddAttribute("pivot", a => a.Pivot);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -3512,12 +3512,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DifferentialType>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ColorScale>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DataBar>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.IconSet>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.DifferentialType.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.DifferentialType());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office.Excel.Formula.ElementType, static () => new DocumentFormat.OpenXml.Office.Excel.Formula());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.ColorScale.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.ColorScale());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.DataBar.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.DataBar());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.IconSet.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.IconSet());
             builder.AddElement<ConditionalFormattingRule>()
                 .AddAttribute("type", a => a.Type)
                 .AddAttribute("priority", a => a.Priority)
@@ -3615,7 +3615,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Extension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -3809,9 +3809,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla1>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla2>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla1.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla1());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla2.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla2());
+            builder.AddChild(DocumentFormat.OpenXml.Office.Excel.ReferenceSequence.ElementType, static () => new DocumentFormat.OpenXml.Office.Excel.ReferenceSequence());
             builder.AddElement<DataValidation>()
                 .AddAttribute("type", a => a.Type)
                 .AddAttribute("errorStyle", a => a.ErrorStyle)
@@ -4062,7 +4062,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.Excel.Formula.ElementType, static () => new DocumentFormat.OpenXml.Office.Excel.Formula());
         }
 
         /// <summary>
@@ -4313,16 +4313,16 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SeriesColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.NegativeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.AxisColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.MarkersColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Sparklines>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.SeriesColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.SeriesColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.NegativeColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.NegativeColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.AxisColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.AxisColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.MarkersColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.MarkersColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office.Excel.Formula.ElementType, static () => new DocumentFormat.OpenXml.Office.Excel.Formula());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.Sparklines.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.Sparklines());
             builder.AddElement<SparklineGroup>()
                 .AddAttribute("manualMax", a => a.ManualMax)
                 .AddAttribute("manualMin", a => a.ManualMin)
@@ -5073,7 +5073,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Sparkline>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.Sparkline.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.Sparkline());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.Sparkline.ElementType, 1, 0, version: FileFormatVersions.Office2010)
@@ -5140,8 +5140,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.Excel.Formula.ElementType, static () => new DocumentFormat.OpenXml.Office.Excel.Formula());
+            builder.AddChild(DocumentFormat.OpenXml.Office.Excel.ReferenceSequence.ElementType, static () => new DocumentFormat.OpenXml.Office.Excel.ReferenceSequence());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.Excel.Formula.ElementType, 0, 1),
@@ -5348,7 +5348,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescriptions>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescriptions.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescriptions());
             builder.AddElement<DefinedName>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -5443,7 +5443,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescription>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescription.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescription());
             builder.AddElement<ArgumentDescriptions>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -5592,8 +5592,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TupleSetHeaders>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TupleSetRows>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.TupleSetHeaders.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.TupleSetHeaders());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.TupleSetRows.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.TupleSetRows());
             builder.AddElement<TupleSet>()
                 .AddAttribute("rowCount", a => a.RowCount)
                 .AddAttribute("columnCount", a => a.ColumnCount);
@@ -5689,7 +5689,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TupleSetHeader>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.TupleSetHeader.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.TupleSetHeader());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.TupleSetHeader.ElementType, 1, 0, version: FileFormatVersions.Office2010)
@@ -5755,7 +5755,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TupleSetRow>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.TupleSetRow.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.TupleSetRow());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.TupleSetRow.ElementType, 1, 0, version: FileFormatVersions.Office2010)
@@ -5877,7 +5877,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TupleSetRowItem>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.TupleSetRowItem.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.TupleSetRowItem());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.TupleSetRowItem.ElementType, 1, 0, version: FileFormatVersions.Office2010)
@@ -6056,7 +6056,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SetLevel>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.SetLevel.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.SetLevel());
             builder.AddElement<SetLevels>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -6125,8 +6125,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Color>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.Color.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.Color());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject.ElementType, 2, 0, version: FileFormatVersions.Office2010),
@@ -6288,12 +6288,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.FillColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.BorderColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.NegativeFillColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.NegativeBorderColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.BarAxisColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.FillColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.FillColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.BorderColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.BorderColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.NegativeFillColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.NegativeFillColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.NegativeBorderColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.NegativeBorderColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.BarAxisColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.BarAxisColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject());
             builder.AddElement<DataBar>()
                 .AddAttribute("minLength", a => a.MinLength)
                 .AddAttribute("maxLength", a => a.MaxLength)
@@ -6427,8 +6427,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingIcon>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingIcon.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingIcon());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject());
             builder.AddElement<IconSet>()
                 .AddAttribute("iconSet", a => a.IconSetTypes)
                 .AddAttribute("showValue", a => a.ShowValue)
@@ -6507,13 +6507,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Border>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Protection>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Font>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Border.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Border());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Alignment.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Alignment());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Protection.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Protection());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Fill.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Fill());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Font.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Font());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.NumberingFormat());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Font.ElementType, 0, 1),
@@ -6697,8 +6697,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office.Excel.Formula.ElementType, static () => new DocumentFormat.OpenXml.Office.Excel.Formula());
             builder.AddElement<ConditionalFormattingValueObject>()
                 .AddAttribute("type", a => a.Type, aBuilder =>
                 {
@@ -6857,7 +6857,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotEdit>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.PivotEdit.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.PivotEdit());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.PivotEdit.ElementType, 1, 0, version: FileFormatVersions.Office2010)
@@ -6923,7 +6923,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotChange>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.PivotChange.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.PivotChange());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.PivotChange.ElementType, 1, 0, version: FileFormatVersions.Office2010)
@@ -6999,7 +6999,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormat>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormat.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormat());
             builder.AddElement<ConditionalFormats>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -7077,7 +7077,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CalculatedMember>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CalculatedMember.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CalculatedMember());
             builder.AddElement<CalculatedMembers>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -7148,10 +7148,10 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotArea>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotUserEdit>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TupleItems>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.PivotArea.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.PivotArea());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.PivotUserEdit.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.PivotUserEdit());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.TupleItems.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.TupleItems());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.PivotUserEdit.ElementType, 1, 1, version: FileFormatVersions.Office2010),
@@ -7273,8 +7273,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.Excel.Formula.ElementType, static () => new DocumentFormat.OpenXml.Office.Excel.Formula());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.Excel.Formula.ElementType, 1, 1),
@@ -7367,7 +7367,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Xstring>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.Xstring.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.Xstring());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.Xstring.ElementType, 1, 0, version: FileFormatVersions.Office2010)
@@ -7554,8 +7554,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences());
             builder.AddElement<PivotArea>()
                 .AddAttribute("field", a => a.Field)
                 .AddAttribute("type", a => a.Type)
@@ -7683,9 +7683,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TupleItems>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.TupleItems.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.TupleItems());
             builder.AddElement<PivotChange>()
                 .AddAttribute("allocationMethod", a => a.AllocationMethod)
                 .AddAttribute("weightExpression", a => a.WeightExpression);
@@ -7900,7 +7900,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElement>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElement.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElement());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElement.ElementType, 1, 0, version: FileFormatVersions.Office2010)
@@ -7986,7 +7986,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Value>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Value.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Value());
             builder.AddElement<DdeValues>()
                 .AddAttribute("rows", a => a.Rows)
                 .AddAttribute("cols", a => a.Columns);
@@ -8096,8 +8096,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotAreas>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.PivotAreas.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.PivotAreas());
             builder.AddElement<ConditionalFormat>()
                 .AddAttribute("scope", a => a.Scope)
                 .AddAttribute("type", a => a.Type)
@@ -8212,7 +8212,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotArea.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotArea());
             builder.AddElement<PivotAreas>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -8290,7 +8290,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElements>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElements.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElements());
             builder.AddElement<SlicerStyle>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -8526,7 +8526,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.Excel.ReferenceSequence.ElementType, static () => new DocumentFormat.OpenXml.Office.Excel.ReferenceSequence());
             builder.AddElement<IgnoredError>()
                 .AddAttribute("evalError", a => a.EvalError)
                 .AddAttribute("twoDigitTextYear", a => a.TwoDigitTextYear)
@@ -8685,7 +8685,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.Excel.ReferenceSequence.ElementType, static () => new DocumentFormat.OpenXml.Office.Excel.ReferenceSequence());
             builder.AddElement<ProtectedRange>()
                 .AddAttribute("password", a => a.Password, aBuilder =>
                 {
@@ -8882,8 +8882,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ListItem>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.ListItem.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.ListItem());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.ListItem.ElementType, 0, 0, version: FileFormatVersions.Office2010),
@@ -9050,7 +9050,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.ExtensionList());
             builder.AddElement<Slicer>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -9166,9 +9166,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheLevelsData>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSelections>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheLevelsData.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheLevelsData());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSelections.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSelections());
             builder.AddElement<OlapSlicerCache>()
                 .AddAttribute("pivotCacheId", a => a.PivotCacheId, aBuilder =>
                 {
@@ -9331,8 +9331,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItems>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItems.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItems());
             builder.AddElement<TabularSlicerCache>()
                 .AddAttribute("pivotCacheId", a => a.PivotCacheId, aBuilder =>
                 {
@@ -9571,7 +9571,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItemParent>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItemParent.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItemParent());
             builder.AddElement<OlapSlicerCacheItem>()
                 .AddAttribute("n", a => a.Name, aBuilder =>
                 {
@@ -9655,7 +9655,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItem>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItem.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItem());
             builder.AddElement<OlapSlicerCacheRange>()
                 .AddAttribute("startItem", a => a.StartItem, aBuilder =>
                 {
@@ -9727,7 +9727,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRange>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRange.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRange());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRange.ElementType, 0, 0, version: FileFormatVersions.Office2010)
@@ -9843,7 +9843,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRanges>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRanges.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRanges());
             builder.AddElement<OlapSlicerCacheLevelData>()
                 .AddAttribute("uniqueName", a => a.UniqueName, aBuilder =>
                 {
@@ -9945,7 +9945,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheLevelData>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheLevelData.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheLevelData());
             builder.AddElement<OlapSlicerCacheLevelsData>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -10023,7 +10023,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSelection>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSelection.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSelection());
             builder.AddElement<OlapSlicerCacheSelections>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -10101,7 +10101,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItemParent>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItemParent.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItemParent());
             builder.AddElement<OlapSlicerCacheSelection>()
                 .AddAttribute("n", a => a.Name, aBuilder =>
                 {
@@ -10182,7 +10182,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItem>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItem.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItem());
             builder.AddElement<TabularSlicerCacheItems>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -10319,7 +10319,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable.ElementType, 1, 0, version: FileFormatVersions.Office2010)
@@ -10386,8 +10386,8 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCache>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCache>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCache.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCache());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCache.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCache());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCache.ElementType, 1, 1, version: FileFormatVersions.Office2010),
@@ -10480,7 +10480,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SlicerCacheDefinitionExtension>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.SlicerCacheDefinitionExtension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.SlicerCacheDefinitionExtension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.SlicerCacheDefinitionExtension.ElementType, 0, 0)

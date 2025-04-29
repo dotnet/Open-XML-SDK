@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse.ElementType, 0, 1, version: FileFormatVersions.Office2019)

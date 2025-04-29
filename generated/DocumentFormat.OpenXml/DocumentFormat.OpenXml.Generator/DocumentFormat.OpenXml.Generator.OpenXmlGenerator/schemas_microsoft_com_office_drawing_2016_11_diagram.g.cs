@@ -72,7 +72,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfo>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfo.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfo());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfo.ElementType, 0, 0, version: FileFormatVersions.Office2019)
@@ -161,10 +161,10 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AutoNumberedBullet>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PictureBullet>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.CharacterBullet>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoBullet>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.AutoNumberedBullet.ElementType, static () => new DocumentFormat.OpenXml.Drawing.AutoNumberedBullet());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PictureBullet.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PictureBullet());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.CharacterBullet.ElementType, static () => new DocumentFormat.OpenXml.Drawing.CharacterBullet());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NoBullet.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NoBullet());
             builder.AddElement<DiagramAutoBullet>()
                 .AddAttribute("prefix", a => a.AutoBulletPrefix)
                 .AddAttribute("leadZeros", a => a.LeadZeros);
@@ -311,7 +311,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet());
             builder.AddElement<NumberDiagramInfo>()
                 .AddAttribute("lvl", a => a.Lvl, aBuilder =>
                 {
