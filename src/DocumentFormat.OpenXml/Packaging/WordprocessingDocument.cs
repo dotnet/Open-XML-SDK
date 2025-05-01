@@ -268,18 +268,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     if (openSettings.CheckMinimumPackage)
                     {
-                        bool isValidPath = package.IsValidDocumentPath(path, package.DocumentType);
-                        bool isMinimumDocument = package.IsMinimumPackage(package);
-
-                        if (!isValidPath)
-                        {
-                            throw new ArgumentException($"The provided path is invalid. {nameof(path)}");
-                        }
-
-                        if (!isMinimumDocument)
-                        {
-                            throw new FileFormatException($"The provided package does not conform to the minimum requirements for Office to open. {nameof(path)}");
-                        }
+                        package.ThrowIfNotMinimumPackage();
                     }
                 })
                 .Build()
@@ -299,6 +288,13 @@ namespace DocumentFormat.OpenXml.Packaging
         public static WordprocessingDocument Open(Stream stream, bool isEditable, OpenSettings openSettings)
             => CreateDefaultBuilder()
                 .UseSettings(openSettings)
+                .Use(package =>
+                {
+                    if (openSettings.CheckMinimumPackage)
+                    {
+                        package.ThrowIfNotMinimumPackage();
+                    }
+                })
                 .Build()
                 .Open(stream, isEditable);
 
@@ -315,6 +311,13 @@ namespace DocumentFormat.OpenXml.Packaging
         public static WordprocessingDocument Open(Package package, OpenSettings openSettings)
             => CreateDefaultBuilder()
                 .UseSettings(openSettings)
+                .Use(package =>
+                {
+                    if (openSettings.CheckMinimumPackage)
+                    {
+                        package.ThrowIfNotMinimumPackage();
+                    }
+                })
                 .Build()
                 .Open(package);
 
@@ -330,105 +333,20 @@ namespace DocumentFormat.OpenXml.Packaging
             => Open(package, new OpenSettings());
 
         /// <summary>
-        /// Determines whether the specified <see cref="OpenXmlPackage"/> meets the minimum requirements for a valid WordprocessingDocument package.
+        /// Throws a <see cref="FileFormatException"/> if the current <see cref="WordprocessingDocument"/> does not meet the minimum requirements for a valid package.
         /// </summary>
-        /// <param name="package">The <see cref="OpenXmlPackage"/> to validate.</param>
-        /// <returns>
-        /// <c>true</c> if the package meets the minimum requirements for a WordprocessingDocument; otherwise, <c>false</c>.
-        /// </returns>
+        /// <exception cref="FileFormatException">
+        /// Thrown when the <see cref="MainDocumentPart"/> is missing or its <see cref="Document.Body"/> is null.
+        /// </exception>
         /// <remarks>
-        /// This method checks whether the provided package is a valid <see cref="WordprocessingDocument"/> and contains a <see cref="MainDocumentPart"/> 
-        /// with a <see cref="Document"/> that has a <see cref="Body"/> element.
+        /// This method ensures that the <see cref="WordprocessingDocument"/> contains the necessary parts and structure
+        /// to be opened with Word.
         /// </remarks>
-        protected override bool IsMinimumPackage(OpenXmlPackage package)
+        protected override void ThrowIfNotMinimumPackage()
         {
-            if (package is WordprocessingDocument wordprocessingDocument)
+            if (this.MainDocumentPart?.Document?.Body is null)
             {
-                return wordprocessingDocument.MainDocumentPart?.Document?.Body is not null;
-            }
-
-            return false;
-        }
-
-        /// <summary>
-        /// Determines whether the specified file path is valid for the given WordprocessingDocument type.
-        /// </summary>
-        /// <param name="path">The file path to validate.</param>
-        /// <param name="type">The document type to validate against, such as <see cref="WordprocessingDocumentType"/>.</param>
-        /// <returns>
-        /// <c>true</c> if the file path is valid for the specified document type; otherwise, <c>false</c>.
-        /// </returns>
-        /// <remarks>
-        /// This method checks the file path for validity, including ensuring the file exists, the path is well-formed,
-        /// and the file extension matches the expected type for the given <paramref name="type"/>.
-        /// </remarks>
-        protected override bool IsValidDocumentPath(string path, Enum type)
-        {
-            if (string.IsNullOrEmpty(path))
-            {
-                return false;
-            }
-
-            if (path.IndexOfAny(System.IO.Path.GetInvalidPathChars()) >= 0)
-            {
-                return false;
-            }
-
-            try
-            {
-                if (!File.Exists(path))
-                {
-                    return false;
-                }
-
-                if (type is WordprocessingDocumentType)
-                {
-                    WordprocessingDocumentType documentType = (WordprocessingDocumentType)type;
-
-                    string ext = new FileInfo(path).Extension.ToUpperInvariant();
-
-                    switch (ext)
-                    {
-                        case ".DOCX":
-                            if (documentType != WordprocessingDocumentType.Document)
-                            {
-                                return false;
-                            }
-
-                            break;
-                        case ".DOTX":
-                            if (documentType != WordprocessingDocumentType.Template)
-                            {
-                                return false;
-                            }
-
-                            break;
-                        case ".DOCM":
-                            if (documentType != WordprocessingDocumentType.MacroEnabledDocument)
-                            {
-                                return false;
-                            }
-
-                            break;
-                        case ".DOTM":
-                            if (documentType != WordprocessingDocumentType.MacroEnabledTemplate)
-                            {
-                                return false;
-                            }
-
-                            break;
-                        default:
-                            return false;
-                    }
-
-                    return true;
-                }
-
-                return false;
-            }
-            catch
-            {
-                return false;
+                throw new FileFormatException("The provided package does not conform to the minimum requirements for Word to open.");
             }
         }
 

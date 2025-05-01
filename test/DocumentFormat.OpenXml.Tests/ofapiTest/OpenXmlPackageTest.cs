@@ -3,8 +3,10 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
+using Microsoft.Testing.Platform.MSBuild;
 using System;
 using System.IO;
+using System.IO.Packaging;
 using System.Linq;
 using Xunit;
 
@@ -874,6 +876,134 @@ namespace DocumentFormat.OpenXml.Tests
                 var webExtensionPart = worksheetPart.DrawingsPart.WebExtensionParts.First();
 
                 Assert.NotNull(webExtensionPart);
+            }
+        }
+
+        [Fact]
+        public void CheckMinimumPackageTest_ValidDocumentPath_DoesNotThrow_Wordprocessing()
+        {
+            // Arrange
+            string path = string.Concat(Path.GetTempPath(), "valid.docx");
+
+            using (WordprocessingDocument document = WordprocessingDocument.Create(path, WordprocessingDocumentType.Document))
+            {
+                document.AddMainDocumentPart().Document = new Document(new Body());
+
+            }
+
+            // Act
+            Exception exception = Record.Exception(() =>
+            {
+                using WordprocessingDocument wpd = WordprocessingDocument.Open(path, false, new OpenSettings() { CheckMinimumPackage = true });
+            });
+
+            // Assert
+            Assert.Null(exception);
+        }
+
+        [Fact]
+        public void CheckMinimumPackageTest_ValidDocumentStream_DoesNotThrow_Wordprocessing()
+        {
+            // Arrange
+            using (Stream stream = new MemoryStream())
+            {
+                using (WordprocessingDocument document = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
+                {
+                    document.AddMainDocumentPart().Document = new Document(new Body());
+                }
+
+                // Act
+                Exception exception = Record.Exception(() =>
+                {
+                    using WordprocessingDocument wpd = WordprocessingDocument.Open(stream, false, new OpenSettings() { CheckMinimumPackage = true });
+                });
+
+                // Assert
+                Assert.Null(exception);
+            }
+        }
+
+        [Fact]
+        public void CheckMinimumPackageTest_ValidDocumentPackage_DoesNotThrow_Wordprocessing()
+        {
+            // Arrange
+            string path = Path.Combine(Path.GetTempPath(), "valid.docx");
+
+            using (WordprocessingDocument document = WordprocessingDocument.Create(path, WordprocessingDocumentType.Document))
+            {
+                document.AddMainDocumentPart().Document = new Document(new Body());
+            }
+
+            // Act
+            using (Package package = Package.Open(path))
+            {
+                Exception exception = Record.Exception(() =>
+                {
+                    using WordprocessingDocument wpd = WordprocessingDocument.Open(package, new OpenSettings() { CheckMinimumPackage = true });
+                });
+
+                // Assert
+                Assert.Null(exception);
+            }
+
+        }
+
+        [Fact]
+        public void CheckMinimumPackageTest_InValidDocumentPath_Throws_Wordprocessing()
+        {
+            // Arrange
+            string path = string.Concat(Path.GetTempPath(), "invalid.docx");
+
+            using (WordprocessingDocument document = WordprocessingDocument.Create(path, WordprocessingDocumentType.Document))
+            {
+                document.AddMainDocumentPart().Document = new Document();
+            }
+
+            // Act and Assert
+            Assert.Throws<FileFormatException>(() =>
+            {
+                using WordprocessingDocument wpd = WordprocessingDocument.Open(path, false, new OpenSettings() { CheckMinimumPackage = true });
+            });
+        }
+
+        [Fact]
+        public void CheckMinimumPackageTest_InValidDocumentStream_Throws_Wordprocessing()
+        {
+            // Arrange
+            using (Stream stream = new MemoryStream())
+            {
+                using (WordprocessingDocument document = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
+                {
+                    document.AddMainDocumentPart().Document = new Document();
+                }
+
+                // Act and Assert
+                Assert.Throws<FileFormatException>(() =>
+                {
+                    using WordprocessingDocument wpd = WordprocessingDocument.Open(stream, false, new OpenSettings() { CheckMinimumPackage = true });
+                });
+            }
+        }
+
+        [Fact]
+        public void CheckMinimumPackageTest_InValidDocumentPackage_Throws_Wordprocessing()
+        {
+            // Arrange
+            using (Stream stream = new MemoryStream())
+            {
+                using (WordprocessingDocument document = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
+                {
+                    document.AddMainDocumentPart().Document = new Document();
+                }
+
+                // Act and Assert
+                using (Package package = Package.Open(stream))
+                {
+                    Assert.Throws<FileFormatException>(() =>
+                    {
+                        using WordprocessingDocument wpd = WordprocessingDocument.Open(package, new OpenSettings() { CheckMinimumPackage = true });
+                    });
+                }
             }
         }
     }

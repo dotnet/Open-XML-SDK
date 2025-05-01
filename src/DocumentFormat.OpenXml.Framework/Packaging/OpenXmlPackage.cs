@@ -106,31 +106,16 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Determines whether the specified <see cref="OpenXmlPackage"/> meets the minimum requirements for a valid package.
+        /// Throws a <see cref="FileFormatException"/> if the current <see cref="OpenXmlPackage"/> does not meet the minimum requirements for a valid package.
         /// </summary>
-        /// <param name="package">The <see cref="OpenXmlPackage"/> to validate.</param>
-        /// <returns>
-        /// <c>true</c> if the package meets the minimum requirements; otherwise, <c>false</c>.
-        /// </returns>
+        /// <exception cref="FileFormatException">
+        /// Thrown when the package does not conform to the minimum requirements for Office to open.
+        /// </exception>
         /// <remarks>
         /// This method is intended to be overridden by derived classes to implement specific validation logic
         /// for different types of Open XML packages (e.g., Wordprocessing, Spreadsheet, or Presentation documents).
         /// </remarks>
-        protected virtual bool IsMinimumPackage(OpenXmlPackage package) => false;
-
-        /// <summary>
-        /// Determines whether the specified file path is valid for the given document type.
-        /// </summary>
-        /// <param name="path">The file path to validate.</param>
-        /// <param name="type">The document type to validate against.</param>
-        /// <returns>
-        /// <c>true</c> if the file path is valid for the specified document type; otherwise, <c>false</c>.
-        /// </returns>
-        /// <remarks>
-        /// This method is intended to be overridden by derived classes to implement specific validation logic
-        /// for different types of Open XML documents (e.g., Wordprocessing, Spreadsheet, or Presentation documents).
-        /// </remarks>
-        protected virtual bool IsValidDocumentPath(string path, Enum type) => false;
+        protected virtual void ThrowIfNotMinimumPackage() => throw new FileFormatException($"The provided package does not conform to the minimum requirements for Office to open.");
 
         #region public methods
 
