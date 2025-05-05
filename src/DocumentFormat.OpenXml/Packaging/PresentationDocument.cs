@@ -234,6 +234,13 @@ namespace DocumentFormat.OpenXml.Packaging
         public static PresentationDocument Open(string path, bool isEditable, OpenSettings openSettings)
             => CreateDefaultBuilder()
                 .UseSettings(openSettings)
+                .Use(package =>
+                {
+                    if (openSettings.VerifyMinimumPackage)
+                    {
+                        package.ThrowIfNotMinimumPackage();
+                    }
+                })
                 .Build()
                 .Open(path, isEditable);
 
@@ -251,6 +258,13 @@ namespace DocumentFormat.OpenXml.Packaging
         public static PresentationDocument Open(Stream stream, bool isEditable, OpenSettings openSettings)
             => CreateDefaultBuilder()
                 .UseSettings(openSettings)
+                .Use(package =>
+                {
+                    if (openSettings.VerifyMinimumPackage)
+                    {
+                        package.ThrowIfNotMinimumPackage();
+                    }
+                })
                 .Build()
                 .Open(stream, isEditable);
 
@@ -267,120 +281,55 @@ namespace DocumentFormat.OpenXml.Packaging
         public static PresentationDocument Open(Package package, OpenSettings openSettings)
             => CreateDefaultBuilder()
                 .UseSettings(openSettings)
+                .Use(package =>
+                {
+                    if (openSettings.VerifyMinimumPackage)
+                    {
+                        package.ThrowIfNotMinimumPackage();
+                    }
+                })
                 .Build()
                 .Open(package);
 
         /// <summary>
-        /// Validates whether the specified file is a minimum valid PresentationDocument.
+        /// Validates that the current <see cref="PresentationDocument"/> meets the minimum requirements for a valid package.
         /// </summary>
-        /// <param name="path">The path to the PresentationDocument file.</param>
-        /// <param name="documentType">
-        /// The expected type of the PresentationDocument. Defaults to <see cref="PresentationDocumentType.Presentation"/>.
-        /// Supported types are:
-        /// <list type="bullet">
-        /// <item><see cref="PresentationDocumentType.Presentation"/> (.pptx)</item>
-        /// <item><see cref="PresentationDocumentType.Template"/> (.potx)</item>
-        /// <item><see cref="PresentationDocumentType.MacroEnabledPresentation"/> (.pptm)</item>
-        /// <item><see cref="PresentationDocumentType.MacroEnabledTemplate"/> (.potm)</item>
-        /// </list>
-        /// </param>
-        /// <returns>
-        /// <c>true</c> if the file is a minimum valid PresentationDocument; otherwise, <c>false</c>.
-        /// </returns>
-        /// <exception cref="ArgumentException">
-        /// Thrown when the <paramref name="documentType"/> is invalid or unsupported.
+        /// <exception cref="NotSupportedException">
+        /// Thrown if the <see cref="PresentationDocumentType"/> is <see cref="PresentationDocumentType.Slideshow"/>,
+        /// <see cref="PresentationDocumentType.MacroEnabledSlideshow"/>, or <see cref="PresentationDocumentType.AddIn"/>,
+        /// as validation for these types is not supported.
+        /// </exception>
+        /// <exception cref="FileFormatException">
+        /// Thrown if the <see cref="PresentationPart"/> does not contain valid <c>NotesSize</c> dimensions
+        /// or if the dimensions are outside the acceptable range for PowerPoint to open.
         /// </exception>
         /// <remarks>
-        /// A minimum valid PresentationDocument must meet the following criteria:
-        /// <list type="bullet">
-        /// <item>The file must exist and have a valid extension matching the <paramref name="documentType"/>.</item>
-        /// <item>The file must contain a valid <see cref="NotesSize"/> element in the presentation part.</item>
-        /// </list>
-        /// Unsupported document types include:
-        /// <list type="bullet">
-        /// <item><see cref="PresentationDocumentType.AddIn"/> (.ppam)</item>
-        /// <item><see cref="PresentationDocumentType.Slideshow"/> (.ppsx)</item>
-        /// <item><see cref="PresentationDocumentType.MacroEnabledSlideshow"/> (.ppsm)</item>
-        /// </list>
+        /// This method ensures that the document conforms to the minimum requirements for PowerPoint to open it.
         /// </remarks>
-        public static bool IsMinimumDocument(string path, PresentationDocumentType documentType = PresentationDocumentType.Presentation)
+        protected override void ThrowIfNotMinimumPackage()
         {
-            if (documentType == PresentationDocumentType.AddIn || documentType == PresentationDocumentType.Slideshow || documentType == PresentationDocumentType.MacroEnabledSlideshow)
+            if (this.DocumentType == PresentationDocumentType.Slideshow)
             {
-                throw new ArgumentException($"Invalid value: {documentType}. Allowed values are PresentationDocumentType.Presentation, PresentationDocumentType.MacroEnabledPresentation, PresentationDocumentType.MacroEnabledTemplate, and PresentationDocumentType.Template.");
+                throw new NotSupportedException("Minimum package verification for PresentationDocumentType.Slideshow (.ppsx) is not supported.");
             }
 
-            if (string.IsNullOrEmpty(path))
+            if (this.DocumentType == PresentationDocumentType.MacroEnabledSlideshow)
             {
-                return false;
+                throw new NotSupportedException("Minimum package verification for PresentationDocumentType.MacroEnabledSlideshow (.ppsm) is not supported.");
             }
 
-            if (path.IndexOfAny(System.IO.Path.GetInvalidPathChars()) >= 0)
+            if (this.DocumentType == PresentationDocumentType.AddIn)
             {
-                return false;
+                throw new NotSupportedException("Minimum package verification for PresentationDocumentType.AddIn (.ppam) is not supported.");
             }
 
-            try
+            NotesSize? notesSize = this.PresentationPart?.Presentation?.NotesSize;
+
+            if (!(notesSize is not null && notesSize.Cx is not null && notesSize.Cx.HasValue &&
+               notesSize.Cx >= 0 && notesSize.Cx <= 27273042316900 && notesSize.Cy is not null &&
+               notesSize.Cy.HasValue && notesSize.Cy >= 0 && notesSize.Cy <= 27273042316900))
             {
-                if (!File.Exists(path))
-                {
-                    return false;
-                }
-
-                string ext = new FileInfo(path).Extension.ToUpperInvariant();
-
-                switch (ext)
-                {
-                    case ".PPTX":
-                        if (documentType != PresentationDocumentType.Presentation)
-                        {
-                            return false;
-                        }
-
-                        break;
-                    case ".POTX":
-                        if (documentType != PresentationDocumentType.Template)
-                        {
-                            return false;
-                        }
-
-                        break;
-                    case ".PPTM":
-                        if (documentType != PresentationDocumentType.MacroEnabledPresentation)
-                        {
-                            return false;
-                        }
-
-                        break;
-                    case ".POTM":
-                        if (documentType != PresentationDocumentType.MacroEnabledTemplate)
-                        {
-                            return false;
-                        }
-
-                        break;
-                    case ".PPSX":
-                        throw new FileFormatException($"Validation for PresentationDocumentType.AddIn (.ppsx) is not supported.");
-                    case ".PPSM":
-                        throw new FileFormatException($"Validation for PresentationDocumentType.AddIn (.ppsm) is not supported.");
-                    case ".PPAM":
-                        throw new FileFormatException($"Validation for PresentationDocumentType.AddIn (.ppam) is not supported.");
-                    default:
-                        return false;
-                }
-
-                using (PresentationDocument presentationDocument = Open(path, false))
-                {
-                    NotesSize? notesSize = presentationDocument.PresentationPart?.Presentation?.NotesSize;
-
-                    return notesSize is not null && notesSize.Cx is not null && notesSize.Cx.HasValue &&
-                        notesSize.Cx >= 0 && notesSize.Cx <= 27273042316900 && notesSize.Cy is not null && notesSize.Cy.HasValue &&
-                        notesSize.Cy >= 0 && notesSize.Cy <= 27273042316900;
-                }
-            }
-            catch
-            {
-                return false;
+                throw new FileFormatException("The provided package does not conform to the minimum requirements for PowerPoint to open.");
             }
         }
 

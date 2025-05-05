@@ -198,6 +198,13 @@ namespace DocumentFormat.OpenXml.Packaging
         public static SpreadsheetDocument Open(string path, bool isEditable, OpenSettings openSettings)
             => CreateDefaultBuilder()
                 .UseSettings(openSettings)
+                .Use(package =>
+                {
+                    if (openSettings.VerifyMinimumPackage)
+                    {
+                        package.ThrowIfNotMinimumPackage();
+                    }
+                })
                 .Build()
                 .Open(path, isEditable);
 
@@ -215,6 +222,13 @@ namespace DocumentFormat.OpenXml.Packaging
         public static SpreadsheetDocument Open(Stream stream, bool isEditable, OpenSettings openSettings)
             => CreateDefaultBuilder()
                 .UseSettings(openSettings)
+                .Use(package =>
+                {
+                    if (openSettings.VerifyMinimumPackage)
+                    {
+                        package.ThrowIfNotMinimumPackage();
+                    }
+                })
                 .Build()
                 .Open(stream, isEditable);
 
@@ -231,6 +245,13 @@ namespace DocumentFormat.OpenXml.Packaging
         public static SpreadsheetDocument Open(Package package, OpenSettings openSettings)
             => CreateDefaultBuilder()
                 .UseSettings(openSettings)
+                .Use(package =>
+                {
+                    if (openSettings.VerifyMinimumPackage)
+                    {
+                        package.ThrowIfNotMinimumPackage();
+                    }
+                })
                 .Build()
                 .Open(package);
 
@@ -269,107 +290,35 @@ namespace DocumentFormat.OpenXml.Packaging
             => Open(package, new OpenSettings());
 
         /// <summary>
-        /// Validates whether the specified file is a minimum valid SpreadsheetDocument.
+        /// Throws a <see cref="FileFormatException"/> if the current <see cref="SpreadsheetDocument"/> 
+        /// does not meet the minimum requirements for a valid package.
         /// </summary>
-        /// <param name="path">The path to the SpreadsheetDocument file.</param>
-        /// <param name="documentType">
-        /// The expected type of the SpreadsheetDocument. Defaults to <see cref="SpreadsheetDocumentType.Workbook"/>.
-        /// Supported types are:
+        /// <exception cref="FileFormatException">
+        /// Thrown when the <see cref="SpreadsheetDocument"/> does not conform to the minimum requirements 
+        /// for Excel to open. This includes:
         /// <list type="bullet">
-        /// <item><see cref="SpreadsheetDocumentType.Workbook"/> (.xlsx)</item>
-        /// <item><see cref="SpreadsheetDocumentType.Template"/> (.xltx)</item>
-        /// <item><see cref="SpreadsheetDocumentType.MacroEnabledWorkbook"/> (.xlsm)</item>
-        /// <item><see cref="SpreadsheetDocumentType.MacroEnabledTemplate"/> (.xltm)</item>
+        /// <item><description>The document type is <see cref="SpreadsheetDocumentType.AddIn"/>.</description></item>
+        /// <item><description>The <see cref="WorkbookPart"/> is missing or does not contain a valid <see cref="Sheet"/>.</description></item>
+        /// <item><description>The <see cref="SheetData"/> in the first <see cref="WorksheetPart"/> is missing.</description></item>
         /// </list>
-        /// </param>
-        /// <returns>
-        /// <c>true</c> if the file is a minimum valid SpreadsheetDocument; otherwise, <c>false</c>.
-        /// </returns>
-        /// <exception cref="ArgumentException">
-        /// Thrown when the <paramref name="documentType"/> is invalid or unsupported.
         /// </exception>
         /// <remarks>
-        /// A minimum valid SpreadsheetDocument must meet the following criteria:
-        /// <list type="bullet">
-        /// <item>The file must exist and have a valid extension matching the <paramref name="documentType"/>.</item>
-        /// <item>The file must contain at least one <see cref="Sheet"/> element in the workbook part.</item>
-        /// <item>The file must contain at least one <see cref="SheetData"/> element in the worksheet part.</item>
-        /// </list>
-        /// Unsupported document types include <see cref="SpreadsheetDocumentType.AddIn"/> (.xlam).
+        /// This method ensures that the <see cref="SpreadsheetDocument"/> contains the necessary parts and structure
+        /// to be opened with Excel.
         /// </remarks>
-        public static bool IsMinimumDocument(string path, SpreadsheetDocumentType documentType = SpreadsheetDocumentType.Workbook)
+        protected override void ThrowIfNotMinimumPackage()
         {
-            if (documentType == SpreadsheetDocumentType.AddIn)
+            if (this.DocumentType == SpreadsheetDocumentType.AddIn)
             {
-                throw new ArgumentException($"Invalid value: {documentType}. Allowed values are SpreadsheetDocumentType.Workbook, SpreadsheetDocumentType.Template, SpreadsheetDocumentType.MacroEnabledWorkbook, and SpreadsheetDocumentType.MacroEnabledTemplate.");
+                throw new NotSupportedException("Validation for SpreadsheetDocument.AddIn (.xlam) is not supported.");
             }
 
-            if (string.IsNullOrEmpty(path))
+            Sheet? sheet = this.WorkbookPart?.Workbook?.Sheets?.GetFirstChild<Sheet>();
+            SheetData? sheetData = this.WorkbookPart?.WorksheetParts?.FirstOrDefaultAndMaxOne()?.Worksheet?.GetFirstChild<SheetData>();
+
+            if (sheet is null || sheetData is null)
             {
-                return false;
-            }
-
-            if (path.IndexOfAny(System.IO.Path.GetInvalidPathChars()) >= 0)
-            {
-                return false;
-            }
-
-            try
-            {
-                if (!File.Exists(path))
-                {
-                    return false;
-                }
-
-                string ext = new FileInfo(path).Extension.ToUpperInvariant();
-
-                switch (ext)
-                {
-                    case ".XLSX":
-                        if (documentType != SpreadsheetDocumentType.Workbook)
-                        {
-                            return false;
-                        }
-
-                        break;
-                    case ".XLTX":
-                        if (documentType != SpreadsheetDocumentType.Template)
-                        {
-                            return false;
-                        }
-
-                        break;
-                    case ".XLSM":
-                        if (documentType != SpreadsheetDocumentType.MacroEnabledWorkbook)
-                        {
-                            return false;
-                        }
-
-                        break;
-                    case ".XLTM":
-                        if (documentType != SpreadsheetDocumentType.MacroEnabledTemplate)
-                        {
-                            return false;
-                        }
-
-                        break;
-                    case ".XLAM":
-                        throw new FileFormatException($"Validation for SpreadsheetDocument.AddIn (.xlam) is not supported.");
-                    default:
-                        return false;
-                }
-
-                using (SpreadsheetDocument spreadsheetDocument = Open(path, false))
-                {
-                    Sheet? sheet = spreadsheetDocument?.WorkbookPart?.Workbook?.Sheets?.GetFirstChild<Sheet>();
-                    SheetData? sheetData = spreadsheetDocument?.WorkbookPart?.WorksheetParts?.FirstOrDefaultAndMaxOne()?.Worksheet?.GetFirstChild<SheetData>();
-
-                    return sheet is not null && sheetData is not null;
-                }
-            }
-            catch
-            {
-                return false;
+                throw new FileFormatException("The provided package does not conform to the minimum requirements for Excel to open.");
             }
         }
 

@@ -880,7 +880,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [Fact]
-        public void CheckMinimumPackageTest_ValidDocumentPath_DoesNotThrow_Wordprocessing()
+        public void VerifyMinimumPackageTest_ValidDocumentPath_DoesNotThrow_Wordprocessing()
         {
             // Arrange
             string path = string.Concat(Path.GetTempPath(), "valid.docx");
@@ -894,7 +894,7 @@ namespace DocumentFormat.OpenXml.Tests
             // Act
             Exception exception = Record.Exception(() =>
             {
-                using WordprocessingDocument wpd = WordprocessingDocument.Open(path, false, new OpenSettings() { CheckMinimumPackage = true });
+                using WordprocessingDocument wpd = WordprocessingDocument.Open(path, false, new OpenSettings() { VerifyMinimumPackage = true });
             });
 
             // Assert
@@ -902,7 +902,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [Fact]
-        public void CheckMinimumPackageTest_ValidDocumentStream_DoesNotThrow_Wordprocessing()
+        public void VerifyMinimumPackageTest_ValidDocumentStream_DoesNotThrow_Wordprocessing()
         {
             // Arrange
             using (Stream stream = new MemoryStream())
@@ -915,7 +915,7 @@ namespace DocumentFormat.OpenXml.Tests
                 // Act
                 Exception exception = Record.Exception(() =>
                 {
-                    using WordprocessingDocument wpd = WordprocessingDocument.Open(stream, false, new OpenSettings() { CheckMinimumPackage = true });
+                    using WordprocessingDocument wpd = WordprocessingDocument.Open(stream, false, new OpenSettings() { VerifyMinimumPackage = true });
                 });
 
                 // Assert
@@ -924,7 +924,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [Fact]
-        public void CheckMinimumPackageTest_ValidDocumentPackage_DoesNotThrow_Wordprocessing()
+        public void VerifyMinimumPackageTest_ValidDocumentPackage_DoesNotThrow_Wordprocessing()
         {
             // Arrange
             string path = Path.Combine(Path.GetTempPath(), "valid.docx");
@@ -939,17 +939,18 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 Exception exception = Record.Exception(() =>
                 {
-                    using WordprocessingDocument wpd = WordprocessingDocument.Open(package, new OpenSettings() { CheckMinimumPackage = true });
+                    using WordprocessingDocument wpd = WordprocessingDocument.Open(package, new OpenSettings() { VerifyMinimumPackage = true });
                 });
 
                 // Assert
                 Assert.Null(exception);
             }
-
         }
 
+        private readonly string minPackageWordExMsg = "The provided package does not conform to the minimum requirements for Word to open.";
+
         [Fact]
-        public void CheckMinimumPackageTest_InValidDocumentPath_Throws_Wordprocessing()
+        public void VerifyMinimumPackageTest_InValidDocumentPath_Throws_Wordprocessing()
         {
             // Arrange
             string path = string.Concat(Path.GetTempPath(), "invalid.docx");
@@ -960,14 +961,16 @@ namespace DocumentFormat.OpenXml.Tests
             }
 
             // Act and Assert
-            Assert.Throws<FileFormatException>(() =>
+            FileFormatException ex = Assert.Throws<FileFormatException>(() =>
             {
-                using WordprocessingDocument wpd = WordprocessingDocument.Open(path, false, new OpenSettings() { CheckMinimumPackage = true });
+                using WordprocessingDocument wpd = WordprocessingDocument.Open(path, false, new OpenSettings() { VerifyMinimumPackage = true });
             });
+
+            Assert.Equal(minPackageWordExMsg, ex.Message);
         }
 
         [Fact]
-        public void CheckMinimumPackageTest_InValidDocumentStream_Throws_Wordprocessing()
+        public void VerifyMinimumPackageTest_InValidDocumentStream_Throws_Wordprocessing()
         {
             // Arrange
             using (Stream stream = new MemoryStream())
@@ -978,15 +981,17 @@ namespace DocumentFormat.OpenXml.Tests
                 }
 
                 // Act and Assert
-                Assert.Throws<FileFormatException>(() =>
+                FileFormatException ex = Assert.Throws<FileFormatException>(() =>
                 {
-                    using WordprocessingDocument wpd = WordprocessingDocument.Open(stream, false, new OpenSettings() { CheckMinimumPackage = true });
+                    using WordprocessingDocument wpd = WordprocessingDocument.Open(stream, false, new OpenSettings() { VerifyMinimumPackage = true });
                 });
+
+                Assert.Equal(minPackageWordExMsg, ex.Message);
             }
         }
 
         [Fact]
-        public void CheckMinimumPackageTest_InValidDocumentPackage_Throws_Wordprocessing()
+        public void VerifyMinimumPackageTest_InValidDocumentPackage_Throws_Wordprocessing()
         {
             // Arrange
             using (Stream stream = new MemoryStream())
@@ -999,11 +1004,411 @@ namespace DocumentFormat.OpenXml.Tests
                 // Act and Assert
                 using (Package package = Package.Open(stream))
                 {
-                    Assert.Throws<FileFormatException>(() =>
+                    FileFormatException ex = Assert.Throws<FileFormatException>(() =>
                     {
-                        using WordprocessingDocument wpd = WordprocessingDocument.Open(package, new OpenSettings() { CheckMinimumPackage = true });
+                        using WordprocessingDocument wpd = WordprocessingDocument.Open(package, new OpenSettings() { VerifyMinimumPackage = true });
                     });
+
+                    Assert.Equal(minPackageWordExMsg, ex.Message);
                 }
+            }
+        }
+
+        [Fact]
+        public void VerifyMinimumPackageTest_ValidDocumentPath_DoesNotThrow_Spreadsheet()
+        {
+            // Arrange
+            string path = string.Concat(Path.GetTempPath(), "valid.xlsx");
+
+            using (SpreadsheetDocument document = SpreadsheetDocument.Create(path, SpreadsheetDocumentType.Workbook))
+            {
+                WorkbookPart wbp = document.AddWorkbookPart();
+                WorksheetPart wsp = wbp.AddNewPart<WorksheetPart>();
+                wbp.Workbook = new Spreadsheet.Workbook(new Spreadsheet.Sheets(new Spreadsheet.Sheet() { Id = wbp.GetIdOfPart(wsp), SheetId = 1, Name = "Sheet1" }));
+                wsp.Worksheet = new Spreadsheet.Worksheet(new Spreadsheet.SheetData());
+            }
+
+            // Act
+            Exception exception = Record.Exception(() =>
+            {
+                using SpreadsheetDocument ssd = SpreadsheetDocument.Open(path, false, new OpenSettings() { VerifyMinimumPackage = true });
+            });
+
+            // Assert
+            Assert.Null(exception);
+        }
+
+        [Fact]
+        public void VerifyMinimumPackageTest_ValidDocumentStream_DoesNotThrow_Spreadsheet()
+        {
+            // Arrange
+            using (Stream stream = new MemoryStream())
+            {
+                using (SpreadsheetDocument document = SpreadsheetDocument.Create(stream, SpreadsheetDocumentType.MacroEnabledTemplate))
+                {
+                    WorkbookPart wbp = document.AddWorkbookPart();
+                    WorksheetPart wsp = wbp.AddNewPart<WorksheetPart>();
+                    wbp.Workbook = new Spreadsheet.Workbook(new Spreadsheet.Sheets(new Spreadsheet.Sheet() { Id = wbp.GetIdOfPart(wsp), SheetId = 1, Name = "Sheet1" }));
+                    wsp.Worksheet = new Spreadsheet.Worksheet(new Spreadsheet.SheetData());
+                }
+
+                // Act
+                Exception exception = Record.Exception(() =>
+                {
+                    using SpreadsheetDocument ssd = SpreadsheetDocument.Open(stream, false, new OpenSettings() { VerifyMinimumPackage = true });
+                });
+
+                // Assert
+                Assert.Null(exception);
+            }
+        }
+
+        [Fact]
+        public void VerifyMinimumPackageTest_ValidDocumentPackage_DoesNotThrow_Spreadsheet()
+        {
+            // Arrange
+            string path = Path.Combine(Path.GetTempPath(), "valid.xlsx");
+
+            using (SpreadsheetDocument document = SpreadsheetDocument.Create(path, SpreadsheetDocumentType.Template))
+            {
+                WorkbookPart wbp = document.AddWorkbookPart();
+                WorksheetPart wsp = wbp.AddNewPart<WorksheetPart>();
+                wbp.Workbook = new Spreadsheet.Workbook(new Spreadsheet.Sheets(new Spreadsheet.Sheet() { Id = wbp.GetIdOfPart(wsp), SheetId = 1, Name = "Sheet1" }));
+                wsp.Worksheet = new Spreadsheet.Worksheet(new Spreadsheet.SheetData());
+            }
+
+            // Act
+            using (Package package = Package.Open(path))
+            {
+                Exception exception = Record.Exception(() =>
+                {
+                    using SpreadsheetDocument ssd = SpreadsheetDocument.Open(package, new OpenSettings() { VerifyMinimumPackage = true });
+                });
+
+                // Assert
+                Assert.Null(exception);
+            }
+        }
+
+        private readonly string spreadsheetExMsg = "The provided package does not conform to the minimum requirements for Excel to open.";
+
+        [Fact]
+        public void VerifyMinimumPackageTest_InValidDocumentPath_Throws_Spreadsheet()
+        {
+            // Arrange
+            string path = string.Concat(Path.GetTempPath(), "invalid.xlsx");
+
+            using (SpreadsheetDocument document = SpreadsheetDocument.Create(path, SpreadsheetDocumentType.MacroEnabledWorkbook))
+            {
+                WorkbookPart wbp = document.AddWorkbookPart();
+                WorksheetPart wsp = wbp.AddNewPart<WorksheetPart>();
+                wbp.Workbook = new Spreadsheet.Workbook(new Spreadsheet.Sheets(new Spreadsheet.Sheet() { Id = wbp.GetIdOfPart(wsp), SheetId = 1, Name = "Sheet1" }));
+            }
+
+            // Act and Assert
+            FileFormatException ex = Assert.Throws<FileFormatException>(() =>
+            {
+                using SpreadsheetDocument ssd = SpreadsheetDocument.Open(path, false, new OpenSettings() { VerifyMinimumPackage = true });
+            });
+
+            Assert.Equal(spreadsheetExMsg, ex.Message);
+        }
+
+        [Fact]
+        public void VerifyMinimumPackageTest_InValidDocumentStream_Throws_Spreadsheet()
+        {
+            // Arrange
+            using (Stream stream = new MemoryStream())
+            {
+                using (SpreadsheetDocument document = SpreadsheetDocument.Create(stream, SpreadsheetDocumentType.Workbook))
+                {
+                    WorkbookPart wbp = document.AddWorkbookPart();
+                    WorksheetPart wsp = wbp.AddNewPart<WorksheetPart>();
+                    wsp.Worksheet = new Spreadsheet.Worksheet(new Spreadsheet.SheetData());
+                }
+
+                // Act and Assert
+                FileFormatException ex = Assert.Throws<FileFormatException>(() =>
+                {
+                    using SpreadsheetDocument ssd = SpreadsheetDocument.Open(stream, false, new OpenSettings() { VerifyMinimumPackage = true });
+                });
+
+                Assert.Equal(spreadsheetExMsg, ex.Message);
+            }
+        }
+
+        [Fact]
+        public void VerifyMinimumPackageTest_InValidDocumentPackage_Throws_Spreadsheet()
+        {
+            // Arrange
+            using (Stream stream = new MemoryStream())
+            {
+                using (SpreadsheetDocument document = SpreadsheetDocument.Create(stream, SpreadsheetDocumentType.Workbook))
+                {
+                    WorkbookPart wbp = document.AddWorkbookPart();
+                    WorksheetPart wsp = wbp.AddNewPart<WorksheetPart>();
+                }
+
+                // Act and Assert
+                using (Package package = Package.Open(stream))
+                {
+                    FileFormatException ex = Assert.Throws<FileFormatException>(() =>
+                    {
+                        using SpreadsheetDocument wpd = SpreadsheetDocument.Open(package, new OpenSettings() { VerifyMinimumPackage = true });
+                    });
+
+                    Assert.Equal(spreadsheetExMsg, ex.Message);
+                }
+            }
+        }
+
+        [Fact]
+        public void VerifyMinimumPackageTest_AddInDocumentPackage_Throws_Spreadsheet()
+        {
+            // Arrange
+            using (Stream stream = new MemoryStream())
+            {
+                using (SpreadsheetDocument document = SpreadsheetDocument.Create(stream, SpreadsheetDocumentType.AddIn))
+                {
+                    WorkbookPart wbp = document.AddWorkbookPart();
+                    WorksheetPart wsp = wbp.AddNewPart<WorksheetPart>();
+                    wbp.Workbook = new Spreadsheet.Workbook(new Spreadsheet.Sheets(new Spreadsheet.Sheet() { Id = wbp.GetIdOfPart(wsp), SheetId = 1, Name = "Sheet1" }));
+                    wsp.Worksheet = new Spreadsheet.Worksheet(new Spreadsheet.SheetData());
+                }
+
+                // Act and Assert
+                using (Package package = Package.Open(stream))
+                {
+                    NotSupportedException ex = Assert.Throws<NotSupportedException>(() =>
+                    {
+                        using SpreadsheetDocument wpd = SpreadsheetDocument.Open(package, new OpenSettings() { VerifyMinimumPackage = true });
+                    });
+
+                    Assert.Equal("Validation for SpreadsheetDocument.AddIn (.xlam) is not supported.", ex.Message);
+                }
+            }
+        }
+
+        [Fact]
+        public void VerifyMinimumPackageTest_ValidDocumentPath_DoesNotThrow_Presentation()
+        {
+            // Arrange
+            string path = string.Concat(Path.GetTempPath(), "valid.pptx");
+
+            using (PresentationDocument presentationDocument = PresentationDocument.Create(path, PresentationDocumentType.Presentation))
+            {
+                // create presentation part
+                PresentationPart presentationPart = presentationDocument.AddPresentationPart();
+                presentationPart.Presentation = new Presentation.Presentation();
+                presentationPart.Presentation.AddChild(new Presentation.NotesSize() { Cx = 913607, Cy = 913607 });
+            }
+
+
+            // Act
+            Exception exception = Record.Exception(() =>
+            {
+                using PresentationDocument pd = PresentationDocument.Open(path, false, new OpenSettings() { VerifyMinimumPackage = true });
+            });
+
+            // Assert
+            Assert.Null(exception);
+        }
+
+        [Fact]
+        public void VerifyMinimumPackageTest_ValidDocumentStream_DoesNotThrow_Presentation()
+        {
+            // Arrange
+            using (Stream stream = new MemoryStream())
+            {
+                using (PresentationDocument presentationDocument = PresentationDocument.Create(stream, PresentationDocumentType.Presentation))
+                {
+                    // create presentation part
+                    PresentationPart presentationPart = presentationDocument.AddPresentationPart();
+                    presentationPart.Presentation = new Presentation.Presentation();
+                    presentationPart.Presentation.AddChild(new Presentation.NotesSize() { Cx = 913607, Cy = 913607 });
+                }
+
+                // Act
+                Exception exception = Record.Exception(() =>
+                {
+                    using PresentationDocument pd = PresentationDocument.Open(stream, false, new OpenSettings() { VerifyMinimumPackage = true });
+                });
+
+                // Assert
+                Assert.Null(exception);
+            }
+        }
+
+        [Fact]
+        public void VerifyMinimumPackageTest_ValidDocumentPackage_DoesNotThrow_Presentation()
+        {
+            // Arrange
+            string path = Path.Combine(Path.GetTempPath(), "valid.xlsx");
+
+            using (SpreadsheetDocument document = SpreadsheetDocument.Create(path, SpreadsheetDocumentType.Template))
+            {
+                WorkbookPart wbp = document.AddWorkbookPart();
+                WorksheetPart wsp = wbp.AddNewPart<WorksheetPart>();
+                wbp.Workbook = new Spreadsheet.Workbook(new Spreadsheet.Sheets(new Spreadsheet.Sheet() { Id = wbp.GetIdOfPart(wsp), SheetId = 1, Name = "Sheet1" }));
+                wsp.Worksheet = new Spreadsheet.Worksheet(new Spreadsheet.SheetData());
+            }
+
+            // Act
+            using (Package package = Package.Open(path))
+            {
+                Exception exception = Record.Exception(() =>
+                {
+                    using SpreadsheetDocument ssd = SpreadsheetDocument.Open(package, new OpenSettings() { VerifyMinimumPackage = true });
+                });
+
+                // Assert
+                Assert.Null(exception);
+            }
+        }
+
+        private readonly string presentationExMsg = "The provided package does not conform to the minimum requirements for PowerPoint to open.";
+
+        [Fact]
+        public void VerifyMinimumPackageTest_InValidDocumentPath_Throws_Presentation()
+        {
+            // Arrange
+            string path = string.Concat(Path.GetTempPath(), "invalid.pptx");
+
+            using (PresentationDocument presentationDocument = PresentationDocument.Create(path, PresentationDocumentType.Presentation))
+            {
+                // create presentation part
+                PresentationPart presentationPart = presentationDocument.AddPresentationPart();
+                presentationPart.Presentation = new Presentation.Presentation();
+                presentationPart.Presentation.AddChild(new Presentation.NotesSize() { Cx = -2, Cy = 913607 });
+            }
+
+            // Act and Assert
+            FileFormatException ex = Assert.Throws<FileFormatException>(() =>
+            {
+                using PresentationDocument ssd = PresentationDocument.Open(path, false, new OpenSettings() { VerifyMinimumPackage = true });
+            });
+
+            Assert.Equal(presentationExMsg, ex.Message);
+        }
+
+        [Fact]
+        public void VerifyMinimumPackageTest_InValidDocumentStream_Throws_Presentation()
+        {
+            // Arrange
+            using (Stream stream = new MemoryStream())
+            {
+                using (PresentationDocument presentationDocument = PresentationDocument.Create(stream, PresentationDocumentType.Presentation))
+                {
+                    // create presentation part
+                    PresentationPart presentationPart = presentationDocument.AddPresentationPart();
+                    presentationPart.Presentation = new Presentation.Presentation();
+                }
+
+                // Act and Assert
+                FileFormatException ex = Assert.Throws<FileFormatException>(() =>
+                {
+                    using PresentationDocument ssd = PresentationDocument.Open(stream, false, new OpenSettings() { VerifyMinimumPackage = true });
+                });
+
+                Assert.Equal(presentationExMsg, ex.Message);
+            }
+        }
+
+        [Fact]
+        public void VerifyMinimumPackageTest_InValidDocumentPackage_Throws_Presentation()
+        {
+            // Arrange
+            using (Stream stream = new MemoryStream())
+            {
+                using (PresentationDocument presentationDocument = PresentationDocument.Create(stream, PresentationDocumentType.Presentation))
+                {
+                    // create presentation part
+                    PresentationPart presentationPart = presentationDocument.AddPresentationPart();
+                    presentationPart.Presentation = new Presentation.Presentation();
+                }
+
+                // Act and Assert
+                using (Package package = Package.Open(stream))
+                {
+                    FileFormatException ex = Assert.Throws<FileFormatException>(() =>
+                    {
+                        using PresentationDocument pd = PresentationDocument.Open(package, new OpenSettings() { VerifyMinimumPackage = true });
+                    });
+
+                    Assert.Equal(presentationExMsg, ex.Message);
+                }
+            }
+        }
+
+        [Fact]
+        public void VerifyMinimumPackageTest_AddInDocumentPackage_Throws_Presentation()
+        {
+            // Arrange
+            using (Stream stream = new MemoryStream())
+            {
+                using (PresentationDocument presentationDocument = PresentationDocument.Create(stream, PresentationDocumentType.AddIn))
+                {
+                    // create presentation part
+                    PresentationPart presentationPart = presentationDocument.AddPresentationPart();
+                    presentationPart.Presentation = new Presentation.Presentation();
+                    presentationPart.Presentation.AddChild(new Presentation.NotesSize() { Cx = 913607, Cy = 913607 });
+                }
+
+                // Act and Assert
+                NotSupportedException ex = Assert.Throws<NotSupportedException>(() =>
+                {
+                    using PresentationDocument pd = PresentationDocument.Open(stream, false, new OpenSettings() { VerifyMinimumPackage = true });
+                });
+
+                Assert.Equal("Minimum package verification for PresentationDocumentType.AddIn (.ppam) is not supported.", ex.Message);
+            }
+        }
+
+        [Fact]
+        public void VerifyMinimumPackageTest_MacroEnabledSlideshowDocumentPackage_Throws_Presentation()
+        {
+            // Arrange
+            using (Stream stream = new MemoryStream())
+            {
+                using (PresentationDocument presentationDocument = PresentationDocument.Create(stream, PresentationDocumentType.MacroEnabledSlideshow))
+                {
+                    // create presentation part
+                    PresentationPart presentationPart = presentationDocument.AddPresentationPart();
+                    presentationPart.Presentation = new Presentation.Presentation();
+                    presentationPart.Presentation.AddChild(new Presentation.NotesSize() { Cx = 913607, Cy = 913607 });
+                }
+
+                // Act and Assert
+                NotSupportedException ex = Assert.Throws<NotSupportedException>(() =>
+                {
+                    using PresentationDocument pd = PresentationDocument.Open(stream, false, new OpenSettings() { VerifyMinimumPackage = true });
+                });
+
+                Assert.Equal("Minimum package verification for PresentationDocumentType.MacroEnabledSlideshow (.ppsm) is not supported.", ex.Message);
+            }
+        }
+
+        [Fact]
+        public void VerifyMinimumPackageTest_SlideshowDocumentPackage_Throws_Presentation()
+        {
+            // Arrange
+            using (Stream stream = new MemoryStream())
+            {
+                using (PresentationDocument presentationDocument = PresentationDocument.Create(stream, PresentationDocumentType.Slideshow))
+                {
+                    // create presentation part
+                    PresentationPart presentationPart = presentationDocument.AddPresentationPart();
+                    presentationPart.Presentation = new Presentation.Presentation();
+                    presentationPart.Presentation.AddChild(new Presentation.NotesSize() { Cx = 913607, Cy = 913607 });
+                }
+
+                // Act and Assert
+                NotSupportedException ex = Assert.Throws<NotSupportedException>(() =>
+                {
+                    using PresentationDocument pd = PresentationDocument.Open(stream, false, new OpenSettings() { VerifyMinimumPackage = true });
+                });
+
+                Assert.Equal("Minimum package verification for PresentationDocumentType.Slideshow (.ppsx) is not supported.", ex.Message);
             }
         }
     }

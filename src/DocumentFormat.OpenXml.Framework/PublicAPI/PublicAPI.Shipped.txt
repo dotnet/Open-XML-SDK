@@ -1009,5 +1009,5 @@ DocumentFormat.OpenXml.OpenXmlPartWriterSettings.Encoding.set -> void
 DocumentFormat.OpenXml.OpenXmlPartWriterSettings.OpenXmlPartWriterSettings() -> void
 DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart, DocumentFormat.OpenXml.OpenXmlPartWriterSettings! settings) -> void
 DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(System.IO.Stream! partStream, DocumentFormat.OpenXml.OpenXmlPartWriterSettings! settings) -> void
-DocumentFormat.OpenXml.Packaging.OpenSettings.CheckMinimumPackage.get -> bool
-DocumentFormat.OpenXml.Packaging.OpenSettings.CheckMinimumPackage.set -> void
+DocumentFormat.OpenXml.Packaging.OpenSettings.VerifyMinimumPackage.get -> bool
+DocumentFormat.OpenXml.Packaging.OpenSettings.VerifyMinimumPackage.set -> void

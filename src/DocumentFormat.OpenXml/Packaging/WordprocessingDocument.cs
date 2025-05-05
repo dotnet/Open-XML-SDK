@@ -266,7 +266,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 .UseSettings(openSettings)
                 .Use(package =>
                 {
-                    if (openSettings.CheckMinimumPackage)
+                    if (openSettings.VerifyMinimumPackage)
                     {
                         package.ThrowIfNotMinimumPackage();
                     }
@@ -290,7 +290,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 .UseSettings(openSettings)
                 .Use(package =>
                 {
-                    if (openSettings.CheckMinimumPackage)
+                    if (openSettings.VerifyMinimumPackage)
                     {
                         package.ThrowIfNotMinimumPackage();
                     }
@@ -313,7 +313,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 .UseSettings(openSettings)
                 .Use(package =>
                 {
-                    if (openSettings.CheckMinimumPackage)
+                    if (openSettings.VerifyMinimumPackage)
                     {
                         package.ThrowIfNotMinimumPackage();
                     }

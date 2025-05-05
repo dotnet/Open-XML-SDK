@@ -85,6 +85,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// When set to <c>true</c>, the document will be checked to ensure it contains the necessary parts and structure
         /// to be considered a valid Open XML package.
         /// </remarks>
-        public bool CheckMinimumPackage { get; set; }
+        public bool VerifyMinimumPackage { get; set; }
     }
 }
