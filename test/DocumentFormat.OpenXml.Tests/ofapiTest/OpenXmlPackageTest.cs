@@ -23,8 +23,14 @@ using x = DocumentFormat.OpenXml.Spreadsheet;
 namespace DocumentFormat.OpenXml.Tests
 {
     /// <summary>
-    /// Summary description for OpenXmlPackageTest
+    /// Contains unit tests for validating the behavior of Open XML packages, including WordprocessingDocument,
+    /// PresentationDocument, and SpreadsheetDocument. These tests cover scenarios such as auto-save functionality,
+    /// document type changes, part relationships, and minimum package verification.
     /// </summary>
+    /// <remarks>
+    /// This class uses the xUnit framework for testing and includes tests for various Open XML document types.
+    /// It ensures the correctness of document operations, relationships, and compliance with Open XML standards.
+    /// </remarks>
     public class OpenXmlPackageTest
     {
         [Fact]
@@ -888,7 +894,6 @@ namespace DocumentFormat.OpenXml.Tests
             using (WordprocessingDocument document = WordprocessingDocument.Create(path, WordprocessingDocumentType.Document))
             {
                 document.AddMainDocumentPart().Document = new Document(new Body());
-
             }
 
             // Act
@@ -1202,7 +1207,6 @@ namespace DocumentFormat.OpenXml.Tests
                 presentationPart.Presentation = new Presentation.Presentation();
                 presentationPart.Presentation.AddChild(new Presentation.NotesSize() { Cx = 913607, Cy = 913607 });
             }
-
 
             // Act
             Exception exception = Record.Exception(() =>
