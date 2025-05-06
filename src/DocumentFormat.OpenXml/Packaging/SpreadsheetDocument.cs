@@ -290,11 +290,11 @@ namespace DocumentFormat.OpenXml.Packaging
             => Open(package, new OpenSettings());
 
         /// <summary>
-        /// Throws a <see cref="FileFormatException"/> if the current <see cref="SpreadsheetDocument"/> 
+        /// Throws a <see cref="FileFormatException"/> if the current <see cref="SpreadsheetDocument"/>
         /// does not meet the minimum requirements for a valid package.
         /// </summary>
         /// <exception cref="FileFormatException">
-        /// Thrown when the <see cref="SpreadsheetDocument"/> does not conform to the minimum requirements 
+        /// Thrown when the <see cref="SpreadsheetDocument"/> does not conform to the minimum requirements
         /// for Excel to open. This includes:
         /// <list type="bullet">
         /// <item><description>The document type is <see cref="SpreadsheetDocumentType.AddIn"/>.</description></item>
