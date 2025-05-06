@@ -105,6 +105,18 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
+        /// <summary>
+        /// Throws a <see cref="FileFormatException"/> if the current <see cref="OpenXmlPackage"/> does not meet the minimum requirements for a valid package.
+        /// </summary>
+        /// <exception cref="FileFormatException">
+        /// Thrown when the package does not conform to the minimum requirements for Office to open.
+        /// </exception>
+        /// <remarks>
+        /// This method is intended to be overridden by derived classes to implement specific validation logic
+        /// for different types of Open XML packages (e.g., Wordprocessing, Spreadsheet, or Presentation documents).
+        /// </remarks>
+        protected virtual void ThrowIfNotMinimumPackage() => throw new FileFormatException("The provided package does not conform to the minimum requirements for Office to open.");
+
         #region public methods
 
         /// <summary>

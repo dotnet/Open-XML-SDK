@@ -264,6 +264,13 @@ namespace DocumentFormat.OpenXml.Packaging
         public static WordprocessingDocument Open(string path, bool isEditable, OpenSettings openSettings)
             => CreateDefaultBuilder()
                 .UseSettings(openSettings)
+                .Use(package =>
+                {
+                    if (openSettings.VerifyMinimumPackage)
+                    {
+                        package.ThrowIfNotMinimumPackage();
+                    }
+                })
                 .Build()
                 .Open(path, isEditable);
 
@@ -281,6 +288,13 @@ namespace DocumentFormat.OpenXml.Packaging
         public static WordprocessingDocument Open(Stream stream, bool isEditable, OpenSettings openSettings)
             => CreateDefaultBuilder()
                 .UseSettings(openSettings)
+                .Use(package =>
+                {
+                    if (openSettings.VerifyMinimumPackage)
+                    {
+                        package.ThrowIfNotMinimumPackage();
+                    }
+                })
                 .Build()
                 .Open(stream, isEditable);
 
@@ -297,6 +311,13 @@ namespace DocumentFormat.OpenXml.Packaging
         public static WordprocessingDocument Open(Package package, OpenSettings openSettings)
             => CreateDefaultBuilder()
                 .UseSettings(openSettings)
+                .Use(package =>
+                {
+                    if (openSettings.VerifyMinimumPackage)
+                    {
+                        package.ThrowIfNotMinimumPackage();
+                    }
+                })
                 .Build()
                 .Open(package);
 
@@ -310,6 +331,24 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="OpenXmlPackageException">Thrown when the package is not valid Open XML WordprocessingDocument.</exception>
         public static WordprocessingDocument Open(Package package)
             => Open(package, new OpenSettings());
+
+        /// <summary>
+        /// Throws a <see cref="FileFormatException"/> if the current <see cref="WordprocessingDocument"/> does not meet the minimum requirements for a valid package.
+        /// </summary>
+        /// <exception cref="FileFormatException">
+        /// Thrown when the <see cref="MainDocumentPart"/> is missing or its <see cref="Document.Body"/> is null.
+        /// </exception>
+        /// <remarks>
+        /// This method ensures that the <see cref="WordprocessingDocument"/> contains the necessary parts and structure
+        /// to be opened with Word.
+        /// </remarks>
+        protected override void ThrowIfNotMinimumPackage()
+        {
+            if (this.MainDocumentPart?.Document?.Body is null)
+            {
+                throw new FileFormatException("The provided package does not conform to the minimum requirements for Word to open.");
+            }
+        }
 
         /// <summary>
         /// Changes the document type.

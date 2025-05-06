@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Builder;
 using DocumentFormat.OpenXml.Features;
+using DocumentFormat.OpenXml.Spreadsheet;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
@@ -197,6 +198,13 @@ namespace DocumentFormat.OpenXml.Packaging
         public static SpreadsheetDocument Open(string path, bool isEditable, OpenSettings openSettings)
             => CreateDefaultBuilder()
                 .UseSettings(openSettings)
+                .Use(package =>
+                {
+                    if (openSettings.VerifyMinimumPackage)
+                    {
+                        package.ThrowIfNotMinimumPackage();
+                    }
+                })
                 .Build()
                 .Open(path, isEditable);
 
@@ -214,6 +222,13 @@ namespace DocumentFormat.OpenXml.Packaging
         public static SpreadsheetDocument Open(Stream stream, bool isEditable, OpenSettings openSettings)
             => CreateDefaultBuilder()
                 .UseSettings(openSettings)
+                .Use(package =>
+                {
+                    if (openSettings.VerifyMinimumPackage)
+                    {
+                        package.ThrowIfNotMinimumPackage();
+                    }
+                })
                 .Build()
                 .Open(stream, isEditable);
 
@@ -230,6 +245,13 @@ namespace DocumentFormat.OpenXml.Packaging
         public static SpreadsheetDocument Open(Package package, OpenSettings openSettings)
             => CreateDefaultBuilder()
                 .UseSettings(openSettings)
+                .Use(package =>
+                {
+                    if (openSettings.VerifyMinimumPackage)
+                    {
+                        package.ThrowIfNotMinimumPackage();
+                    }
+                })
                 .Build()
                 .Open(package);
 
@@ -266,6 +288,39 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="OpenXmlPackageException">Thrown when the package is not valid Open XML SpreadsheetDocument.</exception>
         public static SpreadsheetDocument Open(System.IO.Packaging.Package package)
             => Open(package, new OpenSettings());
+
+        /// <summary>
+        /// Throws a <see cref="FileFormatException"/> if the current <see cref="SpreadsheetDocument"/>
+        /// does not meet the minimum requirements for a valid package.
+        /// </summary>
+        /// <exception cref="FileFormatException">
+        /// Thrown when the <see cref="SpreadsheetDocument"/> does not conform to the minimum requirements
+        /// for Excel to open. This includes:
+        /// <list type="bullet">
+        /// <item><description>The document type is <see cref="SpreadsheetDocumentType.AddIn"/>.</description></item>
+        /// <item><description>The <see cref="WorkbookPart"/> is missing or does not contain a valid <see cref="Sheet"/>.</description></item>
+        /// <item><description>The <see cref="SheetData"/> in the first <see cref="WorksheetPart"/> is missing.</description></item>
+        /// </list>
+        /// </exception>
+        /// <remarks>
+        /// This method ensures that the <see cref="SpreadsheetDocument"/> contains the necessary parts and structure
+        /// to be opened with Excel.
+        /// </remarks>
+        protected override void ThrowIfNotMinimumPackage()
+        {
+            if (this.DocumentType == SpreadsheetDocumentType.AddIn)
+            {
+                throw new NotSupportedException("Validation for SpreadsheetDocument.AddIn (.xlam) is not supported.");
+            }
+
+            Sheet? sheet = this.WorkbookPart?.Workbook?.Sheets?.GetFirstChild<Sheet>();
+            SheetData? sheetData = this.WorkbookPart?.WorksheetParts?.FirstOrDefaultAndMaxOne()?.Worksheet?.GetFirstChild<SheetData>();
+
+            if (sheet is null || sheetData is null)
+            {
+                throw new FileFormatException("The provided package does not conform to the minimum requirements for Excel to open.");
+            }
+        }
 
         /// <summary>
         /// Changes the document type.
