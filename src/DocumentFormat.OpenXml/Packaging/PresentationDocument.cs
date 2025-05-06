@@ -2,14 +2,12 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Builder;
-using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Presentation;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Packaging;
-using System.Linq;
 using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Packaging
