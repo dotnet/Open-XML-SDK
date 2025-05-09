@@ -6,6 +6,9 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
+#if TASKS_SUPPORTED
+using System.Threading.Tasks;
+#endif
 using System.Xml;
 
 namespace DocumentFormat.OpenXml
@@ -234,6 +237,27 @@ namespace DocumentFormat.OpenXml
         /// Closes the reader.
         /// </summary>
         public abstract void Close();
+
+#if TASKS_SUPPORTED
+        #region Async methods
+
+        /// <summary>
+        /// Asynchronously reads the next element in the Open XML document.
+        /// </summary>
+        /// <returns>
+        /// A task that represents the asynchronous read operation. The task result is <c>true</c> if the next element
+        /// was read successfully; <c>false</c> if there are no more elements to read.
+        /// </returns>
+        /// <remarks>
+        /// This method is only available when the build target supports asynchronous SAX XML processing.
+        /// It allows non-blocking operations for reading large Open XML documents.
+        /// </remarks>
+        public virtual Task<bool> ReadAsync()
+        {
+            return Task.FromResult(Read());
+        }
+        #endregion
+#endif
 
         /// <summary>
         /// Thrown if the object is disposed.

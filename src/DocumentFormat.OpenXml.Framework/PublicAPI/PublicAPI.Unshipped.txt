@@ -1,1 +1,5 @@
 ﻿#nullable enable
+DocumentFormat.OpenXml.OpenXmlPartReaderOptions.Async.get -> bool
+DocumentFormat.OpenXml.OpenXmlPartReaderOptions.Async.set -> void
+override DocumentFormat.OpenXml.OpenXmlPartReader.ReadAsync() -> System.Threading.Tasks.Task<bool>!
+virtual DocumentFormat.OpenXml.OpenXmlReader.ReadAsync() -> System.Threading.Tasks.Task<bool>!

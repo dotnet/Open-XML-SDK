@@ -4,6 +4,9 @@
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
+#if TASKS_SUPPORTED
+using System.Threading.Tasks;
+#endif
 using System.Xml;
 
 namespace DocumentFormat.OpenXml
@@ -52,6 +55,10 @@ namespace DocumentFormat.OpenXml
 
         /// <inheritdoc/>
         public override bool Read() => BaseReader.Read();
+
+#if TASKS_SUPPORTED
+        public override Task<bool> ReadAsync() => BaseReader.ReadAsync();
+#endif
 
         /// <inheritdoc/>
         public override string GetAttribute(int index) => BaseReader.GetAttribute(index);

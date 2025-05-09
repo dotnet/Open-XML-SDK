@@ -10,6 +10,9 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+#if TASKS_SUPPORTED
+using System.Threading.Tasks;
+#endif
 using System.Xml;
 
 namespace DocumentFormat.OpenXml
@@ -100,7 +103,7 @@ namespace DocumentFormat.OpenXml
 
             _resolver = features.GetRequired<IOpenXmlNamespaceResolver>();
             _rootElements = features.GetRequired<IRootElementFeature>();
-            _xmlReader = CreateReader(partStream, options.CloseStream, options.MaxCharactersInPart, ignoreWhitespace: options.IgnoreWhitespace, out _standalone, out _encoding);
+            _xmlReader = CreateReader(partStream, options, out _standalone, out _encoding);
         }
 
         /// <summary>
@@ -394,6 +397,17 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc/>
         public override IXmlLineInfo GetLineInfo() => XmlLineInfo.Get(_xmlReader);
 
+        #region Async methods
+#if TASKS_SUPPORTED
+        public override Task<bool> ReadAsync()
+        {
+            ThrowIfObjectDisposed();
+
+
+            return _xmlReader.ReadAsync();
+        }
+#endif
+        #endregion
         #region private methods
 
         /// <summary>
@@ -667,17 +681,20 @@ namespace DocumentFormat.OpenXml
             _xmlReader.Close();
         }
 
-        private XmlReader CreateReader(Stream partStream, bool closeInput, long maxCharactersInPart, bool ignoreWhitespace, out bool? standalone, out string? encoding)
+        private XmlReader CreateReader(Stream partStream, OpenXmlPartReaderOptions options, out bool? standalone, out string? encoding)
         {
             var settings = new XmlReaderSettings
             {
-                MaxCharactersInDocument = maxCharactersInPart,
-                CloseInput = closeInput,
-                IgnoreWhitespace = ignoreWhitespace,
+                MaxCharactersInDocument = options.MaxCharactersInPart,
+                CloseInput = options.CloseStream,
+                IgnoreWhitespace = options.IgnoreWhitespace,
 #if NET35
                 ProhibitDtd = true,
 #else
                 DtdProcessing = DtdProcessing.Prohibit,
+#endif
+#if TASKS_SUPPORTED
+                Async = options.Async,
 #endif
             };
 
