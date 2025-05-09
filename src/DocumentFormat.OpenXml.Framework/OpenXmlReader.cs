@@ -256,6 +256,16 @@ namespace DocumentFormat.OpenXml
         {
             return Task.FromResult(Read());
         }
+
+        public virtual Task<string> GetValueAsync()
+        {
+            return Task.FromResult(GetText());
+        }
+
+        public virtual Task<bool> ReadFirstChildAsync()
+        {
+            return Task.FromResult(ReadFirstChild());
+        }
         #endregion
 #endif
 

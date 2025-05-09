@@ -58,6 +58,8 @@ namespace DocumentFormat.OpenXml
 
 #if TASKS_SUPPORTED
         public override Task<bool> ReadAsync() => BaseReader.ReadAsync();
+
+        public override Task<string> GetValueAsync() => BaseReader.GetValueAsync();
 #endif
 
         /// <inheritdoc/>
