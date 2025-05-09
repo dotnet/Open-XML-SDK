@@ -59,7 +59,9 @@ namespace DocumentFormat.OpenXml
 #if TASKS_SUPPORTED
         public override Task<bool> ReadAsync() => BaseReader.ReadAsync();
 
-        public override Task<string> GetValueAsync() => BaseReader.GetValueAsync();
+        public override Task SkipAsync() => BaseReader.SkipAsync();
+
+        public override Task<XmlNodeType> MoveToContentAsync() => BaseReader.MoveToContentAsync();
 #endif
 
         /// <inheritdoc/>

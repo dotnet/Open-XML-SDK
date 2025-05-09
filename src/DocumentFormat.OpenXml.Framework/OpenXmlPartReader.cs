@@ -10,9 +10,6 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-#if TASKS_SUPPORTED
-using System.Threading.Tasks;
-#endif
 using System.Xml;
 
 namespace DocumentFormat.OpenXml
@@ -20,7 +17,7 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Represents the Open XML part reader class.
     /// </summary>
-    public class OpenXmlPartReader : OpenXmlReader
+    public partial class OpenXmlPartReader : OpenXmlReader
     {
         private readonly IRootElementFeature _rootElements;
         private readonly IOpenXmlNamespaceResolver _resolver;
@@ -397,123 +394,6 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc/>
         public override IXmlLineInfo GetLineInfo() => XmlLineInfo.Get(_xmlReader);
 
-        #region Async methods
-#if TASKS_SUPPORTED
-        public override Task<bool> ReadAsync()
-        {
-            return _xmlReader.ReadAsync();
-        }
-
-        public override Task<string> GetValueAsync()
-        {
-            ThrowIfObjectDisposed();
-
-            return _xmlReader.GetValueAsync();
-        }
-
-        public async override Task<bool> ReadFirstChildAsync()
-        {
-            ThrowIfObjectDisposed();
-
-            bool result = await MoveToFirstChildAsync().ConfigureAwait(true);
-
-            if (result && !ReadMiscNodes)
-            {
-                // skip miscellaneous node
-                while (result && IsMiscNode)
-                {
-                    result = MoveToNextSibling();
-                }
-            }
-
-            return result;
-        }
-
-        private async Task<bool> MoveToFirstChildAsync()
-        {
-            switch (_elementState)
-            {
-                case ElementState.EOF:
-                    return false;
-
-                case ElementState.Start:
-                    if (!(await _xmlReader.ReadAsync().ConfigureAwait(true)))
-                    {
-                        // should can read.
-                        Debug.Assert(false);
-                        return false;
-                    }
-
-                    GetElementInformation();
-                    if (_elementState == ElementState.End)
-                    {
-                        return false;
-                    }
-
-                    return true;
-
-                case ElementState.LeafStart:
-                    _elementState = ElementState.LeafEnd;
-                    return false;
-
-                case ElementState.End:
-                case ElementState.LeafEnd:
-                case ElementState.LoadEnd:
-                case ElementState.MiscNode:
-                    return false;
-
-                case ElementState.Null:
-                    ThrowIfNull();
-                    break;
-
-                default:
-                    break;
-            }
-
-            return false;
-        }
-
-        private async Task InnerSkipAsync()
-        {
-            switch (_elementState)
-            {
-                case ElementState.Null:
-                    ThrowIfNull();
-                    break;
-
-                case ElementState.EOF:
-                    return;
-
-                case ElementState.Start:
-                case ElementState.End:
-                case ElementState.MiscNode:
-                    _xmlReader.Skip();
-                    _elementStack.Pop();
-                    GetElementInformation();
-                    return;
-
-                case ElementState.LeafStart:
-                    // no move, just process cursor
-                    _elementStack.Pop();
-                    GetElementInformation();
-                    return;
-
-                case ElementState.LeafEnd:
-                case ElementState.LoadEnd:
-                    // cursor is leaf element, pop stack, no move
-                    _elementStack.Pop();
-                    GetElementInformation();
-                    return;
-
-                default:
-                    break;
-            }
-
-            return;
-        }
-#endif
-        #endregion
-
         #region private methods
 
         /// <summary>
@@ -522,11 +402,18 @@ namespace DocumentFormat.OpenXml
         /// <returns>true if the next element was read successfully; false if there are no more elements to read. </returns>
         private bool MoveToNextElement()
         {
+            if (_elementState == ElementState.Null)
+            {
+                return ReadRoot();
+            }
+
+            return MoveToNextElementHelper();
+        }
+
+        private bool MoveToNextElementHelper()
+        {
             switch (_elementState)
             {
-                case ElementState.Null:
-                    return ReadRoot();
-
                 case ElementState.EOF:
                     return false;
 
@@ -850,6 +737,11 @@ namespace DocumentFormat.OpenXml
                 _xmlReader.Skip();
             }
 
+            return ReadRootHelper();
+        }
+
+        private bool ReadRootHelper()
+        {
             if (_xmlReader.EOF || !_xmlReader.IsStartElement())
             {
                 throw new InvalidDataException(ExceptionMessages.PartIsEmpty);
