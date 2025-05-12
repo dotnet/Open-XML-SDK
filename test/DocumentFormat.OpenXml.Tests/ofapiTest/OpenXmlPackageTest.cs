@@ -952,7 +952,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        private readonly string minPackageWordExMsg = "The provided package does not conform to the minimum requirements for Word to open.";
+        private readonly string minPackageExMsg = "The provided package does not conform to the minimum requirements to open.";
 
         [Fact]
         public void VerifyMinimumPackageTest_InValidDocumentPath_Throws_Wordprocessing()
@@ -971,7 +971,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using WordprocessingDocument wpd = WordprocessingDocument.Open(path, false, new OpenSettings() { VerifyMinimumPackage = true });
             });
 
-            Assert.Equal(minPackageWordExMsg, ex.Message);
+            Assert.Equal(minPackageExMsg, ex.Message);
         }
 
         [Fact]
@@ -991,7 +991,7 @@ namespace DocumentFormat.OpenXml.Tests
                     using WordprocessingDocument wpd = WordprocessingDocument.Open(stream, false, new OpenSettings() { VerifyMinimumPackage = true });
                 });
 
-                Assert.Equal(minPackageWordExMsg, ex.Message);
+                Assert.Equal(minPackageExMsg, ex.Message);
             }
         }
 
@@ -1014,7 +1014,7 @@ namespace DocumentFormat.OpenXml.Tests
                         using WordprocessingDocument wpd = WordprocessingDocument.Open(package, new OpenSettings() { VerifyMinimumPackage = true });
                     });
 
-                    Assert.Equal(minPackageWordExMsg, ex.Message);
+                    Assert.Equal(minPackageExMsg, ex.Message);
                 }
             }
         }
@@ -1095,8 +1095,6 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        private readonly string spreadsheetExMsg = "The provided package does not conform to the minimum requirements for Excel to open.";
-
         [Fact]
         public void VerifyMinimumPackageTest_InValidDocumentPath_Throws_Spreadsheet()
         {
@@ -1116,7 +1114,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using SpreadsheetDocument ssd = SpreadsheetDocument.Open(path, false, new OpenSettings() { VerifyMinimumPackage = true });
             });
 
-            Assert.Equal(spreadsheetExMsg, ex.Message);
+            Assert.Equal(minPackageExMsg, ex.Message);
         }
 
         [Fact]
@@ -1138,7 +1136,7 @@ namespace DocumentFormat.OpenXml.Tests
                     using SpreadsheetDocument ssd = SpreadsheetDocument.Open(stream, false, new OpenSettings() { VerifyMinimumPackage = true });
                 });
 
-                Assert.Equal(spreadsheetExMsg, ex.Message);
+                Assert.Equal(minPackageExMsg, ex.Message);
             }
         }
 
@@ -1162,7 +1160,7 @@ namespace DocumentFormat.OpenXml.Tests
                         using SpreadsheetDocument wpd = SpreadsheetDocument.Open(package, new OpenSettings() { VerifyMinimumPackage = true });
                     });
 
-                    Assert.Equal(spreadsheetExMsg, ex.Message);
+                    Assert.Equal(minPackageExMsg, ex.Message);
                 }
             }
         }
@@ -1270,8 +1268,6 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        private readonly string presentationExMsg = "The provided package does not conform to the minimum requirements for PowerPoint to open.";
-
         [Fact]
         public void VerifyMinimumPackageTest_InValidDocumentPath_Throws_Presentation()
         {
@@ -1292,7 +1288,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using PresentationDocument ssd = PresentationDocument.Open(path, false, new OpenSettings() { VerifyMinimumPackage = true });
             });
 
-            Assert.Equal(presentationExMsg, ex.Message);
+            Assert.Equal(minPackageExMsg, ex.Message);
         }
 
         [Fact]
@@ -1314,7 +1310,7 @@ namespace DocumentFormat.OpenXml.Tests
                     using PresentationDocument ssd = PresentationDocument.Open(stream, false, new OpenSettings() { VerifyMinimumPackage = true });
                 });
 
-                Assert.Equal(presentationExMsg, ex.Message);
+                Assert.Equal(minPackageExMsg, ex.Message);
             }
         }
 
@@ -1339,7 +1335,7 @@ namespace DocumentFormat.OpenXml.Tests
                         using PresentationDocument pd = PresentationDocument.Open(package, new OpenSettings() { VerifyMinimumPackage = true });
                     });
 
-                    Assert.Equal(presentationExMsg, ex.Message);
+                    Assert.Equal(minPackageExMsg, ex.Message);
                 }
             }
         }

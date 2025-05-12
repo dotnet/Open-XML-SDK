@@ -549,9 +549,19 @@ namespace DocumentFormat.OpenXml.Packaging
 
             bool IMinimumDocumentFeature.Validate()
             {
-                if (DocumentType is PresentationDocumentType.Slideshow or PresentationDocumentType.MacroEnabledSlideshow or PresentationDocumentType.AddIn)
+                if (this.DocumentType == PresentationDocumentType.Slideshow)
                 {
-                    return false;
+                    throw new NotSupportedException("Minimum package verification for PresentationDocumentType.Slideshow (.ppsx) is not supported.");
+                }
+
+                if (this.DocumentType == PresentationDocumentType.MacroEnabledSlideshow)
+                {
+                    throw new NotSupportedException("Minimum package verification for PresentationDocumentType.MacroEnabledSlideshow (.ppsm) is not supported.");
+                }
+
+                if (this.DocumentType == PresentationDocumentType.AddIn)
+                {
+                    throw new NotSupportedException("Minimum package verification for PresentationDocumentType.AddIn (.ppam) is not supported.");
                 }
 
                 return HasValidNotes();

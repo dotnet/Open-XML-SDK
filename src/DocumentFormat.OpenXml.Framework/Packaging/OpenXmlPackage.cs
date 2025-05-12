@@ -115,7 +115,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// This method is intended to be overridden by derived classes to implement specific validation logic
         /// for different types of Open XML packages (e.g., Wordprocessing, Spreadsheet, or Presentation documents).
         /// </remarks>
-        protected virtual void ThrowIfNotMinimumPackage() => throw new FileFormatException("The provided package does not conform to the minimum requirements for Office to open.");
+        protected virtual void ThrowIfNotMinimumPackage() => throw new FileFormatException("The provided package does not conform to the minimum requirements to open.");
 
         #region public methods
 
