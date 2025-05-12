@@ -232,13 +232,6 @@ namespace DocumentFormat.OpenXml.Packaging
         public static PresentationDocument Open(string path, bool isEditable, OpenSettings openSettings)
             => CreateDefaultBuilder()
                 .UseSettings(openSettings)
-                .Use(package =>
-                {
-                    if (openSettings.VerifyMinimumPackage)
-                    {
-                        package.ThrowIfNotMinimumPackage();
-                    }
-                })
                 .Build()
                 .Open(path, isEditable);
 
@@ -256,13 +249,6 @@ namespace DocumentFormat.OpenXml.Packaging
         public static PresentationDocument Open(Stream stream, bool isEditable, OpenSettings openSettings)
             => CreateDefaultBuilder()
                 .UseSettings(openSettings)
-                .Use(package =>
-                {
-                    if (openSettings.VerifyMinimumPackage)
-                    {
-                        package.ThrowIfNotMinimumPackage();
-                    }
-                })
                 .Build()
                 .Open(stream, isEditable);
 
@@ -279,57 +265,8 @@ namespace DocumentFormat.OpenXml.Packaging
         public static PresentationDocument Open(Package package, OpenSettings openSettings)
             => CreateDefaultBuilder()
                 .UseSettings(openSettings)
-                .Use(package =>
-                {
-                    if (openSettings.VerifyMinimumPackage)
-                    {
-                        package.ThrowIfNotMinimumPackage();
-                    }
-                })
                 .Build()
                 .Open(package);
-
-        /// <summary>
-        /// Validates that the current <see cref="PresentationDocument"/> meets the minimum requirements for a valid package.
-        /// </summary>
-        /// <exception cref="NotSupportedException">
-        /// Thrown if the <see cref="PresentationDocumentType"/> is <see cref="PresentationDocumentType.Slideshow"/>,
-        /// <see cref="PresentationDocumentType.MacroEnabledSlideshow"/>, or <see cref="PresentationDocumentType.AddIn"/>,
-        /// as validation for these types is not supported.
-        /// </exception>
-        /// <exception cref="FileFormatException">
-        /// Thrown if the <see cref="PresentationPart"/> does not contain valid <c>NotesSize</c> dimensions
-        /// or if the dimensions are outside the acceptable range for PowerPoint to open.
-        /// </exception>
-        /// <remarks>
-        /// This method ensures that the document conforms to the minimum requirements for PowerPoint to open it.
-        /// </remarks>
-        protected override void ThrowIfNotMinimumPackage()
-        {
-            if (this.DocumentType == PresentationDocumentType.Slideshow)
-            {
-                throw new NotSupportedException("Minimum package verification for PresentationDocumentType.Slideshow (.ppsx) is not supported.");
-            }
-
-            if (this.DocumentType == PresentationDocumentType.MacroEnabledSlideshow)
-            {
-                throw new NotSupportedException("Minimum package verification for PresentationDocumentType.MacroEnabledSlideshow (.ppsm) is not supported.");
-            }
-
-            if (this.DocumentType == PresentationDocumentType.AddIn)
-            {
-                throw new NotSupportedException("Minimum package verification for PresentationDocumentType.AddIn (.ppam) is not supported.");
-            }
-
-            NotesSize? notesSize = this.PresentationPart?.Presentation?.NotesSize;
-
-            if (!(notesSize is not null && notesSize.Cx is not null && notesSize.Cx.HasValue &&
-               notesSize.Cx >= 0 && notesSize.Cx <= 27273042316900 && notesSize.Cy is not null &&
-               notesSize.Cy.HasValue && notesSize.Cy >= 0 && notesSize.Cy <= 27273042316900))
-            {
-                throw new FileFormatException("The provided package does not conform to the minimum requirements for PowerPoint to open.");
-            }
-        }
 
         /// <summary>
         /// Changes the document type.
@@ -570,7 +507,8 @@ namespace DocumentFormat.OpenXml.Packaging
         private partial class PresentationDocumentFeatures : TypedPackageFeatureCollection<PresentationDocumentType, PresentationPart>,
             IApplicationTypeFeature,
             IMainPartFeature,
-            IProgrammaticIdentifierFeature
+            IProgrammaticIdentifierFeature,
+            IMinimumDocumentFeature
         {
             public PresentationDocumentFeatures(OpenXmlPackage package)
                 : base(package)
@@ -608,6 +546,27 @@ namespace DocumentFormat.OpenXml.Packaging
                 "application/vnd.ms-powerpoint.addin.macroEnabled.main+xml" => PresentationDocumentType.AddIn,
                 _ => default,
             };
+
+            bool IMinimumDocumentFeature.Validate()
+            {
+                if (DocumentType is PresentationDocumentType.Slideshow or PresentationDocumentType.MacroEnabledSlideshow or PresentationDocumentType.AddIn)
+                {
+                    return false;
+                }
+
+                return HasValidNotes();
+            }
+
+            private bool HasValidNotes()
+            {
+                const long MaxSize = 27273042316900;
+
+                return MainPart?.Presentation?.NotesSize is
+                {
+                    Cy: { HasValue: true, Value: >= 0 and <= MaxSize },
+                    Cx: { HasValue: true, Value: >= 0 and <= MaxSize }
+                };
+            }
         }
     }
 }
