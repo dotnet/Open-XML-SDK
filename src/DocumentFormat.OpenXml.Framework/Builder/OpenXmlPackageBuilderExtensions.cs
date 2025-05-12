@@ -110,7 +110,15 @@ internal static class OpenXmlPackageBuilderExtensions
 
     internal static IPackageBuilder<TPackage> UseSettings<TPackage>(this IPackageBuilder<TPackage> builder, OpenSettings settings)
        where TPackage : OpenXmlPackage
-       => builder.Use(package => package.OpenSettings = settings);
+       => builder.Use(package =>
+       {
+           package.OpenSettings = settings;
+
+           if (settings.VerifyMinimumPackage && package.Features.Get<IMinimumDocumentFeature>() is { } minimumFeature && !minimumFeature.Validate())
+           {
+               throw new FileFormatException("The provided package does not conform to the minimum requirements to open.");
+           }
+       });
 
     internal static IPackageBuilder<TPackage> UseDefaultBehaviorAndLockBuilder<TPackage>(this IPackageBuilder<TPackage> builder)
         where TPackage : OpenXmlPackage
