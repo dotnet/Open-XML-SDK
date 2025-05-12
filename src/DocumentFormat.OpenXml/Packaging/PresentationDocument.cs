@@ -559,12 +559,15 @@ namespace DocumentFormat.OpenXml.Packaging
 
             private bool HasValidNotes()
             {
-                const long MaxSize = 27273042316900;
+                const long MaxNoteSize = 27273042316900;
 
-                return MainPart?.Presentation?.NotesSize is
+                return MainPart is
                 {
-                    Cy: { HasValue: true, Value: >= 0 and <= MaxSize },
-                    Cx: { HasValue: true, Value: >= 0 and <= MaxSize }
+                    Presentation.NotesSize:
+                    {
+                        Cy: { HasValue: true, Value: >= 0 and <= MaxNoteSize },
+                        Cx: { HasValue: true, Value: >= 0 and <= MaxNoteSize },
+                    }
                 };
             }
         }
