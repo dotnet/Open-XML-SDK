@@ -547,7 +547,15 @@ namespace DocumentFormat.OpenXml
                 return false;
             }
 
-            return Metadata.Children.Elements.Any(el => el.Type.Name.Equals(element.Metadata.Type.Name));
+            foreach (var elem in Metadata.Children.Elements)
+            {
+                if (elem.Type.Name.Equals(element.Metadata.Type.Name))
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         /// <summary>
