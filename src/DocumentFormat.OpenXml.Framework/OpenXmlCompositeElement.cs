@@ -534,11 +534,14 @@ namespace DocumentFormat.OpenXml
         #endregion
 
         /// <summary>
-        /// Determines if the specified element is a valid child of the current element.
+        /// Determines whether the specified <see cref="OpenXmlElement"/> is a valid child element
+        /// for this <see cref="OpenXmlCompositeElement"/> according to the schema definition.
         /// </summary>
-        /// <param name="element">The element to check.</param>
-        /// <returns>True if the specified element is a valid child; otherwise, false.</returns>
-        public override bool IsValidChild(OpenXmlElement element)
+        /// <param name="element">The <see cref="OpenXmlElement"/> to validate as a child.</param>
+        /// <returns>
+        /// <c>true</c> if the specified element is a valid child; otherwise, <c>false</c>.
+        /// </returns>
+        public virtual bool IsValidChild(OpenXmlElement element)
         {
             if (element is null)
             {
