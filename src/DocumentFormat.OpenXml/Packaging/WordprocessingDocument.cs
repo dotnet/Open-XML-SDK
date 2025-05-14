@@ -3,8 +3,11 @@
 
 using DocumentFormat.OpenXml.Builder;
 using DocumentFormat.OpenXml.Features;
+using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Packaging;

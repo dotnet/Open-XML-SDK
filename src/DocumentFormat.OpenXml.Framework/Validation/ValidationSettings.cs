@@ -32,5 +32,12 @@ namespace DocumentFormat.OpenXml.Validation
         /// Default is 1000.  A zero (0) value means no limitation.
         /// </summary>
         public int MaxNumberOfErrors { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the validator should verify that the package meets the minimum requirements
+        /// for the specified file format. When set to <c>true</c>, the validation process will include checks to ensure
+        /// the document structure is sufficient for the target application to open the file.
+        /// </summary>
+        public bool VerifyMinimumPackage { get; set; }
     }
 }

@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Features;
+using DocumentFormat.OpenXml.Validation;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -624,5 +625,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new PackageFeatureCollection(this);
+
+        internal virtual IEnumerable<ValidationErrorInfo> VerifyMinimumDocument() => Enumerable.Empty<ValidationErrorInfo>();
     }
 }

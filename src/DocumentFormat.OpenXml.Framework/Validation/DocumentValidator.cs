@@ -275,5 +275,12 @@ namespace DocumentFormat.OpenXml.Validation
             // Example: WordprocessingCommentsPart{/word/comments.xml}
             return SR.Format("{0}{1}{2}", '{', part.Uri, '}');
         }
+
+        private IEnumerable<ValidationErrorInfo> VerifyMinimumPackage(OpenXmlPackage package)
+        {
+            if (package is PresentationDocument)
+            {
+            }
+        }
     }
 }
