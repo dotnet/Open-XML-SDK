@@ -106,6 +106,19 @@ namespace DocumentFormat.OpenXml.Validation
                     {
                         Validate(context);
                     }
+                    else
+                    {
+                        context.AddError(new ValidationErrorInfo
+                        {
+                            ErrorType = ValidationErrorType.Schema,
+                            Id = "Sch_PartRootElementMissing",
+                            Part = part,
+                            Description = SR.Format(ValidationResources.Sch_MissingPartRootElement, part.Uri),
+                        });
+
+                        // The part's root element is empty, so no more errors in this part. Release the DOM to GC memory
+                        part.UnloadRootElement();
+                    }
 
                     if (!partRootElementLoaded && context.Errors.Count == lastErrorCount)
                     {
