@@ -62,16 +62,10 @@ internal abstract partial class TypedPackageFeatureCollection<TDocumentType, TMa
         return _documentType.Value;
     }
 
-    protected TDocumentType DocumentType
+    TDocumentType IDocumentTypeFeature<TDocumentType>.Current
     {
         get => EnsureDocumentType();
         set => _documentType = value;
-    }
-
-    TDocumentType IDocumentTypeFeature<TDocumentType>.Current
-    {
-        get => DocumentType;
-        set => DocumentType = value;
     }
 
     protected TMainPart? MainPart => Package.GetSubPartOfType<TMainPart>();

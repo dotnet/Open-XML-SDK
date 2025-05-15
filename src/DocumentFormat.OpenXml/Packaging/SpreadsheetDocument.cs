@@ -3,8 +3,6 @@
 
 using DocumentFormat.OpenXml.Builder;
 using DocumentFormat.OpenXml.Features;
-using DocumentFormat.OpenXml.Spreadsheet;
-using DocumentFormat.OpenXml.Validation;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
@@ -501,34 +499,13 @@ namespace DocumentFormat.OpenXml.Packaging
             get { return GetSubPartOfType<LabelInfoPart>(); }
         }
 
-        internal override void VerifyMinimumDocument(ValidationContext validationContext)
-        {
-            if (this.DocumentType != SpreadsheetDocumentType.AddIn)
-            {
-                Sheet? sheet = this.WorkbookPart?.Workbook?.Sheets?.GetFirstChild<Sheet>();
-                SheetData? sheetData = this.WorkbookPart?.WorksheetParts?.FirstOrDefaultAndMaxOne()?.Worksheet?.GetFirstChild<SheetData>();
-
-                if (sheet is null || sheetData is null)
-                {
-                    validationContext.AddError(new()
-                    {
-                        ErrorType = ValidationErrorType.Schema,
-                        Id = "Sch_IncompletePackage",
-                        Part = this.WorkbookPart,
-                        Description = SR.Format(ValidationResources.Sch_IncompletePackage, "Excel"),
-                    });
-                }
-            }
-        }
-
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new SpreadsheetDocumentFeatures(this);
 
         [DocumentFormat.OpenXml.Generator.OpenXmlPackage("SpreadsheetDocument")]
         private partial class SpreadsheetDocumentFeatures : TypedPackageFeatureCollection<SpreadsheetDocumentType, WorkbookPart>,
             IApplicationTypeFeature,
-            IMainPartFeature,
-            IMinimumDocumentFeature
+            IMainPartFeature
         {
             public SpreadsheetDocumentFeatures(OpenXmlPackage package)
                 : base(package)
@@ -560,24 +537,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 "application/vnd.ms-excel.addin.macroEnabled.main+xml" => SpreadsheetDocumentType.AddIn,
                 _ => default,
             };
-
-            bool IMinimumDocumentFeature.Validate()
-            {
-                if (DocumentType == SpreadsheetDocumentType.AddIn)
-                {
-                    throw new NotSupportedException("Validation for SpreadsheetDocument.AddIn (.xlam) is not supported.");
-                }
-
-                Sheet? sheet = MainPart?.Workbook?.Sheets?.GetFirstChild<Sheet>();
-                SheetData? sheetData = MainPart?.WorksheetParts?.FirstOrDefaultAndMaxOne()?.Worksheet?.GetFirstChild<SheetData>();
-
-                if (sheet is not null && sheetData is not null)
-                {
-                    return true;
-                }
-
-                return false;
-            }
         }
     }
 }

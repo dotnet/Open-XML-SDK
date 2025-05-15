@@ -342,7 +342,4 @@
   <data name="Sem_CellValue" xml:space="preserve">
     <value>Cell contents have invalid value '{0}' for type '{1}'.</value>
   </data>
-  <data name="Sch_IncompletePackage" xml:space="preserve">
-    <value>The provided package does not conform to the minimum requirements for {0} to open.</value>
-  </data>
 </root>

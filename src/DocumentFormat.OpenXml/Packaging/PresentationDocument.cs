@@ -3,13 +3,10 @@
 
 using DocumentFormat.OpenXml.Builder;
 using DocumentFormat.OpenXml.Features;
-using DocumentFormat.OpenXml.Presentation;
-using DocumentFormat.OpenXml.Validation;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Packaging;
-using System.Linq;
 using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Packaging
@@ -502,34 +499,6 @@ namespace DocumentFormat.OpenXml.Packaging
             get { return GetSubPartOfType<LabelInfoPart>(); }
         }
 
-        internal override void VerifyMinimumDocument(ValidationContext validationContext)
-        {
-            if (this.DocumentType is not PresentationDocumentType.Slideshow &&
-                this.DocumentType is not PresentationDocumentType.MacroEnabledTemplate &&
-                this.DocumentType is not PresentationDocumentType.AddIn)
-            {
-                if (this.PresentationPart is not
-                    {
-                        Presentation.NotesSize:
-                        {
-                            Cx: { HasValue: true },
-                            Cy: { HasValue: true },
-                        }
-                    }
-
-                    || !(this.PresentationPart.SlideMasterParts?.Any() ?? false))
-                {
-                    validationContext.AddError(new()
-                    {
-                        ErrorType = ValidationErrorType.Schema,
-                        Id = "Sch_IncompletePackage",
-                        Part = this.PresentationPart,
-                        Description = SR.Format(ValidationResources.Sch_IncompletePackage, "PowerPoint"),
-                    });
-                }
-            }
-        }
-
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new PresentationDocumentFeatures(this);
 
@@ -537,8 +506,7 @@ namespace DocumentFormat.OpenXml.Packaging
         private partial class PresentationDocumentFeatures : TypedPackageFeatureCollection<PresentationDocumentType, PresentationPart>,
             IApplicationTypeFeature,
             IMainPartFeature,
-            IProgrammaticIdentifierFeature,
-            IMinimumDocumentFeature
+            IProgrammaticIdentifierFeature
         {
             public PresentationDocumentFeatures(OpenXmlPackage package)
                 : base(package)
@@ -576,40 +544,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 "application/vnd.ms-powerpoint.addin.macroEnabled.main+xml" => PresentationDocumentType.AddIn,
                 _ => default,
             };
-
-            bool IMinimumDocumentFeature.Validate()
-            {
-                if (this.DocumentType == PresentationDocumentType.Slideshow)
-                {
-                    throw new NotSupportedException("Minimum package verification for PresentationDocumentType.Slideshow (.ppsx) is not supported.");
-                }
-
-                if (this.DocumentType == PresentationDocumentType.MacroEnabledSlideshow)
-                {
-                    throw new NotSupportedException("Minimum package verification for PresentationDocumentType.MacroEnabledSlideshow (.ppsm) is not supported.");
-                }
-
-                if (this.DocumentType == PresentationDocumentType.AddIn)
-                {
-                    throw new NotSupportedException("Minimum package verification for PresentationDocumentType.AddIn (.ppam) is not supported.");
-                }
-
-                return HasValidNotes();
-            }
-
-            private bool HasValidNotes()
-            {
-                const long MaxNoteSize = 27273042316900;
-
-                return MainPart is
-                {
-                    Presentation.NotesSize:
-                    {
-                        Cy: { HasValue: true, Value: >= 0 and <= MaxNoteSize },
-                        Cx: { HasValue: true, Value: >= 0 and <= MaxNoteSize },
-                    }
-                };
-            }
         }
     }
 }

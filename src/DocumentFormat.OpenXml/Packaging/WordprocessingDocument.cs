@@ -3,11 +3,8 @@
 
 using DocumentFormat.OpenXml.Builder;
 using DocumentFormat.OpenXml.Features;
-using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Packaging;
@@ -546,26 +543,6 @@ namespace DocumentFormat.OpenXml.Packaging
             get { return GetSubPartOfType<LabelInfoPart>(); }
         }
 
-        internal override void VerifyMinimumDocument(ValidationContext validationContext)
-        {
-            if (this.MainDocumentPart is not
-                {
-                    Document:
-                    {
-                        Body: { }
-                    }
-                })
-            {
-                validationContext.AddError(new()
-                {
-                    ErrorType = ValidationErrorType.Schema,
-                    Id = "Sch_IncompletePackage",
-                    Part = this.MainDocumentPart,
-                    Description = SR.Format(ValidationResources.Sch_IncompletePackage, "Word"),
-                });
-            }
-        }
-
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new WordprocessingDocumentFeatures(this);
 
@@ -573,8 +550,7 @@ namespace DocumentFormat.OpenXml.Packaging
         private partial class WordprocessingDocumentFeatures : TypedPackageFeatureCollection<WordprocessingDocumentType, MainDocumentPart>,
             IApplicationTypeFeature,
             IMainPartFeature,
-            IProgrammaticIdentifierFeature,
-            IMinimumDocumentFeature
+            IProgrammaticIdentifierFeature
         {
             public WordprocessingDocumentFeatures(OpenXmlPackage package)
                 : base(package)
@@ -606,17 +582,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 "application/vnd.ms-word.template.macroEnabledTemplate.main+xml" => WordprocessingDocumentType.MacroEnabledTemplate,
                 _ => default,
             };
-
-            bool IMinimumDocumentFeature.Validate()
-            {
-                return MainPart is
-                {
-                    Document:
-                    {
-                        Body: { }
-                    }
-                };
-            }
         }
     }
 }

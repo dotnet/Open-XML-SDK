@@ -74,17 +74,5 @@ namespace DocumentFormat.OpenXml.Packaging
         /// This property allows you to mitigate denial of service attacks where the attacker submits a package with an extremely large Open XML part. By limiting the size of the part, you can detect the attack and recover reliably.
         /// </remarks>
         public long MaxCharactersInPart { get; set; }
-
-        /// <summary>
-        /// Gets or sets a value indicating whether to validate that the document meets the minimum requirements for a valid package.
-        /// </summary>
-        /// <value>
-        /// <c>true</c> if the document should be validated for minimum requirements; otherwise, <c>false</c>.
-        /// </value>
-        /// <remarks>
-        /// When set to <c>true</c>, the document will be checked to ensure it contains the necessary parts and structure
-        /// to be considered a valid Open XML package.
-        /// </remarks>
-        public bool VerifyMinimumPackage { get; set; }
     }
 }
