@@ -349,6 +349,15 @@ namespace DocumentFormat.OpenXml.Validation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The provided package does not conform to the minimum requirements for {0} to open..
+        /// </summary>
+        internal static string Sch_IncompletePackage {
+            get {
+                return ResourceManager.GetString("Sch_IncompletePackage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The element &apos;{0}&apos; is a leaf element and cannot contain children..
         /// </summary>
         internal static string Sch_InvalidChildinLeafElement {
@@ -435,15 +444,6 @@ namespace DocumentFormat.OpenXml.Validation {
         internal static string Sch_MinLengthConstraintFailed {
             get {
                 return ResourceManager.GetString("Sch_MinLengthConstraintFailed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The &apos;{0}&apos; part is missing the root element &apos;{1}&apos;.
-        /// </summary>
-        internal static string Sch_MissingRootElement {
-            get {
-                return ResourceManager.GetString("Sch_MissingRootElement", resourceCulture);
             }
         }
         

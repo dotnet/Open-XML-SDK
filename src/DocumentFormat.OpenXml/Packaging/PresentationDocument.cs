@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml.Builder;
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Presentation;
+using DocumentFormat.OpenXml.Validation;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
@@ -498,6 +499,31 @@ namespace DocumentFormat.OpenXml.Packaging
         public LabelInfoPart? LabelInfoPart
         {
             get { return GetSubPartOfType<LabelInfoPart>(); }
+        }
+
+        internal override void VerifyMinimumDocument(ValidationContext validationContext)
+        {
+            if (this.DocumentType is not PresentationDocumentType.Slideshow &&
+                this.DocumentType is not PresentationDocumentType.MacroEnabledTemplate &&
+                this.DocumentType is not PresentationDocumentType.AddIn)
+            {
+                if (this.PresentationPart is not {
+                    Presentation.NotesSize:
+                    {
+                        Cx: { HasValue: true },
+                        Cy: { HasValue: true },
+                    }
+                })
+                {
+                    validationContext.AddError(new()
+                    {
+                        ErrorType = ValidationErrorType.Schema,
+                        Id = "Sch_IncompletePackage",
+                        Part = this.PresentationPart,
+                        Description = SR.Format(ValidationResources.Sch_IncompletePackage, "PowerPoint"),
+                    });
+                }
+            }
         }
 
         /// <inheritdoc/>

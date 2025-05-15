@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml.Builder;
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.Validation;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
@@ -498,6 +499,26 @@ namespace DocumentFormat.OpenXml.Packaging
         public LabelInfoPart? LabelInfoPart
         {
             get { return GetSubPartOfType<LabelInfoPart>(); }
+        }
+
+        internal override void VerifyMinimumDocument(ValidationContext validationContext)
+        {
+            if (this.DocumentType != SpreadsheetDocumentType.AddIn)
+            {
+                Sheet? sheet = this.WorkbookPart?.Workbook?.Sheets?.GetFirstChild<Sheet>();
+                SheetData? sheetData = this.WorkbookPart?.WorksheetParts?.FirstOrDefaultAndMaxOne()?.Worksheet?.GetFirstChild<SheetData>();
+
+                if (sheet is not null && sheetData is not null)
+                {
+                    validationContext.AddError(new()
+                    {
+                        ErrorType = ValidationErrorType.Schema,
+                        Id = "Sch_IncompletePackage",
+                        Part = this.WorkbookPart,
+                        Description = SR.Format(ValidationResources.Sch_IncompletePackage, "Excel"),
+                    });
+                }
+            }
         }
 
         /// <inheritdoc/>
