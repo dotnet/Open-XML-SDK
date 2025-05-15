@@ -626,6 +626,9 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new PackageFeatureCollection(this);
 
-        internal virtual IEnumerable<ValidationErrorInfo> VerifyMinimumDocument() => Enumerable.Empty<ValidationErrorInfo>();
+        internal virtual void VerifyMinimumDocument(ValidationContext validationContext)
+        {
+            return;
+        }
     }
 }

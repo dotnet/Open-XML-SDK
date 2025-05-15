@@ -546,6 +546,31 @@ namespace DocumentFormat.OpenXml.Packaging
             get { return GetSubPartOfType<LabelInfoPart>(); }
         }
 
+        internal override void VerifyMinimumDocument(ValidationContext validationContext)
+        {
+            if (this.MainDocumentPart?.Document is null)
+            {
+                validationContext.AddError(new()
+                {
+                    ErrorType = ValidationErrorType.Schema,
+                    Id = "Sch_MissingRootElement",
+                    Part = this.MainDocumentPart,
+                    Description = SR.Format(ValidationResources.Sch_MissingRootElement, typeof(MainDocumentPart), typeof(Document)),
+                });
+            }
+
+            if (this.MainDocumentPart?.Document is not null && this.MainDocumentPart.Document?.Body is null)
+            {
+                validationContext.AddError(new()
+                {
+                    ErrorType = ValidationErrorType.Schema,
+                    Id = "Sch_IncompleteContentExpectingComplex",
+                    Part = this.MainDocumentPart,
+                    Description = SR.Format(ValidationResources.Sch_IncompleteContentExpectingComplex, typeof(Document)),
+                });
+            }
+        }
+
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new WordprocessingDocumentFeatures(this);
 

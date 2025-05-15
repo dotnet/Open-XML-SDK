@@ -342,4 +342,7 @@
   <data name="Sem_CellValue" xml:space="preserve">
     <value>Cell contents have invalid value '{0}' for type '{1}'.</value>
   </data>
+  <data name="Sch_MissingRootElement" xml:space="preserve">
+    <value>The '{0}' part is missing the root element '{1}'</value>
+  </data>
 </root>

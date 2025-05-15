@@ -50,6 +50,8 @@ namespace DocumentFormat.OpenXml.Validation
                 // integrate the package validation.
                 ValidatePackageStructure(document, context);
 
+                document.VerifyMinimumDocument(context);
+
                 foreach (var part in PartsToBeValidated(document))
                 {
                     // traverse from the part root element (by DOM or by Reader) in post-order
@@ -274,13 +276,6 @@ namespace DocumentFormat.OpenXml.Validation
 
             // Example: WordprocessingCommentsPart{/word/comments.xml}
             return SR.Format("{0}{1}{2}", '{', part.Uri, '}');
-        }
-
-        private IEnumerable<ValidationErrorInfo> VerifyMinimumPackage(OpenXmlPackage package)
-        {
-            if (package is PresentationDocument)
-            {
-            }
         }
     }
 }
