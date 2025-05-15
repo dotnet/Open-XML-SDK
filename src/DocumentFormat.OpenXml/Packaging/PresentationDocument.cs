@@ -9,6 +9,7 @@ using System;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Packaging;
+using System.Linq;
 using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Packaging
@@ -507,13 +508,16 @@ namespace DocumentFormat.OpenXml.Packaging
                 this.DocumentType is not PresentationDocumentType.MacroEnabledTemplate &&
                 this.DocumentType is not PresentationDocumentType.AddIn)
             {
-                if (this.PresentationPart is not {
-                    Presentation.NotesSize:
+                if (this.PresentationPart is not
                     {
-                        Cx: { HasValue: true },
-                        Cy: { HasValue: true },
+                        Presentation.NotesSize:
+                        {
+                            Cx: { HasValue: true },
+                            Cy: { HasValue: true },
+                        }
                     }
-                })
+
+                    || !(this.PresentationPart.SlideMasterParts?.Any() ?? false))
                 {
                     validationContext.AddError(new()
                     {

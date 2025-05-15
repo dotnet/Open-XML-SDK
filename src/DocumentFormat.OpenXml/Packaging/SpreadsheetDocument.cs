@@ -508,7 +508,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 Sheet? sheet = this.WorkbookPart?.Workbook?.Sheets?.GetFirstChild<Sheet>();
                 SheetData? sheetData = this.WorkbookPart?.WorksheetParts?.FirstOrDefaultAndMaxOne()?.Worksheet?.GetFirstChild<SheetData>();
 
-                if (sheet is not null && sheetData is not null)
+                if (sheet is null || sheetData is null)
                 {
                     validationContext.AddError(new()
                     {
