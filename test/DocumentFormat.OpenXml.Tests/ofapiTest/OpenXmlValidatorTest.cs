@@ -3845,8 +3845,9 @@ namespace DocumentFormat.OpenXml.Tests
                 ValidationErrorInfo info = errors.FirstOrDefault();
 
                 Assert.Single(errors);
-                Assert.Equal("Sch_PartRootElementMissing", info.Id);
+                Assert.Equal("Sch_MissingPartRootElement", info.Id);
                 Assert.Equal("The '/word/document.xml' part is missing its root element.", info.Description);
+                Assert.Equal(ValidationErrorType.Schema, info.ErrorType);
             }
         }
     }

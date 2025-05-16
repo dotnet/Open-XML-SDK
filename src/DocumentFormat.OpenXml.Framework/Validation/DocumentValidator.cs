@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -106,12 +107,13 @@ namespace DocumentFormat.OpenXml.Validation
                     {
                         Validate(context);
                     }
-                    else
+                    else if (part.Uri.ToString().EndsWith(".xml", System.StringComparison.InvariantCultureIgnoreCase) &&
+                              part.GetStream().Length == 0)
                     {
                         context.AddError(new ValidationErrorInfo
                         {
                             ErrorType = ValidationErrorType.Schema,
-                            Id = "Sch_PartRootElementMissing",
+                            Id = "Sch_MissingPartRootElement",
                             Part = part,
                             Description = SR.Format(ValidationResources.Sch_MissingPartRootElement, part.Uri),
                         });
