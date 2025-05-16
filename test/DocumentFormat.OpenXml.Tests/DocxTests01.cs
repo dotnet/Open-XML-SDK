@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.CustomProperties;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation;
 using System;
@@ -156,12 +157,24 @@ namespace DocumentFormat.OpenXml.Tests
 
                 doc.DeletePart(corePart);
                 doc.DeletePart(appPart);
-                doc.AddCoreFilePropertiesPart();
-                doc.AddExtendedFilePropertiesPart();
-                doc.AddCustomFilePropertiesPart();
-                doc.AddDigitalSignatureOriginPart();
-                doc.AddExtendedPart("relType", "contentType/xml", ".xml");
+                var cfpp = doc.AddCoreFilePropertiesPart();
 
+                string xml = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><coreProperties><title>hello</title></coreProperties>";
+                byte[] corePropsByteArray = System.Text.Encoding.UTF8.GetBytes(xml);
+                using (var stream1 = new MemoryStream(corePropsByteArray))
+                {
+                    cfpp.FeedData(stream1);
+                }
+
+                var efpp = doc.AddExtendedFilePropertiesPart();
+                efpp.Properties = new ExtendedProperties.Properties();
+
+                var cusfpp = doc.AddCustomFilePropertiesPart();
+                cusfpp.Properties = new CustomProperties.Properties();
+
+                doc.AddDigitalSignatureOriginPart();
+
+                doc.AddExtendedPart("relType", "contentType/xml", ".xml");
                 var tnPart = doc.AddThumbnailPart(ThumbnailPartType.Jpeg);
                 doc.DeletePart(tnPart);
                 tnPart = doc.AddThumbnailPart("image/jpg");
@@ -180,6 +193,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 var wpcp = doc.AddNewPart<RibbonExtensibilityPart>("application/xml", "rid1232131");
+                wpcp.CustomUI = new Office.CustomUI.CustomUI();
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
                 var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
@@ -207,6 +221,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 var wpcp = doc.AddNewPart<RibbonExtensibilityPart>("rid123123");
+                wpcp.CustomUI = new Office.CustomUI.CustomUI();
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
                 var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
@@ -239,6 +254,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 var wpcp = doc.MainDocumentPart.AddNewPart<WordprocessingCommentsPart>("application/vnd.openxmlformats-officedocument.wordprocessingml.comments+xml", "rid1232131");
+                wpcp.Comments = new W.Comments();
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
                 var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
@@ -266,6 +282,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 var wpcp = doc.MainDocumentPart.AddNewPart<WordprocessingCommentsPart>("rid123123");
+                wpcp.Comments = new W.Comments();
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
                 var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
@@ -280,6 +297,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
                 var wpcp = doc.MainDocumentPart.AddNewPart<WordprocessingCommentsPart>();
+                wpcp.Comments = new W.Comments();
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
                 var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
