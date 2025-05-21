@@ -210,6 +210,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             {
                 WriteIndented = true,
                 DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
+                PropertyNamingPolicy = null, // Use Pascal case like Newtonsoft
                 Converters =
                 {
                     new JsonStringEnumConverter(),
@@ -217,8 +218,6 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                     new QNameConverter(),
                 }
             };
-
-            options.AddContext<OccursCustomContext>();
 
             var tmp = Path.GetTempFileName();
 
@@ -231,6 +230,12 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
                 var orderedData = constraints.OrderBy(t => t.Key.FullName, StringComparer.Ordinal);
                 var json = JsonSerializer.Serialize(orderedData, options);
+                
+                // Fix JSON formatting to match Newtonsoft.Json indentation
+                json = json.Replace("    {", "  {")
+                           .Replace("        \"", "    \"")
+                           .Replace("            ", "      ");
+                
                 using (var textWriter = new StreamWriter(fs))
                 {
                     textWriter.Write(json);
@@ -249,13 +254,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             }
         }
 
-        [JsonSourceGenerationOptions(
-            PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase,
-            WriteIndented = true)]
-        [JsonSerializable(typeof(IEnumerable<KeyValuePair<Type, VersionCollection<ParticleConstraint>>>))]
-        private partial class OccursCustomContext : JsonSerializerContext
-        {
-        }
+
 
         private class VersionCollection<T> : IEnumerable<KeyValuePair<FileFormatVersions, T>>
         {
@@ -308,7 +307,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
         private sealed class QNameConverter : JsonConverter<OpenXmlQualifiedName>
         {
-            public override OpenXmlQualifiedName? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+            public override OpenXmlQualifiedName Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
             {
                 throw new NotImplementedException();
             }
