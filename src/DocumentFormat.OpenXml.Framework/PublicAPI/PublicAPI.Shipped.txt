@@ -1009,3 +1009,6 @@ DocumentFormat.OpenXml.OpenXmlPartWriterSettings.Encoding.set -> void
 DocumentFormat.OpenXml.OpenXmlPartWriterSettings.OpenXmlPartWriterSettings() -> void
 DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart, DocumentFormat.OpenXml.OpenXmlPartWriterSettings! settings) -> void
 DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(System.IO.Stream! partStream, DocumentFormat.OpenXml.OpenXmlPartWriterSettings! settings) -> void
+DocumentFormat.OpenXml.OpenXmlPartReader.NodeType.get -> System.Xml.XmlNodeType
+virtual DocumentFormat.OpenXml.OpenXmlReader.NodeType.get -> System.Xml.XmlNodeType
+override DocumentFormat.OpenXml.OpenXmlPartReader.NodeType.get -> System.Xml.XmlNodeType
