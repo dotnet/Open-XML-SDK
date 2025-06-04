@@ -3,7 +3,6 @@
 
 using DocumentFormat.OpenXml.Framework;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
@@ -533,6 +532,32 @@ namespace DocumentFormat.OpenXml
         }
 
         #endregion
+
+        /// <summary>
+        /// Determines whether the specified <see cref="OpenXmlElement"/> is a valid child element
+        /// for this <see cref="OpenXmlCompositeElement"/> according to the schema definition.
+        /// </summary>
+        /// <param name="element">The <see cref="OpenXmlElement"/> to validate as a child.</param>
+        /// <returns>
+        /// <c>true</c> if the specified element is a valid child; otherwise, <c>false</c>.
+        /// </returns>
+        public virtual bool IsValidChild(OpenXmlElement element)
+        {
+            if (element is null)
+            {
+                return false;
+            }
+
+            foreach (var elem in Metadata.Children.Elements)
+            {
+                if (elem.Type.Name.Equals(element.Metadata.Type.Name))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
 
         /// <summary>
         /// Saves all of the current node's children to the specified XmlWriter.
