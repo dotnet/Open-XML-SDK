@@ -388,7 +388,8 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var corePart = doc.CoreFilePropertiesPart;
                 var appPart = doc.ExtendedFilePropertiesPart;
-                var custFilePropsPart = doc.CustomFilePropertiesPart;
+                CustomFilePropertiesPart custFilePropsPart = doc.CustomFilePropertiesPart;
+                //custFilePropsPart.
                 var thumbNailPart = doc.ThumbnailPart;
 
                 doc.DeletePart(corePart);
@@ -401,7 +402,23 @@ namespace DocumentFormat.OpenXml.Tests
 
                 doc.AddCoreFilePropertiesPart();
                 doc.AddExtendedFilePropertiesPart();
-                doc.AddCustomFilePropertiesPart();
+                var custFPP = doc.AddCustomFilePropertiesPart();
+                var custFPPStream = custFPP.GetStream();
+                using (var writer = new System.Xml.XmlTextWriter(custFPPStream, System.Text.Encoding.UTF8))
+                {
+                    //writer.WriteRaw("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><op:Properties xmlns:vt=\"https://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes\" xmlns:op=\"https://schemas.openxmlformats.org/officeDocument/2006/custom-properties\"><op:property fmtid=\"{D5CDD505-2E9C-101B-9397-08002B2CF9AE}\" pid=\"2\" name=\"Manager\"><vt:lpwstr>Mary</vt:lpwstr></op:property><op:property fmtid=\"{D5CDD505-2E9C-101B-9397-08002B2CF9AE}\" pid=\"3\" name=\"ReviewDate\"><vt:filetime>2010-12-21T00:00:00Z</vt:filetime></op:property></op:Properties>");
+                    writer.WriteRaw("""
+                        <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+                        <Properties xmlns="http://schemas.openxmlformats.org/officeDocument/2006/custom-properties" xmlns:vt="http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes">
+                          <property fmtid="{D5CDD505-2E9C-101B-9397-08002B2CF9AE}" pid="2" name="MyCustomProp">
+                            <vt:lpwstr>foobar</vt:lpwstr>
+                          </property>
+                        </Properties>
+                        """);
+                    writer.Flush();
+                    //custFPPStream.Seek(0, SeekOrigin.Begin);
+                }
+
                 doc.AddDigitalSignatureOriginPart();
                 doc.AddExtendedPart("relType", "contentType/xml", ".xml");
 
@@ -410,8 +427,9 @@ namespace DocumentFormat.OpenXml.Tests
                 tnPart = doc.AddThumbnailPart("image/jpg");
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
+                var w = v.Validate(doc, TestContext.Current.CancellationToken);
 
-                Assert.Empty(v.Validate(doc, TestContext.Current.CancellationToken));
+                Assert.Empty(w);
             }
         }
 
