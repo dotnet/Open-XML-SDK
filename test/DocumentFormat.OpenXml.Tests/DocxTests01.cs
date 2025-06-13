@@ -137,8 +137,8 @@ namespace DocumentFormat.OpenXml.Tests
             using (var stream = GetStream(TestFiles.Hyperlink, true))
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
-                var pkg = (OpenXmlPackage)doc;
-                var wpcp = pkg.AddNewPart<RibbonExtensibilityPart>("application/xml", "rid1232131");
+                var footer = doc.MainDocumentPart.AddNewPart<FooterPart>();
+                footer.Footer = new W.Footer();
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
                 var errs = v.Validate(doc, TestContext.Current.CancellationToken);
 
