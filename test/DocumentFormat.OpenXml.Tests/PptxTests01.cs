@@ -474,6 +474,7 @@ namespace DocumentFormat.OpenXml.Tests
                         </Properties>
                         """);
                 }
+
                 var custFPP = doc.AddCustomFilePropertiesPart();
                 var custFPPStream = custFPP.GetStream();
                 using (var writer = new System.Xml.XmlTextWriter(custFPPStream, System.Text.Encoding.UTF8))
