@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Packaging
         IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.rdrichvaluewebimage+xml";
-        internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2020/07/relationships/rdrichvaluewebimage";
+        internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2020/07/relationships/rdRichValueWebImage";
         private DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.WebImagesSupportingRichData? _rootElement;
 
         /// <summary>
