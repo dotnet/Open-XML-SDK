@@ -107,8 +107,7 @@ namespace DocumentFormat.OpenXml.Validation
                     {
                         Validate(context);
                     }
-                    else if (part.Uri.ToString().EndsWith(".xml", System.StringComparison.InvariantCultureIgnoreCase) &&
-                              part.GetStream().Length == 0)
+                    else if (part.Uri.ToString().EndsWith(".xml", System.StringComparison.InvariantCultureIgnoreCase) && part.IsEmptyPart())
                     {
                         context.AddError(new ValidationErrorInfo
                         {

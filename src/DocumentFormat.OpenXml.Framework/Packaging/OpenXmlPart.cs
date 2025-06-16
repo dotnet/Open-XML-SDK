@@ -448,6 +448,18 @@ namespace DocumentFormat.OpenXml.Packaging
             return true;
         }
 
+        internal override bool IsEmptyPart()
+        {
+            bool isEmptyPart;
+
+            using (Stream stream = GetStream())
+            {
+                isEmptyPart = stream.Length == 0;
+            }
+
+            return isEmptyPart;
+        }
+
         #endregion
 
         #region internal methods
