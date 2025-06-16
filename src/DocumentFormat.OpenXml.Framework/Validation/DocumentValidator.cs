@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -105,6 +106,19 @@ namespace DocumentFormat.OpenXml.Validation
                     if (part.PartRootElement is not null)
                     {
                         Validate(context);
+                    }
+                    else if (part.Uri.ToString().EndsWith(".xml", System.StringComparison.InvariantCultureIgnoreCase) && part.IsEmptyPart())
+                    {
+                        context.AddError(new ValidationErrorInfo
+                        {
+                            ErrorType = ValidationErrorType.Schema,
+                            Id = "Sch_MissingPartRootElement",
+                            Part = part,
+                            Description = SR.Format(ValidationResources.Sch_MissingPartRootElement, part.Uri),
+                        });
+
+                        // The part's root element is empty, so no more errors in this part. Release the DOM to GC memory
+                        part.UnloadRootElement();
                     }
 
                     if (!partRootElementLoaded && context.Errors.Count == lastErrorCount)

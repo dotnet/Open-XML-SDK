@@ -389,6 +389,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var corePart = doc.CoreFilePropertiesPart;
                 var appPart = doc.ExtendedFilePropertiesPart;
                 var custFilePropsPart = doc.CustomFilePropertiesPart;
+
                 var thumbNailPart = doc.ThumbnailPart;
 
                 doc.DeletePart(corePart);
@@ -399,9 +400,96 @@ namespace DocumentFormat.OpenXml.Tests
                     doc.DeletePart(thumbNailPart);
                 }
 
-                doc.AddCoreFilePropertiesPart();
-                doc.AddExtendedFilePropertiesPart();
-                doc.AddCustomFilePropertiesPart();
+                var coreFPP = doc.AddCoreFilePropertiesPart();
+                var coreFPPStream = coreFPP.GetStream();
+                using (var writer = new System.Xml.XmlTextWriter(coreFPPStream, System.Text.Encoding.UTF8))
+                {
+                    writer.WriteRaw("""
+                        <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+                        <cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dcmitype="http://purl.org/dc/dcmitype/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                          <dc:title></dc:title>
+                          <dc:creator>Joey Daccord</dc:creator>
+                          <cp:lastModifiedBy>Joey Daccord</cp:lastModifiedBy>
+                          <cp:revision>2</cp:revision>
+                          <dcterms:created xsi:type="dcterms:W3CDTF">2025-06-12T19:21:34Z</dcterms:created>
+                          <dcterms:modified xsi:type="dcterms:W3CDTF">2025-06-12T21:23:11Z</dcterms:modified>
+                        </cp:coreProperties>
+                        """);
+                    writer.Flush();
+                }
+
+                var appFPP = doc.AddExtendedFilePropertiesPart();
+                var appFPPStream = appFPP.GetStream();
+                using (var writer = new System.Xml.XmlTextWriter(appFPPStream, System.Text.Encoding.UTF8))
+                {
+                    writer.WriteRaw("""
+                        <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+                        <Properties xmlns="http://schemas.openxmlformats.org/officeDocument/2006/extended-properties" xmlns:vt="http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes">
+                          <TotalTime>12</TotalTime>
+                          <Words>0</Words>
+                          <Application>Microsoft Office PowerPoint</Application>
+                          <PresentationFormat>Widescreen</PresentationFormat>
+                          <Paragraphs>0</Paragraphs>
+                          <Slides>1</Slides>
+                          <Notes>0</Notes>
+                          <HiddenSlides>0</HiddenSlides>
+                          <MMClips>0</MMClips>
+                          <ScaleCrop>false</ScaleCrop>
+                          <HeadingPairs>
+                            <vt:vector size="6" baseType="variant">
+                              <vt:variant>
+                                <vt:lpstr>Fonts Used</vt:lpstr>
+                              </vt:variant>
+                              <vt:variant>
+                                <vt:i4>3</vt:i4>
+                              </vt:variant>
+                              <vt:variant>
+                                <vt:lpstr>Theme</vt:lpstr>
+                              </vt:variant>
+                              <vt:variant>
+                                <vt:i4>1</vt:i4>
+                              </vt:variant>
+                              <vt:variant>
+                                <vt:lpstr>Slide Titles</vt:lpstr>
+                              </vt:variant>
+                              <vt:variant>
+                                <vt:i4>1</vt:i4>
+                              </vt:variant>
+                            </vt:vector>
+                          </HeadingPairs>
+                          <TitlesOfParts>
+                            <vt:vector size="5" baseType="lpstr">
+                              <vt:lpstr>Aptos</vt:lpstr>
+                              <vt:lpstr>Aptos Display</vt:lpstr>
+                              <vt:lpstr>Arial</vt:lpstr>
+                              <vt:lpstr>Office Theme</vt:lpstr>
+                              <vt:lpstr>PowerPoint Presentation</vt:lpstr>
+                            </vt:vector>
+                          </TitlesOfParts>
+                          <Company></Company>
+                          <LinksUpToDate>false</LinksUpToDate>
+                          <SharedDoc>false</SharedDoc>
+                          <HyperlinksChanged>false</HyperlinksChanged>
+                          <AppVersion>16.0000</AppVersion>
+                        </Properties>
+                        """);
+                }
+
+                var custFPP = doc.AddCustomFilePropertiesPart();
+                var custFPPStream = custFPP.GetStream();
+                using (var writer = new System.Xml.XmlTextWriter(custFPPStream, System.Text.Encoding.UTF8))
+                {
+                    writer.WriteRaw("""
+                        <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+                        <Properties xmlns="http://schemas.openxmlformats.org/officeDocument/2006/custom-properties" xmlns:vt="http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes">
+                          <property fmtid="{D5CDD505-2E9C-101B-9397-08002B2CF9AE}" pid="2" name="MyCustomProp">
+                            <vt:lpwstr>foobar</vt:lpwstr>
+                          </property>
+                        </Properties>
+                        """);
+                    writer.Flush();
+                }
+
                 doc.AddDigitalSignatureOriginPart();
                 doc.AddExtendedPart("relType", "contentType/xml", ".xml");
 
