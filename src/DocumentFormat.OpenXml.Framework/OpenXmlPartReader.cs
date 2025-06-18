@@ -734,6 +734,7 @@ namespace DocumentFormat.OpenXml
 
             // create the root element object
             var rootElement = CreateElement(new(_xmlReader.NamespaceURI, _xmlReader.LocalName));
+
             if (rootElement is null)
             {
                 throw new InvalidDataException(ExceptionMessages.PartUnknown);
@@ -763,6 +764,7 @@ namespace DocumentFormat.OpenXml
                 return element;
             }
 
+            // return unknown element instead of throw exception.
             return new OpenXmlUnknownElement(_xmlReader.Prefix, _xmlReader.LocalName, _xmlReader.NamespaceURI);
         }
 
