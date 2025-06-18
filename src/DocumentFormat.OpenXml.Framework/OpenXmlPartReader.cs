@@ -765,7 +765,7 @@ namespace DocumentFormat.OpenXml
             }
 
             // return unknown element instead of throw exception.
-            return new OpenXmlUnknownElement();
+            return new OpenXmlUnknownElement(_xmlReader.Prefix, _xmlReader.LocalName, _xmlReader.NamespaceURI);
         }
 
         private void LoadAttributes()
