@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Features;
-using DocumentFormat.OpenXml.Wordprocessing;
 using NSubstitute;
 using System;
 using System.IO;
@@ -70,6 +69,7 @@ public class OpenXmlPartReaderTests
             {
                 var workbook = package.AddWorkbookPart();
                 extPart = workbook.AddExtendedPart(nsUri, "application/xml", ".xml");
+
                 // Write some custom elements which are unknown to the OpenXmlPartReader
                 using (var writer = new StreamWriter(extPart.GetStream(FileMode.Create)))
                 {
