@@ -3832,5 +3832,23 @@ namespace DocumentFormat.OpenXml.Tests
                 Assert.Throws<System.InvalidOperationException>(() => O14Validator.Validate(wordTestDocument.MainDocumentPart, TestContext.Current.CancellationToken));
             }
         }
+
+        [Fact]
+        public void EmptyPartRootElementValidatingTest()
+        {
+            using (Stream stream = new MemoryStream())
+            using (WordprocessingDocument document = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
+            {
+                document.AddMainDocumentPart();
+
+                IEnumerable<ValidationErrorInfo> errors = O14Validator.Validate(document, TestContext.Current.CancellationToken);
+                ValidationErrorInfo info = errors.FirstOrDefault();
+
+                Assert.Single(errors);
+                Assert.Equal("Sch_MissingPartRootElement", info.Id);
+                Assert.Equal("The '/word/document.xml' part is missing its root element.", info.Description);
+                Assert.Equal(ValidationErrorType.Schema, info.ErrorType);
+            }
+        }
     }
 }
