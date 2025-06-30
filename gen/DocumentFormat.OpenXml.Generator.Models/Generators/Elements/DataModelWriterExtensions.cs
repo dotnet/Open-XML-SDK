@@ -15,6 +15,7 @@ public static class DataModelWriterExtensions
 {
     public static class AttributeStrings
     {
+        public const string ObsoleteClassWarn = "[Obsolete(\"Unused class, will be removed in a future version.\", false)]";
         public const string ObsoletePropertyWarn = "[Obsolete(\"Unused property, will be removed in a future version.\", false)]";
         public const string ObsoletePropertyError = "[Obsolete(\"Unused property, will be removed in a future version.\", true)]";
         public const string ObsoleteAttributeWarn = "[Obsolete(\"Unused attribute, will be removed in a future version.\", false)]";
@@ -27,6 +28,12 @@ public static class DataModelWriterExtensions
     private static readonly List<string> ObsoletePropertyWarnList =
     [
         AttributeStrings.ObsoletePropertyWarn,
+        AttributeStrings.EditorBrowsableNever,
+    ];
+
+    private static readonly List<string> ObsoleteClassErrorList =
+    [
+        AttributeStrings.ObsoleteClassWarn,
         AttributeStrings.EditorBrowsableNever,
     ];
 
@@ -114,6 +121,26 @@ public static class DataModelWriterExtensions
                     {
                       "c:CT_Boolean/c:bubble3D",
                       ObsoletePropertyWarnList
+                    },
+                }
+            },
+            {
+                "xlpda:CT_PivotCacheDynamicArray/xlpda:pivotCacheDynamicArray",
+                new Dictionary<TypedQName, List<string>>()
+                {
+                    {
+                      "xlpda:CT_PivotCacheDynamicArray/xlpda:pivotCacheDynamicArray",
+                      ObsoleteClassErrorList
+                    },
+                }
+            },
+            {
+                "xprd:CT_PivotCacheRichInfo/xprd:richInfo",
+                new Dictionary<TypedQName, List<string>>()
+                {
+                    {
+                      "xprd:CT_PivotCacheRichInfo/xprd:richInfo",
+                      ObsoleteClassErrorList
                     },
                 }
             },
