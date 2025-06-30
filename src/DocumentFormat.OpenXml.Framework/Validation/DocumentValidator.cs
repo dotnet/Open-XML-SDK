@@ -3,7 +3,6 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
