@@ -450,14 +450,10 @@ namespace DocumentFormat.OpenXml.Packaging
 
         internal override bool IsEmptyPart()
         {
-            bool isEmptyPart;
-
             using (Stream stream = GetStream())
             {
-                isEmptyPart = stream.Length == 0;
+                return stream.Length == 0;
             }
-
-            return isEmptyPart;
         }
 
         #endregion
