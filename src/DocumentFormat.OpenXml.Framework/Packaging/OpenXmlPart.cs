@@ -450,6 +450,11 @@ namespace DocumentFormat.OpenXml.Packaging
 
         internal override bool IsEmptyPart()
         {
+            if (!Uri.ToString().EndsWith(".xml", System.StringComparison.InvariantCultureIgnoreCase))
+            {
+                return false;
+            }
+
             using (Stream stream = GetStream())
             {
                 return stream.Length == 0;
