@@ -214,7 +214,7 @@ public static class DataModelWriterExtensions
         var className = services.FindClassName(element.Name, fullyQualified: false);
 
         writer.Write("partial class ");
-        writer.Write($"{className}{(element.Name.Type.Name == "CT_ExtensionList" && element.Name.Type.Prefix == "p" ? "<T>" : string.Empty)}");
+        writer.Write(className);
         writer.Write(" : ");
         writer.WriteLine(GetBaseName(element));
 
@@ -364,8 +364,8 @@ public static class DataModelWriterExtensions
 
                     writer.Write("builder.AddChild(");
                     writer.Write(className);
-                    writer.Write($"{(className == "DocumentFormat.OpenXml.Presentation.ExtensionList" ? string.Concat("<", services.FindClassName(containingType.Name), ">") : string.Empty)}.ElementType, static () => new ");
-                    writer.Write($"{(className == "DocumentFormat.OpenXml.Presentation.ExtensionList" ? string.Concat(className, "<", services.FindClassName(containingType.Name), ">") : className)}");
+                    writer.Write(".ElementType, static () => new ");
+                    writer.Write(className);
                     writer.WriteLine("());");
                 }
             }
@@ -496,15 +496,14 @@ public static class DataModelWriterExtensions
 
         using (writer.AddBlock(new() { IncludeTrailingNewline = false }))
         {
-            string classNameWithType = className == "DocumentFormat.OpenXml.Presentation.ExtensionList" ? string.Concat(className, "<", services.FindClassName(element.Name), ">") : className;
             writer.Write("get => GetElement(");
-            writer.Write(classNameWithType);
+            writer.Write(className);
             writer.Write(".ElementType) as ");
-            writer.Write(classNameWithType);
+            writer.Write(className);
             writer.WriteLine(";");
 
             writer.Write("set => SetElement(value, ");
-            writer.Write(classNameWithType);
+            writer.Write(className);
             writer.WriteLine(".ElementType);");
         }
     }
