@@ -11450,10 +11450,10 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remarks>
-        public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Presentation.ExtensionList<DocumentFormat.OpenXml.Presentation.SlideId>? ExtensionList
         {
-            get => GetElement(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType) as DocumentFormat.OpenXml.Presentation.ExtensionList;
-            set => SetElement(value, DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType);
+            get => GetElement(DocumentFormat.OpenXml.Presentation.ExtensionList<DocumentFormat.OpenXml.Presentation.SlideId>.ElementType) as DocumentFormat.OpenXml.Presentation.ExtensionList<DocumentFormat.OpenXml.Presentation.SlideId>;
+            set => SetElement(value, DocumentFormat.OpenXml.Presentation.ExtensionList<DocumentFormat.OpenXml.Presentation.SlideId>.ElementType);
         }
 
         /// <inheritdoc/>

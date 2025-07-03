@@ -506,14 +506,23 @@ public static class DataModelWriterExtensions
         }
 
         writer.Write("public ");
-        writer.Write(className);
+
+        if (parent.Name.QName.Name == "sldId" && parent.Name.QName.Prefix == "p" && className == "DocumentFormat.OpenXml.Presentation.ExtensionList")
+        {
+            writer.Write(string.Concat(className, "<DocumentFormat.OpenXml.Presentation.SlideId>"));
+        }
+        else
+        {
+            writer.Write(className);
+        }
+
         writer.Write("? ");
         writer.WriteLine(element.PropertyName);
 
         using (writer.AddBlock(new() { IncludeTrailingNewline = false }))
         {
             writer.Write("get => GetElement(");
-            if (parent.Name.Type.Name == "CT_SlideId" && parent.Name.Type.Prefix == "p" && className == "DocumentFormat.OpenXml.Presentation.ExtensionList")
+            if (parent.Name.QName.Name == "sldId" && parent.Name.QName.Prefix == "p" && className == "DocumentFormat.OpenXml.Presentation.ExtensionList")
             {
                 writer.Write("DocumentFormat.OpenXml.Presentation.ExtensionList<DocumentFormat.OpenXml.Presentation.SlideId>");
             }
@@ -523,7 +532,7 @@ public static class DataModelWriterExtensions
             }
 
             writer.Write(".ElementType) as ");
-            if (parent.Name.Type.Name == "CT_SlideId" && parent.Name.Type.Prefix == "p" && className == "DocumentFormat.OpenXml.Presentation.ExtensionList")
+            if (parent.Name.QName.Name == "sldId" && parent.Name.QName.Prefix == "p" && className == "DocumentFormat.OpenXml.Presentation.ExtensionList")
             {
                 writer.Write("DocumentFormat.OpenXml.Presentation.ExtensionList<DocumentFormat.OpenXml.Presentation.SlideId>");
             }
@@ -535,7 +544,7 @@ public static class DataModelWriterExtensions
             writer.WriteLine(";");
 
             writer.Write("set => SetElement(value, ");
-            if (parent.Name.Type.Name == "CT_SlideId" && parent.Name.Type.Prefix == "p" && className == "DocumentFormat.OpenXml.Presentation.ExtensionList")
+            if (parent.Name.QName.Name == "sldId" && parent.Name.QName.Prefix == "p" && className == "DocumentFormat.OpenXml.Presentation.ExtensionList")
             {
                 writer.Write("DocumentFormat.OpenXml.Presentation.ExtensionList<DocumentFormat.OpenXml.Presentation.SlideId>");
             }
