@@ -11424,7 +11424,7 @@ namespace DocumentFormat.OpenXml.Presentation
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionList<DocumentFormat.OpenXml.Presentation.SlideId>.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionList<DocumentFormat.OpenXml.Presentation.SlideId>());
             builder.AddElement<SlideId>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -11437,7 +11437,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType, 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Presentation.ExtensionList<DocumentFormat.OpenXml.Presentation.SlideId>.ElementType, 0, 1),
             };
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName(":id"), true, null));
             builder.AddConstraint(new RelationshipExistConstraint(builder.CreateQName("r:id")));
