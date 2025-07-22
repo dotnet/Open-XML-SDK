@@ -96,6 +96,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -176,6 +179,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -228,6 +234,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -272,6 +281,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -316,6 +328,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -360,6 +375,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -404,6 +422,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -448,6 +469,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -492,6 +516,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -536,6 +563,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -580,6 +610,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -624,6 +657,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -668,6 +704,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -712,6 +751,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -756,6 +798,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -800,6 +845,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -844,6 +892,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -888,6 +939,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -932,6 +986,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -976,6 +1033,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1020,6 +1080,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1064,6 +1127,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1108,6 +1174,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1152,6 +1221,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1196,6 +1268,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1240,6 +1315,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1284,6 +1362,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1328,6 +1409,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1372,6 +1456,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1416,6 +1503,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1460,6 +1550,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1504,6 +1597,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1548,6 +1644,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1592,6 +1691,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1636,6 +1738,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1680,6 +1785,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1724,6 +1832,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1768,6 +1879,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1812,6 +1926,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1856,6 +1973,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1900,6 +2020,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1944,6 +2067,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1988,6 +2114,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2032,6 +2161,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2076,6 +2208,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2120,6 +2255,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2164,6 +2302,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2208,6 +2349,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2252,6 +2396,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2296,6 +2443,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2340,6 +2490,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2384,6 +2537,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2428,6 +2584,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2472,6 +2631,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2516,6 +2678,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2560,6 +2725,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new StringValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2621,6 +2789,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2686,6 +2857,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2750,6 +2924,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2814,6 +2991,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2878,6 +3058,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2942,6 +3125,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3006,6 +3192,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3070,6 +3259,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3134,6 +3326,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3198,6 +3393,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3262,6 +3460,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3326,6 +3527,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3390,6 +3594,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3454,6 +3661,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3518,6 +3728,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3582,6 +3795,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3653,6 +3869,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3722,6 +3941,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3791,6 +4013,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3890,6 +4115,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4179,6 +4407,9 @@ namespace DocumentFormat.OpenXml.Bibliography
             return new EnumValue<DocumentFormat.OpenXml.Bibliography.DataSourceValues> { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4291,6 +4522,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

@@ -36,6 +36,9 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -66,6 +69,9 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -96,6 +102,9 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -126,6 +135,9 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -186,6 +198,9 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -259,6 +274,9 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -294,6 +312,9 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

@@ -69,6 +69,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartsAc
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

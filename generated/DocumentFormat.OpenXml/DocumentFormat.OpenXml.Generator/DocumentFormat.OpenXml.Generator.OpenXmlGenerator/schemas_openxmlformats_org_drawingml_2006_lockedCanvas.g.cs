@@ -77,6 +77,9 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

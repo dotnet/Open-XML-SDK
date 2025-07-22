@@ -56,6 +56,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

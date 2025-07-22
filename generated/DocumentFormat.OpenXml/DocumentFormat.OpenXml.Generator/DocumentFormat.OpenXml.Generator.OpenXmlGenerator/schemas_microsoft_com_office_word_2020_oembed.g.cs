@@ -66,6 +66,9 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2020.OEmbed
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

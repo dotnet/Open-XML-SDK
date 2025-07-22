@@ -87,6 +87,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -216,6 +219,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -340,6 +346,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -499,6 +508,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -635,6 +647,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -765,6 +780,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -899,6 +917,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1034,6 +1055,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1186,6 +1210,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1321,6 +1348,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1428,6 +1458,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1545,6 +1578,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1677,6 +1713,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1802,6 +1841,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1898,6 +1940,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1992,6 +2037,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2098,6 +2146,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2204,6 +2255,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2328,6 +2382,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2408,6 +2465,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             return new Int32Value { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2452,6 +2512,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             return new Int64Value { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2496,6 +2559,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             return new Int64Value { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2540,6 +2606,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             return new Int32Value { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2604,6 +2673,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2674,6 +2746,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2744,6 +2819,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2846,6 +2924,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2899,6 +2980,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2960,6 +3044,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3083,6 +3170,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3215,6 +3305,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3313,6 +3406,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3447,6 +3543,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3543,6 +3642,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3637,6 +3739,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3731,6 +3836,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3844,6 +3952,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

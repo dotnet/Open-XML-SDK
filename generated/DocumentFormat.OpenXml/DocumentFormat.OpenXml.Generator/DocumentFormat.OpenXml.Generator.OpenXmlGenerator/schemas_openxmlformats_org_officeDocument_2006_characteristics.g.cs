@@ -66,6 +66,9 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -141,6 +144,9 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

@@ -49,6 +49,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotAutoRefresh
             return new BooleanValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

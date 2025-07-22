@@ -70,6 +70,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -190,6 +193,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -268,6 +274,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -372,6 +381,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -472,6 +484,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -585,6 +600,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -662,6 +680,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -869,6 +890,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1097,6 +1121,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1232,6 +1259,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1354,6 +1384,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

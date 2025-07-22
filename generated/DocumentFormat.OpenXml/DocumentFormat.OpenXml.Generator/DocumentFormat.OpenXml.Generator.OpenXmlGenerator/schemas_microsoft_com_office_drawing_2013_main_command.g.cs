@@ -57,6 +57,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -117,6 +120,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -177,6 +183,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -237,6 +246,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -297,6 +309,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -357,6 +372,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -421,6 +439,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -517,6 +538,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -609,6 +633,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -644,6 +671,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -699,6 +729,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -758,6 +791,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -817,6 +853,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -876,6 +915,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -935,6 +977,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -974,6 +1019,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             return new Base64BinaryValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1018,6 +1066,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             return new Base64BinaryValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1062,6 +1113,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             return new Base64BinaryValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1106,6 +1160,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             return new Base64BinaryValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1152,6 +1209,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1192,6 +1252,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1292,6 +1355,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1379,6 +1445,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1440,6 +1509,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1499,6 +1571,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1558,6 +1633,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1617,6 +1695,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1676,6 +1757,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1735,6 +1819,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1794,6 +1881,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1853,6 +1943,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1912,6 +2005,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1971,6 +2067,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2030,6 +2129,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2089,6 +2191,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2148,6 +2253,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2207,6 +2315,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2266,6 +2377,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2325,6 +2439,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2384,6 +2501,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2443,6 +2563,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2538,6 +2661,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2646,6 +2772,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2717,6 +2846,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2915,6 +3047,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3303,6 +3438,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3539,6 +3677,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3607,6 +3748,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3696,6 +3840,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3796,6 +3943,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3827,6 +3977,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3858,6 +4011,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3889,6 +4045,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3920,6 +4079,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3951,6 +4113,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3982,6 +4147,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4013,6 +4181,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4044,6 +4215,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4075,6 +4249,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4106,6 +4283,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4137,6 +4317,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4168,6 +4351,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4199,6 +4385,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4230,6 +4419,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4261,6 +4453,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4292,6 +4487,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4323,6 +4521,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4354,6 +4555,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4385,6 +4589,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4416,6 +4623,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4447,6 +4657,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4478,6 +4691,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4509,6 +4725,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4540,6 +4759,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4571,6 +4793,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4602,6 +4827,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4633,6 +4861,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4664,6 +4895,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4728,6 +4962,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4932,6 +5169,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5013,6 +5253,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5094,6 +5337,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5185,6 +5431,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5345,6 +5594,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5514,6 +5766,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5621,6 +5876,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             return new BooleanValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5666,6 +5924,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             return new BooleanValue { InnerText = text };
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5751,6 +6012,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5828,6 +6092,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5859,6 +6126,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5930,6 +6200,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5994,6 +6267,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6158,6 +6434,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6247,6 +6526,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6368,6 +6650,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6574,6 +6859,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6696,6 +6984,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6820,6 +7111,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6858,6 +7152,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6889,6 +7186,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6940,6 +7240,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7106,6 +7409,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7222,6 +7528,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7466,6 +7775,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7624,6 +7936,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7698,6 +8013,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7787,6 +8105,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7863,6 +8184,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7979,6 +8303,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8182,6 +8509,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8255,6 +8585,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8320,6 +8653,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8455,6 +8791,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8534,6 +8873,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8629,6 +8971,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8713,6 +9058,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

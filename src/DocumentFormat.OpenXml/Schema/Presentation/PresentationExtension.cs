@@ -18,6 +18,7 @@ using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
+using System.Linq;
 
 namespace DocumentFormat.OpenXml.Presentation;
 

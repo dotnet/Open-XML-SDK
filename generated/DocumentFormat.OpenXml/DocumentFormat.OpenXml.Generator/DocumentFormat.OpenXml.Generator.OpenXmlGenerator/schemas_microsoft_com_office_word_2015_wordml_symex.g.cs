@@ -62,6 +62,9 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

@@ -320,6 +320,16 @@ public static class DataModelWriterExtensions
 
     private static void WriteMetadata(this IndentedTextWriter writer, OpenXmlGeneratorServices services, SchemaType containingType)
     {
+        writer.WriteLine("internal static List<string> ExtensionChildren = new List() {");
+
+        foreach (var child in containingType.ExtensionChildren)
+        {
+            writer.WriteLine($"\"{services.FindClassName(child.Name)}\",");
+        }
+
+        writer.WriteLine("};");
+        writer.WriteLine();
+
         var attributes = containingType.Attributes;
 
         writer.WriteLine("internal override void ConfigureMetadata(ElementMetadata.Builder builder)");

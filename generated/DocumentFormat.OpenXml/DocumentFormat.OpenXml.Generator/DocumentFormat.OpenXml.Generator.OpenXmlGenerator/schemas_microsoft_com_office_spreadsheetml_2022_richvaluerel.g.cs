@@ -68,6 +68,9 @@ namespace DocumentFormat.OpenXml.Office.Y2022.RichValueRel
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -119,6 +122,9 @@ namespace DocumentFormat.OpenXml.Office.Y2022.RichValueRel
             set => SetAttribute(value);
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -185,6 +191,9 @@ namespace DocumentFormat.OpenXml.Office.Y2022.RichValueRel
         {
         }
 
+        internal static List<string> ExtensionChildren = new List() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
