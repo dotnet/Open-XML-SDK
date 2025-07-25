@@ -46,9 +46,6 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2022.ImageFormula
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

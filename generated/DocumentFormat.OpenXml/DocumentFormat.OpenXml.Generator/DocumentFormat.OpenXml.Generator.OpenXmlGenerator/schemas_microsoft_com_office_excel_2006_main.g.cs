@@ -93,7 +93,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
+        internal static new List<string> ExtensionChildren = new List<string>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -297,9 +297,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -407,9 +404,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
             return new ListValue<StringValue> { InnerText = text };
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -455,9 +449,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
             return new StringValue { InnerText = text };
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -539,9 +530,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -636,9 +624,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -683,9 +668,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -716,9 +698,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -769,9 +748,6 @@ namespace DocumentFormat.OpenXml.Office.Excel
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

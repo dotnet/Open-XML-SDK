@@ -93,7 +93,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
+        internal static new List<string> ExtensionChildren = new List<string>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -271,9 +271,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -330,9 +327,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -403,9 +397,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -508,7 +499,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
+        internal static new List<string> ExtensionChildren = new List<string>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -643,7 +634,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
+        internal static new List<string> ExtensionChildren = new List<string>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -737,9 +728,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -806,9 +794,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -875,9 +860,6 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -997,7 +979,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
+        internal static new List<string> ExtensionChildren = new List<string>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)

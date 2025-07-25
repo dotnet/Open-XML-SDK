@@ -44,9 +44,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -78,9 +75,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -112,9 +106,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -146,9 +137,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -180,9 +168,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -214,9 +199,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -248,9 +230,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -282,9 +261,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -316,9 +292,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -350,9 +323,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -436,9 +406,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -563,9 +530,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -684,9 +648,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -736,9 +697,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -770,9 +728,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -805,9 +760,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -840,9 +792,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -874,9 +823,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -934,9 +880,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -974,9 +917,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1008,9 +948,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1133,9 +1070,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1188,9 +1122,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1222,9 +1153,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1256,9 +1184,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1290,9 +1215,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1323,9 +1245,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1371,9 +1290,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1410,9 +1326,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1444,9 +1357,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1477,9 +1387,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1510,9 +1417,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1543,9 +1447,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1576,9 +1477,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1609,9 +1507,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1643,9 +1538,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1677,9 +1569,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1711,9 +1600,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1744,9 +1630,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1777,9 +1660,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1810,9 +1690,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1843,9 +1720,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1876,9 +1750,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1909,9 +1780,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1942,9 +1810,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1975,9 +1840,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2009,9 +1871,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2042,9 +1901,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2075,9 +1931,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2108,9 +1961,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2141,9 +1991,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2175,9 +2022,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2209,9 +2053,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2242,9 +2083,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2288,9 +2126,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2322,9 +2157,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2355,9 +2187,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2388,9 +2217,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2421,9 +2247,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2454,9 +2277,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2487,9 +2307,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2520,9 +2337,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2553,9 +2367,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2586,9 +2397,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2619,9 +2427,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2652,9 +2457,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2685,9 +2487,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2718,9 +2517,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2751,9 +2547,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2784,9 +2577,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2817,9 +2607,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2850,9 +2637,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2883,9 +2667,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2916,9 +2697,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2949,9 +2727,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2982,9 +2757,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3015,9 +2787,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3048,9 +2817,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3081,9 +2847,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3114,9 +2877,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3147,9 +2907,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3180,9 +2937,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3213,9 +2967,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3246,9 +2997,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3279,9 +3027,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3312,9 +3057,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3345,9 +3087,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3378,9 +3117,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3411,9 +3147,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3444,9 +3177,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3477,9 +3207,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3510,9 +3237,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3543,9 +3267,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3576,9 +3297,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3609,9 +3327,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3642,9 +3357,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3675,9 +3387,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3708,9 +3417,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3741,9 +3447,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3774,9 +3477,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3807,9 +3507,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3840,9 +3537,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3873,9 +3567,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3906,9 +3597,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3939,9 +3627,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3972,9 +3657,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4005,9 +3687,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4038,9 +3717,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4071,9 +3747,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4104,9 +3777,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4137,9 +3807,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4170,9 +3837,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4203,9 +3867,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4236,9 +3897,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4269,9 +3927,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4302,9 +3957,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4335,9 +3987,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4368,9 +4017,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4401,9 +4047,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4434,9 +4077,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4467,9 +4107,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4500,9 +4137,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4533,9 +4167,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4566,9 +4197,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4599,9 +4227,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4632,9 +4257,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4665,9 +4287,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4698,9 +4317,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4731,9 +4347,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4764,9 +4377,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4797,9 +4407,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4830,9 +4437,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4863,9 +4467,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4896,9 +4497,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4929,9 +4527,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4962,9 +4557,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4995,9 +4587,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5028,9 +4617,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5061,9 +4647,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5094,9 +4677,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5127,9 +4707,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5160,9 +4737,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5193,9 +4767,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5226,9 +4797,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5259,9 +4827,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5292,9 +4857,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5325,9 +4887,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5358,9 +4917,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5391,9 +4947,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5424,9 +4977,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5457,9 +5007,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5490,9 +5037,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5523,9 +5067,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5556,9 +5097,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5589,9 +5127,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5622,9 +5157,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5655,9 +5187,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5688,9 +5217,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5721,9 +5247,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5754,9 +5277,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5787,9 +5307,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5820,9 +5337,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5853,9 +5367,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5886,9 +5397,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5919,9 +5427,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5952,9 +5457,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5985,9 +5487,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6018,9 +5517,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6051,9 +5547,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6084,9 +5577,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6117,9 +5607,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6150,9 +5637,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6183,9 +5667,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6216,9 +5697,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6249,9 +5727,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6282,9 +5757,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6315,9 +5787,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6348,9 +5817,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6381,9 +5847,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6414,9 +5877,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6447,9 +5907,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6480,9 +5937,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6513,9 +5967,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6546,9 +5997,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6579,9 +6027,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6612,9 +6057,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6645,9 +6087,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6678,9 +6117,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6711,9 +6147,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6744,9 +6177,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6777,9 +6207,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6810,9 +6237,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6843,9 +6267,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6876,9 +6297,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6909,9 +6327,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6942,9 +6357,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6975,9 +6387,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7008,9 +6417,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7041,9 +6447,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7074,9 +6477,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7107,9 +6507,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7140,9 +6537,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7173,9 +6567,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7206,9 +6597,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7239,9 +6627,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7272,9 +6657,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7305,9 +6687,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7338,9 +6717,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7371,9 +6747,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7404,9 +6777,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7437,9 +6807,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7470,9 +6837,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7503,9 +6867,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7536,9 +6897,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7569,9 +6927,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7602,9 +6957,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7635,9 +6987,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7668,9 +7017,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7701,9 +7047,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7734,9 +7077,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7767,9 +7107,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7800,9 +7137,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7833,9 +7167,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7866,9 +7197,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7899,9 +7227,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7932,9 +7257,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7965,9 +7287,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7998,9 +7317,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8031,9 +7347,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8064,9 +7377,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8097,9 +7407,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8130,9 +7437,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8163,9 +7467,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8196,9 +7497,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8229,9 +7527,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8262,9 +7557,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8295,9 +7587,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8328,9 +7617,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8361,9 +7647,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8394,9 +7677,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8427,9 +7707,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8473,9 +7750,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8699,9 +7973,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8827,9 +8098,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8958,9 +8226,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -9201,9 +8466,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -9303,9 +8565,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -9445,9 +8704,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -9667,9 +8923,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -9782,9 +9035,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -9833,9 +9083,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -9884,9 +9131,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -9935,9 +9179,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -9973,9 +9214,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -10007,9 +9245,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -10040,9 +9275,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -10073,9 +9305,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -10106,9 +9335,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -10139,9 +9365,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -10172,9 +9395,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -10205,9 +9425,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -10238,9 +9455,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -10271,9 +9485,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -10304,9 +9515,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -10337,9 +9545,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -10370,9 +9575,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -10416,9 +9618,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -10532,9 +9731,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -10607,9 +9803,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -10642,9 +9835,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -10703,9 +9893,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -10767,9 +9954,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -10816,9 +10000,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             return new StringValue { InnerText = text };
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -10862,9 +10043,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             return new StringValue { InnerText = text };
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -10908,9 +10086,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             return new StringValue { InnerText = text };
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -10954,9 +10129,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             return new StringValue { InnerText = text };
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11013,9 +10185,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11044,9 +10213,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11077,9 +10243,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11110,9 +10273,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11143,9 +10303,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11176,9 +10333,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11209,9 +10363,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11242,9 +10393,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11275,9 +10423,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11308,9 +10453,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11341,9 +10483,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11374,9 +10513,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11407,9 +10543,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11440,9 +10573,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11473,9 +10603,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11506,9 +10633,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11539,9 +10663,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11572,9 +10693,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11605,9 +10723,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11638,9 +10753,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11671,9 +10783,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11704,9 +10813,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11737,9 +10843,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11770,9 +10873,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11803,9 +10903,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11836,9 +10933,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11891,9 +10985,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -12017,9 +11108,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -12164,9 +11252,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -12317,9 +11402,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -12437,9 +11519,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -12518,9 +11597,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -12552,9 +11628,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -12611,9 +11684,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -12678,9 +11748,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -12783,9 +11850,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -12829,9 +11893,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -12862,9 +11923,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -12895,9 +11953,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -12929,9 +11984,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -12963,9 +12015,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -12996,9 +12045,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -13029,9 +12075,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -13062,9 +12105,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -13095,9 +12135,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -13128,9 +12165,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -13161,9 +12195,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -13194,9 +12225,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -13240,9 +12268,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -13392,9 +12417,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -13499,9 +12521,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -13564,9 +12583,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -13616,9 +12632,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -13667,9 +12680,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -13719,9 +12729,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -13763,9 +12770,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -13796,9 +12800,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -13829,9 +12830,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -13862,9 +12860,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -13895,9 +12890,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -13941,9 +12933,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -13994,9 +12983,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14097,9 +13083,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14162,9 +13145,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14200,9 +13180,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14233,9 +13210,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14266,9 +13240,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14299,9 +13270,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14334,9 +13302,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14367,9 +13332,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14400,9 +13362,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14433,9 +13392,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14467,9 +13423,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14501,9 +13454,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14534,9 +13484,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14567,9 +13514,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14600,9 +13544,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14750,9 +13691,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14834,9 +13772,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14887,9 +13822,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14938,9 +13870,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14976,9 +13905,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -15009,9 +13935,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -15081,9 +14004,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -15188,9 +14108,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -15309,9 +14226,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -15464,9 +14378,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -16414,9 +15325,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -16572,9 +15480,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -16672,9 +15577,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -16765,9 +15667,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -16910,9 +15809,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -17049,9 +15945,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -17393,9 +16286,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -17795,9 +16685,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -18129,9 +17016,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -18321,9 +17205,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -18447,9 +17328,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -18563,9 +17441,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -18639,9 +17514,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -18764,9 +17636,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -19023,9 +17892,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -19282,9 +18148,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -19541,9 +18404,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -19852,9 +18712,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -19970,9 +18827,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -20061,9 +18915,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -20238,9 +19089,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -20444,9 +19292,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -20751,9 +19596,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -21113,9 +19955,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -21441,9 +20280,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -21707,9 +20543,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -21905,9 +20738,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -22083,9 +20913,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -22333,9 +21160,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -22531,9 +21355,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -22734,9 +21555,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -23111,9 +21929,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -23546,9 +22361,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -23911,9 +22723,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -24259,9 +23068,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -24505,9 +23311,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -24539,9 +23342,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -24573,9 +23373,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -24607,9 +23404,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -24641,9 +23435,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -24675,9 +23466,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -24708,9 +23496,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -24742,9 +23527,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -24775,9 +23557,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -24823,9 +23602,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -25026,9 +23802,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -25115,9 +23888,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -25148,9 +23918,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -25181,9 +23948,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -25214,9 +23978,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -25247,9 +24008,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -25280,9 +24038,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -25313,9 +24068,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -25347,9 +24099,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -25382,9 +24131,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -25416,9 +24162,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -25449,9 +24192,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -25508,9 +24248,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -25566,9 +24303,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -25614,9 +24348,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -25688,9 +24419,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -25874,9 +24602,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -25907,9 +24632,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -25940,9 +24662,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -25973,9 +24692,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -26006,9 +24722,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -26039,9 +24752,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -26072,9 +24782,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -26105,9 +24812,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -26138,9 +24842,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -26171,9 +24872,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -26204,9 +24902,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -26237,9 +24932,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -26270,9 +24962,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -26303,9 +24992,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -26336,9 +25022,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -26369,9 +25052,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -26402,9 +25082,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -26435,9 +25112,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -26468,9 +25142,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -26514,9 +25185,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -26580,9 +25248,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -26719,9 +25384,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -26770,9 +25432,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -26840,9 +25499,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -26892,9 +25548,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -27060,9 +25713,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -27135,9 +25785,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -27173,9 +25820,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -27206,9 +25850,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -27252,9 +25893,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -27313,9 +25951,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -27386,9 +26021,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -27555,9 +26187,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -27625,9 +26254,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -27764,9 +26390,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -27815,9 +26438,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -27896,9 +26516,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -28042,9 +26659,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -28137,9 +26751,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -28272,9 +26883,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -28387,9 +26995,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -28477,9 +27082,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -28612,9 +27214,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -28700,9 +27299,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -28808,9 +27404,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -28960,9 +27553,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -29064,9 +27654,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -29187,9 +27774,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -29254,9 +27838,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -29331,9 +27912,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -29398,9 +27976,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -29500,9 +28075,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -29699,9 +28271,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -29798,9 +28367,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -29897,9 +28463,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -30030,9 +28593,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -30294,9 +28854,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -30558,9 +29115,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -30754,9 +29308,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -31341,9 +29892,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -31618,9 +30166,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -31720,9 +30265,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -31827,9 +30369,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -31939,9 +30478,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -32075,9 +30611,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -32216,9 +30749,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -32432,9 +30962,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -32758,9 +31285,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -32874,9 +31398,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -33272,9 +31793,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -33693,9 +32211,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -34321,9 +32836,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -34597,9 +33109,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -34884,9 +33393,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -34923,9 +33429,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -34956,9 +33459,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -34989,9 +33489,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -35035,9 +33532,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -35135,9 +33629,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -35230,9 +33721,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -35361,9 +33849,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -35741,9 +34226,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -35865,9 +34347,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             return new Base64BinaryValue { InnerText = text };
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -35937,9 +34416,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -36009,9 +34485,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -36048,9 +34521,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -36081,9 +34551,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -36127,9 +34594,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -36188,9 +34652,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -36253,9 +34714,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -36326,9 +34784,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -36405,9 +34860,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -36506,9 +34958,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -36615,9 +35064,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -36654,9 +35100,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -36687,9 +35130,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -36720,9 +35160,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -36767,9 +35204,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -36815,9 +35249,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -36866,9 +35297,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -36918,9 +35346,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -36983,9 +35408,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -37117,9 +35539,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -37274,9 +35693,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -37379,9 +35795,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -37443,9 +35856,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -37494,9 +35904,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -37545,9 +35952,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -37619,9 +36023,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -37831,9 +36232,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -38073,9 +36471,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -38315,9 +36710,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -38414,9 +36806,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -38462,9 +36851,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -38523,9 +36909,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -38618,9 +37001,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -38750,9 +37130,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -38851,9 +37228,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -39089,9 +37463,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -39428,9 +37799,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -39703,9 +38071,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -39906,9 +38271,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -40078,9 +38440,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -40170,9 +38529,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -40227,9 +38583,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -40313,9 +38666,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -40461,9 +38811,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -40582,9 +38929,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -40957,9 +39301,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -41114,9 +39455,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -41234,9 +39572,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -41583,9 +39918,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -41642,9 +39974,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -41706,9 +40035,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -41761,9 +40087,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -41799,9 +40122,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -41834,9 +40154,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -41882,9 +40199,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -41917,9 +40231,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -41950,9 +40261,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -41996,9 +40304,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -42043,9 +40348,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -42113,9 +40415,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -42208,9 +40507,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -42259,9 +40555,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -42332,9 +40625,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -42471,9 +40761,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -42522,9 +40809,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -42573,9 +40857,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -42648,9 +40929,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -42804,9 +41082,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -42848,9 +41123,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -42881,9 +41153,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -42914,9 +41183,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -42947,9 +41213,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -42993,9 +41256,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -43091,9 +41351,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -43720,9 +41977,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -44242,9 +42496,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -44323,9 +42574,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -44374,9 +42622,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -44407,9 +42652,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -44453,9 +42695,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -44500,9 +42739,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -44538,9 +42774,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -44571,9 +42804,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -44604,9 +42834,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -44637,9 +42864,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -44670,9 +42894,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -44703,9 +42924,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -44749,9 +42967,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -44822,9 +43037,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -44931,9 +43143,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -45003,9 +43212,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -45131,9 +43337,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -45300,9 +43503,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -45364,9 +43564,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -45439,9 +43636,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -45505,9 +43699,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -45603,9 +43794,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -46181,9 +44369,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -46794,9 +44979,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -46912,9 +45094,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -47182,9 +45361,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -47306,9 +45482,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -47498,9 +45671,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -47618,9 +45788,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -48172,9 +46339,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -48344,9 +46508,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -48430,9 +46591,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -48572,9 +46730,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -48625,9 +46780,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -48728,9 +46880,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -49362,9 +47511,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -49569,9 +47715,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -49724,9 +47867,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -49918,9 +48058,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -49995,9 +48132,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -50169,9 +48303,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -50320,9 +48451,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -50735,9 +48863,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -50941,9 +49066,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -50974,9 +49096,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -51007,9 +49126,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -51040,9 +49156,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -51086,9 +49199,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -51159,9 +49269,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -51285,9 +49392,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -51352,9 +49456,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -51419,9 +49520,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -51499,9 +49597,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -51759,9 +49854,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -51959,9 +50051,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -52162,9 +50251,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -52391,9 +50477,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -52475,9 +50558,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -52526,9 +50606,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -52577,9 +50654,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -52641,9 +50715,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -52777,9 +50848,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -52852,9 +50920,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -52972,9 +51037,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -53071,9 +51133,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -53136,9 +51195,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -53207,9 +51263,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -53316,9 +51369,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -53386,9 +51436,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -53437,9 +51484,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -53512,9 +51556,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -53718,9 +51759,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -53921,9 +51959,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -54124,9 +52159,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -54220,9 +52252,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -54325,9 +52354,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -54372,9 +52398,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -54405,9 +52428,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -54464,9 +52484,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -54542,9 +52559,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -54780,9 +52794,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -54956,9 +52967,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -55096,9 +53104,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -55741,9 +53746,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -55813,9 +53815,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -55916,9 +53915,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -56049,9 +54045,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -56109,9 +54102,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -56174,9 +54164,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -56264,9 +54251,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -56350,9 +54334,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -56436,9 +54417,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -56566,9 +54544,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -56637,9 +54612,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -56708,9 +54680,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -56822,9 +54791,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -56875,9 +54841,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -57131,9 +55094,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -57216,9 +55176,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -57280,9 +55237,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -57407,9 +55361,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -57490,9 +55441,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -57734,9 +55682,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -57846,9 +55791,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -57899,9 +55841,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -57982,9 +55921,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -58323,9 +56259,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -58609,9 +56542,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -58684,9 +56614,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -58717,9 +56644,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -58763,9 +56687,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -58811,9 +56732,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -58862,9 +56780,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -58901,9 +56816,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -58934,9 +56846,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -58980,9 +56889,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -59028,9 +56934,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -59092,9 +56995,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -59162,9 +57062,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -59232,9 +57129,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -59300,9 +57194,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -59369,9 +57260,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -59438,9 +57326,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -59503,9 +57388,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -59647,9 +57529,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -59852,9 +57731,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -60895,9 +58771,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -60964,9 +58837,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -61173,9 +59043,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -61250,9 +59117,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -61342,9 +59206,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -61413,9 +59274,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -61489,9 +59347,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -61562,9 +59417,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -61627,9 +59479,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -61679,9 +59528,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -61730,9 +59576,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -61846,9 +59689,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -61912,9 +59752,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -61947,9 +59784,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -61981,9 +59815,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -62015,9 +59846,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -62088,9 +59916,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -62171,9 +59996,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             set => SetAttribute(value);
         }
 
-        internal static List<string> ExtensionChildren = new List() {
-        };
-        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
