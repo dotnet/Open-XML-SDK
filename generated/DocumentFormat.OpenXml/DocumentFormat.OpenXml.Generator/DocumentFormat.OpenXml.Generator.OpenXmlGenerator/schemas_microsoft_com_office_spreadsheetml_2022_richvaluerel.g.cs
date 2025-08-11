@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Office.Y2022.RichValueRel
         {
         }
 
-        internal static new List<string> ExtensionChildren = new List<string>() {
+        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)

@@ -1,23 +1,13 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
-using DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main;
-using DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main;
-using DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main;
-using DocumentFormat.OpenXml.Office2010.Drawing;
-using DocumentFormat.OpenXml.Office2010.PowerPoint;
-using DocumentFormat.OpenXml.Office2013.PowerPoint;
-using DocumentFormat.OpenXml.Office2021.PowerPoint.Comment;
-using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
-using DocumentFormat.OpenXml.Validation.Semantic;
-using System;
 using System.Collections.Generic;
-using System.IO.Packaging;
+using System.Diagnostics.CodeAnalysis;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 
 namespace DocumentFormat.OpenXml.Presentation;
 
@@ -34,6 +24,8 @@ namespace DocumentFormat.OpenXml.Presentation;
 /// </remarks>
 #pragma warning disable SA1649 // File name should match first type name
 public class ExtensionList<T> : OpenXmlCompositeElement
+//public class ExtensionList<[DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicProperties)] T> : OpenXmlCompositeElement
+
 #pragma warning restore SA1649 // File name should match first type name
 {
 #pragma warning disable CS0109
@@ -81,14 +73,14 @@ public class ExtensionList<T> : OpenXmlCompositeElement
     {
         base.ConfigureMetadata(builder);
         builder.SetSchema(ElementType);
-        builder.AddChild(DocumentFormat.OpenXml.Presentation.Extension.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Extension());
+        builder.AddChild(DocumentFormat.OpenXml.Presentation.Extension<T>.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Extension<T>());
         builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(DocumentFormat.OpenXml.Presentation.Extension.ElementType, 0, 0),
+                        new ElementParticle(DocumentFormat.OpenXml.Presentation.Extension<T>.ElementType, 0, 0),
                     },
                 },
             };

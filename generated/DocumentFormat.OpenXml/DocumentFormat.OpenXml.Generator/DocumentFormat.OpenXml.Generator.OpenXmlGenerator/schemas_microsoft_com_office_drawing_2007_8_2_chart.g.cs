@@ -455,7 +455,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
             set => SetAttribute(value);
         }
 
-        internal static new List<string> ExtensionChildren = new List<string>() {
+        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)

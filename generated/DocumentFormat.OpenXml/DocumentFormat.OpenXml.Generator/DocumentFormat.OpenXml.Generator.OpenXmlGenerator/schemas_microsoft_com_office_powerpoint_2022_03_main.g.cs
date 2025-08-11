@@ -225,7 +225,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
             set => SetAttribute(value);
         }
 
-        internal static new List<string> ExtensionChildren = new List<string>() {
+        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)

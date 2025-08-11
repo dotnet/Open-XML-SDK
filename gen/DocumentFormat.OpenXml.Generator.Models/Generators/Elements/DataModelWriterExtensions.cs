@@ -322,11 +322,11 @@ public static class DataModelWriterExtensions
     {
         if (containingType.KnownChildren is not null && containingType.KnownChildren.Any(c => c.QName.Name == "extLst") && containingType.ExtensionChildren is not null)
         {
-            writer.WriteLine("internal static new List<string> ExtensionChildren = new List<string>() {");
+            writer.WriteLine("internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {");
 
             foreach (var child in containingType.ExtensionChildren)
             {
-                writer.WriteLine($"\"{services.FindClassName(child.Name)}\",");
+                writer.WriteLine($"    {services.FindClassName(child.Name)}.ElementType,");
             }
 
             writer.WriteLine("};");
@@ -369,7 +369,7 @@ public static class DataModelWriterExtensions
                 writer.WriteLine(";");
             }
 
-            if (!containingType.IsDerived)
+            if (!containingType.IsDerived && containingType.KnownChildren is not null)
             {
                 foreach (var child in containingType.KnownChildren)
                 {

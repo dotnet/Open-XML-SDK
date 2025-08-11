@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         {
         }
 
-        internal static new List<string> ExtensionChildren = new List<string>() {
+        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -473,7 +473,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             set => SetAttribute(value);
         }
 
-        internal static new List<string> ExtensionChildren = new List<string>() {
+        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -591,7 +591,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             set => SetAttribute(value);
         }
 
-        internal static new List<string> ExtensionChildren = new List<string>() {
+        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -701,7 +701,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         {
         }
 
-        internal static new List<string> ExtensionChildren = new List<string>() {
+        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -861,7 +861,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         {
         }
 
-        internal static new List<string> ExtensionChildren = new List<string>() {
+        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -1006,7 +1006,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         {
         }
 
-        internal static new List<string> ExtensionChildren = new List<string>() {
+        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -1180,7 +1180,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             set => SetAttribute(value);
         }
 
-        internal static new List<string> ExtensionChildren = new List<string>() {
+        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -1713,7 +1713,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             set => SetAttribute(value);
         }
 
-        internal static new List<string> ExtensionChildren = new List<string>() {
+        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -1800,7 +1800,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             set => SetAttribute(value);
         }
 
-        internal static new List<string> ExtensionChildren = new List<string>() {
+        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -2817,7 +2817,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         {
         }
 
-        internal static new List<string> ExtensionChildren = new List<string>() {
+        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -2991,7 +2991,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             set => SetAttribute(value);
         }
 
-        internal static new List<string> ExtensionChildren = new List<string>() {
+        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)

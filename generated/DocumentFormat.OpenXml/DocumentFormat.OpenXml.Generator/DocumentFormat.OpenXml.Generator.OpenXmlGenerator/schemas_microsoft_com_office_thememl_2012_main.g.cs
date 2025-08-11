@@ -98,7 +98,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
             set => SetAttribute(value);
         }
 
-        internal static new List<string> ExtensionChildren = new List<string>() {
+        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -321,7 +321,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
             set => SetAttribute(value);
         }
 
-        internal static new List<string> ExtensionChildren = new List<string>() {
+        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)

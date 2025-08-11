@@ -77,7 +77,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink
             set => SetAttribute(value);
         }
 
-        internal static new List<string> ExtensionChildren = new List<string>() {
+        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)

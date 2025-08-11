@@ -177,6 +177,11 @@ namespace DocumentFormat.OpenXml
             }
         }
 
+
+        #endregion
+
+        #region static properties
+        internal static List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new List<OpenXmlSchemaType>();
         #endregion
 
         #region change children

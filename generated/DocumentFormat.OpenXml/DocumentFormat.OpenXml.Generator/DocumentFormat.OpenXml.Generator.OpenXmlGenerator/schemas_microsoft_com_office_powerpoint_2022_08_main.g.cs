@@ -88,7 +88,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
             set => SetAttribute(value);
         }
 
-        internal static new List<string> ExtensionChildren = new List<string>() {
+        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -412,7 +412,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         {
         }
 
-        internal static new List<string> ExtensionChildren = new List<string>() {
+        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -852,7 +852,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
             set => SetAttribute(value);
         }
 
-        internal static new List<string> ExtensionChildren = new List<string>() {
+        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
