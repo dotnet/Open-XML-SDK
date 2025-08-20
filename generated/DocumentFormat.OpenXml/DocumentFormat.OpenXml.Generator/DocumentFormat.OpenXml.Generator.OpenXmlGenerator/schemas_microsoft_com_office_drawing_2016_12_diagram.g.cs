@@ -42,7 +42,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ShapeProperties : OpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement, IExtensionChildrenParent<ShapeProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2016/12/diagram", "spPr");
@@ -91,7 +91,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -195,7 +195,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties" /> <c>&lt;a:lvl9pPr></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class TextListStyleType : OpenXmlCompositeElement
+    public partial class TextListStyleType : OpenXmlCompositeElement, IExtensionChildrenParent<TextListStyleType>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2016/12/diagram", "lstStyle");
@@ -234,7 +234,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)

@@ -250,7 +250,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionPartReference" /> <c>&lt;wetp:webextensionref></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class WebExtensionTaskpane : OpenXmlCompositeElement
+    public partial class WebExtensionTaskpane : OpenXmlCompositeElement, IExtensionChildrenParent<WebExtensionTaskpane>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11", "taskpane");
@@ -339,7 +339,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)

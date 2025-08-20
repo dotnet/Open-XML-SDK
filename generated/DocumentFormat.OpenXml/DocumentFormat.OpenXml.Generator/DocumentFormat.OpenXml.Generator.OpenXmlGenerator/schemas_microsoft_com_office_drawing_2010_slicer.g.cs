@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Slicer.OfficeArtExtensionList" /> <c>&lt;sle:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Slicer : OpenXmlCompositeElement
+    public partial class Slicer : OpenXmlCompositeElement, IExtensionChildrenParent<Slicer>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2010/slicer", "slicer");
@@ -77,7 +77,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)

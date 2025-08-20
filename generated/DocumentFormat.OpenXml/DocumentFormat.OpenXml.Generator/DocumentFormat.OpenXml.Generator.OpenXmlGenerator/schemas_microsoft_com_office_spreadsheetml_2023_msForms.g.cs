@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList" /> <c>&lt;xlmsforms:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Question : OpenXmlCompositeElement
+    public partial class Question : OpenXmlCompositeElement, IExtensionChildrenParent<Question>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/msForms", "question");
@@ -77,7 +77,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -126,7 +126,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.SyncedQuestionId" /> <c>&lt;xlmsforms:syncedQuestionId></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class MsForm : OpenXmlCompositeElement
+    public partial class MsForm : OpenXmlCompositeElement, IExtensionChildrenParent<MsForm>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/msForms", "msForm");
@@ -205,7 +205,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)

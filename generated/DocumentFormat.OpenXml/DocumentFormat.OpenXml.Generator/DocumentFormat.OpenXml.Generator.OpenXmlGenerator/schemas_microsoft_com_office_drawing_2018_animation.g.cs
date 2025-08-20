@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList" /> <c>&lt;aanim:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class AnimationProperties : OpenXmlCompositeElement
+    public partial class AnimationProperties : OpenXmlCompositeElement, IExtensionChildrenParent<AnimationProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2018/animation", "animPr");
@@ -137,7 +137,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)

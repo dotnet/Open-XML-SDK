@@ -54,7 +54,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortState" /> <c>&lt;x:sortState></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Macrosheet : OpenXmlPartRootElement
+    public partial class Macrosheet : OpenXmlPartRootElement, IExtensionChildrenParent<Macrosheet>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/excel/2006/main", "macrosheet");
@@ -93,7 +93,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)

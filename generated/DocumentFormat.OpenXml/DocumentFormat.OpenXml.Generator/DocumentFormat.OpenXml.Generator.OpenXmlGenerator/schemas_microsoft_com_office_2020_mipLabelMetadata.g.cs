@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationLabel" /> <c>&lt;clbl:label></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ClassificationLabelList : OpenXmlPartRootElement
+    public partial class ClassificationLabelList : OpenXmlPartRootElement, IExtensionChildrenParent<ClassificationLabelList>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/2020/mipLabelMetadata", "labelList");
@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)

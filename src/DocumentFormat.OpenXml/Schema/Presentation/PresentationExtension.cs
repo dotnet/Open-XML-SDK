@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
+using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,7 @@ namespace DocumentFormat.OpenXml.Presentation;
 /// typically for custom features or forward compatibility. The required <c>Uri</c> attribute identifies the type or purpose of the extension.
 /// </remarks>
 public partial class Extension<T> : OpenXmlCompositeElement
+where T : IExtensionChildrenParent<T>
 {
 #pragma warning disable CS0109
     internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "ext");
@@ -82,7 +84,22 @@ public partial class Extension<T> : OpenXmlCompositeElement
         //System.Diagnostics.CodeAnalysis.DynamicallyAccessedMemberTypes.NonPublicProperties)]
         //Type tType = typeof(T);
 
-        List<OpenXmlSchemaType>? val = (List<OpenXmlSchemaType>?)typeof(T).GetProperty("ExtensionChildren", BindingFlags.NonPublic | BindingFlags.Static)?.GetValue(null);
+        IEnumerable<OpenXmlSchemaType>? val;
+
+#if NET8_0_OR_GREATER
+        val = T.ExtensionChildren;
+#else
+        val = (IEnumerable<OpenXmlSchemaType>?)typeof(T).GetProperty("ExtensionChildren", BindingFlags.NonPublic | BindingFlags.Static)?.GetValue(null);
+#endif
+        Console.WriteLine("method is running");
+        if (System.Diagnostics.Debugger.IsAttached)
+        {
+            System.Diagnostics.Debugger.Break();
+        }
+        else
+        {
+            System.Diagnostics.Debugger.Launch(); // Optionally launch the debugger if not attached
+        }
 
         if (val is not null)
         {

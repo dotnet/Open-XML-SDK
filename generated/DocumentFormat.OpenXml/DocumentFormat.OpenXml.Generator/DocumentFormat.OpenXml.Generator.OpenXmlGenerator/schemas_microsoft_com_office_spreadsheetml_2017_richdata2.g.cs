@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichTop10" /> <c>&lt;xlrd2:top10></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class RichFilterColumn : OpenXmlCompositeElement
+    public partial class RichFilterColumn : OpenXmlCompositeElement, IExtensionChildrenParent<RichFilterColumn>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2", "filterColumn");
@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -424,7 +424,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagStructure" /> <c>&lt;xlrd2:s></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class SupportingPropertyBagStructures : OpenXmlPartRootElement
+    public partial class SupportingPropertyBagStructures : OpenXmlPartRootElement, IExtensionChildrenParent<SupportingPropertyBagStructures>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2", "spbStructures");
@@ -473,7 +473,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -542,7 +542,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.Array" /> <c>&lt;xlrd2:a></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ArrayData : OpenXmlPartRootElement
+    public partial class ArrayData : OpenXmlPartRootElement, IExtensionChildrenParent<ArrayData>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2", "arrayData");
@@ -591,7 +591,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -662,7 +662,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyles" /> <c>&lt;xlrd2:richStyles></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class RichStylesheet : OpenXmlPartRootElement
+    public partial class RichStylesheet : OpenXmlPartRootElement, IExtensionChildrenParent<RichStylesheet>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2", "richStyleSheet");
@@ -701,7 +701,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -822,7 +822,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypes" /> <c>&lt;xlrd2:types></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class RichValueTypesInfo : OpenXmlPartRootElement
+    public partial class RichValueTypesInfo : OpenXmlPartRootElement, IExtensionChildrenParent<RichValueTypesInfo>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2", "rvTypesInfo");
@@ -861,7 +861,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -967,7 +967,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilter" /> <c>&lt;xlrd2:filter></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class RichFilters : OpenXmlCompositeElement
+    public partial class RichFilters : OpenXmlCompositeElement, IExtensionChildrenParent<RichFilters>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2", "filters");
@@ -1006,7 +1006,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -1131,7 +1131,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.CustomRichFilter" /> <c>&lt;xlrd2:customFilter></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class CustomRichFilters : OpenXmlCompositeElement
+    public partial class CustomRichFilters : OpenXmlCompositeElement, IExtensionChildrenParent<CustomRichFilters>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2", "customFilters");
@@ -1180,7 +1180,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -1664,7 +1664,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArray" /> <c>&lt;xlrd2:a></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class SupportingPropertyBagArrayData : OpenXmlCompositeElement
+    public partial class SupportingPropertyBagArrayData : OpenXmlCompositeElement, IExtensionChildrenParent<SupportingPropertyBagArrayData>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2", "spbArrays");
@@ -1713,7 +1713,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -1751,7 +1751,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBag" /> <c>&lt;xlrd2:spb></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class SupportingPropertyBagData : OpenXmlCompositeElement
+    public partial class SupportingPropertyBagData : OpenXmlCompositeElement, IExtensionChildrenParent<SupportingPropertyBagData>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2", "spbData");
@@ -1800,7 +1800,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -2778,7 +2778,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags" /> <c>&lt;xlrd2:keyFlags></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class RichValueGlobalType : OpenXmlCompositeElement
+    public partial class RichValueGlobalType : OpenXmlCompositeElement, IExtensionChildrenParent<RichValueGlobalType>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2", "global");
@@ -2817,7 +2817,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -2942,7 +2942,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags" /> <c>&lt;xlrd2:keyFlags></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class RichValueType : OpenXmlCompositeElement
+    public partial class RichValueType : OpenXmlCompositeElement, IExtensionChildrenParent<RichValueType>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2", "type");
@@ -2991,7 +2991,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)

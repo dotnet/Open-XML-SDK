@@ -182,7 +182,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchSeed" /> <c>&lt;ask:seed></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class LineSketchStyleProperties : OpenXmlCompositeElement
+    public partial class LineSketchStyleProperties : OpenXmlCompositeElement, IExtensionChildrenParent<LineSketchStyleProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2018/sketchyshapes", "lineSketchStyleProps");
@@ -231,7 +231,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)

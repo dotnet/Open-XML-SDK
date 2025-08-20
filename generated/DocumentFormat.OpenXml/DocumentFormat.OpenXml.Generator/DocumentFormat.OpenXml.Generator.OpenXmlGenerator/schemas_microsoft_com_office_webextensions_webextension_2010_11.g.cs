@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionReferenceList" /> <c>&lt;we:alternateReferences></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class WebExtension : OpenXmlPartRootElement
+    public partial class WebExtension : OpenXmlPartRootElement, IExtensionChildrenParent<WebExtension>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/webextensions/webextension/2010/11", "webextension");
@@ -93,7 +93,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -430,7 +430,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList" /> <c>&lt;we:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class WebExtensionBinding : OpenXmlCompositeElement
+    public partial class WebExtensionBinding : OpenXmlCompositeElement, IExtensionChildrenParent<WebExtensionBinding>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/webextensions/webextension/2010/11", "binding");
@@ -499,7 +499,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -555,7 +555,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList" /> <c>&lt;we:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class WebExtensionStoreReference : OpenXmlCompositeElement
+    public partial class WebExtensionStoreReference : OpenXmlCompositeElement, IExtensionChildrenParent<WebExtensionStoreReference>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/webextensions/webextension/2010/11", "reference");
@@ -634,7 +634,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -904,7 +904,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TintEffect" /> <c>&lt;a:tint></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Snapshot : OpenXmlCompositeElement
+    public partial class Snapshot : OpenXmlCompositeElement, IExtensionChildrenParent<Snapshot>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/webextensions/webextension/2010/11", "snapshot");
@@ -979,7 +979,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)

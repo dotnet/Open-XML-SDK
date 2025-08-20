@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart" /> <c>&lt;a14:contentPart></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class LockedCanvas : OpenXmlCompositeElement
+    public partial class LockedCanvas : OpenXmlCompositeElement, IExtensionChildrenParent<LockedCanvas>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas", "lockedCanvas");
@@ -77,7 +77,7 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)

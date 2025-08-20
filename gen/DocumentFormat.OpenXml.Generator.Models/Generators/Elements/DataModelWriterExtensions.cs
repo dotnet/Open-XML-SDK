@@ -216,7 +216,15 @@ public static class DataModelWriterExtensions
         writer.Write("partial class ");
         writer.Write(className);
         writer.Write(" : ");
-        writer.WriteLine(GetBaseName(element));
+
+        if (element.KnownChildren is not null && element.KnownChildren.Any(c => c.QName.Name == "extLst") && element.ExtensionChildren is not null)
+        {
+            writer.WriteLine($"{GetBaseName(element)}, IExtensionChildrenParent<{className}>");
+        }
+        else
+        {
+            writer.WriteLine(GetBaseName(element));
+        }
 
         using (writer.AddBlock(new() { AddNewLineBeforeClosing = true, IncludeTrailingNewline = false }))
         {
@@ -322,7 +330,7 @@ public static class DataModelWriterExtensions
     {
         if (containingType.KnownChildren is not null && containingType.KnownChildren.Any(c => c.QName.Name == "extLst") && containingType.ExtensionChildren is not null)
         {
-            writer.WriteLine("internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {");
+            writer.WriteLine("public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {");
 
             foreach (var child in containingType.ExtensionChildren)
             {
@@ -331,6 +339,11 @@ public static class DataModelWriterExtensions
 
             writer.WriteLine("};");
             writer.WriteLine();
+
+            //writer.WriteLine("public static IEnumerable<OpenXmlSchemaType> GetExtensionChildren<T>()");
+            //writer.WriteLine("    where T : IExtensionChildrenParent<T>");
+            //writer.WriteLine("    => T.ExtensionChildren;");
+            //writer.WriteLine();
         }
 
         var attributes = containingType.Attributes;

@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.WebImageSupportingRichData" /> <c>&lt;xlrdwi:webImageSrd></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class WebImagesSupportingRichData : OpenXmlPartRootElement
+    public partial class WebImagesSupportingRichData : OpenXmlPartRootElement, IExtensionChildrenParent<WebImagesSupportingRichData>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/richdatawebimage", "webImagesSrd");
@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)

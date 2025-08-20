@@ -197,7 +197,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
+    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualDrawingProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2008/diagram", "cNvPr");
@@ -286,7 +286,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -372,7 +372,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeLocks" /> <c>&lt;a:spLocks></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
+    public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualDrawingShapeProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2008/diagram", "cNvSpPr");
@@ -421,7 +421,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -590,7 +590,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ShapeProperties : OpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement, IExtensionChildrenParent<ShapeProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2008/diagram", "spPr");
@@ -639,7 +639,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -1160,7 +1160,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualGroupDrawingShapeProperties : OpenXmlCompositeElement
+    public partial class NonVisualGroupDrawingShapeProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualGroupDrawingShapeProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2008/diagram", "cNvGrpSpPr");
@@ -1199,7 +1199,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -1362,7 +1362,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class GroupShapeProperties : OpenXmlCompositeElement
+    public partial class GroupShapeProperties : OpenXmlCompositeElement, IExtensionChildrenParent<GroupShapeProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2008/diagram", "grpSpPr");
@@ -1411,7 +1411,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -1496,7 +1496,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.ShapeNonVisualProperties" /> <c>&lt;dsp:nvSpPr></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Shape : OpenXmlCompositeElement
+    public partial class Shape : OpenXmlCompositeElement, IExtensionChildrenParent<Shape>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2008/diagram", "sp");
@@ -1545,7 +1545,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -1677,7 +1677,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Shape" /> <c>&lt;dsp:sp></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class GroupShape : GroupShapeType
+    public partial class GroupShape : GroupShapeType, IExtensionChildrenParent<GroupShape>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2008/diagram", "grpSp");
@@ -1716,7 +1716,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -1756,7 +1756,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Shape" /> <c>&lt;dsp:sp></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ShapeTree : GroupShapeType
+    public partial class ShapeTree : GroupShapeType, IExtensionChildrenParent<ShapeTree>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2008/diagram", "spTree");
@@ -1795,7 +1795,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -1835,7 +1835,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Shape" /> <c>&lt;dsp:sp></c></description></item>
     /// </list>
     /// </remarks>
-    public abstract partial class GroupShapeType : OpenXmlCompositeElement
+    public abstract partial class GroupShapeType : OpenXmlCompositeElement, IExtensionChildrenParent<GroupShapeType>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
@@ -1874,7 +1874,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)

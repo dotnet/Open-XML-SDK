@@ -2766,7 +2766,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TabStopList" /> <c>&lt;a:tabLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class TextParagraphPropertiesType : OpenXmlCompositeElement
+    public partial class TextParagraphPropertiesType : OpenXmlCompositeElement, IExtensionChildrenParent<TextParagraphPropertiesType>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "pPr");
@@ -2915,7 +2915,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -3077,7 +3077,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeAutoFit" /> <c>&lt;a:spAutoFit></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class TextBodyProperties : OpenXmlCompositeElement
+    public partial class TextBodyProperties : OpenXmlCompositeElement, IExtensionChildrenParent<TextBodyProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "bodyPr");
@@ -3306,7 +3306,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -3653,7 +3653,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ShapeProperties : OpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement, IExtensionChildrenParent<ShapeProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "spPr");
@@ -3702,7 +3702,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -4698,7 +4698,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty" /> <c>&lt;oac:bwMode></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ResetShapeProperties : OpenXmlCompositeElement
+    public partial class ResetShapeProperties : OpenXmlCompositeElement, IExtensionChildrenParent<ResetShapeProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "spPr");
@@ -4737,7 +4737,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -6210,7 +6210,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class GroupShapeProperties : OpenXmlCompositeElement
+    public partial class GroupShapeProperties : OpenXmlCompositeElement, IExtensionChildrenParent<GroupShapeProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "grpSpPr");
@@ -6259,7 +6259,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -6344,7 +6344,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty" /> <c>&lt;oac:bwMode></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ResetGroupShapeProperties : OpenXmlCompositeElement
+    public partial class ResetGroupShapeProperties : OpenXmlCompositeElement, IExtensionChildrenParent<ResetGroupShapeProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "grpSpPr");
@@ -6383,7 +6383,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -6503,7 +6503,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualDrawingProps : OpenXmlCompositeElement
+    public partial class NonVisualDrawingProps : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualDrawingProps>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "cNvPr");
@@ -6592,7 +6592,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -6678,7 +6678,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualGroupDrawingShapeProps : OpenXmlCompositeElement
+    public partial class NonVisualGroupDrawingShapeProps : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualGroupDrawingShapeProps>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "cNvGrpSpPr");
@@ -6717,7 +6717,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -7924,7 +7924,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class LinePropertiesType : OpenXmlCompositeElement
+    public partial class LinePropertiesType : OpenXmlCompositeElement, IExtensionChildrenParent<LinePropertiesType>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2013/main/command", "lineProps");
@@ -8003,7 +8003,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)

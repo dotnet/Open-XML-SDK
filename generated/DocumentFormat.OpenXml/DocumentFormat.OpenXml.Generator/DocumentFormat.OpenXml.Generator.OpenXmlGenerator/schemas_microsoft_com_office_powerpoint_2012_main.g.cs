@@ -249,7 +249,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ExtendedGuide" /> <c>&lt;p15:guide></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class SlideGuideList : ExtendedGuideList
+    public partial class SlideGuideList : ExtendedGuideList, IExtensionChildrenParent<SlideGuideList>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2012/main", "sldGuideLst");
@@ -288,7 +288,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -319,7 +319,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ExtendedGuide" /> <c>&lt;p15:guide></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NotesGuideList : ExtendedGuideList
+    public partial class NotesGuideList : ExtendedGuideList, IExtensionChildrenParent<NotesGuideList>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2012/main", "notesGuideLst");
@@ -358,7 +358,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -389,7 +389,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ExtendedGuide" /> <c>&lt;p15:guide></c></description></item>
     /// </list>
     /// </remarks>
-    public abstract partial class ExtendedGuideList : OpenXmlCompositeElement
+    public abstract partial class ExtendedGuideList : OpenXmlCompositeElement, IExtensionChildrenParent<ExtendedGuideList>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
@@ -428,7 +428,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -788,7 +788,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList" /> <c>&lt;p15:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ExtendedGuide : OpenXmlCompositeElement
+    public partial class ExtendedGuide : OpenXmlCompositeElement, IExtensionChildrenParent<ExtendedGuide>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2012/main", "guide");
@@ -877,7 +877,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)

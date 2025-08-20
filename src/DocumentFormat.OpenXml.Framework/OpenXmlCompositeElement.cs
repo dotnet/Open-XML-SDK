@@ -180,9 +180,14 @@ namespace DocumentFormat.OpenXml
 
         #endregion
 
-        #region static properties
-        internal static List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new List<OpenXmlSchemaType>();
-        #endregion
+//        #region static properties
+//        internal static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>();
+
+//#if NET8_0_OR_GREATER
+//        internal static IEnumerable<OpenXmlSchemaType> GetExtensionChildren()
+//            => ExtensionChildren;
+//#endif
+//        #endregion
 
         #region change children
 

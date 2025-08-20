@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList" /> <c>&lt;w16cex:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class CommentsExtensible : OpenXmlPartRootElement
+    public partial class CommentsExtensible : OpenXmlPartRootElement, IExtensionChildrenParent<CommentsExtensible>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2018/wordml/cex", "commentsExtensible");
@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -131,7 +131,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList" /> <c>&lt;w16cex:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class CommentExtensible : OpenXmlCompositeElement
+    public partial class CommentExtensible : OpenXmlCompositeElement, IExtensionChildrenParent<CommentExtensible>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2018/wordml/cex", "commentExtensible");
@@ -209,7 +209,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)

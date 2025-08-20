@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ShapeProperties : OpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement, IExtensionChildrenParent<ShapeProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chart", "spPr");
@@ -92,7 +92,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -335,7 +335,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Symbol" /> <c>&lt;c:symbol></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Marker : OpenXmlCompositeElement
+    public partial class Marker : OpenXmlCompositeElement, IExtensionChildrenParent<Marker>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chart", "marker");
@@ -374,7 +374,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -477,7 +477,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Separator" /> <c>&lt;c:separator></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DLbl : OpenXmlCompositeElement
+    public partial class DLbl : OpenXmlCompositeElement, IExtensionChildrenParent<DLbl>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chart", "dLbl");
@@ -516,7 +516,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -1096,7 +1096,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.FormatCode" /> <c>&lt;c:formatCode></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NumberDataType : OpenXmlCompositeElement
+    public partial class NumberDataType : OpenXmlCompositeElement, IExtensionChildrenParent<NumberDataType>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chart", "numCache");
@@ -1135,7 +1135,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -1278,7 +1278,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class StringDataType : OpenXmlCompositeElement
+    public partial class StringDataType : OpenXmlCompositeElement, IExtensionChildrenParent<StringDataType>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chart", "strCache");
@@ -1317,7 +1317,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -1445,7 +1445,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class MultiLvlStrData : OpenXmlCompositeElement
+    public partial class MultiLvlStrData : OpenXmlCompositeElement, IExtensionChildrenParent<MultiLvlStrData>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chart", "multiLvlStrCache");
@@ -1484,7 +1484,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)

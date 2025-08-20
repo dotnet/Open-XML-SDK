@@ -37,7 +37,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingShape.TextBoxInfo2" /> <c>&lt;wps:txbx></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class WordprocessingShape : OpenXmlCompositeElement
+    public partial class WordprocessingShape : OpenXmlCompositeElement, IExtensionChildrenParent<WordprocessingShape>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingShape", "wsp");
@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -227,7 +227,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
+    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualDrawingProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingShape", "cNvPr");
@@ -316,7 +316,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -402,7 +402,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeLocks" /> <c>&lt;a:spLocks></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
+    public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualDrawingShapeProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingShape", "cNvSpPr");
@@ -451,7 +451,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -514,7 +514,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualConnectorProperties : OpenXmlCompositeElement
+    public partial class NonVisualConnectorProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualConnectorProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingShape", "cNvCnPr");
@@ -553,7 +553,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -655,7 +655,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ShapeProperties : OpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement, IExtensionChildrenParent<ShapeProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingShape", "spPr");
@@ -704,7 +704,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -926,7 +926,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextBoxContent" /> <c>&lt;w:txbxContent></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class TextBoxInfo2 : OpenXmlCompositeElement
+    public partial class TextBoxInfo2 : OpenXmlCompositeElement, IExtensionChildrenParent<TextBoxInfo2>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingShape", "txbx");
@@ -975,7 +975,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -1035,7 +1035,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList" /> <c>&lt;wps:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class LinkedTextBox : OpenXmlCompositeElement
+    public partial class LinkedTextBox : OpenXmlCompositeElement, IExtensionChildrenParent<LinkedTextBox>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingShape", "linkedTxbx");
@@ -1094,7 +1094,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -1153,7 +1153,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeAutoFit" /> <c>&lt;a:spAutoFit></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class TextBodyProperties : OpenXmlCompositeElement
+    public partial class TextBodyProperties : OpenXmlCompositeElement, IExtensionChildrenParent<TextBodyProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingShape", "bodyPr");
@@ -1382,7 +1382,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)

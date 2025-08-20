@@ -1124,7 +1124,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties" /> <c>&lt;xdr14:nvContentPartPr></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ContentPart : OpenXmlCompositeElement
+    public partial class ContentPart : OpenXmlCompositeElement, IExtensionChildrenParent<ContentPart>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "contentPart");
@@ -1186,7 +1186,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -1499,7 +1499,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ShapeProperties : OpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement, IExtensionChildrenParent<ShapeProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "spPr");
@@ -1548,7 +1548,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -3000,7 +3000,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
+    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualDrawingProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "cNvPr");
@@ -3089,7 +3089,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -3175,7 +3175,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeLocks" /> <c>&lt;a:spLocks></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
+    public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualShapeDrawingProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "cNvSpPr");
@@ -3224,7 +3224,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -3286,7 +3286,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlCompositeElement
+    public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualConnectorShapeDrawingProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "cNvCxnSpPr");
@@ -3325,7 +3325,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -3413,7 +3413,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PictureLocks" /> <c>&lt;a:picLocks></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
+    public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualPictureDrawingProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "cNvPicPr");
@@ -3462,7 +3462,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -3522,7 +3522,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement
+    public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualGraphicFrameDrawingProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "cNvGraphicFramePr");
@@ -3561,7 +3561,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -3619,7 +3619,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElement
+    public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualGroupShapeDrawingProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "cNvGrpSpPr");
@@ -3658,7 +3658,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         {
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
@@ -3819,7 +3819,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class GroupShapeProperties : OpenXmlCompositeElement
+    public partial class GroupShapeProperties : OpenXmlCompositeElement, IExtensionChildrenParent<GroupShapeProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "grpSpPr");
@@ -3868,7 +3868,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)

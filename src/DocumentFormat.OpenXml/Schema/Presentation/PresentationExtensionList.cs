@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
+using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
@@ -24,7 +25,7 @@ namespace DocumentFormat.OpenXml.Presentation;
 /// </remarks>
 #pragma warning disable SA1649 // File name should match first type name
 public class ExtensionList<T> : OpenXmlCompositeElement
-//public class ExtensionList<[DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicProperties)] T> : OpenXmlCompositeElement
+    where T : IExtensionChildrenParent<T>
 
 #pragma warning restore SA1649 // File name should match first type name
 {

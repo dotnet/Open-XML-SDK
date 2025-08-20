@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed.OfficeArtExtensionList" /> <c>&lt;aoe:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class OEmbedShared : OpenXmlCompositeElement
+    public partial class OEmbedShared : OpenXmlCompositeElement, IExtensionChildrenParent<OEmbedShared>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2021/oembed", "oembedShared");
@@ -87,7 +87,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed
             set => SetAttribute(value);
         }
 
-        internal static new List<OpenXmlSchemaType> ExtensionChildren { get; set; } = new() {
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
         };
         
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
