@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PivotTableName" /> <c>&lt;c:name></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class PivotSource : OpenXmlCompositeElement
+    public partial class PivotSource : OpenXmlCompositeElement, IExtensionChildrenParent<PivotSource>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chart", "pivotSource");
@@ -70,6 +70,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -211,7 +214,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ShapeProperties : OpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement, IExtensionChildrenParent<ShapeProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chart", "spPr");
@@ -260,6 +263,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -352,7 +358,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ManualLayout" /> <c>&lt;c:manualLayout></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Layout : OpenXmlCompositeElement
+    public partial class Layout : OpenXmlCompositeElement, IExtensionChildrenParent<Layout>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chart", "layout");
@@ -391,6 +397,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2408,7 +2417,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class BarChartSeries : OpenXmlCompositeElement
+    public partial class BarChartSeries : OpenXmlCompositeElement, IExtensionChildrenParent<BarChartSeries>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chart", "ser");
@@ -2447,6 +2456,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2597,7 +2609,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class LineChartSeries : OpenXmlCompositeElement
+    public partial class LineChartSeries : OpenXmlCompositeElement, IExtensionChildrenParent<LineChartSeries>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chart", "ser");
@@ -2636,6 +2648,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2787,7 +2802,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ScatterChartSeries : OpenXmlCompositeElement
+    public partial class ScatterChartSeries : OpenXmlCompositeElement, IExtensionChildrenParent<ScatterChartSeries>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chart", "ser");
@@ -2826,6 +2841,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2959,7 +2977,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class AreaChartSeries : OpenXmlCompositeElement
+    public partial class AreaChartSeries : OpenXmlCompositeElement, IExtensionChildrenParent<AreaChartSeries>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chart", "ser");
@@ -2998,6 +3016,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3128,7 +3149,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Explosion" /> <c>&lt;c:explosion></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class PieChartSeries : OpenXmlCompositeElement
+    public partial class PieChartSeries : OpenXmlCompositeElement, IExtensionChildrenParent<PieChartSeries>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chart", "ser");
@@ -3167,6 +3188,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3314,7 +3338,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class BubbleChartSeries : OpenXmlCompositeElement
+    public partial class BubbleChartSeries : OpenXmlCompositeElement, IExtensionChildrenParent<BubbleChartSeries>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chart", "ser");
@@ -3353,6 +3377,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3504,7 +3531,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class RadarChartSeries : OpenXmlCompositeElement
+    public partial class RadarChartSeries : OpenXmlCompositeElement, IExtensionChildrenParent<RadarChartSeries>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chart", "ser");
@@ -3543,6 +3570,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3684,7 +3714,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class SurfaceChartSeries : OpenXmlCompositeElement
+    public partial class SurfaceChartSeries : OpenXmlCompositeElement, IExtensionChildrenParent<SurfaceChartSeries>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chart", "ser");
@@ -3723,6 +3753,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3895,7 +3928,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DataLabelsRangeChache : StringDataType
+    public partial class DataLabelsRangeChache : StringDataType, IExtensionChildrenParent<DataLabelsRangeChache>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chart", "dlblRangeCache");
@@ -3934,6 +3967,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3964,7 +4000,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DataLabelFieldTableCache : StringDataType
+    public partial class DataLabelFieldTableCache : StringDataType, IExtensionChildrenParent<DataLabelFieldTableCache>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chart", "dlblFieldTableCache");
@@ -4003,6 +4039,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4033,7 +4072,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
     /// </remarks>
-    public abstract partial class StringDataType : OpenXmlCompositeElement
+    public abstract partial class StringDataType : OpenXmlCompositeElement, IExtensionChildrenParent<StringDataType>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
@@ -4072,6 +4111,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4154,7 +4196,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Symbol" /> <c>&lt;c:symbol></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Marker : OpenXmlCompositeElement
+    public partial class Marker : OpenXmlCompositeElement, IExtensionChildrenParent<Marker>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chart", "marker");
@@ -4193,6 +4235,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4293,7 +4338,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Separator" /> <c>&lt;c:separator></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DataLabel : OpenXmlCompositeElement
+    public partial class DataLabel : OpenXmlCompositeElement, IExtensionChildrenParent<DataLabel>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chart", "dLbl");
@@ -4332,6 +4377,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

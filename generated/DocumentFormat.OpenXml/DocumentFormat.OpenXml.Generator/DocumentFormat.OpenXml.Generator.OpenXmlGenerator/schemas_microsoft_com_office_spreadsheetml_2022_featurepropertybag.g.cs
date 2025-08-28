@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FeaturePropertyBag" /> <c>&lt;xfpb:bag></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class FeaturePropertyBags : OpenXmlPartRootElement
+    public partial class FeaturePropertyBags : OpenXmlPartRootElement, IExtensionChildrenParent<FeaturePropertyBags>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "FeaturePropertyBags");
@@ -79,6 +79,9 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -145,7 +148,7 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FeaturePropertyBag" /> <c>&lt;xfpb:bag></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class FpbsFeaturePropertyBags : OpenXmlFeaturePropertyBagsElement
+    public partial class FpbsFeaturePropertyBags : OpenXmlFeaturePropertyBagsElement, IExtensionChildrenParent<FpbsFeaturePropertyBags>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "fpbs");
@@ -184,6 +187,9 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -214,7 +220,7 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FeaturePropertyBag" /> <c>&lt;xfpb:bag></c></description></item>
     /// </list>
     /// </remarks>
-    public abstract partial class OpenXmlFeaturePropertyBagsElement : OpenXmlCompositeElement
+    public abstract partial class OpenXmlFeaturePropertyBagsElement : OpenXmlCompositeElement, IExtensionChildrenParent<OpenXmlFeaturePropertyBagsElement>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
@@ -263,6 +269,9 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1160,7 +1169,7 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList" /> <c>&lt;xfpb:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class BagExtensions : OpenXmlCompositeElement
+    public partial class BagExtensions : OpenXmlCompositeElement, IExtensionChildrenParent<BagExtensions>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "bagExt");
@@ -1199,6 +1208,9 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1899,7 +1911,7 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DifferentialFormatType : OpenXmlCompositeElement
+    public partial class DifferentialFormatType : OpenXmlCompositeElement, IExtensionChildrenParent<DifferentialFormatType>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "dxf");
@@ -1938,6 +1950,9 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

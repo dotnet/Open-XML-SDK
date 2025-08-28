@@ -263,7 +263,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DifferentialFormatType : OpenXmlCompositeElement
+    public partial class DifferentialFormatType : OpenXmlCompositeElement, IExtensionChildrenParent<DifferentialFormatType>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "dxf");
@@ -302,6 +302,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1569,7 +1572,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.ExtensionList" /> <c>&lt;xr:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class RevExFormatting : OpenXmlCompositeElement
+    public partial class RevExFormatting : OpenXmlCompositeElement, IExtensionChildrenParent<RevExFormatting>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrf");
@@ -1798,6 +1801,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1894,7 +1900,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula" /> <c>&lt;xr:formula></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class RevExDefinedName : OpenXmlCompositeElement
+    public partial class RevExDefinedName : OpenXmlCompositeElement, IExtensionChildrenParent<RevExDefinedName>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "xrrDefName");
@@ -2093,6 +2099,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5831,7 +5840,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Comments : OpenXmlCompositeElement
+    public partial class Comments : OpenXmlCompositeElement, IExtensionChildrenParent<Comments>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "comments");
@@ -5870,6 +5879,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5942,7 +5954,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortState" /> <c>&lt;x:sortState></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class AutoFilter : OpenXmlCompositeElement
+    public partial class AutoFilter : OpenXmlCompositeElement, IExtensionChildrenParent<AutoFilter>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "autoFilter");
@@ -5991,6 +6003,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6040,7 +6055,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RowItems" /> <c>&lt;x:rowItems></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class pivotTableDefinition : OpenXmlCompositeElement
+    public partial class pivotTableDefinition : OpenXmlCompositeElement, IExtensionChildrenParent<pivotTableDefinition>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2014/revision", "pivotTableDefinition");
@@ -6759,6 +6774,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

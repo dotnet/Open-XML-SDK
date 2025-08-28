@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.Task" /> <c>&lt;t:Task></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Tasks : OpenXmlPartRootElement
+    public partial class Tasks : OpenXmlPartRootElement, IExtensionChildrenParent<Tasks>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Tasks");
@@ -68,6 +68,9 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -130,7 +133,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistory" /> <c>&lt;t:History></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Task : OpenXmlCompositeElement
+    public partial class Task : OpenXmlCompositeElement, IExtensionChildrenParent<Task>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Task");
@@ -179,6 +182,9 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -322,7 +328,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.CommentAnchor" /> <c>&lt;t:Comment></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class TaskAnchor : OpenXmlCompositeElement
+    public partial class TaskAnchor : OpenXmlCompositeElement, IExtensionChildrenParent<TaskAnchor>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Anchor");
@@ -361,6 +367,9 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -495,7 +504,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.UnassignTaskUser" /> <c>&lt;t:Unassign></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class TaskHistoryEvent : OpenXmlCompositeElement
+    public partial class TaskHistoryEvent : OpenXmlCompositeElement, IExtensionChildrenParent<TaskHistoryEvent>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Event");
@@ -554,6 +563,9 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

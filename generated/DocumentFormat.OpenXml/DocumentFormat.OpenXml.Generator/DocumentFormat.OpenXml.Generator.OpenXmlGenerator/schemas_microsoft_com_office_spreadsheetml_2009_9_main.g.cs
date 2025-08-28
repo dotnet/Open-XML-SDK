@@ -408,7 +408,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.IgnoredError" /> <c>&lt;x14:ignoredError></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class IgnoredErrors : OpenXmlCompositeElement
+    public partial class IgnoredErrors : OpenXmlCompositeElement, IExtensionChildrenParent<IgnoredErrors>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "ignoredErrors");
@@ -447,6 +447,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2357,7 +2360,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DatastoreItem : OpenXmlPartRootElement
+    public partial class DatastoreItem : OpenXmlPartRootElement, IExtensionChildrenParent<DatastoreItem>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "datastoreItem");
@@ -2406,6 +2409,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2484,7 +2490,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ListItems" /> <c>&lt;x14:itemLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class FormControlProperties : OpenXmlPartRootElement
+    public partial class FormControlProperties : OpenXmlPartRootElement, IExtensionChildrenParent<FormControlProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "formControlPr");
@@ -2833,6 +2839,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3070,7 +3079,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTables" /> <c>&lt;x14:pivotTables></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class SlicerCacheDefinition : OpenXmlPartRootElement
+    public partial class SlicerCacheDefinition : OpenXmlPartRootElement, IExtensionChildrenParent<SlicerCacheDefinition>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "slicerCacheDefinition");
@@ -3129,6 +3138,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3241,7 +3253,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ConditionalFormatting : OpenXmlCompositeElement
+    public partial class ConditionalFormatting : OpenXmlCompositeElement, IExtensionChildrenParent<ConditionalFormatting>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "conditionalFormatting");
@@ -3290,6 +3302,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3328,7 +3343,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.IconSet" /> <c>&lt;x14:iconSet></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ConditionalFormattingRule : OpenXmlCompositeElement
+    public partial class ConditionalFormattingRule : OpenXmlCompositeElement, IExtensionChildrenParent<ConditionalFormattingRule>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "cfRule");
@@ -3507,6 +3522,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6463,7 +6481,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DifferentialType : OpenXmlCompositeElement
+    public partial class DifferentialType : OpenXmlCompositeElement, IExtensionChildrenParent<DifferentialType>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "dxf");
@@ -6502,6 +6520,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6633,7 +6654,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ConditionalFormattingValueObject : OpenXmlCompositeElement
+    public partial class ConditionalFormattingValueObject : OpenXmlCompositeElement, IExtensionChildrenParent<ConditionalFormattingValueObject>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "cfvo");
@@ -6692,6 +6713,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7104,7 +7128,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleItems" /> <c>&lt;x14:tupleItems></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class PivotEdit : OpenXmlCompositeElement
+    public partial class PivotEdit : OpenXmlCompositeElement, IExtensionChildrenParent<PivotEdit>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "pivotEdit");
@@ -7143,6 +7167,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7390,7 +7417,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences" /> <c>&lt;x:references></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class PivotArea : OpenXmlCompositeElement
+    public partial class PivotArea : OpenXmlCompositeElement, IExtensionChildrenParent<PivotArea>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "pivotArea");
@@ -7549,6 +7576,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7619,7 +7649,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleItems" /> <c>&lt;x14:tupleItems></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class PivotChange : OpenXmlCompositeElement
+    public partial class PivotChange : OpenXmlCompositeElement, IExtensionChildrenParent<PivotChange>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "pivotChange");
@@ -7678,6 +7708,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8012,7 +8045,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotAreas" /> <c>&lt;x14:pivotAreas></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ConditionalFormat : OpenXmlCompositeElement
+    public partial class ConditionalFormat : OpenXmlCompositeElement, IExtensionChildrenParent<ConditionalFormat>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "conditionalFormat");
@@ -8091,6 +8124,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8838,7 +8874,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ListItem" /> <c>&lt;x14:item></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ListItems : OpenXmlCompositeElement
+    public partial class ListItems : OpenXmlCompositeElement, IExtensionChildrenParent<ListItems>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "itemLst");
@@ -8877,6 +8913,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8906,7 +8945,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Slicer : OpenXmlCompositeElement
+    public partial class Slicer : OpenXmlCompositeElement, IExtensionChildrenParent<Slicer>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "slicer");
@@ -9045,6 +9084,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -9112,7 +9154,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSelections" /> <c>&lt;x14:selections></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class OlapSlicerCache : OpenXmlCompositeElement
+    public partial class OlapSlicerCache : OpenXmlCompositeElement, IExtensionChildrenParent<OlapSlicerCache>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "olap");
@@ -9161,6 +9203,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -9237,7 +9282,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItems" /> <c>&lt;x14:items></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class TabularSlicerCache : OpenXmlCompositeElement
+    public partial class TabularSlicerCache : OpenXmlCompositeElement, IExtensionChildrenParent<TabularSlicerCache>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "tabular");
@@ -9326,6 +9371,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NamedSheetView" /> <c>&lt;xnsv:namedSheetView></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NamedSheetViews : OpenXmlPartRootElement
+    public partial class NamedSheetViews : OpenXmlPartRootElement, IExtensionChildrenParent<NamedSheetViews>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "namedSheetViews");
@@ -70,6 +70,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -131,7 +134,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NsvFilter" /> <c>&lt;xnsv:nsvFilter></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NamedSheetView : OpenXmlCompositeElement
+    public partial class NamedSheetView : OpenXmlCompositeElement, IExtensionChildrenParent<NamedSheetView>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "namedSheetView");
@@ -190,6 +193,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -303,7 +309,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRules" /> <c>&lt;xnsv:sortRules></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NsvFilter : OpenXmlCompositeElement
+    public partial class NsvFilter : OpenXmlCompositeElement, IExtensionChildrenParent<NsvFilter>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "nsvFilter");
@@ -372,6 +378,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -413,7 +422,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.FilterColumn" /> <c>&lt;xnsv:filter></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ColumnFilter : OpenXmlCompositeElement
+    public partial class ColumnFilter : OpenXmlCompositeElement, IExtensionChildrenParent<ColumnFilter>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "columnFilter");
@@ -472,6 +481,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -526,7 +538,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRule" /> <c>&lt;xnsv:sortRule></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class SortRules : OpenXmlCompositeElement
+    public partial class SortRules : OpenXmlCompositeElement, IExtensionChildrenParent<SortRules>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "sortRules");
@@ -585,6 +597,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -623,7 +638,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DifferentialFormatType : OpenXmlCompositeElement
+    public partial class DifferentialFormatType : OpenXmlCompositeElement, IExtensionChildrenParent<DifferentialFormatType>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "dxf");
@@ -662,6 +677,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -800,7 +818,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.IconFilter" /> <c>&lt;x14:iconFilter></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class FilterColumn : OpenXmlCompositeElement
+    public partial class FilterColumn : OpenXmlCompositeElement, IExtensionChildrenParent<FilterColumn>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "filter");
@@ -869,6 +887,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

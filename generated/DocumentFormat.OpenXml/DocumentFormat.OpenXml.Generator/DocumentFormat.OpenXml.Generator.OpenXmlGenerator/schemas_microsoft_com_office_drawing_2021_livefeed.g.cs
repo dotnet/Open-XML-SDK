@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class BackgroundNormalProperties : OpenXmlCompositeElement
+    public partial class BackgroundNormalProperties : OpenXmlCompositeElement, IExtensionChildrenParent<BackgroundNormalProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "Normal");
@@ -67,6 +67,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -107,7 +110,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class BackgroundRemovedProperties : OpenXmlCompositeElement
+    public partial class BackgroundRemovedProperties : OpenXmlCompositeElement, IExtensionChildrenParent<BackgroundRemovedProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "Removed");
@@ -146,6 +149,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -186,7 +192,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class BackgroundBlurProperties : OpenXmlCompositeElement
+    public partial class BackgroundBlurProperties : OpenXmlCompositeElement, IExtensionChildrenParent<BackgroundBlurProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "Blur");
@@ -225,6 +231,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -265,7 +274,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class BackgroundCustomProperties : OpenXmlCompositeElement
+    public partial class BackgroundCustomProperties : OpenXmlCompositeElement, IExtensionChildrenParent<BackgroundCustomProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "Custom");
@@ -304,6 +313,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -345,7 +357,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties" /> <c>&lt;alf:backgroundProps></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class LiveFeedProperties : OpenXmlCompositeElement
+    public partial class LiveFeedProperties : OpenXmlCompositeElement, IExtensionChildrenParent<LiveFeedProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "liveFeedProps");
@@ -384,6 +396,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -515,7 +530,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundRemovedProperties" /> <c>&lt;alf:Removed></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class LiveFeedBackgroundProperties : OpenXmlCompositeElement
+    public partial class LiveFeedBackgroundProperties : OpenXmlCompositeElement, IExtensionChildrenParent<LiveFeedBackgroundProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2021/livefeed", "backgroundProps");
@@ -554,6 +569,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

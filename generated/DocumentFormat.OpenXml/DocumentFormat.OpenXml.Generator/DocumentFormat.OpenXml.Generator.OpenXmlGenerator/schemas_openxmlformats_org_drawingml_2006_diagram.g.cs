@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformStyleLabel" /> <c>&lt;dgm:styleLbl></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ColorsDefinition : OpenXmlPartRootElement
+    public partial class ColorsDefinition : OpenXmlPartRootElement, IExtensionChildrenParent<ColorsDefinition>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/diagram", "colorsDef");
@@ -93,6 +93,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -165,7 +168,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorDefinitionTitle" /> <c>&lt;dgm:title></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ColorsDefinitionHeader : OpenXmlCompositeElement
+    public partial class ColorsDefinitionHeader : OpenXmlCompositeElement, IExtensionChildrenParent<ColorsDefinitionHeader>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/diagram", "colorsDefHdr");
@@ -234,6 +237,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -342,7 +348,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.PointList" /> <c>&lt;dgm:ptLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DataModelRoot : OpenXmlPartRootElement
+    public partial class DataModelRoot : OpenXmlPartRootElement, IExtensionChildrenParent<DataModelRoot>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/diagram", "dataModel");
@@ -381,6 +387,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -518,7 +527,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorData" /> <c>&lt;dgm:clrData></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class LayoutDefinition : OpenXmlPartRootElement
+    public partial class LayoutDefinition : OpenXmlPartRootElement, IExtensionChildrenParent<LayoutDefinition>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/diagram", "layoutDef");
@@ -587,6 +596,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -665,7 +677,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Title" /> <c>&lt;dgm:title></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class LayoutDefinitionHeader : OpenXmlCompositeElement
+    public partial class LayoutDefinitionHeader : OpenXmlCompositeElement, IExtensionChildrenParent<LayoutDefinitionHeader>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/diagram", "layoutDefHdr");
@@ -744,6 +756,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -958,7 +973,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.StyleLabel" /> <c>&lt;dgm:styleLbl></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class StyleDefinition : OpenXmlPartRootElement
+    public partial class StyleDefinition : OpenXmlPartRootElement, IExtensionChildrenParent<StyleDefinition>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/diagram", "styleDef");
@@ -1017,6 +1032,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1090,7 +1108,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionTitle" /> <c>&lt;dgm:title></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class StyleDefinitionHeader : OpenXmlCompositeElement
+    public partial class StyleDefinitionHeader : OpenXmlCompositeElement, IExtensionChildrenParent<StyleDefinitionHeader>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/diagram", "styleDefHdr");
@@ -1159,6 +1177,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2153,7 +2174,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.TextEffectColorList" /> <c>&lt;dgm:txEffectClrLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ColorTransformStyleLabel : OpenXmlCompositeElement
+    public partial class ColorTransformStyleLabel : OpenXmlCompositeElement, IExtensionChildrenParent<ColorTransformStyleLabel>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/diagram", "styleLbl");
@@ -2202,6 +2223,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2339,7 +2363,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.PropertySet" /> <c>&lt;dgm:prSet></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Point : OpenXmlCompositeElement
+    public partial class Point : OpenXmlCompositeElement, IExtensionChildrenParent<Point>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/diagram", "pt");
@@ -2408,6 +2432,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2514,7 +2541,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Connection : OpenXmlCompositeElement
+    public partial class Connection : OpenXmlCompositeElement, IExtensionChildrenParent<Connection>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/diagram", "cxn");
@@ -2643,6 +2670,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2741,7 +2771,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Constraint : OpenXmlCompositeElement
+    public partial class Constraint : OpenXmlCompositeElement, IExtensionChildrenParent<Constraint>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/diagram", "constr");
@@ -2890,6 +2920,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2963,7 +2996,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Rule : OpenXmlCompositeElement
+    public partial class Rule : OpenXmlCompositeElement, IExtensionChildrenParent<Rule>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/diagram", "rule");
@@ -3072,6 +3105,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3353,7 +3389,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Parameter" /> <c>&lt;dgm:param></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Algorithm : OpenXmlCompositeElement
+    public partial class Algorithm : OpenXmlCompositeElement, IExtensionChildrenParent<Algorithm>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/diagram", "alg");
@@ -3412,6 +3448,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3448,7 +3487,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.AdjustList" /> <c>&lt;dgm:adjLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Shape : OpenXmlCompositeElement
+    public partial class Shape : OpenXmlCompositeElement, IExtensionChildrenParent<Shape>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/diagram", "shape");
@@ -3560,6 +3599,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3631,7 +3673,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class PresentationOf : OpenXmlCompositeElement
+    public partial class PresentationOf : OpenXmlCompositeElement, IExtensionChildrenParent<PresentationOf>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/diagram", "presOf");
@@ -3730,6 +3772,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4264,7 +4309,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Shape" /> <c>&lt;dgm:shape></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ForEach : OpenXmlCompositeElement
+    public partial class ForEach : OpenXmlCompositeElement, IExtensionChildrenParent<ForEach>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/diagram", "forEach");
@@ -4383,6 +4428,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4444,7 +4492,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Shape" /> <c>&lt;dgm:shape></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class LayoutNode : OpenXmlCompositeElement
+    public partial class LayoutNode : OpenXmlCompositeElement, IExtensionChildrenParent<LayoutNode>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/diagram", "layoutNode");
@@ -4523,6 +4571,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4665,7 +4716,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Shape" /> <c>&lt;dgm:shape></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DiagramChooseIf : OpenXmlCompositeElement
+    public partial class DiagramChooseIf : OpenXmlCompositeElement, IExtensionChildrenParent<DiagramChooseIf>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/diagram", "if");
@@ -4814,6 +4865,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4904,7 +4958,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Shape" /> <c>&lt;dgm:shape></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DiagramChooseElse : OpenXmlCompositeElement
+    public partial class DiagramChooseElse : OpenXmlCompositeElement, IExtensionChildrenParent<DiagramChooseElse>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/diagram", "else");
@@ -4953,6 +5007,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5002,7 +5059,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.PointList" /> <c>&lt;dgm:ptLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DataModel : OpenXmlCompositeElement
+    public partial class DataModel : OpenXmlCompositeElement, IExtensionChildrenParent<DataModel>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/diagram", "dataModel");
@@ -5041,6 +5098,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5965,7 +6025,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Scene3D : OpenXmlCompositeElement
+    public partial class Scene3D : OpenXmlCompositeElement, IExtensionChildrenParent<Scene3D>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/diagram", "scene3d");
@@ -6004,6 +6064,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6092,7 +6155,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Shape3D : OpenXmlCompositeElement
+    public partial class Shape3D : OpenXmlCompositeElement, IExtensionChildrenParent<Shape3D>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/diagram", "sp3d");
@@ -6171,6 +6234,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6568,7 +6634,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.TextProperties" /> <c>&lt;dgm:txPr></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class StyleLabel : OpenXmlCompositeElement
+    public partial class StyleLabel : OpenXmlCompositeElement, IExtensionChildrenParent<StyleLabel>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/diagram", "styleLbl");
@@ -6617,6 +6683,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7528,7 +7597,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ShapeProperties : OpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement, IExtensionChildrenParent<ShapeProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/diagram", "spPr");
@@ -7577,6 +7646,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
