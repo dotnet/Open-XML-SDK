@@ -206,7 +206,7 @@ public static class FlatOpcExtensions
         var part = CreatePackagePart(flatOpcPart, package);
 
         using var stream = part.GetStream(FileMode.Create);
-        using var xmlWriter = XmlWriter.Create(stream);
+        using var xmlWriter = new XmlDOMTextWriter(stream);
 
         XElement rootElement = flatOpcPart.Elements(Pkg + "xmlData").Elements().First();
         rootElement.WriteTo(xmlWriter);
