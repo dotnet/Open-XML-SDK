@@ -53,6 +53,154 @@
           ]
         }
       ]
+    },
+    {
+      "Name": "xlpcalc:CT_PivotFieldSubtotals/xlpcalc:pivotFieldSubtotals",
+      "ClassName": "PivotFieldSubtotals",
+      "Summary": "Defines the PivotFieldSubtotals Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "xlpcalc:CT_PivotItemSubtotal/xlpcalc:subtotal"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xlpcalc:CT_PivotItemSubtotal/xlpcalc:subtotal",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlpcalc:CT_PivotAreaReferenceSubtotals/xlpcalc:pivotAreaReferenceSubtotals",
+      "ClassName": "PivotAreaReferenceSubtotals",
+      "Summary": "Defines the PivotAreaReferenceSubtotals Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "xlpcalc:CT_PivotSubtotalType/xlpcalc:subtotal"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xlpcalc:CT_PivotSubtotalType/xlpcalc:subtotal",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlpcalc:CT_PivotTableSubtotalLineItems/xlpcalc:pivotFieldSubtotalLineItems",
+      "ClassName": "PivotTableSubtotalLineItems",
+      "Summary": "Defines the PivotTableSubtotalLineItems Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "xlpcalc:CT_PivotItemSubtotal/xlpcalc:subtotalLineItem"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xlpcalc:CT_PivotItemSubtotal/xlpcalc:subtotalLineItem",
+            "Occurs": [
+              {
+                "Min": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlpcalc:CT_PivotItemSubtotal/xlpcalc:subtotal",
+      "ClassName": "SubtotalPivotItemSubtotal",
+      "Summary": "Defines the SubtotalPivotItemSubtotal Class.",
+      "BaseClass": "OpenXmlPivotItemSubtotalElement",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Microsoft365"
+    },
+    {
+      "Name": "xlpcalc:CT_PivotItemSubtotal/xlpcalc:subtotalLineItem",
+      "ClassName": "SubtotalLineItemPivotItemSubtotal",
+      "Summary": "Defines the SubtotalLineItemPivotItemSubtotal Class.",
+      "BaseClass": "OpenXmlPivotItemSubtotalElement",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Microsoft365"
+    },
+    {
+      "Name": "xlpcalc:CT_PivotItemSubtotal/",
+      "ClassName": "OpenXmlPivotItemSubtotalElement",
+      "Summary": "Defines the OpenXmlPivotItemSubtotalElement Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true,
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":subtotalType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.AggregationType\u003E",
+          "Version": "Microsoft365",
+          "PropertyComments": "subtotalType",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":itemLocation",
+          "Type": "UInt32Value",
+          "Version": "Microsoft365",
+          "PropertyComments": "itemLocation",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "xlpcalc:CT_PivotSubtotalType/xlpcalc:subtotal",
+      "ClassName": "PivotSubtotalType",
+      "Summary": "Defines the PivotSubtotalType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":subtotalType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.AggregationType\u003E",
+          "Version": "Microsoft365",
+          "PropertyComments": "subtotalType",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
     }
   ],
   "Enums": [

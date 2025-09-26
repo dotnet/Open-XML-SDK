@@ -25449,6 +25449,10 @@
         {
           "Name": "xlwcv:CT_Version/xlwcv:version",
           "PropertyName": "Version"
+        },
+        {
+          "Name": "xlecs2:CT_ExternalCodeServiceImageAsInput/xlecs2:externalCodeServiceImageAsInput",
+          "PropertyName": "ExternalCodeServiceImageAsInput"
         }
       ],
       "Particle": {
@@ -25504,6 +25508,10 @@
           },
           {
             "Name": "xlwcv:CT_Version/xlwcv:version",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "xlecs2:CT_ExternalCodeServiceImageAsInput/xlecs2:externalCodeServiceImageAsInput",
             "InitialVersion": "Microsoft365"
           },
           {

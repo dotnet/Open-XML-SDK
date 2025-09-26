@@ -622,6 +622,11 @@
     "Version": "Microsoft365"
   },
   {
+    "Prefix": "xlecs2",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2025/externalCodeService2",
+    "Version": "Microsoft365"
+  },
+  {
     "Prefix": "xlmsforms",
     "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2023/msForms",
     "Version": "Microsoft365"
@@ -639,6 +644,11 @@
   {
     "Prefix": "xlpda",
     "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2024/pivotDynamicArrays",
+    "Version": "Microsoft365"
+  },
+  {
+    "Prefix": "xlpds",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2025/pivotDataSource",
     "Version": "Microsoft365"
   },
   {

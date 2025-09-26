@@ -123,6 +123,367 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation
     }
 
     /// <summary>
+    /// <para>Defines the PivotFieldSubtotals Class.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is xlpcalc:pivotFieldSubtotals.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.SubtotalPivotItemSubtotal" /> <c>&lt;xlpcalc:subtotal></c></description></item>
+    /// </list>
+    /// </remarks>
+    public partial class PivotFieldSubtotals : OpenXmlCompositeElement
+    {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/pivot2023Calculation", "pivotFieldSubtotals");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/pivot2023Calculation", "CT_PivotFieldSubtotals");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
+        /// <summary>
+        /// Initializes a new instance of the PivotFieldSubtotals class.
+        /// </summary>
+        public PivotFieldSubtotals() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PivotFieldSubtotals class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PivotFieldSubtotals(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PivotFieldSubtotals class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PivotFieldSubtotals(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PivotFieldSubtotals class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public PivotFieldSubtotals(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(ElementType);
+            builder.Availability = FileFormatVersions.Microsoft365;
+            builder.AddChild(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.SubtotalPivotItemSubtotal.ElementType, static () => new DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.SubtotalPivotItemSubtotal());
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.SubtotalPivotItemSubtotal.ElementType, 0, 0, version: FileFormatVersions.Microsoft365)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotFieldSubtotals>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the PivotAreaReferenceSubtotals Class.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is xlpcalc:pivotAreaReferenceSubtotals.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.PivotSubtotalType" /> <c>&lt;xlpcalc:subtotal></c></description></item>
+    /// </list>
+    /// </remarks>
+    public partial class PivotAreaReferenceSubtotals : OpenXmlCompositeElement
+    {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/pivot2023Calculation", "pivotAreaReferenceSubtotals");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/pivot2023Calculation", "CT_PivotAreaReferenceSubtotals");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
+        /// <summary>
+        /// Initializes a new instance of the PivotAreaReferenceSubtotals class.
+        /// </summary>
+        public PivotAreaReferenceSubtotals() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PivotAreaReferenceSubtotals class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PivotAreaReferenceSubtotals(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PivotAreaReferenceSubtotals class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PivotAreaReferenceSubtotals(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PivotAreaReferenceSubtotals class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public PivotAreaReferenceSubtotals(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(ElementType);
+            builder.Availability = FileFormatVersions.Microsoft365;
+            builder.AddChild(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.PivotSubtotalType.ElementType, static () => new DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.PivotSubtotalType());
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.PivotSubtotalType.ElementType, 1, 0, version: FileFormatVersions.Microsoft365)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotAreaReferenceSubtotals>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the PivotTableSubtotalLineItems Class.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is xlpcalc:pivotFieldSubtotalLineItems.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.SubtotalLineItemPivotItemSubtotal" /> <c>&lt;xlpcalc:subtotalLineItem></c></description></item>
+    /// </list>
+    /// </remarks>
+    public partial class PivotTableSubtotalLineItems : OpenXmlCompositeElement
+    {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/pivot2023Calculation", "pivotFieldSubtotalLineItems");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/pivot2023Calculation", "CT_PivotTableSubtotalLineItems");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
+        /// <summary>
+        /// Initializes a new instance of the PivotTableSubtotalLineItems class.
+        /// </summary>
+        public PivotTableSubtotalLineItems() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PivotTableSubtotalLineItems class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PivotTableSubtotalLineItems(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PivotTableSubtotalLineItems class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PivotTableSubtotalLineItems(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PivotTableSubtotalLineItems class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public PivotTableSubtotalLineItems(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(ElementType);
+            builder.Availability = FileFormatVersions.Microsoft365;
+            builder.AddChild(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.SubtotalLineItemPivotItemSubtotal.ElementType, static () => new DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.SubtotalLineItemPivotItemSubtotal());
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.SubtotalLineItemPivotItemSubtotal.ElementType, 1, 0, version: FileFormatVersions.Microsoft365)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotTableSubtotalLineItems>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the SubtotalPivotItemSubtotal Class.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is xlpcalc:subtotal.</para>
+    /// </summary>
+    public partial class SubtotalPivotItemSubtotal : OpenXmlPivotItemSubtotalElement
+    {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/pivot2023Calculation", "subtotal");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/pivot2023Calculation", "CT_PivotItemSubtotal");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
+        /// <summary>
+        /// Initializes a new instance of the SubtotalPivotItemSubtotal class.
+        /// </summary>
+        public SubtotalPivotItemSubtotal() : base()
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(ElementType);
+            builder.Availability = FileFormatVersions.Microsoft365;
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<SubtotalPivotItemSubtotal>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the SubtotalLineItemPivotItemSubtotal Class.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is xlpcalc:subtotalLineItem.</para>
+    /// </summary>
+    public partial class SubtotalLineItemPivotItemSubtotal : OpenXmlPivotItemSubtotalElement
+    {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/pivot2023Calculation", "subtotalLineItem");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/pivot2023Calculation", "CT_PivotItemSubtotal");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
+        /// <summary>
+        /// Initializes a new instance of the SubtotalLineItemPivotItemSubtotal class.
+        /// </summary>
+        public SubtotalLineItemPivotItemSubtotal() : base()
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(ElementType);
+            builder.Availability = FileFormatVersions.Microsoft365;
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<SubtotalLineItemPivotItemSubtotal>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the OpenXmlPivotItemSubtotalElement Class.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
+    /// </summary>
+    public abstract partial class OpenXmlPivotItemSubtotalElement : OpenXmlLeafElement
+    {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/pivot2023Calculation", "CT_PivotItemSubtotal");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
+        /// <summary>
+        /// Initializes a new instance of the OpenXmlPivotItemSubtotalElement class.
+        /// </summary>
+        protected OpenXmlPivotItemSubtotalElement() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>subtotalType, this property is only available in Microsoft365 and later.</para>
+        /// <para>Represents the following attribute in the schema: subtotalType</para>
+        /// </summary>
+        public EnumValue<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.AggregationType>? SubtotalType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.AggregationType>>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>itemLocation, this property is only available in Microsoft365 and later.</para>
+        /// <para>Represents the following attribute in the schema: itemLocation</para>
+        /// </summary>
+        public UInt32Value? ItemLocation
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<OpenXmlPivotItemSubtotalElement>()
+                .AddAttribute("subtotalType", a => a.SubtotalType, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("itemLocation", a => a.ItemLocation, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
+        }
+    }
+
+    /// <summary>
+    /// <para>Defines the PivotSubtotalType Class.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is xlpcalc:subtotal.</para>
+    /// </summary>
+    public partial class PivotSubtotalType : OpenXmlLeafElement
+    {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/pivot2023Calculation", "subtotal");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/spreadsheetml/2023/pivot2023Calculation", "CT_PivotSubtotalType");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
+        /// <summary>
+        /// Initializes a new instance of the PivotSubtotalType class.
+        /// </summary>
+        public PivotSubtotalType() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>subtotalType, this property is only available in Microsoft365 and later.</para>
+        /// <para>Represents the following attribute in the schema: subtotalType</para>
+        /// </summary>
+        public EnumValue<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.AggregationType>? SubtotalType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.AggregationType>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(ElementType);
+            builder.Availability = FileFormatVersions.Microsoft365;
+            builder.AddElement<PivotSubtotalType>()
+                .AddAttribute("subtotalType", a => a.SubtotalType, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotSubtotalType>(deep);
+    }
+
+    /// <summary>
     /// Defines the AggregationType enumeration.
     /// </summary>
     public readonly record struct AggregationType : IEnumValue, IEnumValueFactory<AggregationType>

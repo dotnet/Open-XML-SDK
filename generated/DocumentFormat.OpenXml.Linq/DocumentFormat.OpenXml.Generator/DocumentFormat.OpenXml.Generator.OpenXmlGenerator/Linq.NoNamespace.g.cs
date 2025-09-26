@@ -12180,6 +12180,18 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName maxDate = "maxDate";
 
         /// <summary>
+        /// Represents the maxHeight XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="XLECS2.externalCodeServiceImageAsInput" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: ExternalCodeServiceImageAsInput.MaxHeight.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName maxHeight = "maxHeight";
+
+        /// <summary>
         /// Represents the maximized XML attribute.
         /// </summary>
         /// <remarks>
@@ -12310,6 +12322,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName maxValue = "maxValue";
+
+        /// <summary>
+        /// Represents the maxWidth XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="XLECS2.externalCodeServiceImageAsInput" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: ExternalCodeServiceImageAsInput.MaxWidth.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName maxWidth = "maxWidth";
 
         /// <summary>
         /// Represents the maxX XML attribute.

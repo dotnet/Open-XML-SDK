@@ -188,6 +188,14 @@
     "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.WorkbookCompatibilityVersion"
   },
   {
+    "Prefix": "xlecs2",
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2025.ExternalCodeService2"
+  },
+  {
+    "Prefix": "xlpds",
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2025.PivotDataSource"
+  },
+  {
     "Prefix": "wne",
     "Namespace": "DocumentFormat.OpenXml.Office.Word"
   },
