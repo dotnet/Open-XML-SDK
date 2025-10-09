@@ -20,6 +20,7 @@ public static class DataModelWriterExtensions
         public const string ObsoletePropertyError = "[Obsolete(\"Unused property, will be removed in a future version.\", true)]";
         public const string ObsoleteAttributeWarn = "[Obsolete(\"Unused attribute, will be removed in a future version.\", false)]";
         public const string ObsoleteAttributeError = "[Obsolete(\"Unused attribute, will be removed in a future version.\", true)]";
+        public const string ObsoleteChildWarn = "[Obsolete(\"Obsolete child element, will be removed in a future version.\", false)]";
         public const string EditorBrowsableAlways = "[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Always)] ";
         public const string EditorBrowsableAdvanced = "[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)] ";
         public const string EditorBrowsableNever = "[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)] ";
@@ -34,6 +35,12 @@ public static class DataModelWriterExtensions
     private static readonly List<string> ObsoleteClassErrorList =
     [
         AttributeStrings.ObsoleteClassWarn,
+        AttributeStrings.EditorBrowsableNever,
+    ];
+
+    private static readonly List<string> ObsoleteChildWarnList =
+    [
+        AttributeStrings.ObsoleteChildWarn,
         AttributeStrings.EditorBrowsableNever,
     ];
 
@@ -141,6 +148,16 @@ public static class DataModelWriterExtensions
                     {
                       "xprd:CT_PivotCacheRichInfo/xprd:richInfo",
                       ObsoleteClassErrorList
+                    },
+                }
+            },
+            {
+                "x:CT_PivotCacheDefinitionExtension/x:ext",
+                new Dictionary<TypedQName, List<string>>()
+                {
+                    {
+                        "xprd:CT_PivotCacheRichInfo/xprd:richInfo",
+                        ObsoleteChildWarnList
                     },
                 }
             },
