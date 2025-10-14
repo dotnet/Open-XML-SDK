@@ -406,11 +406,22 @@ public static class DataModelWriterExtensions
                 {
                     var className = services.FindClassName(child);
 
+                    if (className == "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays.PivotCacheDynamicArray" || className == "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.PivotCacheRichInfo")
+                    {
+                        writer.WriteLine("#pragma warning disable CS0618");
+                    }
+
                     writer.Write("builder.AddChild(");
+
                     writer.Write(className);
                     writer.Write(".ElementType, static () => new ");
                     writer.Write(className);
                     writer.WriteLine("());");
+
+                    if (className == "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays.PivotCacheDynamicArray" || className == "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.PivotCacheRichInfo")
+                    {
+                        writer.WriteLine("#pragma warning restore CS0618");
+                    }
                 }
             }
 
