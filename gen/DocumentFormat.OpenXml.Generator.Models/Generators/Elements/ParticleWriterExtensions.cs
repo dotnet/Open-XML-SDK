@@ -96,21 +96,23 @@ internal static class ParticleWriterExtensions
         if (particle.Kind == ParticleType.Element)
         {
             var info = services.FindClassName(particle.Name);
+
+            if (info == "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays.PivotCacheDynamicArray" || info == "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.PivotCacheRichInfo")
+            {
+                writer.WriteLine("#pragma warning disable CS0618");
+            }
+
             writer.WriteObject("ElementParticle", particle, w =>
             {
-                if (info == "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays.PivotCacheDynamicArray" || info == "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.PivotCacheRichInfo")
-                {
-                    writer.WriteLine("#pragma warning disable CS0618");
-                }
-
                 w.Write(info);
                 w.Write(".ElementType");
-
-                if (info == "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays.PivotCacheDynamicArray" || info == "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.PivotCacheRichInfo")
-                {
-                    writer.WriteLine("#pragma warning restore CS0618");
-                }
             });
+
+            if (info == "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays.PivotCacheDynamicArray" || info == "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.PivotCacheRichInfo")
+            {
+                writer.WriteLine();
+                writer.WriteLine("#pragma warning restore CS0618");
+            }
         }
         else if (particle.Kind == ParticleType.Any)
         {
