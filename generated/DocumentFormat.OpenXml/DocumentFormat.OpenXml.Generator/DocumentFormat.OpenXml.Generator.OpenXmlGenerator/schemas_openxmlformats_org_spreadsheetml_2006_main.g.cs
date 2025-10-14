@@ -47736,10 +47736,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 new ElementParticle(DocumentFormat.OpenXml.Office2013.Excel.TimelinePivotCacheDefinition.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(DocumentFormat.OpenXml.Office2021.Excel.Pivot.Xsdboolean.ElementType, 1, 1, version: FileFormatVersions.Office2021),
-                new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.PivotCacheRichInfo.ElementType, 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(#pragma warning disable CS0618
+                DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.PivotCacheRichInfo.ElementType#pragma warning restore CS0618
+                , 1, 1, version: FileFormatVersions.Microsoft365),
                 new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo.ElementType, 1, 1, version: FileFormatVersions.Microsoft365),
                 new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotAutoRefresh.Xsdboolean.ElementType, 1, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays.PivotCacheDynamicArray.ElementType, 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(#pragma warning disable CS0618
+                DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays.PivotCacheDynamicArray.ElementType#pragma warning restore CS0618
+                , 1, 1, version: FileFormatVersions.Microsoft365),
                 new AnyParticle(0, 1)
             };
         }
