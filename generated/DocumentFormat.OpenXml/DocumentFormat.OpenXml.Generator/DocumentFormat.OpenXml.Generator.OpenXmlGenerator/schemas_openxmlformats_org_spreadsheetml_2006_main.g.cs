@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
@@ -47714,12 +47715,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.PivotCacheDecoupled.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.PivotCacheDecoupled());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.TimelinePivotCacheDefinition.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.TimelinePivotCacheDefinition());
-            #pragma warning disable CS0618
             builder.AddChild(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays.PivotCacheDynamicArray.ElementType, static () => new DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays.PivotCacheDynamicArray());
-            #pragma warning restore CS0618
-            #pragma warning disable CS0618
             builder.AddChild(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.PivotCacheRichInfo.ElementType, static () => new DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.PivotCacheRichInfo());
-            #pragma warning restore CS0618
             builder.AddChild(DocumentFormat.OpenXml.Office2021.Excel.Pivot.Xsdboolean.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Excel.Pivot.Xsdboolean());
             builder.AddChild(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotAutoRefresh.Xsdboolean.ElementType, static () => new DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotAutoRefresh.Xsdboolean());
             builder.AddChild(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo.ElementType, static () => new DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo());
@@ -47736,16 +47733,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 new ElementParticle(DocumentFormat.OpenXml.Office2013.Excel.TimelinePivotCacheDefinition.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(DocumentFormat.OpenXml.Office2021.Excel.Pivot.Xsdboolean.ElementType, 1, 1, version: FileFormatVersions.Office2021),
-                #pragma warning disable CS0618
-                new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.PivotCacheRichInfo.ElementType, 1, 1, version: FileFormatVersions.Microsoft365)
-                #pragma warning restore CS0618
-                ,
+                new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.PivotCacheRichInfo.ElementType, 1, 1, version: FileFormatVersions.Microsoft365),
                 new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo.ElementType, 1, 1, version: FileFormatVersions.Microsoft365),
                 new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotAutoRefresh.Xsdboolean.ElementType, 1, 1, version: FileFormatVersions.Microsoft365),
-                #pragma warning disable CS0618
-                new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays.PivotCacheDynamicArray.ElementType, 1, 1, version: FileFormatVersions.Microsoft365)
-                #pragma warning restore CS0618
-                ,
+                new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays.PivotCacheDynamicArray.ElementType, 1, 1, version: FileFormatVersions.Microsoft365),
                 new AnyParticle(0, 1)
             };
         }
