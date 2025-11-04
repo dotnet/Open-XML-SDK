@@ -414,4 +414,7 @@
   <data name="FirstOrDefaultMaxOne" xml:space="preserve">
     <value>The enumerable contained more than a single element when only zero or one are allowed.</value>
   </data>
+  <data name="EncryptedPackageNotSupported" xml:space="preserve">
+    <value>Encrypted packages are not supported.</value>
+  </data>
 </root>

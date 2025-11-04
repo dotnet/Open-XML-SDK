@@ -8,6 +8,7 @@ using System;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Packaging;
+using System.Linq;
 
 namespace DocumentFormat.OpenXml.Features;
 
@@ -56,7 +57,12 @@ internal class StreamPackageFeature : PackageFeatureBase, IDisposable, IPackageS
         }
         catch when (isOwned)
         {
-            // Ensure that the stream if created is disposed before leaving the constructor so we don't hold onto it
+            if (_stream is not null && IsEncryptedOfficeFile(_stream))
+            {
+                _stream.Dispose();
+                throw new OpenXmlPackageException(ExceptionMessages.EncryptedPackageNotSupported);
+            }
+
             _stream?.Dispose();
             throw;
         }
@@ -171,5 +177,55 @@ internal class StreamPackageFeature : PackageFeatureBase, IDisposable, IPackageS
 
         features.Set<IPackageStreamFeature>(this);
         features.GetRequired<IDisposableFeature>().Register(this);
+    }
+
+    private static bool IsEncryptedOfficeFile(Stream inputStream)
+    {
+        if (!inputStream.CanSeek)
+        {
+            throw new ArgumentException("Stream must be seekable.");
+        }
+
+        long originalPosition = inputStream.Position;
+
+        try
+        {
+            byte[] header = new byte[8];
+            inputStream.Seek(0, SeekOrigin.Begin);
+            int read = inputStream.Read(header, 0, header.Length);
+            inputStream.Seek(originalPosition, SeekOrigin.Begin);
+
+            // OLE Compound File signature for encrypted Office files
+            byte[] oleSignature = { 0xD0, 0xCF, 0x11, 0xE0, 0xA1, 0xB1, 0x1A, 0xE1 };
+            if (read == 8 && header.SequenceEqual(oleSignature))
+            {
+                return true;
+            }
+
+            // If not OLE, try to open as package and check for encrypted part
+            try
+            {
+                using (var package = System.IO.Packaging.Package.Open(inputStream, FileMode.Open, FileAccess.Read))
+                {
+                    foreach (var part in package.GetParts())
+                    {
+                        if (part.ContentType.Equals("application/vnd.openxmlformats-officedocument.encrypted-package", StringComparison.OrdinalIgnoreCase))
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                return false;
+            }
+
+            return false;
+        }
+        finally
+        {
+            inputStream.Seek(originalPosition, SeekOrigin.Begin);
+        }
     }
 }

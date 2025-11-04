@@ -10,6 +10,7 @@ using System.IO;
 using System.IO.Packaging;
 using System.Linq;
 using Xunit;
+using static DocumentFormat.OpenXml.Tests.TestAssets;
 
 namespace DocumentFormat.OpenXml.Features.Tests;
 
@@ -429,6 +430,18 @@ public class StreamPackageFeatureTests
             IsDisposed = true;
             base.Dispose(disposing);
         }
+    }
+
+    [Fact]
+    public void ThrowsForEncryptedOfficeFile()
+    {
+        using (Stream stream = GetStream(TestFiles.Encrypted_pptx, false))
+        {
+            // Act & Assert
+            var ex = Assert.Throws<OpenXmlPackageException>(() => new StreamPackageFeature(stream, PackageOpenMode.Read, isOwned: true));
+            Assert.Equal(ExceptionMessages.EncryptedPackageNotSupported, ex.Message);
+        }
+
     }
 
     private static readonly PartInfo Part1 = new(new("/part1", UriKind.Relative), "type1/content");
