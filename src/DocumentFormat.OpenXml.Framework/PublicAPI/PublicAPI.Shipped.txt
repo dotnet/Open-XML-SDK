@@ -1010,3 +1010,5 @@ DocumentFormat.OpenXml.OpenXmlPartWriterSettings.OpenXmlPartWriterSettings() -> 
 DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart, DocumentFormat.OpenXml.OpenXmlPartWriterSettings! settings) -> void
 DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(System.IO.Stream! partStream, DocumentFormat.OpenXml.OpenXmlPartWriterSettings! settings) -> void
 virtual DocumentFormat.OpenXml.OpenXmlCompositeElement.IsValidChild(DocumentFormat.OpenXml.OpenXmlElement! element) -> bool
+static DocumentFormat.OpenXml.Packaging.OpenXmlPackage.IsEncryptedOfficeFile(System.IO.Stream! inputStream) -> bool
+static DocumentFormat.OpenXml.Packaging.OpenXmlPackage.IsEncryptedOfficeFile(string! filePath) -> bool
