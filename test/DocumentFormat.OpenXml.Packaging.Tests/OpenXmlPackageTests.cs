@@ -384,6 +384,9 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         {
             string filePath = GetTestFilePath(TestFiles.Encrypted_pptx);
             Assert.True(OpenXmlPackage.IsEncryptedOfficeFile(filePath));
+
+            // Clean up the test file path
+            File.Delete(filePath);
         }
 
         [Fact]
@@ -391,6 +394,9 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         {
             string filePath = GetTestFilePath(TestFiles.Presentation);
             Assert.False(OpenXmlPackage.IsEncryptedOfficeFile(filePath));
+
+            // Clean up the test file path
+            File.Delete(filePath);
         }
     }
 }
