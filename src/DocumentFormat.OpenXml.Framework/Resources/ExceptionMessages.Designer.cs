@@ -821,7 +821,8 @@ namespace DocumentFormat.OpenXml {
         
         /// <summary>
         ///   Looks up a localized string similar to  Part: {0} doesn&apos;t exist in the package.
-        /// {1}.
+        ///
+        ///Original Message:{1}.
         /// </summary>
         internal static string SpecifiedPartNotFound {
             get {

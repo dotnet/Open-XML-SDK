@@ -43,25 +43,24 @@ namespace DocumentFormat.OpenXml.Packaging
 
             SetPackage(openXmlPackage, parent);
 
-            // add the _uri to be reserved
             IPackagePart? part = null;
             try
             {
+                // TODO: should we delay load?
                 part = _openXmlPackage.Features.GetRequired<IPackageFeature>().Package.GetPart(uriTarget);
             }
             catch (InvalidOperationException ex)
             {
                 var errorMessage = SR.Format(
                     ExceptionMessages.SpecifiedPartNotFound,
-                    uriTarget.OriginalString, ex.StackTrace);
-                throw new OpenXmlPackageException(errorMessage);
+                    uriTarget.OriginalString, ex.Message);
+                throw new InvalidOperationException(errorMessage);
             }
             catch (Exception)
             {
                 throw;
             }
 
-            // TODO: should we delay load?
             Features.Set<IPackagePartFeature>(new PackagePartFeature(part));
 
             if (IsContentTypeFixed && !IsValidContentType(part))
@@ -75,19 +74,13 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new OpenXmlPackageException(errorMessage);
             }
 
-            if (part is null)
-            {
-                var errorMessage = SR.Format(
-                    ExceptionMessages.InvalidPartContentType,
-                    part.Uri.OriginalString,
-                    part.ContentType,
-                    ContentType);
-
-                throw new OpenXmlPackageException(errorMessage);
-            }
-
             // add the _uri to be reserved
             Features.GetRequired<IPartUriFeature>().ReserveUri(ContentType, Uri);
+
+
+
+
+
         }
 
         internal void CreateInternal(OpenXmlPackage? openXmlPackage, OpenXmlPart? parent, string contentType, string? targetExt)

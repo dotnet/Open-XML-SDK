@@ -419,6 +419,7 @@
   </data>
   <data name="SpecifiedPartNotFound" xml:space="preserve">
     <value> Part: {0} doesn't exist in the package.
- {1}</value>
+
+Original Message:{1}</value>
   </data>
 </root>
