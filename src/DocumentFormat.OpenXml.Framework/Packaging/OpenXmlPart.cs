@@ -76,11 +76,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
             // add the _uri to be reserved
             Features.GetRequired<IPartUriFeature>().ReserveUri(ContentType, Uri);
-
-
-
-
-
         }
 
         internal void CreateInternal(OpenXmlPackage? openXmlPackage, OpenXmlPart? parent, string contentType, string? targetExt)
