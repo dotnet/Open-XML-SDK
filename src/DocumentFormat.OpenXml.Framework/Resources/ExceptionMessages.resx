@@ -417,4 +417,8 @@
   <data name="EncryptedPackageNotSupported" xml:space="preserve">
     <value>Encrypted packages are not supported.</value>
   </data>
+  <data name="SpecifiedPartNotFound" xml:space="preserve">
+    <value> Part: {0} doesn't exist in the package.
+ {1}</value>
+  </data>
 </root>

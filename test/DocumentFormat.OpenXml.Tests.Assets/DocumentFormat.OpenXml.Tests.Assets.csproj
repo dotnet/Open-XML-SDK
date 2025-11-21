@@ -6,4 +6,7 @@
   <ItemGroup>
     <EmbeddedResource Include="assets\**\*" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.IO.Packaging" />
+  </ItemGroup>
 </Project>
