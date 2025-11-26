@@ -56,10 +56,6 @@ namespace DocumentFormat.OpenXml.Packaging
                     uriTarget.OriginalString, ex.Message);
                 throw new InvalidOperationException(errorMessage);
             }
-            catch (Exception)
-            {
-                throw;
-            }
 
             Features.Set<IPackagePartFeature>(new PackagePartFeature(part));
 
