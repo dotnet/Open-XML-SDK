@@ -459,6 +459,19 @@ namespace DocumentFormat.OpenXml.Packaging
             return true;
         }
 
+        internal override bool IsEmptyPart()
+        {
+            if (!Uri.ToString().EndsWith(".xml", System.StringComparison.InvariantCultureIgnoreCase))
+            {
+                return false;
+            }
+
+            using (Stream stream = GetStream())
+            {
+                return stream.Length == 0;
+            }
+        }
+
         #endregion
 
         #region internal methods
